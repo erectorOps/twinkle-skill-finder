@@ -1,0 +1,53 @@
+{
+  "name": "twinkle_skill_finder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp",
+    "build": "gulp build",
+    "deploy": "gh-pages -d dist"
+  },
+
+  "dependencies": {
+    "autoprefixer": "^10.4.21",
+    "big.js": "^6.2.2",
+    "bootstrap": "^5.3.0",
+    "bootstrap-icons": "^1.11.3",
+    "browser-sync": "^3.0.3",
+    "chalk": "^5.6.2",
+    "del": "^8.0.0",
+    "fancy-log": "^2.0.0",
+    "fast-xml-parser": "^5.0.8",
+    "fs": "^0.0.1-security",
+    "gh-pages": "^6.3.0",
+    "gulp": "^5.0.0",
+    "gulp-changed": "^5.0.2",
+    "gulp-dart-sass": "^1.1.0",
+    "gulp-ejs": "^5.1.0",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-notify": "^5.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^10.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp.spritesmith": "^6.13.1",
+    "imagemin-pngquant": "^10.0.0",
+    "jimp": "^1.6.0",
+    "p-limit": "^7.3.0"
+  },
+  "devDependencies": {
+    "gulp-sass": "^6.0.1",
+    "html-minifier": "^4.0.0",
+    "minimist": "^1.2.8",
+    "sass": "^1.92.1",
+    "through2": "^4.0.2"
+  }
+}

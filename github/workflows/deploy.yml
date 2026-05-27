@@ -1,0 +1,51 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ] # main ブランチに push したら実行
+
+# Pages デプロイにはパーミッションが必要
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  # ビルド
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. リポジトリをチェックアウト
+      - uses: actions/checkout@v6
+
+      # 2. Node.js セットアップ
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      
+      # 3. パッケージインストール
+      - run: npm install
+
+      # 4. ビルド (gulp build)
+      - run: npm run build
+
+      # 5. 成果物をアップロード
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist    # ビルド成果物のディレクトリ
+  
+  # デプロイ
+  deploy:
+    needs: build
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
