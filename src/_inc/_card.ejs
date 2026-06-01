@@ -1,0 +1,272 @@
+<%
+
+const bgImage =
+  `img/unit/chara_${skill.unit_id}_2_1.png`;
+
+
+let skillIcon = `img/skill_${String(skill.icon_id)}.png`;
+  
+
+if (skill.icon_id < 10000) {
+    skillIcon = `img/skill_${String(skill.icon_id).padStart(4, "0")}.png`; 
+}
+
+const iconGroup = Math.floor(skill.icon_id / 100);
+
+let skillTypeBg =
+  "img/btn_skill_blank.png";
+
+switch (iconGroup) {
+    case 1:
+        skillTypeBg =
+            "img/btn_skill_attack.png";
+        break;
+    case 2:
+        skillTypeBg =
+            "img/btn_skill_knockback.png";
+        break;
+    case 3:
+        skillTypeBg =
+            "img/btn_skill_buff.png";
+        break;
+    case 4:
+        skillTypeBg =
+            "img/btn_skill_debuff.png";
+        break;
+    case 5:
+        skillTypeBg =
+            "img/btn_skill_status.png";
+        break;
+    case 6:
+        skillTypeBg =
+            "img/btn_skill_recovery.png";
+        break;
+    case 7:
+        skillTypeBg =
+            "img/btn_skill_special.png";
+        break;
+    case 30:
+        skillTypeBg =
+            "img/btn_skill_specific.png";
+        break;
+}
+
+%>
+
+<%
+
+    let skill_type_label = "EXスキル1";
+    let skill_type_css = "ex1"
+    switch (skill.skill_type) {
+        case "EX1":
+            skill_type_label = "EXスキル1";
+            skill_type_css = "ex1"
+            break;
+        case "EX2":
+            skill_type_label = "EXスキル2";
+            skill_type_css = "ex2"
+            break;
+        case "EX1+":
+            skill_type_label = "EXスキル1+";
+            skill_type_css = "ex1-plus"
+            break;
+        case "EX2+":
+            skill_type_label = "EXスキル2+";
+            skill_type_css = "ex2-plus"
+            break;
+    }
+
+%>
+
+
+<div class="skill-card <%= skill.skill_type.toLowerCase() %>">
+
+  <div class="skill-header">
+
+    <img
+      class="skill-bg"
+      src="<%= bgImage %>"
+      alt=""
+    >
+
+    <div class="skill-badges">
+
+      <% if (chara.affiliations.length > 0) { %>
+      <div class="icon-with-ruby">
+        <img
+          src="img/<%= chara.affiliations[0].icon %>"
+          alt="<%= chara.affiliations[0].label %>"
+        >
+
+        <span class="ruby">
+          <%= chara.affiliations[0].label %>
+        </span>
+      </div>
+      <% } %>
+
+      <% if (chara.camps.length > 0) { %>
+      <div class="icon-with-ruby">
+        <img
+          src="img/<%= chara.camps[0].icon %>"
+          alt="<%= chara.camps[0].label %>"
+        >
+
+        <span class="ruby">
+          <%= chara.camps[0].label %>
+        </span>
+      </div>
+      <% } %>
+
+      <% if (chara.sp_equip_types.length > 0) { %>
+      <img
+        class="icon-sp-equip-type"
+        src="img/<%= chara.sp_equip_types[0].icon %>"
+        alt=""
+      >
+      <% } %>
+
+      <img
+        src="img/<%= chara.role.icon %>"
+        alt=""
+      >
+
+      <div class="icon-stack">
+        <img
+          class="icon-base"
+          src="img/attribute_base.png"
+          alt=""
+        >
+
+        <img
+          class="icon-main"
+          src="img/<%= chara.attr_type.icon %>"
+          alt=""
+        >
+      </div>
+
+    </div>
+
+    <div class="skill-content">
+
+      <div class="skill-type <%- skill_type_css %>">
+        <%= skill_type_label %>
+      </div>
+
+      <div class="skill-main">
+
+        <div
+          class="skill-cover"
+          style="
+            background-image:
+              url(<%= skillIcon %>),
+              url(<%= skillTypeBg %>);
+          "
+        ></div>
+
+        <div class="skill-meta">
+
+          <div class="skill-name">
+            <%= skill.name %>
+          </div>
+
+          <div class="skill-sub">
+            <span class="cost-label">
+              消費EX
+            </span>
+
+            <span class="cost-value">
+              <%= skill.cost_ex_gauge %>
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="effect-list">
+
+    <div class="effect-box other">
+      <div class="effect-top">
+        <span class="effect-formula">
+          <%- skill.skill_detail.replace(/\n/g, "<br>") %>
+        </span>
+      </div>
+    </div>
+
+    <% skill.effects.forEach(effect => { %>
+
+    <div
+      class="effect-box <%= effect.effect_class %>"
+    >
+
+      <div class="effect-top">
+
+        <span class="effect-name">
+
+          <%= effect.type %>
+
+          <% if (effect.duration) { %>
+          <span class="effect-ct">
+            <%= effect.duration.ct %>CT
+          </span>
+          <% } %>
+
+        </span>
+
+        <% if (effect.target) { %>
+        <span class="effect-target">
+          <%= effect.target %>
+        </span>
+        <% } %>
+
+      </div>
+
+      <% if (effect.display_value) { %>
+      <div class="effect-value">
+        <%= effect.display_value %>
+      </div>
+      <% } %>
+
+      <% if (effect.formula) { %>
+      <div class="effect-formula">
+        └ <%= effect.formula %>
+      </div>
+      <% } %>
+
+      <% if (
+        effect.notes
+        && effect.notes.length
+      ) { %>
+
+        <% effect.notes.forEach(note => { %>
+
+        <div
+          class="
+            effect-note
+            <%= note.type %>
+          "
+        >
+
+          <span class="tag">
+            <%= note.label %>
+          </span>
+
+          <%= note.text %>
+
+        </div>
+
+        <% }) %>
+
+      <% } %>
+
+    </div>
+
+    <% }) %>
+
+  </div>
+
+</div>

@@ -1,0 +1,125 @@
+<%
+var baseUrl = '.';
+
+const unit_id = 1004003;
+
+const currentIndex = characters.findIndex(
+    x => x.unit_id === unit_id
+);
+
+%>
+
+<%-
+    include('./_inc/_head.ejs', {
+        baseUrl: baseUrl
+    });
+%>
+
+<div class="debug-nav">
+    <button id="prev-btn">←</button>
+    <span id="current-name"></span>
+    <button id="next-btn">→</button>
+</div>
+
+<% for (let chara of characters) { %>
+    
+    <%
+    const unit_skills = skills.filter(
+        x => x.unit_id === chara.unit_id
+    );
+    %>
+
+    <div
+        class="character-container"
+        data-unit-id="<%= chara.unit_id %>"
+    >
+        <% for (let skill of unit_skills) { %>
+            <%- include(
+                "_inc/_card",
+                {
+                    skill,
+                    chara
+                }
+            ) %>
+        <% } %>
+    </div>
+<% } %>
+
+
+<script>
+(() => {
+    const STORAGE_KEY = 'debug_character_id';
+
+    const containers = [
+        ...document.querySelectorAll('.character-container')
+    ];
+
+    const currentName =
+        document.getElementById('current-name');
+    
+    let index = 0;
+
+    function update() {
+        containers.forEach(x =>
+            x.classList.remove('active')
+        );
+
+        const current = containers[index];
+
+        current.classList.add('active');
+
+        localStorage.setItem(
+            STORAGE_KEY,
+            current.dataset.unitId
+        );
+
+        currentName.textContent =
+            current.dataset.unitId +
+            ` (${index + 1}/${containers.length})`;
+    }
+
+    document
+        .getElementById('prev-btn')
+        .addEventListener('click', () => {
+
+            index--;
+
+            if (index < 0) {
+                index = containers.length - 1;
+            }
+
+            update();
+        });
+
+    document
+        .getElementById('next-btn')
+        .addEventListener('click', () => {
+            
+            index++;
+
+            if (index >= containers.length) {
+                index = 0;
+            }
+
+            update();
+        });
+
+    const savedUnitId =
+        localStorage.getItem(STORAGE_KEY);
+
+    if (savedUnitId) {
+        const savedIndex = containers.findIndex(
+            x => x.dataset.unitId === savedUnitId
+        );
+
+        if (savedIndex >= 0) {
+            index = savedIndex;
+        }
+    }
+    
+    update();
+})();
+</script>
+
+</body>
+</html>
