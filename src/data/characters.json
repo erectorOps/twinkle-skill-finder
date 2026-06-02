@@ -4720,6 +4720,51 @@
     }
   },
   {
+    "unit_id": 1043003,
+    "character_name": "サチ",
+    "character_name_kana": "サチ",
+    "unit_name": "ダークトレジャー",
+    "rarity": 5,
+    "attr_type": {
+      "id": "3",
+      "label": "雷",
+      "icon": "attribute_03.png"
+    },
+    "role": {
+      "id": "2",
+      "label": "スピード",
+      "icon": "type_2.png"
+    },
+    "camps": [
+      {
+        "id": 3,
+        "label": "魔族",
+        "icon": "race_3.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 5,
+        "label": "流星学園付属",
+        "icon": "affiliation_02.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "1",
+        "label": "魔法",
+        "icon": "icon_equipment_01_01.png"
+      }
+    ],
+    "specific_gauge_data": {
+      "specific_name": "リバース状態",
+      "specific_detail": "◆通常状態\n通常状態中、EXスキル1、または、EXスキル2を使用するとリバースゲージが「1」溜まる。\nリバースゲージが「3」溜まると「リバース状態」に移行する。\n\n◆リバース状態\nリバース状態に移行直後、前から1番目の敵1体にノーツ反転を付与（5CT）\n※発動ごとに効果時間が1CTずつ短縮される（最低2CT）\n\nリバース状態中、自身のEX上昇150アップ【解除不可】\nリバース状態中、「EXスキル2」が「EXスキル2+」に変化する。\n自身が通常攻撃を行った行動終了後、リバースゲージが「1」減少する。\nリバースゲージが「0」になるとリバース状態が解除され、「通常状態」に戻る。\n\n※ノーツ反転：1CT経過ごとの通常ノーツ移動の移動方向が反転する",
+      "icon_id": 51,
+      "is_unlock": 1,
+      "is_strengthen": 0
+    }
+  },
+  {
     "unit_id": 1044001,
     "character_name": "プリムラ",
     "character_name_kana": "フリムラ",
@@ -4773,6 +4818,45 @@
       "id": "1",
       "label": "アタック",
       "icon": "type_1.png"
+    },
+    "camps": [
+      {
+        "id": 3,
+        "label": "魔族",
+        "icon": "race_3.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 5,
+        "label": "流星学園付属",
+        "icon": "affiliation_02.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "1",
+        "label": "魔法",
+        "icon": "icon_equipment_01_01.png"
+      }
+    ],
+    "specific_gauge_data": []
+  },
+  {
+    "unit_id": 1044003,
+    "character_name": "プリムラ",
+    "character_name_kana": "フリムラ",
+    "unit_name": "反転せし白き終末",
+    "rarity": 5,
+    "attr_type": {
+      "id": "3",
+      "label": "雷",
+      "icon": "attribute_03.png"
+    },
+    "role": {
+      "id": "5",
+      "label": "ヒール",
+      "icon": "type_5.png"
     },
     "camps": [
       {

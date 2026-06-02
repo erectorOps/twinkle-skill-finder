@@ -237,6 +237,48 @@ switch (iconGroup) {
       </div>
       <% } %>
 
+      <% if (effect.children && effect.children.length) { %>
+      <div class="effect-children">
+      <% effect.children.forEach(sub_effect => { %>
+        <div class="effect-box sub-effect <%= sub_effect.effect_class %>">
+
+          <div class="effect-top">
+
+            <span class="effect-name">
+              <%= sub_effect.type %>
+
+              <% if (sub_effect.duration) { %>
+              <span class="effect-ct">
+                <%= sub_effect.duration.ct %>CT
+              </span>
+              <% } %>
+
+            </span>
+
+            <% if (sub_effect.target) { %>
+            <span class="effect-target">
+              <%= sub_effect.target %>
+            </span>
+            <% } %>
+
+          </div>
+
+          <% if (sub_effect.display_value) { %>
+          <div class="effect-value">
+            <%= sub_effect.display_value %>
+          </div>
+          <% } %>
+          <% if (sub_effect.formula) { %>
+          <div class="effect-formula">
+            └ <%= sub_effect.formula %>
+          </div>
+          <% } %>
+        </div>
+      <% }) %>
+      </div>
+      <% } %>
+
+
       <% if (
         effect.notes
         && effect.notes.length

@@ -442,6 +442,51 @@ body {
     color: #b9c1d1;
   }
 
+  .effect-children {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+
+    margin-top: 10px;
+    padding-left: 10px;
+
+  }
+
+  .sub-effect {
+    padding: 8px 10px;
+
+    border-left-width: 3px;
+    border-radius: 8px;
+
+    .effect-top {
+      gap: 10px;
+      margin-bottom: 4px;
+    }
+
+    .effect-name {
+      gap: 6px;
+
+      font-size: 13px;
+    }
+
+    .effect-ct {
+      padding: 2px 5px;
+
+      font-size: 9px;
+    }
+
+    .effect-target,
+    .effect-formula {
+      font-size: 11px;
+    }
+
+    .effect-value {
+      font-size: 13px;
+      line-height: 1.4;
+    }
+  }
+
   .duration {
     font-size: 13px;
     color: #8ec7ff;
