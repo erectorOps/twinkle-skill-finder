@@ -273,6 +273,14 @@ switch (iconGroup) {
             └ <%= sub_effect.formula %>
           </div>
           <% } %>
+          <% if (sub_effect.notes && sub_effect.notes.length) { %>
+            <% sub_effect.notes.forEach(note => { %>
+              <div class="effect-note <%= note.type %>">
+                <span class="tag"><%= note.label %></span>
+                <%= note.text %>
+              </div>
+            <% }) %>
+          <% } %>
         </div>
       <% }) %>
       </div>

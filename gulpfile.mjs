@@ -112,7 +112,21 @@ export function server(done) {
 
   browserSync.init({
     server: {
-      baseDir: distBase
+      baseDir: distBase,
+      middleware: [
+        function (req, res, next) {
+        if (req.url.endsWith(".html")) {
+          res.setHeader("Content-Type", "text/html; charset=UTF-8");
+        }
+        if (req.url.endsWith(".js")) {
+          res.setHeader("Content-Type", "application/javascript; charset=UTF-8");
+        }
+        if (req.url.endsWith(".json")) {
+          res.setHeader("Content-Type", "application/json; charset=UTF-8");
+        }
+        next();
+        }
+      ]
     },
 
     open: true,

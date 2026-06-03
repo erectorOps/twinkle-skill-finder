@@ -1839,7 +1839,7 @@
         "target": "魔族または炎属性の味方",
         "duration": null,
         "notes": [],
-        "raw": "このEXスキル使用後、自身の新春晴餅を1増加\n※新春晴餅：自身のEXスキルの攻撃回数が新春晴餅の数だけ増加する(最大10)",
+        "raw": "このEXスキル使用後、自身の新春晴餅を1増加",
         "children": [],
         "tags": [],
         "inherited_target": true
@@ -1976,7 +1976,7 @@
         "target": "敵単体",
         "duration": null,
         "notes": [],
-        "raw": "このEXスキル使用後、自身の新春晴餅を1増加\n※新春晴餅：自身のEXスキルの攻撃回数が新春晴餅の数だけ増加する(最大10)",
+        "raw": "このEXスキル使用後、自身の新春晴餅を1増加",
         "children": [],
         "tags": [],
         "inherited_target": true
@@ -2135,7 +2135,7 @@
         "target": "敵単体",
         "duration": null,
         "notes": [],
-        "raw": "このEXスキル使用後、自身の新春晴餅を3減少\n※新春晴餅：自身のEXスキルの攻撃回数が新春晴餅の数だけ増加する(最大10)",
+        "raw": "このEXスキル使用後、自身の新春晴餅を3減少",
         "children": [],
         "tags": [],
         "inherited_target": true
@@ -4098,7 +4098,7 @@
         "formula": "",
         "type": "サブ属性付与",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 40
@@ -4571,7 +4571,7 @@
         "value": {
           "rate": 50
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [
@@ -4591,7 +4591,7 @@
         "formula": "付与されているデバフ・状態異常効果をすべて解除",
         "type": "状態回復",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "闇属性の味方",
         "duration": null,
         "notes": [],
@@ -4618,7 +4618,7 @@
         "value": {
           "rate": 70
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -4632,7 +4632,7 @@
         "formula": "付与されているデバフ・状態異常効果をすべて解除",
         "type": "状態回復",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "味方全体",
         "duration": null,
         "notes": [],
@@ -5351,7 +5351,7 @@
         "value": {
           "rate": 10
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -6792,7 +6792,7 @@
           "base": 40,
           "rate": 8
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [
@@ -6835,7 +6835,7 @@
         "formula": "",
         "type": "サブ属性付与",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "ヒールタイプの味方",
         "duration": {
           "ct": 40
@@ -6903,7 +6903,7 @@
           "base": 50,
           "rate": 10
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -7043,7 +7043,7 @@
           "base": 50,
           "rate": 10
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -7558,7 +7558,7 @@
           "base": 40,
           "rate": 8
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [
@@ -7692,7 +7692,7 @@
     "effects": [
       {
         "display_value": "",
-        "formula": "敵から優先的に狙われる",
+        "formula": "",
         "type": "挑発",
         "value": {},
         "effect_class": "other",
@@ -7818,7 +7818,7 @@
           "base": 35,
           "rate": 7
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -7864,7 +7864,7 @@
           "base": 45,
           "rate": 9
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -7921,7 +7921,7 @@
       },
       {
         "display_value": "",
-        "formula": "敵から優先的に狙われる",
+        "formula": "",
         "type": "挑発",
         "value": {},
         "effect_class": "other",
@@ -7942,42 +7942,39 @@
         "inherited_target": false
       },
       {
-        "display_value": "4",
+        "display_value": "「纏雷の恩寵」の効果:",
         "formula": "",
-        "type": "ノーツ移動",
-        "value": {},
-        "effect_class": "buff",
+        "type": "固有効果の付与",
+        "value": {
+          "name": "纏雷の恩寵"
+        },
+        "effect_class": "other",
         "target": "自身の右1レーンにいる味方",
         "duration": null,
-        "notes": [
+        "notes": [],
+        "raw": "自身の右1レーンにいる味方に「纏雷の恩寵」の効果",
+        "children": [
           {
-            "type": "property",
-            "text": "「纏雷の恩寵」の効果",
-            "label": "特性"
+            "type": "ノーツ移動",
+            "display_value": "4",
+            "target": "自身の右1レーンにいる味方",
+            "duration": null,
+            "formula": "",
+            "value": {},
+            "effect_class": "note"
+          },
+          {
+            "type": "チャージ",
+            "target": "自身の右1レーンにいる味方",
+            "duration": null,
+            "formula": "",
+            "value": {},
+            "display_value": "",
+            "effect_class": "buff"
           }
         ],
-        "tags": [
-          ""
-        ]
-      },
-      {
-        "display_value": "",
-        "formula": "",
-        "type": "チャージ",
-        "value": {},
-        "effect_class": "buff",
-        "target": "自身の右1レーンにいる味方",
-        "duration": null,
-        "notes": [
-          {
-            "type": "property",
-            "text": "「纏雷の恩寵」の効果",
-            "label": "特性"
-          }
-        ],
-        "tags": [
-          ""
-        ]
+        "tags": [],
+        "inherited_target": false
       }
     ]
   },
@@ -8805,7 +8802,7 @@
           "base": 35,
           "rate": 7
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -8850,7 +8847,7 @@
           "base": 45,
           "rate": 9
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -8955,23 +8952,39 @@
         "inherited_target": false
       },
       {
-        "display_value": "",
-        "formula": "スタン状態回復＆ゲージ最大回復",
-        "type": "スタン回復",
-        "value": {},
-        "effect_class": "buff",
+        "display_value": "「黎明の恩寵」の効果:",
+        "formula": "",
+        "type": "固有効果の付与",
+        "value": {
+          "name": "黎明の恩寵"
+        },
+        "effect_class": "other",
         "target": "味方全体",
         "duration": null,
-        "notes": [
+        "notes": [],
+        "raw": "味方全体に「黎明の恩寵」の効果 ※黎明の恩寵：スキル発動時にスタン中の味方のスタン状態を回復し、スタンゲージを最大まで回復",
+        "children": [
           {
-            "type": "property",
-            "text": "「黎明の恩寵」の効果",
-            "label": "特性"
+            "type": "スタン回復",
+            "target": "スタン中の味方",
+            "formula": "スタン状態を回復する",
+            "duration": null,
+            "value": {},
+            "display_value": "",
+            "effect_class": "buff"
+          },
+          {
+            "type": "スタンゲージ回復",
+            "target": "味方",
+            "formula": "スタンゲージを最大まで回復",
+            "duration": null,
+            "value": {},
+            "display_value": "",
+            "effect_class": "buff"
           }
         ],
-        "tags": [
-          ""
-        ]
+        "tags": [],
+        "inherited_target": false
       }
     ]
   },
@@ -10315,7 +10328,7 @@
           "base": 40,
           "rate": 8
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -10329,7 +10342,7 @@
         "formula": "付与されているデバフ・状態異常効果をすべて解除",
         "type": "状態回復",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "光属性の味方",
         "duration": null,
         "notes": [],
@@ -10373,7 +10386,7 @@
         "value": {
           "rate": 100
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -10623,51 +10636,52 @@
         "inherited_target": true
       },
       {
-        "display_value": "1CTで再行動の位置に戻る",
+        "display_value": "「開花の恩寵」の効果:",
         "formula": "",
-        "type": "ノーツ戻り位置変更",
-        "value": {},
-        "effect_class": "note",
+        "type": "固有効果の付与",
+        "value": {
+          "name": "開花の恩寵"
+        },
+        "effect_class": "other",
         "target": "自身",
         "duration": null,
         "notes": [
           {
             "type": "condition",
-            "text": "開花の恩寵：自身がステルス状態の時、解除し効果発動",
+            "text": "自身がステルス状態の時、ステルス状態を解除し効果発動",
             "label": "発動条件"
+          }
+        ],
+        "raw": "自身がステルス状態の時、自身のステルス状態を解除し「開花の恩寵」の効果",
+        "children": [
+          {
+            "type": "ノーツ戻り位置変更",
+            "display_value": "1CTで再行動の位置に戻る",
+            "target": "自身",
+            "duration": null,
+            "formula": "",
+            "value": {},
+            "effect_class": "note"
           },
           {
-            "type": "timing",
-            "text": "行動終了後",
-            "label": "タイミング"
+            "type": "EX消費量減少",
+            "display_value": "50%",
+            "notes": [
+              {
+                "type": "expire",
+                "text": "次ターン以降EXスキル1回発動まで",
+                "label": "期限"
+              }
+            ],
+            "target": "自身",
+            "duration": null,
+            "formula": "",
+            "value": {},
+            "effect_class": "buff"
           }
         ],
-        "raw": "自身がステルス状態の時、自身のステルス状態を解除し「開花の恩寵」の効果\n※開花の恩寵：自身の行動終了後のノーツ戻り位置をタイムライン上1の位置にする",
-        "children": [],
         "tags": [],
         "inherited_target": false
-      },
-      {
-        "display_value": "50",
-        "formula": "",
-        "type": "EX消費量減少",
-        "value": {
-          "amount": 50
-        },
-        "effect_class": "buff",
-        "target": "自身",
-        "duration": null,
-        "notes": [
-          {
-            "type": "expire",
-            "text": "次ターン以降EXスキル1回発動まで",
-            "label": "期限"
-          }
-        ],
-        "raw": "EX消費量50%減少(次ターン以降EXスキル1回発動まで)",
-        "children": [],
-        "tags": [],
-        "inherited_target": true
       }
     ]
   },
@@ -12314,7 +12328,7 @@
           "base": 40,
           "rate": 8
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [
@@ -12406,7 +12420,7 @@
           "base": 50,
           "rate": 10
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -13371,7 +13385,7 @@
           "base": 40,
           "rate": 7
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -13385,7 +13399,7 @@
         "formula": "",
         "type": "サブ属性付与",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 40
@@ -13449,7 +13463,7 @@
           "base": 50,
           "rate": 9
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -13830,29 +13844,44 @@
         "inherited_target": false
       },
       {
-        "display_value": "+2",
-        "formula": "属性の数を参照するスキルの対象になった場合、そのカウントを+2する(最大+6)",
-        "type": "属性カウント+",
-        "value": {},
+        "display_value": "「彩愛の恩寵」の効果:",
+        "formula": "",
+        "type": "固有効果の付与",
+        "value": {
+          "name": "彩愛の恩寵"
+        },
         "effect_class": "other",
         "target": "自身",
-        "duration": {
-          "ct": 40
-        },
+        "duration": null,
         "notes": [
           {
             "type": "condition",
             "text": "チーム内に異なるメイン属性の味方が3体以上いる時",
             "label": "発動条件"
-          },
-          {
-            "type": "property",
-            "text": "「彩愛の恩寵」の効果",
-            "label": "特性"
           }
         ],
-        "raw": "チーム内に異なるメイン属性の味方が3体以上いる時、自身に「彩愛の恩寵」の効果\n※彩愛の恩寵：「属性カウント+2」を付与する(40CT)【バフ解除無効】\n※属性カウント+2：自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+2する(最大6カウントまで)",
-        "children": [],
+        "raw": "チーム内に異なるメイン属性の味方が3体以上いる時、自身に「彩愛の恩寵」の効果",
+        "children": [
+          {
+            "type": "属性カウント+2",
+            "formula": "属性の数を参照するスキルの対象になった場合、そのカウントを+2する(最大+6)",
+            "value": {
+              "amount": 2,
+              "max": 6
+            },
+            "notes": [
+              {
+                "type": "property",
+                "text": "バフ解除無効",
+                "label": "特性"
+              }
+            ],
+            "target": "自身",
+            "duration": null,
+            "display_value": "",
+            "effect_class": "other"
+          }
+        ],
         "tags": [],
         "inherited_target": false
       }
@@ -13868,29 +13897,46 @@
     "skill_detail": "敵単体に150％×8回（「彩愛の恩寵」効果時、200％×8回）のダメージ/魔族の味方のATKをチーム内の異なる属性の数×100％アップ（30CT）/クリティカル時のダメージ倍率をチーム内の異なる属性の数×9％加算（30CT）/ノーツを7～7前方に移動",
     "effects": [
       {
-        "display_value": "150%×8回",
+        "display_value": "「彩愛の恩寵」の効果:",
         "formula": "",
-        "type": "ダメージ",
+        "type": "固有効果の付与",
         "value": {
-          "rate": 150,
-          "hit": 8
+          "name": "彩愛の恩寵"
         },
-        "effect_class": "main",
-        "target": "敵単体",
+        "effect_class": "other",
+        "target": "",
         "duration": null,
         "notes": [
           {
-            "type": "boost",
-            "text": "「彩愛の恩寵」効果時、200%×8回",
-            "label": "強化"
+            "type": "condition",
+            "text": null,
+            "label": "発動条件"
           }
         ],
         "raw": "敵単体に150%×8回(「彩愛の恩寵」効果時、200%×8回)のダメージ",
-        "children": [],
-        "tags": [
-          "単体攻撃"
+        "children": [
+          {
+            "type": "属性カウント+2",
+            "formula": "属性の数を参照するスキルの対象になった場合、そのカウントを+2する(最大+6)",
+            "value": {
+              "amount": 2,
+              "max": 6
+            },
+            "notes": [
+              {
+                "type": "property",
+                "text": "バフ解除無効",
+                "label": "特性"
+              }
+            ],
+            "target": "",
+            "duration": null,
+            "display_value": "",
+            "effect_class": "other"
+          }
         ],
-        "inherited_target": false
+        "tags": [],
+        "inherited_target": true
       },
       {
         "display_value": "100%～500%",
@@ -14532,51 +14578,50 @@
         "inherited_target": false
       },
       {
-        "display_value": "2回",
+        "display_value": "「光誕の恩寵」の効果:",
         "formula": "",
-        "type": "バリア",
-        "value": {},
-        "effect_class": "buff",
-        "target": "味方",
-        "duration": {
-          "ct": 15
-        },
-        "notes": [
-          {
-            "type": "property",
-            "text": "「光誕の恩寵」の効果",
-            "label": "特性"
-          }
-        ],
-        "raw": "味方に「光誕の恩寵」の効果\n※光誕の恩寵：2回の攻撃を無効化するバリアを張る(15CT)",
-        "children": [],
-        "tags": [],
-        "inherited_target": false
-      },
-      {
-        "display_value": "3",
-        "formula": "",
-        "type": "ノーツ移動",
+        "type": "固有効果の付与",
         "value": {
-          "amount": 3
+          "name": "光誕の恩寵"
         },
-        "effect_class": "note",
-        "target": "このEXスキル使用者",
+        "effect_class": "other",
+        "target": "味方",
         "duration": null,
-        "notes": [
+        "notes": [],
+        "raw": "味方に「光誕の恩寵」の効果",
+        "children": [
           {
-            "type": "condition",
-            "text": "このEXスキルで発動したバリアが削られる度に",
-            "label": "発動条件"
+            "type": "バリア",
+            "display_value": "2回",
+            "formula": "",
+            "value": {
+              "count": 2
+            },
+            "duration": {
+              "ct": 15
+            },
+            "target": "味方",
+            "effect_class": "buff"
           },
           {
-            "type": "property",
-            "text": "「光誕の恩寵」の効果",
-            "label": "特性"
+            "type": "ノーツ移動",
+            "display_value": "3",
+            "formula": "",
+            "value": {
+              "amount": 3
+            },
+            "notes": [
+              {
+                "type": "condition",
+                "text": "このEXスキルで発動したバリアが削られる度に",
+                "label": "発動条件"
+              }
+            ],
+            "target": "味方",
+            "duration": null,
+            "effect_class": "note"
           }
         ],
-        "raw": "このEXスキルで発動したバリアが削られる度に、このEXスキル使用者のノーツを3前方に移動",
-        "children": [],
         "tags": [],
         "inherited_target": false
       }
@@ -15191,7 +15236,7 @@
       },
       {
         "display_value": "",
-        "formula": "敵から優先的に狙われる",
+        "formula": "",
         "type": "挑発",
         "value": {},
         "effect_class": "other",
@@ -15559,7 +15604,7 @@
         "formula": "付与されているデバフ・状態異常効果をすべて解除",
         "type": "状態回復",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "雷属性の味方",
         "duration": null,
         "notes": [],
@@ -15688,11 +15733,13 @@
         "inherited_target": false
       },
       {
-        "display_value": "",
-        "formula": "全属性攻撃が弱点になる",
-        "type": "弱点付与",
-        "value": {},
-        "effect_class": "debuff",
+        "display_value": "「極天の呪縛」の効果:",
+        "formula": "",
+        "type": "固有効果の付与",
+        "value": {
+          "name": "極天の呪縛"
+        },
+        "effect_class": "other",
         "target": "敵単体",
         "duration": {
           "ct": 8
@@ -15702,15 +15749,22 @@
             "type": "condition",
             "text": "チーム内の異なる属性が5種類以上の時",
             "label": "発動条件"
-          },
-          {
-            "type": "property",
-            "text": "「極天の呪縛」の効果",
-            "label": "特性"
           }
         ],
         "raw": "チーム内の異なる属性が5種類以上の時、敵単体に「極天の呪縛」を付与する(8CT)",
-        "children": [],
+        "children": [
+          {
+            "type": "弱点付与",
+            "formula": "全属性攻撃が弱点になる",
+            "target": "敵単体",
+            "duration": {
+              "ct": 8
+            },
+            "value": {},
+            "display_value": "",
+            "effect_class": "debuff"
+          }
+        ],
         "tags": [],
         "inherited_target": false
       },
@@ -15786,11 +15840,13 @@
         "inherited_target": false
       },
       {
-        "display_value": "",
-        "formula": "全属性攻撃が弱点になる",
-        "type": "弱点付与",
-        "value": {},
-        "effect_class": "debuff",
+        "display_value": "「極天の呪縛」の効果:",
+        "formula": "",
+        "type": "固有効果の付与",
+        "value": {
+          "name": "極天の呪縛"
+        },
+        "effect_class": "other",
         "target": "敵全体",
         "duration": {
           "ct": 8
@@ -15800,15 +15856,22 @@
             "type": "condition",
             "text": "チーム内の異なる属性が5種類以上の時",
             "label": "発動条件"
-          },
-          {
-            "type": "property",
-            "text": "「極天の呪縛」の効果",
-            "label": "特性"
           }
         ],
         "raw": "チーム内の異なる属性が5種類以上の時、敵全体に「極天の呪縛」を付与する(8CT)",
-        "children": [],
+        "children": [
+          {
+            "type": "弱点付与",
+            "formula": "全属性攻撃が弱点になる",
+            "target": "敵全体",
+            "duration": {
+              "ct": 8
+            },
+            "value": {},
+            "display_value": "",
+            "effect_class": "debuff"
+          }
+        ],
         "tags": [],
         "inherited_target": false
       },
@@ -16450,49 +16513,48 @@
     "skill_detail": "自身に「星霊の恩寵」の効果\n※星霊の恩寵：自身のATK170％アップ（20CT）/自身の行動終了後のノーツ戻り位置を前から2番目の味方と同じ位置にする（対象がいない場合、行動CT値を参照した位置に戻る）",
     "effects": [
       {
-        "display_value": "170%",
+        "display_value": "「星霊の恩寵」の効果:",
         "formula": "",
-        "type": "ATKアップ",
-        "value": {},
-        "effect_class": "buff",
-        "target": "自身",
-        "duration": {
-          "ct": 20
+        "type": "固有効果の付与",
+        "value": {
+          "name": "星霊の恩寵"
         },
-        "notes": [
-          {
-            "type": "property",
-            "text": "「星霊の恩寵」の効果",
-            "label": "特性"
-          }
-        ],
-        "tags": [
-          ""
-        ]
-      },
-      {
-        "display_value": "前から2番目の味方と同じ位置に移動",
-        "formula": "",
-        "type": "ノーツ戻り位置変更",
-        "value": {},
-        "effect_class": "buff",
+        "effect_class": "other",
         "target": "自身",
         "duration": null,
-        "notes": [
+        "notes": [],
+        "raw": "自身に「星霊の恩寵」の効果",
+        "children": [
           {
-            "type": "condition",
-            "text": "対象がいる場合に限る",
-            "label": "発動条件"
+            "type": "ATKアップ",
+            "display_value": "170%",
+            "duration": {
+              "ct": 20
+            },
+            "target": "自身",
+            "formula": "",
+            "value": {},
+            "effect_class": "buff"
           },
           {
-            "type": "property",
-            "text": "「星霊の恩寵」の効果",
-            "label": "特性"
+            "type": "ノーツ戻り位置変更",
+            "display_value": "前から2番目の味方と同じ位置に移動",
+            "notes": [
+              {
+                "type": "condition",
+                "text": "対象がいる場合に限る",
+                "label": "発動条件"
+              }
+            ],
+            "target": "自身",
+            "duration": null,
+            "formula": "",
+            "value": {},
+            "effect_class": "note"
           }
         ],
-        "tags": [
-          ""
-        ]
+        "tags": [],
+        "inherited_target": false
       }
     ]
   },
@@ -16665,7 +16727,7 @@
         "formula": "",
         "type": "サブ属性付与",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 40
@@ -17133,35 +17195,45 @@
         "inherited_target": false
       },
       {
-        "display_value": "",
-        "formula": "敵の攻撃によるスタンゲージ減少を無効化する(強制スタンは除く)",
-        "type": "スタン減少無効",
-        "value": {},
+        "display_value": "「女帝の恩寵」の効果:",
+        "formula": "",
+        "type": "固有効果の付与",
+        "value": {
+          "name": "女帝の恩寵"
+        },
         "effect_class": "other",
         "target": "自身",
         "duration": {
           "ct": 30
         },
-        "notes": [
+        "notes": [],
+        "raw": "自身に「女帝の恩寵」の効果",
+        "children": [
           {
-            "type": "property",
-            "text": "「女帝の恩寵」の効果",
-            "label": "特性"
-          },
-          {
-            "type": "property",
-            "text": "バフ解除無効",
-            "label": "特性"
+            "type": "スタンゲージ減少無効",
+            "formula": "攻撃によるスタンゲージ減少を無効化する(強制スタンは除く)",
+            "notes": [
+              {
+                "type": "property",
+                "text": "バフ解除無効",
+                "label": "特性"
+              }
+            ],
+            "target": "自身",
+            "duration": {
+              "ct": 30
+            },
+            "value": {},
+            "display_value": "",
+            "effect_class": "other"
           }
         ],
-        "raw": "自身に「女帝の恩寵」の効果",
-        "children": [],
         "tags": [],
         "inherited_target": false
       },
       {
         "display_value": "",
-        "formula": "敵から優先的に狙われる",
+        "formula": "",
         "type": "挑発",
         "value": {},
         "effect_class": "other",
@@ -17252,29 +17324,41 @@
     "skill_detail": "敵全体に450％（「女帝の恩寵」効果時、500％）のダメージ/自身に庇護状態を付与（50CT）【バフ解除無効】/被ダメージ20％軽減（50CT）【バフ解除無効】/カウンター[進攻]：人間の味方のノーツを前方に5～5移動を付与（2回発動まで）【バフ解除無効】\n※庇護状態：範囲効果も含む敵からのダメージやスキル効果を自身に引き付ける（ランブル敗北ダメージ、反射ダメージは除く）\n※カウンター：自身が敵からの攻撃を受けた際に記載の効果を発動する",
     "effects": [
       {
-        "display_value": "450%",
+        "display_value": "「女帝の恩寵」の効果:",
         "formula": "",
-        "type": "ダメージ",
+        "type": "固有効果の付与",
         "value": {
-          "rate": 450,
-          "hit": 1
+          "name": "女帝の恩寵"
         },
-        "effect_class": "main",
-        "target": "敵全体",
-        "duration": null,
-        "notes": [
+        "effect_class": "other",
+        "target": "",
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "敵全体に450%(「女帝の恩寵」効果時、500%)のダメージ",
+        "children": [
           {
-            "type": "boost",
-            "text": "「女帝の恩寵」効果時、500%",
-            "label": "強化"
+            "type": "スタンゲージ減少無効",
+            "formula": "攻撃によるスタンゲージ減少を無効化する(強制スタンは除く)",
+            "notes": [
+              {
+                "type": "property",
+                "text": "バフ解除無効",
+                "label": "特性"
+              }
+            ],
+            "target": "",
+            "duration": {
+              "ct": 30
+            },
+            "value": {},
+            "display_value": "",
+            "effect_class": "other"
           }
         ],
-        "raw": "敵全体に450%(「女帝の恩寵」効果時、500%)のダメージ",
-        "children": [],
-        "tags": [
-          "全体攻撃"
-        ],
-        "inherited_target": false
+        "tags": [],
+        "inherited_target": true
       },
       {
         "display_value": "",
@@ -17479,7 +17563,7 @@
           "base": 45,
           "rate": 9
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -17776,7 +17860,7 @@
       },
       {
         "display_value": "",
-        "formula": "敵から優先的に狙われる",
+        "formula": "",
         "type": "挑発",
         "value": {},
         "effect_class": "other",
@@ -18017,11 +18101,13 @@
         "inherited_target": false
       },
       {
-        "display_value": "30%",
+        "display_value": "「螺旋の恩寵」の効果:",
         "formula": "",
-        "type": "クリティカル率アップ",
-        "value": {},
-        "effect_class": "buff",
+        "type": "固有効果の付与",
+        "value": {
+          "name": "螺旋の恩寵"
+        },
+        "effect_class": "other",
         "target": "自身",
         "duration": {
           "ct": 10
@@ -18031,42 +18117,35 @@
             "type": "condition",
             "text": "チーム内の異なる属性が3種類以上の時",
             "label": "発動条件"
-          },
-          {
-            "type": "property",
-            "text": "「螺旋の恩寵」の効果",
-            "label": "特性"
           }
         ],
-        "tags": [
-          ""
-        ]
-      },
-      {
-        "display_value": "",
-        "formula": "1CT経過ごとの通常ノーツ移動の移動量が+1増加",
-        "type": "ノーツ移動量2倍",
-        "value": {},
-        "effect_class": "buff",
-        "target": "自身",
-        "duration": {
-          "ct": 10
-        },
-        "notes": [
+        "raw": "チーム内の異なる属性が3種類以上の時、自身に「螺旋の恩寵」の効果(10CT)※この効果は重複しない",
+        "children": [
           {
-            "type": "condition",
-            "text": "チーム内の異なる属性が3種類以上の時",
-            "label": "発動条件"
+            "type": "クリティカル率アップ",
+            "display_value": "30%",
+            "target": "自身",
+            "duration": {
+              "ct": 10
+            },
+            "formula": "",
+            "value": {},
+            "effect_class": "buff"
           },
           {
-            "type": "property",
-            "text": "「螺旋の恩寵」の効果",
-            "label": "特性"
+            "type": "ノーツ移動量2倍",
+            "formula": "1CT経過ごとの通常ノーツ移動の移動量が+1増加",
+            "target": "自身",
+            "duration": {
+              "ct": 10
+            },
+            "value": {},
+            "display_value": "",
+            "effect_class": "buff"
           }
         ],
-        "tags": [
-          ""
-        ]
+        "tags": [],
+        "inherited_target": false
       }
     ]
   },
@@ -18080,23 +18159,28 @@
     "skill_detail": "敵単体に250％（ラッシュ100以上の時、270％）×10回のダメージ/自身のクリティカル時のダメージ倍率を神族の味方の数×10％加算（1CT）/「螺旋の恩寵」の効果が付与されている時、自身のクリティカル50％加算（1CT）/自身の行動CT20％遅延（20CT）",
     "effects": [
       {
-        "display_value": "",
+        "display_value": "250%×10回",
         "formula": "",
-        "type": "unknown",
-        "value": "None",
-        "effect_class": "other",
+        "type": "ダメージ",
+        "value": {
+          "rate": 250,
+          "hit": 10
+        },
+        "effect_class": "main",
         "target": "敵単体",
         "duration": null,
         "notes": [
           {
-            "type": "condition",
-            "text": "ラッシュ100以上の時",
-            "label": "発動条件"
+            "type": "boost",
+            "text": "ラッシュ100以上の時、270%",
+            "label": "強化"
           }
         ],
         "raw": "敵単体に250%(ラッシュ100以上の時、270%)×10回のダメージ",
         "children": [],
-        "tags": [],
+        "tags": [
+          "単体攻撃"
+        ],
         "inherited_target": false
       },
       {
@@ -18172,7 +18256,7 @@
     "effects": [
       {
         "display_value": "",
-        "formula": "敵から優先的に狙われる",
+        "formula": "",
         "type": "挑発",
         "value": {},
         "effect_class": "other",
@@ -18536,33 +18620,43 @@
         "display_value": "50%",
         "formula": "",
         "type": "クリティカルダメージアップ",
-        "value": {
-          "rate": 50
-        },
+        "value": {},
         "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 1
         },
-        "notes": [],
-        "raw": "ユニゾン時、自身を含むユニゾンした人数によって以下の効果を適用する\n・2体以上：自身のクリティカル時のダメージ倍率を50%加算(1CT)",
-        "children": [],
-        "tags": [],
-        "inherited_target": false
+        "notes": [
+          {
+            "type": "condition",
+            "text": "自身を含む、2体以上とユニゾン時",
+            "label": "発動条件"
+          }
+        ],
+        "tags": [
+          ""
+        ]
       },
       {
-        "display_value": "",
+        "display_value": "540%",
         "formula": "",
-        "type": "unknown",
-        "value": "None",
-        "effect_class": "other",
+        "type": "ダメージを強化",
+        "value": {},
+        "effect_class": "buff",
         "target": "敵全体",
-        "duration": null,
-        "notes": [],
-        "raw": "・3体以上：敵全体へのダメージを540%に強化",
-        "children": [],
-        "tags": [],
-        "inherited_target": false
+        "duration": {
+          "ct": 1
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "自身を含む、3体以上とユニゾン時",
+            "label": "発動条件"
+          }
+        ],
+        "tags": [
+          ""
+        ]
       },
       {
         "display_value": "20%",
@@ -18731,20 +18825,22 @@
         "inherited_target": false
       },
       {
-        "display_value": "",
-        "formula": "",
-        "type": "unknown",
-        "value": "None",
-        "effect_class": "other",
-        "target": "雷属性の味方",
+        "display_value": "23%～115%",
+        "formula": "雷属性の味方の数×23%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 23
+        },
+        "effect_class": "buff",
+        "target": "自身",
         "duration": {
           "ct": 20
         },
         "notes": [],
-        "raw": "さらに雷属性の味方の数×23%アップ(20CT)",
+        "raw": "さらにATKを雷属性の味方の数×23%アップ(20CT)",
         "children": [],
         "tags": [],
-        "inherited_target": false
+        "inherited_target": true
       },
       {
         "display_value": "前から2番目の味方と同じ位置に移動",
@@ -18869,11 +18965,13 @@
         "inherited_target": false
       },
       {
-        "display_value": "",
-        "formula": "",
-        "type": "unknown",
-        "value": "None",
-        "effect_class": "other",
+        "display_value": "30%～150%",
+        "formula": "味方のスタンゲージ数×30%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 30
+        },
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 30
@@ -18903,12 +19001,12 @@
         "inherited_target": true
       },
       {
-        "display_value": "",
-        "formula": "",
-        "type": "unknown",
-        "value": "None",
+        "display_value": "2",
+        "formula": "スタンゲージが0になるとスタン状態になる",
+        "type": "スタンゲージ消費",
+        "value": {},
         "effect_class": "other",
-        "target": "味方",
+        "target": "自身",
         "duration": null,
         "notes": [
           {
@@ -18920,7 +19018,7 @@
         "raw": "このEXスキル使用後、味方のスタンゲージを2消費(スタンゲージが0になるとスタン状態になる)",
         "children": [],
         "tags": [],
-        "inherited_target": false
+        "inherited_target": true
       }
     ]
   },
@@ -18934,32 +19032,41 @@
     "skill_detail": "敵単体に150％（ラッシュ100以上の時、250％）×10回のダメージ/自身に相手スタン時のダメージ倍率を50％+異なるタイプの味方の数×7.5％加算（1CT）/神族または水属性の味方のノーツを5～5前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない",
     "effects": [
       {
-        "display_value": "",
+        "display_value": "150%×10回",
         "formula": "",
-        "type": "unknown",
-        "value": "None",
-        "effect_class": "other",
+        "type": "ダメージ",
+        "value": {
+          "rate": 150,
+          "hit": 10
+        },
+        "effect_class": "main",
         "target": "敵単体",
         "duration": null,
         "notes": [
           {
-            "type": "condition",
-            "text": "ラッシュ100以上の時",
-            "label": "発動条件"
+            "type": "boost",
+            "text": "ラッシュ100以上の時、250%",
+            "label": "強化"
           }
         ],
         "raw": "敵単体に150%(ラッシュ100以上の時、250%)×10回のダメージ",
         "children": [],
-        "tags": [],
+        "tags": [
+          "単体攻撃"
+        ],
         "inherited_target": false
       },
       {
-        "display_value": "",
-        "formula": "",
-        "type": "unknown",
-        "value": "None",
+        "display_value": "50%～300%",
+        "formula": "50%+異なるタイプの味方の数×50%",
+        "type": "相手スタン時ダメージ倍率アップ",
+        "value": {
+          "add": 50,
+          "min": 50,
+          "max": 300
+        },
         "effect_class": "other",
-        "target": "異なるタイプの味方",
+        "target": "自身",
         "duration": {
           "ct": 1
         },
@@ -19387,11 +19494,13 @@
     "skill_detail": "敵全体のATKを5.4％（光属性の場合、さらに6.6％）ダウン（40CT）/36％の確率で混乱を付与（40CT）/100％のダメージ",
     "effects": [
       {
-        "display_value": "",
+        "display_value": "5.4%",
         "formula": "",
-        "type": "unknown",
-        "value": "None",
-        "effect_class": "other",
+        "type": "ATKダウン",
+        "value": {
+          "rate": 5.4
+        },
+        "effect_class": "debuff",
         "target": "敵全体",
         "duration": {
           "ct": 40
@@ -19594,25 +19703,25 @@
         "inherited_target": false
       },
       {
-        "display_value": "",
+        "display_value": "水属性を付与",
         "formula": "",
-        "type": "unknown",
-        "value": "None",
-        "effect_class": "other",
-        "target": "自身の左右1レーンの炎属性の味方",
+        "type": "サブ属性付与",
+        "value": {},
+        "effect_class": "buff",
+        "target": "炎属性の味方",
         "duration": {
           "ct": 40
         },
         "notes": [
           {
             "type": "property",
-            "text": "バフ解除無効",
+            "text": "優先発動 ※スキル発動前に効果が発動する",
             "label": "特性"
           },
           {
-            "type": "timing",
-            "text": "優先発動 ※このEXスキル使用前に効果発動",
-            "label": "タイミング"
+            "type": "property",
+            "text": "バフ解除無効",
+            "label": "特性"
           }
         ],
         "raw": "自身の左右1レーンのメイン属性が炎属性の味方に水の「サブ属性」を付与する(40CT)(優先発動)【バフ解除無効】",
@@ -19621,25 +19730,25 @@
         "inherited_target": false
       },
       {
-        "display_value": "",
+        "display_value": "炎属性を付与",
         "formula": "",
-        "type": "unknown",
-        "value": "None",
-        "effect_class": "other",
-        "target": "自身の左右1レーンの水属性の味方",
+        "type": "サブ属性付与",
+        "value": {},
+        "effect_class": "buff",
+        "target": "水属性の味方",
         "duration": {
           "ct": 40
         },
         "notes": [
           {
             "type": "property",
-            "text": "バフ解除無効",
+            "text": "優先発動 ※スキル発動前に効果が発動する",
             "label": "特性"
           },
           {
-            "type": "timing",
-            "text": "優先発動 ※このEXスキル使用前に効果発動",
-            "label": "タイミング"
+            "type": "property",
+            "text": "バフ解除無効",
+            "label": "特性"
           }
         ],
         "raw": "自身の左右1レーンのメイン属性が水属性の味方に炎の「サブ属性」を付与する(40CT)(優先発動)【バフ解除無効】",
@@ -19875,45 +19984,49 @@
         "display_value": "50%",
         "formula": "",
         "type": "クリティカル率アップ",
-        "value": {
-          "rate": 50
-        },
+        "value": {},
         "effect_class": "buff",
         "target": "水属性の味方",
         "duration": {
           "ct": 10
         },
-        "notes": [],
-        "raw": "自身を含む味方と3体以上ユニゾン時、ユニゾンしている人数によって以下の効果を適用する\n・3体以上：水属性の味方のクリティカルを50%加算(10CT)",
-        "children": [],
-        "tags": [],
-        "inherited_target": false
+        "notes": [
+          {
+            "type": "condition",
+            "text": "自身を含む、3体以上とユニゾン時",
+            "label": "発動条件"
+          }
+        ],
+        "tags": [
+          ""
+        ]
       },
       {
         "display_value": "50%",
         "formula": "",
         "type": "クリティカル率アップ",
-        "value": {
-          "rate": 50
-        },
+        "value": {},
         "effect_class": "buff",
         "target": "炎属性の味方",
         "duration": {
           "ct": 10
         },
-        "notes": [],
-        "raw": "・4体以上：さらに炎属性の味方のクリティカルを50%加算(10CT)",
-        "children": [],
-        "tags": [],
-        "inherited_target": false
+        "notes": [
+          {
+            "type": "condition",
+            "text": "自身を含む、4体以上とユニゾン時",
+            "label": "発動条件"
+          }
+        ],
+        "tags": [
+          ""
+        ]
       },
       {
         "display_value": "",
-        "formula": "スタンゲージを0にしてスタンさせる",
+        "formula": "",
         "type": "強制スタン",
-        "value": {
-          "percent": 100
-        },
+        "value": {},
         "effect_class": "debuff",
         "target": "敵全体",
         "duration": {
@@ -19922,14 +20035,18 @@
         "notes": [
           {
             "type": "condition",
+            "text": "自身を含む、5体以上とユニゾン時",
+            "label": "発動条件"
+          },
+          {
+            "type": "condition",
             "text": "100%の確率で付与",
             "label": "発動条件"
           }
         ],
-        "raw": "・5体：さらに敵全体に100%の確率で強制スタン(1CT)",
-        "children": [],
-        "tags": [],
-        "inherited_target": false
+        "tags": [
+          ""
+        ]
       }
     ]
   },
@@ -20291,20 +20408,22 @@
         "inherited_target": false
       },
       {
-        "display_value": "",
+        "display_value": "114%",
         "formula": "",
-        "type": "unknown",
-        "value": "None",
-        "effect_class": "other",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 114
+        },
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 40
         },
         "notes": [
           {
-            "type": "condition",
-            "text": "味方HP80%以下時",
-            "label": "発動条件"
+            "type": "boost",
+            "text": "味方HP80%以下時は170%、50%以下時は286%",
+            "label": "強化"
           }
         ],
         "raw": "自身のATK114%(味方HP80%以下時は170%、50%以下時は286%)アップ(40CT)",
@@ -20378,12 +20497,14 @@
     "skill_detail": "前から2番目にいる味方のEX消費量を神族の味方の数×10％減少（EXスキル1回発動まで）/ATKを100％アップ（40CT）/ノーツを6前方に移動",
     "effects": [
       {
-        "display_value": "",
-        "formula": "",
-        "type": "unknown",
-        "value": "None",
-        "effect_class": "other",
-        "target": "前から2番目にいる神族の味方",
+        "display_value": "10%～50%",
+        "formula": "神族の味方の数×10%",
+        "type": "EX消費量減少",
+        "value": {
+          "amount": 10
+        },
+        "effect_class": "buff",
+        "target": "前から2番目にいる味方",
         "duration": null,
         "notes": [
           {
@@ -20405,7 +20526,7 @@
           "rate": 100
         },
         "effect_class": "buff",
-        "target": "前から2番目にいる神族の味方",
+        "target": "前から2番目にいる味方",
         "duration": {
           "ct": 40
         },
@@ -20424,7 +20545,7 @@
           "max": 6
         },
         "effect_class": "note",
-        "target": "前から2番目にいる神族の味方",
+        "target": "前から2番目にいる味方",
         "duration": null,
         "notes": [],
         "raw": "ノーツを6前方に移動",
@@ -20481,18 +20602,21 @@
         "inherited_target": true
       },
       {
-        "display_value": "",
+        "display_value": "7",
         "formula": "",
-        "type": "unknown",
-        "value": "None",
-        "effect_class": "other",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 7,
+          "max": 7
+        },
+        "effect_class": "note",
         "target": "神族の味方",
         "duration": null,
         "notes": [
           {
-            "type": "condition",
-            "text": "味方HP80%以下時",
-            "label": "発動条件"
+            "type": "boost",
+            "text": "味方HP80%以下時は8、50%以下時は10",
+            "label": "強化"
           }
         ],
         "raw": "神族の味方のノーツを7～7(味方HP80%以下時は8～8、50%以下時は10～10)前方に移動",
@@ -20548,32 +20672,37 @@
         "inherited_target": false
       },
       {
-        "display_value": "",
-        "formula": "付与されているデバフ・状態異常効果をすべて解除",
-        "type": "状態回復",
-        "value": {},
-        "effect_class": "other",
-        "target": "神族の味方",
-        "duration": null,
-        "notes": [],
-        "raw": "チーム内の異なる属性が5種類以上の時、味方全体に「鳳凰の恩寵」効果\n※鳳凰の恩寵：付与されているデバフ・状態異常効果をすべて解除",
-        "children": [],
-        "tags": [],
-        "inherited_target": true
-      },
-      {
-        "display_value": "100%",
+        "display_value": "「鳳凰の恩寵」の効果:",
         "formula": "",
-        "type": "HP回復",
+        "type": "固有効果の付与",
         "value": {
-          "rate": 100
+          "name": "鳳凰の恩寵"
         },
         "effect_class": "other",
-        "target": "味方",
+        "target": "味方全体",
         "duration": null,
         "notes": [],
-        "raw": "し、味方のHPを100%回復",
-        "children": [],
+        "raw": "チーム内の異なる属性が5種類以上の時、味方全体に「鳳凰の恩寵」効果",
+        "children": [
+          {
+            "type": "状態回復",
+            "formula": "付与されているデバフ・状態異常効果をすべて解除",
+            "target": "味方全体",
+            "duration": null,
+            "value": {},
+            "display_value": "",
+            "effect_class": "buff"
+          },
+          {
+            "type": "HP回復",
+            "display_value": "HPを100%回復",
+            "target": "味方",
+            "duration": null,
+            "formula": "",
+            "value": {},
+            "effect_class": "main"
+          }
+        ],
         "tags": [],
         "inherited_target": false
       }
@@ -20886,19 +21015,19 @@
       },
       {
         "display_value": "",
-        "formula": "",
-        "type": "unknown",
-        "value": "None",
+        "formula": "光属性からの被ダメージが20％増加",
+        "type": "聖痕",
+        "value": {},
         "effect_class": "other",
-        "target": "対象と左右1レーンにいる敵",
+        "target": "対象とその左右1レーンにいる敵すべて",
         "duration": {
           "ct": 20
         },
         "notes": [
           {
-            "type": "timing",
-            "text": "優先発動 ※このEXスキル使用前に効果発動",
-            "label": "タイミング"
+            "type": "property",
+            "text": "優先発動 ※スキル発動前に効果が発動する",
+            "label": "特性"
           }
         ],
         "raw": "対象とその左右1レーンにいる敵すべてに聖痕を付与(20CT)(優先発動)",
@@ -20955,19 +21084,19 @@
       },
       {
         "display_value": "",
-        "formula": "",
-        "type": "unknown",
-        "value": "None",
+        "formula": "光属性からの被ダメージが20％増加",
+        "type": "聖痕",
+        "value": {},
         "effect_class": "other",
-        "target": "対象と左右1レーンにいる敵",
+        "target": "対象とその左右1レーンにいる敵すべて",
         "duration": {
           "ct": 20
         },
         "notes": [
           {
-            "type": "timing",
-            "text": "優先発動 ※このEXスキル使用前に効果発動",
-            "label": "タイミング"
+            "type": "property",
+            "text": "優先発動 ※スキル発動前に効果が発動する",
+            "label": "特性"
           }
         ],
         "raw": "対象とその左右1レーンにいる敵すべてに聖痕を付与(20CT)(優先発動)",
@@ -21165,16 +21294,24 @@
         "inherited_target": true
       },
       {
-        "display_value": "",
+        "display_value": "50%",
         "formula": "",
-        "type": "unknown",
-        "value": "None",
+        "type": "相手スタン時ダメージ倍率アップ",
+        "value": {
+          "rate": 50
+        },
         "effect_class": "other",
-        "target": "攻撃タイプ魔法の味方",
+        "target": "自身",
         "duration": {
           "ct": 1
         },
-        "notes": [],
+        "notes": [
+          {
+            "type": "condition",
+            "text": "攻撃タイプ魔法の味方が5体以上の時",
+            "label": "発動条件"
+          }
+        ],
         "raw": "攻撃タイプ魔法の味方が5体以上の時、自身に相手スタン時のダメージ倍率を50%加算(1CT)",
         "children": [],
         "tags": [],
@@ -21265,16 +21402,24 @@
         "inherited_target": true
       },
       {
-        "display_value": "",
+        "display_value": "50%",
         "formula": "",
-        "type": "unknown",
-        "value": "None",
+        "type": "相手スタン時ダメージ倍率アップ",
+        "value": {
+          "rate": 50
+        },
         "effect_class": "other",
-        "target": "攻撃タイプ魔法の味方",
+        "target": "自身",
         "duration": {
           "ct": 1
         },
-        "notes": [],
+        "notes": [
+          {
+            "type": "condition",
+            "text": "攻撃タイプ魔法の味方が5体以上の時",
+            "label": "発動条件"
+          }
+        ],
         "raw": "攻撃タイプ魔法の味方が5体以上の時、自身に相手スタン時のダメージ倍率を50%加算(1CT)",
         "children": [],
         "tags": [],
@@ -21433,16 +21578,35 @@
     "skill_detail": "自身に「セカンドの恩寵」の効果/ATKを魔族または光属性の味方の数×36％アップ（20CT） ※2つの条件を満たした場合でも効果は重複しない/行動CT70％短縮（1CT）/自身を含む魔族または光属性の味方を5体以上編成している時、自身の左1レーンにいる味方のノーツを3前方に移動\n※セカンドの恩寵：水の「サブ属性」を付与する（40CT）【バフ解除無効】\n※サブ属性：属性指定スキルの条件や対象に含まれる（ダメージ計算には影響しない）",
     "effects": [
       {
-        "display_value": "",
+        "display_value": "「セカンドの恩寵」の効果:",
         "formula": "",
-        "type": "unknown",
-        "value": "None",
+        "type": "固有効果の付与",
+        "value": {
+          "name": "セカンドの恩寵"
+        },
         "effect_class": "other",
         "target": "自身",
         "duration": null,
         "notes": [],
         "raw": "自身に「セカンドの恩寵」の効果",
-        "children": [],
+        "children": [
+          {
+            "type": "サブ属性付与",
+            "display_value": "水属性を付与",
+            "notes": [
+              {
+                "type": "property",
+                "text": "バフ解除無効",
+                "label": "特性"
+              }
+            ],
+            "target": "自身",
+            "duration": null,
+            "formula": "",
+            "value": {},
+            "effect_class": "buff"
+          }
+        ],
         "tags": [],
         "inherited_target": false
       },
@@ -21542,34 +21706,31 @@
         "inherited_target": false
       },
       {
-        "display_value": 400,
+        "display_value": "400",
         "formula": "",
         "type": "EXゲージ減少",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "敵",
         "duration": null,
         "notes": [],
-        "raw": "敵のEXゲージを400減少",
-        "children": [],
-        "tags": [],
-        "inherited_target": false
+        "tags": [
+          ""
+        ]
       },
       {
-        "display_value": "",
-        "formula": "",
-        "type": "unknown",
-        "value": "None",
-        "effect_class": "other",
-        "target": "自身",
-        "duration": {
-          "ct": 1
-        },
+        "display_value": "0.5%～200%",
+        "formula": "減少させたEXゲージ量×0.5%",
+        "type": "ATKアップ",
+        "value": {},
+        "effect_class": "buff",
+        "target": "敵単体",
+        "duration": null,
         "notes": [],
-        "raw": "させ、自身のATKを減少させたEXゲージ量×0.5%アップ(1CT)",
+        "raw": "敵のEXゲージを400減少させ、自身のATKを減少させたEXゲージ量×0.5%アップ(1CT)",
         "children": [],
         "tags": [],
-        "inherited_target": false
+        "inherited_target": true
       },
       {
         "display_value": "20%",
@@ -21608,7 +21769,7 @@
           "base": 40,
           "rate": 8
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -21691,21 +21852,23 @@
     "skill_detail": "敵単体に1400％+オーバーヒール割合（フルオーバーヒール時200％）×7％のダメージ/味方のHPがオーバーヒール状態（100％超）の時、自身のクリティカル100％加算（1CT）/このEXスキル使用後、味方のHPがオーバーヒール状態（100％超）の時、オーバーヒール分のHPを全て消費する",
     "effects": [
       {
-        "display_value": "7%",
-        "formula": "",
+        "display_value": "7%～1407%",
+        "formula": "7%+オーバーヒール割合(フルオーバーヒール時200%)×7%",
         "type": "ダメージ",
         "value": {
           "rate": 7,
           "hit": 1
         },
         "effect_class": "main",
-        "target": "",
+        "target": "敵単体",
         "duration": null,
         "notes": [],
         "raw": "敵単体に1400%+オーバーヒール割合(フルオーバーヒール時200%)×7%のダメージ",
         "children": [],
-        "tags": [],
-        "inherited_target": true
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
       },
       {
         "display_value": "100%",
@@ -21732,29 +21895,29 @@
         "inherited_target": false
       },
       {
-        "display_value": "",
+        "display_value": "オーバーヒール分のHPを消費する",
         "formula": "",
-        "type": "unknown",
-        "value": "None",
+        "type": "HP減少",
+        "value": {},
         "effect_class": "other",
-        "target": "自身",
+        "target": "味方",
         "duration": null,
         "notes": [
-          {
-            "type": "condition",
-            "text": "味方のHPがオーバーヒール状態(100%超)の時",
-            "label": "発動条件"
-          },
           {
             "type": "timing",
             "text": "このEXスキル使用後",
             "label": "タイミング"
+          },
+          {
+            "type": "condition",
+            "text": "味方のHPがオーバーヒール状態(100%超)の時",
+            "label": "発動条件"
           }
         ],
         "raw": "このEXスキル使用後、味方のHPがオーバーヒール状態(100%超)の時、オーバーヒール分のHPを全て消費する",
         "children": [],
         "tags": [],
-        "inherited_target": true
+        "inherited_target": false
       }
     ]
   },
@@ -21775,7 +21938,7 @@
           "base": 40,
           "rate": 10
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -21789,7 +21952,7 @@
         "formula": "付与されているデバフ・状態異常効果をすべて解除",
         "type": "状態回復",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "水属性の味方",
         "duration": null,
         "notes": [],
@@ -21840,7 +22003,7 @@
           "base": 50,
           "rate": 10
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -22064,7 +22227,13 @@
         "effect_class": "buff",
         "target": "自身の左右1レーンにいる味方",
         "duration": null,
-        "notes": [],
+        "notes": [
+          {
+            "type": "condition",
+            "text": "チャージ状態の時",
+            "label": "発動条件"
+          }
+        ],
         "raw": "チャージ状態の時、自身の左右1レーンにいる味方にチャージ状態を付与",
         "children": [],
         "tags": [],
@@ -22269,26 +22438,28 @@
     "skill_detail": "敵全体に200％のダメージ（対象の敵とノーツが前後6以内にいる敵に対して250％のダメージ/魅了状態の場合、クリティカル時のダメージ倍率20％加算）/炎属性の味方のATKを炎属性の味方の数×54％アップ（40CT）/クリティカルを炎属性の味方の数×8.2％加算（40CT）/ノーツを7～7前方に移動",
     "effects": [
       {
-        "display_value": "20%",
+        "display_value": "200%",
         "formula": "",
-        "type": "クリティカルダメージアップ",
-        "value": {
-          "rate": 20
-        },
-        "effect_class": "buff",
-        "target": "",
+        "type": "ダメージ",
+        "value": {},
+        "effect_class": "main",
+        "target": "敵全体",
         "duration": null,
         "notes": [
           {
-            "type": "condition",
-            "text": "魅了状態の場合",
-            "label": "発動条件"
+            "type": "boost",
+            "label": "強化",
+            "text": "選択した敵とノーツが前後6以内にいる敵に対して、250%"
+          },
+          {
+            "type": "boost",
+            "label": "強化",
+            "text": "魅了状態の場合、クリティカル時のダメージ倍率20%加算"
           }
         ],
-        "raw": "敵全体に200%のダメージ(対象の敵とノーツが前後6以内にいる敵に対して250%のダメージ/魅了状態の場合、クリティカル時のダメージ倍率20%加算)",
-        "children": [],
-        "tags": [],
-        "inherited_target": true
+        "tags": [
+          "全体攻撃"
+        ]
       },
       {
         "display_value": "54%～270%",
@@ -22625,7 +22796,7 @@
           "base": 35,
           "rate": 7
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -22708,7 +22879,13 @@
         "effect_class": "debuff",
         "target": "敵単体",
         "duration": null,
-        "notes": [],
+        "notes": [
+          {
+            "type": "boost",
+            "text": "味方HP80%以上時、スタンゲージ7減少",
+            "label": "強化"
+          }
+        ],
         "raw": "スタンゲージ6減少(味方HP80%以上時、スタンゲージ7減少)",
         "children": [],
         "tags": [],
@@ -22726,16 +22903,46 @@
     "skill_detail": "敵単体に「羅刹の呪縛」の効果/自身の右1レーンにいる味方の行動CT20％短縮（10CT）/クリティカルを30％加算（30CT）/ノーツを7前方に移動\n※羅刹の呪縛：ATKを30％ダウンさせ（20CT）、ノーツをタイムライン上12の位置にワープさせる【強制移動無効対象外】",
     "effects": [
       {
-        "display_value": "",
+        "display_value": "「羅刹の呪縛」の効果:",
         "formula": "",
-        "type": "unknown",
-        "value": "None",
+        "type": "固有効果の付与",
+        "value": {
+          "name": "羅刹の呪縛"
+        },
         "effect_class": "other",
         "target": "敵単体",
         "duration": null,
         "notes": [],
         "raw": "敵単体に「羅刹の呪縛」の効果",
-        "children": [],
+        "children": [
+          {
+            "type": "ATKダウン",
+            "display_value": "30%",
+            "duration": {
+              "ct": 20
+            },
+            "target": "敵単体",
+            "formula": "",
+            "value": {},
+            "effect_class": "debuff"
+          },
+          {
+            "type": "ノーツ強制移動",
+            "display_value": "タイムライン上12の位置にワープ",
+            "notes": [
+              {
+                "type": "property",
+                "text": "強制移動無効化対象外",
+                "label": "特性"
+              }
+            ],
+            "target": "敵単体",
+            "duration": null,
+            "formula": "",
+            "value": {},
+            "effect_class": "other"
+          }
+        ],
         "tags": [],
         "inherited_target": false
       },
@@ -22791,38 +22998,6 @@
         "children": [],
         "tags": [],
         "inherited_target": true
-      },
-      {
-        "display_value": "30%",
-        "formula": "",
-        "type": "ATKダウン",
-        "value": {
-          "rate": 30
-        },
-        "effect_class": "debuff",
-        "target": "自身の右1レーンにいる味方",
-        "duration": null,
-        "notes": [],
-        "raw": "※羅刹の呪縛：ATKを30%ダウン",
-        "children": [],
-        "tags": [],
-        "inherited_target": true
-      },
-      {
-        "display_value": "",
-        "formula": "",
-        "type": "unknown",
-        "value": "None",
-        "effect_class": "other",
-        "target": "自身の右1レーンにいる味方",
-        "duration": {
-          "ct": 20
-        },
-        "notes": [],
-        "raw": "させ(20CT)、ノーツをタイムライン上12の位置にワープさせる【強制移動無効対象外】",
-        "children": [],
-        "tags": [],
-        "inherited_target": true
       }
     ]
   },
@@ -22856,36 +23031,45 @@
         "inherited_target": false
       },
       {
-        "display_value": "30%",
-        "formula": "",
+        "display_value": "30%～60%",
+        "formula": "30%+10%×n (合計最大60%)",
         "type": "クリティカルダメージアップ",
         "value": {
           "rate": 30
         },
         "effect_class": "buff",
         "target": "雷属性の味方",
-        "duration": null,
-        "notes": [],
-        "raw": "クリティカル時のダメージ倍率を30%加算",
+        "duration": {
+          "ct": 30
+        },
+        "notes": [
+          {
+            "type": "boost",
+            "text": "このEXスキル使用後に、クリティカルダメージアップを10%ずつ加算",
+            "label": "強化"
+          }
+        ],
+        "raw": "クリティカル時のダメージ倍率を30%加算。さらに1バトル中、自身のEXスキル2の使用が2回目以降の時、自身のEXスキル2を使用する度にクリティカル時のダメージ倍率を10%ずつ加算する(30CT)(合計最大60%)",
         "children": [],
         "tags": [],
         "inherited_target": true
       },
       {
-        "display_value": "",
+        "display_value": "7",
         "formula": "",
-        "type": "unknown",
-        "value": "None",
-        "effect_class": "other",
-        "target": "自身",
-        "duration": {
-          "ct": 30
+        "type": "ノーツ移動",
+        "value": {
+          "min": 7,
+          "max": 7
         },
+        "effect_class": "note",
+        "target": "雷属性の味方",
+        "duration": null,
         "notes": [],
-        "raw": "さらに1バトル中、自身のEXスキル2の使用が2回目以降の時、自身のEXスキル2を使用する度にクリティカル時のダメージ倍率を10%ずつ加算する(30CT)(合計最大60%)",
+        "raw": "ノーツを7～7前方に移動",
         "children": [],
         "tags": [],
-        "inherited_target": false
+        "inherited_target": true
       },
       {
         "display_value": "40",
@@ -22900,7 +23084,7 @@
         "notes": [
           {
             "type": "condition",
-            "text": "ノーツを7～7前方に移動\n魔族の味方を5体以上編成している時",
+            "text": "魔族の味方を5体以上編成している時",
             "label": "発動条件"
           },
           {
@@ -22909,7 +23093,7 @@
             "label": "期限"
           }
         ],
-        "raw": "ノーツを7～7前方に移動\n魔族の味方を5体以上編成している時、自身のEX消費量40減少(次ターン以降EXスキル1回発動まで)",
+        "raw": "魔族の味方を5体以上編成している時、自身のEX消費量40減少(次ターン以降EXスキル1回発動まで)",
         "children": [],
         "tags": [],
         "inherited_target": false
@@ -22974,7 +23158,7 @@
           "base": 40,
           "rate": 8
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -24014,7 +24198,7 @@
       },
       {
         "display_value": "",
-        "formula": "敵から優先的に狙われる",
+        "formula": "",
         "type": "挑発",
         "value": {},
         "effect_class": "other",
@@ -24088,7 +24272,7 @@
       },
       {
         "display_value": "",
-        "formula": "敵から優先的に狙われる",
+        "formula": "",
         "type": "挑発",
         "value": {},
         "effect_class": "other",
@@ -24544,7 +24728,7 @@
     "effects": [
       {
         "display_value": "",
-        "formula": "敵から優先的に狙われる",
+        "formula": "",
         "type": "挑発",
         "value": {},
         "effect_class": "other",
@@ -24650,7 +24834,13 @@
         "effect_class": "debuff",
         "target": "敵単体",
         "duration": null,
-        "notes": [],
+        "notes": [
+          {
+            "type": "boost",
+            "text": "味方HP50%以下時、スタンゲージ7減少",
+            "label": "強化"
+          }
+        ],
         "raw": "スタンゲージ6減少(味方HP50%以下時、スタンゲージ7減少)",
         "children": [],
         "tags": [],
@@ -25395,7 +25585,13 @@
         "effect_class": "buff",
         "target": "自身の右2レーンにいる味方",
         "duration": null,
-        "notes": [],
+        "notes": [
+          {
+            "type": "condition",
+            "text": "炎属性の味方を3体以上編成している時",
+            "label": "発動条件"
+          }
+        ],
         "raw": "炎属性の味方を3体以上編成している時、自身の右2レーンにいる味方にチャージ状態を付与",
         "children": [],
         "tags": [],
@@ -26154,7 +26350,7 @@
       },
       {
         "display_value": "",
-        "formula": "敵から優先的に狙われる",
+        "formula": "",
         "type": "挑発",
         "value": {},
         "effect_class": "other",
@@ -26244,7 +26440,7 @@
       },
       {
         "display_value": "",
-        "formula": "敵から優先的に狙われる",
+        "formula": "",
         "type": "挑発",
         "value": {},
         "effect_class": "other",
@@ -26469,7 +26665,7 @@
           "base": 50,
           "rate": 10
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -26559,7 +26755,7 @@
           "base": 40,
           "rate": 8
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -26573,7 +26769,7 @@
         "formula": "付与されているデバフ・状態異常効果をすべて解除",
         "type": "状態回復",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "炎属性の味方",
         "duration": null,
         "notes": [],
@@ -26642,7 +26838,7 @@
           "base": 50,
           "rate": 10
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -26946,10 +27142,12 @@
         "inherited_target": false
       },
       {
-        "display_value": "",
+        "display_value": "「葬礼の呪縛」の効果:",
         "formula": "",
-        "type": "unknown",
-        "value": "None",
+        "type": "固有効果の付与",
+        "value": {
+          "name": "葬礼の呪縛"
+        },
         "effect_class": "other",
         "target": "敵単体",
         "duration": null,
@@ -27273,29 +27471,17 @@
         "inherited_target": true
       },
       {
-        "display_value": "",
-        "formula": "付与されているデバフ・状態異常効果をすべて解除",
-        "type": "状態回復",
-        "value": {},
-        "effect_class": "other",
-        "target": "人間または光属性の味方",
-        "duration": null,
-        "notes": [],
-        "raw": "味方全体に「究明の恩寵」の効果\n※究明の恩寵：対象に付与されているデバフ・状態異常効果をすべて解除",
-        "children": [],
-        "tags": [],
-        "inherited_target": true
-      },
-      {
-        "display_value": "",
+        "display_value": "「究明の恩寵」の効果:",
         "formula": "",
-        "type": "unknown",
-        "value": "None",
+        "type": "固有効果の付与",
+        "value": {
+          "name": "究明の恩寵"
+        },
         "effect_class": "other",
-        "target": "味方",
+        "target": "味方全体",
         "duration": null,
         "notes": [],
-        "raw": "し、解除された効果の数×20味方のEXゲージを回復(最大100)",
+        "raw": "味方全体に「究明の恩寵」の効果",
         "children": [],
         "tags": [],
         "inherited_target": false
@@ -27622,7 +27808,7 @@
           "base": 40,
           "rate": 8
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -27666,7 +27852,7 @@
           "base": 50,
           "rate": 10
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -27761,7 +27947,7 @@
         "formula": "付与されているデバフ・状態異常効果をすべて解除",
         "type": "状態回復",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身の左1レーンにいる味方",
         "duration": null,
         "notes": [],
@@ -28128,7 +28314,7 @@
       },
       {
         "display_value": "",
-        "formula": "敵から優先的に狙われる",
+        "formula": "",
         "type": "挑発",
         "value": {},
         "effect_class": "other",
@@ -28224,7 +28410,7 @@
       },
       {
         "display_value": "",
-        "formula": "敵から優先的に狙われる",
+        "formula": "",
         "type": "挑発",
         "value": {},
         "effect_class": "other",
@@ -29182,10 +29368,14 @@
         "inherited_target": false
       },
       {
-        "display_value": "",
-        "formula": "",
-        "type": "unknown",
-        "value": "None",
+        "display_value": "50%～300%",
+        "formula": "50%+スタン中の敵の数×50%",
+        "type": "相手スタン時ダメージ倍率アップ",
+        "value": {
+          "add": 50,
+          "min": 50,
+          "max": 300
+        },
         "effect_class": "other",
         "target": "自身",
         "duration": {
@@ -29929,7 +30119,7 @@
       },
       {
         "display_value": "",
-        "formula": "敵から優先的に狙われる",
+        "formula": "",
         "type": "挑発",
         "value": {},
         "effect_class": "other",
@@ -30459,7 +30649,7 @@
           "base": 40,
           "rate": 8
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -30542,21 +30732,23 @@
     "skill_detail": "敵単体に1600％+オーバーヒール割合（フルオーバーヒール時200％）×8％のダメージ/自身のATKを魔族の味方の数×50％アップ（1CT）",
     "effects": [
       {
-        "display_value": "8%",
-        "formula": "",
+        "display_value": "8%～1608%",
+        "formula": "8%+オーバーヒール割合(フルオーバーヒール時200%)×8%",
         "type": "ダメージ",
         "value": {
           "rate": 8,
           "hit": 1
         },
         "effect_class": "main",
-        "target": "",
+        "target": "敵単体",
         "duration": null,
         "notes": [],
         "raw": "敵単体に1600%+オーバーヒール割合(フルオーバーヒール時200%)×8%のダメージ",
         "children": [],
-        "tags": [],
-        "inherited_target": true
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
       },
       {
         "display_value": "50%～250%",
@@ -31185,12 +31377,14 @@
     "skill_detail": "前から2番目にいる味方のEX消費量を神族の味方の数×10％減少（EXスキル1回発動まで）/ノーツを3前方に移動/被ダメージ50％増加（20CT）",
     "effects": [
       {
-        "display_value": "",
-        "formula": "",
-        "type": "unknown",
-        "value": "None",
-        "effect_class": "other",
-        "target": "前から2番目にいる神族の味方",
+        "display_value": "10%～50%",
+        "formula": "神族の味方の数×10%",
+        "type": "EX消費量減少",
+        "value": {
+          "amount": 10
+        },
+        "effect_class": "buff",
+        "target": "前から2番目にいる味方",
         "duration": null,
         "notes": [
           {
@@ -31213,7 +31407,7 @@
           "max": 3
         },
         "effect_class": "note",
-        "target": "前から2番目にいる神族の味方",
+        "target": "前から2番目にいる味方",
         "duration": null,
         "notes": [],
         "raw": "ノーツを3前方に移動",
@@ -31229,7 +31423,7 @@
           "rate": 50
         },
         "effect_class": "debuff",
-        "target": "前から2番目にいる神族の味方",
+        "target": "前から2番目にいる味方",
         "duration": {
           "ct": 20
         },
@@ -31375,7 +31569,13 @@
         "effect_class": "buff",
         "target": "自身の左右1レーンにいる味方",
         "duration": null,
-        "notes": [],
+        "notes": [
+          {
+            "type": "condition",
+            "text": "味方のHPがオーバーヒール状態(100%超)の時",
+            "label": "発動条件"
+          }
+        ],
         "raw": "味方のHPがオーバーヒール状態(100%超)の時、自身の左右1レーンにいる味方にチャージ状態を付与",
         "children": [],
         "tags": [],
@@ -31936,7 +32136,7 @@
           "base": 40,
           "rate": 8
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -32019,21 +32219,23 @@
     "skill_detail": "敵全体に200％+オーバーヒール割合（フルオーバーヒール時200％）×1％のダメージ/味方のHPを50％+水属性の味方の数×10％回復/味方のHPがオーバーヒール状態（100％超）の時、味方全体の行動CT15％短縮（10CT）/敵全体に100％の確率で凍傷を付与（8CT）",
     "effects": [
       {
-        "display_value": "1%",
-        "formula": "",
+        "display_value": "1%～201%",
+        "formula": "1%+オーバーヒール割合(フルオーバーヒール時200%)×1%",
         "type": "ダメージ",
         "value": {
           "rate": 1,
           "hit": 1
         },
         "effect_class": "main",
-        "target": "",
+        "target": "敵全体",
         "duration": null,
         "notes": [],
         "raw": "敵全体に200%+オーバーヒール割合(フルオーバーヒール時200%)×1%のダメージ",
         "children": [],
-        "tags": [],
-        "inherited_target": true
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
       },
       {
         "display_value": "60%～100%",
@@ -32043,7 +32245,7 @@
           "base": 50,
           "rate": 10
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -32619,7 +32821,7 @@
           "base": 40,
           "rate": 8
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [
@@ -32694,7 +32896,7 @@
           "base": 50,
           "rate": 10
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [
@@ -33971,7 +34173,7 @@
           "base": 50,
           "rate": 10
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -34395,7 +34597,7 @@
           "base": 40,
           "rate": 8
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [
@@ -34477,7 +34679,7 @@
           "base": 50,
           "rate": 10
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -35088,11 +35290,11 @@
         "inherited_target": false
       },
       {
-        "display_value": "",
+        "display_value": "光属性を付与",
         "formula": "",
-        "type": "unknown",
-        "value": "None",
-        "effect_class": "other",
+        "type": "サブ属性付与",
+        "value": {},
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 40
@@ -35592,7 +35794,7 @@
           "base": 40,
           "rate": 8
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -35660,7 +35862,7 @@
           "base": 50,
           "rate": 10
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -36110,12 +36312,12 @@
         "inherited_target": false
       },
       {
-        "display_value": "",
+        "display_value": "炎属性を付与",
         "formula": "",
-        "type": "unknown",
-        "value": "None",
-        "effect_class": "other",
-        "target": "自身の左右1レーンの雷属性の味方",
+        "type": "サブ属性付与",
+        "value": {},
+        "effect_class": "buff",
+        "target": "雷属性の味方",
         "duration": {
           "ct": 40
         },
@@ -36126,7 +36328,7 @@
             "label": "特性"
           }
         ],
-        "raw": "自身の左右1レーンのメイン属性が雷属性の味方に炎の「サブ属性」を付与する(40CT)【バフ解除無効】\n※ステルス状態：攻撃対象から除外されるようになる(範囲ダメージ含む)。味方が1人だけの状態では発動しない。\n※サブ属性：属性指定スキルの条件や対象に含まれる(ダメージ計算には影響しない)",
+        "raw": "自身の左右1レーンのメイン属性が雷属性の味方に炎の「サブ属性」を付与する(40CT)【バフ解除無効】",
         "children": [],
         "tags": [],
         "inherited_target": false
@@ -36533,7 +36735,7 @@
           "base": 40,
           "rate": 8
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -36601,7 +36803,7 @@
           "base": 50,
           "rate": 10
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -36757,21 +36959,23 @@
     "skill_detail": "敵単体に1500％+オーバーヒール割合（フルオーバーヒール時200％）×5％のダメージ/自身のATKを水属性の味方の数×80％アップ（1CT）",
     "effects": [
       {
-        "display_value": "5%",
-        "formula": "",
+        "display_value": "5%～1005%",
+        "formula": "5%+オーバーヒール割合(フルオーバーヒール時200%)×5%",
         "type": "ダメージ",
         "value": {
           "rate": 5,
           "hit": 1
         },
         "effect_class": "main",
-        "target": "",
+        "target": "敵単体",
         "duration": null,
         "notes": [],
         "raw": "敵単体に1500%+オーバーヒール割合(フルオーバーヒール時200%)×5%のダメージ",
         "children": [],
-        "tags": [],
-        "inherited_target": true
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
       },
       {
         "display_value": "80%～400%",
@@ -37058,36 +37262,28 @@
         "inherited_target": false
       },
       {
-        "display_value": "30%",
-        "formula": "",
+        "display_value": "30%～60%",
+        "formula": "30%+10%×n (合計最大60%)",
         "type": "クリティカルダメージアップ",
         "value": {
           "rate": 30
         },
         "effect_class": "buff",
         "target": "闇属性の味方",
-        "duration": null,
-        "notes": [],
-        "raw": "クリティカル時のダメージ倍率を30%加算",
-        "children": [],
-        "tags": [],
-        "inherited_target": true
-      },
-      {
-        "display_value": "",
-        "formula": "",
-        "type": "unknown",
-        "value": "None",
-        "effect_class": "other",
-        "target": "自身",
         "duration": {
           "ct": 30
         },
-        "notes": [],
-        "raw": "さらに1バトル中、自身のEXスキル2の使用が2回目以降の時、自身のEXスキル2を使用する度にクリティカル時のダメージ倍率を10%ずつ加算する(30CT)(合計最大60%)",
+        "notes": [
+          {
+            "type": "boost",
+            "text": "このEXスキル使用後に、クリティカルダメージアップを10%ずつ加算",
+            "label": "強化"
+          }
+        ],
+        "raw": "クリティカル時のダメージ倍率を30%加算。さらに1バトル中、自身のEXスキル2の使用が2回目以降の時、自身のEXスキル2を使用する度にクリティカル時のダメージ倍率を10%ずつ加算する(30CT)(合計最大60%)",
         "children": [],
         "tags": [],
-        "inherited_target": false
+        "inherited_target": true
       },
       {
         "display_value": "7",
@@ -37098,7 +37294,7 @@
           "max": 7
         },
         "effect_class": "note",
-        "target": "自身",
+        "target": "闇属性の味方",
         "duration": null,
         "notes": [],
         "raw": "ノーツを7～7前方に移動",
@@ -38181,7 +38377,7 @@
           "ct": 5
         },
         "notes": [],
-        "raw": "神族の味方が5体以上の時、敵単体に弱点属性を付与(5CT)\n※弱点属性：すべての属性から受ける攻撃が弱点属性扱いとなる(攻撃側の属性は変化しない)",
+        "raw": "神族の味方が5体以上の時、敵単体に弱点属性を付与(5CT)",
         "children": [],
         "tags": [],
         "inherited_target": false
@@ -38607,7 +38803,13 @@
         "effect_class": "buff",
         "target": "自身の右2レーンにいる味方",
         "duration": null,
-        "notes": [],
+        "notes": [
+          {
+            "type": "condition",
+            "text": "人間の味方を3体以上編成している時",
+            "label": "発動条件"
+          }
+        ],
         "raw": "人間の味方を3体以上編成している時、自身の右2レーンにいる味方にチャージ状態を付与",
         "children": [],
         "tags": [],
@@ -39676,7 +39878,7 @@
           "base": 40,
           "rate": 8
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -39751,7 +39953,7 @@
           "base": 50,
           "rate": 10
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -40228,7 +40430,7 @@
           "base": 40,
           "rate": 8
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [
@@ -40248,7 +40450,7 @@
         "formula": "付与されているデバフ・状態異常効果をすべて解除",
         "type": "状態回復",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "魔族または雷属性の味方",
         "duration": null,
         "notes": [],
@@ -40326,7 +40528,7 @@
           "base": 50,
           "rate": 10
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -41087,10 +41289,12 @@
         "inherited_target": false
       },
       {
-        "display_value": "",
+        "display_value": "50%",
         "formula": "",
-        "type": "unknown",
-        "value": "None",
+        "type": "相手スタン時ダメージ倍率アップ",
+        "value": {
+          "rate": 50
+        },
         "effect_class": "other",
         "target": "自身",
         "duration": {
@@ -41348,10 +41552,12 @@
         "inherited_target": false
       },
       {
-        "display_value": "",
+        "display_value": "50%",
         "formula": "",
-        "type": "unknown",
-        "value": "None",
+        "type": "相手スタン時ダメージ倍率アップ",
+        "value": {
+          "rate": 50
+        },
         "effect_class": "other",
         "target": "自身",
         "duration": {
@@ -41847,10 +42053,12 @@
         "inherited_target": false
       },
       {
-        "display_value": "",
+        "display_value": "50%",
         "formula": "",
-        "type": "unknown",
-        "value": "None",
+        "type": "相手スタン時ダメージ倍率アップ",
+        "value": {
+          "rate": 50
+        },
         "effect_class": "other",
         "target": "自身",
         "duration": {
@@ -41912,7 +42120,7 @@
       },
       {
         "display_value": "",
-        "formula": "敵から優先的に狙われる",
+        "formula": "",
         "type": "挑発",
         "value": {},
         "effect_class": "other",
@@ -42122,7 +42330,7 @@
         "formula": "",
         "type": "サブ属性付与",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "水属性の味方",
         "duration": {
           "ct": 40
@@ -42521,10 +42729,14 @@
         "inherited_target": false
       },
       {
-        "display_value": "",
-        "formula": "",
-        "type": "unknown",
-        "value": "None",
+        "display_value": "50%～300%",
+        "formula": "50%+スタン中の敵の数×50%",
+        "type": "相手スタン時ダメージ倍率アップ",
+        "value": {
+          "add": 50,
+          "min": 50,
+          "max": 300
+        },
         "effect_class": "other",
         "target": "自身",
         "duration": {
@@ -42603,10 +42815,14 @@
         "inherited_target": false
       },
       {
-        "display_value": "",
-        "formula": "",
-        "type": "unknown",
-        "value": "None",
+        "display_value": "50%～300%",
+        "formula": "50%+スタン中の敵の数×50%",
+        "type": "相手スタン時ダメージ倍率アップ",
+        "value": {
+          "add": 50,
+          "min": 50,
+          "max": 300
+        },
         "effect_class": "other",
         "target": "自身",
         "duration": {
@@ -42932,16 +43148,16 @@
         "inherited_target": false
       },
       {
-        "display_value": "10%～50%",
-        "formula": "50%加算(25CT)/自身を含む味方2体以上ユニゾン時、自身のクリティカルを味方のユニゾン体数×10%",
+        "display_value": "50%",
+        "formula": "",
         "type": "クリティカルダメージアップ",
         "value": {
-          "rate": 10
+          "rate": 50
         },
         "effect_class": "buff",
         "target": "炎属性の味方",
         "duration": {
-          "ct": 1
+          "ct": 25
         },
         "notes": [
           {
@@ -42950,7 +43166,31 @@
             "label": "発動条件"
           }
         ],
-        "raw": "攻撃タイプ魔法の味方を3体以上編成している時、炎属性の味方のクリティカル時のダメージ倍率を50%加算(25CT)/自身を含む味方2体以上ユニゾン時、自身のクリティカルを味方のユニゾン体数×10%加算(1CT)",
+        "raw": "攻撃タイプ魔法の味方を3体以上編成している時、炎属性の味方のクリティカル時のダメージ倍率を50%加算(25CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "10%～50%",
+        "formula": "味方のユニゾン体数×10%",
+        "type": "クリティカル率アップ",
+        "value": {
+          "rate": 10
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "duration": {
+          "ct": 1
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "自身を含む味方2体以上ユニゾン時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "自身を含む味方2体以上ユニゾン時、自身のクリティカルを味方のユニゾン体数×10%加算(1CT)",
         "children": [],
         "tags": [],
         "inherited_target": false
@@ -42974,7 +43214,7 @@
           "base": 40,
           "rate": 8
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [
@@ -43056,7 +43296,7 @@
           "base": 50,
           "rate": 10
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -43183,7 +43423,7 @@
           "base": 50,
           "rate": 10
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -44294,51 +44534,6 @@
         "children": [],
         "tags": [],
         "inherited_target": false
-      },
-      {
-        "display_value": "",
-        "formula": "",
-        "type": "スタン回復",
-        "value": {},
-        "effect_class": "buff",
-        "target": "自身",
-        "duration": null,
-        "notes": [],
-        "raw": "※正義の焔：火傷状態の敵の行動終了後、自身のスタン状態を回復",
-        "children": [],
-        "tags": [],
-        "inherited_target": false
-      },
-      {
-        "display_value": "10",
-        "formula": "",
-        "type": "ノーツ移動",
-        "value": {
-          "min": 10,
-          "max": 10
-        },
-        "effect_class": "note",
-        "target": "自身",
-        "duration": null,
-        "notes": [],
-        "raw": "し、ノーツを10前方に移動",
-        "children": [],
-        "tags": [],
-        "inherited_target": true
-      },
-      {
-        "display_value": "",
-        "formula": "",
-        "type": "unknown",
-        "value": "None",
-        "effect_class": "other",
-        "target": "自身",
-        "duration": null,
-        "notes": [],
-        "raw": "する",
-        "children": [],
-        "tags": [],
-        "inherited_target": true
       }
     ]
   },
@@ -44359,7 +44554,7 @@
           "base": 40,
           "rate": 8
         },
-        "effect_class": "other",
+        "effect_class": "main",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -44373,7 +44568,7 @@
         "formula": "付与されているデバフ・状態異常効果をすべて解除",
         "type": "状態回復",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "人間または水属性の味方",
         "duration": null,
         "notes": [],
@@ -44453,21 +44648,23 @@
     "skill_detail": "敵単体に1000％+オーバーヒール割合（フルオーバーヒール時200％）×5％のダメージ/睡眠を付与（5CT）/人間または水属性の味方のATKを100％+自身のHP2000ごと×19％アップ（20CT）（最大300％）/ノーツを6～6前方に移動 ※2つの条件を満たした場合でも効果は重複しない/味方のHPがオーバーヒール状態（100％超）の時、味方全体の行動CT15％短縮（10CT）\n※睡眠：ノーツの移動が停止する。通常攻撃またはEXスキルによるダメージを受けると解除される（付与されたCTは除く）",
     "effects": [
       {
-        "display_value": "5%",
-        "formula": "",
+        "display_value": "5%～1005%",
+        "formula": "5%+オーバーヒール割合(フルオーバーヒール時200%)×5%",
         "type": "ダメージ",
         "value": {
           "rate": 5,
           "hit": 1
         },
         "effect_class": "main",
-        "target": "",
+        "target": "敵単体",
         "duration": null,
         "notes": [],
         "raw": "敵単体に1000%+オーバーヒール割合(フルオーバーヒール時200%)×5%のダメージ",
         "children": [],
-        "tags": [],
-        "inherited_target": true
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
       },
       {
         "display_value": "",
@@ -44475,7 +44672,7 @@
         "type": "unknown",
         "value": "None",
         "effect_class": "other",
-        "target": "",
+        "target": "敵単体",
         "duration": {
           "ct": 5
         },
@@ -44564,21 +44761,23 @@
     "skill_detail": "敵単体に1200％+オーバーヒール割合（フルオーバーヒール時200％）×6％のダメージ/敵全体に睡眠を付与（3CT）/人間または水属性の味方のATKを100％+自身のHP2000ごと×19％アップ（20CT）（最大300％）/ノーツを6～6前方に移動 ※2つの条件を満たした場合でも効果は重複しない/味方のHPがオーバーヒール状態（100％超）の時、味方全体の行動CT15％短縮（10CT）\n※睡眠：ノーツの移動が停止する。通常攻撃またはEXスキルによるダメージを受けると解除される（付与されたCTは除く）",
     "effects": [
       {
-        "display_value": "6%",
-        "formula": "",
+        "display_value": "6%～1206%",
+        "formula": "6%+オーバーヒール割合(フルオーバーヒール時200%)×6%",
         "type": "ダメージ",
         "value": {
           "rate": 6,
           "hit": 1
         },
         "effect_class": "main",
-        "target": "",
+        "target": "敵単体",
         "duration": null,
         "notes": [],
         "raw": "敵単体に1200%+オーバーヒール割合(フルオーバーヒール時200%)×6%のダメージ",
         "children": [],
-        "tags": [],
-        "inherited_target": true
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
       },
       {
         "display_value": "",
@@ -44921,36 +45120,6 @@
         "children": [],
         "tags": [],
         "inherited_target": false
-      },
-      {
-        "display_value": "",
-        "formula": "",
-        "type": "unknown",
-        "value": "None",
-        "effect_class": "other",
-        "target": "味方",
-        "duration": null,
-        "notes": [],
-        "raw": "※マジックミスト：ノーツがタイムライン上1の位置に到達時、行動CT値を参照した位置に戻る",
-        "children": [],
-        "tags": [],
-        "inherited_target": true
-      },
-      {
-        "display_value": "20%",
-        "formula": "",
-        "type": "行動CT遅延",
-        "value": {
-          "rate": 20
-        },
-        "effect_class": "debuff",
-        "target": "味方",
-        "duration": null,
-        "notes": [],
-        "raw": "行動CT20%遅延",
-        "children": [],
-        "tags": [],
-        "inherited_target": true
       }
     ]
   },
