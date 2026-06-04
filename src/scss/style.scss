@@ -440,6 +440,39 @@ body {
     line-height: 1.5;
 
     color: #b9c1d1;
+
+    .formula-group {
+      display: inline-flex;
+      align-items: center;
+      vertical-align: middle;
+
+      margin: 0 2px;
+    }
+    .formula-op {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 0.9em;
+
+      font-family: "Cambria Math", serif;
+      font-size: 1.2em;
+      line-height: 1;
+
+    }
+    .formula-brace {
+      display: inline-block;
+      font-family: "Cambria Math", serif;
+      font-size: 1.2em;
+      font-style: italic;
+      line-height: 0.7;
+
+      transform: scaleY(1.35);
+    }
+
+    .formula-body {
+      padding: 1px 4px;
+
+    }
   }
 
   .effect-children {

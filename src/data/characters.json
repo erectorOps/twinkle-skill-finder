@@ -574,7 +574,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -619,7 +619,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -664,7 +664,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -703,7 +703,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -3200,7 +3200,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -3239,7 +3239,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -3278,7 +3278,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -3317,7 +3317,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -3356,7 +3356,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -3395,7 +3395,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -4661,7 +4661,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -4700,7 +4700,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -4745,7 +4745,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -4790,7 +4790,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -4829,7 +4829,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -4868,7 +4868,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -5116,6 +5116,45 @@
     "specific_gauge_data": []
   },
   {
+    "unit_id": 1048003,
+    "character_name": "マハムート《超竜》",
+    "character_name_kana": "まはむーと",
+    "unit_name": "[畏怖たる寵妃] マハムート《超竜》",
+    "rarity": 3,
+    "attr_type": {
+      "id": "1",
+      "label": "炎",
+      "icon": "attribute_01.png"
+    },
+    "role": {
+      "id": "4",
+      "label": "サポート",
+      "icon": "type_4.png"
+    },
+    "camps": [
+      {
+        "id": 3,
+        "label": "魔族",
+        "icon": "race_3.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 2,
+        "label": "新星学園",
+        "icon": "affiliation_01.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "1",
+        "label": "魔法",
+        "icon": "icon_equipment_01_01.png"
+      }
+    ],
+    "specific_gauge_data": null
+  },
+  {
     "unit_id": 1049001,
     "character_name": "紅明",
     "character_name_kana": "コウメイ",
@@ -5153,6 +5192,45 @@
       }
     ],
     "specific_gauge_data": []
+  },
+  {
+    "unit_id": 1049002,
+    "character_name": "紅明",
+    "character_name_kana": "こうめい",
+    "unit_name": "[元祖・三太九郎] 紅明",
+    "rarity": 2,
+    "attr_type": {
+      "id": "1",
+      "label": "炎",
+      "icon": "attribute_01.png"
+    },
+    "role": {
+      "id": "2",
+      "label": "スピード",
+      "icon": "type_2.png"
+    },
+    "camps": [
+      {
+        "id": 3,
+        "label": "魔族",
+        "icon": "race_3.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 2,
+        "label": "新星学園",
+        "icon": "affiliation_01.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "3",
+        "label": "打撃",
+        "icon": "icon_equipment_01_03.png"
+      }
+    ],
+    "specific_gauge_data": null
   },
   {
     "unit_id": 1049003,
@@ -5518,6 +5596,45 @@
     "specific_gauge_data": []
   },
   {
+    "unit_id": 1054002,
+    "character_name": "ユーリス",
+    "character_name_kana": "ゆーりす",
+    "unit_name": "[カードプリンス] ユーリス",
+    "rarity": 2,
+    "attr_type": {
+      "id": "3",
+      "label": "雷",
+      "icon": "attribute_03.png"
+    },
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "camps": [
+      {
+        "id": 2,
+        "label": "神族",
+        "icon": "race_4.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 2,
+        "label": "新星学園",
+        "icon": "affiliation_01.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "2",
+        "label": "斬撃",
+        "icon": "icon_equipment_01_02.png"
+      }
+    ],
+    "specific_gauge_data": null
+  },
+  {
     "unit_id": 1055001,
     "character_name": "エルデリーゼ",
     "character_name_kana": "エルテリーセ",
@@ -5543,7 +5660,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -5582,7 +5699,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -5621,7 +5738,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -5660,7 +5777,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -5699,7 +5816,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -6544,6 +6661,84 @@
     "specific_gauge_data": []
   },
   {
+    "unit_id": 1067001,
+    "character_name": "聖沙",
+    "character_name_kana": "みさ",
+    "unit_name": "[嵐を翔る射手] 聖沙",
+    "rarity": 3,
+    "attr_type": {
+      "id": "3",
+      "label": "雷",
+      "icon": "attribute_03.png"
+    },
+    "role": {
+      "id": "2",
+      "label": "スピード",
+      "icon": "type_2.png"
+    },
+    "camps": [
+      {
+        "id": 1,
+        "label": "人間",
+        "icon": "race_1.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 1,
+        "label": "流星学園",
+        "icon": "affiliation_02.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "1",
+        "label": "魔法",
+        "icon": "icon_equipment_01_01.png"
+      }
+    ],
+    "specific_gauge_data": null
+  },
+  {
+    "unit_id": 1068001,
+    "character_name": "リア",
+    "character_name_kana": "りあ",
+    "unit_name": "[騎士皇女] リア",
+    "rarity": 3,
+    "attr_type": {
+      "id": "4",
+      "label": "光",
+      "icon": "attribute_04.png"
+    },
+    "role": {
+      "id": "4",
+      "label": "サポート",
+      "icon": "type_4.png"
+    },
+    "camps": [
+      {
+        "id": 1,
+        "label": "人間",
+        "icon": "race_1.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 1,
+        "label": "流星学園",
+        "icon": "affiliation_02.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "2",
+        "label": "斬撃",
+        "icon": "icon_equipment_01_02.png"
+      }
+    ],
+    "specific_gauge_data": null
+  },
+  {
     "unit_id": 1069001,
     "character_name": "セシア",
     "character_name_kana": "セシア",
@@ -6574,7 +6769,7 @@
       },
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -6613,7 +6808,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       },
       {
@@ -6983,6 +7178,45 @@
     "specific_gauge_data": []
   },
   {
+    "unit_id": 1076001,
+    "character_name": "モナカ",
+    "character_name_kana": "もなか",
+    "unit_name": "[清澄の雛騎士] モナカ",
+    "rarity": 2,
+    "attr_type": {
+      "id": "2",
+      "label": "水",
+      "icon": "attribute_02.png"
+    },
+    "role": {
+      "id": "2",
+      "label": "スピード",
+      "icon": "type_2.png"
+    },
+    "camps": [
+      {
+        "id": 1,
+        "label": "人間",
+        "icon": "race_1.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 2,
+        "label": "新星学園",
+        "icon": "affiliation_01.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "2",
+        "label": "斬撃",
+        "icon": "icon_equipment_01_02.png"
+      }
+    ],
+    "specific_gauge_data": null
+  },
+  {
     "unit_id": 1077001,
     "character_name": "蘭美",
     "character_name_kana": "ラヒ",
@@ -7020,6 +7254,45 @@
       }
     ],
     "specific_gauge_data": []
+  },
+  {
+    "unit_id": 1077002,
+    "character_name": "蘭美",
+    "character_name_kana": "ラヒ",
+    "unit_name": "[バニーサンタ] 蘭美",
+    "rarity": 3,
+    "attr_type": {
+      "id": "3",
+      "label": "雷",
+      "icon": "attribute_03.png"
+    },
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "camps": [
+      {
+        "id": 3,
+        "label": "魔族",
+        "icon": "race_3.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 2,
+        "label": "新星学園",
+        "icon": "affiliation_01.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "3",
+        "label": "打撃",
+        "icon": "icon_equipment_01_03.png"
+      }
+    ],
+    "specific_gauge_data": null
   },
   {
     "unit_id": 1077003,
@@ -7169,7 +7442,7 @@
       },
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -7415,7 +7688,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       },
       {
@@ -7464,7 +7737,7 @@
       },
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -7503,7 +7776,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       },
       {
@@ -7552,7 +7825,7 @@
       },
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -8116,7 +8389,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -8155,7 +8428,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -8272,7 +8545,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -8311,7 +8584,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -8428,7 +8701,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -8557,6 +8830,179 @@
       }
     ],
     "specific_gauge_data": []
+  },
+  {
+    "unit_id": 1106001,
+    "character_name": "ナナカ",
+    "character_name_kana": "ななか",
+    "unit_name": "[ソードマスター] ナナカ",
+    "rarity": 3,
+    "attr_type": {
+      "id": "1",
+      "label": "炎",
+      "icon": "attribute_01.png"
+    },
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "camps": [
+      {
+        "id": 3,
+        "label": "魔族",
+        "icon": "race_3.png"
+      },
+      {
+        "id": 1,
+        "label": "人間",
+        "icon": "race_1.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 1,
+        "label": "流星学園",
+        "icon": "affiliation_02.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "2",
+        "label": "斬撃",
+        "icon": "icon_equipment_01_02.png"
+      }
+    ],
+    "specific_gauge_data": {
+      "specific_name": "烈火状態",
+      "specific_detail": "◆通常状態\n通常状態中、味方のラッシュ数が10ごとに烈火ゲージが「1」溜まる。\n烈火ゲージが「3」溜まると「烈火状態」に移行する。\n\n◆烈火状態\n烈火状態中、自身のATK100％アップ【解除不可】/クリティカル30％加算【解除不可】\n烈火状態中、「EXスキル2」が「EXスキル2+」に変化する。\nEX2+を使用すると、烈火状態が解除され、「通常状態」に戻る。"
+    }
+  },
+  {
+    "unit_id": 1107001,
+    "character_name": "ロロット",
+    "character_name_kana": "ろろっと",
+    "unit_name": "[碧水のミューズ] ロロット",
+    "rarity": 3,
+    "attr_type": {
+      "id": "2",
+      "label": "水",
+      "icon": "attribute_02.png"
+    },
+    "role": {
+      "id": "5",
+      "label": "ヒール",
+      "icon": "type_5.png"
+    },
+    "camps": [
+      {
+        "id": 2,
+        "label": "神族",
+        "icon": "race_4.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 1,
+        "label": "流星学園",
+        "icon": "affiliation_02.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "1",
+        "label": "魔法",
+        "icon": "icon_equipment_01_01.png"
+      }
+    ],
+    "specific_gauge_data": {
+      "specific_name": "碧水状態",
+      "specific_detail": "◆通常状態\n通常状態中、自身の行動終了後、碧水ゲージが「1」溜まる。\n碧水ゲージが「3」溜まると「碧水状態」に移行する。\n\n◆碧水状態\n碧水状態に移行直後、味方に1回の攻撃を無効化するバリアを張る（10CT）【バフ解除無効】/HPを1CT経過ごとに神族または水属性の味方の数x1％回復（10CT）※2つの条件を満たした場合でも効果は重複しない。回復効果は重複せず、上書きされる\nEXスキル2+を使用すると碧水状態が解除され、「通常状態」に戻る。"
+    }
+  },
+  {
+    "unit_id": 1109001,
+    "character_name": "アルテ",
+    "character_name_kana": "あるて",
+    "unit_name": "[天才美少女藝術家] アルテ",
+    "rarity": 3,
+    "attr_type": {
+      "id": "4",
+      "label": "光",
+      "icon": "attribute_04.png"
+    },
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "camps": [
+      {
+        "id": 1,
+        "label": "人間",
+        "icon": "race_1.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 0,
+        "label": "所属なし",
+        "icon": "affiliation_06.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "2",
+        "label": "斬撃",
+        "icon": "icon_equipment_01_02.png"
+      }
+    ],
+    "specific_gauge_data": {
+      "specific_name": "薔薇色状態",
+      "specific_detail": "◆通常状態\n通常状態中、自身の行動終了後、薔薇色ゲージが「1」溜まる。\n薔薇色ゲージが「3」溜まると「薔薇色状態」に移行する。\n\n◆薔薇色状態\n薔薇色状態中、自身のATKを人間または光属性の味方の数×30％アップ【解除不可】\n薔薇色状態中、「EXスキル2」が「EXスキル2+」に変化する。\n自身が通常攻撃を行った行動終了後、薔薇色ゲージが「1」減少する。\n薔薇色ゲージが「0」になる、または、EXスキル2+を使用すると薔薇色状態が解除され、「通常状態」に戻る。"
+    }
+  },
+  {
+    "unit_id": 1110001,
+    "character_name": "プトラ",
+    "character_name_kana": "ぷとら",
+    "unit_name": "[蒼海の国の元気娘] プトラ",
+    "rarity": 3,
+    "attr_type": {
+      "id": "2",
+      "label": "水",
+      "icon": "attribute_02.png"
+    },
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "camps": [
+      {
+        "id": 1,
+        "label": "人間",
+        "icon": "race_1.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 0,
+        "label": "所属なし",
+        "icon": "affiliation_06.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "3",
+        "label": "打撃",
+        "icon": "icon_equipment_01_03.png"
+      }
+    ],
+    "specific_gauge_data": {
+      "specific_name": "元気溌剌状態",
+      "specific_detail": "◆通常状態\n通常状態中、自身の行動終了後、元気溌剌ゲージが「1」溜まる。\n元気溌剌ゲージが「3」溜まると「元気溌剌状態」に移行する。\n\n◆元気溌剌状態\n元気溌剌状態中、自身のATK100％アップ【解除不可】/行動CT20％短縮【解除不可】\n元気溌剌状態中、「EXスキル2」が「EXスキル2+」に変化する。\n自身が通常攻撃を行った行動終了後、元気溌剌ゲージが「1」減少する。\n元気溌剌ゲージが「0」になる、または、EXスキル2+を使用すると元気溌剌状態が解除され、「通常状態」に戻る。"
+    }
   },
   {
     "unit_id": 1111001,
@@ -9035,7 +9481,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -9088,6 +9534,48 @@
     "specific_gauge_data": []
   },
   {
+    "unit_id": 1125001,
+    "character_name": "アポロ(大人)",
+    "character_name_kana": "あぽろ",
+    "unit_name": "[グロウンヒーロー] アポロ(大人)",
+    "rarity": 3,
+    "attr_type": {
+      "id": "5",
+      "label": "闇",
+      "icon": "attribute_05.png"
+    },
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "camps": [
+      {
+        "id": 1,
+        "label": "人間",
+        "icon": "race_1.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 0,
+        "label": "所属なし",
+        "icon": "affiliation_06.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "2",
+        "label": "斬撃",
+        "icon": "icon_equipment_01_02.png"
+      }
+    ],
+    "specific_gauge_data": {
+      "specific_name": "インフィニティ状態",
+      "specific_detail": "◆通常状態\n通常状態中、自身の通常攻撃でクリティカルが発生するとインフィニティゲージが「1」溜まる。\nインフィニティゲージが「3」溜まると「インフィニティ状態」に移行する。\n\n◆インフィニティ状態\nインフィニティ状態中、自身のATK100％アップ【解除不可】\nインフィニティ状態中、「EXスキル2」が「EXスキル2+」に変化する。\nEXスキル2+を使用するとインフィニティ状態が解除され、「通常状態」に戻る。"
+    }
+  },
+  {
     "unit_id": 1126001,
     "character_name": "トレジアンナ",
     "character_name_kana": "トレシアンナ",
@@ -9113,7 +9601,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -9191,7 +9679,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -9599,7 +10087,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -9638,7 +10126,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],
@@ -9683,7 +10171,7 @@
     "affiliations": [
       {
         "id": 5,
-        "label": "流星学園付属",
+        "label": "流星学園附属",
         "icon": "affiliation_02.png"
       }
     ],

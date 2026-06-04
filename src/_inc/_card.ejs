@@ -3,6 +3,23 @@
 const bgImage =
   `img/unit/chara_${skill.unit_id}_2_1.png`;
 
+const escapeHtml = (value) =>
+  String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+
+const renderFormula = (formula) =>
+  escapeHtml(formula).replace(
+    /\{([^{}]+)\}/g,
+    '<span class="formula-group"><span class="formula-brace">{</span><span class="formula-body">$1</span><span class="formula-brace">}</span></span>'
+  )
+  .replace(
+    /\+/g,
+    '<span class="formula-op">+</span>'
+  );
 
 let skillIcon = `img/skill_${String(skill.icon_id)}.png`;
   
@@ -233,7 +250,7 @@ switch (iconGroup) {
 
       <% if (effect.formula) { %>
       <div class="effect-formula">
-        └ <%= effect.formula %>
+        └ <%- renderFormula(effect.formula) %>
       </div>
       <% } %>
 
@@ -270,7 +287,7 @@ switch (iconGroup) {
           <% } %>
           <% if (sub_effect.formula) { %>
           <div class="effect-formula">
-            └ <%= sub_effect.formula %>
+            └ <%- renderFormula(sub_effect.formula) %>
           </div>
           <% } %>
           <% if (sub_effect.notes && sub_effect.notes.length) { %>
