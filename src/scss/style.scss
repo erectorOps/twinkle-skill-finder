@@ -397,7 +397,6 @@ body {
     &.accessory {
       position: relative;
 
-      min-height: 72px;
       overflow: visible;
 
       border-left-color: #d7b56d;
@@ -713,7 +712,7 @@ body {
     }
 
     .effect-box.accessory {
-      min-height: 64px;
+
 
       .accessory-illust {
         width: 48px;
