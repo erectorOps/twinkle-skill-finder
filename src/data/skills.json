@@ -13038,7 +13038,7 @@
           "max": 7
         },
         "effect_class": "note",
-        "target": "炎属性の味方",
+        "target": "魔族または炎属性",
         "duration": null,
         "notes": [
           {
@@ -13050,7 +13050,7 @@
         "raw": "魔族または炎属性のノーツを7～7前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない",
         "children": [],
         "tags": [],
-        "inherited_target": true
+        "inherited_target": false
       },
       {
         "display_value": "12%～60%",
@@ -13135,7 +13135,7 @@
           "rate": 0.5
         },
         "effect_class": "buff",
-        "target": "炎属性の味方",
+        "target": "魔族または炎属性",
         "duration": {
           "ct": 5
         },
@@ -13143,7 +13143,7 @@
         "raw": "魔族または炎属性のクリティカルをラッシュ数×0.5%加算(5CT)(最大50%)",
         "children": [],
         "tags": [],
-        "inherited_target": true
+        "inherited_target": false
       },
       {
         "display_value": "10",
@@ -13154,7 +13154,7 @@
           "max": 10
         },
         "effect_class": "note",
-        "target": "炎属性の味方",
+        "target": "魔族または炎属性",
         "duration": null,
         "notes": [
           {
@@ -24565,7 +24565,7 @@
           "rate": 100
         },
         "effect_class": "buff",
-        "target": "敵単体",
+        "target": "魔族",
         "duration": {
           "ct": 1
         },
@@ -24573,7 +24573,7 @@
         "raw": "魔族のATKを魔族の味方の数×100%アップ(1CT)",
         "children": [],
         "tags": [],
-        "inherited_target": true
+        "inherited_target": false
       }
     ]
   },
@@ -41549,13 +41549,13 @@
           "max": 8
         },
         "effect_class": "note",
-        "target": "コラプサーの味方",
+        "target": "闇属性",
         "duration": null,
         "notes": [],
         "raw": "闇属性のノーツを8～8前方に移動",
         "children": [],
         "tags": [],
-        "inherited_target": true
+        "inherited_target": false
       }
     ]
   },
