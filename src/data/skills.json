@@ -4159,7 +4159,7 @@
       {
         "display_value": "自身の左1レーンの味方の属性を付与",
         "formula": "",
-        "type": "サブ属性付与",
+        "type": "サブ属性",
         "value": {},
         "effect_class": "buff",
         "target": "自身",
@@ -6896,7 +6896,7 @@
       {
         "display_value": "炎属性を付与",
         "formula": "",
-        "type": "サブ属性付与",
+        "type": "サブ属性",
         "value": {},
         "effect_class": "buff",
         "target": "ヒールタイプの味方",
@@ -7399,7 +7399,7 @@
         "formula": "",
         "type": "最大HP減少",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -7443,7 +7443,7 @@
         "formula": "",
         "type": "EXゲージ減少",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "敵単体",
         "duration": null,
         "notes": [],
@@ -7758,7 +7758,7 @@
         "formula": "",
         "type": "挑発",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 50
@@ -7987,7 +7987,7 @@
         "formula": "",
         "type": "挑発",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 50
@@ -8007,11 +8007,11 @@
       {
         "display_value": "「纏雷の恩寵」の効果:",
         "formula": "",
-        "type": "固有効果の付与",
+        "type": "固有効果",
         "value": {
           "name": "纏雷の恩寵"
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身の右1レーンにいる味方",
         "duration": null,
         "notes": [],
@@ -8055,7 +8055,7 @@
         "formula": "範囲効果も含む挑発",
         "type": "庇護",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 50
@@ -8101,7 +8101,7 @@
         "formula": "",
         "type": "カウンター[進攻]",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 50
@@ -8200,7 +8200,7 @@
         "formula": "通常攻撃・EXスキルによるラッシュ増加数",
         "type": "ラッシュ増加数2倍",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 60
@@ -9017,11 +9017,11 @@
       {
         "display_value": "「黎明の恩寵」の効果:",
         "formula": "",
-        "type": "固有効果の付与",
+        "type": "固有効果",
         "value": {
           "name": "黎明の恩寵"
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "味方全体",
         "duration": null,
         "notes": [],
@@ -9289,7 +9289,7 @@
         "formula": "範囲効果も含む挑発",
         "type": "庇護",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 30
@@ -9329,7 +9329,7 @@
         "formula": "",
         "type": "カウンター[進攻]",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": null,
         "notes": [
@@ -9404,7 +9404,7 @@
         "formula": "自身に付与されている全てのカウンター効果が1回発動する",
         "type": "カウンター誘発",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 50
@@ -9433,7 +9433,7 @@
         "value": {
           "rate": 300
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": null,
         "notes": [
@@ -9496,7 +9496,7 @@
         "formula": "通常攻撃・EXスキルによるラッシュ増加数",
         "type": "ラッシュ増加数2倍",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身の右1レーンにいる水属性の味方",
         "duration": {
           "ct": 5
@@ -10189,7 +10189,7 @@
         "formula": "",
         "type": "チャージ時戻り量短縮",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 30
@@ -10286,7 +10286,7 @@
         "formula": "",
         "type": "チャージ時戻り量短縮",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 30
@@ -10684,7 +10684,12 @@
         "notes": [
           {
             "type": "boost",
-            "text": "味方のHPがオーバーヒール状態(100%超)の時は12%、味方のHPがフルオーバーヒール状態(300%)の時は16%",
+            "text": "味方のHPがオーバーヒール状態(100%超)の時は12%",
+            "label": "強化"
+          },
+          {
+            "type": "boost",
+            "text": "味方のHPがフルオーバーヒール状態(300%)の時は16%",
             "label": "強化"
           }
         ],
@@ -10696,11 +10701,11 @@
       {
         "display_value": "「開花の恩寵」の効果:",
         "formula": "",
-        "type": "固有効果の付与",
+        "type": "固有効果",
         "value": {
           "name": "開花の恩寵"
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": null,
         "notes": [
@@ -12700,7 +12705,7 @@
         "value": {
           "percent": 50
         },
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "敵全体",
         "duration": null,
         "notes": [
@@ -13407,7 +13412,7 @@
       },
       {
         "display_value": "敵EX最大100吸収",
-        "formula": "吸収量の50%を味方EX回復 (最大50)",
+        "formula": "吸収量の50%を味方EX回復 (最大50回復)",
         "type": "EXゲージ吸収",
         "value": {
           "amount": 100,
@@ -13459,7 +13464,7 @@
       {
         "display_value": "自身の左1レーンの味方の属性を付与",
         "formula": "",
-        "type": "サブ属性付与",
+        "type": "サブ属性",
         "value": {},
         "effect_class": "buff",
         "target": "自身",
@@ -13908,11 +13913,11 @@
       {
         "display_value": "「彩愛の恩寵」の効果:",
         "formula": "",
-        "type": "固有効果の付与",
+        "type": "固有効果",
         "value": {
           "name": "彩愛の恩寵"
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": null,
         "notes": [
@@ -13959,46 +13964,29 @@
     "skill_detail": "敵単体に150％×8回（「彩愛の恩寵」効果時、200％×8回）のダメージ/魔族の味方のATKをチーム内の異なる属性の数×100％アップ（30CT）/クリティカル時のダメージ倍率をチーム内の異なる属性の数×9％加算（30CT）/ノーツを7～7前方に移動",
     "effects": [
       {
-        "display_value": "「彩愛の恩寵」の効果:",
+        "display_value": "150%×8回",
         "formula": "",
-        "type": "固有効果の付与",
+        "type": "ダメージ",
         "value": {
-          "name": "彩愛の恩寵"
+          "rate": 150,
+          "hit": 8
         },
-        "effect_class": "other",
-        "target": "",
+        "effect_class": "main",
+        "target": "敵単体",
         "duration": null,
         "notes": [
           {
-            "type": "condition",
-            "text": null,
-            "label": "発動条件"
+            "type": "boost",
+            "text": "「彩愛の恩寵」効果時、200%×8回",
+            "label": "強化"
           }
         ],
         "raw": "敵単体に150%×8回(「彩愛の恩寵」効果時、200%×8回)のダメージ",
-        "children": [
-          {
-            "type": "属性カウント+2",
-            "formula": "属性の数を参照するスキルの対象になった場合、そのカウントを+2する(最大+6)",
-            "value": {
-              "amount": 2,
-              "max": 6
-            },
-            "notes": [
-              {
-                "type": "property",
-                "text": "バフ解除無効",
-                "label": "特性"
-              }
-            ],
-            "target": "",
-            "duration": null,
-            "display_value": "",
-            "effect_class": "other"
-          }
+        "children": [],
+        "tags": [
+          "単体攻撃"
         ],
-        "tags": [],
-        "inherited_target": true
+        "inherited_target": false
       },
       {
         "display_value": "100%～500%",
@@ -14069,7 +14057,7 @@
         "formula": "範囲効果も含む挑発",
         "type": "庇護",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 30
@@ -14131,7 +14119,7 @@
         "formula": "",
         "type": "カウンター[進攻]",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": null,
         "notes": [
@@ -14209,7 +14197,7 @@
         "formula": "自身に付与されている全てのカウンター効果が1回発動する",
         "type": "カウンター誘発",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 50
@@ -14238,7 +14226,7 @@
         "value": {
           "rate": 300
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": null,
         "notes": [
@@ -14331,7 +14319,7 @@
         "formula": "自身に付与されている全てのカウンター効果が1回発動する",
         "type": "カウンター誘発",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 50
@@ -14360,7 +14348,7 @@
         "value": {
           "rate": 300
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": null,
         "notes": [
@@ -14562,7 +14550,7 @@
         "formula": "",
         "type": "全状態異常耐性アップ",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "味方全体",
         "duration": {
           "ct": 30
@@ -14642,11 +14630,11 @@
       {
         "display_value": "「光誕の恩寵」の効果:",
         "formula": "",
-        "type": "固有効果の付与",
+        "type": "固有効果",
         "value": {
           "name": "光誕の恩寵"
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -15057,7 +15045,7 @@
       },
       {
         "display_value": "敵EX最大100吸収",
-        "formula": "吸収量の50%を味方EX回復 (最大50)",
+        "formula": "吸収量の50%を味方EX回復 (最大50回復)",
         "type": "EXゲージ吸収",
         "value": {
           "amount": 100,
@@ -15301,7 +15289,7 @@
         "formula": "",
         "type": "挑発",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 50
@@ -15374,7 +15362,7 @@
         "formula": "範囲効果も含む挑発",
         "type": "庇護",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 50
@@ -15420,7 +15408,7 @@
         "formula": "",
         "type": "カウンター[進攻]",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 50
@@ -15615,7 +15603,7 @@
         "formula": "攻撃タイプ打撃からの被ダメージ20%増加",
         "type": "破砕",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "敵単体",
         "duration": {
           "ct": 1
@@ -15685,7 +15673,7 @@
         "formula": "",
         "type": "全状態異常耐性アップ",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "雷属性の味方",
         "duration": {
           "ct": 48
@@ -15802,11 +15790,11 @@
       {
         "display_value": "「極天の呪縛」の効果:",
         "formula": "",
-        "type": "固有効果の付与",
+        "type": "固有効果",
         "value": {
           "name": "極天の呪縛"
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "敵単体",
         "duration": {
           "ct": 8
@@ -15909,11 +15897,11 @@
       {
         "display_value": "「極天の呪縛」の効果:",
         "formula": "",
-        "type": "固有効果の付与",
+        "type": "固有効果",
         "value": {
           "name": "極天の呪縛"
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "敵全体",
         "duration": {
           "ct": 8
@@ -16017,7 +16005,7 @@
         "formula": "",
         "type": "最大HP減少",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "味方",
         "duration": null,
         "notes": [],
@@ -16416,7 +16404,7 @@
         "formula": "EX上昇ダウンをすべて解除",
         "type": "EX上昇ダウン回復",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": null,
         "notes": [],
@@ -16582,11 +16570,11 @@
       {
         "display_value": "「星霊の恩寵」の効果:",
         "formula": "",
-        "type": "固有効果の付与",
+        "type": "固有効果",
         "value": {
           "name": "星霊の恩寵"
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": null,
         "notes": [],
@@ -16792,7 +16780,7 @@
       {
         "display_value": "自身の左1レーンの味方の属性を付与",
         "formula": "",
-        "type": "サブ属性付与",
+        "type": "サブ属性",
         "value": {},
         "effect_class": "buff",
         "target": "自身",
@@ -17264,11 +17252,11 @@
       {
         "display_value": "「女帝の恩寵」の効果:",
         "formula": "",
-        "type": "固有効果の付与",
+        "type": "固有効果",
         "value": {
           "name": "女帝の恩寵"
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 30
@@ -17303,7 +17291,7 @@
         "formula": "",
         "type": "挑発",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 50
@@ -17327,7 +17315,7 @@
         "value": {
           "rate": 60
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": null,
         "notes": [
@@ -17391,48 +17379,36 @@
     "skill_detail": "敵全体に450％（「女帝の恩寵」効果時、500％）のダメージ/自身に庇護状態を付与（50CT）【バフ解除無効】/被ダメージ20％軽減（50CT）【バフ解除無効】/カウンター[進攻]：人間の味方のノーツを前方に5～5移動を付与（2回発動まで）【バフ解除無効】\n※庇護状態：範囲効果も含む敵からのダメージやスキル効果を自身に引き付ける（ランブル敗北ダメージ、反射ダメージは除く）\n※カウンター：自身が敵からの攻撃を受けた際に記載の効果を発動する",
     "effects": [
       {
-        "display_value": "「女帝の恩寵」の効果:",
+        "display_value": "450%",
         "formula": "",
-        "type": "固有効果の付与",
+        "type": "ダメージ",
         "value": {
-          "name": "女帝の恩寵"
+          "rate": 450,
+          "hit": 1
         },
-        "effect_class": "other",
-        "target": "",
-        "duration": {
-          "ct": 30
-        },
-        "notes": [],
-        "raw": "敵全体に450%(「女帝の恩寵」効果時、500%)のダメージ",
-        "children": [
+        "effect_class": "main",
+        "target": "敵全体",
+        "duration": null,
+        "notes": [
           {
-            "type": "スタンゲージ減少無効",
-            "formula": "攻撃によるスタンゲージ減少を無効化する(強制スタンは除く)",
-            "notes": [
-              {
-                "type": "property",
-                "text": "バフ解除無効",
-                "label": "特性"
-              }
-            ],
-            "target": "",
-            "duration": {
-              "ct": 30
-            },
-            "value": {},
-            "display_value": "",
-            "effect_class": "other"
+            "type": "boost",
+            "text": "「女帝の恩寵」効果時、500%",
+            "label": "強化"
           }
         ],
-        "tags": [],
-        "inherited_target": true
+        "raw": "敵全体に450%(「女帝の恩寵」効果時、500%)のダメージ",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
       },
       {
         "display_value": "",
         "formula": "範囲効果も含む挑発",
         "type": "庇護",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 50
@@ -17478,7 +17454,7 @@
         "formula": "",
         "type": "カウンター[進攻]",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": null,
         "notes": [
@@ -17532,7 +17508,7 @@
         "formula": "1CT毎に、炎属性または水属性の味方の数×2%回復",
         "type": "HP継続回復",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "味方",
         "duration": {
           "ct": 20
@@ -17856,7 +17832,7 @@
         "value": {
           "percent": 80
         },
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "対象とその左右2レーンにいる敵すべて",
         "duration": null,
         "notes": [
@@ -17930,7 +17906,7 @@
         "formula": "",
         "type": "挑発",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 50
@@ -18030,7 +18006,7 @@
         "formula": "範囲効果も含む挑発",
         "type": "庇護",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 50
@@ -18076,7 +18052,7 @@
         "formula": "",
         "type": "カウンター[進攻]",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": null,
         "notes": [
@@ -18170,11 +18146,11 @@
       {
         "display_value": "「螺旋の恩寵」の効果:",
         "formula": "",
-        "type": "固有効果の付与",
+        "type": "固有効果",
         "value": {
           "name": "螺旋の恩寵"
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 10
@@ -18326,7 +18302,7 @@
         "formula": "",
         "type": "挑発",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 50
@@ -19072,7 +19048,7 @@
         "formula": "スタンゲージが0になるとスタン状態になる",
         "type": "スタンゲージ消費",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "自身",
         "duration": null,
         "notes": [
@@ -19132,7 +19108,7 @@
           "min": 50,
           "max": 300
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 1
@@ -19772,7 +19748,7 @@
       {
         "display_value": "水属性を付与",
         "formula": "",
-        "type": "サブ属性付与",
+        "type": "サブ属性",
         "value": {},
         "effect_class": "buff",
         "target": "メイン属性が炎属性の味方",
@@ -19799,7 +19775,7 @@
       {
         "display_value": "炎属性を付与",
         "formula": "",
-        "type": "サブ属性付与",
+        "type": "サブ属性",
         "value": {},
         "effect_class": "buff",
         "target": "メイン属性が水属性の味方",
@@ -20489,7 +20465,12 @@
         "notes": [
           {
             "type": "boost",
-            "text": "味方HP80%以下時は170%、50%以下時は286%",
+            "text": "味方HP80%以下時は170%",
+            "label": "強化"
+          },
+          {
+            "type": "boost",
+            "text": "味方HP50%以下時は286%",
             "label": "強化"
           }
         ],
@@ -20682,7 +20663,12 @@
         "notes": [
           {
             "type": "boost",
-            "text": "味方HP80%以下時は8、50%以下時は10",
+            "text": "味方HP80%以下時は8",
+            "label": "強化"
+          },
+          {
+            "type": "boost",
+            "text": "味方HP50%以下時は10",
             "label": "強化"
           }
         ],
@@ -20741,11 +20727,11 @@
       {
         "display_value": "「鳳凰の恩寵」の効果:",
         "formula": "",
-        "type": "固有効果の付与",
+        "type": "固有効果",
         "value": {
           "name": "鳳凰の恩寵"
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "味方全体",
         "duration": null,
         "notes": [],
@@ -21085,7 +21071,7 @@
         "formula": "光属性からの被ダメージが20％増加",
         "type": "聖痕",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "対象とその左右1レーンにいる敵すべて",
         "duration": {
           "ct": 20
@@ -21154,7 +21140,7 @@
         "formula": "光属性からの被ダメージが20％増加",
         "type": "聖痕",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "対象とその左右1レーンにいる敵すべて",
         "duration": {
           "ct": 20
@@ -21308,7 +21294,7 @@
       },
       {
         "display_value": "敵EX最大150吸収",
-        "formula": "吸収量の20%を味方EX回復 (最大30)",
+        "formula": "吸収量の20%を味方EX回復 (最大30回復)",
         "type": "EXゲージ吸収",
         "value": {
           "amount": 150,
@@ -21367,7 +21353,7 @@
         "value": {
           "rate": 50
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 1
@@ -21416,7 +21402,7 @@
       },
       {
         "display_value": "敵EX最大300吸収",
-        "formula": "吸収量の20%を味方EX回復 (最大60)",
+        "formula": "吸収量の20%を味方EX回復 (最大60回復)",
         "type": "EXゲージ吸収",
         "value": {
           "amount": 300,
@@ -21475,7 +21461,7 @@
         "value": {
           "rate": 50
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 1
@@ -21606,7 +21592,7 @@
         "formula": "",
         "type": "EXゲージ減少",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "敵単体",
         "duration": null,
         "notes": [],
@@ -21647,18 +21633,18 @@
       {
         "display_value": "「セカンドの恩寵」の効果:",
         "formula": "",
-        "type": "固有効果の付与",
+        "type": "固有効果",
         "value": {
           "name": "セカンドの恩寵"
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": null,
         "notes": [],
         "raw": "自身に「セカンドの恩寵」の効果",
         "children": [
           {
-            "type": "サブ属性付与",
+            "type": "サブ属性",
             "display_value": "水属性を付与",
             "notes": [
               {
@@ -21966,7 +21952,7 @@
         "formula": "",
         "type": "オーバーヒール解除",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "味方",
         "duration": null,
         "notes": [
@@ -22879,7 +22865,7 @@
         "formula": "ノーツの移動先が反転する",
         "type": "超竜の呪縛",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "敵単体",
         "duration": {
           "ct": 4
@@ -22943,7 +22929,7 @@
         "formula": "ノーツの移動先が反転する",
         "type": "超竜の呪縛",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "対象とその左右1レーンにいる敵すべて",
         "duration": {
           "ct": 3
@@ -23335,11 +23321,11 @@
       {
         "display_value": "「羅刹の呪縛」の効果:",
         "formula": "",
-        "type": "固有効果の付与",
+        "type": "固有効果",
         "value": {
           "name": "羅刹の呪縛"
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "敵単体",
         "duration": null,
         "notes": [],
@@ -23558,7 +23544,7 @@
         "formula": "",
         "type": "全状態異常耐性アップ",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "味方全体",
         "duration": {
           "ct": 48
@@ -23961,7 +23947,7 @@
         "formula": "",
         "type": "バリア破壊",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "敵",
         "duration": null,
         "notes": [],
@@ -24629,7 +24615,7 @@
         "formula": "",
         "type": "挑発",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 50
@@ -24703,7 +24689,7 @@
         "formula": "",
         "type": "挑発",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 50
@@ -25311,7 +25297,7 @@
         "formula": "",
         "type": "挑発",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 50
@@ -25357,7 +25343,7 @@
         "formula": "",
         "type": "ダメージ反射",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 27
@@ -26330,7 +26316,7 @@
         "formula": "攻撃タイプ斬撃からの被ダメージが20％増加",
         "type": "裂傷",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "敵単体",
         "duration": {
           "ct": 1
@@ -26940,7 +26926,7 @@
         "formula": "",
         "type": "挑発",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 50
@@ -26962,7 +26948,7 @@
         "formula": "",
         "type": "火傷耐性アップ",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 16
@@ -27030,7 +27016,7 @@
         "formula": "",
         "type": "挑発",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 50
@@ -27106,7 +27092,7 @@
         "formula": "範囲効果も含む挑発",
         "type": "庇護",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 50
@@ -27152,7 +27138,7 @@
         "formula": "",
         "type": "カウンター[進攻]",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": null,
         "notes": [
@@ -27459,7 +27445,7 @@
         "formula": "ノーツ停止。隣接敵が同ノーツ移動時、魅了伝染",
         "type": "魅了",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "敵単体",
         "duration": {
           "ct": 5
@@ -27733,11 +27719,11 @@
       {
         "display_value": "「葬礼の呪縛」の効果:",
         "formula": "",
-        "type": "固有効果の付与",
+        "type": "固有効果",
         "value": {
           "name": "葬礼の呪縛"
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "敵単体",
         "duration": null,
         "notes": [],
@@ -28072,11 +28058,11 @@
       {
         "display_value": "「究明の恩寵」の効果:",
         "formula": "",
-        "type": "固有効果の付与",
+        "type": "固有効果",
         "value": {
           "name": "究明の恩寵"
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "味方全体",
         "duration": null,
         "notes": [],
@@ -28944,7 +28930,7 @@
         "formula": "",
         "type": "挑発",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 50
@@ -28966,7 +28952,7 @@
         "formula": "",
         "type": "ノックバック無効",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 99
@@ -29040,7 +29026,7 @@
         "formula": "",
         "type": "挑発",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 50
@@ -29062,7 +29048,7 @@
         "formula": "",
         "type": "ノックバック無効",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 99
@@ -29473,7 +29459,7 @@
         "formula": "",
         "type": "EXゲージ減少",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "敵単体",
         "duration": null,
         "notes": [],
@@ -30101,7 +30087,7 @@
       },
       {
         "display_value": "敵EX最大100吸収",
-        "formula": "吸収量の50%を味方EX回復 (最大50)",
+        "formula": "吸収量の50%を味方EX回復 (最大50回復)",
         "type": "EXゲージ吸収",
         "value": {
           "amount": 100,
@@ -30175,7 +30161,7 @@
         "formula": "ノーツ停止。隣接敵が同ノーツ移動時、魅了伝染",
         "type": "魅了",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "敵単体",
         "duration": {
           "ct": 8
@@ -30191,7 +30177,7 @@
         "formula": "",
         "type": "ノックバック無効",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "敵単体",
         "duration": {
           "ct": 1
@@ -30337,7 +30323,7 @@
           "min": 50,
           "max": 300
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 1
@@ -30403,7 +30389,7 @@
         "value": {
           "percent": 100
         },
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "敵単体",
         "duration": null,
         "notes": [
@@ -30537,7 +30523,7 @@
         "formula": "",
         "type": "EXゲージ減少",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "敵単体",
         "duration": null,
         "notes": [],
@@ -31083,7 +31069,7 @@
         "formula": "",
         "type": "挑発",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身の右1レーンにいる味方",
         "duration": {
           "ct": 40
@@ -31446,7 +31432,7 @@
       },
       {
         "display_value": "敵EX最大200吸収",
-        "formula": "吸収量の50%を味方EX回復 (最大100)",
+        "formula": "吸収量の50%を味方EX回復 (最大100回復)",
         "type": "EXゲージ吸収",
         "value": {
           "amount": 200,
@@ -34016,7 +34002,7 @@
         "formula": "神族からの被ダメージが20％増加",
         "type": "審判",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "敵単体",
         "duration": {
           "ct": 1
@@ -34471,7 +34457,7 @@
         "formula": "",
         "type": "EXゲージ減少",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "敵全体",
         "duration": null,
         "notes": [],
@@ -34887,7 +34873,7 @@
         "formula": "対象へのダメージが50%アップ、通常攻撃のスタンゲージ減少数2倍",
         "type": "標的",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "敵単体",
         "duration": {
           "ct": 20
@@ -34974,7 +34960,7 @@
         "formula": "対象へのダメージが50%アップ、通常攻撃のスタンゲージ減少数2倍",
         "type": "標的",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "敵単体",
         "duration": {
           "ct": 20
@@ -35348,7 +35334,7 @@
         "formula": "1CT毎に、人間の味方の数×2%回復",
         "type": "HP継続回復",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "味方",
         "duration": {
           "ct": 20
@@ -35801,7 +35787,7 @@
         "formula": "",
         "type": "激励",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身の右1レーンにいるメイン属性が光属性の味方",
         "duration": null,
         "notes": [
@@ -36571,7 +36557,7 @@
       {
         "display_value": "光属性を付与",
         "formula": "",
-        "type": "サブ属性付与",
+        "type": "サブ属性",
         "value": {},
         "effect_class": "buff",
         "target": "自身",
@@ -37606,7 +37592,7 @@
       {
         "display_value": "炎属性を付与",
         "formula": "",
-        "type": "サブ属性付与",
+        "type": "サブ属性",
         "value": {},
         "effect_class": "buff",
         "target": "メイン属性が雷属性の味方",
@@ -38616,7 +38602,7 @@
         "formula": "",
         "type": "バリア破壊",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "敵",
         "duration": null,
         "notes": [],
@@ -40404,7 +40390,7 @@
         "formula": "対象へのダメージが50%アップ、通常攻撃のスタンゲージ減少数2倍",
         "type": "標的",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "敵単体",
         "duration": {
           "ct": 10
@@ -40867,7 +40853,7 @@
         "formula": "雷属性からの被ダメージが20％増加",
         "type": "帯電",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "対象とその左右1レーンにいる敵すべて",
         "duration": {
           "ct": 20
@@ -41459,7 +41445,7 @@
       {
         "display_value": "闇属性を付与",
         "formula": "",
-        "type": "サブ属性付与",
+        "type": "サブ属性",
         "value": {},
         "effect_class": "buff",
         "target": "コラプサーの味方(闇属性を除く)",
@@ -41926,7 +41912,7 @@
         "formula": "対象へのダメージが50%アップ、通常攻撃のスタンゲージ減少数2倍",
         "type": "標的",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "敵単体",
         "duration": {
           "ct": 20
@@ -42159,7 +42145,7 @@
       },
       {
         "display_value": "敵EX最大400吸収",
-        "formula": "吸収量の15%を味方EX回復 (最大60)",
+        "formula": "吸収量の15%を味方EX回復 (最大60回復)",
         "type": "EXゲージ吸収",
         "value": {
           "amount": 400,
@@ -42302,7 +42288,7 @@
         "formula": "通常攻撃・EXスキルによるラッシュ増加数",
         "type": "ラッシュ増加数2倍",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身の右1レーンにいる味方",
         "duration": {
           "ct": 5
@@ -42832,7 +42818,7 @@
         "formula": "水属性からの被ダメージが20％増加",
         "type": "極冷",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "敵単体",
         "duration": {
           "ct": 20
@@ -43108,7 +43094,12 @@
         "notes": [
           {
             "type": "boost",
-            "text": "ラッシュ50以上の時は12%、ラッシュ100以上の時は16%",
+            "text": "ラッシュ50以上の時は12%",
+            "label": "強化"
+          },
+          {
+            "type": "boost",
+            "text": "ラッシュ100以上の時は16%",
             "label": "強化"
           }
         ],
@@ -43599,7 +43590,7 @@
         "formula": "攻撃タイプ魔法からの被ダメージが20％増加",
         "type": "魔障",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "対象とその左右1レーンにいる敵すべて",
         "duration": {
           "ct": 20
@@ -43904,7 +43895,7 @@
       {
         "display_value": "発動条件の属性を付与",
         "formula": "",
-        "type": "サブ属性付与",
+        "type": "サブ属性",
         "value": {},
         "effect_class": "buff",
         "target": "自身",
@@ -44088,7 +44079,7 @@
         "value": {
           "rate": 50
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 1
@@ -44263,7 +44254,7 @@
         "formula": "通常攻撃・EXスキルによるラッシュ増加数",
         "type": "ラッシュ増加数2倍",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 5
@@ -44368,7 +44359,7 @@
         "value": {
           "rate": 50
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 1
@@ -44617,7 +44608,7 @@
         "formula": "",
         "type": "バリア破壊",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "敵",
         "duration": null,
         "notes": [],
@@ -44786,7 +44777,7 @@
         "formula": "通常攻撃・EXスキルによるラッシュ増加数",
         "type": "ラッシュ増加数2倍",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 5
@@ -44875,7 +44866,7 @@
         "value": {
           "rate": 50
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 1
@@ -44939,7 +44930,7 @@
         "formula": "",
         "type": "挑発",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 50
@@ -45007,7 +44998,7 @@
         "formula": "範囲効果も含む挑発",
         "type": "庇護",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 50
@@ -45053,7 +45044,7 @@
         "formula": "",
         "type": "カウンター[進攻]",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 50
@@ -45155,7 +45146,7 @@
       {
         "display_value": "光属性を付与",
         "formula": "",
-        "type": "サブ属性付与",
+        "type": "サブ属性",
         "value": {},
         "effect_class": "buff",
         "target": "メイン属性が水属性の味方",
@@ -45580,7 +45571,7 @@
           "min": 50,
           "max": 300
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 1
@@ -45674,7 +45665,7 @@
           "min": 50,
           "max": 300
         },
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 1
@@ -46445,10 +46436,10 @@
       },
       {
         "display_value": "",
-        "formula": "開花状態移行直後、味方EXゲージを付与されている味方の数×5増加",
+        "formula": "(開花状態の効果) 開花状態移行直後、味方EXゲージを付与されている味方の数×5増加",
         "type": "家族の絆",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "ユニゾン参加者",
         "duration": {
           "ct": 40
@@ -46731,7 +46722,7 @@
         "formula": "対象のノーツがタイムライン上12以上にいくと「百合の花」に変化する",
         "type": "百合の蕾",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "対象とその左右1レーンにいる敵すべて",
         "duration": {
           "ct": 50
@@ -46835,7 +46826,12 @@
         "notes": [
           {
             "type": "boost",
-            "text": "対象が百合の蕾が付与されている場合、420%、百合の花が付与されている場合、440%",
+            "text": "対象が百合の蕾が付与されている場合、420%",
+            "label": "強化"
+          },
+          {
+            "type": "boost",
+            "text": "百合の花が付与されている場合、440%",
             "label": "強化"
           }
         ],
@@ -46932,7 +46928,12 @@
         "notes": [
           {
             "type": "boost",
-            "text": "対象が百合の蕾が付与されている場合、530%、百合の花が付与されている場合、570%",
+            "text": "対象が百合の蕾が付与されている場合、530%",
+            "label": "強化"
+          },
+          {
+            "type": "boost",
+            "text": "百合の花が付与されている場合、570%",
             "label": "強化"
           }
         ],
@@ -47327,7 +47328,7 @@
         "formula": "火傷状態の敵の行動終了後に、以下の効果が発動",
         "type": "正義の焔",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "duration": {
           "ct": 15
@@ -47581,7 +47582,7 @@
         "formula": "ノーツの移動が停止する。付与CT後、ダメージを受けると解除される",
         "type": "睡眠",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "敵単体",
         "duration": {
           "ct": 5
@@ -47694,7 +47695,7 @@
         "formula": "ノーツの移動が停止する。付与CT後、ダメージを受けると解除される",
         "type": "睡眠",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "敵全体",
         "duration": {
           "ct": 3
@@ -47957,7 +47958,7 @@
         "formula": "敵の攻撃を1回不発にさせる。発動までの間、行動CTを20%遅延させる",
         "type": "マジックミスト",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "debuff",
         "target": "敵単体",
         "duration": null,
         "notes": [

@@ -358,6 +358,10 @@ body {
     gap: 10px;
 
     padding: 14px;
+
+    > .accessory > .effect-top > .effect-name  {
+      padding-left: 20px;
+    }
   }
 
   .effect-box {
@@ -388,6 +392,76 @@ body {
 
     &.other {
       border-left-color: var(--blank);
+    }
+
+    &.accessory {
+      position: relative;
+
+      min-height: 72px;
+      overflow: visible;
+
+      border-left-color: #d7b56d;
+
+      > .effect-top .effect-name {
+        position: relative;  
+      }
+
+      .accessory-illust {
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        z-index: 2;
+
+        width: 58px;
+        height: 58px;
+
+        object-fit: contain;
+        opacity: 0.55;
+
+        pointer-events: none;
+        user-select: none;
+
+        filter:
+          drop-shadow(0 2px 4px rgba(0,0,0,0.45));
+      }
+
+      > .effect-top,
+      > .effect-value,
+      > .effect-children {
+        position: relative;
+        z-index: 1;
+      }
+
+      .effect-icon {
+        position: absolute;
+        left: -10px;
+        top: 12px;
+
+        width: 32px;
+        height: 32px;
+ 
+        object-fit: contain;
+
+        transform: translateY(-50%);
+      }
+
+      .accessory-common-effect {
+        font-size: 13px;
+        line-height: 1.45;
+
+        + .accessory-common-effect {
+          margin-top: 4px;
+        }
+      }
+
+      .accessory-common-formula {
+        display: block;
+
+        margin-top: 2px;
+
+        font-size: 12px;
+        color: #b9c1d1;
+      }
     }
   }
 
@@ -635,6 +709,15 @@ body {
       img {
         width: 22px;
         height: 22px;
+      }
+    }
+
+    .effect-box.accessory {
+      min-height: 64px;
+
+      .accessory-illust {
+        width: 48px;
+        height: 48px;
       }
     }
   }

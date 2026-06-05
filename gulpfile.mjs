@@ -53,6 +53,13 @@ export async function ejsFunc() {
     )
   );
 
+  const accessories = JSON.parse(
+    await fs.readFile(
+      `${SRC}/data/accessory.json`,
+      "utf8"
+    )
+  );
+
   const pages = [
     "index.ejs"
   ];
@@ -79,7 +86,8 @@ export async function ejsFunc() {
         template,
         {
           skills,
-          characters
+          characters,
+          accessories
         },
         {
           filename: inputPath

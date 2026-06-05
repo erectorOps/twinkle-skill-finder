@@ -4,7 +4,7 @@
     "character_name": "フィオナ",
     "character_name_kana": "フィオナ",
     "unit_name": "流星の姫君",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -43,7 +43,7 @@
     "character_name": "フィオナ",
     "character_name_kana": "フィオナ",
     "unit_name": "渚の星徒会長",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -82,7 +82,7 @@
     "character_name": "フィオナ",
     "character_name_kana": "フィオナ",
     "unit_name": "太陽の祝福",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -172,7 +172,7 @@
     "character_name": "フィオナ《魔王》",
     "character_name_kana": "フィオナ",
     "unit_name": "星を見るもの",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -217,7 +217,7 @@
     "character_name": "サーシャ",
     "character_name_kana": "サーシャ",
     "unit_name": "アイスクイーン",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -256,7 +256,7 @@
     "character_name": "サーシャ",
     "character_name_kana": "サーシャ",
     "unit_name": "夏のお姉ちゃん♪",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -295,7 +295,7 @@
     "character_name": "サーシャ《絶氷》",
     "character_name_kana": "サーシャ",
     "unit_name": "アイシクルノヴァ",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -385,7 +385,7 @@
     "character_name": "ヴィーナス",
     "character_name_kana": "ウィーナス",
     "unit_name": "ハローフィクサー",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -463,7 +463,7 @@
     "character_name": "ヴィーナス",
     "character_name_kana": "ウィーナス",
     "unit_name": "夏空の一番星",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -598,7 +598,7 @@
     "character_name": "アポロ",
     "character_name_kana": "アホロ",
     "unit_name": "ナギサフォーム",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -643,7 +643,7 @@
     "character_name": "アポロ",
     "character_name_kana": "アホロ",
     "unit_name": "フレイムフォーム",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -682,7 +682,7 @@
     "character_name": "アポロ",
     "character_name_kana": "アホロ",
     "unit_name": "プリティドール",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -727,7 +727,7 @@
     "character_name": "ソフィア",
     "character_name_kana": "ソフィア",
     "unit_name": "氷刃の妖精",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -766,7 +766,7 @@
     "character_name": "ソフィア",
     "character_name_kana": "ソフィア",
     "unit_name": "新春アクセル",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -805,7 +805,7 @@
     "character_name": "ソフィア",
     "character_name_kana": "ソフィア",
     "unit_name": "さざ波に揺られて",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -844,7 +844,7 @@
     "character_name": "ソフィア",
     "character_name_kana": "ソフィア",
     "unit_name": "温かシーツおばけ",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -883,7 +883,7 @@
     "character_name": "クロト",
     "character_name_kana": "クロト",
     "unit_name": "未完の魔王",
-    "rarity": 5,
+    "rarity": 1,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -922,7 +922,7 @@
     "character_name": "ルリエル",
     "character_name_kana": "ルリエル",
     "unit_name": "加護の角笛",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -961,7 +961,7 @@
     "character_name": "ルリエル",
     "character_name_kana": "ルリエル",
     "unit_name": "自称隠れ天使",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -1000,7 +1000,7 @@
     "character_name": "ルリエル",
     "character_name_kana": "ルリエル",
     "unit_name": "初めての海",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -1039,7 +1039,7 @@
     "character_name": "ルリエル",
     "character_name_kana": "ルリエル",
     "unit_name": "でんでん神楽",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -1084,7 +1084,7 @@
     "character_name": "ルリエル",
     "character_name_kana": "ルリエル",
     "unit_name": "星と花の騎士",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -1123,7 +1123,7 @@
     "character_name": "アナ",
     "character_name_kana": "アナ",
     "unit_name": "ソルヴアーチャー",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -1162,7 +1162,7 @@
     "character_name": "アナ",
     "character_name_kana": "アナ",
     "unit_name": "狙い撃ちサマー",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -1201,7 +1201,7 @@
     "character_name": "アナ《煌炎》",
     "character_name_kana": "アナ",
     "unit_name": "煌炎の超天使",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -1291,7 +1291,7 @@
     "character_name": "セーラ",
     "character_name_kana": "セーラ",
     "unit_name": "おちゃめな副会長",
-    "rarity": 5,
+    "rarity": 1,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -1330,7 +1330,7 @@
     "character_name": "セーラ",
     "character_name_kana": "セーラ",
     "unit_name": "チャームバニー",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -1369,7 +1369,7 @@
     "character_name": "セーラ",
     "character_name_kana": "セーラ",
     "unit_name": "マリンガンナー",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -1408,7 +1408,7 @@
     "character_name": "マグダレナ",
     "character_name_kana": "マクタレナ",
     "unit_name": "“境界”を護る者",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -1447,7 +1447,7 @@
     "character_name": "マトイ",
     "character_name_kana": "マトイ",
     "unit_name": "コモンシールダー",
-    "rarity": 5,
+    "rarity": 1,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -1486,7 +1486,7 @@
     "character_name": "マトイ",
     "character_name_kana": "マトイ",
     "unit_name": "夏もキミの隣で",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -1525,7 +1525,7 @@
     "character_name": "マトイ《纏雷》",
     "character_name_kana": "マトイ",
     "unit_name": "絶対普遍の守り手",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -1564,7 +1564,7 @@
     "character_name": "マトイ",
     "character_name_kana": "マトイ",
     "unit_name": "二刀普遍の巫女",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -1603,7 +1603,7 @@
     "character_name": "キリカ",
     "character_name_kana": "キリカ",
     "unit_name": "マスターメイド",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -1642,7 +1642,7 @@
     "character_name": "キリカ",
     "character_name_kana": "キリカ",
     "unit_name": "マリーメイデン",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -1681,7 +1681,7 @@
     "character_name": "ユウリ",
     "character_name_kana": "ユウリ",
     "unit_name": "弱きを守る斧槍",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -1720,7 +1720,7 @@
     "character_name": "ユウリ",
     "character_name_kana": "ユウリ",
     "unit_name": "ダイスシューター",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -1759,7 +1759,7 @@
     "character_name": "トワ先生",
     "character_name_kana": "トワセンセイ",
     "unit_name": "暁の導き手",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -1798,7 +1798,7 @@
     "character_name": "トワ先生《黎明》",
     "character_name_kana": "トワセンセイ",
     "unit_name": "黄昏の超新星",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -1837,7 +1837,7 @@
     "character_name": "トワ先生",
     "character_name_kana": "トワセンセイ",
     "unit_name": "水星の花嫁",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -1876,7 +1876,7 @@
     "character_name": "トワ先生",
     "character_name_kana": "トワセンセイ",
     "unit_name": "恋は黄昏ビギナー",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -1915,7 +1915,7 @@
     "character_name": "アルモタヘル",
     "character_name_kana": "アルモタヘル",
     "unit_name": "命脈の守護天使",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -1954,7 +1954,7 @@
     "character_name": "ヒトリ",
     "character_name_kana": "ヒトリ",
     "unit_name": "ゴーストネイバー",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -1993,7 +1993,7 @@
     "character_name": "ヒトリ",
     "character_name_kana": "ヒトリ",
     "unit_name": "はにかみチシャ猫",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -2032,7 +2032,7 @@
     "character_name": "蛍火",
     "character_name_kana": "ケイカ",
     "unit_name": "烈火の料理人",
-    "rarity": 5,
+    "rarity": 1,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -2071,7 +2071,7 @@
     "character_name": "エリス",
     "character_name_kana": "エリス",
     "unit_name": "轟雷の華騎士",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -2110,7 +2110,7 @@
     "character_name": "せつな",
     "character_name_kana": "セツナ",
     "unit_name": "紫電のくノ一",
-    "rarity": 5,
+    "rarity": 1,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -2149,7 +2149,7 @@
     "character_name": "せつな",
     "character_name_kana": "セツナ",
     "unit_name": "愛遁チョコギフト",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -2188,7 +2188,7 @@
     "character_name": "せつな《開花》",
     "character_name_kana": "セツナ",
     "unit_name": "桜花・紫桜忍軍",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -2227,7 +2227,7 @@
     "character_name": "ルルカ",
     "character_name_kana": "ルルカ",
     "unit_name": "蒼穹の仮想歌姫",
-    "rarity": 5,
+    "rarity": 1,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -2266,7 +2266,7 @@
     "character_name": "ルルカ",
     "character_name_kana": "ルルカ",
     "unit_name": "ＶＲ水着配信",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -2305,7 +2305,7 @@
     "character_name": "ルルカ",
     "character_name_kana": "ルルカ",
     "unit_name": "聖夜のキャロル",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -2350,7 +2350,7 @@
     "character_name": "ルルカ",
     "character_name_kana": "ルルカ",
     "unit_name": "手作り妹チョコ",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -2395,7 +2395,7 @@
     "character_name": "環",
     "character_name_kana": "タマキ",
     "unit_name": "お気楽バイト天使",
-    "rarity": 5,
+    "rarity": 1,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -2439,7 +2439,7 @@
     "character_name": "モネ",
     "character_name_kana": "モネ",
     "unit_name": "歩く図書館",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -2478,7 +2478,7 @@
     "character_name": "モネ",
     "character_name_kana": "モネ",
     "unit_name": "水着サンタ！？",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -2517,7 +2517,7 @@
     "character_name": "モネ《傲慢》",
     "character_name_kana": "モネ",
     "unit_name": "物語を紡ぐ魔将",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -2562,7 +2562,7 @@
     "character_name": "シャロン",
     "character_name_kana": "シャロン",
     "unit_name": "淑やかシスター？",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -2601,7 +2601,7 @@
     "character_name": "シャロン",
     "character_name_kana": "シャロン",
     "unit_name": "純白のシスター",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -2640,7 +2640,7 @@
     "character_name": "シャロン",
     "character_name_kana": "シャロン",
     "unit_name": "スイートホワイト",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -2679,7 +2679,7 @@
     "character_name": "ヨミ",
     "character_name_kana": "ヨミ",
     "unit_name": "爆裂破邪の巫女",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -2718,7 +2718,7 @@
     "character_name": "ヨミ",
     "character_name_kana": "ヨミ",
     "unit_name": "聖鈴のトナカイ",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -2757,7 +2757,7 @@
     "character_name": "ヨミ",
     "character_name_kana": "ヨミ",
     "unit_name": "巫女狐の嫁入り",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -2802,7 +2802,7 @@
     "character_name": "舞亜",
     "character_name_kana": "マイア",
     "unit_name": "銀盤に舞う女王",
-    "rarity": 5,
+    "rarity": 1,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -2841,7 +2841,7 @@
     "character_name": "舞亜",
     "character_name_kana": "マイア",
     "unit_name": "銀盤の神楽舞姫",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -2880,7 +2880,7 @@
     "character_name": "舞亜",
     "character_name_kana": "マイア",
     "unit_name": "聖夜パティシエ",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -2919,7 +2919,7 @@
     "character_name": "リーリア",
     "character_name_kana": "リーリア",
     "unit_name": "虹色の魔弾使い",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -2963,7 +2963,7 @@
     "character_name": "リーリア",
     "character_name_kana": "リーリア",
     "unit_name": "夏色マジカル☆",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -3051,7 +3051,7 @@
     "character_name": "リーリア",
     "character_name_kana": "リーリア",
     "unit_name": "初春プリズム",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -3101,7 +3101,7 @@
     "character_name": "コハルコ",
     "character_name_kana": "コハルコ",
     "unit_name": "正義のハッカー",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -3140,7 +3140,7 @@
     "character_name": "コハルコ《光誕》",
     "character_name_kana": "コハルコ",
     "unit_name": "ウィッチレプリカ",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -3179,7 +3179,7 @@
     "character_name": "トマル",
     "character_name_kana": "トマル",
     "unit_name": "雷弓の追跡者",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -3218,7 +3218,7 @@
     "character_name": "シャルレーヌ",
     "character_name_kana": "シャルレーヌ",
     "unit_name": "嗜虐の貴族令嬢",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -3257,7 +3257,7 @@
     "character_name": "シャルレーヌ",
     "character_name_kana": "シャルレーヌ",
     "unit_name": "甘愛フレグランス",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -3296,7 +3296,7 @@
     "character_name": "ナミエル",
     "character_name_kana": "ナミエル",
     "unit_name": "クール＆クリーン",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -3335,7 +3335,7 @@
     "character_name": "ナミエル",
     "character_name_kana": "ナミエル",
     "unit_name": "タイニーブライド",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -3374,7 +3374,7 @@
     "character_name": "ナミエル",
     "character_name_kana": "ナミエル",
     "unit_name": "ハニーフロスティ",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -3413,7 +3413,7 @@
     "character_name": "アニマ",
     "character_name_kana": "アニマ",
     "unit_name": "救世の錬金術師",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -3452,7 +3452,7 @@
     "character_name": "アニマ《極天》",
     "character_name_kana": "アニマ",
     "unit_name": "極天アルケミスト",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -3491,7 +3491,7 @@
     "character_name": "ウィステリア",
     "character_name_kana": "ウィステリア",
     "unit_name": "暗闇に呪われし者",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -3530,7 +3530,7 @@
     "character_name": "ウィステリア",
     "character_name_kana": "ウィステリア",
     "unit_name": "司書の夏休み",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -3569,7 +3569,7 @@
     "character_name": "ウィステリア《怠惰》",
     "character_name_kana": "ウィステリア",
     "unit_name": "闇を支配せし魔将",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -3614,7 +3614,7 @@
     "character_name": "アニュラス",
     "character_name_kana": "アニュラス",
     "unit_name": "仮面の暗黒騎士",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -3653,7 +3653,7 @@
     "character_name": "アニュラス《星霊》",
     "character_name_kana": "アニュラス",
     "unit_name": "金紗の覚醒騎士",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -3692,7 +3692,7 @@
     "character_name": "アニュラス",
     "character_name_kana": "アニュラス",
     "unit_name": "祝宴の始まり",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -3731,7 +3731,7 @@
     "character_name": "カティア",
     "character_name_kana": "カティア",
     "unit_name": "お仕えしますワン",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -3770,7 +3770,7 @@
     "character_name": "カティア",
     "character_name_kana": "カティア",
     "unit_name": "突っ走るワン！",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -3809,7 +3809,7 @@
     "character_name": "セナリィ",
     "character_name_kana": "セナリィ",
     "unit_name": "炎銃のバンデッド",
-    "rarity": 5,
+    "rarity": 1,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -3848,7 +3848,7 @@
     "character_name": "セナリィ《女帝》",
     "character_name_kana": "セナリィ",
     "unit_name": "悪即ブーステッド",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -3887,7 +3887,7 @@
     "character_name": "セナリィ",
     "character_name_kana": "セナリィ",
     "unit_name": "悪姫兎視たんたん",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -3926,7 +3926,7 @@
     "character_name": "ヒルディオーネ",
     "character_name_kana": "ヒルティオーネ",
     "unit_name": "白昼の極星",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -3965,7 +3965,7 @@
     "character_name": "ヒルディオーネ",
     "character_name_kana": "ヒルティオーネ",
     "unit_name": "カジノスパイラル",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -4004,7 +4004,7 @@
     "character_name": "ヒルディオーネ《螺旋》",
     "character_name_kana": "ヒルティオーネ",
     "unit_name": "千変超化の戦姫",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -4043,7 +4043,7 @@
     "character_name": "サラン",
     "character_name_kana": "サラン",
     "unit_name": "ふわふわスイート",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -4082,7 +4082,7 @@
     "character_name": "サラン",
     "character_name_kana": "サラン",
     "unit_name": "カボチャのお姫様",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -4121,7 +4121,7 @@
     "character_name": "サラン",
     "character_name_kana": "サラン",
     "unit_name": "スイートサマー",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -4160,7 +4160,7 @@
     "character_name": "イクシリオン",
     "character_name_kana": "イクシリオン",
     "unit_name": "命紡ぐ灼炎",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -4199,7 +4199,7 @@
     "character_name": "イクシリオン",
     "character_name_kana": "イクシリオン",
     "unit_name": "健全シーレジャー",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -4238,7 +4238,7 @@
     "character_name": "イクシリオン",
     "character_name_kana": "イクシリオン",
     "unit_name": "想贈エクスタシー",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -4277,7 +4277,7 @@
     "character_name": "イニシュ",
     "character_name_kana": "イニシュ",
     "unit_name": "昏き夜の魔女",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -4316,7 +4316,7 @@
     "character_name": "アイリーン",
     "character_name_kana": "アイリーン",
     "unit_name": "イタズラ風の魔女",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -4355,7 +4355,7 @@
     "character_name": "ネーゼマイン",
     "character_name_kana": "ネーセマイン",
     "unit_name": "トラップボマー",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -4394,7 +4394,7 @@
     "character_name": "ネーゼマイン",
     "character_name_kana": "ネーセマイン",
     "unit_name": "悪戯な赤ずきん",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -4433,7 +4433,7 @@
     "character_name": "ネーゼマイン",
     "character_name_kana": "ネーセマイン",
     "unit_name": "逆転ダイスロール",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -4478,7 +4478,7 @@
     "character_name": "ネーゼマイン",
     "character_name_kana": "ネーセマイン",
     "unit_name": "渚のボムシェル",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -4523,7 +4523,7 @@
     "character_name": "フェニエル",
     "character_name_kana": "フェニエル",
     "unit_name": "蒼炎の雛天使",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -4562,7 +4562,7 @@
     "character_name": "フェニエル",
     "character_name_kana": "フェニエル",
     "unit_name": "マッチ売りの天使",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -4601,7 +4601,7 @@
     "character_name": "フェニエル《鳳凰》",
     "character_name_kana": "フェニエル",
     "unit_name": "阿吽の不死鳥",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -4640,7 +4640,7 @@
     "character_name": "サチ",
     "character_name_kana": "サチ",
     "unit_name": "幸運の魔法少女",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -4679,7 +4679,7 @@
     "character_name": "サチ《運命》",
     "character_name_kana": "サチ",
     "unit_name": "最幸の真魔法少女",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -4724,7 +4724,7 @@
     "character_name": "サチ",
     "character_name_kana": "サチ",
     "unit_name": "ダークトレジャー",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -4769,7 +4769,7 @@
     "character_name": "プリムラ",
     "character_name_kana": "フリムラ",
     "unit_name": "悪の終末兵器",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -4808,7 +4808,7 @@
     "character_name": "プリムラ《セカンド》",
     "character_name_kana": "フリムラ",
     "unit_name": "破滅の第二局",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -4847,7 +4847,7 @@
     "character_name": "プリムラ",
     "character_name_kana": "フリムラ",
     "unit_name": "反転せし白き終末",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -4886,7 +4886,7 @@
     "character_name": "エスメラルダ",
     "character_name_kana": "エスメラルタ",
     "unit_name": "計算された旋律",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -4925,7 +4925,7 @@
     "character_name": "閃",
     "character_name_kana": "セン",
     "unit_name": "氷剣藤花",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -4964,7 +4964,7 @@
     "character_name": "メルエル",
     "character_name_kana": "メルエル",
     "unit_name": "一意専心",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -5003,7 +5003,7 @@
     "character_name": "メルエル",
     "character_name_kana": "メルエル",
     "unit_name": "一途アイドル",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -5042,7 +5042,7 @@
     "character_name": "マハムート",
     "character_name_kana": "マハムート",
     "unit_name": "宵闇の極星",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -5081,7 +5081,7 @@
     "character_name": "マハムート",
     "character_name_kana": "マハムート",
     "unit_name": "真夏の竜妃",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -5159,7 +5159,7 @@
     "character_name": "紅明",
     "character_name_kana": "コウメイ",
     "unit_name": "善哉童子",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -5237,7 +5237,7 @@
     "character_name": "紅明《羅刹》",
     "character_name_kana": "コウメイ",
     "unit_name": "鉄扇公主",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -5276,7 +5276,7 @@
     "character_name": "フロレンシア",
     "character_name_kana": "フロレンシア",
     "unit_name": "ヒール＋ペイン",
-    "rarity": 5,
+    "rarity": 1,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -5315,7 +5315,7 @@
     "character_name": "クラウディア",
     "character_name_kana": "クラウティア",
     "unit_name": "星雲の支配者",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -5354,7 +5354,7 @@
     "character_name": "クラウディア《黄昏》",
     "character_name_kana": "クラウティア",
     "unit_name": "黄昏の姫君",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -5444,7 +5444,7 @@
     "character_name": "セドナ",
     "character_name_kana": "セトナ",
     "unit_name": "冷徹なる司令官",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -5483,7 +5483,7 @@
     "character_name": "セドナ",
     "character_name_kana": "セトナ",
     "unit_name": "炎天下の涼魔女",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -5522,7 +5522,7 @@
     "character_name": "ウェンディ",
     "character_name_kana": "ウェンティ",
     "unit_name": "水鏡の魔女",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -5561,7 +5561,7 @@
     "character_name": "ユーリス",
     "character_name_kana": "ユーリス",
     "unit_name": "魔を断つ聖剣",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -5639,7 +5639,7 @@
     "character_name": "エルデリーゼ",
     "character_name_kana": "エルテリーセ",
     "unit_name": "漆黒槍の令嬢",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -5678,7 +5678,7 @@
     "character_name": "エルデリーゼ",
     "character_name_kana": "エルテリーセ",
     "unit_name": "夏の白き閃光",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -5717,7 +5717,7 @@
     "character_name": "アム",
     "character_name_kana": "アム",
     "unit_name": "元気溌剌☆盾乙女",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -5756,7 +5756,7 @@
     "character_name": "アム",
     "character_name_kana": "アム",
     "unit_name": "サマーアイギス",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -5795,7 +5795,7 @@
     "character_name": "アム",
     "character_name_kana": "アム",
     "unit_name": "祝配の車力要塞",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -5834,7 +5834,7 @@
     "character_name": "トリシャ",
     "character_name_kana": "トリシャ",
     "unit_name": "異郷の占星術師",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -5873,7 +5873,7 @@
     "character_name": "トリシャ",
     "character_name_kana": "トリシャ",
     "unit_name": "おみくじどうぞ",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -5912,7 +5912,7 @@
     "character_name": "トリシャ",
     "character_name_kana": "トリシャ",
     "unit_name": "水着フレンズ",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -5951,7 +5951,7 @@
     "character_name": "トリシャ",
     "character_name_kana": "トリシャ",
     "unit_name": "道士のオトモダチ",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -6029,7 +6029,7 @@
     "character_name": "ヘレナ",
     "character_name_kana": "ヘレナ",
     "unit_name": "輝きは白波の如く",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -6074,7 +6074,7 @@
     "character_name": "リップル",
     "character_name_kana": "リッフル",
     "unit_name": "リゾートメイカー",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -6113,7 +6113,7 @@
     "character_name": "リップル",
     "character_name_kana": "リッフル",
     "unit_name": "ワタシプレゼント",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -6152,7 +6152,7 @@
     "character_name": "レミカ",
     "character_name_kana": "レミカ",
     "unit_name": "電撃熱唱の歌姫",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -6191,7 +6191,7 @@
     "character_name": "レミカ",
     "character_name_kana": "レミカ",
     "unit_name": "キュートスタイル",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -6230,7 +6230,7 @@
     "character_name": "マリオン",
     "character_name_kana": "マリオン",
     "unit_name": "ドールズマスター",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -6269,7 +6269,7 @@
     "character_name": "マリオン《葬礼》",
     "character_name_kana": "マリオン",
     "unit_name": "魔女を狩る魔女",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -6308,7 +6308,7 @@
     "character_name": "ジュエリー",
     "character_name_kana": "シュエリー",
     "unit_name": "星選の名探偵",
-    "rarity": 5,
+    "rarity": 1,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -6347,7 +6347,7 @@
     "character_name": "ジュエリー《究明》",
     "character_name_kana": "シュエリー",
     "unit_name": "究愛の日傘探偵",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -6386,7 +6386,7 @@
     "character_name": "カヤ",
     "character_name_kana": "カヤ",
     "unit_name": "小さき陽炎の魔女",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -6425,7 +6425,7 @@
     "character_name": "マリーベル",
     "character_name_kana": "マリーヘル",
     "unit_name": "ブラッディマリー",
-    "rarity": 5,
+    "rarity": 1,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -6464,7 +6464,7 @@
     "character_name": "イレーナ",
     "character_name_kana": "イレーナ",
     "unit_name": "紫薔薇の聖女",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -6503,7 +6503,7 @@
     "character_name": "イレーナ",
     "character_name_kana": "イレーナ",
     "unit_name": "ナターレの黒聖女",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -6542,7 +6542,7 @@
     "character_name": "イレーナ",
     "character_name_kana": "イレーナ",
     "unit_name": "魅惑チョコラート",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -6587,7 +6587,7 @@
     "character_name": "ラティエ",
     "character_name_kana": "ラティエ",
     "unit_name": "さすらいの破天荒",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -6626,7 +6626,7 @@
     "character_name": "ラティエ",
     "character_name_kana": "ラティエ",
     "unit_name": "流れの水着剣士",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -6743,7 +6743,7 @@
     "character_name": "セシア",
     "character_name_kana": "セシア",
     "unit_name": "万成の幼天使",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -6787,7 +6787,7 @@
     "character_name": "セシア",
     "character_name_kana": "セシア",
     "unit_name": "二代目・三太九郎",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -6831,7 +6831,7 @@
     "character_name": "ウズメイア",
     "character_name_kana": "ウスメイア",
     "unit_name": "雷薙の晴天使",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -6870,7 +6870,7 @@
     "character_name": "ウズメイア",
     "character_name_kana": "ウスメイア",
     "unit_name": "一菓♥入魂",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -6909,7 +6909,7 @@
     "character_name": "ウズメイア",
     "character_name_kana": "ウスメイア",
     "unit_name": "ガオガオ♥狼天使",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -6948,7 +6948,7 @@
     "character_name": "キサナ",
     "character_name_kana": "キサナ",
     "unit_name": "マッドクーガー",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -6987,7 +6987,7 @@
     "character_name": "ミア",
     "character_name_kana": "ミア",
     "unit_name": "ちびっこ風紀委員",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -7026,7 +7026,7 @@
     "character_name": "リノ",
     "character_name_kana": "リノ",
     "unit_name": "空間の魔女",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -7065,7 +7065,7 @@
     "character_name": "リノ",
     "character_name_kana": "リノ",
     "unit_name": "トロピカルマザー",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -7104,7 +7104,7 @@
     "character_name": "パルミエ",
     "character_name_kana": "ハルミエ",
     "unit_name": "お転婆バサラ姫",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -7143,7 +7143,7 @@
     "character_name": "シフォン",
     "character_name_kana": "シフォン",
     "unit_name": "天魔の闇騎士",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -7221,7 +7221,7 @@
     "character_name": "蘭美",
     "character_name_kana": "ラヒ",
     "unit_name": "光速メイドスター",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -7299,7 +7299,7 @@
     "character_name": "蘭美",
     "character_name_kana": "ラヒ",
     "unit_name": "白うさぎの純情",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -7338,7 +7338,7 @@
     "character_name": "トリュファイナ",
     "character_name_kana": "トリュファイナ",
     "unit_name": "光と再生の魔女",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -7377,7 +7377,7 @@
     "character_name": "パテル",
     "character_name_kana": "ハテル",
     "unit_name": "試練の守護天使",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -7416,7 +7416,7 @@
     "character_name": "パテル",
     "character_name_kana": "ハテル",
     "unit_name": "フカヒレライダー",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -7466,7 +7466,7 @@
     "character_name": "フラン",
     "character_name_kana": "フラン",
     "unit_name": "燃え盛る炎の旗手",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -7505,7 +7505,7 @@
     "character_name": "グロリア",
     "character_name_kana": "クロリア",
     "unit_name": "静粛なる祈り手",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -7544,7 +7544,7 @@
     "character_name": "フェリシー",
     "character_name_kana": "フェリシー",
     "unit_name": "星選の祓魔師",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -7583,7 +7583,7 @@
     "character_name": "ソフレ",
     "character_name_kana": "ソフレ",
     "unit_name": "暴虐の吸血鬼",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -7667,7 +7667,7 @@
     "character_name": "マグダレナ(ちぃ)",
     "character_name_kana": "マクタレナ（チィ）",
     "unit_name": "境界の幼アバター",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -7711,7 +7711,7 @@
     "character_name": "マグダレナ(ちぃ)",
     "character_name_kana": "マクタレナ（チィ）",
     "unit_name": "すこっぷりちぃ",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -7755,7 +7755,7 @@
     "character_name": "アルモタヘル(ちぃ)",
     "character_name_kana": "アルモタヘル（チィ）",
     "unit_name": "命脈の幼アバター",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -7799,7 +7799,7 @@
     "character_name": "アルモタヘル(ちぃ)",
     "character_name_kana": "アルモタヘル（チィ）",
     "unit_name": "きゃぷちゃーみー",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -7843,7 +7843,7 @@
     "character_name": "ヴァレリー",
     "character_name_kana": "ウァレリー",
     "unit_name": "美の冒涜者",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -7882,7 +7882,7 @@
     "character_name": "リーナ",
     "character_name_kana": "リーナ",
     "unit_name": "ズタズタシスター",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -7921,7 +7921,7 @@
     "character_name": "シアン",
     "character_name_kana": "シアン",
     "unit_name": "執念深き猟犬",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -7960,7 +7960,7 @@
     "character_name": "メイプル",
     "character_name_kana": "メイフル",
     "unit_name": "自称・妹魔王",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -7999,7 +7999,7 @@
     "character_name": "メイプル",
     "character_name_kana": "メイフル",
     "unit_name": "妹魔王増量中",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -8083,7 +8083,7 @@
     "character_name": "梨緒",
     "character_name_kana": "リオ",
     "unit_name": "清麗なる水着姿",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -8128,7 +8128,7 @@
     "character_name": "ヒヨ",
     "character_name_kana": "ヒヨ",
     "unit_name": "江戸っ子巫女",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -8167,7 +8167,7 @@
     "character_name": "ミルフィー",
     "character_name_kana": "ミルフィー",
     "unit_name": "《境界》の従者",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -8206,7 +8206,7 @@
     "character_name": "ミルフィー",
     "character_name_kana": "ミルフィー",
     "unit_name": "チアーエンジェル",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -8245,7 +8245,7 @@
     "character_name": "ミルフィー",
     "character_name_kana": "ミルフィー",
     "unit_name": "霊幻学級委員長",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -8284,7 +8284,7 @@
     "character_name": "美鶴",
     "character_name_kana": "ミツル",
     "unit_name": "鶴翼の針妙",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -8323,7 +8323,7 @@
     "character_name": "美鶴",
     "character_name_kana": "ミツル",
     "unit_name": "鶴のチアエール",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -8368,7 +8368,7 @@
     "character_name": "シズハ",
     "character_name_kana": "シスハ",
     "unit_name": "切願の魔法少女",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -8407,7 +8407,7 @@
     "character_name": "シズハ",
     "character_name_kana": "シスハ",
     "unit_name": "謹賀の甘酒",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -8446,7 +8446,7 @@
     "character_name": "イングリット",
     "character_name_kana": "インクリット",
     "unit_name": "渇望の武闘天使",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -8485,7 +8485,7 @@
     "character_name": "ジュリエッテ",
     "character_name_kana": "シュリエッテ",
     "unit_name": "智謀の黒き微笑み",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -8524,7 +8524,7 @@
     "character_name": "ヒマワリ",
     "character_name_kana": "ヒマワリ",
     "unit_name": "無邪気な天才",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -8563,7 +8563,7 @@
     "character_name": "ミウ",
     "character_name_kana": "ミウ",
     "unit_name": "笑顔の合理主義者",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -8602,7 +8602,7 @@
     "character_name": "ジャクリーヌ",
     "character_name_kana": "シャクリーヌ",
     "unit_name": "ソウルプリンセス",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -8641,7 +8641,7 @@
     "character_name": "シルヴィ",
     "character_name_kana": "シルウィ",
     "unit_name": "戦嵐の轟天使",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -8680,7 +8680,7 @@
     "character_name": "シュティレ",
     "character_name_kana": "シュティレ",
     "unit_name": "精錬の機甲天使",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -8719,7 +8719,7 @@
     "character_name": "ロクサーナ",
     "character_name_kana": "ロクサーナ",
     "unit_name": "傲岸なる演出家",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -8758,7 +8758,7 @@
     "character_name": "藍",
     "character_name_kana": "アイ",
     "unit_name": "変幻のアクトレス",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -8797,7 +8797,7 @@
     "character_name": "ツェツィーリエ",
     "character_name_kana": "ツェツィーリエ",
     "unit_name": "マッドウィッチ",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -8875,7 +8875,8 @@
     ],
     "specific_gauge_data": {
       "specific_name": "烈火状態",
-      "specific_detail": "◆通常状態\n通常状態中、味方のラッシュ数が10ごとに烈火ゲージが「1」溜まる。\n烈火ゲージが「3」溜まると「烈火状態」に移行する。\n\n◆烈火状態\n烈火状態中、自身のATK100％アップ【解除不可】/クリティカル30％加算【解除不可】\n烈火状態中、「EXスキル2」が「EXスキル2+」に変化する。\nEX2+を使用すると、烈火状態が解除され、「通常状態」に戻る。"
+      "specific_detail": "◆通常状態\n通常状態中、味方のラッシュ数が10ごとに烈火ゲージが「1」溜まる。\n烈火ゲージが「3」溜まると「烈火状態」に移行する。\n\n◆烈火状態\n烈火状態中、自身のATK100％アップ【解除不可】/クリティカル30％加算【解除不可】\n烈火状態中、「EXスキル2」が「EXスキル2+」に変化する。\nEX2+を使用すると、烈火状態が解除され、「通常状態」に戻る。",
+      "icon_id": 10
     }
   },
   {
@@ -8917,7 +8918,8 @@
     ],
     "specific_gauge_data": {
       "specific_name": "碧水状態",
-      "specific_detail": "◆通常状態\n通常状態中、自身の行動終了後、碧水ゲージが「1」溜まる。\n碧水ゲージが「3」溜まると「碧水状態」に移行する。\n\n◆碧水状態\n碧水状態に移行直後、味方に1回の攻撃を無効化するバリアを張る（10CT）【バフ解除無効】/HPを1CT経過ごとに神族または水属性の味方の数x1％回復（10CT）※2つの条件を満たした場合でも効果は重複しない。回復効果は重複せず、上書きされる\nEXスキル2+を使用すると碧水状態が解除され、「通常状態」に戻る。"
+      "specific_detail": "◆通常状態\n通常状態中、自身の行動終了後、碧水ゲージが「1」溜まる。\n碧水ゲージが「3」溜まると「碧水状態」に移行する。\n\n◆碧水状態\n碧水状態に移行直後、味方に1回の攻撃を無効化するバリアを張る（10CT）【バフ解除無効】/HPを1CT経過ごとに神族または水属性の味方の数x1％回復（10CT）※2つの条件を満たした場合でも効果は重複しない。回復効果は重複せず、上書きされる\nEXスキル2+を使用すると碧水状態が解除され、「通常状態」に戻る。",
+      "icon_id": 11
     }
   },
   {
@@ -8959,7 +8961,8 @@
     ],
     "specific_gauge_data": {
       "specific_name": "薔薇色状態",
-      "specific_detail": "◆通常状態\n通常状態中、自身の行動終了後、薔薇色ゲージが「1」溜まる。\n薔薇色ゲージが「3」溜まると「薔薇色状態」に移行する。\n\n◆薔薇色状態\n薔薇色状態中、自身のATKを人間または光属性の味方の数×30％アップ【解除不可】\n薔薇色状態中、「EXスキル2」が「EXスキル2+」に変化する。\n自身が通常攻撃を行った行動終了後、薔薇色ゲージが「1」減少する。\n薔薇色ゲージが「0」になる、または、EXスキル2+を使用すると薔薇色状態が解除され、「通常状態」に戻る。"
+      "specific_detail": "◆通常状態\n通常状態中、自身の行動終了後、薔薇色ゲージが「1」溜まる。\n薔薇色ゲージが「3」溜まると「薔薇色状態」に移行する。\n\n◆薔薇色状態\n薔薇色状態中、自身のATKを人間または光属性の味方の数×30％アップ【解除不可】\n薔薇色状態中、「EXスキル2」が「EXスキル2+」に変化する。\n自身が通常攻撃を行った行動終了後、薔薇色ゲージが「1」減少する。\n薔薇色ゲージが「0」になる、または、EXスキル2+を使用すると薔薇色状態が解除され、「通常状態」に戻る。",
+      "icon_id": 13
     }
   },
   {
@@ -9001,7 +9004,8 @@
     ],
     "specific_gauge_data": {
       "specific_name": "元気溌剌状態",
-      "specific_detail": "◆通常状態\n通常状態中、自身の行動終了後、元気溌剌ゲージが「1」溜まる。\n元気溌剌ゲージが「3」溜まると「元気溌剌状態」に移行する。\n\n◆元気溌剌状態\n元気溌剌状態中、自身のATK100％アップ【解除不可】/行動CT20％短縮【解除不可】\n元気溌剌状態中、「EXスキル2」が「EXスキル2+」に変化する。\n自身が通常攻撃を行った行動終了後、元気溌剌ゲージが「1」減少する。\n元気溌剌ゲージが「0」になる、または、EXスキル2+を使用すると元気溌剌状態が解除され、「通常状態」に戻る。"
+      "specific_detail": "◆通常状態\n通常状態中、自身の行動終了後、元気溌剌ゲージが「1」溜まる。\n元気溌剌ゲージが「3」溜まると「元気溌剌状態」に移行する。\n\n◆元気溌剌状態\n元気溌剌状態中、自身のATK100％アップ【解除不可】/行動CT20％短縮【解除不可】\n元気溌剌状態中、「EXスキル2」が「EXスキル2+」に変化する。\n自身が通常攻撃を行った行動終了後、元気溌剌ゲージが「1」減少する。\n元気溌剌ゲージが「0」になる、または、EXスキル2+を使用すると元気溌剌状態が解除され、「通常状態」に戻る。",
+      "icon_id": 14
     }
   },
   {
@@ -9009,7 +9013,7 @@
     "character_name": "ベアトリス",
     "character_name_kana": "ヘアトリス",
     "unit_name": "お人好し吸血鬼",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -9053,7 +9057,7 @@
     "character_name": "ベアトリス",
     "character_name_kana": "ヘアトリス",
     "unit_name": "お日様ヴァンプ",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -9097,7 +9101,7 @@
     "character_name": "チナ",
     "character_name_kana": "チナ",
     "unit_name": "極星の一番槍",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -9136,7 +9140,7 @@
     "character_name": "ジグ",
     "character_name_kana": "シク",
     "unit_name": "竜焔の魔剣騎士",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -9181,7 +9185,7 @@
     "character_name": "メテオラ",
     "character_name_kana": "メテオラ",
     "unit_name": "爆砕★破壊天使",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -9220,7 +9224,7 @@
     "character_name": "エンジュ",
     "character_name_kana": "エンシュ",
     "unit_name": "小さき復讐者",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -9259,7 +9263,7 @@
     "character_name": "ナターシャ",
     "character_name_kana": "ナターシャ",
     "unit_name": "聖庭園の刺客",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -9298,7 +9302,7 @@
     "character_name": "ナターシャ",
     "character_name_kana": "ナターシャ",
     "unit_name": "シーエージェント",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -9337,7 +9341,7 @@
     "character_name": "ミネコ",
     "character_name_kana": "ミネコ",
     "unit_name": "星選の大怪盗",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -9376,7 +9380,7 @@
     "character_name": "シノ",
     "character_name_kana": "シノ",
     "unit_name": "若きプリンシパル",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -9460,7 +9464,7 @@
     "character_name": "クーシェン",
     "character_name_kana": "クーシェン",
     "unit_name": "斉天大聖",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -9499,7 +9503,7 @@
     "character_name": "リーエン",
     "character_name_kana": "リーエン",
     "unit_name": "皇妃に仕える剣",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -9572,7 +9576,8 @@
     ],
     "specific_gauge_data": {
       "specific_name": "インフィニティ状態",
-      "specific_detail": "◆通常状態\n通常状態中、自身の通常攻撃でクリティカルが発生するとインフィニティゲージが「1」溜まる。\nインフィニティゲージが「3」溜まると「インフィニティ状態」に移行する。\n\n◆インフィニティ状態\nインフィニティ状態中、自身のATK100％アップ【解除不可】\nインフィニティ状態中、「EXスキル2」が「EXスキル2+」に変化する。\nEXスキル2+を使用するとインフィニティ状態が解除され、「通常状態」に戻る。"
+      "specific_detail": "◆通常状態\n通常状態中、自身の通常攻撃でクリティカルが発生するとインフィニティゲージが「1」溜まる。\nインフィニティゲージが「3」溜まると「インフィニティ状態」に移行する。\n\n◆インフィニティ状態\nインフィニティ状態中、自身のATK100％アップ【解除不可】\nインフィニティ状態中、「EXスキル2」が「EXスキル2+」に変化する。\nEXスキル2+を使用するとインフィニティ状態が解除され、「通常状態」に戻る。",
+      "icon_id": 20
     }
   },
   {
@@ -9580,7 +9585,7 @@
     "character_name": "トレジアンナ",
     "character_name_kana": "トレシアンナ",
     "unit_name": "蒐集の魔女",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -9619,7 +9624,7 @@
     "character_name": "レティシア",
     "character_name_kana": "レティシア",
     "unit_name": "紫炎の呪剣士",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "1",
       "label": "炎",
@@ -9658,7 +9663,7 @@
     "character_name": "リコリンフィア",
     "character_name_kana": "リコリンフィア",
     "unit_name": "リトルポイズナー",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -9697,7 +9702,7 @@
     "character_name": "エステル",
     "character_name_kana": "エステル",
     "unit_name": "穢れなき祈り",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -9736,7 +9741,7 @@
     "character_name": "ミヤハル",
     "character_name_kana": "ミヤハル",
     "unit_name": "禁言の陰陽師",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -9775,7 +9780,7 @@
     "character_name": "シズル",
     "character_name_kana": "シスル",
     "unit_name": "元気溌剌狐古忍者",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -9814,7 +9819,7 @@
     "character_name": "ケイティ",
     "character_name_kana": "ケイティ",
     "unit_name": "聖域の制圧天使",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -9853,7 +9858,7 @@
     "character_name": "リィベル",
     "character_name_kana": "リィヘル",
     "unit_name": "深淵書庫の管理者",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",
@@ -9943,7 +9948,7 @@
     "character_name": "グレイス",
     "character_name_kana": "クレイス",
     "unit_name": "蝶妖精の蒼騎士",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -9982,7 +9987,7 @@
     "character_name": "ルネア",
     "character_name_kana": "ルネア",
     "unit_name": "創世のアストレア",
-    "rarity": 4,
+    "rarity": 3,
     "attr_type": {
       "id": "4",
       "label": "光",
@@ -10027,7 +10032,7 @@
     "character_name": "ウルスラ",
     "character_name_kana": "ウルスラ",
     "unit_name": "愛の伝道者",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "3",
       "label": "雷",
@@ -10066,7 +10071,7 @@
     "character_name": "レミカ(ちぃ)",
     "character_name_kana": "レミカ(チィ)",
     "unit_name": "リトルアーネスト",
-    "rarity": 5,
+    "rarity": 2,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -10105,7 +10110,7 @@
     "character_name": "メルエル(ちぃ)",
     "character_name_kana": "メルエル(チィ)",
     "unit_name": "勇恋邁進",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -10150,7 +10155,7 @@
     "character_name": "ヴィーナス(ちぃ)",
     "character_name_kana": "ウィーナス（チィ）",
     "unit_name": "ハロードーター",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "2",
       "label": "水",
@@ -10510,7 +10515,7 @@
     "character_name": "陽彩",
     "character_name_kana": "アキサ",
     "unit_name": "Magica2026",
-    "rarity": 5,
+    "rarity": 3,
     "attr_type": {
       "id": "5",
       "label": "闇",

@@ -21,6 +21,57 @@ const renderFormula = (formula) =>
     '<span class="formula-op">+</span>'
   );
 
+const skillAccessory =
+  (accessories || []).find(x =>
+    x.unit_id === skill.unit_id
+  );
+
+const accessoryAbilities =
+  skillAccessory
+    ? skillAccessory.acc_abilities
+      .filter(ability =>
+        ability.skill_type === "COMMON"
+        || String(ability.skill_id) === String(skill.skill_id)
+      )
+    : [];
+
+const accessoryCommonEffects =
+  accessoryAbilities
+    .filter(ability => ability.skill_type === "COMMON")
+    .flatMap(ability => ability.effects || []);
+
+const accessorySkillEffects =
+  accessoryAbilities
+    .filter(ability => ability.skill_type !== "COMMON")
+    .flatMap(ability => ability.effects || []);
+
+const accessoryRawTexts =
+  accessoryAbilities
+    .map(ability => {
+      if (!ability.text) {
+        return "";
+      }
+
+      return `${ability.skill_type}：${ability.text}`;
+    })
+    .filter(Boolean);
+
+const renderAccessoryEffectSummary = (effect) => {
+  const parts = [
+    effect.type,
+    effect.target,
+    effect.display_value
+  ].filter(Boolean);
+
+  const body = escapeHtml(parts.join(" "));
+
+  if (!effect.formula) {
+    return body;
+  }
+
+  return `${body}<span class="accessory-common-formula">└ ${renderFormula(effect.formula)}</span>`;
+};
+
 let skillIcon = `img/skill_${String(skill.icon_id)}.png`;
   
 
@@ -333,6 +384,104 @@ switch (iconGroup) {
     </div>
 
     <% }) %>
+
+    <% if (skillAccessory && (accessoryCommonEffects.length || accessorySkillEffects.length)) { %>
+
+    <div class="effect-box accessory">
+
+      <% if (skillAccessory.illust_id) { %>
+      <img
+        class="accessory-illust"
+        src="img/equip/<%= skillAccessory.illust_id %>.png"
+        alt=""
+      >
+      <% } %>
+
+      <div class="effect-top">
+        <span class="effect-name">
+          <img
+            class="effect-icon"
+            src="img/icon_equipment_03.png"
+            alt=""
+          >
+          <%= skillAccessory.accessory_name %>
+        </span>
+      </div>
+
+      <% if (accessoryCommonEffects.length) { %>
+      <div class="effect-value">
+        <% accessoryCommonEffects.forEach(common_effect => { %>
+        <div class="accessory-common-effect">
+          <%- renderAccessoryEffectSummary(common_effect) %>
+        </div>
+        <% }) %>
+      </div>
+      <% } %>
+
+      <% if (accessoryRawTexts.length || accessorySkillEffects.length) { %>
+      <div class="effect-children">
+        <% accessoryRawTexts.forEach(raw_text => { %>
+        <div class="effect-box sub-effect other accessory-raw">
+          <div class="effect-top">
+            <span class="effect-formula">
+              <%- escapeHtml(raw_text).replace(/\n/g, "<br>") %>
+            </span>
+          </div>
+        </div>
+        <% }) %>
+
+        <% accessorySkillEffects.forEach(sub_effect => { %>
+        <div class="effect-box sub-effect <%= sub_effect.effect_class %>">
+
+          <div class="effect-top">
+
+            <span class="effect-name">
+              <%= sub_effect.type %>
+
+              <% if (sub_effect.duration) { %>
+              <span class="effect-ct">
+                <%= sub_effect.duration.ct %>CT
+              </span>
+              <% } %>
+            </span>
+
+            <% if (sub_effect.target) { %>
+            <span class="effect-target">
+              <%= sub_effect.target %>
+            </span>
+            <% } %>
+
+          </div>
+
+          <% if (sub_effect.display_value) { %>
+          <div class="effect-value">
+            <%= sub_effect.display_value %>
+          </div>
+          <% } %>
+
+          <% if (sub_effect.formula) { %>
+          <div class="effect-formula">
+            └ <%- renderFormula(sub_effect.formula) %>
+          </div>
+          <% } %>
+
+          <% if (sub_effect.notes && sub_effect.notes.length) { %>
+            <% sub_effect.notes.forEach(note => { %>
+              <div class="effect-note <%= note.type %>">
+                <span class="tag"><%= note.label %></span>
+                <%= note.text %>
+              </div>
+            <% }) %>
+          <% } %>
+
+        </div>
+        <% }) %>
+      </div>
+      <% } %>
+
+    </div>
+
+    <% } %>
 
   </div>
 
