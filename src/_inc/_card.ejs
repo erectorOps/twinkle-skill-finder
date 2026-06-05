@@ -465,6 +465,57 @@ switch (iconGroup) {
           </div>
           <% } %>
 
+          <% if (sub_effect.children && sub_effect.children.length) { %>
+          <div class="effect-children">
+            <% sub_effect.children.forEach(child_effect => { %>
+            <div class="effect-box accessory<%= child_effect.effect_class && child_effect.effect_class !== "accessory" ? ` ${child_effect.effect_class}` : "" %>">
+
+              <div class="effect-top">
+
+                <span class="effect-name">
+                  <%= child_effect.type %>
+
+                  <% if (child_effect.duration) { %>
+                  <span class="effect-ct">
+                    <%= child_effect.duration.ct %>CT
+                  </span>
+                  <% } %>
+                </span>
+
+                <% if (child_effect.target) { %>
+                <span class="effect-target">
+                  <%= child_effect.target %>
+                </span>
+                <% } %>
+
+              </div>
+
+              <% if (child_effect.display_value) { %>
+              <div class="effect-value">
+                <%= child_effect.display_value %>
+              </div>
+              <% } %>
+
+              <% if (child_effect.formula) { %>
+              <div class="effect-formula">
+                └ <%- renderFormula(child_effect.formula) %>
+              </div>
+              <% } %>
+
+              <% if (child_effect.notes && child_effect.notes.length) { %>
+                <% child_effect.notes.forEach(note => { %>
+                  <div class="effect-note <%= note.type %>">
+                    <span class="tag"><%= note.label %></span>
+                    <%= note.text %>
+                  </div>
+                <% }) %>
+              <% } %>
+
+            </div>
+            <% }) %>
+          </div>
+          <% } %>
+
           <% if (sub_effect.notes && sub_effect.notes.length) { %>
             <% sub_effect.notes.forEach(note => { %>
               <div class="effect-note <%= note.type %>">
