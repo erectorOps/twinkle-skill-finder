@@ -19,6 +19,26 @@ const characterMap = new Map(
     type="application/json"
 ><%- jsonForHtml(skillFinderIndex) %></script>
 
+<div class="finder-search">
+    <label class="search-box">
+        <span class="search-label">検索</span>
+        <input
+            id="skill-search"
+            type="search"
+            autocomplete="off"
+            placeholder="キャラ名・スキル名・効果"
+        >
+    </label>
+
+    <button
+        id="clear-filters"
+        class="clear-filters"
+        type="button"
+    >
+        条件クリア
+    </button>
+</div>
+
 <%- include('./_inc/_buttons.ejs', { characters }) %>
 
 <div class="finder-toolbar">
@@ -84,6 +104,14 @@ const characterMap = new Map(
 </div>
 
 <div
+    id="empty-result"
+    class="empty-result"
+    hidden
+>
+    該当するスキルがありません
+</div>
+
+<div
     id="skill-list"
     class="skill-list"
 >
@@ -116,12 +144,25 @@ const characterMap = new Map(
     const countElement =
         document.getElementById('visible-count');
 
+    const searchInput =
+        document.getElementById('skill-search');
+
+    const clearFiltersButton =
+        document.getElementById('clear-filters');
+
+    const emptyResultElement =
+        document.getElementById('empty-result');
+
     const tabs = [
         ...document.querySelectorAll('.sort-tab')
     ];
 
     const filterButtons = [
         ...document.querySelectorAll('[data-filter-group]')
+    ];
+
+    const characterScopeButtons = [
+        ...document.querySelectorAll('[data-character-scope-toggle]')
     ];
 
     const rawViewToggle =
@@ -193,7 +234,10 @@ const characterMap = new Map(
 
     const activeFilters = new Map();
 
+    const STORAGE_KEY = 'twinkle_skill_finder_state';
+
     let currentSortKey = 'release';
+    let characterScopeMode = false;
 
     const getActiveValues = (group) =>
         activeFilters.get(group) || new Set();
@@ -252,6 +296,38 @@ const characterMap = new Map(
         }
 
         return true;
+    };
+
+    const normalizeSearchText = (value) =>
+        String(value ?? '').trim().toLowerCase();
+
+    const matchesSearch = (item) => {
+        const query =
+            normalizeSearchText(searchInput.value);
+
+        if (!query) {
+            return true;
+        }
+
+        return String(item.search_text || '').includes(query);
+    };
+
+    const matchesCurrentConditions = (item) =>
+        matchesFilters(item)
+        && matchesSearch(item);
+
+    const updateCharacterScopeToggle = () => {
+        characterScopeButtons.forEach(button => {
+            const active =
+                button.dataset.characterScopeValue
+                === (characterScopeMode ? 'character' : 'skill');
+
+            button.classList.toggle('active', active);
+            button.setAttribute(
+                'aria-pressed',
+                active ? 'true' : 'false'
+            );
+        });
     };
 
     const updateFilterButton = (button, active) => {
@@ -333,6 +409,24 @@ const characterMap = new Map(
         const sortedItems =
             [...skillIndex].sort(comparer);
 
+        const matchedUnitIds = new Set();
+        const visibleSkillIds = new Set();
+
+        for (const item of skillIndex) {
+            if (matchesCurrentConditions(item)) {
+                matchedUnitIds.add(item.unit_id);
+                visibleSkillIds.add(item.skill_id);
+            }
+        }
+
+        if (characterScopeMode) {
+            for (const item of skillIndex) {
+                if (matchedUnitIds.has(item.unit_id)) {
+                    visibleSkillIds.add(item.skill_id);
+                }
+            }
+        }
+
         let visibleCount = 0;
 
         for (const item of sortedItems) {
@@ -341,7 +435,7 @@ const characterMap = new Map(
 
             if (card) {
                 const visible =
-                    matchesFilters(item);
+                    visibleSkillIds.has(item.skill_id);
 
                 card.hidden = !visible;
 
@@ -355,12 +449,122 @@ const characterMap = new Map(
 
         listElement.appendChild(fragment);
         countElement.textContent = visibleCount;
+        emptyResultElement.hidden = visibleCount !== 0;
         setActiveTab(sortKey);
+    };
+
+    const serializeFilters = () =>
+        Object.fromEntries(
+            [...activeFilters].map(([group, values]) => [
+                group,
+                [...values]
+            ])
+        );
+
+    const saveState = () => {
+        localStorage.setItem(
+            STORAGE_KEY,
+            JSON.stringify({
+                sort: currentSortKey,
+                filters: serializeFilters(),
+                search: searchInput.value,
+                raw: rawViewToggle.checked,
+                characterScope: characterScopeMode
+            })
+        );
+    };
+
+    const applyFilterButtons = () => {
+        filterButtons.forEach(button => {
+            const values =
+                getActiveValues(button.dataset.filterGroup);
+
+            updateFilterButton(
+                button,
+                values.has(button.dataset.filterValue)
+            );
+        });
+    };
+
+    const syncControlsFromState = () => {
+        applyFilterButtons();
+        updateCharacterScopeToggle();
+        updateViewToggles();
+        setActiveTab(currentSortKey);
+    };
+
+    const restoreState = () => {
+        const rawState =
+            localStorage.getItem(STORAGE_KEY);
+
+        if (!rawState) {
+            setSingleFilter('skill_group', 'all');
+            syncControlsFromState();
+            return;
+        }
+
+        try {
+            const state =
+                JSON.parse(rawState);
+
+            activeFilters.clear();
+
+            for (const [group, values] of Object.entries(state.filters || {})) {
+                if (Array.isArray(values) && values.length) {
+                    activeFilters.set(
+                        group,
+                        new Set(values.map(String))
+                    );
+                }
+            }
+
+            if (!getActiveValues('skill_group').size) {
+                activeFilters.set(
+                    'skill_group',
+                    new Set(['all'])
+                );
+            }
+
+            searchInput.value =
+                state.search || "";
+
+            rawViewToggle.checked =
+                state.raw !== false;
+
+            characterScopeMode =
+                state.characterScope === true;
+
+            currentSortKey =
+                comparers[state.sort]
+                    ? state.sort
+                    : 'release';
+
+            syncControlsFromState();
+        } catch {
+            activeFilters.clear();
+            searchInput.value = "";
+            rawViewToggle.checked = true;
+            setSingleFilter('skill_group', 'all');
+            characterScopeMode = false;
+            currentSortKey = 'release';
+            syncControlsFromState();
+        }
+    };
+
+    const resetFilters = () => {
+        activeFilters.clear();
+        searchInput.value = "";
+        characterScopeMode = false;
+        setSingleFilter('skill_group', 'all');
+        syncControlsFromState();
+        saveState();
+        render();
     };
 
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             render(tab.dataset.sort);
+            saveState();
         });
     });
 
@@ -379,6 +583,7 @@ const characterMap = new Map(
             }
 
             render();
+            saveState();
         });
     });
 
@@ -389,11 +594,32 @@ const characterMap = new Map(
         );
     };
 
-    rawViewToggle.addEventListener('change', updateViewToggles);
+    rawViewToggle.addEventListener('change', () => {
+        updateViewToggles();
+        saveState();
+    });
 
-    setSingleFilter('skill_group', 'all');
-    updateViewToggles();
-    render('release');
+    searchInput.addEventListener('input', () => {
+        render();
+        saveState();
+    });
+
+    clearFiltersButton.addEventListener('click', resetFilters);
+
+    characterScopeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            characterScopeMode =
+                button.dataset.characterScopeValue === 'character';
+
+            updateCharacterScopeToggle();
+            render();
+            saveState();
+        });
+    });
+
+    restoreState();
+    syncControlsFromState();
+    render(currentSortKey);
 })();
 </script>
 

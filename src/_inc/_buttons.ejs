@@ -145,6 +145,36 @@ const renderButtonGroup = (title, group, options) => {
 
 <div class="filter-panel">
     <section class="filter-group">
+        <div class="filter-title">粒度</div>
+
+        <div
+            class="scope-toggle"
+            role="group"
+            aria-label="表示粒度"
+        >
+            <button
+                class="scope-toggle-button active"
+                type="button"
+                data-character-scope-value="skill"
+                data-character-scope-toggle
+                aria-pressed="true"
+            >
+                スキル単位
+            </button>
+
+            <button
+                class="scope-toggle-button"
+                type="button"
+                data-character-scope-value="character"
+                data-character-scope-toggle
+                aria-pressed="false"
+            >
+                キャラ単位
+            </button>
+        </div>
+    </section>
+
+    <section class="filter-group">
         <div class="filter-title">EXスキル</div>
 
         <div class="filter-buttons">

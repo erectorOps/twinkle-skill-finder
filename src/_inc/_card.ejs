@@ -43,8 +43,7 @@ const accessoryCommonEffects =
 const accessoryInlineCommonEffects =
   accessoryCommonEffects
     .filter(effect =>
-      effect.type === "属性カウント+"
-      && effect.display_value
+      effect.display_value
     );
 
 const accessoryBlockCommonEffects =
@@ -63,7 +62,7 @@ const accessoryRawTexts =
     .filter(ability =>
       ability.skill_type !== "COMMON"
       || !(ability.effects || []).some(effect =>
-        effect.type === "属性カウント+"
+        effect.display_value
       )
     )
     .map(ability => {
@@ -506,7 +505,7 @@ switch (iconGroup) {
             <% accessoryInlineCommonEffects.forEach(effect => { %>
             <span class="accessory-stat accessory-stat-effect">
               <span class="accessory-effect-value">
-                <%= effect.display_value %>
+                <%= effect.type === "属性カウント+" ? effect.display_value : [effect.type, effect.display_value].filter(Boolean).join(" ") %>
               </span>
             </span>
             <% }) %>
@@ -641,6 +640,10 @@ switch (iconGroup) {
 
     <% } %>
 
+  </div>
+
+  <div class="skill-footer">
+    [<%= chara.unit_name %>] <%= chara.character_name %>
   </div>
 
 </div>

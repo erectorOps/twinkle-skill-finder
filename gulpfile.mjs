@@ -91,7 +91,8 @@ export async function ejsFunc() {
 
   const skillFinderIndex = buildSkillFinderIndex({
     skills,
-    characters
+    characters,
+    accessories
   });
 
   const pages = [

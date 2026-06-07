@@ -53,6 +53,23 @@ const buildEffectCategories = (skill) => {
     "火傷【大】",
     "凍傷"
   ];
+  const specialDamageTakenStatusNames = [
+    "融解",
+    "極冷",
+    "帯電",
+    "聖痕",
+    "審判",
+    "破砕",
+    "裂傷",
+    "魔障",
+    "標的"
+  ];
+  const actionControlNames = [
+    "魅了",
+    "強制スタン",
+    "睡眠",
+    "マジックミスト"
+  ];
 
   for (const effect of effects) {
     const type = effect.type || "";
@@ -99,7 +116,7 @@ const buildEffectCategories = (skill) => {
       categories.add("action_ct_short");
     }
 
-    if (/バリア/.test(type)) {
+    if (/バリア/.test(type) && type !== "バリア破壊") {
       categories.add("barrier");
     }
 
@@ -111,10 +128,7 @@ const buildEffectCategories = (skill) => {
       categories.add("damage_taken_up");
     }
 
-    if (
-      hasText(effect, /(?:極冷|融解|雷傷|刻印|烙印|呪傷)/)
-      && hasText(effect, /被ダメージ|被ダメ/)
-    ) {
+    if (specialDamageTakenStatusNames.includes(type)) {
       categories.add("special_damage_taken_up");
     }
 
@@ -122,7 +136,7 @@ const buildEffectCategories = (skill) => {
       categories.add("weakness_attribute");
     }
 
-    if (/睡眠|スタン|強制スタン|行動阻害/.test(type) || /睡眠|スタン|強制スタン|行動阻害/.test(raw)) {
+    if (actionControlNames.includes(type)) {
       categories.add("action_control");
     }
 
@@ -134,7 +148,46 @@ const buildEffectCategories = (skill) => {
   return [...categories].sort();
 };
 
-export const buildSkillFinderIndex = ({ skills, characters }) => {
+const buildAccessorySearchText = (accessory) => {
+  if (!accessory) {
+    return "";
+  }
+
+  const inlineCommonEffects =
+    (accessory.acc_abilities || [])
+      .filter(ability => ability.skill_type === "COMMON")
+      .flatMap(ability => ability.effects || [])
+      .filter(effect =>
+        effect.type === "属性カウント+"
+        && effect.display_value
+      )
+      .map(effect => effect.display_value);
+
+  return [
+    accessory.accessory_name,
+    ...inlineCommonEffects
+  ].filter(Boolean).join(" ");
+};
+
+const buildSkillSearchText = ({ skill, character, effects, accessory }) =>
+  [
+    skill.name,
+    skill.skill_detail,
+    character.character_name,
+    character.character_name_kana,
+    character.unit_name,
+    ...effects.flatMap(effect => [
+      effect.type,
+      effect.target,
+      effect.display_value,
+      effect.formula,
+      effect.raw,
+      ...(effect.tags || [])
+    ]),
+    buildAccessorySearchText(accessory)
+  ].filter(Boolean).join(" ").toLowerCase();
+
+export const buildSkillFinderIndex = ({ skills, characters, accessories = [] }) => {
   const invalidRarityCharacters =
     characters.filter(character =>
       ![1, 2, 3].includes(Number(character.rarity))
@@ -157,6 +210,12 @@ export const buildSkillFinderIndex = ({ skills, characters }) => {
       character
     ])
   );
+  const accessoryMap = new Map(
+    accessories.map(accessory => [
+      accessory.unit_id,
+      accessory
+    ])
+  );
 
   return skills
     .map(skill => {
@@ -169,6 +228,8 @@ export const buildSkillFinderIndex = ({ skills, characters }) => {
 
       const effects =
         flattenEffects(skill.effects);
+      const accessory =
+        accessoryMap.get(skill.unit_id);
 
       return {
         skill_id: String(skill.skill_id),
@@ -190,7 +251,13 @@ export const buildSkillFinderIndex = ({ skills, characters }) => {
         effect_categories: buildEffectCategories(skill),
         effect_types: unique(effects.map(effect => effect.type)),
         effect_tags: unique(effects.flatMap(effect => effect.tags || [])),
-        effect_classes: unique(effects.map(effect => effect.effect_class))
+        effect_classes: unique(effects.map(effect => effect.effect_class)),
+        search_text: buildSkillSearchText({
+          skill,
+          character,
+          effects,
+          accessory
+        })
       };
     })
     .filter(Boolean);
