@@ -553,10 +553,13 @@
         ],
         "effects": [
           {
-            "type": "アクセサリ効果",
-            "display_value": "",
-            "formula": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する(最大6カウントまで)",
-            "value": {},
+            "type": "属性カウント+",
+            "display_value": "属性カウント+1 (最大6)",
+            "formula": "",
+            "value": {
+              "amount": 1,
+              "max": 6
+            },
             "effect_class": "accessory",
             "target": "",
             "duration": null,
@@ -726,10 +729,13 @@
         ],
         "effects": [
           {
-            "type": "アクセサリ効果",
-            "display_value": "",
-            "formula": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する(最大6カウントまで)",
-            "value": {},
+            "type": "属性カウント+",
+            "display_value": "属性カウント+1 (最大6)",
+            "formula": "",
+            "value": {
+              "amount": 1,
+              "max": 6
+            },
             "effect_class": "accessory",
             "target": "",
             "duration": null,
@@ -19148,10 +19154,13 @@
         ],
         "effects": [
           {
-            "type": "アクセサリ効果",
-            "display_value": "",
-            "formula": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する(最大6カウントまで)",
-            "value": {},
+            "type": "属性カウント+",
+            "display_value": "属性カウント+1 (最大6)",
+            "formula": "",
+            "value": {
+              "amount": 1,
+              "max": 6
+            },
             "effect_class": "accessory",
             "target": "",
             "duration": null,
@@ -19251,10 +19260,13 @@
         ],
         "effects": [
           {
-            "type": "アクセサリ効果",
-            "display_value": "",
-            "formula": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する(最大6カウントまで)",
-            "value": {},
+            "type": "属性カウント+",
+            "display_value": "属性カウント+1 (最大6)",
+            "formula": "",
+            "value": {
+              "amount": 1,
+              "max": 6
+            },
             "effect_class": "accessory",
             "target": "",
             "duration": null,
@@ -23944,10 +23956,13 @@
         ],
         "effects": [
           {
-            "type": "アクセサリ効果",
-            "display_value": "",
-            "formula": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する(最大6カウントまで)",
-            "value": {},
+            "type": "属性カウント+",
+            "display_value": "属性カウント+1 (最大6)",
+            "formula": "",
+            "value": {
+              "amount": 1,
+              "max": 6
+            },
             "effect_class": "accessory",
             "target": "",
             "duration": null,
@@ -24024,10 +24039,13 @@
         ],
         "effects": [
           {
-            "type": "アクセサリ効果",
-            "display_value": "",
-            "formula": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する(最大6カウントまで)",
-            "value": {},
+            "type": "属性カウント+",
+            "display_value": "属性カウント+1 (最大6)",
+            "formula": "",
+            "value": {
+              "amount": 1,
+              "max": 6
+            },
             "effect_class": "accessory",
             "target": "",
             "duration": null,
@@ -38244,10 +38262,13 @@
         ],
         "effects": [
           {
-            "type": "アクセサリ効果",
-            "display_value": "",
-            "formula": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する(最大6カウントまで)",
-            "value": {},
+            "type": "属性カウント+",
+            "display_value": "属性カウント+1 (最大6)",
+            "formula": "",
+            "value": {
+              "amount": 1,
+              "max": 6
+            },
             "effect_class": "accessory",
             "target": "",
             "duration": null,
@@ -38330,10 +38351,13 @@
         ],
         "effects": [
           {
-            "type": "アクセサリ効果",
-            "display_value": "",
-            "formula": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する(最大6カウントまで)",
-            "value": {},
+            "type": "属性カウント+",
+            "display_value": "属性カウント+1 (最大6)",
+            "formula": "",
+            "value": {
+              "amount": 1,
+              "max": 6
+            },
             "effect_class": "accessory",
             "target": "",
             "duration": null,
@@ -38443,10 +38467,13 @@
         ],
         "effects": [
           {
-            "type": "アクセサリ効果",
-            "display_value": "",
-            "formula": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する(最大6カウントまで)",
-            "value": {},
+            "type": "属性カウント+",
+            "display_value": "属性カウント+1 (最大6)",
+            "formula": "",
+            "value": {
+              "amount": 1,
+              "max": 6
+            },
             "effect_class": "accessory",
             "target": "",
             "duration": null,
@@ -38537,10 +38564,13 @@
         ],
         "effects": [
           {
-            "type": "アクセサリ効果",
-            "display_value": "",
-            "formula": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する(最大6カウントまで)",
-            "value": {},
+            "type": "属性カウント+",
+            "display_value": "属性カウント+1 (最大6)",
+            "formula": "",
+            "value": {
+              "amount": 1,
+              "max": 6
+            },
             "effect_class": "accessory",
             "target": "",
             "duration": null,
@@ -39332,10 +39362,13 @@
         ],
         "effects": [
           {
-            "type": "アクセサリ効果",
-            "display_value": "",
-            "formula": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する(最大6カウントまで)",
-            "value": {},
+            "type": "属性カウント+",
+            "display_value": "属性カウント+1 (最大6)",
+            "formula": "",
+            "value": {
+              "amount": 1,
+              "max": 6
+            },
             "effect_class": "accessory",
             "target": "",
             "duration": null,
@@ -39463,10 +39496,13 @@
         ],
         "effects": [
           {
-            "type": "アクセサリ効果",
-            "display_value": "",
-            "formula": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する(最大6カウントまで)",
-            "value": {},
+            "type": "属性カウント+",
+            "display_value": "属性カウント+1 (最大6)",
+            "formula": "",
+            "value": {
+              "amount": 1,
+              "max": 6
+            },
             "effect_class": "accessory",
             "target": "",
             "duration": null,

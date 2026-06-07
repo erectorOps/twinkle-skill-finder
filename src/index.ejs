@@ -58,13 +58,28 @@ const characterMap = new Map(
         </button>
     </div>
 
-    <div
-        class="result-count"
-        aria-live="polite"
-    >
-        <span id="visible-count"><%= skillFinderIndex.length %></span>
-        /
-        <span id="total-count"><%= skillFinderIndex.length %></span>
+    <div class="toolbar-meta">
+        <label class="view-switch">
+            <input
+                type="checkbox"
+                id="raw-view-toggle"
+                checked
+            >
+            <span
+                class="view-switch-track"
+                aria-hidden="true"
+            ></span>
+            <span>原文</span>
+        </label>
+
+        <div
+            class="result-count"
+            aria-live="polite"
+        >
+            <span id="visible-count"><%= skillFinderIndex.length %></span>
+            /
+            <span id="total-count"><%= skillFinderIndex.length %></span>
+        </div>
     </div>
 </div>
 
@@ -108,6 +123,9 @@ const characterMap = new Map(
     const filterButtons = [
         ...document.querySelectorAll('[data-filter-group]')
     ];
+
+    const rawViewToggle =
+        document.getElementById('raw-view-toggle');
 
     const skillIndex =
         JSON.parse(indexElement.textContent);
@@ -364,7 +382,17 @@ const characterMap = new Map(
         });
     });
 
+    const updateViewToggles = () => {
+        document.body.classList.toggle(
+            'hide-raw',
+            !rawViewToggle.checked
+        );
+    };
+
+    rawViewToggle.addEventListener('change', updateViewToggles);
+
     setSingleFilter('skill_group', 'all');
+    updateViewToggles();
     render('release');
 })();
 </script>

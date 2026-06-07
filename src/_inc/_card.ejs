@@ -40,6 +40,19 @@ const accessoryCommonEffects =
     .filter(ability => ability.skill_type === "COMMON")
     .flatMap(ability => ability.effects || []);
 
+const accessoryInlineCommonEffects =
+  accessoryCommonEffects
+    .filter(effect =>
+      effect.type === "属性カウント+"
+      && effect.display_value
+    );
+
+const accessoryBlockCommonEffects =
+  accessoryCommonEffects
+    .filter(effect =>
+      !accessoryInlineCommonEffects.includes(effect)
+    );
+
 const accessorySkillEffects =
   accessoryAbilities
     .filter(ability => ability.skill_type !== "COMMON")
@@ -47,6 +60,12 @@ const accessorySkillEffects =
 
 const accessoryRawTexts =
   accessoryAbilities
+    .filter(ability =>
+      ability.skill_type !== "COMMON"
+      || !(ability.effects || []).some(effect =>
+        effect.type === "属性カウント+"
+      )
+    )
     .map(ability => {
       if (!ability.text) {
         return "";
@@ -55,6 +74,29 @@ const accessoryRawTexts =
       return `${ability.skill_type}：${ability.text}`;
     })
     .filter(Boolean);
+
+const accessoryStatLabels = {
+  hp: "HP",
+  atk: "ATK",
+  ex: "EX",
+  ex_up: "EX上昇",
+  ct: "CT",
+  critical: "クリ"
+};
+
+const accessoryStats =
+  skillAccessory
+    ? Object.entries(skillAccessory.stats || {})
+      .filter(([, value]) =>
+        value !== null
+        && value !== undefined
+        && value !== ""
+      )
+      .map(([key, value]) => ({
+        label: accessoryStatLabels[key] || key,
+        value
+      }))
+    : [];
 
 const renderAccessoryEffectSummary = (effect) => {
   const parts = [
@@ -291,7 +333,7 @@ switch (iconGroup) {
 
   <div class="effect-list">
 
-    <div class="effect-box other">
+    <div class="effect-box other skill-raw">
       <div class="effect-top">
         <span class="effect-formula">
           <%- skill.skill_detail.replace(/\n/g, "<br>") %>
@@ -427,43 +469,53 @@ switch (iconGroup) {
         <% if (skillAccessory.illust_id) { %>
         <div class="accessory-frame">
           <img
-            class="accessory-frame-base"
-            src="img/icon_base_3.png"
-            alt=""
-          >
-
-          <img
             class="accessory-illust"
             src="img/equip/<%= skillAccessory.illust_id %>.png"
             alt=""
           >
-
-          <span class="accessory-badge-stack">
-            <img
-              class="accessory-badge-base"
-              src="img/attribute_base.png"
-              alt=""
-            >
-
-            <img
-              class="accessory-badge-icon"
-              src="img/icon_equipment_03.png"
-              alt=""
-            >
-          </span>
         </div>
         <% } %>
 
         <div class="accessory-body">
           <div class="effect-top">
             <span class="effect-name">
+              <img
+                class="accessory-title-icon"
+                src="img/icon_equipment_03_s.png"
+                alt=""
+              >
+
               <%= skillAccessory.accessory_name %>
             </span>
           </div>
 
-          <% if (accessoryCommonEffects.length) { %>
+          <% if (accessoryStats.length || accessoryInlineCommonEffects.length) { %>
+          <div class="accessory-stats">
+            <% accessoryStats.forEach(stat => { %>
+            <span class="accessory-stat">
+              <span class="accessory-stat-label">
+                <%= stat.label %>
+              </span>
+
+              <span class="accessory-stat-value">
+                <%= stat.value %>
+              </span>
+            </span>
+            <% }) %>
+
+            <% accessoryInlineCommonEffects.forEach(effect => { %>
+            <span class="accessory-stat accessory-stat-effect">
+              <span class="accessory-effect-value">
+                <%= effect.display_value %>
+              </span>
+            </span>
+            <% }) %>
+          </div>
+          <% } %>
+
+          <% if (accessoryBlockCommonEffects.length) { %>
           <div class="effect-value">
-            <% accessoryCommonEffects.forEach(common_effect => { %>
+            <% accessoryBlockCommonEffects.forEach(common_effect => { %>
             <div class="accessory-common-effect">
               <%- renderAccessoryEffectSummary(common_effect) %>
             </div>

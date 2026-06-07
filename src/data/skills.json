@@ -4330,6 +4330,72 @@
         ]
       },
       {
+        "display_value": "20%",
+        "formula": "",
+        "type": "クリティカル率アップ",
+        "value": {},
+        "effect_class": "buff",
+        "target": "人間の味方",
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "味方に付与されているサブ属性に水属性が含まれている時",
+            "label": "発動条件"
+          }
+        ],
+        "tags": [
+          ""
+        ]
+      },
+      {
+        "display_value": "20",
+        "formula": "",
+        "type": "EX消費量減少",
+        "value": {},
+        "effect_class": "buff",
+        "target": "自身",
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "味方に付与されているサブ属性に雷属性が含まれている時",
+            "label": "発動条件"
+          },
+          {
+            "type": "expire",
+            "text": "次ターン以降EXスキル1回発動まで",
+            "label": "期限"
+          }
+        ],
+        "tags": [
+          ""
+        ]
+      },
+      {
+        "display_value": "20%",
+        "formula": "",
+        "type": "行動CT短縮",
+        "value": {},
+        "effect_class": "buff",
+        "target": "人間の味方",
+        "duration": {
+          "ct": 1
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "味方に付与されているサブ属性に光属性が含まれている時",
+            "label": "発動条件"
+          }
+        ],
+        "tags": [
+          ""
+        ]
+      },
+      {
         "display_value": "",
         "formula": "",
         "type": "チャージ",
@@ -5772,6 +5838,29 @@
         "tags": [
           ""
         ]
+      },
+      {
+        "display_value": "6%～30%",
+        "formula": "神族または水属性の味方の数×6%",
+        "type": "クリティカルダメージアップ",
+        "value": {
+          "rate": 6
+        },
+        "effect_class": "buff",
+        "target": "味方全体",
+        "duration": {
+          "ct": 25
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "ラッシュ50以上の時",
+            "label": "発動条件"
+          }
+        ],
+        "tags": [
+          ""
+        ]
       }
     ]
   },
@@ -5878,6 +5967,48 @@
           {
             "type": "condition",
             "text": "ラッシュ30以上の時",
+            "label": "発動条件"
+          }
+        ],
+        "tags": [
+          ""
+        ]
+      },
+      {
+        "display_value": "6%～30%",
+        "formula": "神族または水属性の味方の数×6%",
+        "type": "クリティカルダメージアップ",
+        "value": {
+          "rate": 6
+        },
+        "effect_class": "buff",
+        "target": "味方全体",
+        "duration": {
+          "ct": 25
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "ラッシュ50以上の時",
+            "label": "発動条件"
+          }
+        ],
+        "tags": [
+          ""
+        ]
+      },
+      {
+        "display_value": "250%",
+        "formula": "",
+        "type": "ダメージを強化",
+        "value": {},
+        "effect_class": "buff",
+        "target": "敵単体",
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "ラッシュ100以上の時",
             "label": "発動条件"
           }
         ],
@@ -17722,6 +17853,27 @@
         "tags": [
           ""
         ]
+      },
+      {
+        "display_value": "20%",
+        "formula": "",
+        "type": "ATKアップ",
+        "value": {},
+        "effect_class": "buff",
+        "target": "自身",
+        "duration": {
+          "ct": 30
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "自身を含む、奇数とユニゾン時",
+            "label": "発動条件"
+          }
+        ],
+        "tags": [
+          ""
+        ]
       }
     ]
   },
@@ -19768,6 +19920,53 @@
           {
             "type": "condition",
             "text": "自身を含む、3体以上とユニゾン時",
+            "label": "発動条件"
+          }
+        ],
+        "tags": [
+          ""
+        ]
+      },
+      {
+        "display_value": "50%",
+        "formula": "",
+        "type": "クリティカル率アップ",
+        "value": {},
+        "effect_class": "buff",
+        "target": "炎属性の味方",
+        "duration": {
+          "ct": 10
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "自身を含む、4体以上とユニゾン時",
+            "label": "発動条件"
+          }
+        ],
+        "tags": [
+          ""
+        ]
+      },
+      {
+        "display_value": "",
+        "formula": "",
+        "type": "強制スタン",
+        "value": {},
+        "effect_class": "debuff",
+        "target": "敵全体",
+        "duration": {
+          "ct": 1
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "自身を含む、5体以上とユニゾン時",
+            "label": "発動条件"
+          },
+          {
+            "type": "condition",
+            "text": "100%の確率で付与",
             "label": "発動条件"
           }
         ],
@@ -33384,6 +33583,51 @@
             "type": "condition",
             "text": "自身を含む味方の守護天使の数が2体以上の時",
             "label": "発動条件"
+          }
+        ],
+        "tags": [
+          ""
+        ]
+      },
+      {
+        "display_value": "5",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {},
+        "effect_class": "buff",
+        "target": "神族の味方",
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "自身を含む味方の守護天使の数が3体以上の時",
+            "label": "発動条件"
+          }
+        ],
+        "tags": [
+          ""
+        ]
+      },
+      {
+        "display_value": "",
+        "formula": "攻撃タイプ打撃からの被ダメージが20％増加",
+        "type": "破砕",
+        "value": {},
+        "effect_class": "debuff",
+        "target": "敵単体",
+        "duration": {
+          "ct": 1
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "自身を含む味方の守護天使の数が5体の時",
+            "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "優先発動 ※スキル発動前に効果が発動する",
+            "label": "特性"
           }
         ],
         "tags": [
