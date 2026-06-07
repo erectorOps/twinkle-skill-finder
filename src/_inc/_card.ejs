@@ -147,7 +147,11 @@ switch (iconGroup) {
 %>
 
 
-<div class="skill-card <%= skill.skill_type.toLowerCase() %>">
+<div
+  id="skill-<%= skill.skill_id %>"
+  class="skill-card <%= skill.skill_type.toLowerCase() %>"
+  data-skill-id="<%= skill.skill_id %>"
+>
 
   <div class="skill-header">
 
@@ -186,17 +190,34 @@ switch (iconGroup) {
       <% } %>
 
       <% if (chara.sp_equip_types.length > 0) { %>
-      <img
-        class="icon-sp-equip-type"
-        src="img/<%= chara.sp_equip_types[0].icon %>"
-        alt=""
-      >
+      <div class="icon-stack">
+        <img
+          class="icon-base"
+          src="img/attribute_base.png"
+          alt=""
+        >
+
+        <img
+          class="icon-main icon-sp-equip-type"
+          src="img/<%= chara.sp_equip_types[0].icon %>"
+          alt=""
+        >
+      </div>
       <% } %>
 
-      <img
-        src="img/<%= chara.role.icon %>"
-        alt=""
-      >
+      <div class="icon-stack">
+        <img
+          class="icon-base"
+          src="img/attribute_base.png"
+          alt=""
+        >
+
+        <img
+          class="icon-main"
+          src="img/<%= chara.role.icon %>"
+          alt=""
+        >
+      </div>
 
       <div class="icon-stack">
         <img
@@ -238,6 +259,19 @@ switch (iconGroup) {
           </div>
 
           <div class="skill-sub">
+            <span
+              class="card-rarity"
+              aria-label="レアリティ <%= chara.rarity %>"
+            >
+              <% for (let i = 1; i <= 3; i++) { %>
+              <img
+                class="card-rarity-star <%= i <= chara.rarity ? 'filled' : 'empty' %>"
+                src="img/<%= i <= chara.rarity ? 'rare.png' : 'rare_slot.png' %>"
+                alt=""
+              >
+              <% } %>
+            </span>
+
             <span class="cost-label">
               消費EX
             </span>
@@ -389,34 +423,55 @@ switch (iconGroup) {
 
     <div class="effect-box accessory">
 
-      <% if (skillAccessory.illust_id) { %>
-      <img
-        class="accessory-illust"
-        src="img/equip/<%= skillAccessory.illust_id %>.png"
-        alt=""
-      >
-      <% } %>
-
-      <div class="effect-top">
-        <span class="effect-name">
+      <div class="accessory-summary">
+        <% if (skillAccessory.illust_id) { %>
+        <div class="accessory-frame">
           <img
-            class="effect-icon"
-            src="img/icon_equipment_03.png"
+            class="accessory-frame-base"
+            src="img/icon_base_3.png"
             alt=""
           >
-          <%= skillAccessory.accessory_name %>
-        </span>
-      </div>
 
-      <% if (accessoryCommonEffects.length) { %>
-      <div class="effect-value">
-        <% accessoryCommonEffects.forEach(common_effect => { %>
-        <div class="accessory-common-effect">
-          <%- renderAccessoryEffectSummary(common_effect) %>
+          <img
+            class="accessory-illust"
+            src="img/equip/<%= skillAccessory.illust_id %>.png"
+            alt=""
+          >
+
+          <span class="accessory-badge-stack">
+            <img
+              class="accessory-badge-base"
+              src="img/attribute_base.png"
+              alt=""
+            >
+
+            <img
+              class="accessory-badge-icon"
+              src="img/icon_equipment_03.png"
+              alt=""
+            >
+          </span>
         </div>
-        <% }) %>
+        <% } %>
+
+        <div class="accessory-body">
+          <div class="effect-top">
+            <span class="effect-name">
+              <%= skillAccessory.accessory_name %>
+            </span>
+          </div>
+
+          <% if (accessoryCommonEffects.length) { %>
+          <div class="effect-value">
+            <% accessoryCommonEffects.forEach(common_effect => { %>
+            <div class="accessory-common-effect">
+              <%- renderAccessoryEffectSummary(common_effect) %>
+            </div>
+            <% }) %>
+          </div>
+          <% } %>
       </div>
-      <% } %>
+    </div>
 
       <% if (accessoryRawTexts.length || accessorySkillEffects.length) { %>
       <div class="effect-children">

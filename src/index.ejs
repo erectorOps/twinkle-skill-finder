@@ -1,12 +1,11 @@
 <%
-var baseUrl = '.';
-
-const unit_id = 1004003;
-
-const currentIndex = characters.findIndex(
-    x => x.unit_id === unit_id
+const baseUrl = '.';
+const characterMap = new Map(
+    characters.map(chara => [
+        chara.unit_id,
+        chara
+    ])
 );
-
 %>
 
 <%-
@@ -15,25 +14,70 @@ const currentIndex = characters.findIndex(
     });
 %>
 
-<div class="debug-nav">
-    <button id="prev-btn">←</button>
-    <span id="current-name"></span>
-    <button id="next-btn">→</button>
-</div>
+<script
+    id="skill-finder-index"
+    type="application/json"
+><%- jsonForHtml(skillFinderIndex) %></script>
 
-<% for (let chara of characters) { %>
-    
-    <%
-    const unit_skills = skills.filter(
-        x => x.unit_id === chara.unit_id
-    );
-    %>
+<%- include('./_inc/_buttons.ejs', { characters }) %>
+
+<div class="finder-toolbar">
+    <div
+        class="sort-tabs"
+        role="tablist"
+        aria-label="並び替え"
+    >
+        <button
+            class="sort-tab active"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            data-sort="release"
+        >
+            リリース順
+        </button>
+
+        <button
+            class="sort-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-sort="rare"
+        >
+            レアリティ
+        </button>
+
+        <button
+            class="sort-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-sort="kana"
+        >
+            50音
+        </button>
+    </div>
 
     <div
-        class="character-container"
-        data-unit-id="<%= chara.unit_id %>"
+        class="result-count"
+        aria-live="polite"
     >
-        <% for (let skill of unit_skills) { %>
+        <span id="visible-count"><%= skillFinderIndex.length %></span>
+        /
+        <span id="total-count"><%= skillFinderIndex.length %></span>
+    </div>
+</div>
+
+<div
+    id="skill-list"
+    class="skill-list"
+>
+    <% for (let skill of skills) { %>
+        <%
+        const chara = characterMap.get(skill.unit_id);
+        %>
+
+        <% if (chara) { %>
             <%- include(
                 "_inc/_card",
                 {
@@ -43,82 +87,285 @@ const currentIndex = characters.findIndex(
                 }
             ) %>
         <% } %>
-    </div>
-<% } %>
-
+    <% } %>
+</div>
 
 <script>
 (() => {
-    const STORAGE_KEY = 'debug_character_id';
+    const indexElement =
+        document.getElementById('skill-finder-index');
 
-    const containers = [
-        ...document.querySelectorAll('.character-container')
+    const listElement =
+        document.getElementById('skill-list');
+
+    const countElement =
+        document.getElementById('visible-count');
+
+    const tabs = [
+        ...document.querySelectorAll('.sort-tab')
     ];
 
-    const currentName =
-        document.getElementById('current-name');
-    
-    let index = 0;
+    const filterButtons = [
+        ...document.querySelectorAll('[data-filter-group]')
+    ];
 
-    function update() {
-        containers.forEach(x =>
-            x.classList.remove('active')
+    const skillIndex =
+        JSON.parse(indexElement.textContent);
+
+    const cardMap = new Map(
+        [...document.querySelectorAll('[data-skill-id]')]
+            .map(card => [
+                card.dataset.skillId,
+                card
+            ])
+    );
+
+    const skillTypeOrder = {
+        EX1: 1,
+        'EX1+': 2,
+        EX2: 3,
+        'EX2+': 4
+    };
+
+    const compareNumber = (a, b) =>
+        (a ?? Number.MAX_SAFE_INTEGER)
+        - (b ?? Number.MAX_SAFE_INTEGER);
+
+    const compareText = (a, b) =>
+        String(a ?? '').localeCompare(
+            String(b ?? ''),
+            'ja'
         );
 
-        const current = containers[index];
-
-        current.classList.add('active');
-
-        localStorage.setItem(
-            STORAGE_KEY,
-            current.dataset.unitId
+    const compareSkillType = (a, b) =>
+        compareNumber(
+            skillTypeOrder[a.skill_type],
+            skillTypeOrder[b.skill_type]
         );
 
-        currentName.textContent =
-            current.dataset.unitId +
-            ` (${index + 1}/${containers.length})`;
-    }
-
-    document
-        .getElementById('prev-btn')
-        .addEventListener('click', () => {
-
-            index--;
-
-            if (index < 0) {
-                index = containers.length - 1;
+    const compareSkillId = (a, b) =>
+        String(a.skill_id).localeCompare(
+            String(b.skill_id),
+            'ja',
+            {
+                numeric: true
             }
-
-            update();
-        });
-
-    document
-        .getElementById('next-btn')
-        .addEventListener('click', () => {
-            
-            index++;
-
-            if (index >= containers.length) {
-                index = 0;
-            }
-
-            update();
-        });
-
-    const savedUnitId =
-        localStorage.getItem(STORAGE_KEY);
-
-    if (savedUnitId) {
-        const savedIndex = containers.findIndex(
-            x => x.dataset.unitId === savedUnitId
         );
 
-        if (savedIndex >= 0) {
-            index = savedIndex;
+    const compareRelease = (a, b) =>
+        compareNumber(a.release_order, b.release_order)
+        || compareNumber(a.unit_id, b.unit_id)
+        || compareSkillType(a, b)
+        || compareSkillId(a, b);
+
+    const compareRare = (a, b) =>
+        compareNumber(b.rarity, a.rarity)
+        || compareRelease(a, b);
+
+    const compareKana = (a, b) =>
+        compareText(a.character_name_kana, b.character_name_kana)
+        || compareText(a.character_name, b.character_name)
+        || compareRelease(a, b);
+
+    const comparers = {
+        release: compareRelease,
+        rare: compareRare,
+        kana: compareKana
+    };
+
+    const activeFilters = new Map();
+
+    let currentSortKey = 'release';
+
+    const getActiveValues = (group) =>
+        activeFilters.get(group) || new Set();
+
+    const hasAnyValue = (itemValues, activeValues) => {
+        const values =
+            Array.isArray(itemValues)
+                ? itemValues.map(String)
+                : [String(itemValues)];
+
+        return values.some(value =>
+            activeValues.has(value)
+        );
+    };
+
+    const matchesSkillGroup = (item) => {
+        const activeValues =
+            getActiveValues('skill_group');
+
+        if (
+            activeValues.size === 0
+            || activeValues.has('all')
+        ) {
+            return true;
         }
-    }
-    
-    update();
+
+        if (activeValues.has('ex1')) {
+            return item.skill_type === 'EX1'
+                || item.skill_type === 'EX1+';
+        }
+
+        if (activeValues.has('ex2')) {
+            return item.skill_type === 'EX2'
+                || item.skill_type === 'EX2+';
+        }
+
+        return true;
+    };
+
+    const matchesFilters = (item) => {
+        if (!matchesSkillGroup(item)) {
+            return false;
+        }
+
+        for (const [group, activeValues] of activeFilters) {
+            if (
+                group === 'skill_group'
+                || activeValues.size === 0
+            ) {
+                continue;
+            }
+
+            if (!hasAnyValue(item[group], activeValues)) {
+                return false;
+            }
+        }
+
+        return true;
+    };
+
+    const updateFilterButton = (button, active) => {
+        button.classList.toggle('active', active);
+        button.setAttribute(
+            'aria-pressed',
+            active ? 'true' : 'false'
+        );
+    };
+
+    const setSingleFilter = (group, value) => {
+        activeFilters.set(
+            group,
+            new Set([value])
+        );
+
+        filterButtons
+            .filter(button =>
+                button.dataset.filterGroup === group
+            )
+            .forEach(button =>
+                updateFilterButton(
+                    button,
+                    button.dataset.filterValue === value
+                )
+            );
+    };
+
+    const toggleMultiFilter = (button) => {
+        const group =
+            button.dataset.filterGroup;
+
+        const value =
+            button.dataset.filterValue;
+
+        const values =
+            new Set(getActiveValues(group));
+
+        if (values.has(value)) {
+            values.delete(value);
+        } else {
+            values.add(value);
+        }
+
+        if (values.size === 0) {
+            activeFilters.delete(group);
+        } else {
+            activeFilters.set(group, values);
+        }
+
+        updateFilterButton(
+            button,
+            values.has(value)
+        );
+    };
+
+    const setActiveTab = (sortKey) => {
+        tabs.forEach(tab => {
+            const active =
+                tab.dataset.sort === sortKey;
+
+            tab.classList.toggle('active', active);
+            tab.setAttribute(
+                'aria-selected',
+                active ? 'true' : 'false'
+            );
+        });
+    };
+
+    const render = (sortKey = currentSortKey) => {
+        currentSortKey = sortKey;
+
+        const comparer =
+            comparers[sortKey] || compareRelease;
+
+        const fragment =
+            document.createDocumentFragment();
+
+        const sortedItems =
+            [...skillIndex].sort(comparer);
+
+        let visibleCount = 0;
+
+        for (const item of sortedItems) {
+            const card =
+                cardMap.get(item.skill_id);
+
+            if (card) {
+                const visible =
+                    matchesFilters(item);
+
+                card.hidden = !visible;
+
+                if (visible) {
+                    visibleCount++;
+                }
+
+                fragment.appendChild(card);
+            }
+        }
+
+        listElement.appendChild(fragment);
+        countElement.textContent = visibleCount;
+        setActiveTab(sortKey);
+    };
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            render(tab.dataset.sort);
+        });
+    });
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const group =
+                button.dataset.filterGroup;
+
+            const value =
+                button.dataset.filterValue;
+
+            if (group === 'skill_group') {
+                setSingleFilter(group, value);
+            } else {
+                toggleMultiFilter(button);
+            }
+
+            render();
+        });
+    });
+
+    setSingleFilter('skill_group', 'all');
+    render('release');
 })();
 </script>
 

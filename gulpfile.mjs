@@ -8,6 +8,7 @@ import browserSyncPkg from "browser-sync";
 
 import { cssSass } from './src/task/sass.mjs';
 import { imgFunc } from './src/task/image.mjs';
+import { buildSkillFinderIndex, jsonForHtml } from './src/task/skillFinderIndex.mjs';
 
 import { srcBase, distBase } from './src/task/_config.mjs';
 import log from 'fancy-log';
@@ -16,7 +17,6 @@ import rename from 'gulp-rename'; //ファイル出力時にファイル名を�
 
 const SRC = "src";
 const DIST = "dist";
-
 
 /* ========================================
    OPTION
@@ -67,14 +67,31 @@ export async function ejsFunc() {
     )
   );
 
-  const releaseDateMap = new Map(release_dates.map(b => [b.unit_id, b]))
-  characters.forEach(a => {
-    const b = releaseDateMap.get(a.unit_id);
-    if (b) {
-      a.release_date = b.release_date;
-      a.release_date_raw = b.release_date_raw;
-      a.obtain = b.obtain;
+  const releaseDateItems =
+    Array.isArray(release_dates)
+      ? release_dates
+      : release_dates.items || [];
+
+  const releaseDateMap =
+    new Map(releaseDateItems.map(item => [item.unit_id, item]));
+
+  characters.forEach(character => {
+    const releaseDate =
+      releaseDateMap.get(character.unit_id);
+
+    if (!releaseDate) {
+      return;
     }
+
+    character.release_date = releaseDate.release_date;
+    character.release_date_raw = releaseDate.release_date_raw;
+    character.release_order = releaseDate.release_order;
+    character.obtain = releaseDate.obtain;
+  });
+
+  const skillFinderIndex = buildSkillFinderIndex({
+    skills,
+    characters
   });
 
   const pages = [
@@ -104,7 +121,9 @@ export async function ejsFunc() {
         {
           skills,
           characters,
-          accessories
+          accessories,
+          skillFinderIndex,
+          jsonForHtml
         },
         {
           filename: inputPath

@@ -25,6 +25,12 @@
   --blank: #9fb1c9;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   background: var(--bg);
   color: var(--text);
@@ -35,6 +41,187 @@ body {
     sans-serif;
 
   padding: 24px;
+}
+
+/* ==================================================
+   FILTERS
+================================================== */
+
+.filter-panel {
+  display: grid;
+  gap: 14px;
+
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.filter-group {
+  display: grid;
+  gap: 8px;
+}
+
+.filter-title {
+  color: var(--sub);
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.filter-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  min-height: 32px;
+
+  padding: 5px 10px;
+
+  color: var(--sub);
+  background: var(--panel);
+
+  border: 1px solid var(--border);
+  border-radius: 6px;
+
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+
+  cursor: pointer;
+
+  &.active {
+    color: #fff;
+    background: #2f5f9f;
+    border-color: var(--accent);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+  }
+}
+
+.filter-icon {
+  width: 20px;
+  height: 20px;
+
+  object-fit: contain;
+}
+
+.rarity-stars,
+.card-rarity {
+  display: inline-flex;
+  align-items: center;
+}
+
+.rarity-star,
+.card-rarity-star {
+  position: relative;
+
+  width: 20px;
+  height: 20px;
+
+  object-fit: contain;
+
+  &.empty {
+    opacity: .75;
+    filter:
+      brightness(.45)
+      saturate(.65);
+  }
+
+  &:not(:first-child) {
+    margin-left: -6px;
+  }
+
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i}) {
+      z-index: #{4 - $i};
+    }
+  }
+}
+
+/* ==================================================
+   FINDER TOOLBAR
+================================================== */
+
+.finder-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  margin-bottom: 16px;
+  padding: 10px 0;
+
+  background: rgba(20, 22, 27, .94);
+  backdrop-filter: blur(8px);
+}
+
+.sort-tabs {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+
+  padding: 4px;
+
+  background: var(--panel);
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.sort-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 96px;
+  height: 34px;
+
+  padding: 0 14px;
+
+  color: var(--sub);
+  background: transparent;
+
+  border: 0;
+  border-radius: 5px;
+
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  &.active {
+    color: #fff;
+    background: var(--accent);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+  }
+}
+
+.result-count {
+  color: var(--sub);
+
+  font-size: 13px;
+  font-weight: 700;
 }
 
 /* ==================================================
@@ -225,19 +412,9 @@ body {
     }
   }
 
-  .icon-role {
-    position: absolute;
-    inset: 0;
-    left: 10px;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
   .icon-sp-equip-type {
     object-fit: cover;
     object-position: left;
-    clip-path: 5px;
   }
 
   .icon-stack {
@@ -247,21 +424,28 @@ body {
     height: 28px;
 
     flex-shrink: 0;
+
+    overflow: visible;
   }
 
   .icon-base,
   .icon-main {
     position: absolute;
     inset: 0;
-
     width: 100%;
     height: 100%;
-
     object-fit: contain;
   }
 
   .icon-base {
+
+    inset: -6px;
+
+    width: 40px!important;
+    height: 40px!important;
+
     opacity: 0.9;
+    z-index: 0;
   }
 
   .icon-main {
@@ -401,47 +585,95 @@ body {
 
       border-left-color: #d7b56d;
 
-      > .effect-top .effect-name {
-        position: relative;  
+      .accessory-summary {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .accessory-frame {
+        position: relative;
+
+        width: 40px;
+        height: 40px;
+
+        flex: 0 0 48px;
+
+        border-radius: 9px;
+
+        isolation: isolate;
+      }
+
+      .accessory-frame-base,
+      .accessory-illust {
+        position: absolute;
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+      }
+
+      .accessory-frame-base {
+        z-index: 1;
+
+        opacity: .30;
+
       }
 
       .accessory-illust {
-        position: absolute;
-        top: 8px;
-        right: 10px;
         z-index: 2;
 
-        width: 58px;
-        height: 58px;
+        padding: 0;
+      }
+
+      .accessory-badge-stack {
+        position: absolute;
+        top: -6px;
+        right: -6px;
+        z-index: 3;
+
+        width: 26px;
+        height: 26px;
+
+        display: block;
+      }
+
+      .accessory-badge-base,
+      .accessory-badge-icon {
+        position: absolute;
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
 
         object-fit: contain;
-        opacity: 0.55;
+      }
 
-        pointer-events: none;
-        user-select: none;
+      .accessory-badge-base {
+        z-index: 1;
+
+        transform: scale(1.35);
+
+        opacity: .78;
+        filter:
+          brightness(.58)
+          saturate(.8)
+          contrast(1.08)
+          drop-shadow(0 2px 4px rgba(0,0,0,.55));
+      }
+
+      .accessory-badge-icon {
+        z-index: 2;
 
         filter:
-          drop-shadow(0 2px 4px rgba(0,0,0,0.45));
+          drop-shadow(0 1px 2px rgba(0,0,0,.55));
       }
 
-      > .effect-top,
-      > .effect-value,
-      > .effect-children {
-        position: relative;
-        z-index: 1;
-      }
-
-      .effect-icon {
-        position: absolute;
-        left: -10px;
-        top: 12px;
-
-        width: 32px;
-        height: 32px;
- 
-        object-fit: contain;
-
-        transform: translateY(-50%);
+      .accessory-body {
+        min-width: 0;
+        flex: 1;
       }
 
       .accessory-common-effect {
@@ -704,6 +936,47 @@ body {
 
 @media (max-width: 600px) {
 
+  body {
+    padding: 12px;
+  }
+
+  .finder-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .sort-tabs {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .sort-tab {
+    flex: 1;
+    min-width: 0;
+    padding: 0 8px;
+  }
+
+  .filter-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .filter-button {
+    width: 100%;
+    min-width: 0;
+    min-height: 38px;
+
+    padding: 6px 4px;
+
+    font-size: 11px;
+    line-height: 1.2;
+
+    span {
+      min-width: 0;
+    }
+  }
+
   .skill-list {
     grid-template-columns: 1fr;
   }
@@ -733,6 +1006,13 @@ body {
       height: 22px;
     }
 
+    .icon-base {
+      inset: -5px;
+
+      width: 32px!important;
+      height: 32px!important;
+    }
+
     .skill-badges {
       img {
         width: 22px;
@@ -742,31 +1022,21 @@ body {
 
     .effect-box.accessory {
 
+      .accessory-frame {
+        width: 40px;
+        height: 40px;
+
+        flex-basis: 54px;
+      }
+
+      .accessory-badge-stack {
+        width: 23px;
+        height: 23px;
+      }
 
       .accessory-illust {
-        width: 48px;
-        height: 48px;
+        padding: 5px;
       }
     }
   }
 }
-
-    .character-container {
-        display: none;
-    }
-
-    .character-container.active {
-        display: block;
-    }
-
-    .debug-nav {
-        position: sticky;
-        top: 0;
-        z-index: 9999;
-        padding: 8px;
-        background: #222;
-        color: #fff;
-        display: flex;
-        gap: 8px;
-        align-items: center;
-    }

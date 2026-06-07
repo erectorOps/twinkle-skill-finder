@@ -1051,12 +1051,11 @@
     "effects": [
       {
         "display_value": "360%～560%",
-        "formula": "360%+ラッシュ数×2%(最大200%)",
+        "formula": "360%+ラッシュ数×2% (最大200%)",
         "type": "ダメージ",
         "value": {
           "rate": 360,
-          "add": 2,
-          "max": 200
+          "hit": 1
         },
         "effect_class": "main",
         "target": "敵全体",
@@ -1397,46 +1396,6 @@
         "tags": [
           ""
         ]
-      },
-      {
-        "display_value": "10",
-        "formula": "",
-        "type": "ノックバック",
-        "value": {
-          "min": 10,
-          "max": 10
-        },
-        "effect_class": "note",
-        "target": "対象とその左右2レーンにいる敵すべて",
-        "duration": null,
-        "notes": [
-          {
-            "type": "weaken",
-            "text": "対象から離れるほど-1ずつ減少",
-            "label": "減衰"
-          }
-        ],
-        "raw": "10～10ノックバック(レーン隣接している敵は対象レーンから離れるほどノックバック量は-1ずつ減少)",
-        "children": [],
-        "tags": [],
-        "inherited_target": true
-      },
-      {
-        "display_value": "8",
-        "formula": "",
-        "type": "ノーツ移動",
-        "value": {
-          "min": 8,
-          "max": 8
-        },
-        "effect_class": "note",
-        "target": "闇属性の味方",
-        "duration": null,
-        "notes": [],
-        "raw": "闇属性の味方のノーツを8～8前方に移動",
-        "children": [],
-        "tags": [],
-        "inherited_target": false
       }
     ]
   },
@@ -1539,12 +1498,11 @@
     "effects": [
       {
         "display_value": "200%～400%",
-        "formula": "200%+ラッシュ数×2%(最大200%)",
+        "formula": "200%+ラッシュ数×2% (最大200%)",
         "type": "ダメージ",
         "value": {
           "rate": 200,
-          "add": 2,
-          "max": 200
+          "hit": 1
         },
         "effect_class": "main",
         "target": "敵全体",
@@ -1629,12 +1587,11 @@
     "effects": [
       {
         "display_value": "200%～400%",
-        "formula": "200%+ラッシュ数×2%(最大200%)",
+        "formula": "200%+ラッシュ数×2% (最大200%)",
         "type": "ダメージ",
         "value": {
           "rate": 200,
-          "add": 2,
-          "max": 200
+          "hit": 1
         },
         "effect_class": "main",
         "target": "敵全体",
@@ -1652,9 +1609,7 @@
         "formula": "凍傷状態の敵の数×10%",
         "type": "クリティカルダメージアップ",
         "value": {
-          "add": 10,
-          "min": 10,
-          "max": 50
+          "rate": 10
         },
         "effect_class": "buff",
         "target": "自身",
@@ -2118,7 +2073,7 @@
             "label": "発動条件"
           }
         ],
-        "raw": "自身の新春晴餅の数が7以上の時、敵単体に弱点属性を付与(1CT)※弱点属性：すべての属性から受ける攻撃が弱点属性扱いとなる(攻撃側の属性は変化しない)",
+        "raw": "自身の新春晴餅の数が7以上の時、敵単体に弱点属性を付与(1CT)",
         "children": [],
         "tags": [],
         "inherited_target": false
@@ -3509,7 +3464,11 @@
         "display_value": "140%～560%",
         "formula": "消費したEXゲージ量×1.4%",
         "type": "ダメージ",
-        "value": {},
+        "value": {
+          "rate": 1.4,
+          "hit": 1,
+          "base": 0
+        },
         "effect_class": "main",
         "target": "敵全体",
         "duration": null,
@@ -3639,9 +3598,7 @@
         "display_value": "前から2番目の味方と同じ位置",
         "formula": "",
         "type": "ノーツ移動",
-        "value": {
-          "index": 2
-        },
+        "value": {},
         "effect_class": "note",
         "target": "一番後方の味方",
         "duration": null,
@@ -3787,9 +3744,7 @@
         "formula": "10%+自身の基礎ATK200ごと×7.5% (合計最大100% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 10,
-          "rate": 7.5,
-          "max_rate": 100
+          "rate": 7.5
         },
         "effect_class": "buff",
         "target": "人間または雷属性の味方",
@@ -3907,9 +3862,7 @@
         "formula": "10%+自身の基礎ATK200ごと×7.5% (合計最大100% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 10,
-          "rate": 7.5,
-          "max_rate": 100
+          "rate": 7.5
         },
         "effect_class": "buff",
         "target": "人間または雷属性の味方",
@@ -4377,72 +4330,6 @@
         ]
       },
       {
-        "display_value": "20%",
-        "formula": "",
-        "type": "クリティカル率アップ",
-        "value": {},
-        "effect_class": "buff",
-        "target": "人間の味方",
-        "duration": {
-          "ct": 20
-        },
-        "notes": [
-          {
-            "type": "condition",
-            "text": "味方に付与されているサブ属性に水属性が含まれている時",
-            "label": "発動条件"
-          }
-        ],
-        "tags": [
-          ""
-        ]
-      },
-      {
-        "display_value": "20",
-        "formula": "",
-        "type": "EX消費量減少",
-        "value": {},
-        "effect_class": "buff",
-        "target": "自身",
-        "duration": null,
-        "notes": [
-          {
-            "type": "condition",
-            "text": "味方に付与されているサブ属性に雷属性が含まれている時",
-            "label": "発動条件"
-          },
-          {
-            "type": "expire",
-            "text": "次ターン以降EXスキル1回発動まで",
-            "label": "期限"
-          }
-        ],
-        "tags": [
-          ""
-        ]
-      },
-      {
-        "display_value": "20%",
-        "formula": "",
-        "type": "行動CT短縮",
-        "value": {},
-        "effect_class": "buff",
-        "target": "人間の味方",
-        "duration": {
-          "ct": 1
-        },
-        "notes": [
-          {
-            "type": "condition",
-            "text": "味方に付与されているサブ属性に光属性が含まれている時",
-            "label": "発動条件"
-          }
-        ],
-        "tags": [
-          ""
-        ]
-      },
-      {
         "display_value": "",
         "formula": "",
         "type": "チャージ",
@@ -4875,9 +4762,7 @@
         "formula": "10%+自身の基礎ATK200ごと×5.5% (合計最大100% ※基礎ATK3400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 10,
-          "rate": 5.5,
-          "max_rate": 100
+          "rate": 5.5
         },
         "effect_class": "buff",
         "target": "魔族または闇属性の味方",
@@ -4954,9 +4839,7 @@
         "formula": "50%+自身の基礎ATK200ごと×8% (合計最大150% ※基礎ATK2600以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 50,
-          "rate": 8,
-          "max_rate": 150
+          "rate": 8
         },
         "effect_class": "buff",
         "target": "自身の右2レーンにいる味方",
@@ -5002,9 +4885,7 @@
         "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 18,
-          "max_rate": 300
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "闇属性の味方",
@@ -5891,29 +5772,6 @@
         "tags": [
           ""
         ]
-      },
-      {
-        "display_value": "6%～30%",
-        "formula": "神族または水属性の味方の数×6%",
-        "type": "クリティカルダメージアップ",
-        "value": {
-          "rate": 6
-        },
-        "effect_class": "buff",
-        "target": "味方全体",
-        "duration": {
-          "ct": 25
-        },
-        "notes": [
-          {
-            "type": "condition",
-            "text": "ラッシュ50以上の時",
-            "label": "発動条件"
-          }
-        ],
-        "tags": [
-          ""
-        ]
       }
     ]
   },
@@ -6020,48 +5878,6 @@
           {
             "type": "condition",
             "text": "ラッシュ30以上の時",
-            "label": "発動条件"
-          }
-        ],
-        "tags": [
-          ""
-        ]
-      },
-      {
-        "display_value": "6%～30%",
-        "formula": "神族または水属性の味方の数×6%",
-        "type": "クリティカルダメージアップ",
-        "value": {
-          "rate": 6
-        },
-        "effect_class": "buff",
-        "target": "味方全体",
-        "duration": {
-          "ct": 25
-        },
-        "notes": [
-          {
-            "type": "condition",
-            "text": "ラッシュ50以上の時",
-            "label": "発動条件"
-          }
-        ],
-        "tags": [
-          ""
-        ]
-      },
-      {
-        "display_value": "250%",
-        "formula": "",
-        "type": "ダメージを強化",
-        "value": {},
-        "effect_class": "buff",
-        "target": "敵単体",
-        "duration": null,
-        "notes": [
-          {
-            "type": "condition",
-            "text": "ラッシュ100以上の時",
             "label": "発動条件"
           }
         ],
@@ -6203,9 +6019,7 @@
         "formula": "50%+自身の基礎ATK200ごと×14% (合計最大200% ※基礎ATK2200以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 50,
-          "rate": 14,
-          "max_rate": 200
+          "rate": 14
         },
         "effect_class": "buff",
         "target": "光属性の味方",
@@ -6376,9 +6190,7 @@
         "display_value": "前から2番目の味方と同じ位置",
         "formula": "",
         "type": "ノーツ移動",
-        "value": {
-          "index": 2
-        },
+        "value": {},
         "effect_class": "note",
         "target": "行動CTが一番遅い味方",
         "duration": null,
@@ -6970,9 +6782,7 @@
         "formula": "100%+自身のHP2000ごと×16% (合計最大300% ※HP26000以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 16,
-          "max_rate": 300
+          "rate": 16
         },
         "effect_class": "buff",
         "target": "神族または炎属性の味方",
@@ -7087,9 +6897,7 @@
         "formula": "150%+自身のHP2000ごと×20% (合計最大400% ※HP26000以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 150,
-          "rate": 20,
-          "max_rate": 400
+          "rate": 20
         },
         "effect_class": "buff",
         "target": "神族または炎属性の味方",
@@ -7409,7 +7217,9 @@
         "display_value": "400",
         "formula": "",
         "type": "EXゲージ減少",
-        "value": {},
+        "value": {
+          "amount": 400
+        },
         "effect_class": "debuff",
         "target": "敵単体",
         "duration": null,
@@ -7553,7 +7363,10 @@
         "display_value": "20～80",
         "formula": "20+自身の基礎ATK150ごと×4(合計最大80 ※基礎ATK2250以上)",
         "type": "EXゲージ吸収",
-        "value": {},
+        "value": {
+          "amount": 20,
+          "rate": 100
+        },
         "effect_class": "buff",
         "target": "敵単体",
         "duration": null,
@@ -8099,14 +7912,14 @@
           {
             "type": "ノーツ移動",
             "display_value": "8",
-            "formula": "",
             "value": {
               "min": 8,
               "max": 8
             },
-            "effect_class": "note",
             "target": "雷属性の味方",
-            "duration": null
+            "duration": null,
+            "formula": "",
+            "effect_class": "note"
           }
         ],
         "tags": [],
@@ -8317,7 +8130,7 @@
         "formula": "スタンゲージを0にしてスタンさせる",
         "type": "強制スタン",
         "value": {
-          "percent": 100
+          "rate": 100
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -8781,7 +8594,7 @@
         "formula": "スタンゲージを0にしてスタンさせる",
         "type": "強制スタン",
         "value": {
-          "percent": 100
+          "rate": 100
         },
         "effect_class": "debuff",
         "target": "ランダムな敵3体",
@@ -9188,9 +9001,7 @@
         "formula": "100%+自身の基礎ATK200ごと×25% (合計最大400% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 25,
-          "max_rate": 400
+          "rate": 25
         },
         "effect_class": "buff",
         "target": "炎属性の味方",
@@ -9330,14 +9141,14 @@
           {
             "type": "ノーツ移動",
             "display_value": "4",
-            "formula": "",
             "value": {
               "min": 4,
               "max": 4
             },
-            "effect_class": "note",
             "target": "人間または水属性の味方",
-            "duration": null
+            "duration": null,
+            "formula": "",
+            "effect_class": "note"
           }
         ],
         "tags": [],
@@ -9439,6 +9250,7 @@
             },
             "display_value": "300%",
             "formula": "",
+            "value": {},
             "effect_class": "buff"
           }
         ],
@@ -10072,7 +9884,10 @@
         "display_value": "252%",
         "formula": "",
         "type": "ダメージ",
-        "value": {},
+        "value": {
+          "rate": 252,
+          "hit": 1
+        },
         "effect_class": "main",
         "target": "敵単体",
         "duration": null,
@@ -10738,9 +10553,7 @@
         "display_value": "前から2番目の味方と同じ位置",
         "formula": "",
         "type": "ノーツ移動",
-        "value": {
-          "index": 2
-        },
+        "value": {},
         "effect_class": "note",
         "target": "前から3番目にいる味方",
         "duration": null,
@@ -11974,7 +11787,10 @@
         "display_value": "40%～80%",
         "formula": "40%+10%×n (合計最大80%)",
         "type": "被ダメージアップ",
-        "value": {},
+        "value": {
+          "rate": 40,
+          "max_rate": 80
+        },
         "effect_class": "debuff",
         "target": "敵全体",
         "duration": {
@@ -11997,9 +11813,7 @@
         "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 18,
-          "max_rate": 300
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "闇属性の味方",
@@ -12063,9 +11877,7 @@
         "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 18,
-          "max_rate": 300
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "闇属性の味方",
@@ -12526,9 +12338,7 @@
         "formula": "100%+自身のHP2000ごと×16% (合計最大300% ※HP26000以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 16,
-          "max_rate": 300
+          "rate": 16
         },
         "effect_class": "buff",
         "target": "味方全体",
@@ -12682,7 +12492,7 @@
         "formula": "付与されているあらゆるバフを解除",
         "type": "バフ解除",
         "value": {
-          "percent": 50
+          "rate": 50
         },
         "effect_class": "debuff",
         "target": "敵全体",
@@ -12891,9 +12701,7 @@
         "formula": "50%+自身の基礎ATK200ごと×8% (合計最大150% ※基礎ATK2600以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 50,
-          "rate": 8,
-          "max_rate": 150
+          "rate": 8
         },
         "effect_class": "buff",
         "target": "一番右に配置されている味方",
@@ -12973,9 +12781,7 @@
         "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 18,
-          "max_rate": 300
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "魔族の味方",
@@ -12993,9 +12799,7 @@
         "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 18,
-          "max_rate": 300
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "炎属性の味方",
@@ -13071,9 +12875,7 @@
         "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 18,
-          "max_rate": 300
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "魔族の味方",
@@ -13091,9 +12893,7 @@
         "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 18,
-          "max_rate": 300
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "炎属性の味方",
@@ -13108,7 +12908,7 @@
       },
       {
         "display_value": "0.5%～50%",
-        "formula": "ラッシュ数×0.5%(最大50%)",
+        "formula": "ラッシュ数×0.5% (最大50%)",
         "type": "クリティカル率アップ",
         "value": {
           "rate": 0.5
@@ -13523,9 +13323,7 @@
         "formula": "100%+自身のHP2000ごと×16% (合計最大300% ※HP26000以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 16,
-          "max_rate": 300
+          "rate": 16
         },
         "effect_class": "buff",
         "target": "人間の味方",
@@ -14130,14 +13928,14 @@
           {
             "type": "ノーツ移動",
             "display_value": "4",
-            "formula": "",
             "value": {
               "min": 4,
               "max": 4
             },
-            "effect_class": "note",
             "target": "魔族または炎属性の味方",
-            "duration": null
+            "duration": null,
+            "formula": "",
+            "effect_class": "note"
           }
         ],
         "tags": [],
@@ -14242,6 +14040,7 @@
             },
             "display_value": "300%",
             "formula": "",
+            "value": {},
             "effect_class": "buff"
           }
         ],
@@ -14370,6 +14169,7 @@
             },
             "display_value": "300%",
             "formula": "",
+            "value": {},
             "effect_class": "buff"
           }
         ],
@@ -14570,9 +14370,7 @@
         "formula": "50%+自身の基礎ATK200ごと×8% (合計最大150% ※基礎ATK2600以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 50,
-          "rate": 8,
-          "max_rate": 150
+          "rate": 8
         },
         "effect_class": "buff",
         "target": "一番右に配置されている味方",
@@ -14636,7 +14434,6 @@
           {
             "type": "バリア",
             "display_value": "2回",
-            "formula": "",
             "value": {
               "count": 2
             },
@@ -14644,12 +14441,12 @@
               "ct": 15
             },
             "target": "味方",
+            "formula": "",
             "effect_class": "buff"
           },
           {
             "type": "ノーツ移動",
             "display_value": "3",
-            "formula": "",
             "value": {
               "amount": 3
             },
@@ -14662,6 +14459,7 @@
             ],
             "target": "味方",
             "duration": null,
+            "formula": "",
             "effect_class": "note"
           }
         ],
@@ -14684,9 +14482,7 @@
         "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 18,
-          "max_rate": 300
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "魔族の味方",
@@ -14704,9 +14500,7 @@
         "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 18,
-          "max_rate": 300
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "光属性の味方",
@@ -14959,9 +14753,7 @@
         "display_value": "前から2番目の味方と同じ位置",
         "formula": "",
         "type": "ノーツ移動",
-        "value": {
-          "index": 2
-        },
+        "value": {},
         "effect_class": "note",
         "target": "一番後方の味方",
         "duration": null,
@@ -15005,9 +14797,7 @@
         "formula": "50%+自身の基礎ATK200ごと×8% (合計最大150% ※基礎ATK2600以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 50,
-          "rate": 8,
-          "max_rate": 150
+          "rate": 8
         },
         "effect_class": "buff",
         "target": "一番右に配置されている味方",
@@ -15024,9 +14814,7 @@
         "display_value": "前から2番目の味方と同じ位置",
         "formula": "",
         "type": "ノーツ移動",
-        "value": {
-          "index": 2
-        },
+        "value": {},
         "effect_class": "note",
         "target": "一番後方の味方",
         "duration": null,
@@ -15075,9 +14863,7 @@
         "formula": "100%+自身の基礎ATK200ごと×25% (合計最大400% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 25,
-          "max_rate": 400
+          "rate": 25
         },
         "effect_class": "buff",
         "target": "炎属性の味方",
@@ -15428,14 +15214,14 @@
           {
             "type": "ノーツ移動",
             "display_value": "8",
-            "formula": "",
             "value": {
               "min": 8,
               "max": 8
             },
-            "effect_class": "note",
             "target": "炎属性の味方",
-            "duration": null
+            "duration": null,
+            "formula": "",
+            "effect_class": "note"
           }
         ],
         "tags": [],
@@ -16647,7 +16433,7 @@
         "formula": "スタンゲージを0にしてスタンさせる",
         "type": "強制スタン",
         "value": {
-          "percent": 100
+          "rate": 100
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -17069,9 +16855,7 @@
         "formula": "50%+自身の基礎ATK200ごと×14% (合計最大200% ※基礎ATK2200以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 50,
-          "rate": 14,
-          "max_rate": 200
+          "rate": 14
         },
         "effect_class": "buff",
         "target": "攻撃タイプ打撃の味方",
@@ -17089,9 +16873,7 @@
         "formula": "25%+自身の基礎ATK200ごと×7% (合計最大100% ※基礎ATK2200以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 25,
-          "rate": 7,
-          "max_rate": 100
+          "rate": 7
         },
         "effect_class": "buff",
         "target": "光属性の味方",
@@ -17340,6 +17122,7 @@
             },
             "display_value": "60%",
             "formula": "",
+            "value": {},
             "effect_class": "buff"
           }
         ],
@@ -17475,14 +17258,14 @@
           {
             "type": "ノーツ移動",
             "display_value": "5",
-            "formula": "",
             "value": {
               "min": 5,
               "max": 5
             },
-            "effect_class": "note",
             "target": "人間の味方",
-            "duration": null
+            "duration": null,
+            "formula": "",
+            "effect_class": "note"
           }
         ],
         "tags": [],
@@ -17531,9 +17314,7 @@
         "formula": "17%+自身のHP2000ごと×7% (合計最大80% ※HP18000以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 17,
-          "rate": 7,
-          "max_rate": 80
+          "rate": 7
         },
         "effect_class": "buff",
         "target": "炎属性の味方",
@@ -17551,9 +17332,7 @@
         "formula": "17%+自身のHP2000ごと×7% (合計最大80% ※HP18000以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 17,
-          "rate": 7,
-          "max_rate": 80
+          "rate": 7
         },
         "effect_class": "buff",
         "target": "水属性の味方",
@@ -17616,9 +17395,7 @@
         "formula": "56%+自身のHP2000ごと×16% (合計最大200% ※HP18000以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 56,
-          "rate": 16,
-          "max_rate": 200
+          "rate": 16
         },
         "effect_class": "buff",
         "target": "炎属性または水属性の味方",
@@ -17832,7 +17609,7 @@
         "formula": "付与されているあらゆるバフを解除",
         "type": "バフ解除",
         "value": {
-          "percent": 80
+          "rate": 80
         },
         "effect_class": "debuff",
         "target": "対象とその左右2レーンにいる敵すべて",
@@ -17939,27 +17716,6 @@
           {
             "type": "condition",
             "text": "自身を含む、偶数とユニゾン時",
-            "label": "発動条件"
-          }
-        ],
-        "tags": [
-          ""
-        ]
-      },
-      {
-        "display_value": "20%",
-        "formula": "",
-        "type": "ATKアップ",
-        "value": {},
-        "effect_class": "buff",
-        "target": "自身",
-        "duration": {
-          "ct": 30
-        },
-        "notes": [
-          {
-            "type": "condition",
-            "text": "自身を含む、奇数とユニゾン時",
             "label": "発動条件"
           }
         ],
@@ -18084,14 +17840,14 @@
           {
             "type": "ノーツ移動",
             "display_value": "5",
-            "formula": "",
             "value": {
               "min": 5,
               "max": 5
             },
-            "effect_class": "note",
             "target": "炎属性または水属性の味方",
-            "duration": null
+            "duration": null,
+            "formula": "",
+            "effect_class": "note"
           }
         ],
         "tags": [],
@@ -18709,24 +18465,6 @@
         "tags": [
           ""
         ]
-      },
-      {
-        "display_value": "20%",
-        "formula": "",
-        "type": "行動CT遅延",
-        "value": {
-          "rate": 20
-        },
-        "effect_class": "debuff",
-        "target": "自身",
-        "duration": {
-          "ct": 20
-        },
-        "notes": [],
-        "raw": "自身の行動CT20%遅延(20CT)",
-        "children": [],
-        "tags": [],
-        "inherited_target": false
       }
     ]
   },
@@ -19412,9 +19150,7 @@
         "display_value": "前から2番目の味方と同じ位置",
         "formula": "",
         "type": "ノーツ移動",
-        "value": {
-          "index": 2
-        },
+        "value": {},
         "effect_class": "note",
         "target": "一番後方の味方",
         "duration": null,
@@ -19486,9 +19222,7 @@
         "display_value": "前から2番目の味方と同じ位置",
         "formula": "",
         "type": "ノーツ移動",
-        "value": {
-          "index": 2
-        },
+        "value": {},
         "effect_class": "note",
         "target": "一番後方の味方",
         "duration": null,
@@ -19625,9 +19359,7 @@
         "display_value": "前から2番目の味方と同じ位置",
         "formula": "",
         "type": "ノーツ移動",
-        "value": {
-          "index": 2
-        },
+        "value": {},
         "effect_class": "note",
         "target": "一番後方の味方",
         "duration": null,
@@ -19739,9 +19471,7 @@
         "formula": "50%+自身の基礎ATK200ごと×8% (合計最大150% ※基礎ATK2600以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 50,
-          "rate": 8,
-          "max_rate": 150
+          "rate": 8
         },
         "effect_class": "buff",
         "target": "一番右に配置されている味方",
@@ -19852,9 +19582,7 @@
         "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 18,
-          "max_rate": 300
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "炎属性の味方",
@@ -19872,9 +19600,7 @@
         "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 18,
-          "max_rate": 300
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "水属性の味方",
@@ -19950,9 +19676,7 @@
         "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 18,
-          "max_rate": 300
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "炎属性の味方",
@@ -19970,9 +19694,7 @@
         "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 18,
-          "max_rate": 300
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "水属性の味方",
@@ -20046,53 +19768,6 @@
           {
             "type": "condition",
             "text": "自身を含む、3体以上とユニゾン時",
-            "label": "発動条件"
-          }
-        ],
-        "tags": [
-          ""
-        ]
-      },
-      {
-        "display_value": "50%",
-        "formula": "",
-        "type": "クリティカル率アップ",
-        "value": {},
-        "effect_class": "buff",
-        "target": "炎属性の味方",
-        "duration": {
-          "ct": 10
-        },
-        "notes": [
-          {
-            "type": "condition",
-            "text": "自身を含む、4体以上とユニゾン時",
-            "label": "発動条件"
-          }
-        ],
-        "tags": [
-          ""
-        ]
-      },
-      {
-        "display_value": "",
-        "formula": "",
-        "type": "強制スタン",
-        "value": {},
-        "effect_class": "debuff",
-        "target": "敵全体",
-        "duration": {
-          "ct": 1
-        },
-        "notes": [
-          {
-            "type": "condition",
-            "text": "自身を含む、5体以上とユニゾン時",
-            "label": "発動条件"
-          },
-          {
-            "type": "condition",
-            "text": "100%の確率で付与",
             "label": "発動条件"
           }
         ],
@@ -21329,9 +21004,7 @@
         "formula": "100%+自身の基礎ATK200ごと×13% (合計最大300% ※基礎ATK3200以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 13,
-          "max_rate": 300
+          "rate": 13
         },
         "effect_class": "buff",
         "target": "攻撃タイプ魔法の味方",
@@ -21437,9 +21110,7 @@
         "formula": "200%+自身の基礎ATK200ごと×13% (合計最大400% ※基礎ATK3200以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 200,
-          "rate": 13,
-          "max_rate": 400
+          "rate": 13
         },
         "effect_class": "buff",
         "target": "攻撃タイプ魔法の味方",
@@ -21606,7 +21277,9 @@
         "display_value": "300",
         "formula": "",
         "type": "EXゲージ減少",
-        "value": {},
+        "value": {
+          "amount": 300
+        },
         "effect_class": "debuff",
         "target": "敵単体",
         "duration": null,
@@ -21792,13 +21465,15 @@
         "type": "ATKアップ",
         "value": {},
         "effect_class": "buff",
-        "target": "敵単体",
-        "duration": null,
+        "target": "自身",
+        "duration": {
+          "ct": 1
+        },
         "notes": [],
         "raw": "敵のEXゲージを400減少させ、自身のATKを減少させたEXゲージ量×0.5%アップ(1CT)",
         "children": [],
         "tags": [],
-        "inherited_target": true
+        "inherited_target": false
       },
       {
         "display_value": "20%",
@@ -22900,9 +22575,7 @@
         "formula": "50%+自身の基礎ATK200ごと×8% (合計最大150% ※基礎ATK2600以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 50,
-          "rate": 8,
-          "max_rate": 150
+          "rate": 8
         },
         "effect_class": "buff",
         "target": "一番右に配置されている味方",
@@ -22964,9 +22637,7 @@
         "formula": "100%+自身の基礎ATK200ごと×25% (合計最大400% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 25,
-          "max_rate": 400
+          "rate": 25
         },
         "effect_class": "buff",
         "target": "魔族の味方",
@@ -23450,9 +23121,7 @@
         "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 18,
-          "max_rate": 300
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "雷属性の味方",
@@ -23470,7 +23139,8 @@
         "formula": "30%+10%×n (合計最大60%)",
         "type": "クリティカルダメージアップ",
         "value": {
-          "rate": 30
+          "rate": 30,
+          "max_rate": 60
         },
         "effect_class": "buff",
         "target": "雷属性の味方",
@@ -25676,7 +25346,10 @@
         "display_value": "30%～80%",
         "formula": "30%+10%×n (合計最大80%)",
         "type": "被ダメージアップ",
-        "value": {},
+        "value": {
+          "rate": 30,
+          "max_rate": 80
+        },
         "effect_class": "debuff",
         "target": "敵全体",
         "duration": {
@@ -25699,9 +25372,7 @@
         "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 18,
-          "max_rate": 300
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "光属性の味方",
@@ -25810,7 +25481,8 @@
         "formula": "",
         "type": "ノーツ移動",
         "value": {
-          "amount": 4
+          "min": 4,
+          "max": 4
         },
         "effect_class": "note",
         "target": "魔族の味方",
@@ -26055,9 +25727,7 @@
         "formula": "50%+自身の基礎ATK200ごと×8% (合計最大150% ※基礎ATK2600以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 50,
-          "rate": 8,
-          "max_rate": 150
+          "rate": 8
         },
         "effect_class": "buff",
         "target": "自身の右1レーンにいる味方",
@@ -26122,7 +25792,10 @@
         "display_value": "30%～80%",
         "formula": "30%+10%×n (合計最大80%)",
         "type": "被ダメージアップ",
-        "value": {},
+        "value": {
+          "rate": 30,
+          "max_rate": 80
+        },
         "effect_class": "debuff",
         "target": "敵全体",
         "duration": {
@@ -26145,9 +25818,7 @@
         "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 18,
-          "max_rate": 300
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "炎属性の味方",
@@ -27188,14 +26859,14 @@
           {
             "type": "ノーツ移動",
             "display_value": "5",
-            "formula": "",
             "value": {
               "min": 5,
               "max": 5
             },
-            "effect_class": "note",
             "target": "光属性の味方",
-            "duration": null
+            "duration": null,
+            "formula": "",
+            "effect_class": "note"
           }
         ],
         "tags": [],
@@ -27320,7 +26991,10 @@
         "display_value": "20～100",
         "formula": "雷属性の味方の数×40吸収し、吸収量の50%を味方EX回復",
         "type": "EXゲージ吸収",
-        "value": {},
+        "value": {
+          "amount": 40,
+          "rate": 50
+        },
         "effect_class": "buff",
         "target": "敵単体",
         "duration": null,
@@ -27774,9 +27448,7 @@
         "formula": "50%+自身の基礎ATK200ごと×14% (合計最大200% ※基礎ATK2200以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 50,
-          "rate": 14,
-          "max_rate": 200
+          "rate": 14
         },
         "effect_class": "buff",
         "target": "魔族の味方",
@@ -27926,9 +27598,7 @@
         "formula": "50%+自身の基礎ATK200ごと×8% (合計最大150% ※基礎ATK2600以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 50,
-          "rate": 8,
-          "max_rate": 150
+          "rate": 8
         },
         "effect_class": "buff",
         "target": "一番右に配置されている味方",
@@ -27963,9 +27633,7 @@
         "display_value": "前から2番目の味方と同じ位置",
         "formula": "",
         "type": "ノーツ移動",
-        "value": {
-          "index": 2
-        },
+        "value": {},
         "effect_class": "note",
         "target": "一番後方の味方",
         "duration": null,
@@ -28264,7 +27932,7 @@
         "formula": "スタンゲージを0にしてスタンさせる",
         "type": "強制スタン",
         "value": {
-          "percent": 100
+          "rate": 100
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -28779,7 +28447,10 @@
         "display_value": "40%～80%",
         "formula": "40%+10%×n (合計最大80%)",
         "type": "被ダメージアップ",
-        "value": {},
+        "value": {
+          "rate": 40,
+          "max_rate": 80
+        },
         "effect_class": "debuff",
         "target": "敵全体",
         "duration": {
@@ -28802,9 +28473,7 @@
         "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 18,
-          "max_rate": 300
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "人間または雷属性の味方",
@@ -28874,7 +28543,7 @@
         "formula": "スタンゲージを0にしてスタンさせる",
         "type": "強制スタン",
         "value": {
-          "percent": 100
+          "rate": 100
         },
         "effect_class": "debuff",
         "target": "ランダムな敵2体",
@@ -28898,9 +28567,7 @@
         "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 18,
-          "max_rate": 300
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "人間または雷属性の味方",
@@ -29295,8 +28962,14 @@
         "effect_class": "main",
         "target": "敵単体",
         "duration": null,
-        "notes": [],
-        "raw": "敵単体に94%×5回のダメージ",
+        "notes": [
+          {
+            "type": "boost",
+            "text": "チャージ状態の時、94%×7回",
+            "label": "強化"
+          }
+        ],
+        "raw": "敵単体に94%×5回(チャージ状態の時、94%×7回)のダメージ",
         "children": [],
         "tags": [
           "単体攻撃"
@@ -29313,8 +28986,14 @@
         "effect_class": "debuff",
         "target": "敵単体",
         "duration": null,
-        "notes": [],
-        "raw": "スタンゲージ4減少(チャージ状態の時、攻撃回数2回増加/スタンゲージ減少量1増加)",
+        "notes": [
+          {
+            "type": "boost",
+            "text": "チャージ状態の時、5",
+            "label": "強化"
+          }
+        ],
+        "raw": "スタンゲージ4減少(チャージ状態の時、スタンゲージ5減少)",
         "children": [],
         "tags": [],
         "inherited_target": true
@@ -29387,7 +29066,7 @@
         "formula": "スタンゲージを0にしてスタンさせる",
         "type": "強制スタン",
         "value": {
-          "percent": 100
+          "rate": 100
         },
         "effect_class": "debuff",
         "target": "対象とその左右2レーンにいる敵すべて",
@@ -29503,12 +29182,37 @@
         "display_value": "200",
         "formula": "",
         "type": "EXゲージ減少",
-        "value": {},
+        "value": {
+          "amount": 200
+        },
         "effect_class": "debuff",
         "target": "敵単体",
         "duration": null,
         "notes": [],
-        "raw": "EXゲージを200減少(チャージ状態の時、減少させたEXゲージの内、50%味方のEXゲージを回復)",
+        "raw": "EXゲージを200減少",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "敵EX最大200吸収",
+        "formula": "吸収量の50%を味方EX回復 (最大100回復)",
+        "type": "EXゲージ吸収",
+        "value": {
+          "amount": 200,
+          "rate": 50
+        },
+        "effect_class": "buff",
+        "target": "敵単体",
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "チャージ状態の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "チャージ状態の時、EXゲージを200吸収し、その内の50%味方のEXゲージを回復",
         "children": [],
         "tags": [],
         "inherited_target": true
@@ -30434,7 +30138,7 @@
         "formula": "付与されているあらゆるバフを解除",
         "type": "バフ解除",
         "value": {
-          "percent": 100
+          "rate": 100
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -30569,7 +30273,9 @@
         "display_value": "400",
         "formula": "",
         "type": "EXゲージ減少",
-        "value": {},
+        "value": {
+          "amount": 400
+        },
         "effect_class": "debuff",
         "target": "敵単体",
         "duration": null,
@@ -31012,9 +30718,7 @@
         "formula": "50%+自身の基礎ATK200ごと×14% (合計最大200% ※基礎ATK2200以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 50,
-          "rate": 14,
-          "max_rate": 200
+          "rate": 14
         },
         "effect_class": "buff",
         "target": "闇属性の味方",
@@ -31032,9 +30736,7 @@
         "formula": "25%+自身の基礎ATK200ごと×7% (合計最大100% ※基礎ATK2200以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 25,
-          "rate": 7,
-          "max_rate": 100
+          "rate": 7
         },
         "effect_class": "buff",
         "target": "攻撃タイプ魔法の味方",
@@ -32112,9 +31814,12 @@
     "effects": [
       {
         "display_value": "120%～220%×10回",
-        "formula": "{120%+ラッシュ数×2 (合計最大220%)}×10回",
+        "formula": "{120%+ラッシュ数×2% (合計最大220%)}×10回",
         "type": "ダメージ",
-        "value": {},
+        "value": {
+          "rate": 120,
+          "hit": 10
+        },
         "effect_class": "main",
         "target": "敵単体",
         "duration": null,
@@ -32225,9 +31930,7 @@
         "formula": "50%+自身の基礎ATK200ごと×13% (合計最大200% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 50,
-          "rate": 13,
-          "max_rate": 200
+          "rate": 13
         },
         "effect_class": "buff",
         "target": "神族の味方",
@@ -32321,9 +32024,7 @@
         "formula": "50%+自身の基礎ATK200ごと×18% (合計最大250% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 50,
-          "rate": 18,
-          "max_rate": 250
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "味方全体",
@@ -32453,9 +32154,7 @@
         "formula": "50%+自身の基礎ATK200ごと×18% (合計最大250% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 50,
-          "rate": 18,
-          "max_rate": 250
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "味方全体",
@@ -33690,51 +33389,6 @@
         "tags": [
           ""
         ]
-      },
-      {
-        "display_value": "5",
-        "formula": "",
-        "type": "ノーツ移動",
-        "value": {},
-        "effect_class": "buff",
-        "target": "神族の味方",
-        "duration": null,
-        "notes": [
-          {
-            "type": "condition",
-            "text": "自身を含む味方の守護天使の数が3体以上の時",
-            "label": "発動条件"
-          }
-        ],
-        "tags": [
-          ""
-        ]
-      },
-      {
-        "display_value": "",
-        "formula": "攻撃タイプ打撃からの被ダメージが20％増加",
-        "type": "破砕",
-        "value": {},
-        "effect_class": "debuff",
-        "target": "敵単体",
-        "duration": {
-          "ct": 1
-        },
-        "notes": [
-          {
-            "type": "condition",
-            "text": "自身を含む味方の守護天使の数が5体の時",
-            "label": "発動条件"
-          },
-          {
-            "type": "property",
-            "text": "優先発動 ※スキル発動前に効果が発動する",
-            "label": "特性"
-          }
-        ],
-        "tags": [
-          ""
-        ]
       }
     ]
   },
@@ -34130,13 +33784,13 @@
           "max": 4
         },
         "effect_class": "note",
-        "target": "味方",
+        "target": "味方全体",
         "duration": null,
         "notes": [],
         "raw": "味方全体ノーツを4前方に移動",
         "children": [],
         "tags": [],
-        "inherited_target": true
+        "inherited_target": false
       },
       {
         "display_value": "50%",
@@ -34505,7 +34159,9 @@
         "display_value": "80",
         "formula": "",
         "type": "EXゲージ減少",
-        "value": {},
+        "value": {
+          "amount": 80
+        },
         "effect_class": "debuff",
         "target": "敵全体",
         "duration": null,
@@ -34719,7 +34375,10 @@
         "display_value": "3",
         "formula": "",
         "type": "ノーツ移動",
-        "value": {},
+        "value": {
+          "min": 3,
+          "max": 3
+        },
         "effect_class": "note",
         "target": "自身の右1レーンにいる味方",
         "duration": null,
@@ -35077,9 +34736,7 @@
         "formula": "50%+自身の基礎ATK200ごと×13% (合計最大200% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 50,
-          "rate": 13,
-          "max_rate": 200
+          "rate": 13
         },
         "effect_class": "buff",
         "target": "自身の右2レーンにいる味方",
@@ -35202,9 +34859,7 @@
         "formula": "50%+自身の基礎ATK200ごと×18% (合計最大250% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 50,
-          "rate": 18,
-          "max_rate": 250
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "味方全体",
@@ -35328,9 +34983,7 @@
         "formula": "50%+自身の基礎ATK200ごと×18% (合計最大250% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 50,
-          "rate": 18,
-          "max_rate": 250
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "味方全体",
@@ -35404,7 +35057,11 @@
         "display_value": "あらゆる固有ゲージを+1する",
         "formula": "",
         "type": "固有ゲージ増加",
-        "value": {},
+        "value": {
+          "amount": 1,
+          "max": 0,
+          "specific_gauge_name": "固有ゲージ"
+        },
         "effect_class": "buff",
         "target": "人間の味方",
         "duration": null,
@@ -35556,9 +35213,7 @@
         "display_value": "前から2番目の味方と同じ位置",
         "formula": "",
         "type": "ノーツ移動",
-        "value": {
-          "index": 2
-        },
+        "value": {},
         "effect_class": "note",
         "target": "一番後方の味方",
         "duration": null,
@@ -35799,9 +35454,7 @@
         "formula": "100%+自身の基礎ATK200ごと×13% (合計最大300% ※基礎ATK3200以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 13,
-          "max_rate": 300
+          "rate": 13
         },
         "effect_class": "buff",
         "target": "光属性の味方",
@@ -35850,7 +35503,9 @@
         "children": [
           {
             "type": "ノーツ戻り位置変更",
+            "display_value": "",
             "formula": "行動終了後、1CT位置に戻る",
+            "effect_class": "note",
             "notes": [
               {
                 "type": "condition",
@@ -35859,10 +35514,7 @@
               }
             ],
             "target": "",
-            "duration": null,
-            "value": {},
-            "display_value": "",
-            "effect_class": "note"
+            "duration": null
           }
         ],
         "tags": [],
@@ -35931,9 +35583,7 @@
         "formula": "50%+自身のHP2000ごと×8% (合計最大150% ※HP26000以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 50,
-          "rate": 8,
-          "max_rate": 150
+          "rate": 8
         },
         "effect_class": "buff",
         "target": "一番右に配置されている味方",
@@ -36053,9 +35703,7 @@
         "formula": "100%+自身のHP2000ごと×16% (合計最大300% ※HP26000以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 16,
-          "max_rate": 300
+          "rate": 16
         },
         "effect_class": "buff",
         "target": "味方全体",
@@ -36648,7 +36296,8 @@
         "formula": "",
         "type": "ノーツ移動",
         "value": {
-          "amount": 5
+          "min": 5,
+          "max": 5
         },
         "effect_class": "note",
         "target": "自身の左1レーンにいる味方",
@@ -36873,7 +36522,10 @@
         "display_value": "6～30",
         "formula": "混乱状態の敵の数×6吸収し、吸収量の100%を味方EX回復",
         "type": "EXゲージ吸収",
-        "value": {},
+        "value": {
+          "amount": 6,
+          "rate": 100
+        },
         "effect_class": "buff",
         "target": "自身",
         "duration": null,
@@ -37545,9 +37197,7 @@
         "display_value": "前から2番目の味方と同じ位置",
         "formula": "",
         "type": "ノーツ移動",
-        "value": {
-          "index": 2
-        },
+        "value": {},
         "effect_class": "note",
         "target": "一番後方の味方",
         "duration": null,
@@ -38196,6 +37846,11 @@
         },
         "notes": [
           {
+            "type": "condition",
+            "text": "雷属性の味方を3体以上編成している時",
+            "label": "発動条件"
+          },
+          {
             "type": "property",
             "text": "バフ解除無効",
             "label": "特性"
@@ -38679,7 +38334,8 @@
         "formula": "",
         "type": "ノーツ移動",
         "value": {
-          "amount": 4
+          "min": 4,
+          "max": 4
         },
         "effect_class": "note",
         "target": "魔族の味方",
@@ -38724,7 +38380,10 @@
         "display_value": "15～75",
         "formula": "毒状態の敵の数×15吸収し、吸収量の100%を味方EX回復",
         "type": "EXゲージ吸収",
-        "value": {},
+        "value": {
+          "amount": 15,
+          "rate": 100
+        },
         "effect_class": "buff",
         "target": "敵全体",
         "duration": null,
@@ -38935,7 +38594,7 @@
         "formula": "スタンゲージを0にしてスタンさせる",
         "type": "強制スタン",
         "value": {
-          "percent": 100
+          "rate": 100
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -39527,7 +39186,7 @@
         "formula": "スタンゲージを0にしてスタンさせる",
         "type": "強制スタン",
         "value": {
-          "percent": 100
+          "rate": 100
         },
         "effect_class": "debuff",
         "target": "敵全体",
@@ -39964,9 +39623,7 @@
         "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 18,
-          "max_rate": 300
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "闇属性の味方",
@@ -39984,7 +39641,8 @@
         "formula": "30%+10%×n (合計最大60%)",
         "type": "クリティカルダメージアップ",
         "value": {
-          "rate": 30
+          "rate": 30,
+          "max_rate": 60
         },
         "effect_class": "buff",
         "target": "闇属性の味方",
@@ -40325,7 +39983,9 @@
         "display_value": "0.25%～50%",
         "formula": "ラッシュ数×0.25% (最大50%)",
         "type": "クリティカルダメージアップ",
-        "value": {},
+        "value": {
+          "rate": 0.25
+        },
         "effect_class": "buff",
         "target": "自身",
         "duration": {
@@ -41413,14 +41073,14 @@
         },
         "notes": [
           {
-            "type": "condition",
-            "text": "チャージ状態の時",
-            "label": "発動条件"
-          },
-          {
             "type": "property",
             "text": "ソロ編成時は効果が発動しない",
             "label": "特性"
+          },
+          {
+            "type": "condition",
+            "text": "チャージ状態の時",
+            "label": "発動条件"
           }
         ],
         "raw": "チャージ状態の時、自身にステルス状態を付与(40CT)",
@@ -41642,9 +41302,7 @@
         "formula": "50%+自身の基礎ATK200ごと×13% (合計最大200% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 50,
-          "rate": 13,
-          "max_rate": 200
+          "rate": 13
         },
         "effect_class": "buff",
         "target": "人間または水属性の味方",
@@ -42434,7 +42092,11 @@
         "display_value": "220%～280%×10回",
         "formula": "{200%+消費したEXゲージ量×0.2%}×10回",
         "type": "ダメージ",
-        "value": {},
+        "value": {
+          "rate": 0.2,
+          "hit": 10,
+          "base": 200
+        },
         "effect_class": "main",
         "target": "敵単体",
         "duration": null,
@@ -42645,9 +42307,7 @@
         "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 18,
-          "max_rate": 300
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "魔族の味方",
@@ -42664,7 +42324,9 @@
         "display_value": "1%～60%",
         "formula": "ラッシュ数×1% (最大60%)",
         "type": "クリティカルダメージアップ",
-        "value": {},
+        "value": {
+          "rate": 1
+        },
         "effect_class": "buff",
         "target": "攻撃タイプ魔法の味方",
         "duration": {
@@ -43034,9 +42696,7 @@
         "formula": "100%+自身のHP2000ごと×16% (合計最大300% ※HP26000以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 16,
-          "max_rate": 300
+          "rate": 16
         },
         "effect_class": "buff",
         "target": "神族または闇属性の味方",
@@ -43217,9 +42877,7 @@
         "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 18,
-          "max_rate": 300
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "水属性または極星学園の味方",
@@ -43432,9 +43090,7 @@
         "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 18,
-          "max_rate": 300
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "水属性の味方",
@@ -43622,9 +43278,7 @@
         "formula": "100%+自身のHP2000ごと×16% (合計最大300% ※HP26000以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 16,
-          "max_rate": 300
+          "rate": 16
         },
         "effect_class": "buff",
         "target": "魔族または雷属性の味方",
@@ -44238,7 +43892,7 @@
             "label": "特性"
           }
         ],
-        "raw": "チーム内に同じメイン属性の魔族の味方が3体以上いる時、自身にその属性の「サブ属性」を付与する(40CT)(優先発動)【バフ解除無効】 ※サブ属性：属性指定スキルの条件や対象に含まれる(ダメージ計算には影響しない)",
+        "raw": "チーム内に同じメイン属性の魔族の味方が3体以上いる時、自身にその属性の「サブ属性」を付与する(40CT)(優先発動)【バフ解除無効】",
         "children": [],
         "tags": [],
         "inherited_target": false
@@ -44608,12 +44262,11 @@
     "effects": [
       {
         "display_value": "200%～400%",
-        "formula": "200%+ラッシュ数×2%(最大200%)",
+        "formula": "200%+ラッシュ数×2% (最大200%)",
         "type": "ダメージ",
         "value": {
           "rate": 200,
-          "add": 2,
-          "max": 200
+          "hit": 1
         },
         "effect_class": "main",
         "target": "敵全体",
@@ -44630,7 +44283,10 @@
         "display_value": "35%～80%",
         "formula": "35%+15%×n (合計最大80%)",
         "type": "被ダメージアップ",
-        "value": {},
+        "value": {
+          "rate": 35,
+          "max_rate": 80
+        },
         "effect_class": "debuff",
         "target": "敵全体",
         "duration": {
@@ -45383,6 +45039,11 @@
             "type": "property",
             "text": "バフ解除無効",
             "label": "特性"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
           }
         ],
         "raw": "カウンター[進攻]：水属性または流星学園附属の味方のノーツを前方に4～4移動(2回発動まで)を付与(50CT)【バフ解除無効】 ※2つの条件を満たした場合でも効果は重複しない",
@@ -45390,14 +45051,14 @@
           {
             "type": "ノーツ移動",
             "display_value": "4",
-            "formula": "",
             "value": {
               "min": 4,
               "max": 4
             },
-            "effect_class": "note",
             "target": "水属性または流星学園附属の味方",
-            "duration": null
+            "duration": null,
+            "formula": "",
+            "effect_class": "note"
           }
         ],
         "tags": [],
@@ -46468,9 +46129,7 @@
         "formula": "100%+自身のHP2000ごと×16% (合計最大300% ※HP26000以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 16,
-          "max_rate": 300
+          "rate": 16
         },
         "effect_class": "buff",
         "target": "炎属性または攻撃タイプ魔法の味方",
@@ -46600,9 +46259,7 @@
         "formula": "150%+自身のHP2000ごと×20% (合計最大400% ※HP26000以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 150,
-          "rate": 20,
-          "max_rate": 400
+          "rate": 20
         },
         "effect_class": "buff",
         "target": "炎属性または攻撃タイプ魔法の味方",
@@ -46715,9 +46372,7 @@
         "formula": "50%+自身の基礎ATK200ごと×13% (合計最大200% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 50,
-          "rate": 13,
-          "max_rate": 200
+          "rate": 13
         },
         "effect_class": "buff",
         "target": "自身の右2レーンにいる味方",
@@ -46826,9 +46481,7 @@
         "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 18,
-          "max_rate": 300
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "光属性または攻撃タイプ打撃の味方",
@@ -46922,9 +46575,7 @@
         "formula": "100%+自身の基礎ATK200ごと×25% (合計最大400% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 25,
-          "max_rate": 400
+          "rate": 25
         },
         "effect_class": "buff",
         "target": "光属性または攻撃タイプ打撃の味方",
@@ -47801,7 +47452,13 @@
         "effect_class": "buff",
         "target": "人間または水属性の味方",
         "duration": null,
-        "notes": [],
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
         "raw": "人間または水属性の味方に付与されているデバフ・状態異常効果をすべて解除 ※2つの条件を満たした場合でも効果は重複しない",
         "children": [],
         "tags": [],
@@ -47812,9 +47469,7 @@
         "formula": "50%+自身のHP2000ごと×5% (合計最大100% ※HP20000以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 50,
-          "rate": 5,
-          "max_rate": 100
+          "rate": 5
         },
         "effect_class": "buff",
         "target": "人間または水属性の味方",
@@ -47917,9 +47572,7 @@
         "formula": "100%+自身のHP2000ごと×19% (合計最大300% ※HP22000以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 19,
-          "max_rate": 300
+          "rate": 19
         },
         "effect_class": "buff",
         "target": "人間または水属性の味方",
@@ -48030,9 +47683,7 @@
         "formula": "100%+自身のHP2000ごと×19% (合計最大300% ※HP22000以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 19,
-          "max_rate": 300
+          "rate": 19
         },
         "effect_class": "buff",
         "target": "人間または水属性の味方",
@@ -48127,9 +47778,7 @@
         "formula": "50%+自身の基礎ATK200ごと×13% (合計最大200% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 50,
-          "rate": 13,
-          "max_rate": 200
+          "rate": 13
         },
         "effect_class": "buff",
         "target": "自身の右2レーンにいる味方",
@@ -48198,9 +47847,7 @@
         "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 18,
-          "max_rate": 300
+          "rate": 18
         },
         "effect_class": "buff",
         "target": "人間または光属性の味方",
@@ -48321,9 +47968,7 @@
         "formula": "100%+自身の基礎ATK200ごと×25% (合計最大400% ※基礎ATK2400以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 100,
-          "rate": 25,
-          "max_rate": 400
+          "rate": 25
         },
         "effect_class": "buff",
         "target": "人間または光属性の味方",
@@ -48510,9 +48155,7 @@
         "formula": "50%+自身の基礎ATK200ごと×12% (合計最大200% ※基礎ATK2600以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 50,
-          "rate": 12,
-          "max_rate": 200
+          "rate": 12
         },
         "effect_class": "buff",
         "target": "人間または魔族の味方",
@@ -48536,9 +48179,7 @@
         "formula": "25%+自身の基礎ATK200ごと×6% (合計最大100% ※基礎ATK2600以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 25,
-          "rate": 6,
-          "max_rate": 100
+          "rate": 6
         },
         "effect_class": "buff",
         "target": "人間または魔族の味方",
@@ -48618,9 +48259,7 @@
         "formula": "50%+自身の基礎ATK200ごと×12% (合計最大200% ※基礎ATK2600以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 50,
-          "rate": 12,
-          "max_rate": 200
+          "rate": 12
         },
         "effect_class": "buff",
         "target": "人間または魔族の味方",
@@ -48644,9 +48283,7 @@
         "formula": "25%+自身の基礎ATK200ごと×6% (合計最大100% ※基礎ATK2600以上)",
         "type": "ATKアップ",
         "value": {
-          "base": 25,
-          "rate": 6,
-          "max_rate": 100
+          "rate": 6
         },
         "effect_class": "buff",
         "target": "人間または魔族の味方",
