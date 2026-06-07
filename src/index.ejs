@@ -233,11 +233,14 @@ const characterMap = new Map(
     };
 
     const activeFilters = new Map();
+    const sortedItemsCache = new Map();
 
     const STORAGE_KEY = 'twinkle_skill_finder_state';
 
     let currentSortKey = 'release';
     let characterScopeMode = false;
+    let scheduledRenderFrame = 0;
+    let scheduledRenderTimer = 0;
 
     const getActiveValues = (group) =>
         activeFilters.get(group) || new Set();
@@ -397,17 +400,28 @@ const characterMap = new Map(
         });
     };
 
+    const getSortedItems = (sortKey) => {
+        if (!sortedItemsCache.has(sortKey)) {
+            const comparer =
+                comparers[sortKey] || compareRelease;
+
+            sortedItemsCache.set(
+                sortKey,
+                [...skillIndex].sort(comparer)
+            );
+        }
+
+        return sortedItemsCache.get(sortKey);
+    };
+
     const render = (sortKey = currentSortKey) => {
         currentSortKey = sortKey;
-
-        const comparer =
-            comparers[sortKey] || compareRelease;
 
         const fragment =
             document.createDocumentFragment();
 
         const sortedItems =
-            [...skillIndex].sort(comparer);
+            getSortedItems(sortKey);
 
         const matchedUnitIds = new Set();
         const visibleSkillIds = new Set();
@@ -451,6 +465,29 @@ const characterMap = new Map(
         countElement.textContent = visibleCount;
         emptyResultElement.hidden = visibleCount !== 0;
         setActiveTab(sortKey);
+    };
+
+    const scheduleRender = (sortKey = currentSortKey) => {
+        currentSortKey = sortKey;
+        setActiveTab(sortKey);
+
+        if (scheduledRenderFrame) {
+            cancelAnimationFrame(scheduledRenderFrame);
+        }
+
+        if (scheduledRenderTimer) {
+            clearTimeout(scheduledRenderTimer);
+        }
+
+        scheduledRenderFrame = requestAnimationFrame(() => {
+            scheduledRenderFrame = 0;
+
+            scheduledRenderTimer = setTimeout(() => {
+                scheduledRenderTimer = 0;
+                render(currentSortKey);
+                saveState();
+            }, 0);
+        });
     };
 
     const serializeFilters = () =>
@@ -557,14 +594,12 @@ const characterMap = new Map(
         characterScopeMode = false;
         setSingleFilter('skill_group', 'all');
         syncControlsFromState();
-        saveState();
-        render();
+        scheduleRender();
     };
 
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
-            render(tab.dataset.sort);
-            saveState();
+            scheduleRender(tab.dataset.sort);
         });
     });
 
@@ -582,8 +617,7 @@ const characterMap = new Map(
                 toggleMultiFilter(button);
             }
 
-            render();
-            saveState();
+            scheduleRender();
         });
     });
 
@@ -600,8 +634,7 @@ const characterMap = new Map(
     });
 
     searchInput.addEventListener('input', () => {
-        render();
-        saveState();
+        scheduleRender();
     });
 
     clearFiltersButton.addEventListener('click', resetFilters);
@@ -612,8 +645,7 @@ const characterMap = new Map(
                 button.dataset.characterScopeValue === 'character';
 
             updateCharacterScopeToggle();
-            render();
-            saveState();
+            scheduleRender();
         });
     });
 
