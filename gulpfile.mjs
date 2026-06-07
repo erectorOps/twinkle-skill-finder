@@ -60,6 +60,23 @@ export async function ejsFunc() {
     )
   );
 
+  const release_dates = JSON.parse(
+    await fs.readFile(
+      `${SRC}/data/release_dates.json`,
+      "utf8"
+    )
+  );
+
+  const releaseDateMap = new Map(release_dates.map(b => [b.unit_id, b]))
+  characters.forEach(a => {
+    const b = releaseDateMap.get(a.unit_id);
+    if (b) {
+      a.release_date = b.release_date;
+      a.release_date_raw = b.release_date_raw;
+      a.obtain = b.obtain;
+    }
+  });
+
   const pages = [
     "index.ejs"
   ];
