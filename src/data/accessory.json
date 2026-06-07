@@ -29116,7 +29116,7 @@
             "tags": []
           },
           {
-            "type": "弱点付与の効果時間を強化",
+            "type": "弱点属性の効果時間を強化",
             "display_value": "+5CT",
             "formula": "",
             "value": {
@@ -29205,7 +29205,7 @@
             "tags": []
           },
           {
-            "type": "弱点付与の効果時間を強化",
+            "type": "弱点属性の効果時間を強化",
             "display_value": "+5CT",
             "formula": "",
             "value": {
@@ -47563,6 +47563,250 @@
             "duration": null,
             "notes": [],
             "raw": "ATKの上昇値が100%+自身の基礎ATK200ごと×6.5%アップ/ATKアップの最大値をさらに200%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
+    "accessory_name": "シズハの頭飾り",
+    "equip_id": 3300265,
+    "illust_id": "equip_3300265",
+    "rarity": 3,
+    "unit_id": 1095003,
+    "character_id": 95,
+    "character_name": "シズハ《心願》",
+    "unit_name": "聖杯の真魔法少女",
+    "exclusive_unit_name": "[聖杯の真魔法少女]シズハ《心願》",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": 846,
+      "ex": null,
+      "ex_up": null,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 1,
+        "parameter_value": 846
+      }
+    ],
+    "skill_ids": {
+      "EX1": 10950031,
+      "EX2": 10950032,
+      "EX2+": "10950032_plus"
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10950031,
+        "text": "ダメージ50％アップ",
+        "effects_text": [
+          "ダメージ50％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+50%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ50%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10950032,
+        "text": "ダメージ125％アップ/攻撃タイプ魔法の味方のATKの上昇値が攻撃タイプ魔法の味方の数×30％アップ",
+        "effects_text": [
+          "ダメージ125％アップ",
+          "攻撃タイプ魔法の味方のATKの上昇値が攻撃タイプ魔法の味方の数×30％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+125%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ125%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+30%～150%",
+            "formula": "攻撃タイプ魔法の味方の数×30%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "攻撃タイプ魔法の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "攻撃タイプ魔法の味方のATKの上昇値が攻撃タイプ魔法の味方の数×30%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2+",
+        "skill_id": "10950032_plus",
+        "text": "ダメージ200％アップ/攻撃タイプ魔法の味方のATKの上昇値が攻撃タイプ魔法の味方の数×30％アップ",
+        "effects_text": [
+          "ダメージ200％アップ",
+          "攻撃タイプ魔法の味方のATKの上昇値が攻撃タイプ魔法の味方の数×30％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+200%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ200%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+30%～150%",
+            "formula": "攻撃タイプ魔法の味方の数×30%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "攻撃タイプ魔法の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "攻撃タイプ魔法の味方のATKの上昇値が攻撃タイプ魔法の味方の数×30%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「ヴィクトリアフェザー」のダメージ50％アップ/\nEX2「デザイアトランスミッション」のダメージ125％アップ/攻撃タイプ魔法の味方のATKの上昇値が攻撃タイプ魔法の味方の数×30％アップ/\nEX2+「ヴィクトリアオーバーヘヴン」のダメージ200％アップ/攻撃タイプ魔法の味方のATKの上昇値が攻撃タイプ魔法の味方の数×30％アップ",
+    "ability_full": "EX1「ヴィクトリアフェザー」のダメージ50％アップ/\nEX2「デザイアトランスミッション」のダメージ125％アップ/攻撃タイプ魔法の味方のATKの上昇値が攻撃タイプ魔法の味方の数×30％アップ/\nEX2+「ヴィクトリアオーバーヘヴン」のダメージ200％アップ/攻撃タイプ魔法の味方のATKの上昇値が攻撃タイプ魔法の味方の数×30％アップ",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10950031,
+        "text": "ダメージ50％アップ",
+        "effects_text": [
+          "ダメージ50％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+50%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ50%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10950032,
+        "text": "ダメージ125％アップ/攻撃タイプ魔法の味方のATKの上昇値が攻撃タイプ魔法の味方の数×30％アップ",
+        "effects_text": [
+          "ダメージ125％アップ",
+          "攻撃タイプ魔法の味方のATKの上昇値が攻撃タイプ魔法の味方の数×30％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+125%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ125%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+30%～150%",
+            "formula": "攻撃タイプ魔法の味方の数×30%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "攻撃タイプ魔法の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "攻撃タイプ魔法の味方のATKの上昇値が攻撃タイプ魔法の味方の数×30%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2+",
+        "skill_id": "10950032_plus",
+        "text": "ダメージ200％アップ/攻撃タイプ魔法の味方のATKの上昇値が攻撃タイプ魔法の味方の数×30％アップ",
+        "effects_text": [
+          "ダメージ200％アップ",
+          "攻撃タイプ魔法の味方のATKの上昇値が攻撃タイプ魔法の味方の数×30％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+200%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ200%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+30%～150%",
+            "formula": "攻撃タイプ魔法の味方の数×30%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "攻撃タイプ魔法の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "攻撃タイプ魔法の味方のATKの上昇値が攻撃タイプ魔法の味方の数×30%アップ",
             "children": [],
             "tags": []
           }

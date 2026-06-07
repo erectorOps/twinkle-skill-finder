@@ -98,3 +98,4 @@ sw.*
 .publish/
 
 .vscode/
+__pycache__

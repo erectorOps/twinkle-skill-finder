@@ -8442,6 +8442,51 @@
     "specific_gauge_data": []
   },
   {
+    "unit_id": 1095003,
+    "character_name": "シズハ《心願》",
+    "character_name_kana": "シスハ",
+    "unit_name": "聖杯の真魔法少女",
+    "rarity": 5,
+    "attr_type": {
+      "id": "3",
+      "label": "雷",
+      "icon": "attribute_03.png"
+    },
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "camps": [
+      {
+        "id": 1,
+        "label": "人間",
+        "icon": "race_1.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 5,
+        "label": "流星学園附属",
+        "icon": "affiliation_02.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "1",
+        "label": "魔法",
+        "icon": "icon_equipment_01_01.png"
+      }
+    ],
+    "specific_gauge_data": {
+      "specific_name": "ヴィクトリア状態",
+      "specific_detail": "◆通常状態\n通常状態中、攻撃タイプ魔法の味方がEXスキル1、または、EXスキル1+を使用するとヴィクトリアゲージが「1」、EXスキル2、または、EXスキル2+を使用するとヴィクトリアゲージが「2」溜まる。\nヴィクトリアゲージが「8」溜まると「ヴィクトリア状態」に移行する。\n\n◆ヴィクトリア状態\nヴィクトリア状態に移行直後、攻撃タイプ魔法の味方の行動CT20％短縮（各対象の行動終了後、ACTバーからノーツが戻る際に1回まで）\nヴィクトリア状態中、「EXスキル2」が「EXスキル2+」に変化する。\nEXスキル2+を使用するとヴィクトリア状態が解除され、「通常状態」に戻る。",
+      "icon_id": 52,
+      "is_unlock": 1,
+      "is_strengthen": 0
+    }
+  },
+  {
     "unit_id": 1096001,
     "character_name": "イングリット",
     "character_name_kana": "インクリット",

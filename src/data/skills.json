@@ -31,7 +31,9 @@
         "display_value": "15.6%",
         "formula": "",
         "type": "重さダウン",
-        "value": 15.6,
+        "value": {
+          "rate": 15.6
+        },
         "effect_class": "debuff",
         "target": "敵単体",
         "duration": {
@@ -128,7 +130,7 @@
         "formula": "攻撃時EXゲージ増加量低下",
         "type": "萎縮",
         "value": {
-          "percent": 26
+          "rate": 26
         },
         "effect_class": "debuff",
         "target": "対象とその左右2レーンにいる敵すべて",
@@ -1231,7 +1233,7 @@
         "formula": "ノーツが移動しなくなる",
         "type": "凍傷",
         "value": {
-          "percent": 75
+          "rate": 75
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -1400,47 +1402,6 @@
         "display_value": "10",
         "formula": "",
         "type": "ノックバック",
-        "value": {},
-        "effect_class": "debuff",
-        "target": "対象とその左右2レーンにいる敵",
-        "duration": null,
-        "notes": [
-          {
-            "type": "condition",
-            "text": "ノーツが10以下の相手の場合",
-            "label": "発動条件"
-          },
-          {
-            "type": "property",
-            "text": "対象から離れるほど-1ずつ減少",
-            "label": "回数"
-          }
-        ],
-        "tags": [
-          ""
-        ]
-      },
-      {
-        "display_value": "302%",
-        "formula": "",
-        "type": "ダメージ",
-        "value": {
-          "rate": 302,
-          "hit": 1
-        },
-        "effect_class": "main",
-        "target": "対象とその左右2レーンにいる敵すべて",
-        "duration": null,
-        "notes": [],
-        "raw": "(ノーツが10以下の相手の場合、302%のダメージ",
-        "children": [],
-        "tags": [],
-        "inherited_target": true
-      },
-      {
-        "display_value": "10",
-        "formula": "",
-        "type": "ノックバック",
         "value": {
           "min": 10,
           "max": 10
@@ -1512,7 +1473,7 @@
         "formula": "ノーツが移動しなくなる",
         "type": "凍傷",
         "value": {
-          "percent": 100
+          "rate": 100
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -2143,7 +2104,7 @@
       {
         "display_value": "",
         "formula": "全属性攻撃が弱点になる",
-        "type": "弱点付与",
+        "type": "弱点属性",
         "value": {},
         "effect_class": "debuff",
         "target": "敵単体",
@@ -2277,7 +2238,7 @@
       },
       {
         "display_value": "6",
-        "formula": "",
+        "formula": "スタンゲージが0になるとスタン状態になる",
         "type": "スタンゲージ減少",
         "value": {
           "amount": 6
@@ -3578,7 +3539,7 @@
       },
       {
         "display_value": "9",
-        "formula": "",
+        "formula": "スタンゲージが0になるとスタン状態になる",
         "type": "スタンゲージ減少",
         "value": {
           "amount": 9
@@ -4071,7 +4032,7 @@
         "formula": "最大HPの1.5%を5CT毎に減らす",
         "type": "火傷",
         "value": {
-          "percent": 50
+          "rate": 50
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -4615,7 +4576,9 @@
         "display_value": "50%",
         "formula": "",
         "type": "重さダウン",
-        "value": 50,
+        "value": {
+          "rate": 50
+        },
         "effect_class": "debuff",
         "target": "敵全体",
         "duration": {
@@ -5168,7 +5131,9 @@
         "display_value": "47%",
         "formula": "",
         "type": "重さアップ",
-        "value": 47,
+        "value": {
+          "rate": 47
+        },
         "effect_class": "buff",
         "target": "自身",
         "duration": {
@@ -5212,7 +5177,7 @@
       },
       {
         "display_value": "6",
-        "formula": "",
+        "formula": "スタンゲージが0になるとスタン状態になる",
         "type": "スタンゲージ減少",
         "value": {
           "amount": 6
@@ -5418,7 +5383,7 @@
         "target": "味方",
         "duration": null,
         "notes": [],
-        "raw": "味方のHPを10%回復 ※ステルス状態：攻撃対象から除外されるようになる(範囲ダメージ含む)。味方が1人だけの状態では発動しない。",
+        "raw": "味方のHPを10%回復",
         "children": [],
         "tags": [],
         "inherited_target": false
@@ -5502,7 +5467,7 @@
             "label": "特性"
           }
         ],
-        "raw": "ステルス状態を付与(20CT) ※ステルス状態：攻撃対象から除外されるようになる(範囲ダメージ含む)。味方が1人だけの状態では発動しない。",
+        "raw": "ステルス状態を付与(20CT)",
         "children": [],
         "tags": [],
         "inherited_target": true
@@ -5564,13 +5529,13 @@
           "max": 4
         },
         "effect_class": "note",
-        "target": "自身と自身の左1レーンの味方",
+        "target": "自身の左1レーンの味方",
         "duration": null,
         "notes": [],
         "raw": "自身の左1レーンのノーツを4前方に移動",
         "children": [],
         "tags": [],
-        "inherited_target": true
+        "inherited_target": false
       },
       {
         "display_value": "20%",
@@ -6288,7 +6253,7 @@
         "formula": "最大HPの1.5%を5CT毎に減らす",
         "type": "火傷",
         "value": {
-          "percent": 50
+          "rate": 50
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -6360,7 +6325,7 @@
         "formula": "最大HPの1.5%を5CT毎に減らす",
         "type": "火傷",
         "value": {
-          "percent": 36
+          "rate": 36
         },
         "effect_class": "debuff",
         "target": "敵全体",
@@ -6427,7 +6392,9 @@
         "display_value": "56%",
         "formula": "",
         "type": "重さアップ",
-        "value": 56,
+        "value": {
+          "rate": 56
+        },
         "effect_class": "buff",
         "target": "行動CTが一番遅い味方",
         "duration": {
@@ -7439,7 +7406,7 @@
         "inherited_target": false
       },
       {
-        "display_value": 400,
+        "display_value": "400",
         "formula": "",
         "type": "EXゲージ減少",
         "value": {},
@@ -7584,7 +7551,7 @@
       },
       {
         "display_value": "20～80",
-        "formula": "20+自身の基礎ATK150ごと×4(合計最大80% ※基礎ATK2250以上)",
+        "formula": "20+自身の基礎ATK150ごと×4(合計最大80 ※基礎ATK2250以上)",
         "type": "EXゲージ吸収",
         "value": {},
         "effect_class": "buff",
@@ -7640,7 +7607,9 @@
         "display_value": "56%",
         "formula": "",
         "type": "重さアップ",
-        "value": 56,
+        "value": {
+          "rate": 56
+        },
         "effect_class": "buff",
         "target": "味方全体",
         "duration": {
@@ -7831,7 +7800,7 @@
       },
       {
         "display_value": "5",
-        "formula": "",
+        "formula": "スタンゲージが0になるとスタン状態になる",
         "type": "スタンゲージ減少",
         "value": {
           "amount": 5
@@ -7940,7 +7909,9 @@
         "display_value": "73.7%",
         "formula": "",
         "type": "重さアップ",
-        "value": 73.7,
+        "value": {
+          "rate": 73.7
+        },
         "effect_class": "buff",
         "target": "味方全体",
         "duration": {
@@ -8133,9 +8104,9 @@
               "min": 8,
               "max": 8
             },
+            "effect_class": "note",
             "target": "雷属性の味方",
-            "duration": null,
-            "effect_class": "buff"
+            "duration": null
           }
         ],
         "tags": [],
@@ -8413,7 +8384,7 @@
       },
       {
         "display_value": "6",
-        "formula": "",
+        "formula": "スタンゲージが0になるとスタン状態になる",
         "type": "スタンゲージ減少",
         "value": {
           "amount": 6
@@ -8786,7 +8757,7 @@
         "formula": "ノーツが移動しなくなる",
         "type": "麻痺",
         "value": {
-          "percent": 100
+          "rate": 100
         },
         "effect_class": "debuff",
         "target": "敵全体",
@@ -9025,7 +8996,7 @@
         "target": "味方全体",
         "duration": null,
         "notes": [],
-        "raw": "味方全体に「黎明の恩寵」の効果 ※黎明の恩寵：スキル発動時にスタン中の味方のスタン状態を回復し、スタンゲージを最大まで回復",
+        "raw": "味方全体に「黎明の恩寵」の効果",
         "children": [
           {
             "type": "スタン回復",
@@ -9364,9 +9335,9 @@
               "min": 4,
               "max": 4
             },
+            "effect_class": "note",
             "target": "人間または水属性の味方",
-            "duration": null,
-            "effect_class": "buff"
+            "duration": null
           }
         ],
         "tags": [],
@@ -9411,14 +9382,14 @@
         },
         "notes": [
           {
-            "type": "property",
-            "text": "バフ解除無効",
-            "label": "特性"
-          },
-          {
             "type": "condition",
             "text": "自身以外の味方のEXスキル発動時",
             "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "バフ解除無効",
+            "label": "特性"
           }
         ],
         "raw": "自身にカウンター誘発を付与(50CT)【バフ解除無効】",
@@ -9451,6 +9422,11 @@
             "type": "property",
             "text": "バフ解除無効",
             "label": "特性"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
           }
         ],
         "raw": "カウンター[猛攻]：人間または水属性の味方のATK300%アップ(30CT)を付与(2回発動まで)【バフ解除無効】(カウンター効果は重複しない) ※2つの条件を満たした場合でも効果は重複しない",
@@ -9462,6 +9438,7 @@
               "ct": 30
             },
             "display_value": "300%",
+            "formula": "",
             "effect_class": "buff"
           }
         ],
@@ -9571,7 +9548,7 @@
         "formula": "攻撃時EXゲージ増加量低下",
         "type": "萎縮【大】",
         "value": {
-          "percent": 50
+          "rate": 50
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -9649,7 +9626,7 @@
         "formula": "最大HPの1.8%を5CT毎に減らす",
         "type": "火傷【大】",
         "value": {
-          "percent": 75
+          "rate": 75
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -9707,7 +9684,7 @@
         "formula": "攻撃時EXゲージ増加量低下",
         "type": "萎縮",
         "value": {
-          "percent": 36
+          "rate": 36
         },
         "effect_class": "debuff",
         "target": "敵全体",
@@ -10118,7 +10095,7 @@
         "formula": "最大HPの1.5%を5CT毎に減らす",
         "type": "毒",
         "value": {
-          "percent": 50
+          "rate": 50
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -10353,7 +10330,7 @@
         "formula": "ノーツが移動しなくなる",
         "type": "麻痺",
         "value": {
-          "percent": 33
+          "rate": 33
         },
         "effect_class": "debuff",
         "target": "対象とその左右1レーンにいる敵すべて",
@@ -11291,7 +11268,7 @@
       },
       {
         "display_value": "3",
-        "formula": "",
+        "formula": "スタンゲージが0になるとスタン状態になる",
         "type": "スタンゲージ減少",
         "value": {
           "amount": 3
@@ -11623,7 +11600,7 @@
         "formula": "ノーツが移動しなくなる",
         "type": "麻痺",
         "value": {
-          "percent": 50
+          "rate": 50
         },
         "effect_class": "debuff",
         "target": "対象の敵とノーツが前後3以内にいる敵すべて",
@@ -12169,7 +12146,9 @@
         "display_value": "35.2%",
         "formula": "",
         "type": "重さアップ",
-        "value": 35.2,
+        "value": {
+          "rate": 35.2
+        },
         "effect_class": "buff",
         "target": "水属性の味方",
         "duration": {
@@ -12634,7 +12613,7 @@
         "formula": "EXスキルが使用できなくなる",
         "type": "封印",
         "value": {
-          "percent": 75
+          "rate": 75
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -13128,8 +13107,8 @@
         "inherited_target": false
       },
       {
-        "display_value": "0.5%～2.5%",
-        "formula": "ラッシュ数×0.5%",
+        "display_value": "0.5%～50%",
+        "formula": "ラッシュ数×0.5%(最大50%)",
         "type": "クリティカル率アップ",
         "value": {
           "rate": 0.5
@@ -13273,7 +13252,7 @@
         "formula": "ノーツが移動しなくなる",
         "type": "凍傷",
         "value": {
-          "percent": 50
+          "rate": 50
         },
         "effect_class": "debuff",
         "target": "対象の敵とノーツが前後3以内にいる敵すべて",
@@ -14078,7 +14057,9 @@
         "display_value": "50%",
         "formula": "",
         "type": "重さアップ",
-        "value": 50,
+        "value": {
+          "rate": 50
+        },
         "effect_class": "buff",
         "target": "自身",
         "duration": {
@@ -14154,9 +14135,9 @@
               "min": 4,
               "max": 4
             },
+            "effect_class": "note",
             "target": "魔族または炎属性の味方",
-            "duration": null,
-            "effect_class": "buff"
+            "duration": null
           }
         ],
         "tags": [],
@@ -14204,14 +14185,14 @@
         },
         "notes": [
           {
-            "type": "property",
-            "text": "バフ解除無効",
-            "label": "特性"
-          },
-          {
             "type": "condition",
             "text": "自身以外の味方のEXスキル発動時",
             "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "バフ解除無効",
+            "label": "特性"
           }
         ],
         "raw": "自身にカウンター誘発を付与(50CT)【バフ解除無効】",
@@ -14244,6 +14225,11 @@
             "type": "property",
             "text": "バフ解除無効",
             "label": "特性"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
           }
         ],
         "raw": "カウンター[猛攻]：魔族または炎属性の味方のATK300%アップ(30CT)を付与(2回発動まで)【バフ解除無効】(カウンター効果は重複しない) ※2つの条件を満たした場合でも効果は重複しない",
@@ -14255,6 +14241,7 @@
               "ct": 30
             },
             "display_value": "300%",
+            "formula": "",
             "effect_class": "buff"
           }
         ],
@@ -14326,14 +14313,14 @@
         },
         "notes": [
           {
-            "type": "property",
-            "text": "バフ解除無効",
-            "label": "特性"
-          },
-          {
             "type": "condition",
             "text": "自身以外の味方のEXスキル発動時",
             "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "バフ解除無効",
+            "label": "特性"
           }
         ],
         "raw": "自身にカウンター誘発を付与(50CT)【バフ解除無効】",
@@ -14366,6 +14353,11 @@
             "type": "property",
             "text": "バフ解除無効",
             "label": "特性"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
           }
         ],
         "raw": "カウンター[猛攻]：魔族または炎属性の味方のATK300%アップ(30CT)を付与(2回発動まで)【バフ解除無効】(カウンター効果は重複しない) ※2つの条件を満たした場合でも効果は重複しない",
@@ -14377,6 +14369,7 @@
               "ct": 30
             },
             "display_value": "300%",
+            "formula": "",
             "effect_class": "buff"
           }
         ],
@@ -14456,7 +14449,7 @@
         "formula": "スキル使用以外のランダムな行動をする",
         "type": "混乱",
         "value": {
-          "percent": 24
+          "rate": 24
         },
         "effect_class": "debuff",
         "target": "敵全体",
@@ -14802,7 +14795,7 @@
         "formula": "ノーツが移動しなくなる",
         "type": "麻痺",
         "value": {
-          "percent": 75
+          "rate": 75
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -14932,7 +14925,7 @@
         "formula": "スキル使用以外のランダムな行動をする",
         "type": "混乱",
         "value": {
-          "percent": 75
+          "rate": 75
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -15440,9 +15433,9 @@
               "min": 8,
               "max": 8
             },
+            "effect_class": "note",
             "target": "炎属性の味方",
-            "duration": null,
-            "effect_class": "buff"
+            "duration": null
           }
         ],
         "tags": [],
@@ -15716,7 +15709,9 @@
         "display_value": "13%",
         "formula": "",
         "type": "重さダウン",
-        "value": 13,
+        "value": {
+          "rate": 13
+        },
         "effect_class": "debuff",
         "target": "対象とその左右2レーンにいる敵すべて",
         "duration": {
@@ -15809,7 +15804,7 @@
         "raw": "チーム内の異なる属性が5種類以上の時、敵単体に「極天の呪縛」を付与する(8CT)",
         "children": [
           {
-            "type": "弱点付与",
+            "type": "弱点属性",
             "formula": "全属性攻撃が弱点になる",
             "target": "敵単体",
             "duration": {
@@ -15916,7 +15911,7 @@
         "raw": "チーム内の異なる属性が5種類以上の時、敵全体に「極天の呪縛」を付与する(8CT)",
         "children": [
           {
-            "type": "弱点付与",
+            "type": "弱点属性",
             "formula": "全属性攻撃が弱点になる",
             "target": "敵全体",
             "duration": {
@@ -16472,7 +16467,7 @@
         "formula": "攻撃時EXゲージ増加量低下",
         "type": "萎縮",
         "value": {
-          "percent": 39
+          "rate": 39
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -16676,7 +16671,7 @@
         "formula": "EXスキルが使用できなくなる",
         "type": "封印",
         "value": {
-          "percent": 100
+          "rate": 100
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -16705,7 +16700,7 @@
         "formula": "攻撃時EXゲージ増加量低下",
         "type": "萎縮【大】",
         "value": {
-          "percent": 100
+          "rate": 100
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -16885,7 +16880,7 @@
           "max": 6
         },
         "effect_class": "note",
-        "target": "味方",
+        "target": "サブ属性が付与されている味方",
         "duration": null,
         "notes": [],
         "raw": "サブ属性が付与されている味方のノーツを6～6前方に移動",
@@ -17344,6 +17339,7 @@
               "ct": 40
             },
             "display_value": "60%",
+            "formula": "",
             "effect_class": "buff"
           }
         ],
@@ -17484,9 +17480,9 @@
               "min": 5,
               "max": 5
             },
+            "effect_class": "note",
             "target": "人間の味方",
-            "duration": null,
-            "effect_class": "buff"
+            "duration": null
           }
         ],
         "tags": [],
@@ -17675,8 +17671,14 @@
         "effect_class": "note",
         "target": "水属性の味方",
         "duration": null,
-        "notes": [],
-        "raw": "し、さらに水属性の味方のノーツを5～5前方に移動",
+        "notes": [
+          {
+            "type": "condition",
+            "text": "味方のHPがオーバーヒール状態(100%超)の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "味方のHPがオーバーヒール状態(100%超)の時、水属性の味方のノーツを5～5前方に移動",
         "children": [],
         "tags": [],
         "inherited_target": false
@@ -18087,9 +18089,9 @@
               "min": 5,
               "max": 5
             },
+            "effect_class": "note",
             "target": "炎属性または水属性の味方",
-            "duration": null,
-            "effect_class": "buff"
+            "duration": null
           }
         ],
         "tags": [],
@@ -18160,6 +18162,11 @@
             "type": "condition",
             "text": "チーム内の異なる属性が3種類以上の時",
             "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "この効果は重複しない",
+            "label": "特性"
           }
         ],
         "raw": "チーム内の異なる属性が3種類以上の時、自身に「螺旋の恩寵」の効果(10CT)※この効果は重複しない",
@@ -18323,7 +18330,9 @@
         "display_value": "69%",
         "formula": "",
         "type": "重さアップ",
-        "value": 69,
+        "value": {
+          "rate": 69
+        },
         "effect_class": "buff",
         "target": "味方全体",
         "duration": {
@@ -18503,7 +18512,7 @@
         "formula": "ノーツが移動しなくなる",
         "type": "麻痺",
         "value": {
-          "percent": 50
+          "rate": 50
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -18801,7 +18810,7 @@
         "formula": "最大HPの1.8%を5CT毎に減らす",
         "type": "火傷【大】",
         "value": {
-          "percent": 75
+          "rate": 75
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -18940,7 +18949,7 @@
         "formula": "ノーツが移動しなくなる",
         "type": "麻痺",
         "value": {
-          "percent": 100
+          "rate": 100
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -19100,13 +19109,13 @@
         "inherited_target": false
       },
       {
-        "display_value": "50%～300%",
-        "formula": "50%+異なるタイプの味方の数×50%",
+        "display_value": "50%～87.5%",
+        "formula": "50%+異なるタイプの味方の数×7.5%",
         "type": "相手スタン時ダメージ倍率アップ",
         "value": {
-          "add": 50,
+          "add": 7.5,
           "min": 50,
-          "max": 300
+          "max": 87.5
         },
         "effect_class": "buff",
         "target": "自身",
@@ -19174,7 +19183,7 @@
       },
       {
         "display_value": "4",
-        "formula": "",
+        "formula": "スタンゲージが0になるとスタン状態になる",
         "type": "スタンゲージ減少",
         "value": {
           "amount": 4
@@ -19262,7 +19271,7 @@
       },
       {
         "display_value": "4",
-        "formula": "",
+        "formula": "スタンゲージが0になるとスタン状態になる",
         "type": "スタンゲージ減少",
         "value": {
           "amount": 4
@@ -19309,7 +19318,7 @@
         "formula": "ノーツが移動しなくなる",
         "type": "麻痺",
         "value": {
-          "percent": 75
+          "rate": 75
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -19565,7 +19574,7 @@
         "formula": "スキル使用以外のランダムな行動をする",
         "type": "混乱",
         "value": {
-          "percent": 36
+          "rate": 36
         },
         "effect_class": "debuff",
         "target": "敵全体",
@@ -19663,7 +19672,7 @@
             "label": "特性"
           }
         ],
-        "raw": "ステルス状態を付与(30CT)※ステルス状態：攻撃対象から除外されるようになる(範囲ダメージ含む)。味方が1人だけの状態では発動しない。",
+        "raw": "ステルス状態を付与(30CT)",
         "children": [],
         "tags": [],
         "inherited_target": true
@@ -20514,7 +20523,7 @@
         "formula": "最大HPの1.5%を5CT毎に減らす",
         "type": "火傷",
         "value": {
-          "percent": 50
+          "rate": 50
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -20734,7 +20743,13 @@
         "effect_class": "buff",
         "target": "味方全体",
         "duration": null,
-        "notes": [],
+        "notes": [
+          {
+            "type": "condition",
+            "text": "チーム内の異なる属性が5種類以上の時",
+            "label": "発動条件"
+          }
+        ],
         "raw": "チーム内の異なる属性が5種類以上の時、味方全体に「鳳凰の恩寵」効果",
         "children": [
           {
@@ -21588,7 +21603,7 @@
         "inherited_target": false
       },
       {
-        "display_value": 300,
+        "display_value": "300",
         "formula": "",
         "type": "EXゲージ減少",
         "value": {},
@@ -22165,7 +22180,7 @@
         "formula": "最大HPの1.5%を5CT毎に減らす",
         "type": "毒",
         "value": {
-          "percent": 100
+          "rate": 100
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -22327,7 +22342,7 @@
         "formula": "ノーツが移動しなくなる",
         "type": "麻痺",
         "value": {
-          "percent": 50
+          "rate": 50
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -22582,7 +22597,9 @@
         "display_value": "15.6%",
         "formula": "",
         "type": "重さダウン",
-        "value": 15.6,
+        "value": {
+          "rate": 15.6
+        },
         "effect_class": "debuff",
         "target": "敵単体",
         "duration": {
@@ -22685,7 +22702,9 @@
         "display_value": "40.2%",
         "formula": "",
         "type": "重さアップ",
-        "value": 40.2,
+        "value": {
+          "rate": 40.2
+        },
         "effect_class": "buff",
         "target": "味方全体",
         "duration": {
@@ -23088,23 +23107,23 @@
         "inherited_target": false
       },
       {
-        "display_value": "7",
-        "formula": "",
+        "display_value": "6",
+        "formula": "スタンゲージが0になるとスタン状態になる",
         "type": "スタンゲージ減少",
         "value": {
-          "amount": 7
+          "amount": 6
         },
         "effect_class": "debuff",
         "target": "敵単体",
         "duration": null,
         "notes": [
           {
-            "type": "condition",
-            "text": "スタンゲージ6減少(味方HP80%以上時",
-            "label": "発動条件"
+            "type": "boost",
+            "text": "味方HP80%以上時、7",
+            "label": "強化"
           }
         ],
-        "raw": "スタンゲージ6減少(味方HP80%以上時、スタンゲージ7減少",
+        "raw": "スタンゲージ6減少(味方HP80%以上時、スタンゲージ7減少)",
         "children": [],
         "tags": [],
         "inherited_target": true
@@ -23144,7 +23163,7 @@
         "formula": "最大HPの1.5%を5CT毎に減らす",
         "type": "火傷",
         "value": {
-          "percent": 100
+          "rate": 100
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -23259,7 +23278,7 @@
         "formula": "最大HPの1.5%を5CT毎に減らす",
         "type": "火傷",
         "value": {
-          "percent": 100
+          "rate": 100
         },
         "effect_class": "debuff",
         "target": "対象とその左右1レーンにいる敵すべて",
@@ -23283,7 +23302,7 @@
         "formula": "ノーツが移動しなくなる",
         "type": "麻痺",
         "value": {
-          "percent": 50
+          "rate": 50
         },
         "effect_class": "debuff",
         "target": "対象とその左右1レーンにいる敵すべて",
@@ -23461,7 +23480,7 @@
         "notes": [
           {
             "type": "boost",
-            "text": "EX2使用毎に効果量+10% (2回目以降)",
+            "text": "自身のEX2使用毎に効果量+10% (2回目以降)",
             "label": "強化"
           }
         ],
@@ -23527,17 +23546,17 @@
     "effects": [
       {
         "display_value": "",
-        "formula": "付与されているあらゆるデバフをすべて解除",
+        "formula": "付与されているあらゆるデバフを解除",
         "type": "状態回復",
         "value": {},
         "effect_class": "buff",
-        "target": "",
+        "target": "闇属性の味方",
         "duration": null,
         "notes": [],
         "raw": "闇属性の味方の付与されているあらゆるデバフを解除",
         "children": [],
         "tags": [],
-        "inherited_target": true
+        "inherited_target": false
       },
       {
         "display_value": "1段階",
@@ -24292,7 +24311,13 @@
         "duration": {
           "ct": 20
         },
-        "notes": [],
+        "notes": [
+          {
+            "type": "property",
+            "text": "このEXスキルは他星騎士から付与されたEX消費量減少の効果を受けない",
+            "label": "特性"
+          }
+        ],
         "raw": "自身の行動CT20%遅延(20CT)\n※このEXスキルは他星騎士から付与されたEX消費量減少の効果を受けない",
         "children": [],
         "tags": [],
@@ -24411,7 +24436,7 @@
       },
       {
         "display_value": "6",
-        "formula": "",
+        "formula": "スタンゲージが0になるとスタン状態になる",
         "type": "スタンゲージ減少",
         "value": {
           "amount": 6
@@ -24543,7 +24568,7 @@
       },
       {
         "display_value": "6",
-        "formula": "",
+        "formula": "スタンゲージが0になるとスタン状態になる",
         "type": "スタンゲージ減少",
         "value": {
           "amount": 6
@@ -24853,7 +24878,7 @@
         "formula": "EXスキルが使用できなくなる",
         "type": "封印",
         "value": {
-          "percent": 75
+          "rate": 75
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -25391,23 +25416,23 @@
         "inherited_target": false
       },
       {
-        "display_value": "7",
-        "formula": "",
+        "display_value": "6",
+        "formula": "スタンゲージが0になるとスタン状態になる",
         "type": "スタンゲージ減少",
         "value": {
-          "amount": 7
+          "amount": 6
         },
         "effect_class": "debuff",
         "target": "敵単体",
         "duration": null,
         "notes": [
           {
-            "type": "condition",
-            "text": "スタンゲージ6減少(味方HP50%以下時",
-            "label": "発動条件"
+            "type": "boost",
+            "text": "味方HP50%以下時、7",
+            "label": "強化"
           }
         ],
-        "raw": "スタンゲージ6減少(味方HP50%以下時、スタンゲージ7減少",
+        "raw": "スタンゲージ6減少(味方HP50%以下時、スタンゲージ7減少)",
         "children": [],
         "tags": [],
         "inherited_target": true
@@ -25660,7 +25685,7 @@
         "notes": [
           {
             "type": "boost",
-            "text": "自身のEX2使用毎に効果量+2% (2回目以降)",
+            "text": "自身のEX2使用毎に効果量+10% (2回目以降)",
             "label": "強化"
           }
         ],
@@ -25743,7 +25768,7 @@
         "formula": "スキル使用以外のランダムな行動をする",
         "type": "混乱",
         "value": {
-          "percent": 50
+          "rate": 50
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -26106,7 +26131,7 @@
         "notes": [
           {
             "type": "boost",
-            "text": "自身のEX2使用毎に効果量+2% (2回目以降)",
+            "text": "自身のEX2使用毎に効果量+10% (2回目以降)",
             "label": "強化"
           }
         ],
@@ -27168,9 +27193,9 @@
               "min": 5,
               "max": 5
             },
+            "effect_class": "note",
             "target": "光属性の味方",
-            "duration": null,
-            "effect_class": "buff"
+            "duration": null
           }
         ],
         "tags": [],
@@ -27188,7 +27213,7 @@
     "skill_detail": "味方のHPを雷属性の味方の数×13.4％回復/自身の行動CT50％短縮（1CT）",
     "effects": [
       {
-        "display_value": "13.4%～67.0%",
+        "display_value": "13.4%～67%",
         "formula": "雷属性の味方の数×13.4%",
         "type": "HP回復",
         "value": {
@@ -27518,7 +27543,9 @@
         "display_value": "20%",
         "formula": "",
         "type": "重さダウン",
-        "value": 20,
+        "value": {
+          "rate": 20
+        },
         "effect_class": "debuff",
         "target": "敵単体",
         "duration": {
@@ -27830,7 +27857,7 @@
         "formula": "EXスキルが使用できなくなる",
         "type": "封印",
         "value": {
-          "percent": 50
+          "rate": 50
         },
         "effect_class": "debuff",
         "target": "対象とその左右2レーンにいる敵すべて",
@@ -28173,7 +28200,7 @@
           "ct": 1
         },
         "notes": [],
-        "raw": "自身の行動CT20%短縮(1CT)※ステルス状態：攻撃対象から除外されるようになる(範囲ダメージ含む)。味方が1人だけの状態では発動しない。",
+        "raw": "自身の行動CT20%短縮(1CT)",
         "children": [],
         "tags": [],
         "inherited_target": false
@@ -28213,7 +28240,7 @@
         "formula": "最大HPの1.5%を5CT毎に減らす",
         "type": "火傷",
         "value": {
-          "percent": 50
+          "rate": 50
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -28362,7 +28389,7 @@
         "formula": "最大HPの1.5%を5CT毎に減らす",
         "type": "毒",
         "value": {
-          "percent": 75
+          "rate": 75
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -28430,7 +28457,9 @@
         "display_value": "25.6%",
         "formula": "",
         "type": "重さアップ",
-        "value": 25.6,
+        "value": {
+          "rate": 25.6
+        },
         "effect_class": "buff",
         "target": "味方全体",
         "duration": {
@@ -28559,7 +28588,13 @@
         "effect_class": "buff",
         "target": "自身の左1レーンにいる味方",
         "duration": null,
-        "notes": [],
+        "notes": [
+          {
+            "type": "condition",
+            "text": "チャージ状態の時",
+            "label": "発動条件"
+          }
+        ],
         "raw": "チャージ状態の時、付与されているデバフ・状態異常効果をすべて解除",
         "children": [],
         "tags": [],
@@ -28962,9 +28997,14 @@
             "type": "property",
             "text": "強制移動は除く",
             "label": "特性"
+          },
+          {
+            "type": "property",
+            "text": "バフ解除無効",
+            "label": "特性"
           }
         ],
-        "raw": "ノックバック無効を付与　※強制移動は除く(99CT)【バフ解除無効】",
+        "raw": "ノックバック無効を付与 ※強制移動は除く(99CT)【バフ解除無効】",
         "children": [],
         "tags": [],
         "inherited_target": true
@@ -29058,9 +29098,14 @@
             "type": "property",
             "text": "強制移動は除く",
             "label": "特性"
+          },
+          {
+            "type": "property",
+            "text": "バフ解除無効",
+            "label": "特性"
           }
         ],
-        "raw": "ノックバック無効を付与　※強制移動は除く(99CT)【バフ解除無効】",
+        "raw": "ノックバック無効を付与 ※強制移動は除く(99CT)【バフ解除無効】",
         "children": [],
         "tags": [],
         "inherited_target": true
@@ -29172,7 +29217,7 @@
       },
       {
         "display_value": "3",
-        "formula": "",
+        "formula": "スタンゲージが0になるとスタン状態になる",
         "type": "スタンゲージ減少",
         "value": {
           "amount": 3
@@ -29260,7 +29305,7 @@
       },
       {
         "display_value": "4",
-        "formula": "",
+        "formula": "スタンゲージが0になるとスタン状態になる",
         "type": "スタンゲージ減少",
         "value": {
           "amount": 4
@@ -29455,7 +29500,7 @@
         "inherited_target": true
       },
       {
-        "display_value": 200,
+        "display_value": "200",
         "formula": "",
         "type": "EXゲージ減少",
         "value": {},
@@ -29985,7 +30030,9 @@
         "display_value": "50%",
         "formula": "",
         "type": "重さダウン",
-        "value": 50,
+        "value": {
+          "rate": 50
+        },
         "effect_class": "debuff",
         "target": "敵全体",
         "duration": {
@@ -30315,13 +30362,13 @@
         "inherited_target": false
       },
       {
-        "display_value": "50%～300%",
-        "formula": "50%+スタン中の敵の数×50%",
+        "display_value": "50%～80%",
+        "formula": "50%+スタン中の敵の数×6%",
         "type": "相手スタン時ダメージ倍率アップ",
         "value": {
-          "add": 50,
+          "add": 6,
           "min": 50,
-          "max": 300
+          "max": 80
         },
         "effect_class": "buff",
         "target": "自身",
@@ -30409,7 +30456,7 @@
         "formula": "攻撃時EXゲージ増加量低下",
         "type": "萎縮",
         "value": {
-          "percent": 100
+          "rate": 100
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -30519,7 +30566,7 @@
         "inherited_target": false
       },
       {
-        "display_value": 400,
+        "display_value": "400",
         "formula": "",
         "type": "EXゲージ減少",
         "value": {},
@@ -30537,7 +30584,7 @@
         "formula": "攻撃時EXゲージ増加量低下",
         "type": "萎縮",
         "value": {
-          "percent": 100
+          "rate": 100
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -31511,7 +31558,7 @@
       },
       {
         "display_value": "9",
-        "formula": "",
+        "formula": "スタンゲージが0になるとスタン状態になる",
         "type": "スタンゲージ減少",
         "value": {
           "amount": 9
@@ -31726,7 +31773,7 @@
       },
       {
         "display_value": "3",
-        "formula": "",
+        "formula": "スタンゲージが0になるとスタン状態になる",
         "type": "スタンゲージ減少",
         "value": {
           "amount": 3
@@ -32047,7 +32094,7 @@
             "label": "特性"
           }
         ],
-        "raw": "ステルス状態を付与(40CT)※ステルス状態：攻撃対象から除外されるようになる(範囲ダメージ含む)。味方が1人だけの状態では発動しない。",
+        "raw": "ステルス状態を付与(40CT)",
         "children": [],
         "tags": [],
         "inherited_target": true
@@ -32860,7 +32907,9 @@
         "display_value": "30%",
         "formula": "",
         "type": "重さダウン",
-        "value": 30,
+        "value": {
+          "rate": 30
+        },
         "effect_class": "debuff",
         "target": "敵全体",
         "duration": {
@@ -33497,7 +33546,7 @@
         "formula": "ノーツが移動しなくなる",
         "type": "凍傷",
         "value": {
-          "percent": 100
+          "rate": 100
         },
         "effect_class": "debuff",
         "target": "敵全体",
@@ -34361,7 +34410,7 @@
       },
       {
         "display_value": "9",
-        "formula": "",
+        "formula": "スタンゲージが0になるとスタン状態になる",
         "type": "スタンゲージ減少",
         "value": {
           "amount": 9
@@ -34453,7 +34502,7 @@
         "inherited_target": false
       },
       {
-        "display_value": 80,
+        "display_value": "80",
         "formula": "",
         "type": "EXゲージ減少",
         "value": {},
@@ -34471,7 +34520,7 @@
         "formula": "攻撃時EXゲージ増加量低下",
         "type": "萎縮",
         "value": {
-          "percent": 100
+          "rate": 100
         },
         "effect_class": "debuff",
         "target": "敵全体",
@@ -36084,7 +36133,7 @@
       },
       {
         "display_value": "4",
-        "formula": "",
+        "formula": "スタンゲージが0になるとスタン状態になる",
         "type": "スタンゲージ減少",
         "value": {
           "amount": 4
@@ -36168,7 +36217,7 @@
         "formula": "ノーツが移動しなくなる",
         "type": "凍傷",
         "value": {
-          "percent": 100
+          "rate": 100
         },
         "effect_class": "debuff",
         "target": "敵全体",
@@ -36695,7 +36744,7 @@
         "formula": "スキル使用以外のランダムな行動をする",
         "type": "混乱",
         "value": {
-          "percent": 50
+          "rate": 50
         },
         "effect_class": "debuff",
         "target": "対象とその左右1レーンにいる敵すべて",
@@ -36833,6 +36882,276 @@
         "children": [],
         "tags": [],
         "inherited_target": true
+      }
+    ]
+  },
+  {
+    "unit_id": 1095003,
+    "skill_id": 10950031,
+    "skill_type": "EX1",
+    "name": "ヴィクトリアフェザー",
+    "icon_id": 101,
+    "cost_ex_gauge": 100,
+    "skill_detail": "敵単体に100％×5回のダメージ/攻撃タイプ魔法の味方のATKを攻撃タイプ魔法の味方の数×40％アップ（30CT）/ノーツを5～5前方に移動/攻撃タイプ魔法の味方を3体以上編成している時、自身に光の「サブ属性」を付与する（40CT）【バフ解除無効】\n※サブ属性：属性指定スキルの条件や対象に含まれる（ダメージ計算には影響しない）",
+    "effects": [
+      {
+        "display_value": "100%×5回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 100,
+          "hit": 5
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "duration": null,
+        "notes": [],
+        "raw": "敵単体に100%×5回のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "40%～200%",
+        "formula": "攻撃タイプ魔法の味方の数×40%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 40
+        },
+        "effect_class": "buff",
+        "target": "攻撃タイプ魔法の味方",
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "攻撃タイプ魔法の味方のATKを攻撃タイプ魔法の味方の数×40%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "5",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 5,
+          "max": 5
+        },
+        "effect_class": "note",
+        "target": "攻撃タイプ魔法の味方",
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを5～5前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "光属性を付与",
+        "formula": "",
+        "type": "サブ属性",
+        "value": {},
+        "effect_class": "buff",
+        "target": "自身",
+        "duration": {
+          "ct": 40
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "攻撃タイプ魔法の味方を3体以上編成している時",
+            "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "バフ解除無効",
+            "label": "特性"
+          }
+        ],
+        "raw": "攻撃タイプ魔法の味方を3体以上編成している時、自身に光の「サブ属性」を付与する(40CT)【バフ解除無効】",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1095003,
+    "skill_id": 10950032,
+    "skill_type": "EX2",
+    "name": "デザイアトランスミッション",
+    "icon_id": 100,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵全体に250％のダメージ/攻撃タイプ魔法の味方のATKを攻撃タイプ魔法の味方の数×120％アップ（30CT）/ノーツを7～7前方に移動/自身にサブ属性が付与されている時、攻撃タイプ魔法の味方のクリティカル時のダメージ倍率を50％加算（25CT）",
+    "effects": [
+      {
+        "display_value": "250%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 250,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "duration": null,
+        "notes": [],
+        "raw": "敵全体に250%のダメージ",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "120%～600%",
+        "formula": "攻撃タイプ魔法の味方の数×120%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 120
+        },
+        "effect_class": "buff",
+        "target": "攻撃タイプ魔法の味方",
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "攻撃タイプ魔法の味方のATKを攻撃タイプ魔法の味方の数×120%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "7",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 7,
+          "max": 7
+        },
+        "effect_class": "note",
+        "target": "攻撃タイプ魔法の味方",
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを7～7前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "50%",
+        "formula": "",
+        "type": "クリティカルダメージアップ",
+        "value": {
+          "rate": 50
+        },
+        "effect_class": "buff",
+        "target": "攻撃タイプ魔法の味方",
+        "duration": {
+          "ct": 25
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "自身にサブ属性が付与されている時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "自身にサブ属性が付与されている時、攻撃タイプ魔法の味方のクリティカル時のダメージ倍率を50%加算(25CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1095003,
+    "skill_id": "10950032_plus",
+    "skill_type": "EX2+",
+    "name": "ヴィクトリアオーバーヘヴン",
+    "icon_id": 100,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵全体に400％のダメージ/攻撃タイプ魔法の味方のATKを攻撃タイプ魔法の味方の数×120％アップ（30CT）/ノーツを10～10前方に移動/自身にサブ属性が付与されている時、攻撃タイプ魔法の味方のクリティカル時のダメージ倍率を50％加算（25CT）",
+    "effects": [
+      {
+        "display_value": "400%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 400,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "duration": null,
+        "notes": [],
+        "raw": "敵全体に400%のダメージ",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "120%～600%",
+        "formula": "攻撃タイプ魔法の味方の数×120%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 120
+        },
+        "effect_class": "buff",
+        "target": "攻撃タイプ魔法の味方",
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "攻撃タイプ魔法の味方のATKを攻撃タイプ魔法の味方の数×120%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "10",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 10,
+          "max": 10
+        },
+        "effect_class": "note",
+        "target": "攻撃タイプ魔法の味方",
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを10～10前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "50%",
+        "formula": "",
+        "type": "クリティカルダメージアップ",
+        "value": {
+          "rate": 50
+        },
+        "effect_class": "buff",
+        "target": "攻撃タイプ魔法の味方",
+        "duration": {
+          "ct": 25
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "自身にサブ属性が付与されている時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "自身にサブ属性が付与されている時、攻撃タイプ魔法の味方のクリティカル時のダメージ倍率を50%加算(25CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
       }
     ]
   },
@@ -38300,7 +38619,7 @@
         "formula": "最大HPの1.5%を5CT毎に減らす",
         "type": "毒",
         "value": {
-          "percent": 50
+          "rate": 50
         },
         "effect_class": "debuff",
         "target": "対象とその左右1レーンにいる敵すべて",
@@ -38536,7 +38855,7 @@
       },
       {
         "display_value": "6",
-        "formula": "",
+        "formula": "スタンゲージが0になるとスタン状態になる",
         "type": "スタンゲージ減少",
         "value": {
           "amount": 6
@@ -39010,7 +39329,7 @@
       },
       {
         "display_value": "3",
-        "formula": "",
+        "formula": "スタンゲージが0になるとスタン状態になる",
         "type": "スタンゲージ減少",
         "value": {
           "amount": 3
@@ -39503,7 +39822,7 @@
       {
         "display_value": "",
         "formula": "全属性攻撃が弱点になる",
-        "type": "弱点付与",
+        "type": "弱点属性",
         "value": {},
         "effect_class": "debuff",
         "target": "敵単体",
@@ -39675,7 +39994,7 @@
         "notes": [
           {
             "type": "boost",
-            "text": "EX2使用毎に効果量+10% (2回目以降)",
+            "text": "自身のEX2使用毎に効果量+10% (2回目以降)",
             "label": "強化"
           }
         ],
@@ -40801,7 +41120,7 @@
       {
         "display_value": "",
         "formula": "全属性攻撃が弱点になる",
-        "type": "弱点付与",
+        "type": "弱点属性",
         "value": {},
         "effect_class": "debuff",
         "target": "敵単体",
@@ -41590,7 +41909,7 @@
       {
         "display_value": "",
         "formula": "全属性攻撃が弱点になる",
-        "type": "弱点付与",
+        "type": "弱点属性",
         "value": {},
         "effect_class": "debuff",
         "target": "敵全体",
@@ -45076,9 +45395,9 @@
               "min": 4,
               "max": 4
             },
+            "effect_class": "note",
             "target": "水属性または流星学園附属の味方",
-            "duration": null,
-            "effect_class": "buff"
+            "duration": null
           }
         ],
         "tags": [],
@@ -45563,13 +45882,13 @@
         "inherited_target": false
       },
       {
-        "display_value": "50%～300%",
-        "formula": "50%+スタン中の敵の数×50%",
+        "display_value": "50%～80%",
+        "formula": "50%+スタン中の敵の数×6%",
         "type": "相手スタン時ダメージ倍率アップ",
         "value": {
-          "add": 50,
+          "add": 6,
           "min": 50,
-          "max": 300
+          "max": 80
         },
         "effect_class": "buff",
         "target": "自身",
@@ -45657,13 +45976,13 @@
         "inherited_target": false
       },
       {
-        "display_value": "50%～300%",
-        "formula": "50%+スタン中の敵の数×50%",
+        "display_value": "50%～80%",
+        "formula": "50%+スタン中の敵の数×6%",
         "type": "相手スタン時ダメージ倍率アップ",
         "value": {
-          "add": 50,
+          "add": 6,
           "min": 50,
-          "max": 300
+          "max": 80
         },
         "effect_class": "buff",
         "target": "自身",
@@ -46947,7 +47266,7 @@
       {
         "display_value": "",
         "formula": "全属性攻撃が弱点になる",
-        "type": "弱点付与",
+        "type": "弱点属性",
         "value": {},
         "effect_class": "debuff",
         "target": "敵全体の百合の花が付与されている対象",
@@ -47062,7 +47381,7 @@
         "formula": "最大HPの1.5%を5CT毎に減らす",
         "type": "火傷",
         "value": {
-          "percent": 50
+          "rate": 50
         },
         "effect_class": "debuff",
         "target": "敵単体",
@@ -47162,7 +47481,7 @@
         "formula": "最大HPの1.5%を5CT毎に減らす",
         "type": "火傷",
         "value": {
-          "percent": 30
+          "rate": 30
         },
         "effect_class": "debuff",
         "target": "敵全体",
@@ -47304,7 +47623,7 @@
         "formula": "最大HPの1.5%を5CT毎に減らす",
         "type": "火傷",
         "value": {
-          "percent": 30
+          "rate": 30
         },
         "effect_class": "debuff",
         "target": "敵全体",
@@ -48097,7 +48416,7 @@
       },
       {
         "display_value": "3",
-        "formula": "",
+        "formula": "スタンゲージが0になるとスタン状態になる",
         "type": "スタンゲージ減少",
         "value": {
           "amount": 3
