@@ -2204,7 +2204,7 @@ body.icon-view .detail-card-host {
   }
 }
 
-@media (max-width: 950px) and (max-height: 600px) {
+@media (max-width: 950px) and (min-width: 600px) {
 
   body {
     padding: 12px;
