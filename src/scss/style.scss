@@ -323,6 +323,28 @@ body.hide-raw {
   }
 }
 
+#apply-filters {
+  color: var(--sub);
+  background: var(--panel);
+  border-color: var(--border);
+
+  &:hover {
+    color: var(--text);
+    border-color: #4b5368;
+  }
+
+  &.has-pending {
+    color: #fff;
+    background: #2f5f9f;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(110, 168, 255, 0.28);
+
+    &:hover {
+      background: #3a72c0;
+    }
+  }
+}
+
 .filter-panel {
   display: grid;
   gap: 14px;
@@ -527,6 +549,10 @@ body.hide-raw {
   color: var(--sub);
   background: #20242d;
   border-radius: 999px;
+
+  &[hidden] {
+    display: none;
+  }
 
   &.active {
     color: #fff;

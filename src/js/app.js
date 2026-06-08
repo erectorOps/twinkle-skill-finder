@@ -297,8 +297,6 @@ async function init() {
     };
 
     const updateFilterChips = () => {
-        filterChipRow.scrollLeft = 0;
-
         const orderedChips =
             [...filterChips].sort((a, b) => {
                 const aCount = getActiveValues(a.dataset.openFilter).size;
@@ -316,6 +314,18 @@ async function init() {
                     : `<span>${groupLabels[group]}</span>`;
             filterChipRow.appendChild(chip);
         });
+
+        // キーワードchipを常に先頭に配置
+        if (appliedSearchText) {
+            keywordChip.hidden = false;
+            keywordChip.innerHTML =
+                `<span>${escHtml(appliedSearchText)}</span><i class="bi bi-x-circle" aria-hidden="true"></i>`;
+            filterChipRow.prepend(keywordChip);
+        } else {
+            keywordChip.hidden = true;
+        }
+
+        filterChipRow.scrollLeft = 0;
     };
 
     const clearFilterGroup = (group) => {
@@ -453,6 +463,25 @@ async function init() {
         updateFilterChips();
         updateModeViews();
         setActiveSortOption(currentSortKey);
+        updateApplyButtonState();
+    };
+
+    const hasPendingChanges = () => {
+        if (searchInput.value !== appliedSearchText) return true;
+        if (pendingCharacterScopeMode !== characterScopeMode) return true;
+        if (pendingFilters.size !== activeFilters.size) return true;
+        for (const [group, pending] of pendingFilters) {
+            const active = activeFilters.get(group);
+            if (!active || pending.size !== active.size) return true;
+            for (const v of pending) {
+                if (!active.has(v)) return true;
+            }
+        }
+        return false;
+    };
+
+    const updateApplyButtonState = () => {
+        applyFiltersButton.classList.toggle('has-pending', hasPendingChanges());
     };
 
     const restoreState = () => {
@@ -702,6 +731,25 @@ async function init() {
 
     // ── イベントリスナー ─────────────────────────────
 
+    // キーワードchip（filterChipsとは別管理で動的生成）
+    const escHtml = (s) =>
+        String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const keywordChip = document.createElement('button');
+    keywordChip.id = 'keyword-chip';
+    keywordChip.className = 'filter-chip';
+    keywordChip.type = 'button';
+    keywordChip.hidden = true;
+    filterChipRow.prepend(keywordChip);
+
+    keywordChip.addEventListener('click', () => {
+        searchInput.value = '';
+        appliedSearchText = '';
+        keywordChip.hidden = true;
+        scheduleRender();
+        saveState();
+        updateApplyButtonState();
+    });
+
     // マウスホイールの縦スクロールを横スクロールに変換
     filterChipRow.addEventListener('wheel', (event) => {
         if (event.deltaX !== 0) return; // トラックパッドの横スクロールはそのまま通す
@@ -732,6 +780,7 @@ async function init() {
             } else {
                 toggleMultiFilter(button);
             }
+            updateApplyButtonState();
         });
     });
 
@@ -740,11 +789,13 @@ async function init() {
             pendingCharacterScopeMode =
                 button.dataset.characterScopeValue === 'character';
             updateCharacterScopeToggle();
+            updateApplyButtonState();
         });
     });
 
     searchInput.addEventListener('input', () => {
         saveState();
+        updateApplyButtonState();
     });
 
     clearFiltersButton.addEventListener('click', resetFilters);
@@ -755,8 +806,10 @@ async function init() {
         replaceFilters(activeFilters, pendingFilters);
         characterScopeMode = pendingCharacterScopeMode;
         appliedSearchText = searchInput.value;
+        if (!appliedSearchText) keywordChip.hidden = true;
         scheduleRender();
         closeFilterPanel();
+        updateApplyButtonState();
     });
 
     document.querySelectorAll('[data-close-filter]').forEach(element => {
