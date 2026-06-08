@@ -1,0 +1,158 @@
+const escapeHtml = (value) =>
+    String(value)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+
+const optionMap = (items, getItems) => {
+    const map = new Map();
+    for (const item of items) {
+        for (const value of getItems(item)) {
+            if (!value || value.id === undefined || value.id === null) continue;
+            map.set(String(value.id), {
+                id: String(value.id),
+                label: value.label,
+                icon: value.icon
+            });
+        }
+    }
+    return [...map.values()].sort((a, b) => Number(a.id) - Number(b.id));
+};
+
+const renderButtonGroup = (title, group, options) => `
+<section class="filter-group">
+    <div class="filter-title">${escapeHtml(title)}</div>
+    <div class="filter-buttons">
+        ${options.map(option => `
+        <button
+            class="filter-button"
+            type="button"
+            data-filter-group="${escapeHtml(group)}"
+            data-filter-value="${escapeHtml(option.id)}"
+            aria-pressed="false"
+            aria-label="${escapeHtml(title)} ${escapeHtml(option.label)}"
+        >
+            ${option.rarity ? `
+            <span class="rarity-stars" aria-hidden="true">
+                ${[1, 2, 3].map(i => `
+                <img
+                    class="rarity-star ${i <= option.rarity ? 'filled' : 'empty'}"
+                    src="img/${i <= option.rarity ? 'rare.png' : 'rare_slot.png'}"
+                    alt=""
+                >`).join('')}
+            </span>
+            ` : `
+            ${option.icon ? `<img class="filter-icon" src="img/${escapeHtml(option.icon)}" alt="">` : ''}
+            <span>${escapeHtml(option.label)}</span>
+            `}
+        </button>
+        `).join('')}
+    </div>
+</section>`;
+
+export function renderFilterButtons(characters) {
+    const rarityOptions = [1, 2, 3].map(value => ({
+        id: String(value),
+        label: `★${value}`,
+        rarity: value
+    }));
+
+    const attributeOptions = optionMap(characters, chara => [chara.attr_type]);
+
+    const raceOptions = optionMap(characters, chara => chara.camps || []);
+
+    const roleOptions = optionMap(characters, chara => [chara.role]);
+
+    const attackTypeOptions = optionMap(characters, chara => chara.sp_equip_types || []);
+
+    const affiliationOptions = optionMap(characters, chara => chara.affiliations || [])
+        .map(option => option.id === '5' ? { ...option, label: '流星学園付属' } : option)
+        .sort((a, b) => {
+            const order = { '2': 1, '1': 2, '5': 3, '3': 4, '4': 5, '7': 6, '8': 7, '0': 8 };
+            return (order[a.id] || 99) - (order[b.id] || 99);
+        });
+
+    const effectOptions = [
+        ['all_attack',            '全体攻撃'],
+        ['multi_attack',          '多段攻撃'],
+        ['note_backward',         'ノーツ後退系'],
+        ['note_move',             'ノーツ移動系'],
+        ['atk_up',                'ATKアップ'],
+        ['critical_up',           'クリティカルアップ'],
+        ['critical_damage_up',    'クリダメアップ'],
+        ['stun_damage_up',        'スタンダメアップ'],
+        ['action_ct_short',       '行動CT短縮'],
+        ['barrier',               'バリア系'],
+        ['sub_attribute',         'サブ属性'],
+        ['damage_taken_up',       '被ダメ増加'],
+        ['special_damage_taken_up','特殊被ダメ増加系'],
+        ['weakness_attribute',    '弱点属性'],
+        ['action_control',        '行動阻害系'],
+        ['status_infliction',     '状態付与系']
+    ].map(([id, label]) => ({ id, label }));
+
+    const releaseYearOptions = [2026, 2025, 2024, 2023].map(value => ({
+        id: String(value),
+        label: `${value}年`
+    }));
+
+    const obtainOptions = [
+        ['standard',       '恒常'],
+        ['limited',        '期間限定'],
+        ['starter',        '初期加入'],
+        ['collab_limited', 'コラボ限定'],
+        ['collab_reward',  'コラボ報酬'],
+        ['event_reward',   'イベント報酬'],
+        ['medal_exchange', 'メモリーメダル']
+    ].map(([id, label]) => ({ id, label }));
+
+    return `
+<div class="filter-panel">
+    <section class="filter-group">
+        <div class="filter-title">粒度</div>
+        <div class="scope-toggle" role="group" aria-label="表示粒度">
+            <button
+                class="scope-toggle-button active"
+                type="button"
+                data-character-scope-value="skill"
+                data-character-scope-toggle
+                aria-pressed="true"
+            >スキル単位</button>
+            <button
+                class="scope-toggle-button"
+                type="button"
+                data-character-scope-value="character"
+                data-character-scope-toggle
+                aria-pressed="false"
+            >キャラ単位</button>
+        </div>
+    </section>
+
+    <section class="filter-group">
+        <div class="filter-title">EXスキル</div>
+        <div class="filter-buttons">
+            <button class="filter-button active" type="button"
+                data-filter-group="skill_group" data-filter-value="all"
+                aria-pressed="true">全て</button>
+            <button class="filter-button" type="button"
+                data-filter-group="skill_group" data-filter-value="ex1"
+                aria-pressed="false">EX1/EX1+</button>
+            <button class="filter-button" type="button"
+                data-filter-group="skill_group" data-filter-value="ex2"
+                aria-pressed="false">EX2/EX2+</button>
+        </div>
+    </section>
+
+    ${renderButtonGroup('EXスキル効果',  'effect_categories', effectOptions)}
+    ${renderButtonGroup('レアリティ',     'rarity',            rarityOptions)}
+    ${renderButtonGroup('属性',           'attr',              attributeOptions)}
+    ${renderButtonGroup('種族',           'races',             raceOptions)}
+    ${renderButtonGroup('役割',           'role',              roleOptions)}
+    ${renderButtonGroup('武器',           'attack_types',      attackTypeOptions)}
+    ${renderButtonGroup('所属',           'affiliations',      affiliationOptions)}
+    ${renderButtonGroup('入手方法',       'obtains',           obtainOptions)}
+    ${renderButtonGroup('実装年',         'release_years',     releaseYearOptions)}
+</div>`;
+}
