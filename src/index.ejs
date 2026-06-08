@@ -61,7 +61,18 @@ const characterMap = new Map(
                     class="toolbar-button"
                     type="button"
                 >
+                    <i class="bi bi-ui-checks-grid" aria-hidden="true"></i>
                     比較する
+                </button>
+
+                <button
+                    id="raw-view-toggle"
+                    class="raw-view-toggle"
+                    type="button"
+                    aria-pressed="true"
+                >
+                    <i class="bi bi-card-text" aria-hidden="true"></i>
+                    原文
                 </button>
 
                 <button
@@ -295,6 +306,8 @@ const characterMap = new Map(
         document.getElementById('apply-filters');
     const filterChipRow =
         document.getElementById('filter-chip-row');
+    const rawViewToggle =
+        document.getElementById('raw-view-toggle');
     const viewModeToggle =
         document.getElementById('view-mode-toggle');
     const compareModeToggle =
@@ -374,6 +387,7 @@ const characterMap = new Map(
     let characterScopeMode = false;
     let pendingCharacterScopeMode = false;
     let appliedSearchText = "";
+    let rawViewMode = true;
     let iconViewMode = false;
     let compareMode = false;
     let scheduledRenderFrame = 0;
@@ -686,8 +700,16 @@ const characterMap = new Map(
             iconViewMode
         );
         document.body.classList.toggle(
+            'hide-raw',
+            !rawViewMode
+        );
+        document.body.classList.toggle(
             'compare-mode',
             compareMode
+        );
+        rawViewToggle.setAttribute(
+            'aria-pressed',
+            rawViewMode ? 'true' : 'false'
         );
         viewModeToggle.setAttribute(
             'aria-pressed',
@@ -770,6 +792,7 @@ const characterMap = new Map(
                 filters: serializeFilters(),
                 search: appliedSearchText,
                 characterScope: characterScopeMode,
+                raw: rawViewMode,
                 iconView: iconViewMode
             })
         );
@@ -862,6 +885,8 @@ const characterMap = new Map(
                 state.characterScope === true;
             pendingCharacterScopeMode =
                 characterScopeMode;
+            rawViewMode =
+                state.raw !== false;
             iconViewMode =
                 state.iconView === true;
             currentSortKey =
@@ -877,6 +902,7 @@ const characterMap = new Map(
             appliedSearchText = "";
             characterScopeMode = false;
             pendingCharacterScopeMode = false;
+            rawViewMode = true;
             iconViewMode = false;
             currentSortKey = 'release_asc';
             setSingleFilter('skill_group', 'all', activeFilters);
@@ -1105,15 +1131,19 @@ const characterMap = new Map(
             return;
         }
 
-        const detailItems =
+        const showsCharacterSkills =
             characterScopeMode
+            || pendingCharacterScopeMode;
+
+        const detailItems =
+            showsCharacterSkills
                 ? skillIndex.filter(skill =>
                     skill.unit_id === item.unit_id
                 )
                 : [item];
 
         detailTitle.textContent =
-            characterScopeMode
+            showsCharacterSkills
                 ? `[${item.unit_name}] ${item.character_name}`
                 : item.skill_name;
 
@@ -1132,6 +1162,7 @@ const characterMap = new Map(
 
             clone.removeAttribute('id');
             clone.hidden = false;
+            clone.classList.add('skill-modal-card');
             clone
                 .querySelectorAll('[data-compare-check], .compare-selector')
                 .forEach(element => element.remove());
@@ -1228,6 +1259,12 @@ const characterMap = new Map(
 
     viewModeToggle.addEventListener('click', () => {
         iconViewMode = !iconViewMode;
+        updateModeViews();
+        saveState();
+    });
+
+    rawViewToggle.addEventListener('click', () => {
+        rawViewMode = !rawViewMode;
         updateModeViews();
         saveState();
     });

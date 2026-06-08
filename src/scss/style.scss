@@ -131,6 +131,10 @@ body.sheet-open {
 }
 
 .toolbar-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
   padding: 0 10px;
   color: var(--sub);
 
@@ -189,6 +193,41 @@ body.sheet-open {
 .view-mode-toggle[aria-pressed="true"] .icon {
   color: #fff;
   background: #2f5f9f;
+}
+
+.raw-view-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 34px;
+  padding: 0 12px;
+  color: var(--sub);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 900;
+  cursor: pointer;
+
+  &[aria-pressed="true"] {
+    color: #fff;
+    background: #2f5f9f;
+    border-color: var(--accent);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+  }
+}
+
+body.hide-raw {
+  .skill-raw,
+  .accessory-raw {
+    display: none;
+  }
 }
 
 /* ==================================================
@@ -608,96 +647,6 @@ body.sheet-open {
   margin-left: auto;
 }
 
-.view-switch {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-
-  min-height: 24px;
-
-  color: var(--sub);
-  background: transparent;
-
-  font-size: 12px;
-  font-weight: 700;
-
-  cursor: pointer;
-
-  input {
-    position: absolute;
-
-    width: 1px;
-    height: 1px;
-
-    margin: 0;
-
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  input:checked + .view-switch-track {
-    background: #2f5f9f;
-    border-color: var(--accent);
-  }
-
-  input:checked + .view-switch-track::after {
-    transform: translateX(14px);
-    background: #fff;
-  }
-
-  input:focus-visible + .view-switch-track {
-    outline: 2px solid #fff;
-    outline-offset: 2px;
-  }
-}
-
-.view-switch-track {
-  position: relative;
-
-  width: 34px;
-  height: 20px;
-
-  flex: 0 0 34px;
-
-  background: #2a2f3b;
-
-  border: 1px solid var(--border);
-  border-radius: 999px;
-
-  transition:
-    background .15s ease,
-    border-color .15s ease;
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: 2px;
-    left: 2px;
-
-    width: 14px;
-    height: 14px;
-
-    background: #9da8bb;
-
-    border-radius: 999px;
-
-    box-shadow:
-      0 1px 3px rgba(0,0,0,.45);
-
-    transition:
-      transform .15s ease,
-      background .15s ease;
-  }
-}
-
-body.hide-raw {
-  .skill-raw,
-  .accessory-raw {
-    display: none;
-  }
-}
-
 .empty-result {
   display: grid;
   place-items: center;
@@ -817,17 +766,19 @@ body.compare-mode {
 
 .detail-card-host {
   display: flex;
-  align-items: stretch;
+  flex-direction: column;
+  align-items: center;
   gap: 12px;
   min-height: 0;
   padding: 14px;
-  overflow: auto;
-  scroll-snap-type: x proximity;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .detail-card-host > .skill-card {
-  flex: 0 0 min(520px, 92vw);
-  scroll-snap-align: start;
+  flex: 0 0 auto;
+  width: min(520px, 100%);
+  margin: 0 auto;
 }
 
 .compare-close-button {
@@ -862,22 +813,23 @@ body.compare-mode {
 .compare-table {
   min-width: 720px;
   width: max-content;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   font-size: 13px;
 
   th,
   td {
-    min-width: 150px;
-    max-width: 220px;
+    min-width: 136px;
+    max-width: 176px;
     padding: 10px;
-    border: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
     vertical-align: top;
     overflow-wrap: anywhere;
   }
 
   td.has-value {
     color: #fff;
-    font-weight: 900;
     text-align: center;
     vertical-align: middle;
   }
@@ -890,19 +842,31 @@ body.compare-mode {
 
   th:first-child,
   td:first-child {
+    position: sticky;
+    will-change: transform;
+    left: 0;
+    z-index: 1;
     min-width: 96px;
     max-width: 128px;
     background: #20242d;
+    background-clip: padding-box; /* 境界線のブレを抑える */
     color: var(--sub);
-    font-weight: 900;
     line-height: 1.35;
+    border-right: none;
+    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, .2);
   }
+
 
   thead th {
     position: sticky;
     top: 0;
     z-index: 2;
     background: #20242d;
+    padding: 3px 4px;
+  }
+
+  thead th:first-child {
+    z-index: 3;
   }
 
   img {
@@ -2028,7 +1992,7 @@ body.icon-view .detail-card-host {
 
   .result-actions {
     display: grid;
-    grid-template-columns: auto auto minmax(0, 1fr) auto auto;
+    grid-template-columns: auto auto minmax(0, 1fr) auto auto auto;
     align-items: center;
     justify-content: stretch;
     width: 100%;
@@ -2044,8 +2008,12 @@ body.icon-view .detail-card-host {
     grid-column: 2;
   }
 
-  .view-mode-toggle {
+  .raw-view-toggle {
     grid-column: 4;
+  }
+
+  .view-mode-toggle {
+    grid-column: 5;
   }
 
   .toolbar-button {
@@ -2054,9 +2022,23 @@ body.icon-view .detail-card-host {
     font-size: 11px;
   }
 
+  #compare-mode-toggle,
+  .raw-view-toggle,
+  .view-mode-toggle,
+  #sort-menu-button {
+    min-height: 38px;
+  }
+
   .sort-menu {
-    grid-column: 5;
+    grid-column: 6;
     min-width: 0;
+  }
+
+  #sort-menu-button {
+    min-width: 44px;
+    min-height: 38px;
+    padding: 0 11px;
+    font-size: 16px;
   }
 
   .sort-button-label {
@@ -2079,6 +2061,15 @@ body.icon-view .detail-card-host {
 
   #compare-selected-count {
     margin-right: auto;
+  }
+
+  .compare-table th:first-child, .compare-table td:first-child {
+    min-width: 48px;
+    max-width: 96px;
+    box-sizing: border-box;
+    padding: 5px 3px;
+    font-size: 11px;
+    width: calc(100vw * 0.2); 
   }
 
   #cancel-compare {
@@ -2210,5 +2201,171 @@ body.icon-view .detail-card-host {
         height: 38px;
       }
     }
+  }
+}
+
+@media (max-width: 950px) and (max-height: 600px) {
+
+  body {
+    padding: 12px;
+  }
+
+  body.filter-open {
+    overflow: hidden;
+  }
+
+  .finder-shell {
+    display: block;
+  }
+
+  .filter-dock {
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    display: none;
+  }
+
+  body.filter-open .filter-dock {
+    display: block;
+  }
+
+  .filter-backdrop {
+    display: block;
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.52);
+  }
+
+  .filter-dock-panel {
+    position: absolute;
+    left: 50%;
+    right: auto;
+    bottom: 0;
+    width: min(520px, calc(100vw - 96px));
+    max-height: calc(100vh - 14px);
+    transform: translateX(-50%);
+    border-radius: 12px 12px 0 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .filter-dock-content {
+    padding: 12px;
+  }
+
+  .sheet-grip {
+    display: block;
+    width: 40px;
+    height: 4px;
+    margin: 8px auto 2px;
+    background: #596174;
+    border-radius: 999px;
+  }
+
+  .finder-toolbar {
+    display: contents;
+  }
+
+  .filter-strip {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 8px 0;
+    background: rgba(20, 22, 27, .96);
+    backdrop-filter: blur(8px);
+  }
+
+  .result-actions {
+    margin-bottom: 16px;
+  }
+}
+
+/* Skill modal cards must keep the detailed card layout even while the page is in icon view. */
+.detail-card-host > .skill-modal-card {
+  flex: 0 0 auto;
+  width: min(520px, 100%);
+  max-width: 520px;
+  margin: 0 auto;
+  aspect-ratio: auto;
+  border-radius: 14px;
+  overflow: hidden;
+
+  .skill-header {
+    position: relative;
+    min-height: 112px;
+    height: auto;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+  }
+
+  .skill-header::after {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(1,1,0,1) 40%,
+        rgba(29,33,42,0.2) 100%
+      );
+  }
+
+  .skill-bg {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    bottom: auto;
+    left: auto;
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    object-fit: initial;
+    object-position: initial;
+    opacity: .85;
+  }
+
+  .skill-content {
+    position: relative;
+    inset: auto;
+    z-index: 3;
+  }
+
+  .skill-type {
+    display: inline-flex;
+  }
+
+  .skill-cover {
+    display: block;
+  }
+
+  .effect-list {
+    display: flex;
+  }
+
+  .skill-footer {
+    display: block;
+  }
+
+  .cost-label,
+  .cost-value {
+    display: inline-flex;
+  }
+
+  .skill-main {
+    display: flex;
+  }
+
+  .skill-name {
+    display: block;
+    overflow: visible;
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  .skill-sub {
+    justify-content: flex-start;
+    margin-top: 6px;
+    gap: 8px;
   }
 }
