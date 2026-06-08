@@ -297,6 +297,8 @@ async function init() {
     };
 
     const updateFilterChips = () => {
+        filterChipRow.scrollLeft = 0;
+
         const orderedChips =
             [...filterChips].sort((a, b) => {
                 const aCount = getActiveValues(a.dataset.openFilter).size;
@@ -699,6 +701,14 @@ async function init() {
     };
 
     // ── イベントリスナー ─────────────────────────────
+
+    // マウスホイールの縦スクロールを横スクロールに変換
+    filterChipRow.addEventListener('wheel', (event) => {
+        if (event.deltaX !== 0) return; // トラックパッドの横スクロールはそのまま通す
+        event.preventDefault();
+        filterChipRow.scrollLeft += event.deltaY;
+    }, { passive: false });
+
     sortMenuButton.addEventListener('click', () => {
         const expanded =
             sortMenuButton.getAttribute('aria-expanded') === 'true';

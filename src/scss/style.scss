@@ -505,6 +505,7 @@ body.hide-raw {
   display: flex;
   align-items: center;
   gap: 6px;
+  flex: 1;
   min-width: 0;
   overflow-x: auto;
   overscroll-behavior-x: contain;
