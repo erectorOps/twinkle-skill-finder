@@ -187,6 +187,44 @@ const buildSkillSearchText = ({ skill, character, effects, accessory }) =>
     buildAccessorySearchText(accessory)
   ].filter(Boolean).join(" ").toLowerCase();
 
+const buildObtainIndex = (obtain) => {
+  const obtains = [];
+
+  for (const text of obtain.split("\n")) {
+    if ("ガチャ(恒常)" === text) {
+      obtains.push("standard");
+    }
+    if ("ガチャ(限定)" === text) {
+      obtains.push("limited");
+    }
+    if ("初期加入" === text) {
+      obtains.push("starter");
+    }
+    if ("ガチャ(コラボ)" === text) {
+      obtains.push("collab_limited");
+    }
+    if ("コラボ報酬" === text) {
+      obtains.push("collab_reward");
+    }
+    if ("イベント報酬" === text) {
+      obtains.push("event_reward");
+    }
+    if ("メモリーメダル" === text) {
+      obtains.push("medal_exchange");
+    }
+  }
+  return unique(obtains);
+};
+
+const buildReleaseYear = (dateStr) => {
+  if (!dateStr) return null;
+  const parts = dateStr.split('-');
+  if (parts.length < 1 || parts[0].length != 4) return null;
+  const year = parseInt(parts[0], 10);
+  return isNaN(year) ? null : year;
+}
+
+
 export const buildSkillFinderIndex = ({ skills, characters, accessories = [] }) => {
   const invalidRarityCharacters =
     characters.filter(character =>
@@ -247,7 +285,9 @@ export const buildSkillFinderIndex = ({ skills, characters, accessories = [] }) 
         affiliations: unique((character.affiliations || []).map(affiliation => String(affiliation.id))),
         release_date: character.release_date || null,
         release_date_raw: character.release_date_raw || null,
+        release_years: buildReleaseYear(character.release_date),
         release_order: character.release_order || null,
+        obtains: buildObtainIndex(character.obtain),
         effect_categories: buildEffectCategories(skill),
         effect_types: unique(effects.map(effect => effect.type)),
         effect_tags: unique(effects.flatMap(effect => effect.tags || [])),

@@ -96,6 +96,25 @@ const effectOptions = [
     label
 }));
 
+const releaseYearOptions = [2026,2025,2024,2023]
+    .map(value => ({
+        'id': String(value),
+        'label': `${value}年`
+    }));
+
+const obtainOptions = [
+    ["standard", "恒常"],
+    ["limited", "期間限定"],
+    ["starter", "初期加入"],
+    ["collab_limited", "コラボ限定"],
+    ["collab_reward", "コラボ報酬"],
+    ["event_reward", "イベント報酬"],
+    ["medal_exchange", "メモリーメダル"]
+].map(([id, label]) => ({
+    id,
+    label
+}));
+
 const renderButtonGroup = (title, group, options) => {
 %>
     <section class="filter-group">
@@ -214,7 +233,9 @@ const renderButtonGroup = (title, group, options) => {
     <% renderButtonGroup('レアリティ', 'rarity', rarityOptions); %>
     <% renderButtonGroup('属性', 'attr', attributeOptions); %>
     <% renderButtonGroup('種族', 'races', raceOptions); %>
-    <% renderButtonGroup('タイプ', 'role', roleOptions); %>
-    <% renderButtonGroup('攻撃タイプ', 'attack_types', attackTypeOptions); %>
+    <% renderButtonGroup('役割', 'role', roleOptions); %>
+    <% renderButtonGroup('武器', 'attack_types', attackTypeOptions); %>
     <% renderButtonGroup('所属', 'affiliations', affiliationOptions); %>
+    <% renderButtonGroup('入手方法', 'obtains', obtainOptions); %>
+    <% renderButtonGroup('実装年', 'release_years', releaseYearOptions); %>
 </div>

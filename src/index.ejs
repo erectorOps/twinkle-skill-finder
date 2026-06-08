@@ -42,8 +42,10 @@ const characterMap = new Map(
                     <button class="filter-chip" type="button" data-open-filter="attr">属性</button>
                     <button class="filter-chip" type="button" data-open-filter="races">種族</button>
                     <button class="filter-chip" type="button" data-open-filter="affiliations">所属</button>
-                    <button class="filter-chip" type="button" data-open-filter="role">ロール</button>
+                    <button class="filter-chip" type="button" data-open-filter="role">役割</button>
                     <button class="filter-chip" type="button" data-open-filter="attack_types">武器</button>
+                    <button class="filter-chip" type="button" data-open-filter="obtains">入手</button>
+                    <button class="filter-chip" type="button" data-open-filter="release_years">年別</button>
                 </div>
             </div>
 
@@ -374,8 +376,10 @@ const characterMap = new Map(
         attr: '属性',
         races: '種族',
         affiliations: '所属',
-        role: 'ロール',
-        attack_types: '武器'
+        role: '役割',
+        attack_types: '武器',
+        obtains: '入手',
+        release_years: '年別'
     };
 
     const activeFilters = new Map();
