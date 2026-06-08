@@ -286,6 +286,10 @@ body.hide-raw {
   font: inherit;
   font-size: 13px;
 
+  &::-webkit-search-cancel-button {
+    cursor: pointer;
+  }
+
   &::placeholder {
     color: #707a8e;
   }
