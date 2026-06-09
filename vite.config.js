@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import autoprefixer from 'autoprefixer';
 
 export default defineConfig({
+  base: '/twinkle-skill-finder/',
   root: 'src',
   publicDir: '../public',
   build: {
