@@ -6,6 +6,31 @@ const escapeHtml = (value) =>
         .replace(/"/g, '&quot;')
         .replace(/'/g, '&#39;');
 
+const EX_ICONS = {
+    'ex1': {
+        viewBox: '6.5 2.5 71 28',
+        d: 'M 3 2 M 13 3 L 7 30 L 29 30 L 32 24 L 16 24 L 17 19 L 30 19 L 32 13 L 18 13 L 19 9 L 33 9 L 35 3 Z M 30 30 L 40 30 L 47 22 L 50 30 L 59 30 L 52 17 L 65 3 L 56 3 L 49 11 L 45 3 L 36 3 L 42 16 Z M 63 30 L 67 12 L 63 12 L 64 8 C 66 8 67 8 68 7 C 69 6 70 5 71 4 L 77 4 L 71 30 Z Z',
+    },
+    'ex2': {
+        viewBox: '6.5 2.5 78.53 28',
+        d: 'M 3 2 M 13 3 L 7 30 L 29 30 L 32 24 L 16 24 L 17 19 L 30 19 L 32 13 L 18 13 L 19 9 L 33 9 L 35 3 Z M 30 30 L 40 30 L 47 22 L 50 30 L 59 30 L 52 17 L 65 3 L 56 3 L 49 11 L 45 3 L 36 3 L 42 16 Z M 59 30 L 81 30 L 83 24 L 71 24 L 81 18 C 82.994 16.298 84.03 14.527 84.531 11.953 C 84.431 9.279 83.529 7.575 81.924 6.138 C 80.32 4.801 78.448 4.299 76 4 C 73.936 3.731 72.031 3.765 70 4 C 67.051 5.202 66.249 5.77 65 7 C 64.277 8.31 63.508 9.547 62.873 10.884 C 62.573 11.652 62.439 12.187 62.405 12.956 L 69 13 C 69.3333 12.6667 69.692 12.388 70 12 C 70.795 10.583 71.029 10.182 72 10 C 73.101 9.58 73.903 9.714 75 10 C 75.474 10.282 75.775 10.683 76 11 C 76.243 11.586 76.176 12.354 76 13 C 75.574 13.792 74.705 14.393 73.903 14.928 C 72.499 15.463 70.795 16.365 68.522 17.735 C 67.252 18.404 66.182 19.106 65 20 C 63.976 20.944 62.94 21.746 62 23 C 61.169 24.286 60.534 25.556 60 27 Z Z Z',
+    },
+    'ex1-plus': {
+        viewBox: '7 3 97 27',
+        d: 'M 3 2 M 13 3 L 7 30 L 29 30 L 32 24 L 16 24 L 17 19 L 30 19 L 32 13 L 18 13 L 19 9 L 33 9 L 35 3 Z M 30 30 L 40 30 L 47 22 L 50 30 L 59 30 L 52 17 L 65 3 L 56 3 L 49 11 L 45 3 L 36 3 L 42 16 Z M 63 30 L 67 12 L 63 12 L 64 8 C 66 8 67 8 68 7 C 69 6 70 5 71 4 L 77 4 L 71 30 Z M 89 30 L 89 21 L 80 21 L 80 16 L 89 16 L 89 7 L 95 7 L 95 16 L 104 16 L 104 21 L 95 21 L 95 30 Z',
+    },
+    'ex2-plus': {
+        viewBox: '6.5 2.5 106 28',
+        d: 'M 3 2 M 13 3 L 7 30 L 29 30 L 32 24 L 16 24 L 17 19 L 30 19 L 32 13 L 18 13 L 19 9 L 33 9 L 35 3 Z M 30 30 L 40 30 L 47 22 L 50 30 L 59 30 L 52 17 L 65 3 L 56 3 L 49 11 L 45 3 L 36 3 L 42 16 Z M 59 30 L 81 30 L 83 24 L 71 24 L 81 18 C 82.994 16.298 84.03 14.527 84.531 11.953 C 84.431 9.279 83.529 7.575 81.924 6.138 C 80.32 4.801 78.448 4.299 76 4 C 73.936 3.731 72.031 3.765 70 4 C 67.051 5.202 66.249 5.77 65 7 C 64.277 8.31 63.508 9.547 62.873 10.884 C 62.573 11.652 62.439 12.187 62.405 12.956 L 69 13 C 69.3333 12.6667 69.692 12.388 70 12 C 70.795 10.583 71.029 10.182 72 10 C 73.101 9.58 73.903 9.714 75 10 C 75.474 10.282 75.775 10.683 76 11 C 76.243 11.586 76.176 12.354 76 13 C 75.574 13.792 74.705 14.393 73.903 14.928 C 72.499 15.463 70.795 16.365 68.522 17.735 C 67.252 18.404 66.182 19.106 65 20 C 63.976 20.944 62.94 21.746 62 23 C 61.169 24.286 60.534 25.556 60 27 Z Z Z M 98 30 L 98 21 L 89 21 L 89 16 L 98 16 L 98 7 L 103 7 L 103 16 L 112 16 L 112 21 L 103 21 L 103 30 Z',
+    },
+};
+
+const renderExIcon = (typeCss) => {
+    const icon = EX_ICONS[typeCss];
+    if (!icon) return '';
+    return `<span class="ex-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="${icon.viewBox}"><path d="${icon.d}"/></svg></span>`;
+};
+
 const renderFormula = (formula) =>
     escapeHtml(formula)
         .replace(
@@ -145,7 +170,7 @@ export function renderCard(skill, chara, accessories) {
     return `
 <div
     id="skill-${escapeHtml(skill.skill_id)}"
-    class="skill-card ${escapeHtml(skill.skill_type.toLowerCase())}"
+    class="skill-card ${skillTypeCss}"
     data-skill-id="${escapeHtml(skill.skill_id)}"
 >
     <div class="skill-header">
@@ -196,6 +221,7 @@ export function renderCard(skill, chara, accessories) {
                 ></div>
 
                 <div class="skill-meta">
+                    ${renderExIcon(skillTypeCss)}
                     <div class="skill-name">${escapeHtml(skill.name)}</div>
 
                     <div class="skill-sub">
