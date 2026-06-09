@@ -717,6 +717,7 @@ async function init() {
             detailCardHost.appendChild(clone);
         }
 
+        detailSheet.querySelector('.detail-panel').dataset.cardCount = detailItems.length;
         detailSheet.hidden = false;
         document.body.classList.add('sheet-open');
     };
