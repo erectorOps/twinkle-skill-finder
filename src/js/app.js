@@ -690,7 +690,7 @@ async function init() {
 
     const renderCompareTable = () => {
         const skillIds = getSelectedSkillIds();
-        const rowLabels = new Set(['スキル']);
+        const rowLabels = new Set();
         const effectMap = new Map();
         const columns = skillIds.map(skillId => {
             const item = itemMap.get(skillId);
@@ -703,12 +703,6 @@ async function init() {
         const bodyRows =
             [...rowLabels].map(label => {
                 const cells = columns.map(column => {
-                    if (label === 'スキル') {
-                        return {
-                            value: column.item?.skill_type || '-',
-                            hasValue: Boolean(column.item?.skill_type)
-                        };
-                    }
                     const value =
                         effectMap.get(column.skillId)?.get(label) || "";
                     return { value: value || '-', hasValue: Boolean(value) };

@@ -1018,6 +1018,7 @@ body.compare-mode {
       position: absolute;
       inset: auto 3px 3px;
       z-index: 4;
+      height: 100%;
     }
 
     .skill-type,
@@ -1034,46 +1035,60 @@ body.compare-mode {
     .skill-name { display: none; }
 
     .ex-icon {
-      display: flex;
+      position: absolute;
+      inset: auto 0 0;
+      display: inline-flex;
+      align-items: center;
       justify-content: center;
-      height: 14px;
-      margin: 0 auto 2px;
-      filter:
-        drop-shadow(0 0 3px rgba(0,0,0,.9))
-        drop-shadow(0 1px 2px rgba(0,0,0,.8));
-
-      svg {
-        height: 100%;
-        width: auto;
-        fill: currentColor;
-        stroke: #fff;
-        stroke-width: 0.5;
-      }
+      align-self: center;
+      padding: 1px 4px;
+      margin: 0;
+      border-radius: 0 0 3px 3px;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      line-height: 1;
+      color: #fff;
+      text-shadow: 0 1px 2px rgba(0,0,0,.5);
+      box-shadow: 0 1px 4px rgba(0,0,0,.7);
     }
 
-    &.ex1     .ex-icon { color: #f85b8b; }
-    &.ex2     .ex-icon { color: #5ba9f8; }
-    &.ex1-plus .ex-icon { color: #ed9c00; }
-    &.ex2-plus .ex-icon { color: #ed9c00; }
+    &.ex1     .ex-icon { background: #f85b8b; }
+    &.ex2     .ex-icon { background: #5ba9f8; }
+    &.ex1-plus .ex-icon { background: #ed9c00; }
+    &.ex2-plus .ex-icon { background: #ed9c00; }
 
     .skill-sub {
-      justify-content: center;
-      margin-top: 2px;
+      justify-content: flex-start;
+      margin-top: 3px;
       gap: 0;
     }
 
     .card-rarity-star { width: 12px; height: 12px; }
 
     .skill-badges {
-      top: 2px;
-      right: 2px;
+      top: 0px;
+      right: 6px;
       gap: 1px;
       max-width: 70%;
       img { width: 14px; height: 14px; }
     }
 
+    .icon-stack {
+
+      &:nth-child(5) {
+        order: 1;
+      }
+
+      &:nth-child(4) {
+        order: 2;
+        margin-left: 100%;
+      }
+    }
+
     .icon-with-ruby {
       width: 14px;
+      display: none;
       .ruby { display: none; }
     }
 
@@ -1149,6 +1164,7 @@ body.icon-view {
       position: absolute;
       inset: auto 4px 4px;
       z-index: 4;
+      height: 100%;
     }
 
     .skill-type,
@@ -1167,33 +1183,32 @@ body.icon-view {
     .skill-name { display: none; }
 
     .ex-icon {
-      display: flex;
+      position: absolute;
+      inset: auto 0 0;
+      display: inline-flex;
+      align-items: center;
       justify-content: center;
-      height: 16px;
-      margin: 0 auto 2px;
-      filter:
-        drop-shadow(0 0 3px rgba(0,0,0,.9))
-        drop-shadow(0 1px 2px rgba(0,0,0,.8));
-
-      svg {
-        height: 100%;
-        width: 100%;
-        fill: currentColor;
-        stroke: #000;
-        stroke-width: 2;
-        stroke-linejoin: round;
-        paint-order: stroke fill;
-      }
+      align-self: center;
+      padding: 2px 5px;
+      margin: 0;
+      border-radius: 0 0 3px 3px;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      line-height: 1;
+      color: #fff;
+      text-shadow: 0 1px 2px rgba(0,0,0,.5);
+      box-shadow: 0 1px 4px rgba(0,0,0,.7);
     }
 
-    &.ex1     .ex-icon { color: #f85b8b; }
-    &.ex2     .ex-icon { color: #5ba9f8; }
-    &.ex1-plus .ex-icon { color: #ed9c00; }
-    &.ex2-plus .ex-icon { color: #ed9c00; }
+    &.ex1     .ex-icon { background: #f85b8b; }
+    &.ex2     .ex-icon { background: #5ba9f8; }
+    &.ex1-plus .ex-icon { background: #ed9c00; }
+    &.ex2-plus .ex-icon { background: #ed9c00; }
 
     .skill-sub {
-      justify-content: center;
-      margin-top: 2px;
+      justify-content: flex-start;
+      margin-top: 4px;
       gap: 0;
     }
 
@@ -1203,19 +1218,43 @@ body.icon-view {
     }
 
     .skill-badges {
-      top: 3px;
-      right: 3px;
-      gap: 1px;
+      top: 0px;
+      right: 7px;
+      gap: 4px;
       max-width: 70%;
 
       img {
         width: 16px;
         height: 16px;
       }
+      
+    }
+
+    .icon-stack {
+
+      &:nth-child(5) {
+        order: 1;
+      }
+
+      &:nth-child(4) {
+        order: 2;
+        margin-left: 100%;
+      }
+    }
+
+    .icon-stack .icon-main {
+      width: 22px;
+      height: 22px;
+
+      &.icon-sp-equip-type {
+        width: 23px;
+        height: 20px;
+      }
     }
 
     .icon-with-ruby {
       width: 16px;
+      display: none;
 
       .ruby {
         display: none;
@@ -1229,8 +1268,8 @@ body.icon-view {
 
     .icon-base {
       inset: -3px;
-      width: 22px!important;
-      height: 22px!important;
+      width: 28px!important;
+      height: 28px!important;
     }
   }
 }
@@ -1296,6 +1335,7 @@ body.icon-view .detail-card-host {
       position: relative;
       inset: auto;
       z-index: 3;
+      height: auto;
     }
 
     .skill-type {
@@ -1346,6 +1386,7 @@ body.icon-view .detail-card-host {
       top: 8px;
       right: 8px;
       gap: 4px;
+      max-width: none;
 
       img {
         width: 28px;
@@ -1354,6 +1395,7 @@ body.icon-view .detail-card-host {
     }
 
     .icon-with-ruby {
+      display: flex;
       width: 34px;
 
       .ruby {
@@ -1364,6 +1406,21 @@ body.icon-view .detail-card-host {
     .icon-stack {
       width: 28px;
       height: 28px;
+
+      &:nth-child(4),
+      &:nth-child(5) {
+        order: initial;
+        margin-left: 0;
+      }
+    }
+
+    .ex-icon {
+      display: none;
+    }
+
+    .icon-stack .icon-main {
+      width: 100%;
+      height: 100%;
     }
 
     .icon-base {
