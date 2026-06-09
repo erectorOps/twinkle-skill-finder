@@ -130,7 +130,7 @@ const characterMap = new Map(
 
         <div
             id="compare-action-bar"
-            class="compare-action-bar"
+            class="compare-action-bar is-hidden"
             hidden
         >
             <span id="compare-selected-count">0件選択</span>
@@ -916,7 +916,7 @@ const characterMap = new Map(
     };
 
     const closeSortMenu = () => {
-        sortOptionsElement.hidden = true;
+        sortOptionsElement.classList.add('is-hidden');
         sortMenuButton.setAttribute(
             'aria-expanded',
             'false'
@@ -1191,7 +1191,7 @@ const characterMap = new Map(
         const expanded =
             sortMenuButton.getAttribute('aria-expanded') === 'true';
 
-        sortOptionsElement.hidden = expanded;
+        sortOptionsElement.classList.toggle('is-hidden', expanded);
         sortMenuButton.setAttribute(
             'aria-expanded',
             expanded ? 'false' : 'true'
@@ -1332,7 +1332,7 @@ const characterMap = new Map(
     document.addEventListener('click', event => {
         if (
             !event.target.closest('.sort-menu')
-            && !sortOptionsElement.hidden
+            && !sortOptionsElement.classList.contains('is-hidden')
         ) {
             closeSortMenu();
         }

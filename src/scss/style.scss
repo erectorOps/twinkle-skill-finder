@@ -588,17 +588,37 @@ body.hide-raw {
   right: 0;
   z-index: 50;
   display: grid;
-  gap: 4px;
   min-width: 210px;
   padding: 6px;
   background: var(--panel);
-  border: 1px solid var(--border);
   border-radius: 8px;
   box-shadow: 0 14px 30px rgba(0,0,0,.38);
-}
+  overflow: hidden;
+  gap: 4px;
+  padding: 0 6px;
 
-.sort-options[hidden] {
-  display: none;
+  /* --- 開いている時のスタイル --- */
+  max-height: 400px;
+  border: 1px solid var(--border);
+
+
+  /* 開く時のアニメーション */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* --- 閉じている時のスタイル --- */
+  &.is-hidden {
+    max-height: 0;
+    border-top: 0px solid var(--border);
+    border-bottom: 0px solid var(--border);
+  }
+
+  > button:first-child {
+    margin-top: 6px;
+  }
+
+  > button:last-child {
+    margin-bottom: 6px;
+  }
 }
 
 .sort-option {
@@ -609,11 +629,20 @@ body.hide-raw {
   text-align: left;
   white-space: nowrap;
 
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.2s ease;
+
   &.active {
     color: #fff;
     background: #2f5f9f;
     border-color: var(--accent);
   }
+}
+
+.sort-options.is-hidden > .sort-option {
+  opacity: 0;
+  transform: translateY(-10px);
 }
 
 .sort-tabs {
@@ -715,6 +744,21 @@ body.hide-raw {
   backdrop-filter: blur(8px);
   font-size: 13px;
   font-weight: 800;
+
+  /* --- 開いている時のスタイル --- */
+  opacity: 1;
+  transform: translateY(0);
+
+  /* 開く時のアニメーション */
+  transition: 
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.2s ease;
+
+  /* --- 閉じている時のスタイル --- */
+  &.is-hidden {
+    opacity: 0;
+    transform: translateY(-120%);
+  }
 }
 
 .compare-action-bar[hidden] {
@@ -2437,5 +2481,26 @@ body.icon-view .detail-card-host {
     justify-content: flex-start;
     margin-top: 6px;
     gap: 8px;
+  }
+}
+
+/* ========================================
+   ANIMATIONS
+======================================== */
+
+@keyframes slideUpIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .filter-dock-panel {
+    animation: slideUpIn 0.3s ease-out;
   }
 }

@@ -367,9 +367,29 @@ async function init() {
         rawViewToggle.setAttribute('aria-pressed', rawViewMode ? 'true' : 'false');
         viewModeToggle.setAttribute('aria-pressed', iconViewMode ? 'true' : 'false');
         compareModeToggle.classList.toggle('active', compareMode);
-        compareActionBar.hidden = !compareMode;
+        if (!compareMode) {
+            closeCompareBar();
+        } else {
+            openCompareBar();
+        }
         updateCompareSelection();
     };
+
+    const closeCompareBar = () => {
+        compareActionBar.classList.add('is-hidden');
+        setTimeout(() => {
+            if (compareActionBar.classList.contains('is-hidden')) {
+                compareActionBar.hidden = true;
+            }
+        }, 300);
+    }
+
+    const openCompareBar = () => {
+        compareActionBar.hidden = false;
+        requestAnimationFrame(() => {
+            compareActionBar.classList.remove('is-hidden');
+        })
+    }
 
     // ── レンダリング ─────────────────────────────────
     const render = (sortKey = currentSortKey) => {
@@ -531,7 +551,7 @@ async function init() {
 
     // ── パネル開閉 ───────────────────────────────────
     const closeSortMenu = () => {
-        sortOptionsElement.hidden = true;
+        sortOptionsElement.classList.add('is-hidden');
         sortMenuButton.setAttribute('aria-expanded', 'false');
     };
 
@@ -761,7 +781,7 @@ async function init() {
     sortMenuButton.addEventListener('click', () => {
         const expanded =
             sortMenuButton.getAttribute('aria-expanded') === 'true';
-        sortOptionsElement.hidden = expanded;
+        sortOptionsElement.classList.toggle('is-hidden', expanded);
         sortMenuButton.setAttribute('aria-expanded', expanded ? 'false' : 'true');
     });
 
@@ -888,7 +908,7 @@ async function init() {
     });
 
     document.addEventListener('click', event => {
-        if (!event.target.closest('.sort-menu') && !sortOptionsElement.hidden) {
+        if (!event.target.closest('.sort-menu') && !sortOptionsElement.classList.contains('is-hidden')) {
             closeSortMenu();
         }
     });
