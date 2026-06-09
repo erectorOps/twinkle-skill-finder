@@ -3,19 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp",
-    "build": "gulp build",
-    "deploy": "gh-pages -d dist"
+    "build-data": "node scripts/build-data.mjs",
+    "predev": "node scripts/build-data.mjs",
+    "dev": "vite",
+    "prebuild": "node scripts/build-data.mjs",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist",
+    "gulp": "gulp",
+    "gulp:build": "gulp build"
   },
-
   "dependencies": {
     "autoprefixer": "^10.4.21",
     "big.js": "^6.2.2",
@@ -48,6 +51,7 @@
     "html-minifier": "^4.0.0",
     "minimist": "^1.2.8",
     "sass": "^1.92.1",
-    "through2": "^4.0.2"
+    "through2": "^4.0.2",
+    "vite": "^6.4.3"
   }
 }

@@ -1,3 +1,4 @@
+import '../scss/style.scss';
 import { renderCard } from './card.js';
 import { renderFilterButtons } from './filters.js';
 
@@ -15,21 +16,10 @@ async function init() {
     document.getElementById('filter-panel-placeholder').innerHTML =
         renderFilterButtons(characters);
 
-    // ── スキルカードをレンダリング ───────────────────
+    // ── カードデータマップ（遅延レンダリング用） ──────
     const characterMap = new Map(characters.map(c => [c.unit_id, c]));
+    const skillDataMap = new Map(skills.map(s => [String(s.skill_id), s]));
     const listElement = document.getElementById('skill-list');
-    {
-        const fragment = document.createDocumentFragment();
-        const tempDiv = document.createElement('div');
-        for (const skill of skills) {
-            const chara = characterMap.get(skill.unit_id);
-            if (!chara) continue;
-            tempDiv.innerHTML = renderCard(skill, chara, accessories);
-            const cardEl = tempDiv.firstElementChild;
-            if (cardEl) fragment.appendChild(cardEl);
-        }
-        listElement.appendChild(fragment);
-    }
 
     // ── DOM 参照 ─────────────────────────────────────
     const countElement =
@@ -89,15 +79,7 @@ async function init() {
         ...document.querySelectorAll('.filter-chip')
     ];
 
-    const cards = [
-        ...document.querySelectorAll('[data-skill-id]')
-    ];
-    const cardMap = new Map(
-        cards.map(card => [
-            card.dataset.skillId,
-            card
-        ])
-    );
+    const cardMap = new Map();
     const itemMap = new Map(
         skillIndex.map(item => [
             item.skill_id,
@@ -139,6 +121,10 @@ async function init() {
     let compareMode = false;
     let scheduledRenderFrame = 0;
     let scheduledRenderTimer = 0;
+
+    const PAGE_SIZE = 50;
+    let currentVisibleItems = [];
+    let renderedCount = 0;
 
     // ── ソート ───────────────────────────────────────
     const compareNumber = (a, b) =>
@@ -350,9 +336,9 @@ async function init() {
 
     // ── 比較モード ───────────────────────────────────
     const getSelectedSkillIds = () =>
-        cards
-            .filter(card => card.querySelector('[data-compare-check]')?.checked)
-            .map(card => card.dataset.skillId);
+        [...listElement.querySelectorAll('[data-compare-check]:checked')]
+            .map(input => input.closest('[data-skill-id]')?.dataset.skillId)
+            .filter(Boolean);
 
     const updateCompareSelection = () => {
         const count = getSelectedSkillIds().length;
@@ -391,11 +377,82 @@ async function init() {
         })
     }
 
+    // ── 遅延レンダリング ─────────────────────────────
+    const cardTempDiv = document.createElement('div');
+
+    const getOrCreateCardElement = (skillId, unitId) => {
+        const key = String(skillId);
+        if (cardMap.has(key)) return cardMap.get(key);
+        const skill = skillDataMap.get(key);
+        const chara = characterMap.get(unitId);
+        if (!skill || !chara) return null;
+        cardTempDiv.innerHTML = renderCard(skill, chara, accessories);
+        const cardEl = cardTempDiv.firstElementChild;
+        if (!cardEl) return null;
+        cardMap.set(key, cardEl);
+        return cardEl;
+    };
+
+    const addCompareSelector = (card) => {
+        if (card.querySelector('[data-compare-check]')) return;
+        const label = document.createElement('label');
+        label.className = 'compare-selector';
+        label.innerHTML = '<input type="checkbox" data-compare-check><span>選択</span>';
+        label.addEventListener('click', event => event.stopPropagation());
+        label.querySelector('input').addEventListener('change', updateCompareSelection);
+        card.appendChild(label);
+    };
+
+    const sentinel = document.createElement('div');
+    sentinel.id = 'scroll-sentinel';
+    sentinel.hidden = true;
+    listElement.insertAdjacentElement('afterend', sentinel);
+
+    const renderNextBatch = () => {
+        const from = renderedCount;
+        const to = Math.min(from + PAGE_SIZE, currentVisibleItems.length);
+        if (from >= to) { sentinel.hidden = true; return; }
+        const fragment = document.createDocumentFragment();
+        for (let i = from; i < to; i++) {
+            const item = currentVisibleItems[i];
+            const cardEl = getOrCreateCardElement(item.skill_id, item.unit_id);
+            if (!cardEl) continue;
+            if (compareMode && !cardEl.querySelector('[data-compare-check]')) {
+                addCompareSelector(cardEl);
+            }
+            cardEl.hidden = false;
+            fragment.appendChild(cardEl);
+        }
+        listElement.appendChild(fragment);
+        renderedCount = to;
+        sentinel.hidden = renderedCount >= currentVisibleItems.length;
+    };
+
+    // センチネルがまだ画面内にある間は追加でロードし続ける
+    const ensureViewportFilled = () => {
+        requestAnimationFrame(() => {
+            if (sentinel.hidden) return;
+            if (sentinel.getBoundingClientRect().top < window.innerHeight + 300) {
+                renderNextBatch();
+                ensureViewportFilled();
+            }
+        });
+    };
+
+    new IntersectionObserver(
+        (entries) => {
+            if (entries[0].isIntersecting) {
+                renderNextBatch();
+                ensureViewportFilled();
+            }
+        },
+        { rootMargin: '300px' }
+    ).observe(sentinel);
+
     // ── レンダリング ─────────────────────────────────
     const render = (sortKey = currentSortKey) => {
         currentSortKey = sortKey;
 
-        const fragment = document.createDocumentFragment();
         const sortedItems = getSortedItems(sortKey);
         const matchedUnitIds = new Set();
         const visibleSkillIds = new Set();
@@ -415,24 +472,18 @@ async function init() {
             }
         }
 
-        let visibleCount = 0;
+        currentVisibleItems = sortedItems.filter(item => visibleSkillIds.has(item.skill_id));
+        renderedCount = 0;
+        listElement.innerHTML = '';
 
-        for (const item of sortedItems) {
-            const card = cardMap.get(item.skill_id);
-            if (card) {
-                const visible = visibleSkillIds.has(item.skill_id);
-                card.hidden = !visible;
-                if (visible) visibleCount++;
-                fragment.appendChild(card);
-            }
-        }
-
-        listElement.appendChild(fragment);
-        countElement.textContent = visibleCount;
-        emptyResultElement.hidden = visibleCount !== 0;
+        countElement.textContent = currentVisibleItems.length;
+        emptyResultElement.hidden = currentVisibleItems.length !== 0;
         setActiveSortOption(sortKey);
         updateFilterChips();
         updateModeViews();
+
+        renderNextBatch();
+        ensureViewportFilled();
     };
 
     // ── 状態の保存・復元 ─────────────────────────────
@@ -557,8 +608,10 @@ async function init() {
 
     const openFilterPanel = () => {
         document.body.classList.add('filter-open');
-        document.querySelector('.filter-dock-content')
-            ?.scrollTo({ top: 0, behavior: 'smooth' });
+        requestAnimationFrame(() => {
+            document.querySelector('.filter-dock-content')
+                ?.scrollTo({ top: 0 });
+        });
     };
 
     const closeFilterPanel = () => {
@@ -594,15 +647,7 @@ async function init() {
 
     // ── 比較 ─────────────────────────────────────────
     const ensureCompareSelectors = () => {
-        cards.forEach(card => {
-            if (card.querySelector('[data-compare-check]')) return;
-            const label = document.createElement('label');
-            label.className = 'compare-selector';
-            label.innerHTML = '<input type="checkbox" data-compare-check><span>選択</span>';
-            label.addEventListener('click', event => event.stopPropagation());
-            label.querySelector('input').addEventListener('change', updateCompareSelection);
-            card.appendChild(label);
-        });
+        listElement.querySelectorAll('[data-skill-id]').forEach(addCompareSelector);
     };
 
     const shortenCompareLabel = (label) =>
@@ -685,7 +730,7 @@ async function init() {
                         <th>アイコン</th>
                         ${columns.map(column => `
                             <th>
-                                <img src="img/unit/chara_${column.item?.unit_id}_2_1.png" alt="">
+                                <img src="img/unit/chara_${column.item?.unit_id}_2_1.png" alt="" decoding="async">
                                 <span class="compare-unit-name">[${column.item?.unit_name || column.skillId}]</span>
                                 <span class="compare-character-name">${column.item?.character_name || ''}</span>
                             </th>
@@ -726,7 +771,8 @@ async function init() {
         detailCardHost.innerHTML = "";
 
         for (const detailItem of detailItems) {
-            const card = cardMap.get(detailItem.skill_id);
+            const card = cardMap.get(detailItem.skill_id)
+                || getOrCreateCardElement(detailItem.skill_id, detailItem.unit_id);
             if (!card) continue;
             const clone = card.cloneNode(true);
             clone.removeAttribute('id');
@@ -864,20 +910,16 @@ async function init() {
         compareMode = !compareMode;
         ensureCompareSelectors();
         if (!compareMode) {
-            cards.forEach(card => {
-                const check = card.querySelector('[data-compare-check]');
-                if (check) check.checked = false;
-            });
+            listElement.querySelectorAll('[data-compare-check]')
+                .forEach(check => { check.checked = false; });
         }
         updateModeViews();
     });
 
     cancelCompareButton.addEventListener('click', () => {
         compareMode = false;
-        cards.forEach(card => {
-            const check = card.querySelector('[data-compare-check]');
-            if (check) check.checked = false;
-        });
+        listElement.querySelectorAll('[data-compare-check]')
+            .forEach(check => { check.checked = false; });
         updateModeViews();
     });
 
@@ -894,17 +936,11 @@ async function init() {
         element.addEventListener('click', closeDetailSheet);
     });
 
-    cards.forEach(card => {
-        card.addEventListener('click', event => {
-            if (
-                !iconViewMode
-                || compareMode
-                || event.target.closest('.compare-selector')
-            ) {
-                return;
-            }
-            openDetailSheet(card.dataset.skillId);
-        });
+    listElement.addEventListener('click', event => {
+        if (!iconViewMode || compareMode) return;
+        if (event.target.closest('.compare-selector')) return;
+        const card = event.target.closest('[data-skill-id]');
+        if (card) openDetailSheet(card.dataset.skillId);
     });
 
     document.addEventListener('click', event => {

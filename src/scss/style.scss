@@ -91,6 +91,7 @@ body.sheet-open {
 }
 
 .sheet-actions {
+  flex-shrink: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
@@ -1015,8 +1016,9 @@ body.icon-view {
 
   .skill-card {
     position: relative;
+    width: 100%;
     max-width: none;
-    aspect-ratio: 1;
+    aspect-ratio: 1 / 1;
     border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
@@ -1114,6 +1116,20 @@ body.icon-view {
       inset: -3px;
       width: 22px!important;
       height: 22px!important;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  body.icon-view {
+    .skill-list {
+      grid-template-columns: repeat(auto-fill, 96px);
+
+      .skill-card {
+        width: 96px;
+        height: 96px;
+        aspect-ratio: auto;
+      }
     }
   }
 }
@@ -2357,7 +2373,7 @@ body.icon-view .detail-card-host {
     right: auto;
     bottom: 0;
     width: min(520px, calc(100vw - 96px));
-    max-height: calc(100vh - 14px);
+    max-height: calc(100% - 14px);
     transform: translateX(-50%);
     border-radius: 12px 12px 0 0;
     border-bottom: 1px solid var(--border);

@@ -149,7 +149,7 @@ export function renderCard(skill, chara, accessories) {
     data-skill-id="${escapeHtml(skill.skill_id)}"
 >
     <div class="skill-header">
-        <img class="skill-bg" src="${bgImage}" alt="">
+        <img class="skill-bg" src="${bgImage}" alt="" decoding="async">
 
         <div class="skill-badges">
             ${chara.affiliations.length > 0 ? `
@@ -232,7 +232,7 @@ export function renderCard(skill, chara, accessories) {
             <div class="accessory-summary">
                 ${skillAccessory.illust_id ? `
                 <div class="accessory-frame">
-                    <img class="accessory-illust" src="img/equip/${escapeHtml(skillAccessory.illust_id)}.png" alt="">
+                    <img class="accessory-illust" src="img/equip/${escapeHtml(skillAccessory.illust_id)}.png" alt="" decoding="async">
                 </div>
                 ` : ''}
 
