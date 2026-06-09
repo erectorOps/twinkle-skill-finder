@@ -28,11 +28,16 @@ jobs:
         with:
           node-version: 24
       
-      # 3. パッケージインストール
+      # 3. GitHub Pages のベースパスを取得
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
+
+      # 4. パッケージインストール
       - run: npm install
 
-      # 4. ビルド (gulp build)
-      - run: npm run build
+      # 5. ビルド
+      - run: npm run build -- --base=${{ steps.pages.outputs.base_path }}/
 
       # 5. 成果物をアップロード
       - name: Upload artifact
