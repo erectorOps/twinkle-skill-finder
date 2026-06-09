@@ -729,8 +729,7 @@ async function init() {
                     <tr>
                         <th>アイコン</th>
                         ${columns.map(column => `
-                            <th>
-                                <img src="img/unit/chara_${column.item?.unit_id}_2_1.png" alt="" decoding="async">
+                            <th data-skill-id="${column.skillId}">
                                 <span class="compare-unit-name">[${column.item?.unit_name || column.skillId}]</span>
                                 <span class="compare-character-name">${column.item?.character_name || ''}</span>
                             </th>
@@ -740,6 +739,18 @@ async function init() {
                 <tbody>${bodyRows}</tbody>
             </table>
         `;
+
+        compareTableHost.querySelectorAll('thead th[data-skill-id]').forEach(th => {
+            const item = itemMap.get(th.dataset.skillId);
+            if (!item) return;
+            const card = cardMap.get(item.skill_id) || getOrCreateCardElement(item.skill_id, item.unit_id);
+            if (!card) return;
+            const clone = card.cloneNode(true);
+            clone.removeAttribute('id');
+            clone.hidden = false;
+            clone.querySelector('.compare-selector')?.remove();
+            th.prepend(clone);
+        });
     };
 
     const openCompareSheet = () => {
