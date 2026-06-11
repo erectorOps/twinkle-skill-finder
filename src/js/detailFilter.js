@@ -253,6 +253,8 @@ const optInner = (cat, o) => {
     return ICON_ONLY.has(cat) ? img : img + escapeHtml(o.short || o.label);
 };
 
+const sideShort = (cond) => cond.side === 'self' ? '自身' : cond.side === 'enemy' ? '敵' : '味方';
+
 const sideScopeText = (cond) => {
     if (cond.side === 'self') return '自身';
     const sideLabel = cond.side === 'enemy' ? '敵' : '味方';
@@ -349,33 +351,15 @@ export function createDetailFilter(container, { conditions: initial = [], onChan
         }).join('');
         const opts = list.filter(sp => !sel.includes(sp.id))
             .map(sp => `<option value="${escapeHtml(sp.id)}">${escapeHtml(sp.label)}</option>`).join('');
-        return `<div class="btn-row">${chips}<select class="sp-select" data-act="special" data-ref="${refScope}"><option value="">＋ 追加…</option>${opts}</select></div>`;
-    };
-
-    /* 「特殊条件」グループと「属性・種族・役割・武器・所属」等のグループを
-       ANDで組み合わさることが分かるよう視覚的に分離して並べる */
-    const tagGroupsHTML = (cond, sel, refScope, side) => {
-        const specialsBlock = specialsUI(refScope === 'ref' ? cond.ref : cond, refScope, side);
-        const tagsHtml = sel.map(c => tagRow(cond, c, refScope)).join('');
-        if (!sel.length && !specialsBlock) return '';
-
-        const specialsGroup = specialsBlock ? `
-            <div class="cond-group cond-group-special">
-                <div class="cond-group-label">特殊条件</div>
-                ${specialsBlock}
-            </div>` : '';
-        const tagsGroup = sel.length ? `
-            <div class="cond-group cond-group-tags">
-                <div class="cond-group-label">${escapeHtml(sel.map(c => TAG_LABEL[c]).join('・'))}</div>
-                <div class="b-tags">${tagsHtml}</div>
-            </div>` : '';
-        const divider = (specialsBlock && sel.length) ? `<div class="cond-group-and"><span>+</span></div>` : '';
-
-        return `<div class="cond-groups">${specialsGroup}${divider}${tagsGroup}</div>`;
+        return `<div class="b-tagrow"><span class="tg-name">特殊</span><div class="btn-row">${chips}<select class="sp-select" data-act="special" data-ref="${refScope}"><option value="">＋ 追加…</option>${opts}</select></div></div>`;
     };
 
     const builderHTML = (cond) => {
         const sel = tagsFor(cond.side);
+        const specialsBlock = specialsUI(cond, 'tag', cond.side);
+        const tagLabels = sel.filter(c => cond[c]).map(c => byId(taxonomy[c], cond[c]).label)
+            .concat((cond.specials || []).map(s => (byId(ALL_SPECIALS, s) || {}).short || s));
+        const tagCount = tagLabels.length;
         const refSel = REF_TAG_KEYS[cond.ref.src] || [];
         const refGroup = refGroupOf(cond.ref.src);
 
@@ -405,14 +389,20 @@ export function createDetailFilter(container, { conditions: initial = [], onChan
                 </select>` : ''}`}
             </div>
 
-            ${(() => {
-                const groups = tagGroupsHTML(cond, sel, 'tag', cond.side);
-                return groups ? `
+            ${(sel.length || specialsBlock) ? `
                 <div class="b-block">
-                    <div class="b-label">対象タグ <span class="b-sub">2つのグループはANDで組み合わさります</span></div>
-                    ${groups}
-                </div>` : '';
-            })()}
+                    <div class="b-label">対象タグ <span class="b-sub">— 2つのグループはANDで組み合わさります</span></div>
+                    <div class="b-tags">
+                        ${sel.map(c => tagRow(cond, c, 'tag')).join('')}
+                        ${specialsBlock}
+                    </div>
+            </div>` : ''}
+            ${tagCount >= 2 ? `
+            <div class="union-hint">
+                <i class="bi bi-info-circle-fill"></i>
+                <span>この条件は「${escapeHtml(tagLabels.join('の'))}の${sideShort(cond)}」を探します。「または」で探すなら分割してください。</span>
+                <button type="button" data-act="split">またはに分割</button>
+            </div>` : ''}
 
             <button type="button" class="ref-toggle ${cond.refOpen ? 'open' : ''} ${cond.ref.src !== 'none' ? 'has-ref' : ''}" data-act="ref-toggle">
                 <i class="bi bi-bullseye"></i> 参照元（◯◯の数 × 威力）${cond.ref.src !== 'none' ? '・設定中' : '<span class="b-sub">任意</span>'}
@@ -437,7 +427,8 @@ export function createDetailFilter(container, { conditions: initial = [], onChan
                     ${refSel.length ? `
                     <div class="b-block">
                         <div class="b-label">参照タグ <span class="b-sub">どんな${cond.ref.src === 'ally' ? '味方' : '敵'}を数えるか</span></div>
-                        ${tagGroupsHTML(cond, refSel, 'ref', cond.ref.src)}
+                        ${refSel.map(c => tagRow(cond, c, 'ref')).join('')}
+                        ${specialsUI(cond.ref, 'ref', cond.ref.src)}
                     </div>` : ''}
                 </div>
             </div>
