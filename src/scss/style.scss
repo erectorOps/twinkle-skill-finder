@@ -42,12 +42,28 @@ body {
     "Noto Sans JP",
     sans-serif;
 
-  padding: 24px;
+  padding: 22px;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
 body.sheet-open {
   overflow: hidden;
 }
+
+/* scrollbars */
+.dock-scroll::-webkit-scrollbar,
+.skill-list::-webkit-scrollbar { width: 10px; }
+.dock-scroll::-webkit-scrollbar-thumb,
+.skill-list::-webkit-scrollbar-thumb {
+  background: #2c313d;
+  border-radius: 10px;
+  border: 2px solid var(--bg);
+}
+
+/* ==================================================
+   SHELL — skill-list left, filter dock right (340px)
+================================================== */
 
 .finder-shell {
   display: grid;
@@ -78,11 +94,19 @@ body.sheet-open {
   max-height: calc(100vh - 32px);
   background: var(--panel);
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
 }
 
-.filter-dock-content {
+.dock-head {
+  display: flex; align-items: center; gap: 8px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  font-weight: 800; font-size: 14px;
+}
+.dock-head .bi { color: var(--accent); font-size: 17px; }
+
+.dock-scroll {
   min-height: 0;
   overflow: auto;
   padding: 14px;
@@ -253,30 +277,29 @@ body.hide-raw {
   display: flex;
   align-items: center;
   gap: 8px;
-
-  min-width: 260px;
-  max-width: 520px;
-  flex: 1;
-
-  padding: 7px 10px;
-
-  background: var(--panel);
-
+  padding: 8px 11px;
+  background: var(--panel-3);
   border: 1px solid var(--border);
   border-radius: 8px;
-}
 
-.search-label {
-  flex: 0 0 auto;
+  .bi {
+    color: var(--sub);
+    font-size: 15px;
+  }
 
-  color: var(--sub);
+  input {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: var(--text);
+    font: inherit;
+    font-size: 13px;
 
-  font-size: 12px;
-  font-weight: 800;
-
-  .bi-search {
-    font-size: 16px;
-    line-height: 1;
+    &::placeholder {
+      color: #707a8e;
+    }
   }
 }
 
@@ -308,13 +331,13 @@ body.hide-raw {
   padding: 0 12px;
 
   color: var(--sub);
-  background: var(--panel);
+  background: var(--panel-3);
 
   border: 1px solid var(--border);
   border-radius: 8px;
 
   font: inherit;
-  font-size: 12px;
+  font-size: 12.5px;
   font-weight: 800;
 
   cursor: pointer;
@@ -352,6 +375,11 @@ body.hide-raw {
   }
 }
 
+.sheet-actions .clear-filters,
+.sheet-actions .primary-action {
+  min-height: 40px;
+}
+
 /* デスクトップ(>=951px)はライブ反映なので「検索する」は不要、クリアのみ */
 @media (min-width: 951px) {
   #apply-filters {
@@ -376,13 +404,24 @@ body.hide-raw {
 .filter-group {
   display: grid;
   gap: 8px;
+  margin-bottom: 16px;
 }
 
 .filter-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
   color: var(--sub);
 
   font-size: 12px;
   font-weight: 800;
+
+  .hint {
+    margin-left: auto;
+    font-weight: 700;
+    font-size: 11px;
+    color: #6f7a8e;
+  }
 }
 
 .filter-buttons {
@@ -428,14 +467,7 @@ body.hide-raw {
 
 /* キャラクター情報の絞り込み — 折りたたみ式セクション */
 .facet {
-  gap: 0;
-
-  border: 1px solid var(--border);
-  border-radius: 10px;
-
-  background: var(--panel-2);
-
-  overflow: hidden;
+  border-top: 1px solid var(--border);
 }
 
 .facet-header {
@@ -444,26 +476,25 @@ body.hide-raw {
 
   gap: 8px;
   width: 100%;
-  padding: 11px 12px;
+  padding: 12px 2px;
 
-  color: var(--text);
   background: transparent;
-
   border: 0;
 
+  color: var(--text);
   font: inherit;
-  font-size: 12.5px;
+  font-size: 13px;
   font-weight: 800;
-  text-align: left;
-
   cursor: pointer;
 
-  &:hover {
-    background: rgba(255, 255, 255, .03);
+  .facet-chev {
+    margin-left: auto;
+    color: var(--sub);
+    transition: transform .2s;
   }
 
   &[aria-expanded="true"] .facet-chev {
-    transform: rotate(180deg);
+    transform: rotate(90deg);
   }
 }
 
@@ -472,17 +503,15 @@ body.hide-raw {
 }
 
 .facet-count {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-grid;
+  place-items: center;
 
-  flex: 0 0 auto;
-  min-width: 20px;
-  height: 20px;
-  padding: 0 6px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
 
   color: #fff;
-  background: #2f5f9f;
+  background: var(--accent);
 
   border-radius: 999px;
 
@@ -494,67 +523,77 @@ body.hide-raw {
   }
 }
 
-.facet-chev {
-  flex: 0 0 auto;
-
-  color: var(--sub);
-
-  transition: transform .2s;
-}
-
 .facet-body {
-  padding: 0 12px 12px;
+  padding: 0 0 14px;
+
+  display: grid;
+  gap: 6px;
 
   &[hidden] {
     display: none;
   }
 }
 
-.scope-toggle {
+
+.seg {
   display: inline-flex;
-  align-items: center;
-  width: fit-content;
-
-  padding: 4px;
-
+  padding: 3px;
   background: var(--panel);
-
   border: 1px solid var(--border);
   border-radius: 8px;
-}
 
-.scope-toggle-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  button {
+    flex: 1;
+    min-width: 0;
+    padding: 6px 12px;
+    color: var(--sub);
+    background: transparent;
+    border: 0;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    white-space: nowrap;
 
-  min-width: 96px;
-  height: 32px;
-
-  padding: 0 12px;
-
-  color: var(--sub);
-  background: transparent;
-
-  border: 0;
-  border-radius: 5px;
-
-  font: inherit;
-  font-size: 12px;
-  font-weight: 800;
-
-  cursor: pointer;
-
-  &.active {
-    color: #fff;
-    background: #2f5f9f;
-  }
-
-  &:focus-visible {
-    outline: 2px solid #fff;
-    outline-offset: 2px;
+    &.active {
+      color: #fff;
+      background: #2f5f9f;
+    }
   }
 }
+
+// .scope-toggle-button {
+//   display: inline-flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   min-width: 96px;
+//   height: 32px;
+
+//   padding: 0 12px;
+
+//   color: var(--sub);
+//   background: transparent;
+
+//   border: 0;
+//   border-radius: 5px;
+
+//   font: inherit;
+//   font-size: 12px;
+//   font-weight: 800;
+
+//   cursor: pointer;
+
+//   &.active {
+//     color: #fff;
+//     background: #2f5f9f;
+//   }
+
+//   &:focus-visible {
+//     outline: 2px solid #fff;
+//     outline-offset: 2px;
+//   }
+// }
 
 /* ==================================================
    スキル効果フィルター — カテゴリ/詳細タブ
@@ -563,57 +602,67 @@ body.hide-raw {
 .effect-section {
   border: 1px solid var(--border);
   border-radius: 12px;
-
   background: linear-gradient(180deg, #1e222b, #1b1e26);
-
   padding: 12px;
+  margin-bottom: 16px;
+
+  > .filter-title {
+    margin-bottom: 10px;
+  }
 }
 
 .mode-tabs {
-  display: flex;
-
+  display: inline-flex;
+  width: 100%;
   padding: 3px;
-
+  margin-bottom: 12px;
   background: var(--panel-3);
-
   border: 1px solid var(--border);
   border-radius: 9px;
-}
 
-.mode-tab {
-  flex: 1;
+  button {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+    gap: 6px;
+    padding: 7px 0;
+    color: var(--sub);
+    background: transparent;
 
-  gap: 6px;
-  min-height: 32px;
+    border: 0;
+    border-radius: 6px;
 
-  padding: 6px 0;
+    font: inherit;
+    font-size: 12.5px;
+    font-weight: 800;
 
-  color: var(--sub);
-  background: transparent;
+    cursor: pointer;
 
-  border: 0;
-  border-radius: 6px;
-
-  font: inherit;
-  font-size: 12.5px;
-  font-weight: 800;
-
-  cursor: pointer;
-
-  &.active {
-    color: #fff;
-    background: #2f5f9f;
+    &.active {
+      color: #fff;
+      background: #2f5f9f;
+    }
   }
 
-  &:focus-visible {
-    outline: 2px solid #fff;
-    outline-offset: 2px;
+  .bi {
+    font-size: 14px;
   }
+
 }
+
+/* category chips */
+.cat-grid { display: flex; flex-wrap: wrap; gap: 6px; }
+.cat-chip {
+  padding: 7px 11px;
+  color: var(--sub); background: var(--panel-3);
+  border: 1px solid var(--border); border-radius: 999px;
+  font-size: 12px; font-weight: 700; cursor: pointer; line-height: 1;
+}
+.cat-chip:hover { color: #fff; border-color: #4b5368; }
+.cat-chip.active { color: #fff; background: #2f5f9f; border-color: var(--accent); }
+
 
 /* ==================================================
    詳細条件ビルダー — 条件カード
@@ -999,6 +1048,24 @@ body.hide-raw {
     }
   }
 }
+
+.pill {
+  display: inline-flex; align-items: center; gap: 5px;
+  min-height: 32px;
+  padding: 5px 11px;
+  color: var(--sub); background: var(--panel-3);
+  border: 1px solid var(--border); border-radius: 7px;
+  font-size: 12px; font-weight: 700; line-height: 1; cursor: pointer;
+
+  &:hover { border-color: #4b5368; color: #fff; }
+  &.active { color: #fff; background: #2f5f9f; border-color: var(--accent); }
+  img { width: 18px; height: 18px; object-fit: contain; }
+  .star { width: 16px; height: 16px; }
+}
+
+.rarity-pill { padding: 4px 9px; }
+.rarity-pill .rarity-stars img { width: 17px; height: 17px; }
+
 
 .btn-row {
   display: flex;
@@ -3115,7 +3182,7 @@ body.icon-view .detail-card-host {
     border-bottom: 0;
   }
 
-  .filter-dock-content {
+  .dock-scroll {
     padding: 14px 12px;
   }
 
@@ -3130,12 +3197,6 @@ body.icon-view .detail-card-host {
 
   .finder-toolbar {
     display: contents;
-  }
-
-  .search-box {
-    min-width: 0;
-    max-width: none;
-    width: 100%;
   }
 
   .filter-strip {
@@ -3303,6 +3364,10 @@ body.icon-view .detail-card-host {
     border-bottom: 0;
   }
 
+  .sheet-actions {
+    grid-template-columns: 1fr 1.4fr;
+  }
+
   .detail-panel {
     transform: none;
     width: 100%;
@@ -3412,7 +3477,7 @@ body.icon-view .detail-card-host {
     border-bottom: 1px solid var(--border);
   }
 
-  .filter-dock-content {
+  .dock-scroll {
     padding: 12px;
   }
 

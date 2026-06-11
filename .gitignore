@@ -100,3 +100,4 @@ sw.*
 .vscode/
 __pycache__
 .playwright-mcp
+legacy-gulp

@@ -14,7 +14,7 @@ async function init() {
     ]);
 
     // ── フィルターボタンをレンダリング ───────────────
-    document.getElementById('filter-panel-placeholder').innerHTML =
+    document.getElementById('dock-scroll').innerHTML =
         renderFilterButtons(characters);
 
     // ── カードデータマップ（遅延レンダリング用） ──────
@@ -725,7 +725,7 @@ async function init() {
     const openFilterPanel = () => {
         document.body.classList.add('filter-open');
         requestAnimationFrame(() => {
-            document.querySelector('.filter-dock-content')
+            document.querySelector('.dock-scroll')
                 ?.scrollTo({ top: 0 });
         });
     };
@@ -743,7 +743,7 @@ async function init() {
         });
         requestAnimationFrame(() => {
             const groupElement = button?.closest('.filter-group');
-            const scrollElement = button?.closest('.filter-dock-content');
+            const scrollElement = button?.closest('.dock-scroll');
             if (!groupElement || !scrollElement) return;
             scrollElement.scrollTo({
                 top: groupElement.offsetTop - scrollElement.offsetTop - 8,
