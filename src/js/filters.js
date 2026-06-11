@@ -21,34 +21,57 @@ const optionMap = (items, getItems) => {
     return [...map.values()].sort((a, b) => Number(a.id) - Number(b.id));
 };
 
+const filterButtonsHTML = (title, group, options) => `
+<div class="filter-buttons">
+    ${options.map(option => `
+    <button
+        class="filter-button"
+        type="button"
+        data-filter-group="${escapeHtml(group)}"
+        data-filter-value="${escapeHtml(option.id)}"
+        aria-pressed="false"
+        aria-label="${escapeHtml(title)} ${escapeHtml(option.label)}"
+    >
+        ${option.rarity ? `
+        <span class="rarity-stars" aria-hidden="true">
+            ${[1, 2, 3].map(i => `
+            <img
+                class="rarity-star ${i <= option.rarity ? 'filled' : 'empty'}"
+                src="img/${i <= option.rarity ? 'rare.png' : 'rare_slot.png'}"
+                alt=""
+            >`).join('')}
+        </span>
+        ` : `
+        ${option.icon ? `<img class="filter-icon" src="img/${escapeHtml(option.icon)}" alt="">` : ''}
+        <span>${escapeHtml(option.label)}</span>
+        `}
+    </button>
+    `).join('')}
+</div>`;
+
 const renderButtonGroup = (title, group, options) => `
 <section class="filter-group">
     ${title ? `<div class="filter-title">${escapeHtml(title)}</div>` : ''}
-    <div class="filter-buttons">
-        ${options.map(option => `
-        <button
-            class="filter-button"
-            type="button"
-            data-filter-group="${escapeHtml(group)}"
-            data-filter-value="${escapeHtml(option.id)}"
-            aria-pressed="false"
-            aria-label="${escapeHtml(title)} ${escapeHtml(option.label)}"
-        >
-            ${option.rarity ? `
-            <span class="rarity-stars" aria-hidden="true">
-                ${[1, 2, 3].map(i => `
-                <img
-                    class="rarity-star ${i <= option.rarity ? 'filled' : 'empty'}"
-                    src="img/${i <= option.rarity ? 'rare.png' : 'rare_slot.png'}"
-                    alt=""
-                >`).join('')}
-            </span>
-            ` : `
-            ${option.icon ? `<img class="filter-icon" src="img/${escapeHtml(option.icon)}" alt="">` : ''}
-            <span>${escapeHtml(option.label)}</span>
-            `}
-        </button>
-        `).join('')}
+    ${filterButtonsHTML(title, group, options)}
+</section>`;
+
+/* キャラクター情報の絞り込み — 折りたたみ式の facet。
+   ヘッダーに選択数バッジ(facet-count)を出し、開閉はapp.js側で制御する */
+const renderFacet = (title, group, options) => `
+<section class="filter-group facet" data-facet-group="${escapeHtml(group)}">
+    <button
+        type="button"
+        class="facet-header"
+        data-act="facet-toggle"
+        aria-expanded="false"
+        aria-controls="facet-body-${escapeHtml(group)}"
+    >
+        <span class="facet-title">${escapeHtml(title)}</span>
+        <span class="facet-count" hidden>0</span>
+        <i class="bi bi-chevron-down facet-chev" aria-hidden="true"></i>
+    </button>
+    <div class="facet-body" id="facet-body-${escapeHtml(group)}" hidden>
+        ${filterButtonsHTML(title, group, options)}
     </div>
 </section>`;
 
@@ -162,13 +185,13 @@ export function renderFilterButtons(characters) {
         </div>
     </section>
 
-    ${renderButtonGroup('レアリティ',     'rarity',            rarityOptions)}
-    ${renderButtonGroup('属性',           'attr',              attributeOptions)}
-    ${renderButtonGroup('種族',           'races',             raceOptions)}
-    ${renderButtonGroup('役割',           'role',              roleOptions)}
-    ${renderButtonGroup('武器',           'attack_types',      attackTypeOptions)}
-    ${renderButtonGroup('所属',           'affiliations',      affiliationOptions)}
-    ${renderButtonGroup('入手方法',       'obtains',           obtainOptions)}
-    ${renderButtonGroup('実装年',         'release_years',     releaseYearOptions)}
+    ${renderFacet('レアリティ',     'rarity',            rarityOptions)}
+    ${renderFacet('属性',           'attr',              attributeOptions)}
+    ${renderFacet('種族',           'races',             raceOptions)}
+    ${renderFacet('役割',           'role',              roleOptions)}
+    ${renderFacet('武器',           'attack_types',      attackTypeOptions)}
+    ${renderFacet('所属',           'affiliations',      affiliationOptions)}
+    ${renderFacet('入手方法',       'obtains',           obtainOptions)}
+    ${renderFacet('実装年',         'release_years',     releaseYearOptions)}
 </div>`;
 }

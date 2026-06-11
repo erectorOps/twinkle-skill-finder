@@ -41,6 +41,16 @@ const SCOPE_OPTIONS = [{ id: '', label: '指定なし' }, ...taxonomy.scope];
 const tagsFor = (side) => side === 'ally' ? ALLY_TAGS : [];
 const specialsFor = (side) => side === 'enemy' ? specialsEnemy : side === 'self' ? [] : specialsAlly;
 
+/* 参照する数(scale_refs.src) — 「なし/味方/敵/その他」の大分類。その他はサブ選択で詳細指定 */
+const OTHER_REF_IDS = ['rush', 'ex_gauge', 'self_atk', 'self_hp', 'stun_gauge', 'overheal', 'ex_use_count', 'unison'];
+const REF_GROUPS = [
+    { id: 'none', label: 'なし' },
+    { id: 'ally', label: '味方の数' },
+    { id: 'enemy', label: '敵の数' },
+    { id: 'other', label: 'その他' },
+];
+const refGroupOf = (src) => (src === 'none' || src === 'ally' || src === 'enemy') ? src : 'other';
+
 /* ==================================================================
    マッチングエンジン
    ================================================================== */
@@ -243,8 +253,6 @@ const optInner = (cat, o) => {
     return ICON_ONLY.has(cat) ? img : img + escapeHtml(o.short || o.label);
 };
 
-const sideShort = (cond) => cond.side === 'self' ? '自身' : cond.side === 'enemy' ? '敵' : '味方';
-
 const sideScopeText = (cond) => {
     if (cond.side === 'self') return '自身';
     const sideLabel = cond.side === 'enemy' ? '敵' : '味方';
@@ -341,16 +349,35 @@ export function createDetailFilter(container, { conditions: initial = [], onChan
         }).join('');
         const opts = list.filter(sp => !sel.includes(sp.id))
             .map(sp => `<option value="${escapeHtml(sp.id)}">${escapeHtml(sp.label)}</option>`).join('');
-        return `<div class="b-tagrow"><span class="tg-name">特殊</span><div class="btn-row">${chips}<select class="sp-select" data-act="special" data-ref="${refScope}"><option value="">＋ 追加…</option>${opts}</select></div></div>`;
+        return `<div class="btn-row">${chips}<select class="sp-select" data-act="special" data-ref="${refScope}"><option value="">＋ 追加…</option>${opts}</select></div>`;
+    };
+
+    /* 「特殊条件」グループと「属性・種族・役割・武器・所属」等のグループを
+       ANDで組み合わさることが分かるよう視覚的に分離して並べる */
+    const tagGroupsHTML = (cond, sel, refScope, side) => {
+        const specialsBlock = specialsUI(refScope === 'ref' ? cond.ref : cond, refScope, side);
+        const tagsHtml = sel.map(c => tagRow(cond, c, refScope)).join('');
+        if (!sel.length && !specialsBlock) return '';
+
+        const specialsGroup = specialsBlock ? `
+            <div class="cond-group cond-group-special">
+                <div class="cond-group-label">特殊条件</div>
+                ${specialsBlock}
+            </div>` : '';
+        const tagsGroup = sel.length ? `
+            <div class="cond-group cond-group-tags">
+                <div class="cond-group-label">${escapeHtml(sel.map(c => TAG_LABEL[c]).join('・'))}</div>
+                <div class="b-tags">${tagsHtml}</div>
+            </div>` : '';
+        const divider = (specialsBlock && sel.length) ? `<div class="cond-group-and"><span>+</span></div>` : '';
+
+        return `<div class="cond-groups">${specialsGroup}${divider}${tagsGroup}</div>`;
     };
 
     const builderHTML = (cond) => {
         const sel = tagsFor(cond.side);
-        const specialsBlock = specialsUI(cond, 'tag', cond.side);
-        const tagLabels = sel.filter(c => cond[c]).map(c => byId(taxonomy[c], cond[c]).label)
-            .concat((cond.specials || []).map(s => (byId(ALL_SPECIALS, s) || {}).short || s));
-        const tagCount = tagLabels.length;
         const refSel = REF_TAG_KEYS[cond.ref.src] || [];
+        const refGroup = refGroupOf(cond.ref.src);
 
         return `
         <div class="builder" data-cid="${cond.id}">
@@ -378,41 +405,41 @@ export function createDetailFilter(container, { conditions: initial = [], onChan
                 </select>` : ''}`}
             </div>
 
-            ${(sel.length || specialsBlock) ? `
-            <div class="b-block">
-                <div class="b-label">対象タグ <span class="b-sub">— 重ねると「かつ」（例: 水属性のサブ属性付与中）</span></div>
-                <div class="b-tags">
-                    ${sel.map(c => tagRow(cond, c, 'tag')).join('')}
-                    ${specialsBlock}
-                </div>
-            </div>` : ''}
-
-            ${tagCount >= 2 ? `
-            <div class="union-hint">
-                <i class="bi bi-info-circle-fill"></i>
-                <span>この条件は「${escapeHtml(tagLabels.join('の'))}の${sideShort(cond)}」を探します。「または」で探すなら分割してください。</span>
-                <button type="button" data-act="split">またはに分割</button>
-            </div>` : ''}
+            ${(() => {
+                const groups = tagGroupsHTML(cond, sel, 'tag', cond.side);
+                return groups ? `
+                <div class="b-block">
+                    <div class="b-label">対象タグ <span class="b-sub">2つのグループはANDで組み合わさります</span></div>
+                    ${groups}
+                </div>` : '';
+            })()}
 
             <button type="button" class="ref-toggle ${cond.refOpen ? 'open' : ''} ${cond.ref.src !== 'none' ? 'has-ref' : ''}" data-act="ref-toggle">
                 <i class="bi bi-bullseye"></i> 参照元（◯◯の数 × 威力）${cond.ref.src !== 'none' ? '・設定中' : '<span class="b-sub">任意</span>'}
                 <i class="bi bi-chevron-right chev"></i>
             </button>
             <div class="ref-body ${cond.refOpen ? 'open' : ''}">
-                <div class="b-block" style="margin-top:0">
-                    <div class="b-label">参照する数</div>
-                    <div class="seg">
-                        ${taxonomy.ref.map(r => `<button type="button" class="${cond.ref.src === r.id ? 'active' : ''}" data-act="ref-src" data-val="${r.id}">${escapeHtml(r.label)}</button>`).join('')}
+                <div class="ref-body-inner">
+                    <div class="ref-body-title">参照元の設定</div>
+                    <div class="b-block" style="margin-top:0">
+                        <div class="b-label">参照する数</div>
+                        <div class="seg">
+                            ${REF_GROUPS.map(g => `<button type="button" class="${refGroup === g.id ? 'active' : ''}" data-act="ref-group" data-val="${g.id}">${escapeHtml(g.label)}</button>`).join('')}
+                        </div>
+                        ${refGroup === 'other' ? `
+                        <div class="b-block">
+                            <div class="b-label">特殊な参照をする数 <span class="b-sub">どんな数を数えるか</span></div>
+                            <div class="btn-row">
+                                ${OTHER_REF_IDS.map(id => `<button type="button" class="tg ${cond.ref.src === id ? 'active' : ''}" data-act="ref-src" data-val="${id}">${escapeHtml(byId(taxonomy.ref, id).label)}</button>`).join('')}
+                            </div>
+                        </div>` : ''}
                     </div>
+                    ${refSel.length ? `
+                    <div class="b-block">
+                        <div class="b-label">参照タグ <span class="b-sub">どんな${cond.ref.src === 'ally' ? '味方' : '敵'}を数えるか</span></div>
+                        ${tagGroupsHTML(cond, refSel, 'ref', cond.ref.src)}
+                    </div>` : ''}
                 </div>
-                ${refSel.length ? `
-                <div class="b-block">
-                    <div class="b-label">参照タグ <span class="b-sub">どんな${cond.ref.src === 'ally' ? '味方' : '敵'}を数えるか</span></div>
-                    <div class="b-tags">
-                        ${refSel.map(c => tagRow(cond, c, 'ref')).join('')}
-                        ${specialsUI(cond.ref, 'ref', cond.ref.src)}
-                    </div>
-                </div>` : ''}
             </div>
 
             <div class="b-actions">
@@ -467,29 +494,6 @@ export function createDetailFilter(container, { conditions: initial = [], onChan
         if (c && !isLive(c)) {
             conditions = conditions.filter(x => x.id !== currentEditingId);
         }
-    };
-
-    const doSplit = (cond) => {
-        const sel = tagsFor(cond.side);
-        const units = [];
-        sel.forEach(c => { if (cond[c]) units.push({ cat: c, val: cond[c] }); });
-        (cond.specials || []).forEach(s => units.push({ special: s }));
-        if (units.length < 2) return;
-
-        const idx = conditions.findIndex(c => c.id === cond.id);
-        const made = units.map(u => {
-            const nc = newCondition();
-            nc.effectType = cond.effectType;
-            nc.side = cond.side;
-            nc.scope = cond.scope;
-            nc.position = cond.position;
-            if (u.special) nc.specials = [u.special];
-            else nc[u.cat] = u.val;
-            return nc;
-        });
-        conditions.splice(idx, 1, ...made);
-        editingId = made[0].id;
-        update();
     };
 
     const onClick = (e) => {
@@ -567,6 +571,19 @@ export function createDetailFilter(container, { conditions: initial = [], onChan
                 cond.refOpen = !cond.refOpen;
                 update();
                 break;
+            case 'ref-group': {
+                if (!cond) break;
+                const group = target.dataset.val;
+                if (group === 'other') {
+                    if (!OTHER_REF_IDS.includes(cond.ref.src)) cond.ref.src = OTHER_REF_IDS[0];
+                } else {
+                    cond.ref.src = group;
+                }
+                ALLY_TAGS.concat(['ailment']).forEach(c => { cond.ref[c] = ''; });
+                cond.ref.specials = [];
+                update();
+                break;
+            }
             case 'ref-src': {
                 if (!cond) break;
                 cond.ref.src = target.dataset.val;
@@ -575,9 +592,6 @@ export function createDetailFilter(container, { conditions: initial = [], onChan
                 update();
                 break;
             }
-            case 'split':
-                if (cond) doSplit(cond);
-                break;
         }
     };
 

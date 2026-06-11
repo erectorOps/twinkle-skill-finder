@@ -79,6 +79,9 @@ async function init() {
     const filterChips = [
         ...document.querySelectorAll('.filter-chip')
     ];
+    const facetSections = [
+        ...document.querySelectorAll('.facet')
+    ];
     const effectModeButtons = [
         ...document.querySelectorAll('[data-effect-mode]')
     ];
@@ -340,6 +343,23 @@ async function init() {
         }
 
         filterChipRow.scrollLeft = 0;
+    };
+
+    const setFacetOpen = (section, open) => {
+        const header = section.querySelector('.facet-header');
+        const body = section.querySelector('.facet-body');
+        header.setAttribute('aria-expanded', open ? 'true' : 'false');
+        body.hidden = !open;
+    };
+
+    const updateFacetCounts = () => {
+        facetSections.forEach(section => {
+            const group = section.dataset.facetGroup;
+            const count = getPendingValues(group).size;
+            const badge = section.querySelector('.facet-count');
+            badge.hidden = count === 0;
+            badge.textContent = count;
+        });
     };
 
     const clearFilterGroup = (group) => {
@@ -604,6 +624,7 @@ async function init() {
         updateCharacterScopeToggle();
         updateEffectModeUI();
         updateFilterChips();
+        updateFacetCounts();
         updateModeViews();
         setActiveSortOption(currentSortKey);
         updateApplyButtonState();
@@ -716,6 +737,10 @@ async function init() {
     const openFilterGroup = (group) => {
         document.body.classList.add('filter-open');
         const button = document.querySelector(`[data-filter-group="${group}"]`);
+        const targetFacet = button?.closest('.facet');
+        facetSections.forEach(section => {
+            setFacetOpen(section, section === targetFacet);
+        });
         requestAnimationFrame(() => {
             const groupElement = button?.closest('.filter-group');
             const scrollElement = button?.closest('.filter-dock-content');
@@ -952,8 +977,17 @@ async function init() {
             } else {
                 toggleMultiFilter(button);
             }
+            updateFacetCounts();
             if (isLiveMode()) applyPendingFilters();
             else updateApplyButtonState();
+        });
+    });
+
+    facetSections.forEach(section => {
+        const header = section.querySelector('.facet-header');
+        header.addEventListener('click', () => {
+            const expanded = header.getAttribute('aria-expanded') === 'true';
+            setFacetOpen(section, !expanded);
         });
     });
 

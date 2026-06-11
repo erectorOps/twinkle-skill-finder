@@ -426,6 +426,90 @@ body.hide-raw {
   }
 }
 
+/* キャラクター情報の絞り込み — 折りたたみ式セクション */
+.facet {
+  gap: 0;
+
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  background: var(--panel-2);
+
+  overflow: hidden;
+}
+
+.facet-header {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+  width: 100%;
+  padding: 11px 12px;
+
+  color: var(--text);
+  background: transparent;
+
+  border: 0;
+
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 800;
+  text-align: left;
+
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(255, 255, 255, .03);
+  }
+
+  &[aria-expanded="true"] .facet-chev {
+    transform: rotate(180deg);
+  }
+}
+
+.facet-title {
+  flex: 1;
+}
+
+.facet-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+
+  color: #fff;
+  background: #2f5f9f;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 900;
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.facet-chev {
+  flex: 0 0 auto;
+
+  color: var(--sub);
+
+  transition: transform .2s;
+}
+
+.facet-body {
+  padding: 0 12px 12px;
+
+  &[hidden] {
+    display: none;
+  }
+}
+
 .scope-toggle {
   display: inline-flex;
   align-items: center;
@@ -751,51 +835,6 @@ body.hide-raw {
   }
 }
 
-.union-hint {
-  display: flex;
-  align-items: center;
-
-  gap: 8px;
-
-  margin: 0 10px 10px 12px;
-  padding: 7px 9px;
-
-  color: #ffd9a3;
-  background: rgba(255, 180, 84, .09);
-
-  border: 1px solid rgba(255, 180, 84, .28);
-  border-radius: 8px;
-
-  font-size: 11px;
-  line-height: 1.5;
-
-  .bi {
-    flex: 0 0 auto;
-
-    font-size: 14px;
-  }
-
-  button {
-    flex: 0 0 auto;
-    margin-left: auto;
-
-    padding: 4px 9px;
-
-    color: #1a1205;
-    background: var(--or-color);
-
-    border: 0;
-    border-radius: 6px;
-
-    font: inherit;
-    font-size: 11px;
-    font-weight: 900;
-
-    cursor: pointer;
-    white-space: nowrap;
-  }
-}
-
 .add-group {
   display: flex;
   align-items: center;
@@ -1001,6 +1040,70 @@ body.hide-raw {
   font-weight: 800;
 }
 
+/* 「特殊条件」グループと「属性・種族・役割・武器・所属」グループを
+   破線枠+「+」でANDの組み合わせと分かるように並べる */
+.cond-groups {
+  display: flex;
+  flex-direction: column;
+}
+
+.cond-group {
+  padding: 10px 10px 9px;
+
+  border: 1.5px dashed var(--border);
+  border-radius: 10px;
+
+  & + .cond-group-and {
+    margin: 4px 0;
+  }
+}
+
+.cond-group-label {
+  margin-bottom: 8px;
+
+  color: var(--sub);
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .02em;
+}
+
+.cond-group-special {
+  border-color: rgba(255, 180, 84, .35);
+
+  .cond-group-label {
+    color: #ffd9a3;
+  }
+}
+
+.cond-group-and {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & + .cond-group {
+    margin-top: 4px;
+  }
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 22px;
+    height: 22px;
+
+    color: var(--accent);
+    background: var(--panel);
+
+    border: 1px solid var(--border);
+    border-radius: 999px;
+
+    font-size: 13px;
+    font-weight: 900;
+  }
+}
+
 .tg {
   display: inline-flex;
   align-items: center;
@@ -1125,10 +1228,42 @@ body.hide-raw {
 .ref-body {
   display: none;
 
-  padding: 12px 2px 2px;
+  margin-top: 8px;
 
   &.open {
     display: block;
+  }
+}
+
+.ref-body-inner {
+  padding: 12px;
+
+  background: var(--panel-3);
+
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.ref-body-title {
+  margin-bottom: 10px;
+
+  color: var(--text);
+
+  font-size: 12px;
+  font-weight: 800;
+
+  &::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 3px;
+    height: 12px;
+    margin-right: 6px;
+    vertical-align: -1px;
+
+    background: var(--accent);
+    border-radius: 2px;
   }
 }
 
