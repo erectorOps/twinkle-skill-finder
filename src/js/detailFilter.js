@@ -48,6 +48,8 @@ const specialsFor = (side) => side === 'enemy' ? specialsEnemy : side === 'self'
 export const isLive = (cond) =>
     !!(
         cond.effectType
+        || cond.side !== 'ally'
+        || cond.scope !== 'all'
         || cond.attr || cond.race || cond.role || cond.weapon || cond.affiliation
         || (cond.specials && cond.specials.length)
         || cond.position

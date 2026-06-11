@@ -1220,6 +1220,15 @@
             "scope": "multi",
             "lane": "left",
             "lane_count": 2,
+            "camp": 1,
+            "specials": []
+          },
+          {
+            "side": "ally",
+            "scope": "multi",
+            "lane": "left",
+            "lane_count": 2,
+            "camp": 3,
             "specials": []
           }
         ],
@@ -1250,6 +1259,15 @@
             "scope": "multi",
             "lane": "left",
             "lane_count": 2,
+            "camp": 1,
+            "specials": []
+          },
+          {
+            "side": "ally",
+            "scope": "multi",
+            "lane": "left",
+            "lane_count": 2,
+            "camp": 3,
             "specials": []
           }
         ],
@@ -1283,6 +1301,15 @@
             "scope": "multi",
             "lane": "left",
             "lane_count": 2,
+            "camp": 1,
+            "specials": []
+          },
+          {
+            "side": "ally",
+            "scope": "multi",
+            "lane": "left",
+            "lane_count": 2,
+            "camp": 3,
             "specials": []
           }
         ],
@@ -5920,7 +5947,9 @@
           {
             "side": "ally",
             "scope": "all",
-            "specials": "sub_attr"
+            "specials": [
+              "sub_attr"
+            ]
           }
         ],
         "scale_refs": [
@@ -6022,7 +6051,9 @@
               {
                 "side": "ally",
                 "scope": "all",
-                "specials": "diff_attr"
+                "specials": [
+                  "diff_attr"
+                ]
               }
             ]
           }
@@ -6084,7 +6115,9 @@
               {
                 "side": "ally",
                 "scope": "all",
-                "specials": "diff_attr"
+                "specials": [
+                  "diff_attr"
+                ]
               }
             ]
           }
@@ -6166,7 +6199,9 @@
               {
                 "side": "ally",
                 "scope": "all",
-                "specials": "diff_attr"
+                "specials": [
+                  "diff_attr"
+                ]
               }
             ]
           }
@@ -6228,7 +6263,9 @@
               {
                 "side": "ally",
                 "scope": "all",
-                "specials": "diff_attr"
+                "specials": [
+                  "diff_attr"
+                ]
               }
             ]
           }
@@ -7022,7 +7059,9 @@
               {
                 "side": "ally",
                 "scope": "all",
-                "specials": "diff_role"
+                "specials": [
+                  "diff_role"
+                ]
               }
             ]
           }
@@ -7830,15 +7869,7 @@
             "lane": "left_withme",
             "lane_count": 1,
             "specials": [
-              "w",
-              "i",
-              "t",
-              "h",
-              "_",
-              "s",
-              "e",
-              "l",
-              "f"
+              "with_self"
             ]
           }
         ],
@@ -10686,7 +10717,9 @@
               {
                 "side": "ally",
                 "scope": "all",
-                "specials": "diff_role"
+                "specials": [
+                  "diff_role"
+                ]
               }
             ]
           }
@@ -13480,6 +13513,7 @@
             "scope": "single",
             "lane": "right",
             "lane_count": 1,
+            "attr": 2,
             "specials": []
           }
         ],
@@ -14083,15 +14117,7 @@
             "lane": "right_withme",
             "lane_count": 1,
             "specials": [
-              "w",
-              "i",
-              "t",
-              "h",
-              "_",
-              "s",
-              "e",
-              "l",
-              "f"
+              "with_self"
             ]
           }
         ],
@@ -14986,15 +15012,7 @@
             "lane": "left_withme",
             "lane_count": 1,
             "specials": [
-              "w",
-              "i",
-              "t",
-              "h",
-              "_",
-              "s",
-              "e",
-              "l",
-              "f"
+              "with_self"
             ]
           }
         ],
@@ -16783,15 +16801,7 @@
             "lane": "right_withme",
             "lane_count": 1,
             "specials": [
-              "w",
-              "i",
-              "t",
-              "h",
-              "_",
-              "s",
-              "e",
-              "l",
-              "f"
+              "with_self"
             ]
           }
         ],
@@ -19209,7 +19219,9 @@
               {
                 "side": "ally",
                 "scope": "all",
-                "specials": "diff_attr"
+                "specials": [
+                  "diff_attr"
+                ]
               }
             ]
           }
@@ -19319,7 +19331,9 @@
               {
                 "side": "ally",
                 "scope": "all",
-                "specials": "diff_attr"
+                "specials": [
+                  "diff_attr"
+                ]
               }
             ]
           }
@@ -19969,7 +19983,9 @@
               {
                 "side": "ally",
                 "scope": "all",
-                "specials": "diff_attr"
+                "specials": [
+                  "diff_attr"
+                ]
               }
             ]
           }
@@ -20006,7 +20022,9 @@
               {
                 "side": "ally",
                 "scope": "all",
-                "specials": "diff_attr"
+                "specials": [
+                  "diff_attr"
+                ]
               }
             ]
           }
@@ -23854,7 +23872,9 @@
               {
                 "side": "ally",
                 "scope": "all",
-                "specials": "diff_attr"
+                "specials": [
+                  "diff_attr"
+                ]
               }
             ]
           }
@@ -23963,7 +23983,9 @@
           {
             "side": "ally",
             "scope": "all",
-            "specials": "sub_attr"
+            "specials": [
+              "sub_attr"
+            ]
           }
         ],
         "scale_refs": [],
@@ -27025,7 +27047,9 @@
               {
                 "side": "ally",
                 "scope": "all",
-                "specials": "diff_role"
+                "specials": [
+                  "diff_role"
+                ]
               }
             ]
           }
@@ -28126,7 +28150,9 @@
           {
             "side": "ally",
             "scope": "all",
-            "specials": "sub_attr"
+            "specials": [
+              "sub_attr"
+            ]
           }
         ],
         "scale_refs": [
@@ -28269,7 +28295,9 @@
           {
             "side": "ally",
             "scope": "all",
-            "specials": "sub_attr"
+            "specials": [
+              "sub_attr"
+            ]
           }
         ],
         "scale_refs": [
@@ -29377,7 +29405,9 @@
               {
                 "side": "ally",
                 "scope": "all",
-                "specials": "diff_attr"
+                "specials": [
+                  "diff_attr"
+                ]
               }
             ]
           }
@@ -29439,7 +29469,9 @@
               {
                 "side": "ally",
                 "scope": "all",
-                "specials": "diff_attr"
+                "specials": [
+                  "diff_attr"
+                ]
               }
             ]
           }
@@ -33586,7 +33618,9 @@
               {
                 "side": "ally",
                 "scope": "all",
-                "specials": "diff_attr"
+                "specials": [
+                  "diff_attr"
+                ]
               }
             ]
           }
@@ -33623,7 +33657,9 @@
               {
                 "side": "ally",
                 "scope": "all",
-                "specials": "diff_attr"
+                "specials": [
+                  "diff_attr"
+                ]
               }
             ]
           }
@@ -37456,7 +37492,9 @@
               {
                 "side": "ally",
                 "scope": "all",
-                "specials": "diff_attr"
+                "specials": [
+                  "diff_attr"
+                ]
               }
             ]
           }
@@ -43799,7 +43837,9 @@
               {
                 "side": "enemy",
                 "scope": "all",
-                "specials": "stun"
+                "specials": [
+                  "stun"
+                ]
               }
             ]
           }
@@ -45675,7 +45715,9 @@
               {
                 "side": "ally",
                 "scope": "all",
-                "specials": "unison"
+                "specials": [
+                  "unison"
+                ]
               }
             ]
           }
@@ -51741,7 +51783,10 @@
             "scope": "single",
             "lane": "right",
             "lane_count": 1,
-            "specials": []
+            "attr": 4,
+            "specials": [
+              "main_attr"
+            ]
           }
         ],
         "scale_refs": [],
@@ -54845,15 +54890,7 @@
             "lane": "left_withme",
             "lane_count": 1,
             "specials": [
-              "w",
-              "i",
-              "t",
-              "h",
-              "_",
-              "s",
-              "e",
-              "l",
-              "f"
+              "with_self"
             ]
           }
         ],
@@ -56092,7 +56129,9 @@
               {
                 "side": "ally",
                 "scope": "all",
-                "specials": "diff_attr"
+                "specials": [
+                  "diff_attr"
+                ]
               }
             ]
           }
@@ -56196,7 +56235,9 @@
               {
                 "side": "ally",
                 "scope": "all",
-                "specials": "unison"
+                "specials": [
+                  "unison"
+                ]
               }
             ]
           }
@@ -56355,7 +56396,9 @@
               {
                 "side": "ally",
                 "scope": "all",
-                "specials": "unison"
+                "specials": [
+                  "unison"
+                ]
               }
             ]
           }
@@ -60052,7 +60095,9 @@
               {
                 "side": "ally",
                 "scope": "all",
-                "specials": "unison"
+                "specials": [
+                  "unison"
+                ]
               }
             ]
           }
@@ -62788,6 +62833,7 @@
             "scope": "multi",
             "lane": "right",
             "lane_count": 3,
+            "equip_type": 1,
             "specials": []
           }
         ],
@@ -62820,6 +62866,7 @@
             "scope": "multi",
             "lane": "right",
             "lane_count": 3,
+            "attr": 2,
             "specials": []
           }
         ],
@@ -62851,6 +62898,7 @@
             "scope": "multi",
             "lane": "right",
             "lane_count": 3,
+            "attr": 2,
             "specials": []
           }
         ],
@@ -63108,15 +63156,7 @@
             "lane": "right_withme",
             "lane_count": 1,
             "specials": [
-              "w",
-              "i",
-              "t",
-              "h",
-              "_",
-              "s",
-              "e",
-              "l",
-              "f"
+              "with_self"
             ]
           }
         ],
@@ -66127,7 +66167,9 @@
           {
             "side": "ally",
             "scope": "all",
-            "specials": "sub_attr"
+            "specials": [
+              "sub_attr"
+            ]
           }
         ],
         "scale_refs": [
@@ -66292,7 +66334,9 @@
           {
             "side": "ally",
             "scope": "all",
-            "specials": "sub_attr"
+            "specials": [
+              "sub_attr"
+            ]
           }
         ],
         "scale_refs": [
@@ -66549,7 +66593,9 @@
               {
                 "side": "enemy",
                 "scope": "all",
-                "specials": "stun"
+                "specials": [
+                  "stun"
+                ]
               }
             ]
           }
@@ -66700,7 +66746,9 @@
               {
                 "side": "enemy",
                 "scope": "all",
-                "specials": "stun"
+                "specials": [
+                  "stun"
+                ]
               }
             ]
           }
@@ -69089,7 +69137,9 @@
               {
                 "side": "ally",
                 "scope": "all",
-                "specials": "diff_role"
+                "specials": [
+                  "diff_role"
+                ]
               }
             ]
           }
@@ -69167,7 +69217,9 @@
               {
                 "side": "ally",
                 "scope": "all",
-                "specials": "diff_role"
+                "specials": [
+                  "diff_role"
+                ]
               }
             ]
           }
@@ -69365,7 +69417,9 @@
               {
                 "side": "ally",
                 "scope": "all",
-                "specials": "diff_role"
+                "specials": [
+                  "diff_role"
+                ]
               }
             ]
           }
@@ -69443,7 +69497,9 @@
               {
                 "side": "ally",
                 "scope": "all",
-                "specials": "diff_role"
+                "specials": [
+                  "diff_role"
+                ]
               }
             ]
           }
