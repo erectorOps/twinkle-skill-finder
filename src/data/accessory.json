@@ -47997,6 +47997,394 @@
   },
   {
     "source": "EquipDetail",
+    "accessory_name": "ジュエリーの花飾り",
+    "equip_id": 3300267,
+    "illust_id": "equip_3300267",
+    "rarity": 3,
+    "unit_id": 1062003,
+    "character_id": 62,
+    "character_name": "ジュエリー",
+    "unit_name": "日傘の花嫁探偵",
+    "exclusive_unit_name": "[日傘の花嫁探偵]ジュエリー",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "5",
+      "label": "ヒール",
+      "icon": "type_5.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": null,
+      "ex": null,
+      "ex_up": 35,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 2,
+        "parameter_value": 35
+      }
+    ],
+    "skill_ids": {
+      "EX1": 10620031,
+      "EX2": 10620032
+    },
+    "abilities": [
+      {
+        "skill_type": "COMMON",
+        "skill_id": null,
+        "text": "初回行動CT-7（自身が1回行動後に解除される）",
+        "effects_text": [
+          "初回行動CT-7（自身が1回行動後に解除される）"
+        ],
+        "effects": [
+          {
+            "type": "初回行動CT短縮",
+            "display_value": "7",
+            "formula": "",
+            "value": {
+              "amount": 7
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "property",
+                "text": "自身が1回行動後に解除される",
+                "label": "特性"
+              }
+            ],
+            "raw": "初回行動CT-7(自身が1回行動後に解除される)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX1",
+        "skill_id": 10620031,
+        "text": "HP回復を20％+人間または炎属性の味方の数×4％増加",
+        "effects_text": [
+          "HP回復を20％+人間または炎属性の味方の数×4％増加"
+        ],
+        "effects": [
+          {
+            "type": "HP回復を強化",
+            "display_value": "+20%～40%",
+            "formula": "20%+人間または炎属性の味方の数×4%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "HP回復を20%+人間または炎属性の味方の数×4%増加",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10620032,
+        "text": "ATKの上昇値を50％+自身の基礎HP2000ごと×8％アップ/ATKアップの最大値を150％アップ",
+        "effects_text": [
+          "ATKの上昇値を50％+自身の基礎HP2000ごと×8％アップ/ATKアップの最大値を150％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%～150%",
+            "formula": "50%+自身の基礎HP2000ごと×8% (合計最大150%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値を50%+自身の基礎HP2000ごと×8%アップ/ATKアップの最大値を150%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "初回行動CT-7（自身が1回行動後に解除される）/\nEX1「ルビーローズ・シャワー」のHP回復を20％+人間または炎属性の味方の数×4％増加/\nEX2「プレシャス・ブーケトス」のATKの上昇値を50％+自身の基礎HP2000ごと×8％アップ/ATKアップの最大値を150％アップ",
+    "ability_full": "初回行動CT-7（自身が1回行動後に解除される）/\nEX1「ルビーローズ・シャワー」のHP回復を20％+人間または炎属性の味方の数×4％増加/\nEX2「プレシャス・ブーケトス」のATKの上昇値を50％+自身の基礎HP2000ごと×8％アップ/ATKアップの最大値を150％アップ",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "COMMON",
+        "skill_id": null,
+        "text": "初回行動CT-7（自身が1回行動後に解除される）",
+        "effects_text": [
+          "初回行動CT-7（自身が1回行動後に解除される）"
+        ],
+        "effects": [
+          {
+            "type": "初回行動CT短縮",
+            "display_value": "7",
+            "formula": "",
+            "value": {
+              "amount": 7
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "property",
+                "text": "自身が1回行動後に解除される",
+                "label": "特性"
+              }
+            ],
+            "raw": "初回行動CT-7(自身が1回行動後に解除される)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX1",
+        "skill_id": 10620031,
+        "text": "HP回復を20％+人間または炎属性の味方の数×4％増加",
+        "effects_text": [
+          "HP回復を20％+人間または炎属性の味方の数×4％増加"
+        ],
+        "effects": [
+          {
+            "type": "HP回復を強化",
+            "display_value": "+20%～40%",
+            "formula": "20%+人間または炎属性の味方の数×4%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "HP回復を20%+人間または炎属性の味方の数×4%増加",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10620032,
+        "text": "ATKの上昇値を50％+自身の基礎HP2000ごと×8％アップ/ATKアップの最大値を150％アップ",
+        "effects_text": [
+          "ATKの上昇値を50％+自身の基礎HP2000ごと×8％アップ/ATKアップの最大値を150％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%～150%",
+            "formula": "50%+自身の基礎HP2000ごと×8% (合計最大150%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値を50%+自身の基礎HP2000ごと×8%アップ/ATKアップの最大値を150%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
+    "accessory_name": "イレーナの花飾り",
+    "equip_id": 3300268,
+    "illust_id": "equip_3300268",
+    "rarity": 3,
+    "unit_id": 1065004,
+    "character_id": 65,
+    "character_name": "イレーナ",
+    "unit_name": "永遠のティアーモ",
+    "exclusive_unit_name": "[永遠のティアーモ]イレーナ",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "2",
+      "label": "スピード",
+      "icon": "type_2.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": 846,
+      "ex": null,
+      "ex_up": null,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 1,
+        "parameter_value": 846
+      }
+    ],
+    "skill_ids": {
+      "EX1": 10650041,
+      "EX2": 10650042
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10650041,
+        "text": "ダメージ47％アップ/攻撃回数1回増加",
+        "effects_text": [
+          "ダメージ47％アップ",
+          "攻撃回数1回増加"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+47%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ47%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "攻撃回数の強化",
+            "display_value": "+1回",
+            "formula": "",
+            "value": {
+              "count": 1
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "攻撃回数1回増加",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10650042,
+        "text": "ダメージ100％アップ（1バトル中、自身のEXスキル1の使用が3回目以降の時、200％アップ）",
+        "effects_text": [
+          "ダメージ100％アップ（1バトル中、自身のEXスキル1の使用が3回目以降の時、200％アップ）"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+100%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "1バトル中、自身のEXスキル1の使用が3回目以降の時、200%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ100%アップ(1バトル中、自身のEXスキル1の使用が3回目以降の時、200%アップ)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「ノッツェ・ディ・アンドロメダ」のダメージ47％アップ/攻撃回数1回増加/\nEX2「エテルニタ・アモーレ・ミオ」のダメージ100％アップ（1バトル中、自身のEXスキル1の使用が3回目以降の時、200％アップ）",
+    "ability_full": "EX1「ノッツェ・ディ・アンドロメダ」のダメージ47％アップ/攻撃回数1回増加/\nEX2「エテルニタ・アモーレ・ミオ」のダメージ100％アップ（1バトル中、自身のEXスキル1の使用が3回目以降の時、200％アップ）",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10650041,
+        "text": "ダメージ47％アップ/攻撃回数1回増加",
+        "effects_text": [
+          "ダメージ47％アップ",
+          "攻撃回数1回増加"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+47%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ47%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "攻撃回数の強化",
+            "display_value": "+1回",
+            "formula": "",
+            "value": {
+              "count": 1
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "攻撃回数1回増加",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10650042,
+        "text": "ダメージ100％アップ（1バトル中、自身のEXスキル1の使用が3回目以降の時、200％アップ）",
+        "effects_text": [
+          "ダメージ100％アップ（1バトル中、自身のEXスキル1の使用が3回目以降の時、200％アップ）"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+100%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "1バトル中、自身のEXスキル1の使用が3回目以降の時、200%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ100%アップ(1バトル中、自身のEXスキル1の使用が3回目以降の時、200%アップ)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
     "accessory_name": "リィベルの首飾り",
     "equip_id": 3300286,
     "illust_id": "equip_3300286",

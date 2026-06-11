@@ -6382,6 +6382,45 @@
     "specific_gauge_data": []
   },
   {
+    "unit_id": 1062003,
+    "character_name": "ジュエリー",
+    "character_name_kana": "シュエリー",
+    "unit_name": "日傘の花嫁探偵",
+    "rarity": 3,
+    "attr_type": {
+      "id": "1",
+      "label": "炎",
+      "icon": "attribute_01.png"
+    },
+    "role": {
+      "id": "5",
+      "label": "ヒール",
+      "icon": "type_5.png"
+    },
+    "camps": [
+      {
+        "id": 1,
+        "label": "人間",
+        "icon": "race_1.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 1,
+        "label": "流星学園",
+        "icon": "affiliation_02.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "1",
+        "label": "魔法",
+        "icon": "icon_equipment_01_01.png"
+      }
+    ],
+    "specific_gauge_data": []
+  },
+  {
     "unit_id": 1063001,
     "character_name": "カヤ",
     "character_name_kana": "カヤ",
@@ -6581,6 +6620,45 @@
       "is_unlock": 1,
       "is_strengthen": 0
     }
+  },
+  {
+    "unit_id": 1065004,
+    "character_name": "イレーナ",
+    "character_name_kana": "イレーナ",
+    "unit_name": "永遠のティアーモ",
+    "rarity": 3,
+    "attr_type": {
+      "id": "1",
+      "label": "炎",
+      "icon": "attribute_01.png"
+    },
+    "role": {
+      "id": "2",
+      "label": "スピード",
+      "icon": "type_2.png"
+    },
+    "camps": [
+      {
+        "id": 1,
+        "label": "人間",
+        "icon": "race_1.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 1,
+        "label": "流星学園",
+        "icon": "affiliation_02.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "1",
+        "label": "魔法",
+        "icon": "icon_equipment_01_01.png"
+      }
+    ],
+    "specific_gauge_data": []
   },
   {
     "unit_id": 1066001,
