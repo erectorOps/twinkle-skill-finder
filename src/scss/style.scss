@@ -600,10 +600,6 @@ body.hide-raw {
 ================================================== */
 
 .effect-section {
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: linear-gradient(180deg, #1e222b, #1b1e26);
-  padding: 12px;
   margin-bottom: 16px;
 
   > .filter-title {
@@ -949,7 +945,7 @@ body.hide-raw {
 
 .builder {
   margin-top: 10px;
-  padding-top: 12px;
+  padding: 4px 12px 12px;
 
   border-top: 1px solid var(--border);
 }
@@ -1239,18 +1235,42 @@ body.hide-raw {
 }
 
 .ref-body-inner {
-  padding: 12px;
-
-  background: var(--panel-3);
-
-  border: 1px solid var(--border);
+  padding: 10px 8px;
+  background: rgba(255, 180, 84, .05); // amber tint (暗め)
+  border: 1px solid rgba(255, 180, 84, .18);
   border-radius: 10px;
+
+  .tag-cat-tab {
+    padding: 5px 6px 7px;
+    font-size: 11px;
+  }
+
+  // seg・tg・select の背景を amber 系に上書き
+  .seg {
+    background: rgba(255, 180, 84, .08);
+    border-color: rgba(255, 180, 84, .22);
+  }
+
+  .tg {
+    background: rgba(255, 180, 84, .07);
+    border-color: rgba(255, 180, 84, .2);
+
+    &:hover {
+      border-color: rgba(255, 180, 84, .4);
+    }
+    // .active は青のまま（選択状態の色語彙は統一）
+  }
+
+  .b-select {
+    background: rgba(255, 180, 84, .07);
+    border-color: rgba(255, 180, 84, .2);
+  }
 }
 
 .ref-body-title {
   margin-bottom: 10px;
 
-  color: var(--text);
+  color: #ffd9a3;
 
   font-size: 12px;
   font-weight: 800;
@@ -1265,7 +1285,7 @@ body.hide-raw {
     margin-right: 6px;
     vertical-align: -1px;
 
-    background: var(--accent);
+    background: var(--or-color);
     border-radius: 2px;
   }
 }
@@ -3071,6 +3091,29 @@ body.icon-view .detail-card-host {
     text-align: right;
   }
 }
+
+.tag-cat-tabs {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+.tag-cat-tab {
+    padding: 6px 8px 8px;
+    font-size: 12px; font-weight: 800;
+    color: var(--sub);
+    background: transparent;
+    border: 0; border-radius: 0;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    cursor: pointer;
+    transition: color .15s, border-color .15s;
+    &:hover { color: var(--text); }
+    &.active { color: #fff; border-bottom-color: var(--accent); }
+}
+.tag-val-row { margin-top: 8px; }
 
 /* ==================================================
    MOBILE

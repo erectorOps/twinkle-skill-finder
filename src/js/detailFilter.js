@@ -45,10 +45,26 @@ const specialsFor = (side) => side === 'enemy' ? specialsEnemy : side === 'self'
 const OTHER_REF_IDS = ['rush', 'ex_gauge', 'self_atk', 'self_hp', 'stun_gauge', 'overheal', 'ex_use_count', 'unison'];
 const REF_GROUPS = [
     { id: 'none', label: 'なし' },
-    { id: 'ally', label: '味方の数' },
-    { id: 'enemy', label: '敵の数' },
+    { id: 'ally', label: '味方' },
+    { id: 'enemy', label: '敵' },
     { id: 'other', label: 'その他' },
 ];
+
+// カテゴリ定義（タブ行の順序・ラベルはここで管理）
+const ALLY_CATS = [
+    { id: 'attr',        label: '属性',    taxKey: 'attr' },
+    { id: 'race',        label: '種族',    taxKey: 'race' },
+    { id: 'role',        label: '役割',    taxKey: 'role' },
+    { id: 'weapon',      label: '武器',    taxKey: 'weapon' },
+    { id: 'affiliation', label: '所属',    taxKey: 'affiliation' },
+    { id: 'special',     label: '特殊',    taxKey: null },
+];
+const ENEMY_CATS = [
+    { id: 'special', label: '特殊', taxKey: null },
+];
+const campCats = (side) =>
+    side === 'enemy' ? ENEMY_CATS : side === 'self' ? [] : ALLY_CATS;
+
 const refGroupOf = (src) => (src === 'none' || src === 'ally' || src === 'enemy') ? src : 'other';
 
 /* ==================================================================
@@ -233,6 +249,7 @@ const cloneCondition = (cond = {}) => ({
     weapon: cond.weapon || '',
     affiliation: cond.affiliation || '',
     specials: Array.isArray(cond.specials) ? [...cond.specials] : [],
+    tagCat: cond.tagCat || '',
     ref: {
         src: (cond.ref && cond.ref.src) || 'none',
         attr: (cond.ref && cond.ref.attr) || '',
@@ -242,11 +259,12 @@ const cloneCondition = (cond = {}) => ({
         affiliation: (cond.ref && cond.ref.affiliation) || '',
         ailment: (cond.ref && cond.ref.ailment) || '',
         specials: Array.isArray(cond.ref?.specials) ? [...cond.ref.specials] : [],
+        tagCat: (cond.ref && cond.ref.tagCat) || '',
     },
     refOpen: !!cond.refOpen,
 });
 
-const newCondition = () => cloneCondition({ side: 'ally', scope: 'all' });
+const newCondition = () => cloneCondition({ side: 'ally', scope: 'all', tagCat: 'attr' });
 
 const optInner = (cat, o) => {
     const img = o.icon ? `<img src="${escapeHtml(o.icon)}" alt="${escapeHtml(o.label)}">` : '';
@@ -354,6 +372,64 @@ export function createDetailFilter(container, { conditions: initial = [], onChan
         return `<div class="b-tagrow"><span class="tg-name">特殊</span><div class="btn-row">${chips}<select class="sp-select" data-act="special" data-ref="${refScope}"><option value="">＋ 追加…</option>${opts}</select></div></div>`;
     };
 
+    const tagCatValBlock = (cond, refScope) => {
+        const side = refScope === 'ref' ? cond.ref.src : cond.side;
+        const cats = campCats(side);
+        if (!cats.length) return '';
+
+        const obj = refScope === 'ref' ? cond.ref : cond;
+        const currentCat = obj.tagCat || (cats[0]?.id ?? '');
+
+        const tabs = cats.map(cat =>
+            `<button type="button"
+                class="tag-cat-tab ${currentCat === cat.id ? 'active' : ''}"
+                data-act="tagcat" data-ref="${refScope}" data-val="${escapeHtml(cat.id)}"
+            >${escapeHtml(cat.label)}</button>`
+        ).join('');
+
+        let valRow = '';
+        if (currentCat) {
+            const catDef = cats.find(c => c.id === currentCat);
+            if (catDef && catDef.taxKey) {
+                // 属性〜所属: 既存の taxonomy から生成
+                valRow = taxonomy[catDef.taxKey].map(o => {
+                    const active = String(obj[catDef.taxKey]) === String(o.id);
+                    const style = (catDef.taxKey === 'attr' && active && o.color)
+                        ? ` style="color:${o.color}"` : '';
+                    return `<button type="button"
+                        class="tg ${catDef.taxKey} ${ICON_ONLY.has(catDef.taxKey) ? 'icon-only' : ''} ${active ? 'active' : ''}"
+                        data-act="tag" data-ref="${refScope}"
+                        data-cat="${catDef.taxKey}" data-val="${escapeHtml(String(o.id))}"
+                        title="${escapeHtml(o.label)}"${style}>${optInner(catDef.taxKey, o)}</button>`;
+                }).join('');
+            } else if (currentCat === 'special') {
+                // 特殊: specialsFor から生成
+                const list = specialsFor(side);
+                valRow = list.map(sp => {
+                    const active = (obj.specials || []).includes(sp.id);
+                    return `<button type="button"
+                        class="tg ${active ? 'active' : ''}"
+                        data-act="tag-special" data-ref="${refScope}"
+                        data-val="${escapeHtml(sp.id)}">${escapeHtml(sp.short || sp.label)}</button>`;
+                }).join('');
+            }
+            valRow = valRow
+                ? `<div class="btn-row tag-val-row">${valRow}</div>`
+                : '';
+        }
+
+        const label = refScope === 'ref'
+            ? `参照タグ <span class="b-sub">どんな${side === 'ally' ? '味方' : '敵'}を数えるか</span>`
+            : `対象タグ <span class="b-sub">— 任意、1つだけ</span>`;
+
+        return `
+        <div class="b-block">
+            <div class="b-label">${label}</div>
+            <div class="tag-cat-tabs">${tabs}</div>
+            ${valRow}
+        </div>`;
+    };
+
     const builderHTML = (cond) => {
         const sel = tagsFor(cond.side);
         const specialsBlock = specialsUI(cond, 'tag', cond.side);
@@ -389,20 +465,7 @@ export function createDetailFilter(container, { conditions: initial = [], onChan
                 </select>` : ''}`}
             </div>
 
-            ${(sel.length || specialsBlock) ? `
-                <div class="b-block">
-                    <div class="b-label">対象タグ <span class="b-sub">— 2つのグループはANDで組み合わさります</span></div>
-                    <div class="b-tags">
-                        ${sel.map(c => tagRow(cond, c, 'tag')).join('')}
-                        ${specialsBlock}
-                    </div>
-            </div>` : ''}
-            ${tagCount >= 2 ? `
-            <div class="union-hint">
-                <i class="bi bi-info-circle-fill"></i>
-                <span>この条件は「${escapeHtml(tagLabels.join('の'))}の${sideShort(cond)}」を探します。「または」で探すなら分割してください。</span>
-                <button type="button" data-act="split">またはに分割</button>
-            </div>` : ''}
+            ${tagCatValBlock(cond, 'tag')}
 
             <button type="button" class="ref-toggle ${cond.refOpen ? 'open' : ''} ${cond.ref.src !== 'none' ? 'has-ref' : ''}" data-act="ref-toggle">
                 <i class="bi bi-bullseye"></i> 参照元（◯◯の数 × 威力）${cond.ref.src !== 'none' ? '・設定中' : '<span class="b-sub">任意</span>'}
@@ -424,12 +487,8 @@ export function createDetailFilter(container, { conditions: initial = [], onChan
                             </div>
                         </div>` : ''}
                     </div>
-                    ${refSel.length ? `
-                    <div class="b-block">
-                        <div class="b-label">参照タグ <span class="b-sub">どんな${cond.ref.src === 'ally' ? '味方' : '敵'}を数えるか</span></div>
-                        ${refSel.map(c => tagRow(cond, c, 'ref')).join('')}
-                        ${specialsUI(cond.ref, 'ref', cond.ref.src)}
-                    </div>` : ''}
+                    ${(cond.ref.src === 'ally' || cond.ref.src === 'enemy')
+                        ? tagCatValBlock(cond, 'ref') : ''}
                 </div>
             </div>
 
@@ -519,6 +578,7 @@ export function createDetailFilter(container, { conditions: initial = [], onChan
                 update();
                 break;
             }
+            // 修正: 既存の 'side' — side変更時に tagCat もクリア
             case 'side': {
                 if (!cond) break;
                 cond.side = target.dataset.val;
@@ -527,6 +587,7 @@ export function createDetailFilter(container, { conditions: initial = [], onChan
                 ALLY_TAGS.forEach(c => { cond[c] = ''; });
                 cond.specials = [];
                 cond.position = '';
+                cond.tagCat = campCats(cond.side)[0]?.id || '';
                 update();
                 break;
             }
@@ -546,6 +607,7 @@ export function createDetailFilter(container, { conditions: initial = [], onChan
                 const turningOn = String(obj[cat]) !== String(val);
                 tagKeys.forEach(c => { obj[c] = ''; });
                 obj[cat] = turningOn ? val : '';
+                if (refScope === 'tag') cond.specials = [];  // ← 追加
                 update();
                 break;
             }
@@ -572,6 +634,7 @@ export function createDetailFilter(container, { conditions: initial = [], onChan
                 }
                 ALLY_TAGS.concat(['ailment']).forEach(c => { cond.ref[c] = ''; });
                 cond.ref.specials = [];
+                cond.ref.tagCat = campCats(cond.ref.src)[0]?.id || '';
                 update();
                 break;
             }
@@ -580,6 +643,33 @@ export function createDetailFilter(container, { conditions: initial = [], onChan
                 cond.ref.src = target.dataset.val;
                 ALLY_TAGS.concat(['ailment']).forEach(c => { cond.ref[c] = ''; });
                 cond.ref.specials = [];
+                cond.ref.tagCat = campCats(cond.ref.src)[0]?.id || '';
+                update();
+                break;
+            }
+            // タブ切り替え
+            case 'tagcat': {
+                if (!cond) break;
+                const refScope = target.dataset.ref;
+                const obj = refScope === 'ref' ? cond.ref : cond;
+                if (obj.tagCat === target.dataset.val) break;
+                obj.tagCat = (obj.tagCat === target.dataset.val) ? '' : target.dataset.val;
+                update();
+                break;
+            }
+            // 特殊の単一選択
+            case 'tag-special': {
+                if (!cond) break;
+                const refScope = target.dataset.ref;
+                const obj = refScope === 'ref' ? cond.ref : cond;
+                const val = target.dataset.val;
+                const wasSelected = (obj.specials || []).includes(val);
+                // 特殊を選んだら同じ obj の通常タグをクリア
+                const clearKeys = refScope === 'ref'
+                    ? (REF_TAG_KEYS[cond.ref.src] || [])
+                    : ALLY_TAGS;
+                clearKeys.forEach(c => { obj[c] = ''; });
+                obj.specials = wasSelected ? [] : [val];
                 update();
                 break;
             }
