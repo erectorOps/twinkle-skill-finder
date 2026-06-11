@@ -27,6 +27,21 @@ const flattenEffects = (effects = []) => {
 const unique = (values) =>
   [...new Set(values.filter(value => value !== undefined && value !== null && value !== ""))];
 
+export const normalizeBranches = (branches) =>
+  !branches
+    ? []
+    : Array.isArray(branches)
+      ? branches
+      : [branches];
+
+const buildEffectsMeta = (skill) =>
+  flattenEffects(skill.effects).map(effect => ({
+    type: effect.type || null,
+    effect_class: effect.effect_class || null,
+    target_branches: normalizeBranches(effect.target_branches),
+    scale_refs: (effect.scale_refs || []).filter(Boolean)
+  }));
+
 const hasText = (effect, pattern) => {
   const text = [
     effect.type,
@@ -39,109 +54,121 @@ const hasText = (effect, pattern) => {
   return pattern.test(text);
 };
 
+const STATUS_NAMES = [
+  "毒",
+  "麻痺",
+  "混乱",
+  "萎縮",
+  "萎縮【大】",
+  "封印",
+  "火傷",
+  "火傷【大】",
+  "凍傷"
+];
+
+const SPECIAL_DAMAGE_TAKEN_STATUS_NAMES = [
+  "融解",
+  "極冷",
+  "帯電",
+  "聖痕",
+  "審判",
+  "破砕",
+  "裂傷",
+  "魔障",
+  "標的"
+];
+
+const ACTION_CONTROL_NAMES = [
+  "魅了",
+  "強制スタン",
+  "睡眠",
+  "マジックミスト"
+];
+
+export const effectCategoriesOf = (effect) => {
+  const categories = new Set();
+  const type = effect.type || "";
+  const tags = effect.tags || [];
+  const raw = effect.raw || "";
+
+  if (tags.includes("全体攻撃")) {
+    categories.add("all_attack");
+  }
+
+  if (
+    tags.includes("多段攻撃")
+    || Number(effect.value?.hit || 0) > 1
+    || /×\s*\d+回/.test(raw)
+  ) {
+    categories.add("multi_attack");
+  }
+
+  if (type === "ノックバック" || type === "ノーツ強制移動") {
+    categories.add("note_backward");
+  }
+
+  if (type === "ノーツ移動") {
+    categories.add("note_move");
+  }
+
+  if (type === "ATKアップ") {
+    categories.add("atk_up");
+  }
+
+  if (type === "クリティカル率アップ") {
+    categories.add("critical_up");
+  }
+
+  if (type === "クリティカルダメージアップ") {
+    categories.add("critical_damage_up");
+  }
+
+  if (type === "相手スタン時ダメージ倍率アップ") {
+    categories.add("stun_damage_up");
+  }
+
+  if (type === "行動CT短縮") {
+    categories.add("action_ct_short");
+  }
+
+  if (/バリア/.test(type) && type !== "バリア破壊") {
+    categories.add("barrier");
+  }
+
+  if (type === "サブ属性" || type === "サブ属性付与") {
+    categories.add("sub_attribute");
+  }
+
+  if (type === "被ダメージアップ") {
+    categories.add("damage_taken_up");
+  }
+
+  if (SPECIAL_DAMAGE_TAKEN_STATUS_NAMES.includes(type)) {
+    categories.add("special_damage_taken_up");
+  }
+
+  if (type === "弱点属性" || type === "弱点属性付与") {
+    categories.add("weakness_attribute");
+  }
+
+  if (ACTION_CONTROL_NAMES.includes(type)) {
+    categories.add("action_control");
+  }
+
+  if (STATUS_NAMES.includes(type)) {
+    categories.add("status_infliction");
+  }
+
+  return categories;
+};
+
 const buildEffectCategories = (skill) => {
   const effects = flattenEffects(skill.effects);
   const categories = new Set();
-  const statusNames = [
-    "毒",
-    "麻痺",
-    "混乱",
-    "萎縮",
-    "萎縮【大】",
-    "封印",
-    "火傷",
-    "火傷【大】",
-    "凍傷"
-  ];
-  const specialDamageTakenStatusNames = [
-    "融解",
-    "極冷",
-    "帯電",
-    "聖痕",
-    "審判",
-    "破砕",
-    "裂傷",
-    "魔障",
-    "標的"
-  ];
-  const actionControlNames = [
-    "魅了",
-    "強制スタン",
-    "睡眠",
-    "マジックミスト"
-  ];
 
   for (const effect of effects) {
-    const type = effect.type || "";
-    const tags = effect.tags || [];
-    const raw = effect.raw || "";
-
-    if (tags.includes("全体攻撃")) {
-      categories.add("all_attack");
-    }
-
-    if (
-      tags.includes("多段攻撃")
-      || Number(effect.value?.hit || 0) > 1
-      || /×\s*\d+回/.test(raw)
-    ) {
-      categories.add("multi_attack");
-    }
-
-    if (type === "ノックバック" || type === "ノーツ強制移動") {
-      categories.add("note_backward");
-    }
-
-    if (type === "ノーツ移動") {
-      categories.add("note_move");
-    }
-
-    if (type === "ATKアップ") {
-      categories.add("atk_up");
-    }
-
-    if (type === "クリティカル率アップ") {
-      categories.add("critical_up");
-    }
-
-    if (type === "クリティカルダメージアップ") {
-      categories.add("critical_damage_up");
-    }
-
-    if (type === "相手スタン時ダメージ倍率アップ") {
-      categories.add("stun_damage_up");
-    }
-
-    if (type === "行動CT短縮") {
-      categories.add("action_ct_short");
-    }
-
-    if (/バリア/.test(type) && type !== "バリア破壊") {
-      categories.add("barrier");
-    }
-
-    if (type === "サブ属性" || type === "サブ属性付与") {
-      categories.add("sub_attribute");
-    }
-
-    if (type === "被ダメージアップ") {
-      categories.add("damage_taken_up");
-    }
-
-    if (specialDamageTakenStatusNames.includes(type)) {
-      categories.add("special_damage_taken_up");
-    }
-
-    if (type === "弱点属性" || type === "弱点属性付与") {
-      categories.add("weakness_attribute");
-    }
-
-    if (actionControlNames.includes(type)) {
-      categories.add("action_control");
-    }
-
-    if (statusNames.includes(type)) {
-      categories.add("status_infliction");
+    for (const category of effectCategoriesOf(effect)) {
+      categories.add(category);
     }
   }
 
@@ -190,7 +217,7 @@ const buildSkillSearchText = ({ skill, character, effects, accessory }) =>
 const buildObtainIndex = (obtain) => {
   const obtains = [];
 
-  for (const text of obtain.split("\n")) {
+  for (const text of (obtain || "").split("\n")) {
     if ("ガチャ(恒常)" === text) {
       obtains.push("standard");
     }
@@ -292,6 +319,7 @@ export const buildSkillFinderIndex = ({ skills, characters, accessories = [] }) 
         effect_types: unique(effects.map(effect => effect.type)),
         effect_tags: unique(effects.flatMap(effect => effect.tags || [])),
         effect_classes: unique(effects.map(effect => effect.effect_class)),
+        effects: buildEffectsMeta(skill),
         search_text: buildSkillSearchText({
           skill,
           character,

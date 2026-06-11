@@ -23,7 +23,7 @@ const optionMap = (items, getItems) => {
 
 const renderButtonGroup = (title, group, options) => `
 <section class="filter-group">
-    <div class="filter-title">${escapeHtml(title)}</div>
+    ${title ? `<div class="filter-title">${escapeHtml(title)}</div>` : ''}
     <div class="filter-buttons">
         ${options.map(option => `
         <button
@@ -138,14 +138,30 @@ export function renderFilterButtons(characters) {
                 aria-pressed="true">全て</button>
             <button class="filter-button" type="button"
                 data-filter-group="skill_group" data-filter-value="ex1"
-                aria-pressed="false">EX1/EX1+</button>
+                aria-pressed="false">EX1</button>
             <button class="filter-button" type="button"
                 data-filter-group="skill_group" data-filter-value="ex2"
-                aria-pressed="false">EX2/EX2+</button>
+                aria-pressed="false">EX2</button>
+            <button class="filter-button" type="button"
+                data-filter-group="skill_group" data-filter-value="awaken"
+                aria-pressed="false">覚醒</button>
         </div>
     </section>
 
-    ${renderButtonGroup('EXスキル効果',  'effect_categories', effectOptions)}
+    <section class="filter-group effect-section">
+        <div class="filter-title">スキル効果</div>
+        <div class="mode-tabs" role="tablist">
+            <button class="mode-tab active" type="button" role="tab" aria-selected="true" data-effect-mode="cat">カテゴリ</button>
+            <button class="mode-tab" type="button" role="tab" aria-selected="false" data-effect-mode="detail">詳細</button>
+        </div>
+        <div class="mode-pane" data-effect-pane="cat">
+            ${renderButtonGroup('', 'effect_categories', effectOptions)}
+        </div>
+        <div class="mode-pane" data-effect-pane="detail" hidden>
+            <div id="detail-filter-root"></div>
+        </div>
+    </section>
+
     ${renderButtonGroup('レアリティ',     'rarity',            rarityOptions)}
     ${renderButtonGroup('属性',           'attr',              attributeOptions)}
     ${renderButtonGroup('種族',           'races',             raceOptions)}

@@ -1,6 +1,7 @@
 import '../scss/style.scss';
 import { renderCard } from './card.js';
 import { renderFilterButtons } from './filters.js';
+import { matchesDetailConditions, getMatchedEffectKeys, isLive, createDetailFilter } from './detailFilter.js';
 
 async function init() {
 
@@ -78,6 +79,14 @@ async function init() {
     const filterChips = [
         ...document.querySelectorAll('.filter-chip')
     ];
+    const effectModeButtons = [
+        ...document.querySelectorAll('[data-effect-mode]')
+    ];
+    const effectPanes = [
+        ...document.querySelectorAll('[data-effect-pane]')
+    ];
+    const detailFilterRoot =
+        document.getElementById('detail-filter-root');
 
     const cardMap = new Map();
     const itemMap = new Map(
@@ -121,6 +130,13 @@ async function init() {
     let compareMode = false;
     let scheduledRenderFrame = 0;
     let scheduledRenderTimer = 0;
+    let effectFilterMode = 'cat';
+    let pendingEffectFilterMode = 'cat';
+    let detailConditions = [];
+    let pendingDetailConditions = [];
+
+    // ── 表示幅 ───────────────────────────────────────
+    const isLiveMode = () => window.matchMedia('(min-width: 951px)').matches;
 
     const PAGE_SIZE = 50;
     let currentVisibleItems = [];
@@ -205,15 +221,20 @@ async function init() {
     const matchesSkillGroup = (item) => {
         const activeValues = getActiveValues('skill_group');
         if (activeValues.size === 0 || activeValues.has('all')) return true;
-        if (activeValues.has('ex1')) return item.skill_type === 'EX1' || item.skill_type === 'EX1+';
-        if (activeValues.has('ex2')) return item.skill_type === 'EX2' || item.skill_type === 'EX2+';
+        if (activeValues.has('ex1')) return item.skill_type === 'EX1';
+        if (activeValues.has('ex2')) return item.skill_type === 'EX2';
+        if (activeValues.has('awaken')) return item.skill_type === 'EX1+' || item.skill_type === 'EX2+';
         return true;
     };
 
     const matchesFilters = (item) => {
         if (!matchesSkillGroup(item)) return false;
+        if (effectFilterMode === 'detail') {
+            if (detailConditions.length > 0 && !matchesDetailConditions(item, detailConditions)) return false;
+        }
         for (const [group, activeValues] of activeFilters) {
             if (group === 'skill_group' || activeValues.size === 0) continue;
+            if (group === 'effect_categories' && effectFilterMode === 'detail') continue;
             if (!hasAnyValue(item[group], activeValues)) return false;
         }
         return true;
@@ -282,17 +303,24 @@ async function init() {
         });
     };
 
+    const getGroupCount = (group) => {
+        if (group === 'effect_categories' && effectFilterMode === 'detail') {
+            return detailConditions.filter(isLive).length;
+        }
+        return getActiveValues(group).size;
+    };
+
     const updateFilterChips = () => {
         const orderedChips =
             [...filterChips].sort((a, b) => {
-                const aCount = getActiveValues(a.dataset.openFilter).size;
-                const bCount = getActiveValues(b.dataset.openFilter).size;
+                const aCount = getGroupCount(a.dataset.openFilter);
+                const bCount = getGroupCount(b.dataset.openFilter);
                 return Number(bCount > 0) - Number(aCount > 0);
             });
 
         orderedChips.forEach(chip => {
             const group = chip.dataset.openFilter;
-            const count = getActiveValues(group).size;
+            const count = getGroupCount(group);
             chip.classList.toggle('active', count > 0);
             chip.innerHTML =
                 count > 0
@@ -321,6 +349,11 @@ async function init() {
             .filter(button => button.dataset.filterGroup === group)
             .forEach(button => updateFilterButton(button, false));
         replaceFilters(pendingFilters, activeFilters);
+        if (group === 'effect_categories') {
+            detailConditions = [];
+            pendingDetailConditions = [];
+            detailFilter.setConditions([]);
+        }
         syncControlsFromState();
         scheduleRender();
     };
@@ -377,6 +410,41 @@ async function init() {
         })
     }
 
+    // ── スキル効果フィルター(カテゴリ/詳細) ─────────
+    const updateEffectModeUI = () => {
+        effectModeButtons.forEach(button => {
+            const active = button.dataset.effectMode === pendingEffectFilterMode;
+            button.classList.toggle('active', active);
+            button.setAttribute('aria-selected', active ? 'true' : 'false');
+        });
+        effectPanes.forEach(pane => {
+            pane.hidden = pane.dataset.effectPane !== pendingEffectFilterMode;
+        });
+    };
+
+    const detailFilter = createDetailFilter(detailFilterRoot, {
+        conditions: pendingDetailConditions,
+        onChange: (conditions) => {
+            pendingDetailConditions = conditions;
+            if (isLiveMode()) applyPendingFilters();
+            else updateApplyButtonState();
+        }
+    });
+
+    // ── 効果ハイライト ───────────────────────────────
+    const applyEffectHighlight = (cardEl, item) => {
+        const skill = skillDataMap.get(String(item.skill_id));
+        if (!skill) return;
+        const matchedKeys = getMatchedEffectKeys(skill, {
+            effectFilterMode,
+            effectCategories: getActiveValues('effect_categories'),
+            detailConditions
+        });
+        cardEl.querySelectorAll('.effect-box[data-idx]').forEach(box => {
+            box.classList.toggle('matched', matchedKeys.has(Number(box.dataset.idx)));
+        });
+    };
+
     // ── 遅延レンダリング ─────────────────────────────
     const cardTempDiv = document.createElement('div');
 
@@ -417,6 +485,7 @@ async function init() {
             const item = currentVisibleItems[i];
             const cardEl = getOrCreateCardElement(item.skill_id, item.unit_id);
             if (!cardEl) continue;
+            applyEffectHighlight(cardEl, item);
             if (compareMode && !cardEl.querySelector('[data-compare-check]')) {
                 addCompareSelector(cardEl);
             }
@@ -501,7 +570,9 @@ async function init() {
                 search: appliedSearchText,
                 characterScope: characterScopeMode,
                 raw: rawViewMode,
-                iconView: iconViewMode
+                iconView: iconViewMode,
+                effectFilterMode,
+                detailConditions
             })
         );
     };
@@ -531,6 +602,7 @@ async function init() {
     const syncControlsFromState = () => {
         applyFilterButtons();
         updateCharacterScopeToggle();
+        updateEffectModeUI();
         updateFilterChips();
         updateModeViews();
         setActiveSortOption(currentSortKey);
@@ -540,6 +612,8 @@ async function init() {
     const hasPendingChanges = () => {
         if (searchInput.value !== appliedSearchText) return true;
         if (pendingCharacterScopeMode !== characterScopeMode) return true;
+        if (pendingEffectFilterMode !== effectFilterMode) return true;
+        if (JSON.stringify(pendingDetailConditions) !== JSON.stringify(detailConditions)) return true;
         if (pendingFilters.size !== activeFilters.size) return true;
         for (const [group, pending] of pendingFilters) {
             const active = activeFilters.get(group);
@@ -553,6 +627,17 @@ async function init() {
 
     const updateApplyButtonState = () => {
         applyFiltersButton.classList.toggle('has-pending', hasPendingChanges());
+    };
+
+    const applyPendingFilters = () => {
+        replaceFilters(activeFilters, pendingFilters);
+        characterScopeMode = pendingCharacterScopeMode;
+        effectFilterMode = pendingEffectFilterMode;
+        detailConditions = pendingDetailConditions;
+        appliedSearchText = searchInput.value;
+        if (!appliedSearchText) keywordChip.hidden = true;
+        scheduleRender();
+        updateApplyButtonState();
     };
 
     const restoreState = () => {
@@ -583,6 +668,11 @@ async function init() {
             rawViewMode = state.raw !== false;
             iconViewMode = state.iconView === true;
             currentSortKey = comparers[state.sort] ? state.sort : 'release_asc';
+            effectFilterMode = state.effectFilterMode === 'detail' ? 'detail' : 'cat';
+            pendingEffectFilterMode = effectFilterMode;
+            detailFilter.setConditions(Array.isArray(state.detailConditions) ? state.detailConditions : []);
+            detailConditions = detailFilter.getConditions();
+            pendingDetailConditions = detailFilter.getConditions();
             syncControlsFromState();
         } catch {
             activeFilters.clear();
@@ -594,6 +684,11 @@ async function init() {
             rawViewMode = true;
             iconViewMode = false;
             currentSortKey = 'release_asc';
+            effectFilterMode = 'cat';
+            pendingEffectFilterMode = 'cat';
+            detailFilter.setConditions([]);
+            detailConditions = [];
+            pendingDetailConditions = [];
             setSingleFilter('skill_group', 'all', activeFilters);
             setSingleFilter('skill_group', 'all', pendingFilters);
             syncControlsFromState();
@@ -639,6 +734,11 @@ async function init() {
         appliedSearchText = "";
         characterScopeMode = false;
         pendingCharacterScopeMode = false;
+        effectFilterMode = 'cat';
+        pendingEffectFilterMode = 'cat';
+        detailConditions = [];
+        pendingDetailConditions = [];
+        detailFilter.setConditions([]);
         setSingleFilter('skill_group', 'all', activeFilters);
         setSingleFilter('skill_group', 'all', pendingFilters);
         syncControlsFromState();
@@ -852,7 +952,17 @@ async function init() {
             } else {
                 toggleMultiFilter(button);
             }
-            updateApplyButtonState();
+            if (isLiveMode()) applyPendingFilters();
+            else updateApplyButtonState();
+        });
+    });
+
+    effectModeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            pendingEffectFilterMode = button.dataset.effectMode;
+            updateEffectModeUI();
+            if (isLiveMode()) applyPendingFilters();
+            else updateApplyButtonState();
         });
     });
 
@@ -861,13 +971,15 @@ async function init() {
             pendingCharacterScopeMode =
                 button.dataset.characterScopeValue === 'character';
             updateCharacterScopeToggle();
-            updateApplyButtonState();
+            if (isLiveMode()) applyPendingFilters();
+            else updateApplyButtonState();
         });
     });
 
     searchInput.addEventListener('input', () => {
         saveState();
-        updateApplyButtonState();
+        if (isLiveMode()) applyPendingFilters();
+        else updateApplyButtonState();
     });
 
     clearFiltersButton.addEventListener('click', resetFilters);
@@ -875,13 +987,8 @@ async function init() {
     openFilterPanelButton.addEventListener('click', openFilterPanel);
 
     applyFiltersButton.addEventListener('click', () => {
-        replaceFilters(activeFilters, pendingFilters);
-        characterScopeMode = pendingCharacterScopeMode;
-        appliedSearchText = searchInput.value;
-        if (!appliedSearchText) keywordChip.hidden = true;
-        scheduleRender();
+        applyPendingFilters();
         closeFilterPanel();
-        updateApplyButtonState();
     });
 
     document.querySelectorAll('[data-close-filter]').forEach(element => {
@@ -891,7 +998,7 @@ async function init() {
     filterChips.forEach(chip => {
         chip.addEventListener('click', () => {
             const group = chip.dataset.openFilter;
-            if (getActiveValues(group).size > 0) {
+            if (getGroupCount(group) > 0) {
                 clearFilterGroup(group);
                 return;
             }

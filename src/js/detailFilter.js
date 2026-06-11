@@ -1,0 +1,619 @@
+import {
+    taxonomy,
+    positions,
+    specialsAlly,
+    specialsEnemy,
+    effectTypes,
+} from './data.js';
+import { normalizeBranches, effectCategoriesOf } from '../task/skillFinderIndex.mjs';
+
+const escapeHtml = (value) =>
+    String(value)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+
+const byId = (list, id) => (list || []).find(item => String(item.id) === String(id));
+
+/* target_branches.specials は string / string[] / バグで文字単位に分解された配列が混在する */
+export const normalizeSpecials = (value) => {
+    if (!value) return [];
+    if (typeof value === 'string') return [value];
+    if (Array.isArray(value)) {
+        if (value.length > 1 && value.every(v => typeof v === 'string' && v.length === 1)) {
+            return [value.join('')];
+        }
+        return value.filter(v => typeof v === 'string');
+    }
+    return [];
+};
+
+const ALL_SPECIALS = specialsAlly.concat(specialsEnemy);
+const ALLY_TAGS = ['attr', 'race', 'role', 'weapon', 'affiliation'];
+const REF_TAG_KEYS = { ally: ALLY_TAGS, enemy: ['ailment'] };
+const TAG_LABEL = { attr: '属性', race: '種族', role: '役割', weapon: '武器', affiliation: '所属', ailment: '状態異常' };
+const ICON_ONLY = new Set(['attr', 'role']);
+const FIELD_FOR_TAG = { attr: 'attr', race: 'camp', role: 'role', weapon: 'equip_type', affiliation: 'affiliation', ailment: 'ailment' };
+const SCOPE_OPTIONS = [{ id: '', label: '指定なし' }, ...taxonomy.scope];
+
+const tagsFor = (side) => side === 'ally' ? ALLY_TAGS : [];
+const specialsFor = (side) => side === 'enemy' ? specialsEnemy : side === 'self' ? [] : specialsAlly;
+
+/* ==================================================================
+   マッチングエンジン
+   ================================================================== */
+
+export const isLive = (cond) =>
+    !!(
+        cond.effectType
+        || cond.attr || cond.race || cond.role || cond.weapon || cond.affiliation
+        || (cond.specials && cond.specials.length)
+        || cond.position
+        || (cond.ref && cond.ref.src && cond.ref.src !== 'none')
+    );
+
+export const branchSatisfies = (branch, cond) => {
+    if (!branch) return false;
+
+    if (cond.side && branch.side !== cond.side) return false;
+
+    if (cond.side !== 'self' && cond.scope && branch.scope && branch.scope !== cond.scope) {
+        return false;
+    }
+
+    if (cond.position) {
+        const posDef = byId(positions, cond.position);
+        if (!posDef || branch[posDef.field] !== cond.position) return false;
+    }
+
+    for (const tag of Object.keys(FIELD_FOR_TAG)) {
+        if (cond[tag] && String(branch[FIELD_FOR_TAG[tag]] ?? '') !== String(cond[tag])) {
+            return false;
+        }
+    }
+
+    if (cond.specials && cond.specials.length) {
+        const branchSpecials = normalizeSpecials(branch.specials);
+        if (!cond.specials.every(s => branchSpecials.includes(s))) return false;
+    }
+
+    return true;
+};
+
+const condFromRef = (ref) => ({
+    side: ref.src,
+    scope: '',
+    position: '',
+    attr: ref.attr || '',
+    race: ref.race || '',
+    role: ref.role || '',
+    weapon: ref.weapon || '',
+    affiliation: ref.affiliation || '',
+    ailment: ref.ailment || '',
+    specials: ref.specials || [],
+});
+
+export const scaleRefSatisfies = (scaleRefs, ref) => {
+    if (!ref || !ref.src || ref.src === 'none') return true;
+
+    const refDef = byId(taxonomy.ref, ref.src);
+    const tagRefinable = !!(refDef && refDef.tagRefinable);
+
+    return (scaleRefs || []).some(r => {
+        if (!r || r.src !== ref.src) return false;
+        if (!tagRefinable) return true;
+
+        const keys = REF_TAG_KEYS[ref.src] || [];
+        const hasRefine = keys.some(k => ref[k]) || (ref.specials && ref.specials.length);
+        if (!hasRefine) return true;
+
+        const branches = normalizeBranches(r.branches);
+        const cond = condFromRef(ref);
+        return branches.some(b => branchSatisfies(b, cond));
+    });
+};
+
+export const effectMatchesCond = (effectMeta, cond) => {
+    if (cond.effectType) {
+        const etDef = byId(effectTypes, cond.effectType);
+        if (!etDef || effectMeta.type !== etDef.label) return false;
+    }
+
+    const branches = effectMeta.target_branches || [];
+    if (!branches.some(b => branchSatisfies(b, cond))) return false;
+
+    if (!scaleRefSatisfies(effectMeta.scale_refs, cond.ref)) return false;
+
+    return true;
+};
+
+const candidateEffectIndexes = (item, cond) => {
+    const keys = [];
+    (item.effects || []).forEach((effect, idx) => {
+        if (effectMatchesCond(effect, cond)) keys.push(idx);
+    });
+    return keys;
+};
+
+/* 二部マッチング: 各条件が異なる effect に割り当て可能なら true (augmenting path 法) */
+export const matchesDetailConditions = (item, conditions) => {
+    const live = (conditions || []).filter(isLive);
+    if (live.length === 0) return true;
+
+    const candidates = live.map(cond => candidateEffectIndexes(item, cond));
+    if (candidates.some(keys => keys.length === 0)) return false;
+
+    const assign = new Map();
+    const tryAssign = (i, seen) => {
+        for (const key of candidates[i]) {
+            if (seen.has(key)) continue;
+            seen.add(key);
+            if (!assign.has(key) || tryAssign(assign.get(key), seen)) {
+                assign.set(key, i);
+                return true;
+            }
+        }
+        return false;
+    };
+
+    for (let i = 0; i < candidates.length; i++) {
+        if (!tryAssign(i, new Set())) return false;
+    }
+    return true;
+};
+
+/* skill.effects (children含む完全構造) を DFS で辿り、ハイライト対象 idx の集合を返す */
+export const getMatchedEffectKeys = (skill, { effectFilterMode, effectCategories, detailConditions } = {}) => {
+    const matched = new Set();
+    const liveConditions = (detailConditions || []).filter(isLive);
+    let idx = 0;
+
+    const walk = (effects) => {
+        for (const effect of (effects || [])) {
+            const currentIdx = idx++;
+            let isMatch = false;
+
+            if (effectFilterMode === 'detail') {
+                if (liveConditions.length > 0) {
+                    const meta = {
+                        type: effect.type || null,
+                        target_branches: normalizeBranches(effect.target_branches),
+                        scale_refs: (effect.scale_refs || []).filter(Boolean),
+                    };
+                    isMatch = liveConditions.some(cond => effectMatchesCond(meta, cond));
+                }
+            } else if (effectCategories && effectCategories.size > 0) {
+                const cats = effectCategoriesOf(effect);
+                isMatch = [...cats].some(cat => effectCategories.has(cat));
+            }
+
+            if (isMatch) matched.add(currentIdx);
+            walk(effect.children);
+        }
+    };
+
+    walk(skill && skill.effects);
+    return matched;
+};
+
+/* ==================================================================
+   条件カードビルダー UI
+   ================================================================== */
+
+let _uid = 0;
+const updateUidFromId = (id) => {
+    const m = /^c(\d+)$/.exec(id || '');
+    if (m) _uid = Math.max(_uid, Number(m[1]));
+};
+const nextId = () => 'c' + (++_uid);
+
+const cloneCondition = (cond = {}) => ({
+    id: cond.id || nextId(),
+    effectType: cond.effectType || '',
+    side: cond.side || 'ally',
+    scope: cond.scope !== undefined && cond.scope !== null ? cond.scope : 'all',
+    position: cond.position || '',
+    attr: cond.attr || '',
+    race: cond.race || '',
+    role: cond.role || '',
+    weapon: cond.weapon || '',
+    affiliation: cond.affiliation || '',
+    specials: Array.isArray(cond.specials) ? [...cond.specials] : [],
+    ref: {
+        src: (cond.ref && cond.ref.src) || 'none',
+        attr: (cond.ref && cond.ref.attr) || '',
+        race: (cond.ref && cond.ref.race) || '',
+        role: (cond.ref && cond.ref.role) || '',
+        weapon: (cond.ref && cond.ref.weapon) || '',
+        affiliation: (cond.ref && cond.ref.affiliation) || '',
+        ailment: (cond.ref && cond.ref.ailment) || '',
+        specials: Array.isArray(cond.ref?.specials) ? [...cond.ref.specials] : [],
+    },
+    refOpen: !!cond.refOpen,
+});
+
+const newCondition = () => cloneCondition({ side: 'ally', scope: 'all' });
+
+const optInner = (cat, o) => {
+    const img = o.icon ? `<img src="${escapeHtml(o.icon)}" alt="${escapeHtml(o.label)}">` : '';
+    return ICON_ONLY.has(cat) ? img : img + escapeHtml(o.short || o.label);
+};
+
+const sideShort = (cond) => cond.side === 'self' ? '自身' : cond.side === 'enemy' ? '敵' : '味方';
+
+const sideScopeText = (cond) => {
+    if (cond.side === 'self') return '自身';
+    const sideLabel = cond.side === 'enemy' ? '敵' : '味方';
+    const sc = byId(taxonomy.scope, cond.scope);
+    return sc ? sideLabel + sc.label : sideLabel;
+};
+
+const tagText = (cond) => {
+    const parts = [];
+    if (cond.position) {
+        parts.push(`<span class="t-attr">${escapeHtml(byId(positions, cond.position).label)}</span>`);
+    }
+    for (const c of ALLY_TAGS) {
+        if (cond[c]) parts.push(`<span class="t-attr">${escapeHtml(byId(taxonomy[c], cond[c]).label)}</span>`);
+    }
+    for (const s of (cond.specials || [])) {
+        const def = byId(ALL_SPECIALS, s);
+        parts.push(`<span class="t-attr">${escapeHtml(def ? def.short : s)}</span>`);
+    }
+    return parts;
+};
+
+const refText = (cond) => {
+    if (!cond.ref || cond.ref.src === 'none') return '';
+    const refDef = byId(taxonomy.ref, cond.ref.src);
+    const tagKeys = REF_TAG_KEYS[cond.ref.src] || [];
+    const tags = tagKeys.filter(c => cond.ref[c]).map(c => byId(taxonomy[c], cond.ref[c]).label)
+        .concat((cond.ref.specials || []).map(s => (byId(ALL_SPECIALS, s) || {}).short || s))
+        .join('・');
+    const srcLabel = refDef ? refDef.label : cond.ref.src;
+    const body = (tags ? tags + 'の' : '') + srcLabel;
+    return `<span class="ref">（参照: <b>${escapeHtml(body)}</b>）</span>`;
+};
+
+const echoHTML = (cond) => {
+    const tags = tagText(cond);
+    const tjoin = tags.join('<span class="kw-and">かつ</span>');
+    const target = tags.length
+        ? `${tjoin} の <span class="scope">${escapeHtml(sideScopeText(cond))}</span>`
+        : `<span class="scope">${escapeHtml(sideScopeText(cond))}</span>`;
+    return `${target} ${refText(cond)}`;
+};
+
+const plainText = (cond) => {
+    const labels = [];
+    if (cond.position) labels.push(byId(positions, cond.position).label);
+    for (const c of ALLY_TAGS) {
+        if (cond[c]) labels.push(byId(taxonomy[c], cond[c]).label);
+    }
+    for (const s of (cond.specials || [])) {
+        const def = byId(ALL_SPECIALS, s);
+        labels.push(def ? def.short : s);
+    }
+    const tags = labels.join('かつ');
+    const ss = sideScopeText(cond);
+    const etDef = cond.effectType ? byId(effectTypes, cond.effectType) : null;
+    const eff = etDef ? etDef.label : '効果未指定';
+    return (tags ? tags + 'の' : '') + ss + 'に' + eff;
+};
+
+export function createDetailFilter(container, { conditions: initial = [], onChange } = {}) {
+    let conditions = (initial || []).map(cloneCondition);
+    conditions.forEach(c => updateUidFromId(c.id));
+    let editingId = null;
+
+    const getConditions = () => conditions.map(cloneCondition);
+
+    const notify = () => {
+        if (typeof onChange === 'function') onChange(getConditions());
+    };
+
+    const update = () => {
+        render();
+        notify();
+    };
+
+    const tagRow = (cond, cat, refScope) => {
+        const cur = refScope === 'ref' ? cond.ref[cat] : cond[cat];
+        const opts = taxonomy[cat].map(o => {
+            const active = String(cur) === String(o.id);
+            const style = (cat === 'attr' && active && o.color) ? ` style="color:${o.color}"` : '';
+            return `<button class="tg ${cat} ${ICON_ONLY.has(cat) ? 'icon-only' : ''} ${active ? 'active' : ''}" type="button" data-act="tag" data-ref="${refScope}" data-cat="${cat}" data-val="${escapeHtml(String(o.id))}" title="${escapeHtml(o.label)}"${style}>${optInner(cat, o)}</button>`;
+        }).join('');
+        return `<div class="b-tagrow"><span class="tg-name">${TAG_LABEL[cat]}</span><div class="btn-row">${opts}</div></div>`;
+    };
+
+    const specialsUI = (obj, refScope, side) => {
+        const list = specialsFor(side);
+        if (!list.length) return '';
+        const sel = obj.specials || [];
+        const chips = sel.map(s => {
+            const def = byId(ALL_SPECIALS, s);
+            return `<button class="tg active sp" type="button" data-act="special-del" data-ref="${refScope}" data-val="${escapeHtml(s)}" title="解除">${escapeHtml(def ? def.short : s)} <i class="bi bi-x"></i></button>`;
+        }).join('');
+        const opts = list.filter(sp => !sel.includes(sp.id))
+            .map(sp => `<option value="${escapeHtml(sp.id)}">${escapeHtml(sp.label)}</option>`).join('');
+        return `<div class="b-tagrow"><span class="tg-name">特殊</span><div class="btn-row">${chips}<select class="sp-select" data-act="special" data-ref="${refScope}"><option value="">＋ 追加…</option>${opts}</select></div></div>`;
+    };
+
+    const builderHTML = (cond) => {
+        const sel = tagsFor(cond.side);
+        const specialsBlock = specialsUI(cond, 'tag', cond.side);
+        const tagLabels = sel.filter(c => cond[c]).map(c => byId(taxonomy[c], cond[c]).label)
+            .concat((cond.specials || []).map(s => (byId(ALL_SPECIALS, s) || {}).short || s));
+        const tagCount = tagLabels.length;
+        const refSel = REF_TAG_KEYS[cond.ref.src] || [];
+
+        return `
+        <div class="builder" data-cid="${cond.id}">
+            <div class="b-block">
+                <div class="b-label">効果</div>
+                <select class="b-select" data-act="effect-type">
+                    <option value="">効果を選択…</option>
+                    ${effectTypes.map(c => `<option value="${escapeHtml(c.id)}" ${cond.effectType === c.id ? 'selected' : ''}>${escapeHtml(c.label)}</option>`).join('')}
+                </select>
+            </div>
+
+            <div class="b-block">
+                <div class="b-label">対象 <span class="b-sub">— 誰に効くか</span></div>
+                <div class="seg">
+                    ${taxonomy.side.map(s => `<button type="button" class="${cond.side === s.id ? 'active' : ''}" data-act="side" data-val="${s.id}">${escapeHtml(s.label)}</button>`).join('')}
+                </div>
+                ${cond.side === 'self' ? '' : `
+                <div class="btn-row">
+                    ${SCOPE_OPTIONS.map(s => `<button type="button" class="tg ${cond.scope === s.id ? 'active' : ''}" data-act="scope" data-val="${s.id}">${escapeHtml(s.label)}</button>`).join('')}
+                </div>
+                ${cond.scope === 'single' ? `
+                <select class="b-select" style="margin-top:8px" data-act="position">
+                    <option value="">位置・一番（任意）</option>
+                    ${positions.map(p => `<option value="${p.id}" ${cond.position === p.id ? 'selected' : ''}>${escapeHtml(p.label)}</option>`).join('')}
+                </select>` : ''}`}
+            </div>
+
+            ${(sel.length || specialsBlock) ? `
+            <div class="b-block">
+                <div class="b-label">対象タグ <span class="b-sub">— 重ねると「かつ」（例: 水属性のサブ属性付与中）</span></div>
+                <div class="b-tags">
+                    ${sel.map(c => tagRow(cond, c, 'tag')).join('')}
+                    ${specialsBlock}
+                </div>
+            </div>` : ''}
+
+            ${tagCount >= 2 ? `
+            <div class="union-hint">
+                <i class="bi bi-info-circle-fill"></i>
+                <span>この条件は「${escapeHtml(tagLabels.join('の'))}の${sideShort(cond)}」を探します。「または」で探すなら分割してください。</span>
+                <button type="button" data-act="split">またはに分割</button>
+            </div>` : ''}
+
+            <button type="button" class="ref-toggle ${cond.refOpen ? 'open' : ''} ${cond.ref.src !== 'none' ? 'has-ref' : ''}" data-act="ref-toggle">
+                <i class="bi bi-bullseye"></i> 参照元（◯◯の数 × 威力）${cond.ref.src !== 'none' ? '・設定中' : '<span class="b-sub">任意</span>'}
+                <i class="bi bi-chevron-right chev"></i>
+            </button>
+            <div class="ref-body ${cond.refOpen ? 'open' : ''}">
+                <div class="b-block" style="margin-top:0">
+                    <div class="b-label">参照する数</div>
+                    <div class="seg">
+                        ${taxonomy.ref.map(r => `<button type="button" class="${cond.ref.src === r.id ? 'active' : ''}" data-act="ref-src" data-val="${r.id}">${escapeHtml(r.label)}</button>`).join('')}
+                    </div>
+                </div>
+                ${refSel.length ? `
+                <div class="b-block">
+                    <div class="b-label">参照タグ <span class="b-sub">どんな${cond.ref.src === 'ally' ? '味方' : '敵'}を数えるか</span></div>
+                    <div class="b-tags">
+                        ${refSel.map(c => tagRow(cond, c, 'ref')).join('')}
+                        ${specialsUI(cond.ref, 'ref', cond.ref.src)}
+                    </div>
+                </div>` : ''}
+            </div>
+
+            <div class="b-actions">
+                <button type="button" class="btn-ghost" data-act="delete">削除</button>
+                <button type="button" class="btn-primary" data-act="done">この条件を確定</button>
+            </div>
+        </div>`;
+    };
+
+    const detailPaneHTML = () => {
+        const cards = conditions.map((cond, i) => {
+            const expanded = editingId === cond.id;
+            const divider = i > 0 ? `<div class="and-divider"><span>かつ</span></div>` : '';
+            const etDef = cond.effectType ? byId(effectTypes, cond.effectType) : null;
+            return divider + `
+            <div class="cond-card">
+                <div class="cond-summary" data-act="expand" data-cid="${cond.id}">
+                    <span class="cond-effect-tag ${etDef ? escapeHtml(etDef.klass || '') : ''}">${etDef ? escapeHtml(etDef.label) : '効果未指定'}</span>
+                    <span class="cond-echo">${echoHTML(cond)}</span>
+                    <span class="cond-actions">
+                        <button type="button" class="icon-btn" data-act="expand" data-cid="${cond.id}" title="編集"><i class="bi bi-pencil"></i></button>
+                        <button type="button" class="icon-btn del" data-act="delete" data-cid="${cond.id}" title="削除"><i class="bi bi-trash3"></i></button>
+                    </span>
+                </div>
+                ${expanded ? builderHTML(cond) : ''}
+            </div>`;
+        }).join('');
+
+        const live = conditions.filter(isLive);
+        const queryPreview = live.length
+            ? live.map(c => `「${escapeHtml(plainText(c))}」`).join('<span class="kw-and"> かつ </span>')
+            : '<span class="q">すべてのスキル</span>';
+
+        return `
+        <div class="detail-intro">
+            <div class="intro-row"><span class="ok">✅</span><div><b>水属性・サブ属性付与中</b>（1つの条件に重ねる）<br><span class="arrow">→</span>「水属性でサブ属性が付与されている味方」が対象</div></div>
+            <div class="intro-row"><span class="ok">✅</span><div><b>光属性 ＋ 人間</b>（条件を分けて）<br><span class="arrow">→</span>「光属性の味方」対象の効果と「人間の味方」対象の効果を<b>両方持つ</b>スキル</div></div>
+        </div>
+        <div class="cond-list">${cards}</div>
+        <button type="button" class="add-group" data-act="add">
+            <i class="bi bi-plus-lg"></i> 条件を追加
+        </button>
+        <div class="detail-foot">
+            <i class="bi bi-funnel-fill"></i>
+            <span class="q">${live.length}件の条件</span>：${queryPreview} を含むスキル
+        </div>`;
+    };
+
+    const cleanupEmpty = (currentEditingId, nextEditingId) => {
+        if (!currentEditingId || currentEditingId === nextEditingId) return;
+        const c = byId(conditions, currentEditingId);
+        if (c && !isLive(c)) {
+            conditions = conditions.filter(x => x.id !== currentEditingId);
+        }
+    };
+
+    const doSplit = (cond) => {
+        const sel = tagsFor(cond.side);
+        const units = [];
+        sel.forEach(c => { if (cond[c]) units.push({ cat: c, val: cond[c] }); });
+        (cond.specials || []).forEach(s => units.push({ special: s }));
+        if (units.length < 2) return;
+
+        const idx = conditions.findIndex(c => c.id === cond.id);
+        const made = units.map(u => {
+            const nc = newCondition();
+            nc.effectType = cond.effectType;
+            nc.side = cond.side;
+            nc.scope = cond.scope;
+            nc.position = cond.position;
+            if (u.special) nc.specials = [u.special];
+            else nc[u.cat] = u.val;
+            return nc;
+        });
+        conditions.splice(idx, 1, ...made);
+        editingId = made[0].id;
+        update();
+    };
+
+    const onClick = (e) => {
+        const target = e.target.closest('[data-act]');
+        if (!target) return;
+        const act = target.dataset.act;
+        const cid = target.dataset.cid;
+        const cond = cid ? byId(conditions, cid) : (editingId ? byId(conditions, editingId) : null);
+
+        switch (act) {
+            case 'add': {
+                const c = newCondition();
+                conditions.push(c);
+                editingId = c.id;
+                update();
+                break;
+            }
+            case 'expand': {
+                cleanupEmpty(editingId, cid);
+                editingId = (editingId === cid) ? null : cid;
+                update();
+                break;
+            }
+            case 'done':
+                editingId = null;
+                update();
+                break;
+            case 'delete': {
+                const id = cid || editingId;
+                conditions = conditions.filter(c => c.id !== id);
+                if (editingId === id) editingId = null;
+                update();
+                break;
+            }
+            case 'side': {
+                if (!cond) break;
+                cond.side = target.dataset.val;
+                if (cond.side === 'self') cond.scope = 'self';
+                else if (cond.scope === 'self') cond.scope = 'all';
+                ALLY_TAGS.forEach(c => { cond[c] = ''; });
+                cond.specials = [];
+                cond.position = '';
+                update();
+                break;
+            }
+            case 'scope':
+                if (!cond) break;
+                cond.scope = target.dataset.val;
+                if (cond.scope !== 'single') cond.position = '';
+                update();
+                break;
+            case 'tag': {
+                if (!cond) break;
+                const refScope = target.dataset.ref;
+                const cat = target.dataset.cat;
+                const val = target.dataset.val;
+                const obj = refScope === 'ref' ? cond.ref : cond;
+                const tagKeys = refScope === 'ref' ? (REF_TAG_KEYS[cond.ref.src] || []) : ALLY_TAGS;
+                const turningOn = String(obj[cat]) !== String(val);
+                tagKeys.forEach(c => { obj[c] = ''; });
+                obj[cat] = turningOn ? val : '';
+                update();
+                break;
+            }
+            case 'special-del': {
+                if (!cond) break;
+                const refScope = target.dataset.ref;
+                const obj = refScope === 'ref' ? cond.ref : cond;
+                obj.specials = obj.specials.filter(s => s !== target.dataset.val);
+                update();
+                break;
+            }
+            case 'ref-toggle':
+                if (!cond) break;
+                cond.refOpen = !cond.refOpen;
+                update();
+                break;
+            case 'ref-src': {
+                if (!cond) break;
+                cond.ref.src = target.dataset.val;
+                ALLY_TAGS.concat(['ailment']).forEach(c => { cond.ref[c] = ''; });
+                cond.ref.specials = [];
+                update();
+                break;
+            }
+            case 'split':
+                if (cond) doSplit(cond);
+                break;
+        }
+    };
+
+    const onInputChange = (e) => {
+        const cond = editingId ? byId(conditions, editingId) : null;
+        if (!cond) return;
+
+        const effectSel = e.target.closest('select[data-act="effect-type"]');
+        if (effectSel) { cond.effectType = effectSel.value || ''; update(); return; }
+
+        const posSel = e.target.closest('select[data-act="position"]');
+        if (posSel) { cond.position = posSel.value || ''; update(); return; }
+
+        const spSel = e.target.closest('select[data-act="special"]');
+        if (spSel && spSel.value) {
+            const refScope = spSel.dataset.ref;
+            const obj = refScope === 'ref' ? cond.ref : cond;
+            if (!obj.specials.includes(spSel.value)) obj.specials.push(spSel.value);
+            update();
+        }
+    };
+
+    function render() {
+        container.innerHTML = detailPaneHTML();
+    }
+
+    container.addEventListener('click', onClick);
+    container.addEventListener('change', onInputChange);
+
+    render();
+
+    return {
+        getConditions,
+        setConditions(next) {
+            conditions = (next || []).map(cloneCondition);
+            conditions.forEach(c => updateUidFromId(c.id));
+            editingId = null;
+            render();
+        },
+    };
+}
