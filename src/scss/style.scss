@@ -3269,11 +3269,55 @@ body.icon-view .detail-card-host {
 }
 .tag-val-row { margin-top: 8px; }
 
+.scroll-to-top-button {
+  display: none;
+}
+
 /* ==================================================
    MOBILE
 ================================================== */
 
 @media (max-width: $bp-mobile) {
+
+  .scroll-to-top-button {
+    display: inline-grid;
+    place-items: center;
+
+    position: fixed;
+    right: 16px;
+    bottom: 20px;
+    z-index: 80;
+
+    width: 44px;
+    height: 44px;
+
+    color: var(--sub);
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    font-size: 20px;
+    cursor: pointer;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity .2s;
+
+    &.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    &:hover {
+      color: var(--text);
+    }
+
+    &:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+  }
 
   body {
     padding: 12px;

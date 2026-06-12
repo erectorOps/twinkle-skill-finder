@@ -72,6 +72,8 @@ async function init() {
         document.querySelector('.filter-dock-panel');
     const uiSizeToggle =
         document.getElementById('ui-size-toggle');
+    const scrollToTopButton =
+        document.getElementById('scroll-to-top');
 
     // フィルターボタン・カードはレンダリング後に収集
     const sortOptions = [
@@ -1086,6 +1088,14 @@ async function init() {
         comfortableUi = !comfortableUi;
         applyUiSize();
         localStorage.setItem(UI_SIZE_KEY, comfortableUi ? 'comfortable' : 'compact');
+    });
+
+    window.addEventListener('scroll', () => {
+        scrollToTopButton.classList.toggle('is-visible', window.scrollY > 300);
+    }, { passive: true });
+
+    scrollToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
     compareModeToggle.addEventListener('click', () => {
