@@ -35,13 +35,6 @@
 $bp-mobile: 600px;
 $bp-desktop: 950px;
 
-body[data-ui-size="comfortable"] {
-  font-size: var(--ui-font-size);
-  --ui-font-size: 14px;
-  --ui-btn-min-h: 44px;
-  --ui-tg-min-h: 40px;
-}
-
 *,
 *::before,
 *::after {
@@ -236,7 +229,7 @@ body.sheet-open {
   display: inline-flex;
   align-items: center;
   width: fit-content;
-  min-height: 34px;
+  min-height: var(--ui-btn-min-h);
   padding: 3px;
   color: var(--sub);
   background: var(--panel);
@@ -270,14 +263,14 @@ body.sheet-open {
   align-items: center;
   justify-content: center;
   gap: 5px;
-  min-height: 34px;
+  min-height: var(--ui-btn-min-h);
   padding: 0 12px;
   color: var(--sub);
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 8px;
   font: inherit;
-  font-size: 12px;
+  font-size: var(--ui-font-size);
   font-weight: 900;
   cursor: pointer;
 
@@ -376,7 +369,7 @@ body.hide-raw {
   border-radius: 8px;
 
   font: inherit;
-  font-size: 12.5px;
+  font-size: var(--ui-font-size);
   font-weight: 800;
 
   cursor: pointer;
@@ -573,24 +566,29 @@ body.hide-raw {
   }
 }
 
-
 .seg {
   display: inline-flex;
+  width: 100%;
   padding: 3px;
-  background: var(--panel);
+  background: var(--panel-3);
   border: 1px solid var(--border);
   border-radius: 8px;
 
   button {
     flex: 1;
     min-width: 0;
-    padding: 6px 12px;
+
+    padding: 6px 2px;
+
     color: var(--sub);
     background: transparent;
+
     border: 0;
     border-radius: 5px;
-    font-size: 12px;
+
+    font-size: var(--ui-font-size);
     font-weight: 800;
+
     cursor: pointer;
     white-space: nowrap;
 
@@ -670,7 +668,7 @@ body.hide-raw {
     border-radius: 6px;
 
     font: inherit;
-    font-size: 12.5px;
+    font-size: var(--ui-font-size);
     font-weight: 800;
 
     cursor: pointer;
@@ -1086,43 +1084,6 @@ body.hide-raw {
 
   font-size: var(--ui-font-size);
   font-weight: 800;
-}
-
-.seg {
-  display: inline-flex;
-  width: 100%;
-
-  padding: 3px;
-
-  background: var(--panel-3);
-
-  border: 1px solid var(--border);
-  border-radius: 8px;
-
-  button {
-    flex: 1;
-    min-width: 0;
-
-    padding: 6px 12px;
-
-    color: var(--sub);
-    background: transparent;
-
-    border: 0;
-    border-radius: 5px;
-
-    font: inherit;
-    font-size: 12px;
-    font-weight: 800;
-
-    cursor: pointer;
-    white-space: nowrap;
-
-    &.active {
-      color: #fff;
-      background: #2f5f9f;
-    }
-  }
 }
 
 .pill {
@@ -1659,6 +1620,15 @@ body.hide-raw {
 
   font-size: 13px;
   font-weight: 700;
+
+  .visible-count {
+    color: #fff;
+    font-size: 16px;
+  }
+}
+.selected-cound {
+  font-size: 1.2em;
+  color: #fff;
 }
 
 .filter-strip .result-count {
@@ -1710,7 +1680,7 @@ body.hide-raw {
   border: 1px solid var(--border);
   border-radius: 8px;
   backdrop-filter: blur(8px);
-  font-size: 13px;
+  font-size: 1.1em;
   font-weight: 800;
 
   /* --- 開いている時のスタイル --- */
@@ -3172,7 +3142,7 @@ body.icon-view .detail-card-host {
 
     color: rgba(174, 183, 201, .55);
 
-    font-size: 11px;
+    font-size: 0.92em;
     font-weight: normal;
     line-height: 1.2;
     text-align: right;
@@ -3520,6 +3490,10 @@ body.icon-view .detail-card-host {
     display: none;
   }
 
+  .sheet-actions {
+    grid-template-columns: 1fr 1.4fr;
+  }
+
   body.filter-open .filter-dock {
     display: block;
   }
@@ -3672,4 +3646,90 @@ body.icon-view .detail-card-host {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+// ================================================
+// UI サイズ: comfortable モード上書き
+// ================================================
+body[data-ui-size="comfortable"] {
+  font-size: var(--ui-font-size);
+  --ui-font-size: 14px;
+  --ui-btn-min-h: 44px;
+  --ui-tg-min-h: 40px;
+
+  .pill:not(.rarity-pill) {
+    font-size: var(--ui-font-size);
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .tg img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .cond-effect-tag {
+    font-size: 12px;
+  }
+
+  .view-mode-option {
+    height: 34px;
+    font-size: 18px;
+  }
+
+  .facet-header {
+    font-size: 14px;
+  }
+
+  .effect-note {
+    font-size: var(--ui-font-size);
+
+    .tag {
+      font-size: 12px;
+    }
+  }
+
+  .skill-type {
+    font-size: 13px;
+  }
+
+  .cost-value {
+    font-size: var(--ui-font-size);
+  }
+
+  .skill-name {
+    font-size: 18px;
+  }
+
+  .skill-card .effect-box.accessory {
+    .accessory-stat-label {
+      font-size: 13px;
+    }
+    .accessory-stat-value {
+      font-size: 14px;
+    }
+  }
+  
+  .compare-action-bar {
+    top: 68px;
+  }
+
+  .result-count {
+    font-size: 14px;
+
+    .visible-count {
+      font-size: 18px;
+    }
+  }
+
+  .compare-action-bar {
+    font-size: 14px;
+
+    .selected-cound {
+      font-size: 18px;
+    }
+  }
+
 }

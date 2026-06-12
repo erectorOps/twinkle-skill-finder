@@ -404,7 +404,7 @@ async function init() {
 
     const updateCompareSelection = () => {
         const count = getSelectedSkillIds().length;
-        compareSelectedCount.textContent = `${count}件選択`;
+        compareSelectedCount.textContent = `${count}`;
         runCompareButton.disabled = count < 2;
     };
 

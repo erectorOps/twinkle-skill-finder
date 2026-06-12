@@ -474,13 +474,13 @@ export function createDetailFilter(container, { conditions: initial = [], onChan
                 <div class="b-label">対象 <span class="b-sub">— 陣営と範囲 (任意)</span></div>
                 <div class="seg">
                     <button type="button" class="${!cond.side ? 'active' : ''}" data-act="side" data-val="">指定なし</button>
-                    ${taxonomy.side.map(s => `<button type="button" class="${cond.side === s.id ? 'active' : ''}" data-act="side" data-val="${s.id}">${escapeHtml(s.label)}</button>`).join('')}
+                    ${taxonomy.side.map(s => `<button class="${cond.side === s.id ? 'active' : ''}" data-act="side" data-val="${s.id}">${escapeHtml(s.label)}</button>`).join('')}
                 </div>
                 ${cond.side && cond.side !== 'self' ? `
                 <div class="b-inline-row">
                     <span class="b-inline-label">範囲</span>
-                    <div class="btn-row">
-                        ${SCOPE_OPTIONS.map(s => `<button type="button" class="tg ${cond.scope === s.id ? 'active' : ''}" data-act="scope" data-val="${s.id}">${escapeHtml(s.label)}</button>`).join('')}
+                    <div class="seg">
+                        ${SCOPE_OPTIONS.map(s => `<button class="${cond.scope === s.id ? 'active' : ''}" data-act="scope" data-val="${s.id}">${escapeHtml(s.label)}</button>`).join('')}
                     </div>
                 </div>
                 ${cond.scope === 'single' ? `
@@ -496,7 +496,7 @@ export function createDetailFilter(container, { conditions: initial = [], onChan
             ${tagCatValBlock(cond, 'tag')}
 
             <button type="button" class="ref-toggle ${cond.refOpen ? 'open' : ''} ${cond.ref.src !== 'none' ? 'has-ref' : ''}" data-act="ref-toggle">
-                <i class="bi bi-bullseye"></i> 参照元（◯◯の数 × 威力）${cond.ref.src !== 'none' ? '・設定中' : '<span class="b-sub">任意</span>'}
+                <i class="bi bi-box-arrow-in-up"></i> 威力参照${cond.ref.src !== 'none' ? '・設定中' : '<span class="b-sub">任意</span>'}
                 <i class="bi bi-chevron-right chev"></i>
             </button>
             <div class="ref-body ${cond.refOpen ? 'open' : ''}">
@@ -618,6 +618,7 @@ export function createDetailFilter(container, { conditions: initial = [], onChan
             }
             case 'scope':
                 if (!cond) break;
+                if (target.dataset.val === cond.scope) break;
                 cond.scope = target.dataset.val;
                 if (cond.scope !== 'single') cond.position = '';
                 update();
