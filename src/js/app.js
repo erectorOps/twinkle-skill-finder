@@ -398,14 +398,20 @@ async function init() {
 
     // ── 比較モード ───────────────────────────────────
     const getSelectedSkillIds = () =>
-        [...listElement.querySelectorAll('[data-compare-check]:checked')]
-            .map(input => input.closest('[data-skill-id]')?.dataset.skillId)
+        [...listElement.querySelectorAll('.skill-card.compare-selected')]
+            .map(el => el.dataset.skillId)
             .filter(Boolean);
 
     const updateCompareSelection = () => {
         const count = getSelectedSkillIds().length;
         compareSelectedCount.textContent = `${count}`;
         runCompareButton.disabled = count < 2;
+    };
+
+    const toggleCompareSelection = (card) => {
+        if (!card.dataset.skillId) return;
+        card.classList.toggle('compare-selected');
+        updateCompareSelection();
     };
 
     const updateModeViews = () => {
@@ -490,14 +496,13 @@ async function init() {
         return cardEl;
     };
 
-    const addCompareSelector = (card) => {
-        if (card.querySelector('[data-compare-check]')) return;
-        const label = document.createElement('label');
-        label.className = 'compare-selector';
-        label.innerHTML = '<input type="checkbox" data-compare-check><span>選択</span>';
-        label.addEventListener('click', event => event.stopPropagation());
-        label.querySelector('input').addEventListener('change', updateCompareSelection);
-        card.appendChild(label);
+    const addCompareBadge = (card) => {
+        if (card.querySelector('[data-compare-badge]')) return;
+        const badge = document.createElement('div');
+        badge.className = 'compare-badge';
+        badge.setAttribute('data-compare-badge', '');
+        badge.innerHTML = '✓';
+        card.appendChild(badge);
     };
 
     const sentinel = document.createElement('div');
@@ -515,8 +520,8 @@ async function init() {
             const cardEl = getOrCreateCardElement(item.skill_id, item.unit_id);
             if (!cardEl) continue;
             applyEffectHighlight(cardEl, item);
-            if (compareMode && !cardEl.querySelector('[data-compare-check]')) {
-                addCompareSelector(cardEl);
+            if (compareMode && !cardEl.querySelector('[data-compare-badge]')) {
+                addCompareBadge(cardEl);
             }
             cardEl.hidden = false;
             fragment.appendChild(cardEl);
@@ -785,8 +790,8 @@ async function init() {
     };
 
     // ── 比較 ─────────────────────────────────────────
-    const ensureCompareSelectors = () => {
-        listElement.querySelectorAll('[data-skill-id]').forEach(addCompareSelector);
+    const ensureCompareBadges = () => {
+        listElement.querySelectorAll('[data-skill-id]').forEach(addCompareBadge);
     };
 
     const shortenCompareLabel = (label) =>
@@ -881,7 +886,7 @@ async function init() {
             const clone = card.cloneNode(true);
             clone.removeAttribute('id');
             clone.hidden = false;
-            clone.querySelector('.compare-selector')?.remove();
+            clone.querySelector('[data-compare-badge]')?.remove();
             th.prepend(clone);
         });
     };
@@ -922,7 +927,7 @@ async function init() {
             clone.removeAttribute('id');
             clone.hidden = false;
             clone.classList.add('skill-modal-card');
-            clone.querySelectorAll('[data-compare-check], .compare-selector')
+            clone.querySelectorAll('[data-compare-badge]')
                 .forEach(element => element.remove());
             detailCardHost.appendChild(clone);
         }
@@ -1074,18 +1079,18 @@ async function init() {
 
     compareModeToggle.addEventListener('click', () => {
         compareMode = !compareMode;
-        ensureCompareSelectors();
+        ensureCompareBadges();
         if (!compareMode) {
-            listElement.querySelectorAll('[data-compare-check]')
-                .forEach(check => { check.checked = false; });
+            listElement.querySelectorAll('.skill-card.compare-selected')
+                .forEach(el => el.classList.remove('compare-selected'));
         }
         updateModeViews();
     });
 
     cancelCompareButton.addEventListener('click', () => {
         compareMode = false;
-        listElement.querySelectorAll('[data-compare-check]')
-            .forEach(check => { check.checked = false; });
+        listElement.querySelectorAll('.skill-card.compare-selected')
+            .forEach(el => el.classList.remove('compare-selected'));
         updateModeViews();
     });
 
@@ -1103,10 +1108,19 @@ async function init() {
     });
 
     listElement.addEventListener('click', event => {
-        if (!iconViewMode || compareMode) return;
-        if (event.target.closest('.compare-selector')) return;
         const card = event.target.closest('[data-skill-id]');
-        if (card) openDetailSheet(card.dataset.skillId);
+        if (!card) return;
+
+        // compare mode 中はカード全体で選択トグル
+        if (compareMode) {
+            toggleCompareSelection(card);
+            return;
+        }
+
+        // 通常時の挙動（既存ロジックを維持）
+        if (iconViewMode) {
+            openDetailSheet(card.dataset.skillId);
+        }
     });
 
     document.addEventListener('click', event => {

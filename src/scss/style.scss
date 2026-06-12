@@ -1703,28 +1703,89 @@ body.hide-raw {
   display: none;
 }
 
-.compare-selector {
+.compare-badge {
   position: absolute;
   top: 8px;
-  left: 8px;
-  z-index: 8;
-  display: none;
+  right: 8px;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  display: none;                      // compare-mode のときだけ表示
   align-items: center;
-  gap: 5px;
-  min-height: 28px;
-  padding: 4px 8px;
-  color: #fff;
-  background: rgba(20, 22, 27, .9);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 800;
-  cursor: pointer;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 25px;
+  font-weight: 900;
+  background: rgba(20, 22, 27, .7);
+  border: 1.5px solid var(--border);
+  color: transparent;                 // ✓ は selected 時のみ表示
+  transition: background .15s, border-color .15s, color .15s;
+  pointer-events: none;
+}
+
+body.icon-view .compare-badge {
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+}
+
+body.compare-mode .compare-badge {
+  display: flex;
 }
 
 body.compare-mode {
-  .compare-selector {
-    display: inline-flex;
+
+  .skill-card {
+    cursor: pointer;
+    transition:
+      border-color .15s,
+      border-style .15s,
+      border-width .15s,
+      box-shadow .15s;
+
+    // ── 通常: やや暗くして「選択可能」を示す ──
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 5;
+      background: rgba(0, 0, 0, .6);
+      border-radius: inherit;
+      pointer-events: none;
+      transition: background .15s;
+    }
+
+    // ── Hover: 点線ボーダー + 青オーバーレイ ──
+    &:hover {
+      border: 1px dashed var(--accent);
+      box-shadow: 0 0 0 2px rgba(110, 168, 255, .15);
+
+      &::after {
+        background: rgba(110, 168, 255, .08);
+      }
+
+      .compare-badge {
+        background: rgba(85, 85, 110, .75);
+        border-color: var(--accent);
+        color: rgba(110, 168, 255, .5);
+      }
+    }
+
+    // ── 選択済み: solid ボーダー + 青グロー ──
+    &.compare-selected {
+      border: 1px solid var(--accent);
+      box-shadow: 0 0 0 3px rgba(110, 168, 255, .25);
+
+      &::after {
+        background: rgba(110, 168, 255, .07);
+      }
+
+      .compare-badge {
+        background: #2f5f9f;
+        border-color: var(--accent);
+        color: #fff;
+      }
+    }
   }
 }
 
