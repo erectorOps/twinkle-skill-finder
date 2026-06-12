@@ -83,6 +83,9 @@ async function init() {
     const characterScopeButtons = [
         ...document.querySelectorAll('[data-character-scope-toggle]')
     ];
+    const skillGroupButtons = [
+        ...document.querySelectorAll('[data-filter-group="skill_group"]')
+    ];
     const filterChips = [
         ...document.querySelectorAll('.filter-chip')
     ];
@@ -231,6 +234,7 @@ async function init() {
     };
 
     const matchesSkillGroup = (item) => {
+        if (characterScopeMode) return true;
         const activeValues = getActiveValues('skill_group');
         if (activeValues.size === 0 || activeValues.has('all')) return true;
         if (activeValues.has('ex1')) return item.skill_type === 'EX1';
@@ -275,6 +279,9 @@ async function init() {
                 === (pendingCharacterScopeMode ? 'character' : 'skill');
             button.classList.toggle('active', active);
             button.setAttribute('aria-pressed', active ? 'true' : 'false');
+        });
+        skillGroupButtons.forEach(button => {
+            button.disabled = pendingCharacterScopeMode;
         });
     };
 

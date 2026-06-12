@@ -61,14 +61,22 @@ body.sheet-open {
 }
 
 /* scrollbars */
+/* scrollbars */
 .dock-scroll::-webkit-scrollbar,
-.skill-list::-webkit-scrollbar { width: 10px; }
+.skill-list::-webkit-scrollbar,
+.compare-table-host::-webkit-scrollbar,
+.detail-card-host::-webkit-scrollbar { width: 10px; }
+.compare-table-host::-webkit-scrollbar { height: 10px; }
+
 .dock-scroll::-webkit-scrollbar-thumb,
-.skill-list::-webkit-scrollbar-thumb {
+.skill-list::-webkit-scrollbar-thumb,
+.compare-table-host::-webkit-scrollbar-thumb,
+.detail-card-host::-webkit-scrollbar-thumb {
   background: #2c313d;
   border-radius: 10px;
   border: 2px solid var(--bg);
 }
+.compare-table-host::-webkit-scrollbar-corner { background: var(--bg); }
 
 /* ==================================================
    SHELL — skill-list left, filter dock right (340px)
@@ -386,20 +394,17 @@ body.hide-raw {
 }
 
 #apply-filters {
-  color: var(--sub);
-  background: var(--panel);
-  border-color: var(--border);
+  color: #fff;
+  background: #2f5f9f;
+  border-color: var(--accent);
+  opacity: .45;
 
   &:hover {
-    color: var(--text);
-    border-color: #4b5368;
+    opacity: .6;
   }
 
   &.has-pending {
-    color: #fff;
-    background: #2f5f9f;
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(110, 168, 255, 0.28);
+    opacity: 1;
 
     &:hover {
       background: #3a72c0;
@@ -595,6 +600,16 @@ body.hide-raw {
     &.active {
       color: #fff;
       background: #2f5f9f;
+    }
+
+    &:disabled {
+      opacity: .45;
+      cursor: not-allowed;
+
+      &.active {
+        color: var(--sub);
+        background: transparent;
+      }
     }
   }
 }
