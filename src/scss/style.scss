@@ -31,6 +31,10 @@
   --ui-tg-min-h: 30px;
 }
 
+// URレイアウト変数
+$bp-mobile: 600px;
+$bp-desktop: 950px;
+
 body[data-ui-size="comfortable"] {
   --ui-font-size: 14px;
   --ui-btn-min-h: 44px;
@@ -1795,6 +1799,7 @@ body.compare-mode {
   width: min(560px, 94vw);
 
   @media (min-width: 1200px) {
+    /* detail-view: 粒度キャラ単位時のskill-card 2列表示 */
     &[data-card-count="2"],
     &[data-card-count="3"],
     &[data-card-count="4"] {
@@ -1803,6 +1808,7 @@ body.compare-mode {
   }
 
   @media (min-width: 1740px) {
+    /* detail-view: 粒度キャラ単位時のskill-card 2～3列表示 */
     &[data-card-count="3"] { width: min(1740px, 94vw); }
   }
 }
@@ -2232,6 +2238,7 @@ body.icon-view {
 
 @media (min-width: 768px) {
   body.icon-view {
+    /* icon-view: アイコン大 */
     .skill-list {
       grid-template-columns: repeat(auto-fill, 96px);
 
@@ -3196,7 +3203,7 @@ body.icon-view .detail-card-host {
    MOBILE
 ================================================== */
 
-@media (max-width: 600px) {
+@media (max-width: $bp-mobile) {
 
   body {
     padding: 12px;
@@ -3483,6 +3490,10 @@ body.icon-view .detail-card-host {
       }
     }
   }
+
+  .filter-dock-panel {
+    animation: slideUpIn 0.3s ease-out;
+  }
 }
 
 @media (max-width: 950px) and (min-width: 600px) {
@@ -3657,11 +3668,5 @@ body.icon-view .detail-card-host {
   to {
     transform: translateY(0);
     opacity: 1;
-  }
-}
-
-@media (max-width: 600px) {
-  .filter-dock-panel {
-    animation: slideUpIn 0.3s ease-out;
   }
 }
