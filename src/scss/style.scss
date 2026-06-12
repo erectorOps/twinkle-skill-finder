@@ -36,6 +36,7 @@ $bp-mobile: 600px;
 $bp-desktop: 950px;
 
 body[data-ui-size="comfortable"] {
+  font-size: var(--ui-font-size);
   --ui-font-size: 14px;
   --ui-btn-min-h: 44px;
   --ui-tg-min-h: 40px;
@@ -55,6 +56,7 @@ body {
     "Inter",
     "Noto Sans JP",
     sans-serif;
+  font-size: var(--ui-font-size);
 
   padding: 22px;
   margin: 0;
@@ -418,7 +420,7 @@ body.hide-raw {
 }
 
 /* デスクトップ(>=951px)はライブ反映なので「検索する」は不要、クリアのみ */
-@media (min-width: 951px) {
+@media (min-width: #{$bp-desktop + 1}) {
   #apply-filters {
     display: none;
   }
@@ -858,7 +860,7 @@ body.hide-raw {
   flex: 1;
   min-width: 0;
 
-  font-size: 12.5px;
+  font-size: var(--ui-font-size);
   line-height: 1.7;
   color: var(--text);
 
@@ -942,7 +944,7 @@ body.hide-raw {
   border-radius: 10px;
 
   font: inherit;
-  font-size: 12.5px;
+  font-size: var(--ui-font-size);
   font-weight: 800;
 
   cursor: pointer;
@@ -969,7 +971,7 @@ body.hide-raw {
   border: 1px solid var(--border);
   border-radius: 9px;
 
-  font-size: 11.5px;
+  font-size: var(--ui-font-size);
   line-height: 1.6;
 
   .q {
@@ -1011,7 +1013,7 @@ body.hide-raw {
 
   color: var(--sub);
 
-  font-size: 11px;
+  font-size: var(--ui-font-size);
   font-weight: 800;
   letter-spacing: .02em;
 
@@ -1031,6 +1033,7 @@ body.hide-raw {
 
 .b-select {
   width: 100%;
+  min-height: var(--ui-tg-min-h);
 
   padding: 9px 11px;
 
@@ -1041,7 +1044,7 @@ body.hide-raw {
   border-radius: 8px;
 
   font: inherit;
-  font-size: 13px;
+  font-size: var(--ui-font-size);
   font-weight: 700;
 
   cursor: pointer;
@@ -1081,7 +1084,7 @@ body.hide-raw {
 
   color: var(--sub);
 
-  font-size: 11px;
+  font-size: var(--ui-font-size);
   font-weight: 800;
 }
 
@@ -1244,7 +1247,7 @@ body.hide-raw {
 }
 
 .sp-select {
-  min-height: 30px;
+  min-height: var(--ui-tg-min-h);
 
   padding: 4px 8px;
 
@@ -1255,7 +1258,7 @@ body.hide-raw {
   border-radius: 7px;
 
   font: inherit;
-  font-size: 12px;
+  font-size: var(--ui-font-size);
   font-weight: 700;
 
   cursor: pointer;
@@ -1278,7 +1281,7 @@ body.hide-raw {
   border-radius: 8px;
 
   font: inherit;
-  font-size: 12px;
+  font-size: var(--ui-font-size);
   font-weight: 800;
 
   cursor: pointer;
@@ -1376,13 +1379,13 @@ body.hide-raw {
 .btn-primary,
 .btn-ghost {
   flex: 1;
-  min-height: 38px;
+  min-height: var(--ui-btn-min-h);
 
   border: 1px solid transparent;
   border-radius: 8px;
 
   font: inherit;
-  font-size: 12.5px;
+  font-size: var(--ui-font-size);
   font-weight: 800;
 
   cursor: pointer;
@@ -1891,7 +1894,7 @@ body.compare-mode {
   width: max-content;
   border-collapse: separate;
   border-spacing: 0;
-  font-size: 13px;
+  font-size: 1.08em;
 
   th,
   td {
@@ -2329,7 +2332,7 @@ body.icon-view .detail-card-host {
     .skill-name {
       display: block;
       overflow: visible;
-      font-size: 18px;
+      font-size: 1.5em;
       line-height: 1.2;
       text-align: left;
     }
@@ -2679,7 +2682,7 @@ body.icon-view .detail-card-host {
   }
 
   .skill-name {
-    font-size: 18px;
+    font-size: 1.5em;
     font-weight: 700;
     line-height: 1.2;
   }
@@ -2694,7 +2697,7 @@ body.icon-view .detail-card-host {
   }
 
   .cost-label {
-    font-size: 11px;
+    font-size: 0.92em;
     color: var(--sub);
   }
 
@@ -2936,7 +2939,7 @@ body.icon-view .detail-card-host {
 
     gap: 8px;
 
-    font-size: 15px;
+    font-size: 1.25em;
     font-weight: 700;
 
     white-space: nowrap;
@@ -2961,7 +2964,7 @@ body.icon-view .detail-card-host {
     min-width: 0;
     flex: 1 1 40%;
 
-    font-size: 12px;
+    font-size: 1em;
     color: var(--sub);
 
     overflow-wrap: anywhere;
@@ -2969,12 +2972,12 @@ body.icon-view .detail-card-host {
   }
 
   .effect-value {
-    font-size: 15px;
+    font-size: 1.25em;
     line-height: 1.5;
   }
 
   .effect-formula {
-    font-size: 12px;
+    font-size: 1em;
     line-height: 1.5;
 
     color: #b9c1d1;
@@ -3038,7 +3041,7 @@ body.icon-view .detail-card-host {
     .effect-name {
       gap: 6px;
 
-      font-size: 13px;
+      font-size: 1.08em;
     }
 
     .effect-ct {
@@ -3049,11 +3052,11 @@ body.icon-view .detail-card-host {
 
     .effect-target,
     .effect-formula {
-      font-size: 11px;
+      font-size: 0.92em;
     }
 
     .effect-value {
-      font-size: 13px;
+      font-size: 1.08em;
       line-height: 1.4;
     }
 
@@ -3072,23 +3075,23 @@ body.icon-view .detail-card-host {
         border-radius: 7px;
 
         .effect-name {
-          font-size: 12px;
+          font-size: 1em;
         }
 
         .effect-target,
         .effect-formula {
-          font-size: 11px;
+          font-size: 0.92em;
         }
 
         .effect-value {
-          font-size: 12px;
+          font-size: 1em;
         }
       }
     }
   }
 
   .duration {
-    font-size: 13px;
+    font-size: 1.08em;
     color: #8ec7ff;
   }
 
@@ -3186,7 +3189,7 @@ body.icon-view .detail-card-host {
 }
 .tag-cat-tab {
     padding: 6px 8px 8px;
-    font-size: 12px; font-weight: 800;
+    font-size: var(--ui-font-size); font-weight: 800;
     color: var(--sub);
     background: transparent;
     border: 0; border-radius: 0;
@@ -3347,8 +3350,8 @@ body.icon-view .detail-card-host {
     max-width: 96px;
     box-sizing: border-box;
     padding: 5px 3px;
-    font-size: 11px;
-    width: calc(100vw * 0.2); 
+    font-size: 0.92em;
+    width: calc(100vw * 0.2);
   }
 
   #cancel-compare {
@@ -3496,7 +3499,7 @@ body.icon-view .detail-card-host {
   }
 }
 
-@media (max-width: 950px) and (min-width: 600px) {
+@media (max-width: $bp-desktop) and (min-width: #{$bp-mobile + 1}) {
 
   body {
     padding: 12px;
@@ -3644,7 +3647,7 @@ body.icon-view .detail-card-host {
   .skill-name {
     display: block;
     overflow: visible;
-    font-size: 18px;
+    font-size: 1.5em;
     line-height: 1.2;
     text-align: left;
   }
