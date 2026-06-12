@@ -77,7 +77,7 @@ const renderEffectBox = (effect, counter, extraClass = '') => {
 };
 
 export function renderCard(skill, chara, accessories) {
-    const bgImage = `img/unit/chara_${skill.unit_id}_2_1.png`;
+    const bgImage = `img/unit/chara_${skill.unit_id}_2_1.webp`;
 
     const skillAccessory = (accessories || []).find(x => x.unit_id === skill.unit_id);
 
@@ -131,23 +131,23 @@ export function renderCard(skill, chara, accessories) {
         return `${body}<span class="accessory-common-formula">└ ${renderFormula(effect.formula)}</span>`;
     };
 
-    let skillIcon = `img/skill_${String(skill.icon_id)}.png`;
+    let skillIcon = `img/skill_${String(skill.icon_id)}.webp`;
     if (skill.icon_id < 10000) {
-        skillIcon = `img/skill_${String(skill.icon_id).padStart(4, '0')}.png`;
+        skillIcon = `img/skill_${String(skill.icon_id).padStart(4, '0')}.webp`;
     }
 
     const iconGroup = Math.floor(skill.icon_id / 100);
     const skillTypeBgMap = {
-        1: 'img/btn_skill_attack.png',
-        2: 'img/btn_skill_knockback.png',
-        3: 'img/btn_skill_buff.png',
-        4: 'img/btn_skill_debuff.png',
-        5: 'img/btn_skill_status.png',
-        6: 'img/btn_skill_recovery.png',
-        7: 'img/btn_skill_special.png',
-        30: 'img/btn_skill_specific.png',
+        1: 'img/btn_skill_attack.webp',
+        2: 'img/btn_skill_knockback.webp',
+        3: 'img/btn_skill_buff.webp',
+        4: 'img/btn_skill_debuff.webp',
+        5: 'img/btn_skill_status.webp',
+        6: 'img/btn_skill_recovery.webp',
+        7: 'img/btn_skill_special.webp',
+        30: 'img/btn_skill_specific.webp',
     };
-    const skillTypeBg = skillTypeBgMap[iconGroup] || 'img/btn_skill_blank.png';
+    const skillTypeBg = skillTypeBgMap[iconGroup] || 'img/btn_skill_blank.webp';
 
     const skillTypeLabelMap = {
         'EX1':  ['EXスキル1',  'ex1'],
@@ -188,18 +188,18 @@ export function renderCard(skill, chara, accessories) {
 
             ${chara.sp_equip_types.length > 0 ? `
             <div class="icon-stack">
-                <img class="icon-base" src="img/attribute_base.png" alt="">
+                <img class="icon-base" src="img/attribute_base.webp" alt="">
                 <img class="icon-main icon-sp-equip-type" src="img/${escapeHtml(chara.sp_equip_types[0].icon)}" alt="">
             </div>
             ` : ''}
 
             <div class="icon-stack">
-                <img class="icon-base" src="img/attribute_base.png" alt="">
+                <img class="icon-base" src="img/attribute_base.webp" alt="">
                 <img class="icon-main" src="img/${escapeHtml(chara.role.icon)}" alt="">
             </div>
 
             <div class="icon-stack">
-                <img class="icon-base" src="img/attribute_base.png" alt="">
+                <img class="icon-base" src="img/attribute_base.webp" alt="">
                 <img class="icon-main" src="img/${escapeHtml(chara.attr_type.icon)}" alt="">
             </div>
         </div>
@@ -224,7 +224,7 @@ export function renderCard(skill, chara, accessories) {
                             ${[1, 2, 3].map(i => `
                             <img
                                 class="card-rarity-star ${i <= chara.rarity ? 'filled' : 'empty'}"
-                                src="img/${i <= chara.rarity ? 'rare.png' : 'rare_slot.png'}"
+                                src="img/${i <= chara.rarity ? 'rare.webp' : 'rare_slot.webp'}"
                                 alt=""
                             >`).join('')}
                         </span>
@@ -256,14 +256,14 @@ export function renderCard(skill, chara, accessories) {
             <div class="accessory-summary">
                 ${skillAccessory.illust_id ? `
                 <div class="accessory-frame">
-                    <img class="accessory-illust" src="img/equip/${escapeHtml(skillAccessory.illust_id)}.png" alt="" decoding="async">
+                    <img class="accessory-illust" src="img/equip/${escapeHtml(skillAccessory.illust_id)}.webp" alt="" decoding="async">
                 </div>
                 ` : ''}
 
                 <div class="accessory-body">
                     <div class="effect-top">
                         <span class="effect-name">
-                            <img class="accessory-title-icon" src="img/icon_equipment_03_s.png" alt="">
+                            <img class="accessory-title-icon" src="img/icon_equipment_03_s.webp" alt="">
                             ${escapeHtml(skillAccessory.accessory_name)}
                         </span>
                     </div>

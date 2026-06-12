@@ -1,3 +1,4 @@
+import crypto from 'crypto';
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -7,6 +8,24 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.join(__dirname, '..');
 const SRC = path.join(rootDir, 'src');
 const PUBLIC = path.join(rootDir, 'public');
+
+function hashContent(content) {
+    return crypto.createHash('sha256').update(content).digest('hex').slice(0, 8);
+}
+
+function pngIconsToWebp(value) {
+    if (Array.isArray(value)) {
+        value.forEach(pngIconsToWebp);
+    } else if (value && typeof value === 'object') {
+        for (const [key, val] of Object.entries(value)) {
+            if (key === 'icon' && typeof val === 'string' && val.endsWith('.png')) {
+                value[key] = val.replace(/\.png$/, '.webp');
+            } else {
+                pngIconsToWebp(val);
+            }
+        }
+    }
+}
 
 async function main() {
     const [skills, characters, accessories, release_dates] = await Promise.all([
@@ -32,13 +51,29 @@ async function main() {
 
     const skillFinderIndex = buildSkillFinderIndex({ skills, characters, accessories });
 
+    pngIconsToWebp(characters);
+    pngIconsToWebp(accessories);
+
+    const indexContent = JSON.stringify(skillFinderIndex);
+    const skillsContent = JSON.stringify(skills);
+    const charactersContent = JSON.stringify(characters);
+    const accessoryContent = JSON.stringify(accessories);
+
+    const dataHash = {
+        index: hashContent(indexContent),
+        skills: hashContent(skillsContent),
+        characters: hashContent(charactersContent),
+        accessory: hashContent(accessoryContent),
+    };
+
     await fs.mkdir(path.join(PUBLIC, 'data'), { recursive: true });
 
     await Promise.all([
-        fs.writeFile(path.join(PUBLIC, 'data', 'index.json'), JSON.stringify(skillFinderIndex)),
-        fs.writeFile(path.join(PUBLIC, 'data', 'skills.json'), JSON.stringify(skills)),
-        fs.writeFile(path.join(PUBLIC, 'data', 'characters.json'), JSON.stringify(characters)),
-        fs.writeFile(path.join(PUBLIC, 'data', 'accessory.json'), JSON.stringify(accessories)),
+        fs.writeFile(path.join(PUBLIC, 'data', 'index.json'), indexContent),
+        fs.writeFile(path.join(PUBLIC, 'data', 'skills.json'), skillsContent),
+        fs.writeFile(path.join(PUBLIC, 'data', 'characters.json'), charactersContent),
+        fs.writeFile(path.join(PUBLIC, 'data', 'accessory.json'), accessoryContent),
+        fs.writeFile(path.join(SRC, 'data', 'dataHash.generated.json'), JSON.stringify(dataHash)),
     ]);
 
     console.log('✓ public/data/ を更新しました');

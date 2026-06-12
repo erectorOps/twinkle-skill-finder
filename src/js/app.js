@@ -3,15 +3,16 @@ import { renderCard } from './card.js';
 import { renderFilterButtons } from './filters.js';
 import { matchesDetailConditions, getMatchedEffectKeys, isLive, createDetailFilter } from './detailFilter.js';
 import { initSheetDrag } from './sheetDrag.js';
+import dataHash from '../data/dataHash.generated.json';
 
 async function init() {
 
     // ── データ取得 ───────────────────────────────────
     const [skillIndex, skills, characters, accessories] = await Promise.all([
-        fetch('data/index.json').then(r => r.json()),
-        fetch('data/skills.json').then(r => r.json()),
-        fetch('data/characters.json').then(r => r.json()),
-        fetch('data/accessory.json').then(r => r.json()),
+        fetch(`data/index.json?v=${dataHash.index}`).then(r => r.json()),
+        fetch(`data/skills.json?v=${dataHash.skills}`).then(r => r.json()),
+        fetch(`data/characters.json?v=${dataHash.characters}`).then(r => r.json()),
+        fetch(`data/accessory.json?v=${dataHash.accessory}`).then(r => r.json()),
     ]);
 
     // ── フィルターボタンをレンダリング ───────────────

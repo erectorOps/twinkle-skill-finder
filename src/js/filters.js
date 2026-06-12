@@ -44,7 +44,7 @@ const filterButtonsHTML = (title, group, options, is_chip) => `
             ${[1, 2, 3].map(i => `
             <img
                 class="rarity-star ${i <= option.rarity ? 'filled' : 'empty'}"
-                src="img/${i <= option.rarity ? 'rare.png' : 'rare_slot.png'}"
+                src="img/${i <= option.rarity ? 'rare.webp' : 'rare_slot.webp'}"
                 alt=""
             >`).join('')}
         </span>
