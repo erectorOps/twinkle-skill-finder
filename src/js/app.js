@@ -2,6 +2,7 @@ import '../scss/style.scss';
 import { renderCard } from './card.js';
 import { renderFilterButtons } from './filters.js';
 import { matchesDetailConditions, getMatchedEffectKeys, isLive, createDetailFilter } from './detailFilter.js';
+import { initSheetDrag } from './sheetDrag.js';
 
 async function init() {
 
@@ -65,6 +66,12 @@ async function init() {
         document.getElementById('detail-title');
     const detailCardHost =
         document.getElementById('detail-card-host');
+    const sheetGrip =
+        document.querySelector('.sheet-grip');
+    const filterDockPanel =
+        document.querySelector('.filter-dock-panel');
+    const uiSizeToggle =
+        document.getElementById('ui-size-toggle');
 
     // フィルターボタン・カードはレンダリング後に収集
     const sortOptions = [
@@ -123,6 +130,7 @@ async function init() {
     const pendingFilters = new Map();
     const sortedItemsCache = new Map();
     const STORAGE_KEY = 'twinkle_skill_finder_state';
+    const UI_SIZE_KEY = 'tsf-ui-size';
 
     let currentSortKey = 'release_asc';
     let characterScopeMode = false;
@@ -130,6 +138,7 @@ async function init() {
     let appliedSearchText = "";
     let rawViewMode = true;
     let iconViewMode = false;
+    let comfortableUi = localStorage.getItem(UI_SIZE_KEY) === 'comfortable';
     let compareMode = false;
     let scheduledRenderFrame = 0;
     let scheduledRenderTimer = 0;
@@ -734,6 +743,11 @@ async function init() {
         document.body.classList.remove('filter-open');
     };
 
+    const applyUiSize = () => {
+        document.body.dataset.uiSize = comfortableUi ? 'comfortable' : 'compact';
+        uiSizeToggle.setAttribute('aria-pressed', comfortableUi ? 'true' : 'false');
+    };
+
     const openFilterGroup = (group) => {
         document.body.classList.add('filter-open');
         const button = document.querySelector(`[data-filter-group="${group}"]`);
@@ -1052,6 +1066,12 @@ async function init() {
         saveState();
     });
 
+    uiSizeToggle.addEventListener('click', () => {
+        comfortableUi = !comfortableUi;
+        applyUiSize();
+        localStorage.setItem(UI_SIZE_KEY, comfortableUi ? 'comfortable' : 'compact');
+    });
+
     compareModeToggle.addEventListener('click', () => {
         compareMode = !compareMode;
         ensureCompareSelectors();
@@ -1096,6 +1116,8 @@ async function init() {
     });
 
     // ── 初期化 ───────────────────────────────────────
+    initSheetDrag(sheetGrip, filterDockPanel, document.body);
+    applyUiSize();
     restoreState();
     syncControlsFromState();
     render(currentSortKey);

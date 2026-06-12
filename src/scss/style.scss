@@ -25,6 +25,16 @@
   --debuff: #b97cff;
   --note: #71c7ff;
   --blank: #9fb1c9;
+
+  --ui-font-size: 12px;
+  --ui-btn-min-h: 34px;
+  --ui-tg-min-h: 30px;
+}
+
+body[data-ui-size="comfortable"] {
+  --ui-font-size: 14px;
+  --ui-btn-min-h: 44px;
+  --ui-tg-min-h: 40px;
 }
 
 *,
@@ -96,6 +106,7 @@ body.sheet-open {
   border: 1px solid var(--border);
   border-radius: 10px;
   overflow: hidden;
+  will-change: transform;
 }
 
 .dock-head {
@@ -118,6 +129,28 @@ body.sheet-open {
 
 .sheet-grip {
   display: none;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  height: 24px;
+  cursor: grab;
+  touch-action: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 4px;
+    transform: translate(-50%, -50%);
+    background: #596174;
+    border-radius: 999px;
+  }
+
+  &:active {
+    cursor: grabbing;
+  }
 }
 
 .sheet-actions {
@@ -135,13 +168,13 @@ body.sheet-open {
 .icon-action,
 .filter-chip,
 .sort-option {
-  min-height: 34px;
+  min-height: var(--ui-btn-min-h);
   color: var(--text);
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 6px;
   font: inherit;
-  font-size: 12px;
+  font-size: var(--ui-font-size);
   font-weight: 800;
   cursor: pointer;
 
@@ -1015,6 +1048,39 @@ body.hide-raw {
   background-position: right 11px center;
 }
 
+.b-inline-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 8px;
+  margin-top: 8px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  .btn-row {
+    flex: 1;
+    min-width: 0;
+    margin-top: 0;
+  }
+
+  .b-select {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.b-inline-label {
+  flex: 0 0 auto;
+
+  color: var(--sub);
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
 .seg {
   display: inline-flex;
   width: 100%;
@@ -1115,7 +1181,7 @@ body.hide-raw {
   align-items: center;
 
   gap: 4px;
-  min-height: 30px;
+  min-height: var(--ui-tg-min-h);
 
   padding: 4px 9px;
 
@@ -1126,7 +1192,7 @@ body.hide-raw {
   border-radius: 7px;
 
   font: inherit;
-  font-size: 12px;
+  font-size: var(--ui-font-size);
   font-weight: 700;
   line-height: 1;
 
@@ -1586,6 +1652,11 @@ body.hide-raw {
 
   font-size: 13px;
   font-weight: 700;
+}
+
+.filter-strip .result-count {
+  flex: 0 0 auto;
+  white-space: nowrap;
 }
 
 .toolbar-meta {
@@ -3173,11 +3244,6 @@ body.icon-view .detail-card-host {
 
   .sheet-grip {
     display: block;
-    width: 40px;
-    height: 4px;
-    margin: 8px auto 2px;
-    background: #596174;
-    border-radius: 999px;
   }
 
   .finder-toolbar {
@@ -3197,7 +3263,7 @@ body.icon-view .detail-card-host {
 
   .result-actions {
     display: grid;
-    grid-template-columns: auto auto minmax(0, 1fr) auto auto auto;
+    grid-template-columns: auto minmax(0, 1fr) auto auto auto auto;
     align-items: center;
     justify-content: stretch;
     width: 100%;
@@ -3205,20 +3271,16 @@ body.icon-view .detail-card-host {
     gap: 6px;
   }
 
-  .result-count {
+  #compare-mode-toggle {
     grid-column: 1;
   }
 
-  #compare-mode-toggle {
-    grid-column: 2;
-  }
-
   .raw-view-toggle {
-    grid-column: 4;
+    grid-column: 3;
   }
 
   .view-mode-toggle {
-    grid-column: 5;
+    grid-column: 4;
   }
 
   .toolbar-button {
@@ -3230,13 +3292,18 @@ body.icon-view .detail-card-host {
   #compare-mode-toggle,
   .raw-view-toggle,
   .view-mode-toggle,
-  #sort-menu-button {
+  #sort-menu-button,
+  #ui-size-toggle {
     min-height: 38px;
   }
 
   .sort-menu {
-    grid-column: 6;
+    grid-column: 5;
     min-width: 0;
+  }
+
+  #ui-size-toggle {
+    grid-column: 6;
   }
 
   #sort-menu-button {
@@ -3468,11 +3535,6 @@ body.icon-view .detail-card-host {
 
   .sheet-grip {
     display: block;
-    width: 40px;
-    height: 4px;
-    margin: 8px auto 2px;
-    background: #596174;
-    border-radius: 999px;
   }
 
   .finder-toolbar {

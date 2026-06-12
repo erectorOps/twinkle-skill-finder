@@ -36,6 +36,14 @@
                 </button>
 
                 <div
+                    class="result-count"
+                    aria-live="polite"
+                >
+                    <span id="visible-count">0</span>
+                    件
+                </div>
+
+                <div
                     id="filter-chip-row"
                     class="filter-chip-row"
                     aria-label="選択中フィルター"
@@ -54,14 +62,6 @@
             </div>
 
             <div class="result-actions">
-                <div
-                    class="result-count"
-                    aria-live="polite"
-                >
-                    <span id="visible-count">0</span>
-                    件
-                </div>
-
                 <button
                     id="compare-mode-toggle"
                     class="toolbar-button"
@@ -121,6 +121,16 @@
                         <button class="sort-option" type="button" data-sort="kana_desc">○ 50音順 (ん→あ)</button>
                     </div>
                 </div>
+
+                <button
+                    id="ui-size-toggle"
+                    class="toolbar-button"
+                    type="button"
+                    aria-pressed="false"
+                    aria-label="文字サイズ切替"
+                >
+                    Aa
+                </button>
             </div>
         </div>
 
