@@ -1735,7 +1735,7 @@ body.compare-mode .compare-badge {
 
 body.compare-mode {
 
-  .skill-card {
+  .skill-list .skill-card {
     cursor: pointer;
     transition:
       border-color .15s,
@@ -1965,6 +1965,23 @@ body.compare-mode {
     font-weight: 300;
     border-right: none;
     box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, .2);
+
+    .effect-ct {
+      display: inline-block;
+      margin-left: 4px;
+      padding: 2px 6px;
+
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 1;
+
+      white-space: nowrap;
+
+      color: #9bb3ff;
+      background: #2f3645;
+
+      border-radius: 999px;
+    }
   }
 
 
@@ -1988,8 +2005,12 @@ body.compare-mode {
     aspect-ratio: auto;
     border-radius: 8px;
     overflow: hidden;
-    cursor: default;
+    cursor: pointer;
     margin: 0 auto 6px;
+
+    &:hover {
+      box-shadow: 0 0 0 2px var(--accent);
+    }
 
     .skill-header {
       height: 100%;

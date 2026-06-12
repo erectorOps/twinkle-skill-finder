@@ -817,17 +817,17 @@ async function init() {
                 && !box.classList.contains('accessory')
             )
             .map(box => {
-                const name =
-                    box.querySelector(':scope > .effect-top .effect-name')
-                        ?.textContent
-                        ?.replace(/\s+/g, ' ')
-                        ?.trim();
+                const nameEl =
+                    box.querySelector(':scope > .effect-top .effect-name');
+                const name = nameEl?.textContent;
                 const value =
                     box.querySelector(':scope > .effect-value')
                         ?.textContent
                         ?.replace(/\s+/g, ' ')
                         ?.trim();
-                return name ? [shortenCompareLabel(name), value || 'あり'] : null;
+                return name
+                    ? [shortenCompareLabel(name), value || 'あり', shortenCompareLabel(nameEl.innerHTML)]
+                    : null;
             })
             .filter(Boolean);
     };
@@ -835,12 +835,16 @@ async function init() {
     const renderCompareTable = () => {
         const skillIds = getSelectedSkillIds();
         const rowLabels = new Set();
+        const rowLabelHtml = new Map();
         const effectMap = new Map();
         const columns = skillIds.map(skillId => {
             const item = itemMap.get(skillId);
             const effects = collectComparableEffects(skillId);
             effectMap.set(skillId, new Map(effects));
-            effects.forEach(([label]) => rowLabels.add(label));
+            effects.forEach(([label, , labelHtml]) => {
+                rowLabels.add(label);
+                if (!rowLabelHtml.has(label)) rowLabelHtml.set(label, labelHtml);
+            });
             return { skillId, item };
         });
 
@@ -853,7 +857,7 @@ async function init() {
                 });
                 return `
                     <tr>
-                        <th>${label}</th>
+                        <th>${rowLabelHtml.get(label)}</th>
                         ${cells.map(cell =>
                             `<td class="${cell.hasValue ? 'has-value' : 'empty-value'}">${cell.value}</td>`
                         ).join('')}
@@ -901,12 +905,12 @@ async function init() {
         document.body.classList.remove('sheet-open');
     };
 
-    const openDetailSheet = (skillId) => {
+    const openDetailSheet = (skillId, { singleOnly = false } = {}) => {
         const item = itemMap.get(skillId);
         if (!item) return;
 
         const showsCharacterSkills =
-            characterScopeMode || pendingCharacterScopeMode;
+            !singleOnly && (characterScopeMode || pendingCharacterScopeMode);
         const detailItems =
             showsCharacterSkills
                 ? skillIndex.filter(skill => skill.unit_id === item.unit_id)
@@ -1105,6 +1109,12 @@ async function init() {
 
     document.querySelectorAll('[data-close-detail]').forEach(element => {
         element.addEventListener('click', closeDetailSheet);
+    });
+
+    compareTableHost.addEventListener('click', event => {
+        const card = event.target.closest('.skill-card[data-skill-id]');
+        if (!card) return;
+        openDetailSheet(card.dataset.skillId, { singleOnly: true });
     });
 
     listElement.addEventListener('click', event => {
