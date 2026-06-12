@@ -775,10 +775,13 @@ body.hide-raw {
 }
 
 .cond-effect-tag {
-  flex: 0 0 auto;
 
-  margin-top: 1px;
-  padding: 3px 8px;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  margin-right: 6px;
+  padding: 2px 8px;
 
   color: #fff;
   background: #2f5f9f;
@@ -819,7 +822,7 @@ body.hide-raw {
   min-width: 0;
 
   font-size: 12.5px;
-  line-height: 1.55;
+  line-height: 1.7;
   color: var(--text);
 
   .t-attr {
@@ -844,6 +847,10 @@ body.hide-raw {
       color: #ffd9a3;
     }
   }
+}
+
+.conte-echo-text {
+  display: inline;
 }
 
 .cond-actions {
@@ -1240,11 +1247,6 @@ body.hide-raw {
   border: 1px solid rgba(255, 180, 84, .18);
   border-radius: 10px;
 
-  .tag-cat-tab {
-    padding: 5px 6px 7px;
-    font-size: 11px;
-  }
-
   // seg・tg・select の背景を amber 系に上書き
   .seg {
     background: rgba(255, 180, 84, .08);
@@ -1259,6 +1261,10 @@ body.hide-raw {
       border-color: rgba(255, 180, 84, .4);
     }
     // .active は青のまま（選択状態の色語彙は統一）
+    &.active {
+      background: #2f5f9f;
+      border-color: var(--accent);
+    }
   }
 
   .b-select {
@@ -1593,12 +1599,12 @@ body.hide-raw {
 
 .empty-result {
   display: grid;
+  grid-column: 1 / -1;
   place-items: center;
 
-  min-height: 160px;
+  min-height: 200px;
 
   color: var(--sub);
-  background: var(--panel);
 
   border: 1px dashed var(--border);
   border-radius: 8px;

@@ -63,7 +63,7 @@ const ENEMY_CATS = [
     { id: 'special', label: '特殊', taxKey: null },
 ];
 const campCats = (side) =>
-    side === 'enemy' ? ENEMY_CATS : side === 'self' ? [] : ALLY_CATS;
+    side === 'enemy' ? ENEMY_CATS : (side === 'self' || !side) ? [] : ALLY_CATS;
 
 const refGroupOf = (src) => (src === 'none' || src === 'ally' || src === 'enemy') ? src : 'other';
 
@@ -74,7 +74,7 @@ const refGroupOf = (src) => (src === 'none' || src === 'ally' || src === 'enemy'
 export const isLive = (cond) =>
     !!(
         cond.effectType
-        || cond.side !== 'ally'
+        || cond.side
         || cond.scope !== 'all'
         || cond.attr || cond.race || cond.role || cond.weapon || cond.affiliation
         || (cond.specials && cond.specials.length)
@@ -87,7 +87,7 @@ export const branchSatisfies = (branch, cond) => {
 
     if (cond.side && branch.side !== cond.side) return false;
 
-    if (cond.side !== 'self' && cond.scope && branch.scope && branch.scope !== cond.scope) {
+    if (cond.side && cond.side !== 'self' && cond.scope && branch.scope && branch.scope !== cond.scope) {
         return false;
     }
 
@@ -240,7 +240,7 @@ const nextId = () => 'c' + (++_uid);
 const cloneCondition = (cond = {}) => ({
     id: cond.id || nextId(),
     effectType: cond.effectType || '',
-    side: cond.side || 'ally',
+    side: cond.side || '',
     scope: cond.scope !== undefined && cond.scope !== null ? cond.scope : 'all',
     position: cond.position || '',
     attr: cond.attr || '',
@@ -264,7 +264,7 @@ const cloneCondition = (cond = {}) => ({
     refOpen: !!cond.refOpen,
 });
 
-const newCondition = () => cloneCondition({ side: 'ally', scope: 'all', tagCat: 'attr' });
+const newCondition = () => cloneCondition({ scope: 'all' });
 
 const optInner = (cat, o) => {
     const img = o.icon ? `<img src="${escapeHtml(o.icon)}" alt="${escapeHtml(o.label)}">` : '';
@@ -308,6 +308,7 @@ const refText = (cond) => {
 };
 
 const echoHTML = (cond) => {
+    if (!cond.side) return `<span class="scope">（対象指定なし）</span>${refText(cond)}`;
     const tags = tagText(cond);
     const tjoin = tags.join('<span class="kw-and">かつ</span>');
     const target = tags.length
@@ -420,7 +421,7 @@ export function createDetailFilter(container, { conditions: initial = [], onChan
 
         const label = refScope === 'ref'
             ? `参照タグ <span class="b-sub">どんな${side === 'ally' ? '味方' : '敵'}を数えるか</span>`
-            : `対象タグ <span class="b-sub">— 任意、1つだけ</span>`;
+            : `対象タグ <span class="b-sub">— どんな対象か (任意)</span>`;
 
         return `
         <div class="b-block">
@@ -450,19 +451,19 @@ export function createDetailFilter(container, { conditions: initial = [], onChan
             </div>
 
             <div class="b-block">
-                <div class="b-label">対象 <span class="b-sub">— 誰に効くか</span></div>
+                <div class="b-label">対象 <span class="b-sub">— 陣営と範囲 (任意)</span></div>
                 <div class="seg">
                     ${taxonomy.side.map(s => `<button type="button" class="${cond.side === s.id ? 'active' : ''}" data-act="side" data-val="${s.id}">${escapeHtml(s.label)}</button>`).join('')}
                 </div>
-                ${cond.side === 'self' ? '' : `
+                ${cond.side && cond.side !== 'self' ? `
                 <div class="btn-row">
                     ${SCOPE_OPTIONS.map(s => `<button type="button" class="tg ${cond.scope === s.id ? 'active' : ''}" data-act="scope" data-val="${s.id}">${escapeHtml(s.label)}</button>`).join('')}
                 </div>
                 ${cond.scope === 'single' ? `
                 <select class="b-select" style="margin-top:8px" data-act="position">
-                    <option value="">位置・一番（任意）</option>
+                    <option value="">指定なし(単体選択条件いずれも)</option>
                     ${positions.map(p => `<option value="${p.id}" ${cond.position === p.id ? 'selected' : ''}>${escapeHtml(p.label)}</option>`).join('')}
-                </select>` : ''}`}
+                </select>` : ''}` : ''}
             </div>
 
             ${tagCatValBlock(cond, 'tag')}
@@ -507,8 +508,7 @@ export function createDetailFilter(container, { conditions: initial = [], onChan
             return divider + `
             <div class="cond-card">
                 <div class="cond-summary" data-act="expand" data-cid="${cond.id}">
-                    <span class="cond-effect-tag ${etDef ? escapeHtml(etDef.klass || '') : ''}">${etDef ? escapeHtml(etDef.label) : '効果未指定'}</span>
-                    <span class="cond-echo">${echoHTML(cond)}</span>
+                    <span class="cond-echo"><span class="cond-effect-tag ${etDef ? escapeHtml(etDef.klass || '') : ''}">${etDef ? escapeHtml(etDef.short) : '効果未指定'}</span>${echoHTML(cond)}</span>
                     <span class="cond-actions">
                         <button type="button" class="icon-btn" data-act="expand" data-cid="${cond.id}" title="編集"><i class="bi bi-pencil"></i></button>
                         <button type="button" class="icon-btn del" data-act="delete" data-cid="${cond.id}" title="削除"><i class="bi bi-trash3"></i></button>
@@ -524,10 +524,6 @@ export function createDetailFilter(container, { conditions: initial = [], onChan
             : '<span class="q">すべてのスキル</span>';
 
         return `
-        <div class="detail-intro">
-            <div class="intro-row"><span class="ok">✅</span><div><b>水属性・サブ属性付与中</b>（1つの条件に重ねる）<br><span class="arrow">→</span>「水属性でサブ属性が付与されている味方」が対象</div></div>
-            <div class="intro-row"><span class="ok">✅</span><div><b>光属性 ＋ 人間</b>（条件を分けて）<br><span class="arrow">→</span>「光属性の味方」対象の効果と「人間の味方」対象の効果を<b>両方持つ</b>スキル</div></div>
-        </div>
         <div class="cond-list">${cards}</div>
         <button type="button" class="add-group" data-act="add">
             <i class="bi bi-plus-lg"></i> 条件を追加
@@ -581,8 +577,10 @@ export function createDetailFilter(container, { conditions: initial = [], onChan
             // 修正: 既存の 'side' — side変更時に tagCat もクリア
             case 'side': {
                 if (!cond) break;
-                cond.side = target.dataset.val;
+                const newSide = target.dataset.val;
+                cond.side = (cond.side === newSide) ? '' : newSide;
                 if (cond.side === 'self') cond.scope = 'self';
+                else if (!cond.side) cond.scope = 'all';
                 else if (cond.scope === 'self') cond.scope = 'all';
                 ALLY_TAGS.forEach(c => { cond[c] = ''; });
                 cond.specials = [];

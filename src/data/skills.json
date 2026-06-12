@@ -32727,7 +32727,7 @@
         "notes": [
           {
             "type": "boost",
-            "text": "味方HP80%以上時、7",
+            "text": "味方HP80%以上時、7減少",
             "label": "強化"
           }
         ],
@@ -35965,7 +35965,7 @@
         "notes": [
           {
             "type": "boost",
-            "text": "味方HP50%以下時、7",
+            "text": "味方HP50%以下時、7減少",
             "label": "強化"
           }
         ],
@@ -39976,31 +39976,33 @@
         "inherited_target": false
       },
       {
-        "display_value": "",
+        "display_value": "3",
         "formula": "",
-        "type": "unknown",
-        "value": "None",
-        "effect_class": "blank",
-        "target": "人間または炎属性の味方",
-        "target_branches": [
-          {
-            "side": "ally",
-            "scope": "all",
-            "camp": 1
-          },
-          {
-            "side": "ally",
-            "scope": "all",
-            "attr": 1
-          }
-        ],
+        "type": "ノーツ移動",
+        "value": {
+          "min": 3,
+          "max": 3
+        },
+        "effect_class": "note",
+        "target": "前から2番目の味方",
+        "target_branches": {
+          "side": "ally",
+          "scope": "single",
+          "pos": "front_2"
+        },
         "scale_refs": [],
         "duration": null,
-        "notes": [],
+        "notes": [
+          {
+            "type": "condition",
+            "text": "味方のHPがオーバーヒール状態(100%超)の時",
+            "label": "発動条件"
+          }
+        ],
         "raw": "味方のHPがオーバーヒール状態(100%超)の時、前から2番目の味方のノーツを3前方に移動",
         "children": [],
         "tags": [],
-        "inherited_target": true
+        "inherited_target": false
       },
       {
         "display_value": "前から2番目の味方と同じ位置に移動",
@@ -41448,11 +41450,13 @@
         "inherited_target": false
       },
       {
-        "display_value": "",
-        "formula": "",
-        "type": "unknown",
-        "value": "None",
-        "effect_class": "blank",
+        "display_value": "3",
+        "formula": "スタンゲージが0になるとスタン状態になる",
+        "type": "スタンゲージ減少",
+        "value": {
+          "amount": 3
+        },
+        "effect_class": "debuff",
         "target": "敵単体",
         "target_branches": [
           {
@@ -41462,7 +41466,13 @@
         ],
         "scale_refs": [],
         "duration": null,
-        "notes": [],
+        "notes": [
+          {
+            "type": "boost",
+            "text": "味方のHPがオーバーヒール状態(100%超)の時、減少量1増加",
+            "label": "強化"
+          }
+        ],
         "raw": "スタンゲージ3減少(味方のHPがオーバーヒール状態(100%超)の時、スタンゲージ減少量1増加)",
         "children": [],
         "tags": [],
@@ -42231,7 +42241,7 @@
         "notes": [
           {
             "type": "boost",
-            "text": "チャージ状態の時、5",
+            "text": "チャージ状態の時、5減少",
             "label": "強化"
           }
         ],
