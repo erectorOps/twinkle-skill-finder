@@ -768,7 +768,7 @@ async function init() {
             setFacetOpen(section, section === targetFacet);
         });
         requestAnimationFrame(() => {
-            const groupElement = button?.closest('.filter-group');
+            const groupElement = button?.closest('.filter-group') || button?.closest('.effect-section');
             const scrollElement = button?.closest('.dock-scroll');
             if (!groupElement || !scrollElement) return;
             scrollElement.scrollTo({
