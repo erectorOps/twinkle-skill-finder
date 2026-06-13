@@ -9,11 +9,12 @@ export function initSheetDrag(grip, panel, body) {
     let dragging = false;
     let startY = 0;
     let deltaY = 0;
+    let baseTransform = '';
 
     const onPointerMove = (event) => {
         if (!dragging) return;
         deltaY = Math.max(0, event.clientY - startY);
-        panel.style.transform = `translateY(${deltaY}px)`;
+        panel.style.transform = `${baseTransform} translateY(${deltaY}px)`.trim();
     };
 
     const onPointerUp = () => {
@@ -26,16 +27,17 @@ export function initSheetDrag(grip, panel, body) {
         panel.style.transition = RELEASE_TRANSITION;
 
         if (deltaY > CLOSE_THRESHOLD) {
-            panel.style.transform = `translateY(${panel.offsetHeight}px)`;
+            panel.style.transform = `${baseTransform} translateY(${panel.offsetHeight}px)`.trim();
             setTimeout(() => {
                 body.classList.remove('filter-open');
                 panel.style.transition = '';
                 panel.style.transform = '';
             }, RELEASE_DURATION);
         } else {
-            panel.style.transform = '';
+            panel.style.transform = baseTransform;
             setTimeout(() => {
                 panel.style.transition = '';
+                panel.style.transform = '';
             }, RELEASE_DURATION);
         }
 
@@ -46,6 +48,8 @@ export function initSheetDrag(grip, panel, body) {
         dragging = true;
         startY = event.clientY;
         deltaY = 0;
+        const computed = getComputedStyle(panel).transform;
+        baseTransform = computed === 'none' ? '' : computed;
         panel.style.transition = 'none';
         document.addEventListener('pointermove', onPointerMove);
         document.addEventListener('pointerup', onPointerUp);
