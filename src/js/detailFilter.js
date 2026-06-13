@@ -154,14 +154,20 @@ export const scaleRefSatisfies = (scaleRefs, ref) => {
     });
 };
 
+/* target_branches を持たない effect (children 由来など) は、対象指定を伴う条件のみ判定対象から外す */
+const hasBranchConstraint = (cond) =>
+    !!(cond.side || cond.position || ALL_TAG_KEYS.some(k => cond[k]) || (cond.specials && cond.specials.length));
+
 export const effectMatchesCond = (effectMeta, cond) => {
     if (cond.effectType) {
         const etDef = byId(effectTypes, cond.effectType);
         if (!etDef || effectMeta.type !== etDef.label) return false;
     }
 
-    const branches = effectMeta.target_branches || [];
-    if (!branches.some(b => branchSatisfies(b, cond))) return false;
+    if (hasBranchConstraint(cond)) {
+        const branches = effectMeta.target_branches || [];
+        if (!branches.some(b => branchSatisfies(b, cond))) return false;
+    }
 
     if (!scaleRefSatisfies(effectMeta.scale_refs, cond.ref)) return false;
 
@@ -203,13 +209,18 @@ export const matchesDetailConditions = (item, conditions) => {
     return true;
 };
 
-/* skill.effects (children含む完全構造) を DFS で辿り、ハイライト対象 idx の集合を返す */
+/* skill.effects (children を含む完全構造) を DFS で辿り、各 effect-box 単位でヒット判定する。
+   ヒットした effect-box 自身は matched、ヒットした子孫を持つ（自身は非ヒットの）祖先は
+   hasMatchChild に入れて「通り道」として区別する。 */
 export const getMatchedEffectKeys = (skill, { effectFilterMode, effectCategories, detailConditions } = {}) => {
     const matched = new Set();
+    const hasMatchChild = new Set();
     const liveConditions = (detailConditions || []).filter(isLive);
     let idx = 0;
 
+    /* 戻り値: このリスト (子孫含む) の中に一つでもヒットがあったか */
     const walk = (effects) => {
+        let anyMatch = false;
         for (const effect of (effects || [])) {
             const currentIdx = idx++;
             let isMatch = false;
@@ -229,12 +240,16 @@ export const getMatchedEffectKeys = (skill, { effectFilterMode, effectCategories
             }
 
             if (isMatch) matched.add(currentIdx);
-            walk(effect.children);
+
+            const childMatch = walk(effect.children);
+            if (!isMatch && childMatch) hasMatchChild.add(currentIdx);
+            if (isMatch || childMatch) anyMatch = true;
         }
+        return anyMatch;
     };
 
     walk(skill && skill.effects);
-    return matched;
+    return { matched, hasMatchChild };
 };
 
 /* ==================================================================

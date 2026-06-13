@@ -17,42 +17,13 @@ const renderFormula = (formula) =>
         )
         .replace(/\+/g, '<span class="formula-op">+</span>');
 
-/* getMatchedEffectKeys (detailFilter.js) と同じ DFS 順で idx を消費する */
-const advanceCounter = (effects, counter) => {
-    for (const effect of (effects || [])) {
-        counter.value++;
-        advanceCounter(effect.children, counter);
-    }
-};
-
-const renderSubEffectBox = (sub, counter) => {
+/* getMatchedEffectKeys (detailFilter.js) と同じ DFS 順 (親 → 子 → 孫 ...) で idx を割り振る */
+const renderEffectBox = (effect, counter, isSub = false) => {
     const idx = counter.value++;
-    const html = `
-        <div class="effect-box sub-effect ${escapeHtml(sub.effect_class || '')}" data-idx="${idx}">
-            <div class="effect-top">
-                <span class="effect-name">
-                    ${escapeHtml(sub.type || '')}
-                    ${sub.duration ? `<span class="effect-ct">${escapeHtml(sub.duration.ct)}CT</span>` : ''}
-                </span>
-                ${sub.target ? `<span class="effect-target">${escapeHtml(sub.target)}</span>` : ''}
-            </div>
-            ${sub.display_value ? `<div class="effect-value">${escapeHtml(sub.display_value)}</div>` : ''}
-            ${sub.formula ? `<div class="effect-formula">└ ${renderFormula(sub.formula)}</div>` : ''}
-            ${(sub.notes && sub.notes.length) ? sub.notes.map(note => `
-            <div class="effect-note ${escapeHtml(note.type || '')}">
-                <span class="tag">${escapeHtml(note.label || '')}</span>
-                ${escapeHtml(note.text || '')}
-            </div>
-            `).join('') : ''}
-        </div>`;
-    advanceCounter(sub.children, counter);
-    return html;
-};
-
-const renderEffectBox = (effect, counter, extraClass = '') => {
-    const idx = counter.value++;
+    const classes = ['effect-box', isSub ? 'sub-effect' : '', escapeHtml(effect.effect_class || '')]
+        .filter(Boolean).join(' ');
     return `
-<div class="effect-box${extraClass ? ' ' + extraClass : ''} ${escapeHtml(effect.effect_class || '')}" data-idx="${idx}">
+<div class="${classes}" data-idx="${idx}">
     <div class="effect-top">
         <span class="effect-name">
             ${escapeHtml(effect.type || '')}
@@ -64,7 +35,7 @@ const renderEffectBox = (effect, counter, extraClass = '') => {
     ${effect.formula ? `<div class="effect-formula">└ ${renderFormula(effect.formula)}</div>` : ''}
     ${(effect.children && effect.children.length) ? `
     <div class="effect-children">
-        ${effect.children.map(sub => renderSubEffectBox(sub, counter)).join('')}
+        ${effect.children.map(child => renderEffectBox(child, counter, true)).join('')}
     </div>
     ` : ''}
     ${(effect.notes && effect.notes.length) ? effect.notes.map(note => `

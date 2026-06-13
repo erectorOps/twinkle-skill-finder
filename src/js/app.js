@@ -480,13 +480,15 @@ async function init() {
     const applyEffectHighlight = (cardEl, item) => {
         const skill = skillDataMap.get(String(item.skill_id));
         if (!skill) return;
-        const matchedKeys = getMatchedEffectKeys(skill, {
+        const { matched, hasMatchChild } = getMatchedEffectKeys(skill, {
             effectFilterMode,
             effectCategories: getActiveValues('effect_categories'),
             detailConditions
         });
         cardEl.querySelectorAll('.effect-box[data-idx]').forEach(box => {
-            box.classList.toggle('matched', matchedKeys.has(Number(box.dataset.idx)));
+            const idx = Number(box.dataset.idx);
+            box.classList.toggle('is-match', matched.has(idx));
+            box.classList.toggle('has-match-child', hasMatchChild.has(idx));
         });
     };
 
@@ -818,56 +820,85 @@ async function init() {
             .replace(/\s+/g, ' ')
             .trim();
 
-    const collectComparableEffects = (skillId) => {
-        const card = cardMap.get(skillId);
-        return [...card.querySelectorAll('.effect-box')]
-            .filter(box =>
-                !box.classList.contains('skill-raw')
-                && !box.classList.contains('accessory-raw')
-                && !box.classList.contains('accessory')
-            )
-            .map(box => {
-                const nameEl =
-                    box.querySelector(':scope > .effect-top .effect-name');
-                const name = nameEl?.textContent;
+    /* .effect-box を effect-children 経由で再帰的に辿り、比較表の行情報 (depth/isLast込み) を作る。
+       skill-raw・accessory-raw・accessory (ラップ用の箱) 自身は行にせず、子を同じ depth で辿る。 */
+    const buildCompareRows = (boxes, depth = 0) => {
+        const rows = [];
+        boxes.forEach((box, i) => {
+            const isLast = i === boxes.length - 1;
+            const children = [...box.querySelectorAll(':scope > .effect-children > .effect-box')];
+
+            if (
+                box.classList.contains('skill-raw')
+                || box.classList.contains('accessory-raw')
+                || box.classList.contains('accessory')
+            ) {
+                rows.push(...buildCompareRows(children, depth));
+                return;
+            }
+
+            const nameEl = box.querySelector(':scope > .effect-top .effect-name');
+            const name = nameEl?.textContent;
+            if (name) {
                 const value =
                     box.querySelector(':scope > .effect-value')
                         ?.textContent
                         ?.replace(/\s+/g, ' ')
                         ?.trim();
-                return name
-                    ? [shortenCompareLabel(name), value || 'あり', shortenCompareLabel(nameEl.innerHTML)]
-                    : null;
-            })
-            .filter(Boolean);
+                const prefix = depth === 0 ? '' : (isLast ? '└ ' : '├ ');
+                rows.push({
+                    label: shortenCompareLabel(name),
+                    value: value || 'あり',
+                    labelHtml: shortenCompareLabel(nameEl.innerHTML),
+                    depth,
+                    prefix,
+                });
+            }
+
+            if (children.length) rows.push(...buildCompareRows(children, depth + 1));
+        });
+        return rows;
+    };
+
+    const collectComparableEffects = (skillId) => {
+        const card = cardMap.get(skillId);
+        const rootBoxes = [...card.querySelectorAll(':scope > .effect-list > .effect-box')];
+        return buildCompareRows(rootBoxes, 0);
     };
 
     const renderCompareTable = () => {
         const skillIds = getSelectedSkillIds();
         const rowLabels = new Set();
         const rowLabelHtml = new Map();
+        const rowLabelDepth = new Map();
+        const rowLabelPrefix = new Map();
         const effectMap = new Map();
         const columns = skillIds.map(skillId => {
             const item = itemMap.get(skillId);
-            const effects = collectComparableEffects(skillId);
-            effectMap.set(skillId, new Map(effects));
-            effects.forEach(([label, , labelHtml]) => {
-                rowLabels.add(label);
-                if (!rowLabelHtml.has(label)) rowLabelHtml.set(label, labelHtml);
+            const rows = collectComparableEffects(skillId);
+            effectMap.set(skillId, new Map(rows.map(row => [row.label, row.value])));
+            rows.forEach(row => {
+                rowLabels.add(row.label);
+                if (!rowLabelHtml.has(row.label)) {
+                    rowLabelHtml.set(row.label, row.labelHtml);
+                    rowLabelDepth.set(row.label, row.depth);
+                    rowLabelPrefix.set(row.label, row.prefix);
+                }
             });
             return { skillId, item };
         });
 
         const bodyRows =
             [...rowLabels].map(label => {
+                const depth = rowLabelDepth.get(label);
                 const cells = columns.map(column => {
                     const value =
                         effectMap.get(column.skillId)?.get(label) || "";
                     return { value: value || '-', hasValue: Boolean(value) };
                 });
                 return `
-                    <tr>
-                        <th>${rowLabelHtml.get(label)}</th>
+                    <tr data-depth="${depth}">
+                        <th>${rowLabelPrefix.get(label)}${rowLabelHtml.get(label)}</th>
                         ${cells.map(cell =>
                             `<td class="${cell.hasValue ? 'has-value' : 'empty-value'}">${cell.value}</td>`
                         ).join('')}
@@ -966,7 +997,7 @@ async function init() {
         String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
     const keywordChip = document.createElement('button');
     keywordChip.id = 'keyword-chip';
-    keywordChip.className = 'filter-chip';
+    keywordChip.className = 'filter-chip active';
     keywordChip.type = 'button';
     keywordChip.hidden = true;
     filterChipRow.prepend(keywordChip);
