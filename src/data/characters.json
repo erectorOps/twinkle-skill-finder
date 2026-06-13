@@ -5119,7 +5119,7 @@
     "unit_id": 1048003,
     "character_name": "マハムート《超竜》",
     "character_name_kana": "まはむーと",
-    "unit_name": "[畏怖たる寵妃] マハムート《超竜》",
+    "unit_name": "畏怖たる寵妃",
     "rarity": 3,
     "attr_type": {
       "id": "1",
@@ -5197,7 +5197,7 @@
     "unit_id": 1049002,
     "character_name": "紅明",
     "character_name_kana": "こうめい",
-    "unit_name": "[元祖・三太九郎] 紅明",
+    "unit_name": "元祖・三太九郎",
     "rarity": 2,
     "attr_type": {
       "id": "1",
@@ -5599,7 +5599,7 @@
     "unit_id": 1054002,
     "character_name": "ユーリス",
     "character_name_kana": "ゆーりす",
-    "unit_name": "[カードプリンス] ユーリス",
+    "unit_name": "カードプリンス",
     "rarity": 2,
     "attr_type": {
       "id": "3",
@@ -6742,7 +6742,7 @@
     "unit_id": 1067001,
     "character_name": "聖沙",
     "character_name_kana": "みさ",
-    "unit_name": "[嵐を翔る射手] 聖沙",
+    "unit_name": "嵐を翔る射手",
     "rarity": 3,
     "attr_type": {
       "id": "3",
@@ -6781,7 +6781,7 @@
     "unit_id": 1068001,
     "character_name": "リア",
     "character_name_kana": "りあ",
-    "unit_name": "[騎士皇女] リア",
+    "unit_name": "騎士皇女",
     "rarity": 3,
     "attr_type": {
       "id": "4",
@@ -7259,7 +7259,7 @@
     "unit_id": 1076001,
     "character_name": "モナカ",
     "character_name_kana": "もなか",
-    "unit_name": "[清澄の雛騎士] モナカ",
+    "unit_name": "清澄の雛騎士",
     "rarity": 2,
     "attr_type": {
       "id": "2",
@@ -7337,7 +7337,7 @@
     "unit_id": 1077002,
     "character_name": "蘭美",
     "character_name_kana": "ラヒ",
-    "unit_name": "[バニーサンタ] 蘭美",
+    "unit_name": "バニーサンタ",
     "rarity": 3,
     "attr_type": {
       "id": "3",
@@ -8958,7 +8958,7 @@
     "unit_id": 1106001,
     "character_name": "ナナカ",
     "character_name_kana": "ななか",
-    "unit_name": "[ソードマスター] ナナカ",
+    "unit_name": "ソードマスター",
     "rarity": 3,
     "attr_type": {
       "id": "1",
@@ -9006,7 +9006,7 @@
     "unit_id": 1107001,
     "character_name": "ロロット",
     "character_name_kana": "ろろっと",
-    "unit_name": "[碧水のミューズ] ロロット",
+    "unit_name": "碧水のミューズ",
     "rarity": 3,
     "attr_type": {
       "id": "2",
@@ -9049,7 +9049,7 @@
     "unit_id": 1109001,
     "character_name": "アルテ",
     "character_name_kana": "あるて",
-    "unit_name": "[天才美少女藝術家] アルテ",
+    "unit_name": "天才美少女藝術家",
     "rarity": 3,
     "attr_type": {
       "id": "4",
@@ -9092,7 +9092,7 @@
     "unit_id": 1110001,
     "character_name": "プトラ",
     "character_name_kana": "ぷとら",
-    "unit_name": "[蒼海の国の元気娘] プトラ",
+    "unit_name": "蒼海の国の元気娘",
     "rarity": 3,
     "attr_type": {
       "id": "2",
@@ -9664,7 +9664,7 @@
     "unit_id": 1125001,
     "character_name": "アポロ(大人)",
     "character_name_kana": "あぽろ",
-    "unit_name": "[グロウンヒーロー] アポロ(大人)",
+    "unit_name": "グロウンヒーロー",
     "rarity": 3,
     "attr_type": {
       "id": "5",

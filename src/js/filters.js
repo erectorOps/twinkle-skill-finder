@@ -167,8 +167,8 @@ export function renderFilterButtons(characters) {
         </div>
     </section>
     <section class="filter-group">
-        <div class="filter-title">粒度</div>
-        <div class="seg" role="group" aria-label="表示粒度">
+        <div class="filter-title">絞り込み単位<span class="hint">結果に所有スキルを全て含めるか</span></div>
+        <div class="seg" role="group" aria-label="絞り込み単位">
             <button
                 class="active"
                 data-character-scope-value="skill"

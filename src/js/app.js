@@ -921,6 +921,7 @@ async function init() {
                 </thead>
                 <tbody>${bodyRows}</tbody>
             </table>
+            <div class="compare-footer compare-note"><i class="bi bi-info-circle"></i> アクセサリーのEXスキル強化効果・スキルの追加条件による強化効果は含みません</div>
         `;
 
         compareTableHost.querySelectorAll('thead th[data-skill-id]').forEach(th => {
@@ -983,6 +984,8 @@ async function init() {
     };
 
     const closeDetailSheet = () => {
+        detailCardHost.scrollTop = 0;
+        detailCardHost.scrollLeft = 0;
         detailSheet.hidden = true;
         detailCardHost.innerHTML = "";
         if (compareSheet.hidden) {

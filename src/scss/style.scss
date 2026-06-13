@@ -1813,6 +1813,10 @@ body.compare-mode {
   position: fixed;
   inset: 0;
   z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 5vh 3vw;
 }
 
 .compare-sheet .sheet-backdrop,
@@ -1825,7 +1829,12 @@ body.compare-mode {
 
 .compare-panel,
 .detail-panel {
-  position: absolute;
+  position: relative;
+  z-index: 1;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
   display: flex;
   flex-direction: column;
   min-width: 0;
@@ -1836,16 +1845,7 @@ body.compare-mode {
   box-shadow: 0 20px 50px rgba(0,0,0,.45);
 }
 
-.compare-panel {
-  inset: 5vh 3vw;
-}
-
 .detail-panel {
-  top: 5vh;
-  bottom: 5vh;
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(560px, 94vw);
 
   @media (min-width: 1200px) {
     /* detail-view: 粒度キャラ単位時のskill-card 2列表示 */
@@ -1931,8 +1931,34 @@ body.compare-mode {
 }
 
 .compare-table-host {
+  //flex: 1;
   min-height: 0;
+  min-width: 0;
   overflow: auto;
+}
+
+.compare-header, .compare-footer {
+  flex-shrink: 0;
+}
+
+.compare-footer {
+  padding: 7px 14px;
+  border-top: 1px solid var(--border);
+  background: var(--panel);
+}
+
+.compare-note {
+  font-size: .93em;
+  color: var(--sub);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  i {
+    font-size: 1.1em;
+    opacity: .7;
+    flex-shrink: 0;
+  }
 }
 
 .compare-table {
@@ -1947,7 +1973,6 @@ body.compare-mode {
     min-width: 136px;
     max-width: 176px;
     padding: 10px;
-    border-right: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
     vertical-align: top;
     overflow-wrap: anywhere;
@@ -1966,14 +1991,10 @@ body.compare-mode {
   }
 
   tr[data-depth="0"] {
-    background: var(--panel-2);
-
-    th, td {
-      border-top: 1px solid var(--border);
-    }
+    background: var(--panel);
 
     th:first-child {
-      background: var(--panel-2);
+      background: var(--panel);
     }
   }
 
@@ -1991,9 +2012,9 @@ body.compare-mode {
     background: color-mix(in srgb, var(--panel-3) 60%, var(--bg));
 
     th:first-child {
+      background: color-mix(in srgb, var(--panel-3) 60%, var(--bg));
       border-left: 10px solid #000;
       padding-left: 0.5em;
-      background: color-mix(in srgb, var(--panel-3) 60%, var(--bg));
     }
   }
 
@@ -2012,7 +2033,6 @@ body.compare-mode {
     line-height: 1.35;
     font-weight: 300;
     border-right: none;
-    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, .2);
 
     .effect-ct {
       display: inline-block;
@@ -2043,6 +2063,10 @@ body.compare-mode {
 
   thead th:first-child {
     z-index: 3;
+  }
+
+  th:first-child {
+    vertical-align: middle;
   }
 
   thead th .skill-card {
