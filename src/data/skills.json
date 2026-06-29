@@ -9836,7 +9836,18 @@
             "scope": "self"
           }
         ],
-        "scale_refs": [],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "role": 5
+              }
+            ]
+          }
+        ],
         "duration": null,
         "notes": [
           {
@@ -25116,7 +25127,18 @@
             "scope": "self"
           }
         ],
-        "scale_refs": [],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 2
+              }
+            ]
+          }
+        ],
         "duration": null,
         "notes": [
           {
@@ -29057,7 +29079,18 @@
           "scope": "single",
           "pos": "front_2"
         },
-        "scale_refs": [],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 2
+              }
+            ]
+          }
+        ],
         "duration": null,
         "notes": [
           {
@@ -34419,7 +34452,21 @@
             "scope": "self"
           }
         ],
-        "scale_refs": [],
+        "scale_refs": [
+          {
+            "src": "ex_use_count",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "equip_type": 1,
+                "specials": [
+                  "with_self"
+                ]
+              }
+            ]
+          }
+        ],
         "duration": null,
         "notes": [
           {
@@ -45726,7 +45773,8 @@
                 "side": "ally",
                 "scope": "all",
                 "specials": [
-                  "unison"
+                  "unison",
+                  "with_self"
                 ]
               }
             ]
@@ -47173,7 +47221,18 @@
           "scope": "single",
           "pos": "front_2"
         },
-        "scale_refs": [],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 2
+              }
+            ]
+          }
+        ],
         "duration": null,
         "notes": [
           {
@@ -47996,7 +48055,21 @@
             "scope": "self"
           }
         ],
-        "scale_refs": [],
+        "scale_refs": [
+          {
+            "src": "ex_use_count",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "affiliation": 3,
+                "specials": [
+                  "with_self"
+                ]
+              }
+            ]
+          }
+        ],
         "duration": null,
         "notes": [
           {
@@ -48185,7 +48258,21 @@
             "scope": "self"
           }
         ],
-        "scale_refs": [],
+        "scale_refs": [
+          {
+            "src": "ex_use_count",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "affiliation": 3,
+                "specials": [
+                  "with_self"
+                ]
+              }
+            ]
+          }
+        ],
         "duration": null,
         "notes": [
           {
@@ -54216,7 +54303,18 @@
             "specials": []
           }
         ],
-        "scale_refs": [],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 5
+              }
+            ]
+          }
+        ],
         "duration": null,
         "notes": [
           {
@@ -56246,7 +56344,8 @@
                 "side": "ally",
                 "scope": "all",
                 "specials": [
-                  "unison"
+                  "unison",
+                  "with_self"
                 ]
               }
             ]
@@ -56407,7 +56506,8 @@
                 "side": "ally",
                 "scope": "all",
                 "specials": [
-                  "unison"
+                  "unison",
+                  "with_self"
                 ]
               }
             ]
@@ -61221,6 +61321,685 @@
         "children": [],
         "tags": [],
         "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1124001,
+    "skill_id": 11240011,
+    "skill_type": "EX1",
+    "name": "シャクラ・クローダ",
+    "icon_id": 101,
+    "cost_ex_gauge": 100,
+    "skill_detail": "敵全体に15％×5回のダメージ（輪廻LV1の時は攻撃回数2回増加、輪廻LV2の時は攻撃回数5回増加）/自身のEX上昇を60アップ（25CT）/神族または雷属性の味方のノーツを5～5前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない/輪廻LV1以上の時、神族または雷属性の味方の行動CTを10％短縮（20CT） ※2つの条件を満たした場合でも効果は重複しない",
+    "effects": [
+      {
+        "display_value": "15%×5回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 15,
+          "hit": 5
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "輪廻LV1の時は攻撃回数2回増加",
+            "label": "強化"
+          },
+          {
+            "type": "boost",
+            "text": "輪廻LV2の時は攻撃回数5回増加",
+            "label": "強化"
+          }
+        ],
+        "raw": "敵全体に15%×5回のダメージ(輪廻LV1の時は攻撃回数2回増加、輪廻LV2の時は攻撃回数5回増加)",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "60",
+        "formula": "",
+        "type": "EX上昇アップ",
+        "value": {
+          "amount": 60
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 25
+        },
+        "notes": [],
+        "raw": "自身のEX上昇を60アップ(25CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "5",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 5,
+          "max": 5
+        },
+        "effect_class": "note",
+        "target": "神族または雷属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 2
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 3
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でもノーツ移動効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "神族または雷属性の味方のノーツを5～5前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "10%",
+        "formula": "",
+        "type": "行動CT短縮",
+        "value": {
+          "rate": 10
+        },
+        "effect_class": "buff",
+        "target": "神族または雷属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 2
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 3
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "輪廻LV1以上の時",
+            "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "輪廻LV1以上の時、神族または雷属性の味方の行動CTを10%短縮(20CT) ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1124001,
+    "skill_id": 11240012,
+    "skill_type": "EX2",
+    "name": "ヴァーユヴァータ・ニルティヤ",
+    "icon_id": 101,
+    "cost_ex_gauge": 300,
+    "skill_detail": "敵全体に30％×8回のダメージ/自身に相手スタン時のダメージ倍率を50％加算（1CT）/神族または雷属性の味方のATKを神族または雷属性の味方の数×60％アップ（30CT）/ノーツを10～10前方に移動 ※2つの条件を満たした場合でも効果は重複しない/このEXスキルのEX消費量をラッシュ数×1減少（EX消費量は150未満にはならない）\n※このEXスキルは他星騎士から付与されたEX消費量減少の効果を受けない\n輪廻LVに応じて以下の効果を適用する\n・LV1以上：さらに神族または雷属性の味方のATKを神族または雷属性の味方の数×60％アップ（30CT） ※2つの条件を満たした場合でも効果は重複しない\n・LV2以上：敵全体の被ダメージを神族または雷属性の味方の数×12％増加（20CT） ※2つの条件を満たした場合でも効果は重複しない\n・LV3：このEXスキルによる自身の相手スタン時のダメージ倍率を80％に強化（1CT）",
+    "effects": [
+      {
+        "display_value": "30%×8回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 30,
+          "hit": 8
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [],
+        "raw": "敵全体に30%×8回のダメージ",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "50%",
+        "formula": "",
+        "type": "相手スタン時ダメージ倍率アップ",
+        "value": {
+          "rate": 50
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 1
+        },
+        "notes": [],
+        "raw": "自身に相手スタン時のダメージ倍率を50%加算(1CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "60%～300%",
+        "formula": "神族または雷属性の味方の数×60%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 60
+        },
+        "effect_class": "buff",
+        "target": "神族または雷属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 2
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 3
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 2
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 3
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "神族または雷属性の味方のATKを神族または雷属性の味方の数×60%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "10",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 10,
+          "max": 10
+        },
+        "effect_class": "note",
+        "target": "神族または雷属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 2
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 3
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "ノーツを10～10前方に移動 ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "1～150",
+        "formula": "ラッシュ数×1",
+        "type": "EX消費量減少",
+        "value": {
+          "amount": 1
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "rush",
+            "branches": []
+          }
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "EX消費量は150未満にはならない",
+            "label": "特性"
+          },
+          {
+            "type": "property",
+            "text": "このEXスキルは他星騎士から付与されたEX消費量減少の効果を受けない",
+            "label": "特性"
+          }
+        ],
+        "raw": "このEXスキルのEX消費量をラッシュ数×1減少(EX消費量は150未満にはならない)\n※このEXスキルは他星騎士から付与されたEX消費量減少の効果を受けない\n輪廻LVに応じて以下の効果を適用する\n・LV1以上：さらに神族または雷属性の味方のATKを神族または雷属性の味方の数×60%アップ(30CT) ※2つの条件を満たした場合でも効果は重複しない\n・LV2以上：敵全体の被ダメージを神族または雷属性の味方の数×12%増加(20CT) ※2つの条件を満たした場合でも効果は重複しない\n・LV3：このEXスキルによる自身の相手スタン時のダメージ倍率を80%に強化(1CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "60%～300%",
+        "formula": "神族または雷属性の味方の数×60%",
+        "type": "ATKアップ",
+        "value": {},
+        "effect_class": "buff",
+        "target": "神族または雷属性の味方",
+        "duration": {
+          "ct": 30
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "輪廻LV1以上の時",
+            "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "tags": [
+          ""
+        ]
+      },
+      {
+        "display_value": "12%～60%",
+        "formula": "神族または雷属性の味方の数×12%",
+        "type": "被ダメージアップ",
+        "value": {},
+        "effect_class": "debuff",
+        "target": "敵全体",
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "輪廻LV2以上の時",
+            "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "tags": [
+          ""
+        ]
+      },
+      {
+        "display_value": "80%",
+        "formula": "",
+        "type": "相手スタン時ダメージ倍率アップを強化",
+        "value": {},
+        "effect_class": "buff",
+        "target": "自身",
+        "duration": {
+          "ct": 1
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "輪廻LV3の時",
+            "label": "発動条件"
+          }
+        ],
+        "tags": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "unit_id": 1124001,
+    "skill_id": "11240012_plus",
+    "skill_type": "EX2+",
+    "name": "サンサーラ・シャクティ",
+    "icon_id": 101,
+    "cost_ex_gauge": 300,
+    "skill_detail": "敵全体に40％×10回のダメージ/自身に相手スタン時のダメージ倍率を50％加算（1CT）/神族または雷属性の味方のATKを神族または雷属性の味方の数×60％アップ（30CT）/ノーツを10～10前方に移動 ※2つの条件を満たした場合でも効果は重複しない/このEXスキルのEX消費量をラッシュ数×1減少（EX消費量は150未満にはならない）\n※このEXスキルは他星騎士から付与されたEX消費量減少の効果を受けない\n輪廻LVに応じて以下の効果を適用する\n・LV1以上：さらに神族または雷属性の味方のATKを神族または雷属性の味方の数×60％アップ（30CT） ※2つの条件を満たした場合でも効果は重複しない\n・LV2以上：敵全体の被ダメージを神族または雷属性の味方の数×16％増加（20CT） ※2つの条件を満たした場合でも効果は重複しない\n・LV3：このEXスキルによる自身の相手スタン時のダメージ倍率を80％に強化（1CT）",
+    "effects": [
+      {
+        "display_value": "40%×10回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 40,
+          "hit": 10
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [],
+        "raw": "敵全体に40%×10回のダメージ",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "50%",
+        "formula": "",
+        "type": "相手スタン時ダメージ倍率アップ",
+        "value": {
+          "rate": 50
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 1
+        },
+        "notes": [],
+        "raw": "自身に相手スタン時のダメージ倍率を50%加算(1CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "60%～300%",
+        "formula": "神族または雷属性の味方の数×60%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 60
+        },
+        "effect_class": "buff",
+        "target": "神族または雷属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 2
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 3
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 2
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 3
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "神族または雷属性の味方のATKを神族または雷属性の味方の数×60%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "10",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 10,
+          "max": 10
+        },
+        "effect_class": "note",
+        "target": "神族または雷属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 2
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 3
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "ノーツを10～10前方に移動 ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "1～150",
+        "formula": "ラッシュ数×1",
+        "type": "EX消費量減少",
+        "value": {
+          "amount": 1
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "rush",
+            "branches": []
+          }
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "EX消費量は150未満にはならない",
+            "label": "特性"
+          },
+          {
+            "type": "property",
+            "text": "このEXスキルは他星騎士から付与されたEX消費量減少の効果を受けない",
+            "label": "特性"
+          }
+        ],
+        "raw": "このEXスキルのEX消費量をラッシュ数×1減少(EX消費量は150未満にはならない)\n※このEXスキルは他星騎士から付与されたEX消費量減少の効果を受けない\n輪廻LVに応じて以下の効果を適用する\n・LV1以上：さらに神族または雷属性の味方のATKを神族または雷属性の味方の数×60%アップ(30CT) ※2つの条件を満たした場合でも効果は重複しない\n・LV2以上：敵全体の被ダメージを神族または雷属性の味方の数×16%増加(20CT) ※2つの条件を満たした場合でも効果は重複しない\n・LV3：このEXスキルによる自身の相手スタン時のダメージ倍率を80%に強化(1CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "60%～300%",
+        "formula": "神族または雷属性の味方の数×60%",
+        "type": "ATKアップ",
+        "value": {},
+        "effect_class": "buff",
+        "target": "神族または雷属性の味方",
+        "duration": {
+          "ct": 30
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "輪廻LV1以上の時",
+            "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "tags": [
+          ""
+        ]
+      },
+      {
+        "display_value": "16%～80%",
+        "formula": "神族または雷属性の味方の数×16%",
+        "type": "被ダメージアップ",
+        "value": {},
+        "effect_class": "debuff",
+        "target": "敵全体",
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "輪廻LV2以上の時",
+            "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "tags": [
+          ""
+        ]
+      },
+      {
+        "display_value": "80%",
+        "formula": "",
+        "type": "相手スタン時ダメージ倍率アップを強化",
+        "value": {},
+        "effect_class": "buff",
+        "target": "自身",
+        "duration": {
+          "ct": 1
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "輪廻LV3の時",
+            "label": "発動条件"
+          }
+        ],
+        "tags": [
+          ""
+        ]
       }
     ]
   },
@@ -67639,7 +68418,21 @@
             "scope": "self"
           }
         ],
-        "scale_refs": [],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "equip_type": 1,
+                "specials": [
+                  "with_self"
+                ]
+              }
+            ]
+          }
+        ],
         "duration": null,
         "notes": [
           {
@@ -67845,7 +68638,21 @@
             "scope": "self"
           }
         ],
-        "scale_refs": [],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "equip_type": 1,
+                "specials": [
+                  "with_self"
+                ]
+              }
+            ]
+          }
+        ],
         "duration": null,
         "notes": [
           {

@@ -27354,6 +27354,306 @@
   },
   {
     "source": "EquipDetail",
+    "accessory_name": "ラクシャの頭飾り",
+    "equip_id": 3300161,
+    "illust_id": "equip_3300161",
+    "rarity": 3,
+    "unit_id": 1124001,
+    "character_id": 124,
+    "character_name": "ラクシャ",
+    "unit_name": "円環の守護天使",
+    "exclusive_unit_name": "[円環の守護天使]ラクシャ",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "2",
+      "label": "スピード",
+      "icon": "type_2.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": 846,
+      "ex": null,
+      "ex_up": null,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 1,
+        "parameter_value": 846
+      }
+    ],
+    "skill_ids": {
+      "EX1": 11240011,
+      "EX2": 11240012,
+      "EX2+": "11240012_plus"
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 11240011,
+        "text": "ダメージ7.5％アップ",
+        "effects_text": [
+          "ダメージ7.5％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+7.5%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ7.5%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 11240012,
+        "text": "のダメージ15％アップ/神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ/さらに神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ",
+        "effects_text": [
+          "のダメージ15％アップ",
+          "神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ",
+          "さらに神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+15%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "のダメージ15%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+15%～75%",
+            "formula": "神族または雷属性の味方の数×15%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "神族または雷属性の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+15%～75%",
+            "formula": "神族または雷属性の味方の数×15%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "神族または雷属性の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "さらに神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "COMMON",
+        "skill_id": null,
+        "text": "EX2+ 「サンサーラ・シャクティ」のダメージ20％アップ/神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ/さらに神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ",
+        "effects_text": [
+          "EX2+ 「サンサーラ・シャクティ」のダメージ20％アップ",
+          "神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ",
+          "さらに神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+20%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "EX2+ 「サンサーラ・シャクティ」のダメージ20%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+15%～75%",
+            "formula": "神族または雷属性の味方の数×15%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "神族または雷属性の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+15%～75%",
+            "formula": "神族または雷属性の味方の数×15%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "神族または雷属性の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "さらに神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「シャクラ・クローダ」のダメージ7.5％アップ/\nEX2「ヴァーユヴァータ・ニルティヤ」 のダメージ15％アップ/神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ/さらに神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ/\nEX2+ 「サンサーラ・シャクティ」のダメージ20％アップ/神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ/さらに神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ",
+    "ability_full": "EX1「シャクラ・クローダ」のダメージ7.5％アップ/\nEX2「ヴァーユヴァータ・ニルティヤ」 のダメージ15％アップ/神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ/さらに神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ/\nEX2+ 「サンサーラ・シャクティ」のダメージ20％アップ/神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ/さらに神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 11240011,
+        "text": "ダメージ7.5％アップ",
+        "effects_text": [
+          "ダメージ7.5％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+7.5%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ7.5%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 11240012,
+        "text": "のダメージ15％アップ/神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ/さらに神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ",
+        "effects_text": [
+          "のダメージ15％アップ",
+          "神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ",
+          "さらに神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+15%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "のダメージ15%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+15%～75%",
+            "formula": "神族または雷属性の味方の数×15%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "神族または雷属性の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+15%～75%",
+            "formula": "神族または雷属性の味方の数×15%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "神族または雷属性の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "さらに神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "COMMON",
+        "skill_id": null,
+        "text": "EX2+ 「サンサーラ・シャクティ」のダメージ20％アップ/神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ/さらに神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ",
+        "effects_text": [
+          "EX2+ 「サンサーラ・シャクティ」のダメージ20％アップ",
+          "神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ",
+          "さらに神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+20%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "EX2+ 「サンサーラ・シャクティ」のダメージ20%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+15%～75%",
+            "formula": "神族または雷属性の味方の数×15%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "神族または雷属性の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+15%～75%",
+            "formula": "神族または雷属性の味方の数×15%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "神族または雷属性の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "さらに神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
     "accessory_name": "アルテの髪飾り",
     "equip_id": 3300162,
     "illust_id": "equip_3300162",

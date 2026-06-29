@@ -9661,6 +9661,56 @@
     "specific_gauge_data": []
   },
   {
+    "unit_id": 1124001,
+    "character_name": "ラクシャ",
+    "character_name_kana": "ラクシャ",
+    "unit_name": "円環の守護天使",
+    "rarity": 3,
+    "attr_type": {
+      "id": "3",
+      "label": "雷",
+      "icon": "attribute_03.png"
+    },
+    "role": {
+      "id": "2",
+      "label": "スピード",
+      "icon": "type_2.png"
+    },
+    "camps": [
+      {
+        "id": 2,
+        "label": "神族",
+        "icon": "race_4.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 3,
+        "label": "守護天使",
+        "icon": "affiliation_03.png"
+      },
+      {
+        "id": 2,
+        "label": "新星学園",
+        "icon": "affiliation_01.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "2",
+        "label": "斬撃",
+        "icon": "icon_equipment_01_02.png"
+      }
+    ],
+    "specific_gauge_data": {
+      "specific_name": "円環状態",
+      "specific_detail": "◆通常状態\n通常状態中、EXスキル1を使用すると円環ゲージが「1」、EXスキル2を使用すると円環ゲージが「3」溜まる。\n円環ゲージが「3」溜まると「円環状態」に移行する。\n\n◆円環状態\n円環状態に移行直後、輪廻LVが1上昇（最大3）\n円環状態中、「EXスキル2」が「EXスキル2+」に変化する。\nEXスキル2+を使用すると円環状態が解除され、「通常状態」に戻る。",
+      "icon_id": 53,
+      "is_unlock": 1,
+      "is_strengthen": 0
+    }
+  },
+  {
     "unit_id": 1125001,
     "character_name": "アポロ(大人)",
     "character_name_kana": "あぽろ",
