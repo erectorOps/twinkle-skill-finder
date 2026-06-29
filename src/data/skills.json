@@ -1,6 +1,9 @@
 [
   {
     "unit_id": 1001001,
+    "game_unit_id": 1001001,
+    "unit_illust_id": 1001001,
+    "is_awake_unit": 0,
     "skill_id": 10010011,
     "skill_type": "EX1",
     "name": "ヘリオスブレッシング",
@@ -114,6 +117,9 @@
   },
   {
     "unit_id": 1001001,
+    "game_unit_id": 1001001,
+    "unit_illust_id": 1001001,
+    "is_awake_unit": 0,
     "skill_id": 10010012,
     "skill_type": "EX2",
     "name": "ヒューペリオンイレイザー",
@@ -218,6 +224,9 @@
   },
   {
     "unit_id": 1001002,
+    "game_unit_id": 1001002,
+    "unit_illust_id": 1001002,
+    "is_awake_unit": 0,
     "skill_id": 10010021,
     "skill_type": "EX1",
     "name": "グロリアスサマー",
@@ -282,6 +291,9 @@
   },
   {
     "unit_id": 1001002,
+    "game_unit_id": 1001002,
+    "unit_illust_id": 1001002,
+    "is_awake_unit": 0,
     "skill_id": 10010022,
     "skill_type": "EX2",
     "name": "サンシャインバースト",
@@ -346,6 +358,9 @@
   },
   {
     "unit_id": 1001003,
+    "game_unit_id": 1001003,
+    "unit_illust_id": 1001003,
+    "is_awake_unit": 0,
     "skill_id": 10010031,
     "skill_type": "EX1",
     "name": "ハピネスセレブレイション",
@@ -437,6 +452,9 @@
   },
   {
     "unit_id": 1001003,
+    "game_unit_id": 1001003,
+    "unit_illust_id": 1001003,
+    "is_awake_unit": 0,
     "skill_id": 10010032,
     "skill_type": "EX2",
     "name": "サンバーストセレモニー",
@@ -575,6 +593,9 @@
   },
   {
     "unit_id": 1001003,
+    "game_unit_id": 1001003,
+    "unit_illust_id": 1001003,
+    "is_awake_unit": 0,
     "skill_id": "10010032_plus",
     "skill_type": "EX2+",
     "name": "ゴッドブレスシャワー",
@@ -700,6 +721,9 @@
   },
   {
     "unit_id": 1001004,
+    "game_unit_id": 1001004,
+    "unit_illust_id": 1001004,
+    "is_awake_unit": 0,
     "skill_id": 10010041,
     "skill_type": "EX1",
     "name": "星見流羽根突術・東雲",
@@ -842,6 +866,9 @@
   },
   {
     "unit_id": 1001004,
+    "game_unit_id": 1001004,
+    "unit_illust_id": 1001004,
+    "is_awake_unit": 0,
     "skill_id": 10010042,
     "skill_type": "EX2",
     "name": "星見流羽根突術・曙",
@@ -1006,6 +1033,9 @@
   },
   {
     "unit_id": 1001004,
+    "game_unit_id": 1001004,
+    "unit_illust_id": 1001004,
+    "is_awake_unit": 0,
     "skill_id": "10010042_plus",
     "skill_type": "EX2+",
     "name": "星見流羽根突術奥義・御来光",
@@ -1170,6 +1200,9 @@
   },
   {
     "unit_id": 1001005,
+    "game_unit_id": 1001005,
+    "unit_illust_id": 1001005,
+    "is_awake_unit": 0,
     "skill_id": 10010051,
     "skill_type": "EX1",
     "name": "フェニックスバーン",
@@ -1325,6 +1358,9 @@
   },
   {
     "unit_id": 1001005,
+    "game_unit_id": 1001005,
+    "unit_illust_id": 1001005,
+    "is_awake_unit": 0,
     "skill_id": 10010052,
     "skill_type": "EX2",
     "name": "ロードヘリオスフィア",
@@ -1570,6 +1606,9 @@
   },
   {
     "unit_id": 1001005,
+    "game_unit_id": 1001005,
+    "unit_illust_id": 1001005,
+    "is_awake_unit": 0,
     "skill_id": "10010052_plus",
     "skill_type": "EX2+",
     "name": "サン・アビソル・リグレッション",
@@ -1818,6 +1857,9 @@
   },
   {
     "unit_id": 1002001,
+    "game_unit_id": 1002001,
+    "unit_illust_id": 1002001,
+    "is_awake_unit": 0,
     "skill_id": 10020011,
     "skill_type": "EX1",
     "name": "アイシクルレイン",
@@ -1888,6 +1930,9 @@
   },
   {
     "unit_id": 1002001,
+    "game_unit_id": 1002001,
+    "unit_illust_id": 1002001,
+    "is_awake_unit": 0,
     "skill_id": 10020012,
     "skill_type": "EX2",
     "name": "ヘイルストーム",
@@ -1961,6 +2006,9 @@
   },
   {
     "unit_id": 1002002,
+    "game_unit_id": 1002002,
+    "unit_illust_id": 1002002,
+    "is_awake_unit": 0,
     "skill_id": 10020021,
     "skill_type": "EX1",
     "name": "ナイトレイドハグ",
@@ -2051,6 +2099,9 @@
   },
   {
     "unit_id": 1002002,
+    "game_unit_id": 1002002,
+    "unit_illust_id": 1002002,
+    "is_awake_unit": 0,
     "skill_id": 10020022,
     "skill_type": "EX2",
     "name": "シャドウストローク",
@@ -2081,6 +2132,9 @@
   },
   {
     "unit_id": 1002004,
+    "game_unit_id": 1002004,
+    "unit_illust_id": 1002004,
+    "is_awake_unit": 0,
     "skill_id": 10020041,
     "skill_type": "EX1",
     "name": "ブリザード・リーヴァー",
@@ -2201,6 +2255,9 @@
   },
   {
     "unit_id": 1002004,
+    "game_unit_id": 1002004,
+    "unit_illust_id": 1002004,
+    "is_awake_unit": 0,
     "skill_id": 10020042,
     "skill_type": "EX2",
     "name": "アイスフォール・ギルティン",
@@ -2335,6 +2392,9 @@
   },
   {
     "unit_id": 1002004,
+    "game_unit_id": 1002004,
+    "unit_illust_id": 1002004,
+    "is_awake_unit": 0,
     "skill_id": "10020042_plus",
     "skill_type": "EX2+",
     "name": "グレイシャル・カタストロフィー",
@@ -2505,6 +2565,9 @@
   },
   {
     "unit_id": 1002005,
+    "game_unit_id": 1002005,
+    "unit_illust_id": 1002005,
+    "is_awake_unit": 0,
     "skill_id": 10020051,
     "skill_type": "EX1",
     "name": "パフィーパウンド",
@@ -2691,6 +2754,9 @@
   },
   {
     "unit_id": 1002005,
+    "game_unit_id": 1002005,
+    "unit_illust_id": 1002005,
+    "is_awake_unit": 0,
     "skill_id": 10020052,
     "skill_type": "EX2",
     "name": "ブレスドプッシュダウン",
@@ -2896,6 +2962,9 @@
   },
   {
     "unit_id": 1002005,
+    "game_unit_id": 1002005,
+    "unit_illust_id": 1002005,
+    "is_awake_unit": 0,
     "skill_id": "10020052_plus",
     "skill_type": "EX2+",
     "name": "大福ビッグプレッシャー",
@@ -3130,6 +3199,9 @@
   },
   {
     "unit_id": 1003001,
+    "game_unit_id": 1003001,
+    "unit_illust_id": 1003001,
+    "is_awake_unit": 0,
     "skill_id": 10030011,
     "skill_type": "EX1",
     "name": "ディバインスフィア",
@@ -3220,6 +3292,9 @@
   },
   {
     "unit_id": 1003001,
+    "game_unit_id": 1003001,
+    "unit_illust_id": 1003001,
+    "is_awake_unit": 0,
     "skill_id": 10030012,
     "skill_type": "EX2",
     "name": "シャイニングゴッデスビーム",
@@ -3339,6 +3414,9 @@
   },
   {
     "unit_id": 1003003,
+    "game_unit_id": 1003003,
+    "unit_illust_id": 1003003,
+    "is_awake_unit": 0,
     "skill_id": 10030031,
     "skill_type": "EX1",
     "name": "オミナス・デイブレイカー",
@@ -3461,6 +3539,9 @@
   },
   {
     "unit_id": 1003003,
+    "game_unit_id": 1003003,
+    "unit_illust_id": 1003003,
+    "is_awake_unit": 0,
     "skill_id": 10030032,
     "skill_type": "EX2",
     "name": "ハッピー・ニュースター",
@@ -3586,6 +3667,9 @@
   },
   {
     "unit_id": 1003004,
+    "game_unit_id": 1003004,
+    "unit_illust_id": 1003004,
+    "is_awake_unit": 0,
     "skill_id": 10030041,
     "skill_type": "EX1",
     "name": "フィクサーチェーン",
@@ -3703,6 +3787,9 @@
   },
   {
     "unit_id": 1003004,
+    "game_unit_id": 1003004,
+    "unit_illust_id": 1003004,
+    "is_awake_unit": 0,
     "skill_id": 10030042,
     "skill_type": "EX2",
     "name": "サマーモーニングスター",
@@ -3867,6 +3954,9 @@
   },
   {
     "unit_id": 1003004,
+    "game_unit_id": 1003004,
+    "unit_illust_id": 1003004,
+    "is_awake_unit": 0,
     "skill_id": "10030042_plus",
     "skill_type": "EX2+",
     "name": "コスモブレイクカリバー",
@@ -4031,6 +4121,9 @@
   },
   {
     "unit_id": 1003005,
+    "game_unit_id": 1003005,
+    "unit_illust_id": 1003005,
+    "is_awake_unit": 0,
     "skill_id": 10030051,
     "skill_type": "EX1",
     "name": "ノヴァセイクリッドアロー",
@@ -4219,6 +4312,9 @@
   },
   {
     "unit_id": 1003005,
+    "game_unit_id": 1003005,
+    "unit_illust_id": 1003005,
+    "is_awake_unit": 0,
     "skill_id": 10030052,
     "skill_type": "EX2",
     "name": "ディバインスーパーノヴァ",
@@ -4464,6 +4560,9 @@
   },
   {
     "unit_id": 1003005,
+    "game_unit_id": 1003005,
+    "unit_illust_id": 1003005,
+    "is_awake_unit": 0,
     "skill_id": "10030052_plus",
     "skill_type": "EX2+",
     "name": "ヴィーナスエクスカリバー・ノヴァ",
@@ -4715,6 +4814,9 @@
   },
   {
     "unit_id": 1004003,
+    "game_unit_id": 1004003,
+    "unit_illust_id": 1004003,
+    "is_awake_unit": 0,
     "skill_id": 10040031,
     "skill_type": "EX1",
     "name": "ギャラクシードライブ",
@@ -4791,6 +4893,9 @@
   },
   {
     "unit_id": 1004003,
+    "game_unit_id": 1004003,
+    "unit_illust_id": 1004003,
+    "is_awake_unit": 0,
     "skill_id": "10040031_plus",
     "skill_type": "EX1+",
     "name": "メテオバースト",
@@ -4883,6 +4988,9 @@
   },
   {
     "unit_id": 1004003,
+    "game_unit_id": 1004003,
+    "unit_illust_id": 1004003,
+    "is_awake_unit": 0,
     "skill_id": 10040032,
     "skill_type": "EX2",
     "name": "ヒーローズストライク",
@@ -5008,6 +5116,9 @@
   },
   {
     "unit_id": 1004003,
+    "game_unit_id": 1004003,
+    "unit_illust_id": 1004003,
+    "is_awake_unit": 0,
     "skill_id": "10040032_plus",
     "skill_type": "EX2+",
     "name": "パーフェクト・ワールド",
@@ -5205,6 +5316,9 @@
   },
   {
     "unit_id": 1004004,
+    "game_unit_id": 1004004,
+    "unit_illust_id": 1004004,
+    "is_awake_unit": 0,
     "skill_id": 10040041,
     "skill_type": "EX1",
     "name": "ポッピングカナード",
@@ -5324,6 +5438,9 @@
   },
   {
     "unit_id": 1004004,
+    "game_unit_id": 1004004,
+    "unit_illust_id": 1004004,
+    "is_awake_unit": 0,
     "skill_id": 10040042,
     "skill_type": "EX2",
     "name": "タイダルストライク",
@@ -5474,6 +5591,9 @@
   },
   {
     "unit_id": 1004004,
+    "game_unit_id": 1004004,
+    "unit_illust_id": 1004004,
+    "is_awake_unit": 0,
     "skill_id": "10040042_plus",
     "skill_type": "EX2+",
     "name": "ギガンティックウェーブ",
@@ -5652,6 +5772,9 @@
   },
   {
     "unit_id": 1004005,
+    "game_unit_id": 1004005,
+    "unit_illust_id": 1004005,
+    "is_awake_unit": 0,
     "skill_id": 10040051,
     "skill_type": "EX1",
     "name": "アバンギャルドフレイム",
@@ -5717,6 +5840,9 @@
   },
   {
     "unit_id": 1004005,
+    "game_unit_id": 1004005,
+    "unit_illust_id": 1004005,
+    "is_awake_unit": 0,
     "skill_id": 10040052,
     "skill_type": "EX2",
     "name": "ボルカニックフラワー",
@@ -5865,6 +5991,9 @@
   },
   {
     "unit_id": 1004006,
+    "game_unit_id": 1004006,
+    "unit_illust_id": 1004006,
+    "is_awake_unit": 0,
     "skill_id": 10040061,
     "skill_type": "EX1",
     "name": "ラッシング・メテオライト",
@@ -5993,6 +6122,9 @@
   },
   {
     "unit_id": 1004006,
+    "game_unit_id": 1004006,
+    "unit_illust_id": 1004006,
+    "is_awake_unit": 0,
     "skill_id": 10040062,
     "skill_type": "EX2",
     "name": "ホーリーナイト・デイブレイク",
@@ -6141,6 +6273,9 @@
   },
   {
     "unit_id": 1004006,
+    "game_unit_id": 1004006,
+    "unit_illust_id": 1004006,
+    "is_awake_unit": 0,
     "skill_id": "10040062_plus",
     "skill_type": "EX2+",
     "name": "ミラクル・マニファステーション",
@@ -6393,6 +6528,9 @@
   },
   {
     "unit_id": 1005001,
+    "game_unit_id": 1005001,
+    "unit_illust_id": 1005001,
+    "is_awake_unit": 0,
     "skill_id": 10050011,
     "skill_type": "EX1",
     "name": "フリージッドアクセル",
@@ -6459,6 +6597,9 @@
   },
   {
     "unit_id": 1005001,
+    "game_unit_id": 1005001,
+    "unit_illust_id": 1005001,
+    "is_awake_unit": 0,
     "skill_id": 10050012,
     "skill_type": "EX2",
     "name": "ブリザードヴェール",
@@ -6524,6 +6665,9 @@
   },
   {
     "unit_id": 1005002,
+    "game_unit_id": 1005002,
+    "unit_illust_id": 1005002,
+    "is_awake_unit": 0,
     "skill_id": 10050021,
     "skill_type": "EX1",
     "name": "墨染の舞神楽",
@@ -6615,6 +6759,9 @@
   },
   {
     "unit_id": 1005002,
+    "game_unit_id": 1005002,
+    "unit_illust_id": 1005002,
+    "is_awake_unit": 0,
     "skill_id": 10050022,
     "skill_type": "EX2",
     "name": "紺碧の陣",
@@ -6728,6 +6875,9 @@
   },
   {
     "unit_id": 1005003,
+    "game_unit_id": 1005003,
+    "unit_illust_id": 1005003,
+    "is_awake_unit": 0,
     "skill_id": 10050031,
     "skill_type": "EX1",
     "name": "オーシャンアヴァランチ",
@@ -6852,6 +7002,9 @@
   },
   {
     "unit_id": 1005003,
+    "game_unit_id": 1005003,
+    "unit_illust_id": 1005003,
+    "is_awake_unit": 0,
     "skill_id": 10050032,
     "skill_type": "EX2",
     "name": "フィンブレイカー",
@@ -7002,6 +7155,9 @@
   },
   {
     "unit_id": 1005004,
+    "game_unit_id": 1005004,
+    "unit_illust_id": 1005004,
+    "is_awake_unit": 0,
     "skill_id": 10050041,
     "skill_type": "EX1",
     "name": "スイート☆パンケーキ",
@@ -7139,6 +7295,9 @@
   },
   {
     "unit_id": 1005004,
+    "game_unit_id": 1005004,
+    "unit_illust_id": 1005004,
+    "is_awake_unit": 0,
     "skill_id": 10050042,
     "skill_type": "EX2",
     "name": "プリティー☆デコレーション",
@@ -7267,7 +7426,464 @@
     ]
   },
   {
+    "unit_id": 1006900,
+    "game_unit_id": 1006001,
+    "unit_illust_id": 1006900,
+    "is_awake_unit": 1,
+    "skill_id": 10069003,
+    "skill_type": "EX1",
+    "name": "カタストロフ・ドミネイション",
+    "icon_id": 100,
+    "cost_ex_gauge": 100,
+    "skill_detail": "敵単体に450％のダメージ/自身の行動CT15％短縮（30CT）/味方全体の重さ20％アップ（40CT）/ノーツを3～3前方に移動/自身の右2レーンにいる味方にチャージ状態を付与",
+    "effects": [
+      {
+        "display_value": "450%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 450,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [],
+        "raw": "敵単体に450%のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "15%",
+        "formula": "",
+        "type": "行動CT短縮",
+        "value": {
+          "rate": 15
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "自身の行動CT15%短縮(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "20%",
+        "formula": "",
+        "type": "重さアップ",
+        "value": {
+          "rate": 20
+        },
+        "effect_class": "buff",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 40
+        },
+        "notes": [],
+        "raw": "味方全体の重さ20%アップ(40CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "3",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 3,
+          "max": 3
+        },
+        "effect_class": "note",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを3～3前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "",
+        "formula": "",
+        "type": "チャージ",
+        "value": {},
+        "effect_class": "buff",
+        "target": "自身の右2レーンにいる味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "multi",
+            "lane": "right",
+            "lane_count": 2,
+            "specials": []
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "自身の右2レーンにいる味方にチャージ状態を付与",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1006900,
+    "game_unit_id": 1006001,
+    "unit_illust_id": 1006900,
+    "is_awake_unit": 1,
+    "skill_id": 10069002,
+    "skill_type": "EX2",
+    "name": "ヴォイドエンドブリンガー",
+    "icon_id": 199,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵単体に1200％のダメージ/スタンゲージ6減少/味方全体のATK200％アップ（30CT）/ノーツを6～6前方に移動/自身を含む味方2体以上ユニゾン時、さらにユニゾン参加者のATK200％アップ（30CT）",
+    "effects": [
+      {
+        "display_value": "1200%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 1200,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [],
+        "raw": "敵単体に1200%のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "6",
+        "formula": "スタンゲージが0になるとスタン状態になる",
+        "type": "スタンゲージ減少",
+        "value": {
+          "amount": 6
+        },
+        "effect_class": "debuff",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "スタンゲージ6減少",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "200%",
+        "formula": "",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 200
+        },
+        "effect_class": "buff",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "味方全体のATK200%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "6",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 6,
+          "max": 6
+        },
+        "effect_class": "note",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを6～6前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "200%",
+        "formula": "",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 200
+        },
+        "effect_class": "buff",
+        "target": "ユニゾン参加者",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "specials": [
+              "unison"
+            ]
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "自身を含む味方2体以上ユニゾン時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "自身を含む味方2体以上ユニゾン時、さらにユニゾン参加者のATK200%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1006900,
+    "game_unit_id": 1006001,
+    "unit_illust_id": 1006900,
+    "is_awake_unit": 1,
+    "skill_id": "10069002_plus",
+    "skill_type": "EX2+",
+    "name": "インフィニット・ディザスター",
+    "icon_id": 199,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵単体に1600％（自身を含む味方3体以上ユニゾン時、2000％）のダメージ/スタンゲージ6減少/味方全体のATK200％アップ（30CT）/ノーツを8～8前方に移動/自身を含む味方2体以上ユニゾン時、さらにユニゾン参加者のATK200％アップ（30CT）",
+    "effects": [
+      {
+        "display_value": "1600%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 1600,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "自身を含む味方3体以上ユニゾン時、2000%",
+            "label": "強化"
+          }
+        ],
+        "raw": "敵単体に1600%(自身を含む味方3体以上ユニゾン時、2000%)のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "6",
+        "formula": "スタンゲージが0になるとスタン状態になる",
+        "type": "スタンゲージ減少",
+        "value": {
+          "amount": 6
+        },
+        "effect_class": "debuff",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "スタンゲージ6減少",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "200%",
+        "formula": "",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 200
+        },
+        "effect_class": "buff",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "味方全体のATK200%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "8",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 8,
+          "max": 8
+        },
+        "effect_class": "note",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを8～8前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "200%",
+        "formula": "",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 200
+        },
+        "effect_class": "buff",
+        "target": "ユニゾン参加者",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "specials": [
+              "unison"
+            ]
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "自身を含む味方2体以上ユニゾン時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "自身を含む味方2体以上ユニゾン時、さらにユニゾン参加者のATK200%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
     "unit_id": 1006001,
+    "game_unit_id": 1006001,
+    "unit_illust_id": 1006001,
+    "is_awake_unit": 0,
     "skill_id": 10060011,
     "skill_type": "EX1",
     "name": "サタニックグレイス",
@@ -7361,6 +7977,9 @@
   },
   {
     "unit_id": 1006001,
+    "game_unit_id": 1006001,
+    "unit_illust_id": 1006001,
+    "is_awake_unit": 0,
     "skill_id": 10060012,
     "skill_type": "EX2",
     "name": "ディマイズブレイカー",
@@ -7447,6 +8066,9 @@
   },
   {
     "unit_id": 1007001,
+    "game_unit_id": 1007001,
+    "unit_illust_id": 1007001,
+    "is_awake_unit": 0,
     "skill_id": 10070011,
     "skill_type": "EX1",
     "name": "エールホルン",
@@ -7516,6 +8138,9 @@
   },
   {
     "unit_id": 1007001,
+    "game_unit_id": 1007001,
+    "unit_illust_id": 1007001,
+    "is_awake_unit": 0,
     "skill_id": 10070012,
     "skill_type": "EX2",
     "name": "シンフォニックブラスター",
@@ -7579,6 +8204,9 @@
   },
   {
     "unit_id": 1007002,
+    "game_unit_id": 1007002,
+    "unit_illust_id": 1007002,
+    "is_awake_unit": 0,
     "skill_id": 10070021,
     "skill_type": "EX1",
     "name": "ルリエルズウィスパー",
@@ -7698,6 +8326,9 @@
   },
   {
     "unit_id": 1007002,
+    "game_unit_id": 1007002,
+    "unit_illust_id": 1007002,
+    "is_awake_unit": 0,
     "skill_id": 10070022,
     "skill_type": "EX2",
     "name": "ティアーズオブルリエル",
@@ -7818,6 +8449,9 @@
   },
   {
     "unit_id": 1007003,
+    "game_unit_id": 1007003,
+    "unit_illust_id": 1007003,
+    "is_awake_unit": 0,
     "skill_id": 10070031,
     "skill_type": "EX1",
     "name": "グロウルサンダー",
@@ -7943,6 +8577,9 @@
   },
   {
     "unit_id": 1007003,
+    "game_unit_id": 1007003,
+    "unit_illust_id": 1007003,
+    "is_awake_unit": 0,
     "skill_id": 10070032,
     "skill_type": "EX2",
     "name": "スパークアニマート",
@@ -8107,6 +8744,9 @@
   },
   {
     "unit_id": 1007004,
+    "game_unit_id": 1007004,
+    "unit_illust_id": 1007004,
+    "is_awake_unit": 0,
     "skill_id": 10070041,
     "skill_type": "EX1",
     "name": "セラフィックビート",
@@ -8276,6 +8916,9 @@
   },
   {
     "unit_id": 1007004,
+    "game_unit_id": 1007004,
+    "unit_illust_id": 1007004,
+    "is_awake_unit": 0,
     "skill_id": 10070042,
     "skill_type": "EX2",
     "name": "フォーリングティアーズ",
@@ -8453,6 +9096,9 @@
   },
   {
     "unit_id": 1007004,
+    "game_unit_id": 1007004,
+    "unit_illust_id": 1007004,
+    "is_awake_unit": 0,
     "skill_id": "10070042_plus",
     "skill_type": "EX2+",
     "name": "スマイリングサニー",
@@ -8649,6 +9295,9 @@
   },
   {
     "unit_id": 1007005,
+    "game_unit_id": 1007005,
+    "unit_illust_id": 1007005,
+    "is_awake_unit": 0,
     "skill_id": 10070051,
     "skill_type": "EX1",
     "name": "キャンディー・グリッター",
@@ -8755,6 +9404,9 @@
   },
   {
     "unit_id": 1007005,
+    "game_unit_id": 1007005,
+    "unit_illust_id": 1007005,
+    "is_awake_unit": 0,
     "skill_id": 10070052,
     "skill_type": "EX2",
     "name": "ハッピーライト・アセンション",
@@ -8867,6 +9519,9 @@
   },
   {
     "unit_id": 1008001,
+    "game_unit_id": 1008001,
+    "unit_illust_id": 1008001,
+    "is_awake_unit": 0,
     "skill_id": 10080011,
     "skill_type": "EX1",
     "name": "バーミリオンイータ",
@@ -8964,6 +9619,9 @@
   },
   {
     "unit_id": 1008001,
+    "game_unit_id": 1008001,
+    "unit_illust_id": 1008001,
+    "is_awake_unit": 0,
     "skill_id": 10080012,
     "skill_type": "EX2",
     "name": "スカーレットシータ",
@@ -9057,6 +9715,9 @@
   },
   {
     "unit_id": 1008002,
+    "game_unit_id": 1008002,
+    "unit_illust_id": 1008002,
+    "is_awake_unit": 0,
     "skill_id": 10080021,
     "skill_type": "EX1",
     "name": "バミューダデルタ",
@@ -9140,6 +9801,9 @@
   },
   {
     "unit_id": 1008002,
+    "game_unit_id": 1008002,
+    "unit_illust_id": 1008002,
+    "is_awake_unit": 0,
     "skill_id": 10080022,
     "skill_type": "EX2",
     "name": "サブマリンガンマ",
@@ -9204,6 +9868,9 @@
   },
   {
     "unit_id": 1008003,
+    "game_unit_id": 1008003,
+    "unit_illust_id": 1008003,
+    "is_awake_unit": 0,
     "skill_id": 10080031,
     "skill_type": "EX1",
     "name": "ボルカニック・イプシロン",
@@ -9341,6 +10008,9 @@
   },
   {
     "unit_id": 1008003,
+    "game_unit_id": 1008003,
+    "unit_illust_id": 1008003,
+    "is_awake_unit": 0,
     "skill_id": 10080032,
     "skill_type": "EX2",
     "name": "ラヴァーレッド・シグマ",
@@ -9504,6 +10174,9 @@
   },
   {
     "unit_id": 1008003,
+    "game_unit_id": 1008003,
+    "unit_illust_id": 1008003,
+    "is_awake_unit": 0,
     "skill_id": "10080032_plus",
     "skill_type": "EX2+",
     "name": "アルファ・オメガ",
@@ -9703,6 +10376,9 @@
   },
   {
     "unit_id": 1008004,
+    "game_unit_id": 1008004,
+    "unit_illust_id": 1008004,
+    "is_awake_unit": 0,
     "skill_id": 10080041,
     "skill_type": "EX1",
     "name": "リニュー・アルファ",
@@ -9870,6 +10546,9 @@
   },
   {
     "unit_id": 1008004,
+    "game_unit_id": 1008004,
+    "unit_illust_id": 1008004,
+    "is_awake_unit": 0,
     "skill_id": 10080042,
     "skill_type": "EX2",
     "name": "アライヴァル・ベータ",
@@ -10092,6 +10771,9 @@
   },
   {
     "unit_id": 1008004,
+    "game_unit_id": 1008004,
+    "unit_illust_id": 1008004,
+    "is_awake_unit": 0,
     "skill_id": "10080042_plus",
     "skill_type": "EX2+",
     "name": "レイズ・アポストロフィー",
@@ -10292,6 +10974,9 @@
   },
   {
     "unit_id": 1009001,
+    "game_unit_id": 1009001,
+    "unit_illust_id": 1009001,
+    "is_awake_unit": 0,
     "skill_id": 10090011,
     "skill_type": "EX1",
     "name": "ボルテージフルバースト",
@@ -10389,6 +11074,9 @@
   },
   {
     "unit_id": 1009001,
+    "game_unit_id": 1009001,
+    "unit_illust_id": 1009001,
+    "is_awake_unit": 0,
     "skill_id": 10090012,
     "skill_type": "EX2",
     "name": "クライマックスボルト",
@@ -10465,6 +11153,9 @@
   },
   {
     "unit_id": 1009002,
+    "game_unit_id": 1009002,
+    "unit_illust_id": 1009002,
+    "is_awake_unit": 0,
     "skill_id": 10090021,
     "skill_type": "EX1",
     "name": "チャーム＆フラッシュ",
@@ -10579,6 +11270,9 @@
   },
   {
     "unit_id": 1009002,
+    "game_unit_id": 1009002,
+    "unit_illust_id": 1009002,
+    "is_awake_unit": 0,
     "skill_id": 10090022,
     "skill_type": "EX2",
     "name": "ハートブレイクショット",
@@ -10670,6 +11364,9 @@
   },
   {
     "unit_id": 1009003,
+    "game_unit_id": 1009003,
+    "unit_illust_id": 1009003,
+    "is_awake_unit": 0,
     "skill_id": 10090031,
     "skill_type": "EX1",
     "name": "ハイドロシューティング",
@@ -10773,6 +11470,9 @@
   },
   {
     "unit_id": 1009003,
+    "game_unit_id": 1009003,
+    "unit_illust_id": 1009003,
+    "is_awake_unit": 0,
     "skill_id": 10090032,
     "skill_type": "EX2",
     "name": "リキッドスパイラル",
@@ -10872,6 +11572,9 @@
   },
   {
     "unit_id": 1010001,
+    "game_unit_id": 1010001,
+    "unit_illust_id": 1010001,
+    "is_awake_unit": 0,
     "skill_id": 10100011,
     "skill_type": "EX1",
     "name": "マーシフルグロウ",
@@ -10986,6 +11689,9 @@
   },
   {
     "unit_id": 1010001,
+    "game_unit_id": 1010001,
+    "unit_illust_id": 1010001,
+    "is_awake_unit": 0,
     "skill_id": 10100012,
     "skill_type": "EX2",
     "name": "スプリームサンクチュアリ",
@@ -11087,6 +11793,9 @@
   },
   {
     "unit_id": 1011001,
+    "game_unit_id": 1011001,
+    "unit_illust_id": 1011001,
+    "is_awake_unit": 0,
     "skill_id": 10110011,
     "skill_type": "EX1",
     "name": "スパークセージ",
@@ -11160,6 +11869,9 @@
   },
   {
     "unit_id": 1011001,
+    "game_unit_id": 1011001,
+    "unit_illust_id": 1011001,
+    "is_awake_unit": 0,
     "skill_id": 10110012,
     "skill_type": "EX2",
     "name": "エレキハイドランジア",
@@ -11245,6 +11957,9 @@
   },
   {
     "unit_id": 1011002,
+    "game_unit_id": 1011002,
+    "unit_illust_id": 1011002,
+    "is_awake_unit": 0,
     "skill_id": 10110021,
     "skill_type": "EX1",
     "name": "チアフルヒーリング",
@@ -11318,6 +12033,9 @@
   },
   {
     "unit_id": 1011002,
+    "game_unit_id": 1011002,
+    "unit_illust_id": 1011002,
+    "is_awake_unit": 0,
     "skill_id": 10110022,
     "skill_type": "EX2",
     "name": "キュアアイリス",
@@ -11391,6 +12109,9 @@
   },
   {
     "unit_id": 1011003,
+    "game_unit_id": 1011003,
+    "unit_illust_id": 1011003,
+    "is_awake_unit": 0,
     "skill_id": 10110031,
     "skill_type": "EX1",
     "name": "ディバイドシールド",
@@ -11504,6 +12225,9 @@
   },
   {
     "unit_id": 1011003,
+    "game_unit_id": 1011003,
+    "unit_illust_id": 1011003,
+    "is_awake_unit": 0,
     "skill_id": 10110032,
     "skill_type": "EX2",
     "name": "ノーマライズボルテッカー",
@@ -11629,6 +12353,9 @@
   },
   {
     "unit_id": 1011004,
+    "game_unit_id": 1011004,
+    "unit_illust_id": 1011004,
+    "is_awake_unit": 0,
     "skill_id": 10110041,
     "skill_type": "EX1",
     "name": "流纏の舞",
@@ -11756,6 +12483,9 @@
   },
   {
     "unit_id": 1011004,
+    "game_unit_id": 1011004,
+    "unit_illust_id": 1011004,
+    "is_awake_unit": 0,
     "skill_id": 10110042,
     "skill_type": "EX2",
     "name": "波纏怒涛",
@@ -11859,6 +12589,9 @@
   },
   {
     "unit_id": 1012001,
+    "game_unit_id": 1012001,
+    "unit_illust_id": 1012001,
+    "is_awake_unit": 0,
     "skill_id": 10120011,
     "skill_type": "EX1",
     "name": "上月神闘流――偃月",
@@ -11957,6 +12690,9 @@
   },
   {
     "unit_id": 1012001,
+    "game_unit_id": 1012001,
+    "unit_illust_id": 1012001,
+    "is_awake_unit": 0,
     "skill_id": 10120012,
     "skill_type": "EX2",
     "name": "上月神闘流奥義――朔夜",
@@ -12053,6 +12789,9 @@
   },
   {
     "unit_id": 1012002,
+    "game_unit_id": 1012002,
+    "unit_illust_id": 1012002,
+    "is_awake_unit": 0,
     "skill_id": 10120021,
     "skill_type": "EX1",
     "name": "上月流包丁術――言祝",
@@ -12146,6 +12885,9 @@
   },
   {
     "unit_id": 1012002,
+    "game_unit_id": 1012002,
+    "unit_illust_id": 1012002,
+    "is_awake_unit": 0,
     "skill_id": 10120022,
     "skill_type": "EX2",
     "name": "上月流包丁術奥義――比翼",
@@ -12218,6 +12960,9 @@
   },
   {
     "unit_id": 1013001,
+    "game_unit_id": 1013001,
+    "unit_illust_id": 1013001,
+    "is_awake_unit": 0,
     "skill_id": 10130011,
     "skill_type": "EX1",
     "name": "ランペイジヴァーミリオン",
@@ -12311,6 +13056,9 @@
   },
   {
     "unit_id": 1013001,
+    "game_unit_id": 1013001,
+    "unit_illust_id": 1013001,
+    "is_awake_unit": 0,
     "skill_id": 10130012,
     "skill_type": "EX2",
     "name": "イグニッションアサルト",
@@ -12380,6 +13128,9 @@
   },
   {
     "unit_id": 1013002,
+    "game_unit_id": 1013002,
+    "unit_illust_id": 1013002,
+    "is_awake_unit": 0,
     "skill_id": 10130021,
     "skill_type": "EX1",
     "name": "ギャンブルバニーセレクト",
@@ -12467,6 +13218,9 @@
   },
   {
     "unit_id": 1013002,
+    "game_unit_id": 1013002,
+    "unit_illust_id": 1013002,
+    "is_awake_unit": 0,
     "skill_id": 10130022,
     "skill_type": "EX2",
     "name": "バニーダイスデトネイション",
@@ -12597,6 +13351,9 @@
   },
   {
     "unit_id": 1014001,
+    "game_unit_id": 1014001,
+    "unit_illust_id": 1014001,
+    "is_awake_unit": 0,
     "skill_id": 10140011,
     "skill_type": "EX1",
     "name": "ヒールブレッシング",
@@ -12668,6 +13425,9 @@
   },
   {
     "unit_id": 1014001,
+    "game_unit_id": 1014001,
+    "unit_illust_id": 1014001,
+    "is_awake_unit": 0,
     "skill_id": 10140012,
     "skill_type": "EX2",
     "name": "リジェネレイションオアシス",
@@ -12763,6 +13523,9 @@
   },
   {
     "unit_id": 1014002,
+    "game_unit_id": 1014002,
+    "unit_illust_id": 1014002,
+    "is_awake_unit": 0,
     "skill_id": 10140021,
     "skill_type": "EX1",
     "name": "ライジングマーキュリー",
@@ -12896,6 +13659,9 @@
   },
   {
     "unit_id": 1014002,
+    "game_unit_id": 1014002,
+    "unit_illust_id": 1014002,
+    "is_awake_unit": 0,
     "skill_id": 10140022,
     "skill_type": "EX2",
     "name": "ライズ・オーバーブースト",
@@ -13034,6 +13800,9 @@
   },
   {
     "unit_id": 1014003,
+    "game_unit_id": 1014003,
+    "unit_illust_id": 1014003,
+    "is_awake_unit": 0,
     "skill_id": 10140031,
     "skill_type": "EX1",
     "name": "ホーリーライトベル",
@@ -13130,6 +13899,9 @@
   },
   {
     "unit_id": 1014003,
+    "game_unit_id": 1014003,
+    "unit_illust_id": 1014003,
+    "is_awake_unit": 0,
     "skill_id": 10140032,
     "skill_type": "EX2",
     "name": "ブライトウェディングヴェール",
@@ -13231,6 +14003,9 @@
   },
   {
     "unit_id": 1014004,
+    "game_unit_id": 1014004,
+    "unit_illust_id": 1014004,
+    "is_awake_unit": 0,
     "skill_id": 10140041,
     "skill_type": "EX1",
     "name": "ボンボンコメット",
@@ -13378,6 +14153,9 @@
   },
   {
     "unit_id": 1014004,
+    "game_unit_id": 1014004,
+    "unit_illust_id": 1014004,
+    "is_awake_unit": 0,
     "skill_id": 10140042,
     "skill_type": "EX2",
     "name": "ホイッピングヴェール",
@@ -13553,6 +14331,9 @@
   },
   {
     "unit_id": 1015001,
+    "game_unit_id": 1015001,
+    "unit_illust_id": 1015001,
+    "is_awake_unit": 0,
     "skill_id": 10150011,
     "skill_type": "EX1",
     "name": "プルガトリオレクイエム",
@@ -13677,6 +14458,9 @@
   },
   {
     "unit_id": 1015001,
+    "game_unit_id": 1015001,
+    "unit_illust_id": 1015001,
+    "is_awake_unit": 0,
     "skill_id": 10150012,
     "skill_type": "EX2",
     "name": "プルガトリオリプロダクション",
@@ -13789,6 +14573,9 @@
   },
   {
     "unit_id": 1016001,
+    "game_unit_id": 1016001,
+    "unit_illust_id": 1016001,
+    "is_awake_unit": 0,
     "skill_id": 10160011,
     "skill_type": "EX1",
     "name": "ネクロデスペリア",
@@ -13857,6 +14644,9 @@
   },
   {
     "unit_id": 1016001,
+    "game_unit_id": 1016001,
+    "unit_illust_id": 1016001,
+    "is_awake_unit": 0,
     "skill_id": 10160012,
     "skill_type": "EX2",
     "name": "ゴーストパレード",
@@ -13946,6 +14736,9 @@
   },
   {
     "unit_id": 1016002,
+    "game_unit_id": 1016002,
+    "unit_illust_id": 1016002,
+    "is_awake_unit": 0,
     "skill_id": 10160021,
     "skill_type": "EX1",
     "name": "インビジブルキャッツ",
@@ -14079,6 +14872,9 @@
   },
   {
     "unit_id": 1016002,
+    "game_unit_id": 1016002,
+    "unit_illust_id": 1016002,
+    "is_awake_unit": 0,
     "skill_id": 10160022,
     "skill_type": "EX2",
     "name": "サモンズ・ジャックさん",
@@ -14279,6 +15075,9 @@
   },
   {
     "unit_id": 1017001,
+    "game_unit_id": 1017001,
+    "unit_illust_id": 1017001,
+    "is_awake_unit": 0,
     "skill_id": 10170011,
     "skill_type": "EX1",
     "name": "弐ノ型・双角羅刹",
@@ -14345,6 +15144,9 @@
   },
   {
     "unit_id": 1017001,
+    "game_unit_id": 1017001,
+    "unit_illust_id": 1017001,
+    "is_awake_unit": 0,
     "skill_id": 10170012,
     "skill_type": "EX2",
     "name": "参ノ型・幽鬼夢爪",
@@ -14444,6 +15246,9 @@
   },
   {
     "unit_id": 1018001,
+    "game_unit_id": 1018001,
+    "unit_illust_id": 1018001,
+    "is_awake_unit": 0,
     "skill_id": 10180011,
     "skill_type": "EX1",
     "name": "エグゼクシオンウラガーン",
@@ -14508,6 +15313,9 @@
   },
   {
     "unit_id": 1018001,
+    "game_unit_id": 1018001,
+    "unit_illust_id": 1018001,
+    "is_awake_unit": 0,
     "skill_id": 10180012,
     "skill_type": "EX2",
     "name": "ボルテクス・オラージュ",
@@ -14581,6 +15389,9 @@
   },
   {
     "unit_id": 1019001,
+    "game_unit_id": 1019001,
+    "unit_illust_id": 1019001,
+    "is_awake_unit": 0,
     "skill_id": 10190011,
     "skill_type": "EX1",
     "name": "電影分身撃",
@@ -14645,6 +15456,9 @@
   },
   {
     "unit_id": 1019001,
+    "game_unit_id": 1019001,
+    "unit_illust_id": 1019001,
+    "is_awake_unit": 0,
     "skill_id": 10190012,
     "skill_type": "EX2",
     "name": "風花手裏剣",
@@ -14752,6 +15566,9 @@
   },
   {
     "unit_id": 1019002,
+    "game_unit_id": 1019002,
+    "unit_illust_id": 1019002,
+    "is_awake_unit": 0,
     "skill_id": 10190021,
     "skill_type": "EX1",
     "name": "最強チョコレート",
@@ -14847,6 +15664,9 @@
   },
   {
     "unit_id": 1019002,
+    "game_unit_id": 1019002,
+    "unit_illust_id": 1019002,
+    "is_awake_unit": 0,
     "skill_id": 10190022,
     "skill_type": "EX2",
     "name": "出でよチョコゴーレム",
@@ -14974,6 +15794,9 @@
   },
   {
     "unit_id": 1019003,
+    "game_unit_id": 1019003,
+    "unit_illust_id": 1019003,
+    "is_awake_unit": 0,
     "skill_id": 10190031,
     "skill_type": "EX1",
     "name": "双雷旋風",
@@ -15113,6 +15936,9 @@
   },
   {
     "unit_id": 1019003,
+    "game_unit_id": 1019003,
+    "unit_illust_id": 1019003,
+    "is_awake_unit": 0,
     "skill_id": 10190032,
     "skill_type": "EX2",
     "name": "春雷乱れ桜",
@@ -15278,6 +16104,9 @@
   },
   {
     "unit_id": 1020001,
+    "game_unit_id": 1020001,
+    "unit_illust_id": 1020001,
+    "is_awake_unit": 0,
     "skill_id": 10200011,
     "skill_type": "EX1",
     "name": "スターナイト・アンサンブル",
@@ -15335,6 +16164,9 @@
   },
   {
     "unit_id": 1020001,
+    "game_unit_id": 1020001,
+    "unit_illust_id": 1020001,
+    "is_awake_unit": 0,
     "skill_id": 10200012,
     "skill_type": "EX2",
     "name": "アンコールソング",
@@ -15421,6 +16253,9 @@
   },
   {
     "unit_id": 1020002,
+    "game_unit_id": 1020002,
+    "unit_illust_id": 1020002,
+    "is_awake_unit": 0,
     "skill_id": 10200021,
     "skill_type": "EX1",
     "name": "ブレイジング・アクト",
@@ -15548,6 +16383,9 @@
   },
   {
     "unit_id": 1020002,
+    "game_unit_id": 1020002,
+    "unit_illust_id": 1020002,
+    "is_awake_unit": 0,
     "skill_id": 10200022,
     "skill_type": "EX2",
     "name": "サマーセットリスト",
@@ -15645,6 +16483,9 @@
   },
   {
     "unit_id": 1020004,
+    "game_unit_id": 1020004,
+    "unit_illust_id": 1020004,
+    "is_awake_unit": 0,
     "skill_id": 10200041,
     "skill_type": "EX1",
     "name": "キャンディーウィスパー",
@@ -15718,6 +16559,9 @@
   },
   {
     "unit_id": 1020004,
+    "game_unit_id": 1020004,
+    "unit_illust_id": 1020004,
+    "is_awake_unit": 0,
     "skill_id": 10200042,
     "skill_type": "EX2",
     "name": "ストリーミングキャロル",
@@ -15854,6 +16698,9 @@
   },
   {
     "unit_id": 1020004,
+    "game_unit_id": 1020004,
+    "unit_illust_id": 1020004,
+    "is_awake_unit": 0,
     "skill_id": "10200042_plus",
     "skill_type": "EX2+",
     "name": "ルルカワールド",
@@ -16017,6 +16864,9 @@
   },
   {
     "unit_id": 1020005,
+    "game_unit_id": 1020005,
+    "unit_illust_id": 1020005,
+    "is_awake_unit": 0,
     "skill_id": 10200051,
     "skill_type": "EX1",
     "name": "ハニーエコーズ",
@@ -16147,6 +16997,9 @@
   },
   {
     "unit_id": 1020005,
+    "game_unit_id": 1020005,
+    "unit_illust_id": 1020005,
+    "is_awake_unit": 0,
     "skill_id": 10200052,
     "skill_type": "EX2",
     "name": "フォンデュセレナーデ",
@@ -16319,6 +17172,9 @@
   },
   {
     "unit_id": 1020005,
+    "game_unit_id": 1020005,
+    "unit_illust_id": 1020005,
+    "is_awake_unit": 0,
     "skill_id": "10200052_plus",
     "skill_type": "EX2+",
     "name": "スウィートルルカワールド",
@@ -16491,6 +17347,9 @@
   },
   {
     "unit_id": 1021001,
+    "game_unit_id": 1021001,
+    "unit_illust_id": 1021001,
+    "is_awake_unit": 0,
     "skill_id": 10210011,
     "skill_type": "EX1",
     "name": "ワンダリングエッジ",
@@ -16530,6 +17389,9 @@
   },
   {
     "unit_id": 1021001,
+    "game_unit_id": 1021001,
+    "unit_illust_id": 1021001,
+    "is_awake_unit": 0,
     "skill_id": 10210012,
     "skill_type": "EX2",
     "name": "アクセラレイトサイクロン",
@@ -16623,6 +17485,9 @@
   },
   {
     "unit_id": 1022001,
+    "game_unit_id": 1022001,
+    "unit_illust_id": 1022001,
+    "is_awake_unit": 0,
     "skill_id": 10220011,
     "skill_type": "EX1",
     "name": "テリトリーオブウェスタ",
@@ -16697,6 +17562,9 @@
   },
   {
     "unit_id": 1022001,
+    "game_unit_id": 1022001,
+    "unit_illust_id": 1022001,
+    "is_awake_unit": 0,
     "skill_id": 10220012,
     "skill_type": "EX2",
     "name": "ウルカヌスハンマー",
@@ -16761,6 +17629,9 @@
   },
   {
     "unit_id": 1022002,
+    "game_unit_id": 1022002,
+    "unit_illust_id": 1022002,
+    "is_awake_unit": 0,
     "skill_id": 10220021,
     "skill_type": "EX1",
     "name": "レインディア・マーチ",
@@ -16863,6 +17734,9 @@
   },
   {
     "unit_id": 1022002,
+    "game_unit_id": 1022002,
+    "unit_illust_id": 1022002,
+    "is_awake_unit": 0,
     "skill_id": 10220022,
     "skill_type": "EX2",
     "name": "メモラブル・ストーリーズ",
@@ -16989,6 +17863,9 @@
   },
   {
     "unit_id": 1022003,
+    "game_unit_id": 1022003,
+    "unit_illust_id": 1022003,
+    "is_awake_unit": 0,
     "skill_id": 10220031,
     "skill_type": "EX1",
     "name": "テリトリーオブオーサー",
@@ -17081,6 +17958,9 @@
   },
   {
     "unit_id": 1022003,
+    "game_unit_id": 1022003,
+    "unit_illust_id": 1022003,
+    "is_awake_unit": 0,
     "skill_id": 10220032,
     "skill_type": "EX2",
     "name": "アロガントスレッジハンマー",
@@ -17182,6 +18062,9 @@
   },
   {
     "unit_id": 1022003,
+    "game_unit_id": 1022003,
+    "unit_illust_id": 1022003,
+    "is_awake_unit": 0,
     "skill_id": "10220032_plus",
     "skill_type": "EX2+",
     "name": "ルシファーアセンション",
@@ -17313,6 +18196,9 @@
   },
   {
     "unit_id": 1023001,
+    "game_unit_id": 1023001,
+    "unit_illust_id": 1023001,
+    "is_awake_unit": 0,
     "skill_id": 10230011,
     "skill_type": "EX1",
     "name": "ホーリースプリング",
@@ -17380,6 +18266,9 @@
   },
   {
     "unit_id": 1023001,
+    "game_unit_id": 1023001,
+    "unit_illust_id": 1023001,
+    "is_awake_unit": 0,
     "skill_id": 10230012,
     "skill_type": "EX2",
     "name": "セラフィックレイン",
@@ -17441,6 +18330,9 @@
   },
   {
     "unit_id": 1023002,
+    "game_unit_id": 1023002,
+    "unit_illust_id": 1023002,
+    "is_awake_unit": 0,
     "skill_id": 10230021,
     "skill_type": "EX1",
     "name": "クリスマスフィースト",
@@ -17557,6 +18449,9 @@
   },
   {
     "unit_id": 1023002,
+    "game_unit_id": 1023002,
+    "unit_illust_id": 1023002,
+    "is_awake_unit": 0,
     "skill_id": 10230022,
     "skill_type": "EX2",
     "name": "ホワイトブレッシング",
@@ -17649,6 +18544,9 @@
   },
   {
     "unit_id": 1023003,
+    "game_unit_id": 1023003,
+    "unit_illust_id": 1023003,
+    "is_awake_unit": 0,
     "skill_id": 10230031,
     "skill_type": "EX1",
     "name": "スノーヴェール・エンブレイス",
@@ -17796,6 +18694,9 @@
   },
   {
     "unit_id": 1023003,
+    "game_unit_id": 1023003,
+    "unit_illust_id": 1023003,
+    "is_awake_unit": 0,
     "skill_id": 10230032,
     "skill_type": "EX2",
     "name": "シュガースイートサンクチュアリ",
@@ -17996,6 +18897,9 @@
   },
   {
     "unit_id": 1024001,
+    "game_unit_id": 1024001,
+    "unit_illust_id": 1024001,
+    "is_awake_unit": 0,
     "skill_id": 10240011,
     "skill_type": "EX1",
     "name": "爆裂闇輝",
@@ -18116,6 +19020,9 @@
   },
   {
     "unit_id": 1024001,
+    "game_unit_id": 1024001,
+    "unit_illust_id": 1024001,
+    "is_awake_unit": 0,
     "skill_id": 10240012,
     "skill_type": "EX2",
     "name": "爆裂浄化",
@@ -18215,6 +19122,9 @@
   },
   {
     "unit_id": 1024002,
+    "game_unit_id": 1024002,
+    "unit_illust_id": 1024002,
+    "is_awake_unit": 0,
     "skill_id": 10240021,
     "skill_type": "EX1",
     "name": "爆裂セイントフレイム",
@@ -18304,6 +19214,9 @@
   },
   {
     "unit_id": 1024002,
+    "game_unit_id": 1024002,
+    "unit_illust_id": 1024002,
+    "is_awake_unit": 0,
     "skill_id": 10240022,
     "skill_type": "EX2",
     "name": "爆裂ブレイジングベル",
@@ -18407,6 +19320,9 @@
   },
   {
     "unit_id": 1024003,
+    "game_unit_id": 1024003,
+    "unit_illust_id": 1024003,
+    "is_awake_unit": 0,
     "skill_id": 10240031,
     "skill_type": "EX1",
     "name": "爆裂・破邪の大鈴",
@@ -18520,6 +19436,9 @@
   },
   {
     "unit_id": 1024003,
+    "game_unit_id": 1024003,
+    "unit_illust_id": 1024003,
+    "is_awake_unit": 0,
     "skill_id": 10240032,
     "skill_type": "EX2",
     "name": "爆裂・純白花吹雪",
@@ -18676,6 +19595,9 @@
   },
   {
     "unit_id": 1024003,
+    "game_unit_id": 1024003,
+    "unit_illust_id": 1024003,
+    "is_awake_unit": 0,
     "skill_id": "10240032_plus",
     "skill_type": "EX2+",
     "name": "爆裂乱舞・奉納神楽の舞",
@@ -18868,6 +19790,9 @@
   },
   {
     "unit_id": 1025001,
+    "game_unit_id": 1025001,
+    "unit_illust_id": 1025001,
+    "is_awake_unit": 0,
     "skill_id": 10250011,
     "skill_type": "EX1",
     "name": "アイスフォールダンス",
@@ -18934,6 +19859,9 @@
   },
   {
     "unit_id": 1025001,
+    "game_unit_id": 1025001,
+    "unit_illust_id": 1025001,
+    "is_awake_unit": 0,
     "skill_id": 10250012,
     "skill_type": "EX2",
     "name": "イノセントグレイシャー",
@@ -19027,6 +19955,9 @@
   },
   {
     "unit_id": 1025002,
+    "game_unit_id": 1025002,
+    "unit_illust_id": 1025002,
+    "is_awake_unit": 0,
     "skill_id": 10250021,
     "skill_type": "EX1",
     "name": "宵闇の舞神楽",
@@ -19120,6 +20051,9 @@
   },
   {
     "unit_id": 1025002,
+    "game_unit_id": 1025002,
+    "unit_illust_id": 1025002,
+    "is_awake_unit": 0,
     "skill_id": 10250022,
     "skill_type": "EX2",
     "name": "神楽・月下臨照",
@@ -19200,6 +20134,9 @@
   },
   {
     "unit_id": 1025003,
+    "game_unit_id": 1025003,
+    "unit_illust_id": 1025003,
+    "is_awake_unit": 0,
     "skill_id": 10250031,
     "skill_type": "EX1",
     "name": "ホーリー・ホイップ",
@@ -19312,6 +20249,9 @@
   },
   {
     "unit_id": 1025003,
+    "game_unit_id": 1025003,
+    "unit_illust_id": 1025003,
+    "is_awake_unit": 0,
     "skill_id": 10250032,
     "skill_type": "EX2",
     "name": "スウィーテスト・デイドリーム",
@@ -19488,6 +20428,9 @@
   },
   {
     "unit_id": 1026001,
+    "game_unit_id": 1026001,
+    "unit_illust_id": 1026001,
+    "is_awake_unit": 0,
     "skill_id": 10260011,
     "skill_type": "EX1",
     "name": "福音の魔弾・ハピネスイエロー",
@@ -19577,6 +20520,9 @@
   },
   {
     "unit_id": 1026001,
+    "game_unit_id": 1026001,
+    "unit_illust_id": 1026001,
+    "is_awake_unit": 0,
     "skill_id": 10260012,
     "skill_type": "EX2",
     "name": "落涙の魔弾・レイニーブルー",
@@ -19643,6 +20589,9 @@
   },
   {
     "unit_id": 1026002,
+    "game_unit_id": 1026002,
+    "unit_illust_id": 1026002,
+    "is_awake_unit": 0,
     "skill_id": 10260021,
     "skill_type": "EX1",
     "name": "クーリッシュアズール",
@@ -19737,6 +20686,9 @@
   },
   {
     "unit_id": 1026002,
+    "game_unit_id": 1026002,
+    "unit_illust_id": 1026002,
+    "is_awake_unit": 0,
     "skill_id": 10260022,
     "skill_type": "EX2",
     "name": "ロマンシングレッド",
@@ -19817,6 +20769,9 @@
   },
   {
     "unit_id": 1026003,
+    "game_unit_id": 1026003,
+    "unit_illust_id": 1026003,
+    "is_awake_unit": 0,
     "skill_id": 10260031,
     "skill_type": "EX1",
     "name": "スーパーノヴァホワイト",
@@ -19930,6 +20885,9 @@
   },
   {
     "unit_id": 1026003,
+    "game_unit_id": 1026003,
+    "unit_illust_id": 1026003,
+    "is_awake_unit": 0,
     "skill_id": 10260032,
     "skill_type": "EX2",
     "name": "ジェネシスブラック",
@@ -20078,6 +21036,9 @@
   },
   {
     "unit_id": 1026004,
+    "game_unit_id": 1026004,
+    "unit_illust_id": 1026004,
+    "is_awake_unit": 0,
     "skill_id": 10260041,
     "skill_type": "EX1",
     "name": "デイブレイク☆ピンク",
@@ -20233,6 +21194,9 @@
   },
   {
     "unit_id": 1026004,
+    "game_unit_id": 1026004,
+    "unit_illust_id": 1026004,
+    "is_awake_unit": 0,
     "skill_id": 10260042,
     "skill_type": "EX2",
     "name": "サンライズ☆ゴールド",
@@ -20398,6 +21362,9 @@
   },
   {
     "unit_id": 1026004,
+    "game_unit_id": 1026004,
+    "unit_illust_id": 1026004,
+    "is_awake_unit": 0,
     "skill_id": "10260042_plus",
     "skill_type": "EX2+",
     "name": "ハネツキ☆レインボー",
@@ -20621,6 +21588,9 @@
   },
   {
     "unit_id": 1027001,
+    "game_unit_id": 1027001,
+    "unit_illust_id": 1027001,
+    "is_awake_unit": 0,
     "skill_id": 10270011,
     "skill_type": "EX1",
     "name": "サイバーアナライズ",
@@ -20716,6 +21686,9 @@
   },
   {
     "unit_id": 1027001,
+    "game_unit_id": 1027001,
+    "unit_illust_id": 1027001,
+    "is_awake_unit": 0,
     "skill_id": 10270012,
     "skill_type": "EX2",
     "name": "ジャッジメントコード",
@@ -20783,6 +21756,9 @@
   },
   {
     "unit_id": 1027002,
+    "game_unit_id": 1027002,
+    "unit_illust_id": 1027002,
+    "is_awake_unit": 0,
     "skill_id": 10270021,
     "skill_type": "EX1",
     "name": "ルクス・リファクタリング",
@@ -20934,6 +21910,9 @@
   },
   {
     "unit_id": 1027002,
+    "game_unit_id": 1027002,
+    "unit_illust_id": 1027002,
+    "is_awake_unit": 0,
     "skill_id": 10270022,
     "skill_type": "EX2",
     "name": "デタム・エクスプロージョン",
@@ -21076,6 +22055,9 @@
   },
   {
     "unit_id": 1028001,
+    "game_unit_id": 1028001,
+    "unit_illust_id": 1028001,
+    "is_awake_unit": 0,
     "skill_id": 10280011,
     "skill_type": "EX1",
     "name": "エレクトロチェイサー",
@@ -21178,6 +22160,9 @@
   },
   {
     "unit_id": 1028001,
+    "game_unit_id": 1028001,
+    "unit_illust_id": 1028001,
+    "is_awake_unit": 0,
     "skill_id": 10280012,
     "skill_type": "EX2",
     "name": "ホーミングスパーク",
@@ -21244,6 +22229,9 @@
   },
   {
     "unit_id": 1029001,
+    "game_unit_id": 1029001,
+    "unit_illust_id": 1029001,
+    "is_awake_unit": 0,
     "skill_id": 10290011,
     "skill_type": "EX1",
     "name": "デモンズブーケ",
@@ -21319,6 +22307,9 @@
   },
   {
     "unit_id": 1029001,
+    "game_unit_id": 1029001,
+    "unit_illust_id": 1029001,
+    "is_awake_unit": 0,
     "skill_id": 10290012,
     "skill_type": "EX2",
     "name": "ブリリアンスパヒューム",
@@ -21378,6 +22369,9 @@
   },
   {
     "unit_id": 1029002,
+    "game_unit_id": 1029002,
+    "unit_illust_id": 1029002,
+    "is_awake_unit": 0,
     "skill_id": 10290021,
     "skill_type": "EX1",
     "name": "スパイスアップ・オペラ",
@@ -21473,6 +22467,9 @@
   },
   {
     "unit_id": 1029002,
+    "game_unit_id": 1029002,
+    "unit_illust_id": 1029002,
+    "is_awake_unit": 0,
     "skill_id": 10290022,
     "skill_type": "EX2",
     "name": "オーバードーズ・ボンボン",
@@ -21574,6 +22571,9 @@
   },
   {
     "unit_id": 1030001,
+    "game_unit_id": 1030001,
+    "unit_illust_id": 1030001,
+    "is_awake_unit": 0,
     "skill_id": 10300011,
     "skill_type": "EX1",
     "name": "スローターウェーブ",
@@ -21664,6 +22664,9 @@
   },
   {
     "unit_id": 1030001,
+    "game_unit_id": 1030001,
+    "unit_illust_id": 1030001,
+    "is_awake_unit": 0,
     "skill_id": 10300012,
     "skill_type": "EX2",
     "name": "クーラントスプラッシュ",
@@ -21737,6 +22740,9 @@
   },
   {
     "unit_id": 1030002,
+    "game_unit_id": 1030002,
+    "unit_illust_id": 1030002,
+    "is_awake_unit": 0,
     "skill_id": 10300021,
     "skill_type": "EX1",
     "name": "アドラブルブライド",
@@ -21861,6 +22867,9 @@
   },
   {
     "unit_id": 1030002,
+    "game_unit_id": 1030002,
+    "unit_illust_id": 1030002,
+    "is_awake_unit": 0,
     "skill_id": 10300022,
     "skill_type": "EX2",
     "name": "ラブリートイパーティー",
@@ -22014,6 +23023,9 @@
   },
   {
     "unit_id": 1030003,
+    "game_unit_id": 1030003,
+    "unit_illust_id": 1030003,
+    "is_awake_unit": 0,
     "skill_id": 10300031,
     "skill_type": "EX1",
     "name": "ホーリーダスター",
@@ -22119,6 +23131,9 @@
   },
   {
     "unit_id": 1030003,
+    "game_unit_id": 1030003,
+    "unit_illust_id": 1030003,
+    "is_awake_unit": 0,
     "skill_id": 10300032,
     "skill_type": "EX2",
     "name": "サイレントスウィープ",
@@ -22261,6 +23276,9 @@
   },
   {
     "unit_id": 1031001,
+    "game_unit_id": 1031001,
+    "unit_illust_id": 1031001,
+    "is_awake_unit": 0,
     "skill_id": 10310011,
     "skill_type": "EX1",
     "name": "リバーサルポーション",
@@ -22318,6 +23336,9 @@
   },
   {
     "unit_id": 1031001,
+    "game_unit_id": 1031001,
+    "unit_illust_id": 1031001,
+    "is_awake_unit": 0,
     "skill_id": 10310012,
     "skill_type": "EX2",
     "name": "バックフロウマイン",
@@ -22427,6 +23448,9 @@
   },
   {
     "unit_id": 1031002,
+    "game_unit_id": 1031002,
+    "unit_illust_id": 1031002,
+    "is_awake_unit": 0,
     "skill_id": 10310021,
     "skill_type": "EX1",
     "name": "オプティマイズ・ボム",
@@ -22572,6 +23596,9 @@
   },
   {
     "unit_id": 1031002,
+    "game_unit_id": 1031002,
+    "unit_illust_id": 1031002,
+    "is_awake_unit": 0,
     "skill_id": 10310022,
     "skill_type": "EX2",
     "name": "ケアフル・ジョーカー",
@@ -22723,6 +23750,9 @@
   },
   {
     "unit_id": 1032001,
+    "game_unit_id": 1032001,
+    "unit_illust_id": 1032001,
+    "is_awake_unit": 0,
     "skill_id": 10320011,
     "skill_type": "EX1",
     "name": "フォビドゥンリアクター",
@@ -22782,6 +23812,9 @@
   },
   {
     "unit_id": 1032001,
+    "game_unit_id": 1032001,
+    "unit_illust_id": 1032001,
+    "is_awake_unit": 0,
     "skill_id": 10320012,
     "skill_type": "EX2",
     "name": "シャドウメイルストラム",
@@ -22849,6 +23882,9 @@
   },
   {
     "unit_id": 1032002,
+    "game_unit_id": 1032002,
+    "unit_illust_id": 1032002,
+    "is_awake_unit": 0,
     "skill_id": 10320021,
     "skill_type": "EX1",
     "name": "マリシャスシャークバイト",
@@ -22944,6 +23980,9 @@
   },
   {
     "unit_id": 1032002,
+    "game_unit_id": 1032002,
+    "unit_illust_id": 1032002,
+    "is_awake_unit": 0,
     "skill_id": 10320022,
     "skill_type": "EX2",
     "name": "リヴァイアサングラッジ",
@@ -23038,6 +24077,9 @@
   },
   {
     "unit_id": 1032003,
+    "game_unit_id": 1032003,
+    "unit_illust_id": 1032003,
+    "is_awake_unit": 0,
     "skill_id": 10320031,
     "skill_type": "EX1",
     "name": "スロウスナイトメア",
@@ -23191,6 +24233,9 @@
   },
   {
     "unit_id": 1032003,
+    "game_unit_id": 1032003,
+    "unit_illust_id": 1032003,
+    "is_awake_unit": 0,
     "skill_id": 10320032,
     "skill_type": "EX2",
     "name": "アポカリプスリアクター",
@@ -23266,6 +24311,9 @@
   },
   {
     "unit_id": 1032003,
+    "game_unit_id": 1032003,
+    "unit_illust_id": 1032003,
+    "is_awake_unit": 0,
     "skill_id": "10320032_plus",
     "skill_type": "EX2+",
     "name": "ベルフェゴールディプラヴィティ",
@@ -23395,6 +24443,9 @@
   },
   {
     "unit_id": 1033001,
+    "game_unit_id": 1033001,
+    "unit_illust_id": 1033001,
+    "is_awake_unit": 0,
     "skill_id": 10330011,
     "skill_type": "EX1",
     "name": "ジ・アンビバレンツ",
@@ -23489,6 +24540,9 @@
   },
   {
     "unit_id": 1033001,
+    "game_unit_id": 1033001,
+    "unit_illust_id": 1033001,
+    "is_awake_unit": 0,
     "skill_id": 10330012,
     "skill_type": "EX2",
     "name": "イービルデストロイヤー",
@@ -23555,6 +24609,9 @@
   },
   {
     "unit_id": 1033002,
+    "game_unit_id": 1033002,
+    "unit_illust_id": 1033002,
+    "is_awake_unit": 0,
     "skill_id": 10330021,
     "skill_type": "EX1",
     "name": "アクロバット・サーカス\t",
@@ -23617,6 +24674,9 @@
   },
   {
     "unit_id": 1033002,
+    "game_unit_id": 1033002,
+    "unit_illust_id": 1033002,
+    "is_awake_unit": 0,
     "skill_id": 10330022,
     "skill_type": "EX2",
     "name": "ヴァーティカル・ブレイバー\t",
@@ -23792,6 +24852,9 @@
   },
   {
     "unit_id": 1033003,
+    "game_unit_id": 1033003,
+    "unit_illust_id": 1033003,
+    "is_awake_unit": 0,
     "skill_id": 10330031,
     "skill_type": "EX1",
     "name": "ポッピン・バズーカ",
@@ -23903,6 +24966,9 @@
   },
   {
     "unit_id": 1033003,
+    "game_unit_id": 1033003,
+    "unit_illust_id": 1033003,
+    "is_awake_unit": 0,
     "skill_id": 10330032,
     "skill_type": "EX2",
     "name": "ファイヤー・オブ・セレンディップ",
@@ -24011,6 +25077,9 @@
   },
   {
     "unit_id": 1034001,
+    "game_unit_id": 1034001,
+    "unit_illust_id": 1034001,
+    "is_awake_unit": 0,
     "skill_id": 10340011,
     "skill_type": "EX1",
     "name": "肉球ラッシュ",
@@ -24077,6 +25146,9 @@
   },
   {
     "unit_id": 1034001,
+    "game_unit_id": 1034001,
+    "unit_illust_id": 1034001,
+    "is_awake_unit": 0,
     "skill_id": 10340012,
     "skill_type": "EX2",
     "name": "ケルベロス百裂拳",
@@ -24140,6 +25212,9 @@
   },
   {
     "unit_id": 1034002,
+    "game_unit_id": 1034002,
+    "unit_illust_id": 1034002,
+    "is_awake_unit": 0,
     "skill_id": 10340021,
     "skill_type": "EX1",
     "name": "爆速ダイナマイト",
@@ -24241,6 +25316,9 @@
   },
   {
     "unit_id": 1034002,
+    "game_unit_id": 1034002,
+    "unit_illust_id": 1034002,
+    "is_awake_unit": 0,
     "skill_id": 10340022,
     "skill_type": "EX2",
     "name": "ワンダヘル・ゲート",
@@ -24341,6 +25419,9 @@
   },
   {
     "unit_id": 1035001,
+    "game_unit_id": 1035001,
+    "unit_illust_id": 1035001,
+    "is_awake_unit": 0,
     "skill_id": 10350011,
     "skill_type": "EX1",
     "name": "ミサイルレイン",
@@ -24407,6 +25488,9 @@
   },
   {
     "unit_id": 1035001,
+    "game_unit_id": 1035001,
+    "unit_illust_id": 1035001,
+    "is_awake_unit": 0,
     "skill_id": 10350012,
     "skill_type": "EX2",
     "name": "ガトリングロンド",
@@ -24470,6 +25554,9 @@
   },
   {
     "unit_id": 1035002,
+    "game_unit_id": 1035002,
+    "unit_illust_id": 1035002,
+    "is_awake_unit": 0,
     "skill_id": 10350021,
     "skill_type": "EX1",
     "name": "ミサイルストーム",
@@ -24658,6 +25745,9 @@
   },
   {
     "unit_id": 1035002,
+    "game_unit_id": 1035002,
+    "unit_illust_id": 1035002,
+    "is_awake_unit": 0,
     "skill_id": 10350022,
     "skill_type": "EX2",
     "name": "ガトリングパーティー",
@@ -24815,6 +25905,9 @@
   },
   {
     "unit_id": 1035003,
+    "game_unit_id": 1035003,
+    "unit_illust_id": 1035003,
+    "is_awake_unit": 0,
     "skill_id": 10350031,
     "skill_type": "EX1",
     "name": "ヴィンテージ・チャンス",
@@ -24961,6 +26054,9 @@
   },
   {
     "unit_id": 1035003,
+    "game_unit_id": 1035003,
+    "unit_illust_id": 1035003,
+    "is_awake_unit": 0,
     "skill_id": 10350032,
     "skill_type": "EX2",
     "name": "フルボディー・フレンジィ",
@@ -25161,6 +26257,9 @@
   },
   {
     "unit_id": 1036001,
+    "game_unit_id": 1036001,
+    "unit_illust_id": 1036001,
+    "is_awake_unit": 0,
     "skill_id": 10360011,
     "skill_type": "EX1",
     "name": "スチームスマッシュ",
@@ -25254,6 +26353,9 @@
   },
   {
     "unit_id": 1036001,
+    "game_unit_id": 1036001,
+    "unit_illust_id": 1036001,
+    "is_awake_unit": 0,
     "skill_id": 10360012,
     "skill_type": "EX2",
     "name": "ベイパークラッシュ",
@@ -25359,6 +26461,9 @@
   },
   {
     "unit_id": 1036002,
+    "game_unit_id": 1036002,
+    "unit_illust_id": 1036002,
+    "is_awake_unit": 0,
     "skill_id": 10360021,
     "skill_type": "EX1",
     "name": "マジェスティック・ベット",
@@ -25511,6 +26616,9 @@
   },
   {
     "unit_id": 1036002,
+    "game_unit_id": 1036002,
+    "unit_illust_id": 1036002,
+    "is_awake_unit": 0,
     "skill_id": 10360022,
     "skill_type": "EX2",
     "name": "フルール・ド・フォーチュン",
@@ -25673,6 +26781,9 @@
   },
   {
     "unit_id": 1036003,
+    "game_unit_id": 1036003,
+    "unit_illust_id": 1036003,
+    "is_awake_unit": 0,
     "skill_id": 10360031,
     "skill_type": "EX1",
     "name": "ミーティアスマッシャー",
@@ -25807,6 +26918,9 @@
   },
   {
     "unit_id": 1036003,
+    "game_unit_id": 1036003,
+    "unit_illust_id": 1036003,
+    "is_awake_unit": 0,
     "skill_id": 10360032,
     "skill_type": "EX2",
     "name": "ミラージュペネトレイター",
@@ -25948,6 +27062,9 @@
   },
   {
     "unit_id": 1037001,
+    "game_unit_id": 1037001,
+    "unit_illust_id": 1037001,
+    "is_awake_unit": 0,
     "skill_id": 10370011,
     "skill_type": "EX1",
     "name": "ふわふわバッシュドノエル",
@@ -26021,6 +27138,9 @@
   },
   {
     "unit_id": 1037001,
+    "game_unit_id": 1037001,
+    "unit_illust_id": 1037001,
+    "is_awake_unit": 0,
     "skill_id": 10370012,
     "skill_type": "EX2",
     "name": "ふわふわシュークビーム",
@@ -26084,6 +27204,9 @@
   },
   {
     "unit_id": 1037002,
+    "game_unit_id": 1037002,
+    "unit_illust_id": 1037002,
+    "is_awake_unit": 0,
     "skill_id": 10370021,
     "skill_type": "EX1",
     "name": "パンプ筋力～♪",
@@ -26198,6 +27321,9 @@
   },
   {
     "unit_id": 1037002,
+    "game_unit_id": 1037002,
+    "unit_illust_id": 1037002,
+    "is_awake_unit": 0,
     "skill_id": 10370022,
     "skill_type": "EX2",
     "name": "パワ～アップルパイ♪",
@@ -26295,6 +27421,9 @@
   },
   {
     "unit_id": 1037003,
+    "game_unit_id": 1037003,
+    "unit_illust_id": 1037003,
+    "is_awake_unit": 0,
     "skill_id": 10370031,
     "skill_type": "EX1",
     "name": "しゃりしゃり・シャーベット♪",
@@ -26431,6 +27560,9 @@
   },
   {
     "unit_id": 1037003,
+    "game_unit_id": 1037003,
+    "unit_illust_id": 1037003,
+    "is_awake_unit": 0,
     "skill_id": 10370032,
     "skill_type": "EX2",
     "name": "しゅわっと・ソーダ～♪",
@@ -26512,6 +27644,9 @@
   },
   {
     "unit_id": 1038001,
+    "game_unit_id": 1038001,
+    "unit_illust_id": 1038001,
+    "is_awake_unit": 0,
     "skill_id": 10380011,
     "skill_type": "EX1",
     "name": "イグナイトウェイブ",
@@ -26577,6 +27712,9 @@
   },
   {
     "unit_id": 1038001,
+    "game_unit_id": 1038001,
+    "unit_illust_id": 1038001,
+    "is_awake_unit": 0,
     "skill_id": 10380012,
     "skill_type": "EX2",
     "name": "ヒートヘイズダンス",
@@ -26674,6 +27812,9 @@
   },
   {
     "unit_id": 1038002,
+    "game_unit_id": 1038002,
+    "unit_illust_id": 1038002,
+    "is_awake_unit": 0,
     "skill_id": 10380021,
     "skill_type": "EX1",
     "name": "アクセラレイド",
@@ -26784,6 +27925,9 @@
   },
   {
     "unit_id": 1038002,
+    "game_unit_id": 1038002,
+    "unit_illust_id": 1038002,
+    "is_awake_unit": 0,
     "skill_id": 10380022,
     "skill_type": "EX2",
     "name": "ファシネイティングウィンド",
@@ -26881,6 +28025,9 @@
   },
   {
     "unit_id": 1038003,
+    "game_unit_id": 1038003,
+    "unit_illust_id": 1038003,
+    "is_awake_unit": 0,
     "skill_id": 10380031,
     "skill_type": "EX1",
     "name": "チョコエンベリッシュ",
@@ -27004,6 +28151,9 @@
   },
   {
     "unit_id": 1038003,
+    "game_unit_id": 1038003,
+    "unit_illust_id": 1038003,
+    "is_awake_unit": 0,
     "skill_id": 10380032,
     "skill_type": "EX2",
     "name": "ストロベリーガーニッシュ",
@@ -27125,6 +28275,9 @@
   },
   {
     "unit_id": 1039001,
+    "game_unit_id": 1039001,
+    "unit_illust_id": 1039001,
+    "is_awake_unit": 0,
     "skill_id": 10390011,
     "skill_type": "EX1",
     "name": "アンブラルヴァナルガンド",
@@ -27242,6 +28395,9 @@
   },
   {
     "unit_id": 1039001,
+    "game_unit_id": 1039001,
+    "unit_illust_id": 1039001,
+    "is_awake_unit": 0,
     "skill_id": 10390012,
     "skill_type": "EX2",
     "name": "ファヴニールカタストロフ",
@@ -27335,6 +28491,9 @@
   },
   {
     "unit_id": 1040001,
+    "game_unit_id": 1040001,
+    "unit_illust_id": 1040001,
+    "is_awake_unit": 0,
     "skill_id": 10400011,
     "skill_type": "EX1",
     "name": "ライトニングゲイル",
@@ -27442,6 +28601,9 @@
   },
   {
     "unit_id": 1040001,
+    "game_unit_id": 1040001,
+    "unit_illust_id": 1040001,
+    "is_awake_unit": 0,
     "skill_id": 10400012,
     "skill_type": "EX2",
     "name": "スイーティートリック",
@@ -27564,6 +28726,9 @@
   },
   {
     "unit_id": 1041001,
+    "game_unit_id": 1041001,
+    "unit_illust_id": 1041001,
+    "is_awake_unit": 0,
     "skill_id": 10410011,
     "skill_type": "EX1",
     "name": "ラプチャーガム",
@@ -27647,6 +28812,9 @@
   },
   {
     "unit_id": 1041001,
+    "game_unit_id": 1041001,
+    "unit_illust_id": 1041001,
+    "is_awake_unit": 0,
     "skill_id": 10410012,
     "skill_type": "EX2",
     "name": "ジャミングボム",
@@ -27748,6 +28916,9 @@
   },
   {
     "unit_id": 1041002,
+    "game_unit_id": 1041002,
+    "unit_illust_id": 1041002,
+    "is_awake_unit": 0,
     "skill_id": 10410021,
     "skill_type": "EX1",
     "name": "レバレッジスラッグ",
@@ -27833,6 +29004,9 @@
   },
   {
     "unit_id": 1041002,
+    "game_unit_id": 1041002,
+    "unit_illust_id": 1041002,
+    "is_awake_unit": 0,
     "skill_id": 10410022,
     "skill_type": "EX2",
     "name": "バックショットボム",
@@ -27897,6 +29071,9 @@
   },
   {
     "unit_id": 1041003,
+    "game_unit_id": 1041003,
+    "unit_illust_id": 1041003,
+    "is_awake_unit": 0,
     "skill_id": 10410031,
     "skill_type": "EX1",
     "name": "トリックスター・ロール",
@@ -28054,6 +29231,9 @@
   },
   {
     "unit_id": 1041003,
+    "game_unit_id": 1041003,
+    "unit_illust_id": 1041003,
+    "is_awake_unit": 0,
     "skill_id": 10410032,
     "skill_type": "EX2",
     "name": "ラビットホップ・チート",
@@ -28199,6 +29379,9 @@
   },
   {
     "unit_id": 1041003,
+    "game_unit_id": 1041003,
+    "unit_illust_id": 1041003,
+    "is_awake_unit": 0,
     "skill_id": "10410032_plus",
     "skill_type": "EX2+",
     "name": "トリック・ファイブカード",
@@ -28412,6 +29595,9 @@
   },
   {
     "unit_id": 1041004,
+    "game_unit_id": 1041004,
+    "unit_illust_id": 1041004,
+    "is_awake_unit": 0,
     "skill_id": 10410041,
     "skill_type": "EX1",
     "name": "トラピーズトロピカル",
@@ -28545,6 +29731,9 @@
   },
   {
     "unit_id": 1041004,
+    "game_unit_id": 1041004,
+    "unit_illust_id": 1041004,
+    "is_awake_unit": 0,
     "skill_id": 10410042,
     "skill_type": "EX2",
     "name": "アトミックサマーソルト",
@@ -28728,6 +29917,9 @@
   },
   {
     "unit_id": 1041004,
+    "game_unit_id": 1041004,
+    "unit_illust_id": 1041004,
+    "is_awake_unit": 0,
     "skill_id": "10410042_plus",
     "skill_type": "EX2+",
     "name": "アドバンスド・ボヨンボヨン",
@@ -28911,6 +30103,9 @@
   },
   {
     "unit_id": 1042001,
+    "game_unit_id": 1042001,
+    "unit_illust_id": 1042001,
+    "is_awake_unit": 0,
     "skill_id": 10420011,
     "skill_type": "EX1",
     "name": "リバースウイング",
@@ -28988,6 +30183,9 @@
   },
   {
     "unit_id": 1042001,
+    "game_unit_id": 1042001,
+    "unit_illust_id": 1042001,
+    "is_awake_unit": 0,
     "skill_id": 10420012,
     "skill_type": "EX2",
     "name": "パイロ リラプス",
@@ -29058,6 +30256,9 @@
   },
   {
     "unit_id": 1042002,
+    "game_unit_id": 1042002,
+    "unit_illust_id": 1042002,
+    "is_awake_unit": 0,
     "skill_id": 10420021,
     "skill_type": "EX1",
     "name": "ブレッシング・ライト",
@@ -29157,6 +30358,9 @@
   },
   {
     "unit_id": 1042002,
+    "game_unit_id": 1042002,
+    "unit_illust_id": 1042002,
+    "is_awake_unit": 0,
     "skill_id": 10420022,
     "skill_type": "EX2",
     "name": "ハッピー・ホーリートーチ",
@@ -29268,6 +30472,9 @@
   },
   {
     "unit_id": 1042003,
+    "game_unit_id": 1042003,
+    "unit_illust_id": 1042003,
+    "is_awake_unit": 0,
     "skill_id": 10420031,
     "skill_type": "EX1",
     "name": "ブレイジングディバイド",
@@ -29380,6 +30587,9 @@
   },
   {
     "unit_id": 1042003,
+    "game_unit_id": 1042003,
+    "unit_illust_id": 1042003,
+    "is_awake_unit": 0,
     "skill_id": 10420032,
     "skill_type": "EX2",
     "name": "ゴッドバードストライク",
@@ -29528,6 +30738,9 @@
   },
   {
     "unit_id": 1043001,
+    "game_unit_id": 1043001,
+    "unit_illust_id": 1043001,
+    "is_awake_unit": 0,
     "skill_id": 10430011,
     "skill_type": "EX1",
     "name": "ノックアップスプラッシュ",
@@ -29618,6 +30831,9 @@
   },
   {
     "unit_id": 1043001,
+    "game_unit_id": 1043001,
+    "unit_illust_id": 1043001,
+    "is_awake_unit": 0,
     "skill_id": 10430012,
     "skill_type": "EX2",
     "name": "ラッキーシュトローム",
@@ -29682,6 +30898,9 @@
   },
   {
     "unit_id": 1043002,
+    "game_unit_id": 1043002,
+    "unit_illust_id": 1043002,
+    "is_awake_unit": 0,
     "skill_id": 10430021,
     "skill_type": "EX1",
     "name": "ラッキースターレイン",
@@ -29787,6 +31006,9 @@
   },
   {
     "unit_id": 1043002,
+    "game_unit_id": 1043002,
+    "unit_illust_id": 1043002,
+    "is_awake_unit": 0,
     "skill_id": 10430022,
     "skill_type": "EX2",
     "name": "フォルトゥナフィーバー",
@@ -29888,6 +31110,9 @@
   },
   {
     "unit_id": 1043002,
+    "game_unit_id": 1043002,
+    "unit_illust_id": 1043002,
+    "is_awake_unit": 0,
     "skill_id": "10430022_plus",
     "skill_type": "EX2+",
     "name": "ジャックポットノヴァ",
@@ -30017,6 +31242,9 @@
   },
   {
     "unit_id": 1043003,
+    "game_unit_id": 1043003,
+    "unit_illust_id": 1043003,
+    "is_awake_unit": 0,
     "skill_id": 10430031,
     "skill_type": "EX1",
     "name": "アンラッキー・テンペスト",
@@ -30127,6 +31355,9 @@
   },
   {
     "unit_id": 1043003,
+    "game_unit_id": 1043003,
+    "unit_illust_id": 1043003,
+    "is_awake_unit": 0,
     "skill_id": 10430032,
     "skill_type": "EX2",
     "name": "フォルトゥーナ・ネメシス",
@@ -30284,6 +31515,9 @@
   },
   {
     "unit_id": 1043003,
+    "game_unit_id": 1043003,
+    "unit_illust_id": 1043003,
+    "is_awake_unit": 0,
     "skill_id": "10430032_plus",
     "skill_type": "EX2+",
     "name": "アンラッキー・デイブレイク",
@@ -30441,6 +31675,9 @@
   },
   {
     "unit_id": 1044001,
+    "game_unit_id": 1044001,
+    "unit_illust_id": 1044001,
+    "is_awake_unit": 0,
     "skill_id": 10440011,
     "skill_type": "EX1",
     "name": "エナジードレイン",
@@ -30554,6 +31791,9 @@
   },
   {
     "unit_id": 1044001,
+    "game_unit_id": 1044001,
+    "unit_illust_id": 1044001,
+    "is_awake_unit": 0,
     "skill_id": 10440012,
     "skill_type": "EX2",
     "name": "グラトニーバイト",
@@ -30645,6 +31885,9 @@
   },
   {
     "unit_id": 1044002,
+    "game_unit_id": 1044002,
+    "unit_illust_id": 1044002,
+    "is_awake_unit": 0,
     "skill_id": 10440021,
     "skill_type": "EX1",
     "name": "プリズム・ブラスター",
@@ -30803,6 +32046,9 @@
   },
   {
     "unit_id": 1044002,
+    "game_unit_id": 1044002,
+    "unit_illust_id": 1044002,
+    "is_awake_unit": 0,
     "skill_id": 10440022,
     "skill_type": "EX2",
     "name": "ハイライト・フルバースト",
@@ -30905,6 +32151,9 @@
   },
   {
     "unit_id": 1044003,
+    "game_unit_id": 1044003,
+    "unit_illust_id": 1044003,
+    "is_awake_unit": 0,
     "skill_id": 10440031,
     "skill_type": "EX1",
     "name": "エナジースパークル",
@@ -31047,6 +32296,9 @@
   },
   {
     "unit_id": 1044003,
+    "game_unit_id": 1044003,
+    "unit_illust_id": 1044003,
+    "is_awake_unit": 0,
     "skill_id": 10440032,
     "skill_type": "EX2",
     "name": "ボルテージリレイザー",
@@ -31154,6 +32406,9 @@
   },
   {
     "unit_id": 1045001,
+    "game_unit_id": 1045001,
+    "unit_illust_id": 1045001,
+    "is_awake_unit": 0,
     "skill_id": 10450011,
     "skill_type": "EX1",
     "name": "第三楽章・六華",
@@ -31251,6 +32506,9 @@
   },
   {
     "unit_id": 1045001,
+    "game_unit_id": 1045001,
+    "unit_illust_id": 1045001,
+    "is_awake_unit": 0,
     "skill_id": 10450012,
     "skill_type": "EX2",
     "name": "第四楽章・忘れ雪",
@@ -31386,6 +32644,9 @@
   },
   {
     "unit_id": 1046001,
+    "game_unit_id": 1046001,
+    "unit_illust_id": 1046001,
+    "is_awake_unit": 0,
     "skill_id": 10460011,
     "skill_type": "EX1",
     "name": "四転藤燕",
@@ -31512,6 +32773,9 @@
   },
   {
     "unit_id": 1046001,
+    "game_unit_id": 1046001,
+    "unit_illust_id": 1046001,
+    "is_awake_unit": 0,
     "skill_id": 10460012,
     "skill_type": "EX2",
     "name": "六頭蛇藤",
@@ -31608,6 +32872,9 @@
   },
   {
     "unit_id": 1047001,
+    "game_unit_id": 1047001,
+    "unit_illust_id": 1047001,
+    "is_awake_unit": 0,
     "skill_id": 10470011,
     "skill_type": "EX1",
     "name": "ディヴォーテッド・ワルツ",
@@ -31678,6 +32945,9 @@
   },
   {
     "unit_id": 1047001,
+    "game_unit_id": 1047001,
+    "unit_illust_id": 1047001,
+    "is_awake_unit": 0,
     "skill_id": 10470012,
     "skill_type": "EX2",
     "name": "ディヴォーテッド・ラプソディー",
@@ -31739,6 +33009,9 @@
   },
   {
     "unit_id": 1047002,
+    "game_unit_id": 1047002,
+    "unit_illust_id": 1047002,
+    "is_awake_unit": 0,
     "skill_id": 10470021,
     "skill_type": "EX1",
     "name": "プリンセス・チャーミング",
@@ -31862,6 +33135,9 @@
   },
   {
     "unit_id": 1047002,
+    "game_unit_id": 1047002,
+    "unit_illust_id": 1047002,
+    "is_awake_unit": 0,
     "skill_id": 10470022,
     "skill_type": "EX2",
     "name": "アイム・オール・ユアーズ",
@@ -31996,6 +33272,9 @@
   },
   {
     "unit_id": 1048001,
+    "game_unit_id": 1048001,
+    "unit_illust_id": 1048001,
+    "is_awake_unit": 0,
     "skill_id": 10480011,
     "skill_type": "EX1",
     "name": "グラビトンプレッシャー",
@@ -32083,6 +33362,9 @@
   },
   {
     "unit_id": 1048001,
+    "game_unit_id": 1048001,
+    "unit_illust_id": 1048001,
+    "is_awake_unit": 0,
     "skill_id": 10480012,
     "skill_type": "EX2",
     "name": "ブラックホール・ドミネーション",
@@ -32179,6 +33461,9 @@
   },
   {
     "unit_id": 1048002,
+    "game_unit_id": 1048002,
+    "unit_illust_id": 1048002,
+    "is_awake_unit": 0,
     "skill_id": 10480021,
     "skill_type": "EX1",
     "name": "メテオスターマイン",
@@ -32245,6 +33530,9 @@
   },
   {
     "unit_id": 1048002,
+    "game_unit_id": 1048002,
+    "unit_illust_id": 1048002,
+    "is_awake_unit": 0,
     "skill_id": 10480022,
     "skill_type": "EX2",
     "name": "ブラックホールイグニッション",
@@ -32365,6 +33653,9 @@
   },
   {
     "unit_id": 1048003,
+    "game_unit_id": 1048003,
+    "unit_illust_id": 1048003,
+    "is_awake_unit": 0,
     "skill_id": 10480031,
     "skill_type": "EX1",
     "name": "デストームテイル",
@@ -32479,6 +33770,9 @@
   },
   {
     "unit_id": 1048003,
+    "game_unit_id": 1048003,
+    "unit_illust_id": 1048003,
+    "is_awake_unit": 0,
     "skill_id": 10480032,
     "skill_type": "EX2",
     "name": "ブラックホールブレイザー",
@@ -32608,6 +33902,9 @@
   },
   {
     "unit_id": 1049001,
+    "game_unit_id": 1049001,
+    "unit_illust_id": 1049001,
+    "is_awake_unit": 0,
     "skill_id": 10490011,
     "skill_type": "EX1",
     "name": "みるみる元気、ホルスタミン",
@@ -32705,6 +34002,9 @@
   },
   {
     "unit_id": 1049001,
+    "game_unit_id": 1049001,
+    "unit_illust_id": 1049001,
+    "is_awake_unit": 0,
     "skill_id": 10490012,
     "skill_type": "EX2",
     "name": "元気砲・ディスチャージ",
@@ -32773,6 +34073,9 @@
   },
   {
     "unit_id": 1049002,
+    "game_unit_id": 1049002,
+    "unit_illust_id": 1049002,
+    "is_awake_unit": 0,
     "skill_id": 10490021,
     "skill_type": "EX1",
     "name": "バーニングギフト",
@@ -32895,6 +34198,9 @@
   },
   {
     "unit_id": 1049002,
+    "game_unit_id": 1049002,
+    "unit_illust_id": 1049002,
+    "is_awake_unit": 0,
     "skill_id": 10490022,
     "skill_type": "EX2",
     "name": "メリージョーカー",
@@ -33041,6 +34347,9 @@
   },
   {
     "unit_id": 1049003,
+    "game_unit_id": 1049003,
+    "unit_illust_id": 1049003,
+    "is_awake_unit": 0,
     "skill_id": 10490031,
     "skill_type": "EX1",
     "name": "火山烈風",
@@ -33190,6 +34499,9 @@
   },
   {
     "unit_id": 1049003,
+    "game_unit_id": 1049003,
+    "unit_illust_id": 1049003,
+    "is_awake_unit": 0,
     "skill_id": 10490032,
     "skill_type": "EX2",
     "name": "紅蓮ノ神風",
@@ -33326,6 +34638,9 @@
   },
   {
     "unit_id": 1050001,
+    "game_unit_id": 1050001,
+    "unit_illust_id": 1050001,
+    "is_awake_unit": 0,
     "skill_id": 10500011,
     "skill_type": "EX1",
     "name": "マキシマムメディスン",
@@ -33382,6 +34697,9 @@
   },
   {
     "unit_id": 1050001,
+    "game_unit_id": 1050001,
+    "unit_illust_id": 1050001,
+    "is_awake_unit": 0,
     "skill_id": 10500012,
     "skill_type": "EX2",
     "name": "ヒーリングペイン",
@@ -33480,6 +34798,9 @@
   },
   {
     "unit_id": 1051001,
+    "game_unit_id": 1051001,
+    "unit_illust_id": 1051001,
+    "is_awake_unit": 0,
     "skill_id": 10510011,
     "skill_type": "EX1",
     "name": "ルクスリトリビューション",
@@ -33593,6 +34914,9 @@
   },
   {
     "unit_id": 1051001,
+    "game_unit_id": 1051001,
+    "unit_illust_id": 1051001,
+    "is_awake_unit": 0,
     "skill_id": 10510012,
     "skill_type": "EX2",
     "name": "ホーリーカース",
@@ -33735,6 +35059,9 @@
   },
   {
     "unit_id": 1051002,
+    "game_unit_id": 1051002,
+    "unit_illust_id": 1051002,
+    "is_awake_unit": 0,
     "skill_id": 10510021,
     "skill_type": "EX1",
     "name": "ダスク・ファンタズマ",
@@ -33826,6 +35153,9 @@
   },
   {
     "unit_id": 1051002,
+    "game_unit_id": 1051002,
+    "unit_illust_id": 1051002,
+    "is_awake_unit": 0,
     "skill_id": 10510022,
     "skill_type": "EX2",
     "name": "セイクリッド・スカージ",
@@ -33964,6 +35294,9 @@
   },
   {
     "unit_id": 1051002,
+    "game_unit_id": 1051002,
+    "unit_illust_id": 1051002,
+    "is_awake_unit": 0,
     "skill_id": "10510022_plus",
     "skill_type": "EX2+",
     "name": "セイクリッド・スカージ+",
@@ -34086,6 +35419,9 @@
   },
   {
     "unit_id": 1051003,
+    "game_unit_id": 1051003,
+    "unit_illust_id": 1051003,
+    "is_awake_unit": 0,
     "skill_id": 10510031,
     "skill_type": "EX1",
     "name": "アブソリュートキャロル",
@@ -34228,6 +35564,9 @@
   },
   {
     "unit_id": 1051003,
+    "game_unit_id": 1051003,
+    "unit_illust_id": 1051003,
+    "is_awake_unit": 0,
     "skill_id": 10510032,
     "skill_type": "EX2",
     "name": "ディバインパニッシュメント",
@@ -34346,6 +35685,9 @@
   },
   {
     "unit_id": 1051003,
+    "game_unit_id": 1051003,
+    "unit_illust_id": 1051003,
+    "is_awake_unit": 0,
     "skill_id": "10510032_plus",
     "skill_type": "EX2+",
     "name": "インフィニット・ゴスペル",
@@ -34517,6 +35859,9 @@
   },
   {
     "unit_id": 1052001,
+    "game_unit_id": 1052001,
+    "unit_illust_id": 1052001,
+    "is_awake_unit": 0,
     "skill_id": 10520011,
     "skill_type": "EX1",
     "name": "魔導八式──プロメテウス",
@@ -34634,6 +35979,9 @@
   },
   {
     "unit_id": 1052001,
+    "game_unit_id": 1052001,
+    "unit_illust_id": 1052001,
+    "is_awake_unit": 0,
     "skill_id": 10520012,
     "skill_type": "EX2",
     "name": "魔導九式──炎神",
@@ -34730,6 +36078,9 @@
   },
   {
     "unit_id": 1052002,
+    "game_unit_id": 1052002,
+    "unit_illust_id": 1052002,
+    "is_awake_unit": 0,
     "skill_id": 10520021,
     "skill_type": "EX1",
     "name": "炎天三式──日之出蘭",
@@ -34824,6 +36175,9 @@
   },
   {
     "unit_id": 1052002,
+    "game_unit_id": 1052002,
+    "unit_illust_id": 1052002,
+    "is_awake_unit": 0,
     "skill_id": 10520022,
     "skill_type": "EX2",
     "name": "炎天七式──白紫陽花",
@@ -34923,6 +36277,9 @@
   },
   {
     "unit_id": 1053001,
+    "game_unit_id": 1053001,
+    "unit_illust_id": 1053001,
+    "is_awake_unit": 0,
     "skill_id": 10530011,
     "skill_type": "EX1",
     "name": "アクアリフレクション",
@@ -35017,6 +36374,9 @@
   },
   {
     "unit_id": 1053001,
+    "game_unit_id": 1053001,
+    "unit_illust_id": 1053001,
+    "is_awake_unit": 0,
     "skill_id": 10530012,
     "skill_type": "EX2",
     "name": "ミラージュアルター",
@@ -35111,6 +36471,9 @@
   },
   {
     "unit_id": 1054001,
+    "game_unit_id": 1054001,
+    "unit_illust_id": 1054001,
+    "is_awake_unit": 0,
     "skill_id": 10540011,
     "skill_type": "EX1",
     "name": "ブリッツシュナイデン",
@@ -35177,6 +36540,9 @@
   },
   {
     "unit_id": 1054001,
+    "game_unit_id": 1054001,
+    "unit_illust_id": 1054001,
+    "is_awake_unit": 0,
     "skill_id": 10540012,
     "skill_type": "EX2",
     "name": "ケーニッヒオータイル",
@@ -35239,6 +36605,9 @@
   },
   {
     "unit_id": 1054002,
+    "game_unit_id": 1054002,
+    "unit_illust_id": 1054002,
+    "is_awake_unit": 0,
     "skill_id": 10540021,
     "skill_type": "EX1",
     "name": "ヴェッテウムシュラーゲン",
@@ -35309,6 +36678,9 @@
   },
   {
     "unit_id": 1054002,
+    "game_unit_id": 1054002,
+    "unit_illust_id": 1054002,
+    "is_awake_unit": 0,
     "skill_id": 10540022,
     "skill_type": "EX2",
     "name": "トランフェンシュラーク",
@@ -35395,6 +36767,9 @@
   },
   {
     "unit_id": 1055001,
+    "game_unit_id": 1055001,
+    "unit_illust_id": 1055001,
+    "is_awake_unit": 0,
     "skill_id": 10550011,
     "skill_type": "EX1",
     "name": "ハイスピード・スピアー",
@@ -35485,6 +36860,9 @@
   },
   {
     "unit_id": 1055001,
+    "game_unit_id": 1055001,
+    "unit_illust_id": 1055001,
+    "is_awake_unit": 0,
     "skill_id": 10550012,
     "skill_type": "EX2",
     "name": "ラピッドファイア・ランス",
@@ -35614,6 +36992,9 @@
   },
   {
     "unit_id": 1055002,
+    "game_unit_id": 1055002,
+    "unit_illust_id": 1055002,
+    "is_awake_unit": 0,
     "skill_id": 10550021,
     "skill_type": "EX1",
     "name": "トラッキング・スピア",
@@ -35730,6 +37111,9 @@
   },
   {
     "unit_id": 1055002,
+    "game_unit_id": 1055002,
+    "unit_illust_id": 1055002,
+    "is_awake_unit": 0,
     "skill_id": 10550022,
     "skill_type": "EX2",
     "name": "キャッスル・ブレイカー",
@@ -35855,6 +37239,9 @@
   },
   {
     "unit_id": 1056001,
+    "game_unit_id": 1056001,
+    "unit_illust_id": 1056001,
+    "is_awake_unit": 0,
     "skill_id": 10560011,
     "skill_type": "EX1",
     "name": "フラッシュサイトバスター",
@@ -35957,6 +37344,9 @@
   },
   {
     "unit_id": 1056001,
+    "game_unit_id": 1056001,
+    "unit_illust_id": 1056001,
+    "is_awake_unit": 0,
     "skill_id": 10560012,
     "skill_type": "EX2",
     "name": "アーマードフルバースト",
@@ -36048,6 +37438,9 @@
   },
   {
     "unit_id": 1056002,
+    "game_unit_id": 1056002,
+    "unit_illust_id": 1056002,
+    "is_awake_unit": 0,
     "skill_id": 10560021,
     "skill_type": "EX1",
     "name": "サマーフレアドライブ",
@@ -36150,6 +37543,9 @@
   },
   {
     "unit_id": 1056002,
+    "game_unit_id": 1056002,
+    "unit_illust_id": 1056002,
+    "is_awake_unit": 0,
     "skill_id": 10560022,
     "skill_type": "EX2",
     "name": "サマーエンドブラスト",
@@ -36256,6 +37652,9 @@
   },
   {
     "unit_id": 1056003,
+    "game_unit_id": 1056003,
+    "unit_illust_id": 1056003,
+    "is_awake_unit": 0,
     "skill_id": 10560031,
     "skill_type": "EX1",
     "name": "ギフトドライブ",
@@ -36348,6 +37747,9 @@
   },
   {
     "unit_id": 1056003,
+    "game_unit_id": 1056003,
+    "unit_illust_id": 1056003,
+    "is_awake_unit": 0,
     "skill_id": 10560032,
     "skill_type": "EX2",
     "name": "ティンセルアトラクター",
@@ -36443,6 +37845,9 @@
   },
   {
     "unit_id": 1057001,
+    "game_unit_id": 1057001,
+    "unit_illust_id": 1057001,
+    "is_awake_unit": 0,
     "skill_id": 10570011,
     "skill_type": "EX1",
     "name": "アストロ・ダイスロール",
@@ -36566,6 +37971,9 @@
   },
   {
     "unit_id": 1057001,
+    "game_unit_id": 1057001,
+    "unit_illust_id": 1057001,
+    "is_awake_unit": 0,
     "skill_id": 10570012,
     "skill_type": "EX2",
     "name": "コメット・ペンデュラム",
@@ -36663,6 +38071,9 @@
   },
   {
     "unit_id": 1057002,
+    "game_unit_id": 1057002,
+    "unit_illust_id": 1057002,
+    "is_awake_unit": 0,
     "skill_id": 10570021,
     "skill_type": "EX1",
     "name": "吉人天相",
@@ -36761,6 +38172,9 @@
   },
   {
     "unit_id": 1057002,
+    "game_unit_id": 1057002,
+    "unit_illust_id": 1057002,
+    "is_awake_unit": 0,
     "skill_id": 10570022,
     "skill_type": "EX2",
     "name": "黄道吉日",
@@ -36853,6 +38267,9 @@
   },
   {
     "unit_id": 1057003,
+    "game_unit_id": 1057003,
+    "unit_illust_id": 1057003,
+    "is_awake_unit": 0,
     "skill_id": 10570031,
     "skill_type": "EX1",
     "name": "アストロ・ブラスト",
@@ -36982,6 +38399,9 @@
   },
   {
     "unit_id": 1057003,
+    "game_unit_id": 1057003,
+    "unit_illust_id": 1057003,
+    "is_awake_unit": 0,
     "skill_id": 10570032,
     "skill_type": "EX2",
     "name": "ファイナル・アクエリアス",
@@ -37113,6 +38533,9 @@
   },
   {
     "unit_id": 1057004,
+    "game_unit_id": 1057004,
+    "unit_illust_id": 1057004,
+    "is_awake_unit": 0,
     "skill_id": 10570041,
     "skill_type": "EX1",
     "name": "亡郷愛離",
@@ -37232,6 +38655,9 @@
   },
   {
     "unit_id": 1057004,
+    "game_unit_id": 1057004,
+    "unit_illust_id": 1057004,
+    "is_awake_unit": 0,
     "skill_id": 10570042,
     "skill_type": "EX2",
     "name": "六怨夢縛",
@@ -37368,6 +38794,9 @@
   },
   {
     "unit_id": 1058001,
+    "game_unit_id": 1058001,
+    "unit_illust_id": 1058001,
+    "is_awake_unit": 0,
     "skill_id": 10580011,
     "skill_type": "EX1",
     "name": "千桜剣",
@@ -37481,6 +38910,9 @@
   },
   {
     "unit_id": 1058001,
+    "game_unit_id": 1058001,
+    "unit_illust_id": 1058001,
+    "is_awake_unit": 0,
     "skill_id": 10580012,
     "skill_type": "EX2",
     "name": "豪華絢爛",
@@ -37608,6 +39040,9 @@
   },
   {
     "unit_id": 1058002,
+    "game_unit_id": 1058002,
+    "unit_illust_id": 1058002,
+    "is_awake_unit": 0,
     "skill_id": 10580021,
     "skill_type": "EX1",
     "name": "鳳凰剣",
@@ -37723,6 +39158,9 @@
   },
   {
     "unit_id": 1058002,
+    "game_unit_id": 1058002,
+    "unit_illust_id": 1058002,
+    "is_awake_unit": 0,
     "skill_id": 10580022,
     "skill_type": "EX2",
     "name": "九浄の太刀",
@@ -37906,6 +39344,9 @@
   },
   {
     "unit_id": 1058002,
+    "game_unit_id": 1058002,
+    "unit_illust_id": 1058002,
+    "is_awake_unit": 0,
     "skill_id": "10580022_plus",
     "skill_type": "EX2+",
     "name": "張物仕掛け・九浄の滝",
@@ -38089,6 +39530,9 @@
   },
   {
     "unit_id": 1059001,
+    "game_unit_id": 1059001,
+    "unit_illust_id": 1059001,
+    "is_awake_unit": 0,
     "skill_id": 10590011,
     "skill_type": "EX1",
     "name": "ハッピーライディング",
@@ -38162,6 +39606,9 @@
   },
   {
     "unit_id": 1059001,
+    "game_unit_id": 1059001,
+    "unit_illust_id": 1059001,
+    "is_awake_unit": 0,
     "skill_id": 10590012,
     "skill_type": "EX2",
     "name": "オフ・ザ・リップル",
@@ -38262,6 +39709,9 @@
   },
   {
     "unit_id": 1059002,
+    "game_unit_id": 1059002,
+    "unit_illust_id": 1059002,
+    "is_awake_unit": 0,
     "skill_id": 10590021,
     "skill_type": "EX1",
     "name": "シャイニー・ギフト",
@@ -38400,6 +39850,9 @@
   },
   {
     "unit_id": 1059002,
+    "game_unit_id": 1059002,
+    "unit_illust_id": 1059002,
+    "is_awake_unit": 0,
     "skill_id": 10590022,
     "skill_type": "EX2",
     "name": "サンライズ・サーフィン",
@@ -38551,6 +40004,9 @@
   },
   {
     "unit_id": 1060001,
+    "game_unit_id": 1060001,
+    "unit_illust_id": 1060001,
+    "is_awake_unit": 0,
     "skill_id": 10600011,
     "skill_type": "EX1",
     "name": "ヒーリングソング",
@@ -38623,6 +40079,9 @@
   },
   {
     "unit_id": 1060001,
+    "game_unit_id": 1060001,
+    "unit_illust_id": 1060001,
+    "is_awake_unit": 0,
     "skill_id": 10600012,
     "skill_type": "EX2",
     "name": "インスパイアボイス",
@@ -38789,6 +40248,9 @@
   },
   {
     "unit_id": 1060002,
+    "game_unit_id": 1060002,
+    "unit_illust_id": 1060002,
+    "is_awake_unit": 0,
     "skill_id": 10600021,
     "skill_type": "EX1",
     "name": "バウンシング・ハニー",
@@ -38917,6 +40379,9 @@
   },
   {
     "unit_id": 1060002,
+    "game_unit_id": 1060002,
+    "unit_illust_id": 1060002,
+    "is_awake_unit": 0,
     "skill_id": 10600022,
     "skill_type": "EX2",
     "name": "スウィート・パイロスター",
@@ -39086,6 +40551,9 @@
   },
   {
     "unit_id": 1061001,
+    "game_unit_id": 1061001,
+    "unit_illust_id": 1061001,
+    "is_awake_unit": 0,
     "skill_id": 10610011,
     "skill_type": "EX1",
     "name": "セルフフォーメーション",
@@ -39173,6 +40641,9 @@
   },
   {
     "unit_id": 1061001,
+    "game_unit_id": 1061001,
+    "unit_illust_id": 1061001,
+    "is_awake_unit": 0,
     "skill_id": 10610012,
     "skill_type": "EX2",
     "name": "パペットマーチ",
@@ -39242,6 +40713,9 @@
   },
   {
     "unit_id": 1061002,
+    "game_unit_id": 1061002,
+    "unit_illust_id": 1061002,
+    "is_awake_unit": 0,
     "skill_id": 10610021,
     "skill_type": "EX1",
     "name": "イレイジャーウィッチ",
@@ -39343,6 +40817,9 @@
   },
   {
     "unit_id": 1061002,
+    "game_unit_id": 1061002,
+    "unit_illust_id": 1061002,
+    "is_awake_unit": 0,
     "skill_id": 10610022,
     "skill_type": "EX2",
     "name": "マリオネットエグゼキューション",
@@ -39448,6 +40925,9 @@
   },
   {
     "unit_id": 1062001,
+    "game_unit_id": 1062001,
+    "unit_illust_id": 1062001,
+    "is_awake_unit": 0,
     "skill_id": 10620011,
     "skill_type": "EX1",
     "name": "ルミナスバインド",
@@ -39524,6 +41004,9 @@
   },
   {
     "unit_id": 1062001,
+    "game_unit_id": 1062001,
+    "unit_illust_id": 1062001,
+    "is_awake_unit": 0,
     "skill_id": 10620012,
     "skill_type": "EX2",
     "name": "リヒュートクロス",
@@ -39623,6 +41106,9 @@
   },
   {
     "unit_id": 1062002,
+    "game_unit_id": 1062002,
+    "unit_illust_id": 1062002,
+    "is_awake_unit": 0,
     "skill_id": 10620021,
     "skill_type": "EX1",
     "name": "スパークルトレイサー",
@@ -39735,6 +41221,9 @@
   },
   {
     "unit_id": 1062002,
+    "game_unit_id": 1062002,
+    "unit_illust_id": 1062002,
+    "is_awake_unit": 0,
     "skill_id": 10620022,
     "skill_type": "EX2",
     "name": "フラッシュインサイト",
@@ -39927,6 +41416,9 @@
   },
   {
     "unit_id": 1062003,
+    "game_unit_id": 1062003,
+    "unit_illust_id": 1062003,
+    "is_awake_unit": 0,
     "skill_id": 10620031,
     "skill_type": "EX1",
     "name": "ルビーローズ・シャワー",
@@ -40087,6 +41579,9 @@
   },
   {
     "unit_id": 1062003,
+    "game_unit_id": 1062003,
+    "unit_illust_id": 1062003,
+    "is_awake_unit": 0,
     "skill_id": 10620032,
     "skill_type": "EX2",
     "name": "プレシャス・ブーケトス",
@@ -40288,6 +41783,9 @@
   },
   {
     "unit_id": 1063001,
+    "game_unit_id": 1063001,
+    "unit_illust_id": 1063001,
+    "is_awake_unit": 0,
     "skill_id": 10630011,
     "skill_type": "EX1",
     "name": "ファントムクロス",
@@ -40410,6 +41908,9 @@
   },
   {
     "unit_id": 1063001,
+    "game_unit_id": 1063001,
+    "unit_illust_id": 1063001,
+    "is_awake_unit": 0,
     "skill_id": 10630012,
     "skill_type": "EX2",
     "name": "ヒートヘイズボルテクス",
@@ -40543,6 +42044,9 @@
   },
   {
     "unit_id": 1064001,
+    "game_unit_id": 1064001,
+    "unit_illust_id": 1064001,
+    "is_awake_unit": 0,
     "skill_id": 10640011,
     "skill_type": "EX1",
     "name": "クリムゾンスティンガー",
@@ -40609,6 +42113,9 @@
   },
   {
     "unit_id": 1064001,
+    "game_unit_id": 1064001,
+    "unit_illust_id": 1064001,
+    "is_awake_unit": 0,
     "skill_id": 10640012,
     "skill_type": "EX2",
     "name": "ドゥームローズガーデン",
@@ -40702,6 +42209,9 @@
   },
   {
     "unit_id": 1065001,
+    "game_unit_id": 1065001,
+    "unit_illust_id": 1065001,
+    "is_awake_unit": 0,
     "skill_id": 10650011,
     "skill_type": "EX1",
     "name": "オスクリタ・グラーツィア",
@@ -40775,6 +42285,9 @@
   },
   {
     "unit_id": 1065001,
+    "game_unit_id": 1065001,
+    "unit_illust_id": 1065001,
+    "is_awake_unit": 0,
     "skill_id": 10650012,
     "skill_type": "EX2",
     "name": "プリガーレ・アンドロメダ",
@@ -40871,6 +42384,9 @@
   },
   {
     "unit_id": 1065002,
+    "game_unit_id": 1065002,
+    "unit_illust_id": 1065002,
+    "is_awake_unit": 0,
     "skill_id": 10650021,
     "skill_type": "EX1",
     "name": "ジュディッツィオ・ブフェーラ",
@@ -40994,6 +42510,9 @@
   },
   {
     "unit_id": 1065002,
+    "game_unit_id": 1065002,
+    "unit_illust_id": 1065002,
+    "is_awake_unit": 0,
     "skill_id": 10650022,
     "skill_type": "EX2",
     "name": "リガーロ・アンドロメダ",
@@ -41097,6 +42616,9 @@
   },
   {
     "unit_id": 1065003,
+    "game_unit_id": 1065003,
+    "unit_illust_id": 1065003,
+    "is_awake_unit": 0,
     "skill_id": 10650031,
     "skill_type": "EX1",
     "name": "アヴィヴァーレ・ドルチェ",
@@ -41207,6 +42729,9 @@
   },
   {
     "unit_id": 1065003,
+    "game_unit_id": 1065003,
+    "unit_illust_id": 1065003,
+    "is_awake_unit": 0,
     "skill_id": 10650032,
     "skill_type": "EX2",
     "name": "ヴァレンティーノ・アンドロメダ",
@@ -41324,6 +42849,9 @@
   },
   {
     "unit_id": 1065003,
+    "game_unit_id": 1065003,
+    "unit_illust_id": 1065003,
+    "is_awake_unit": 0,
     "skill_id": "10650032_plus",
     "skill_type": "EX2+",
     "name": "ドルチェアマーロ・アモーレ",
@@ -41461,6 +42989,9 @@
   },
   {
     "unit_id": 1065004,
+    "game_unit_id": 1065004,
+    "unit_illust_id": 1065004,
+    "is_awake_unit": 0,
     "skill_id": 10650041,
     "skill_type": "EX1",
     "name": "ノッツェ・ディ・アンドロメダ",
@@ -41589,6 +43120,9 @@
   },
   {
     "unit_id": 1065004,
+    "game_unit_id": 1065004,
+    "unit_illust_id": 1065004,
+    "is_awake_unit": 0,
     "skill_id": 10650042,
     "skill_type": "EX2",
     "name": "エテルニタ・アモーレ・ミオ",
@@ -41760,6 +43294,9 @@
   },
   {
     "unit_id": 1066001,
+    "game_unit_id": 1066001,
+    "unit_illust_id": 1066001,
+    "is_awake_unit": 0,
     "skill_id": 10660011,
     "skill_type": "EX1",
     "name": "ライトニング・ストーム",
@@ -41893,6 +43430,9 @@
   },
   {
     "unit_id": 1066001,
+    "game_unit_id": 1066001,
+    "unit_illust_id": 1066001,
+    "is_awake_unit": 0,
     "skill_id": 10660012,
     "skill_type": "EX2",
     "name": "ブリガンデ・テンペスタ",
@@ -42016,6 +43556,9 @@
   },
   {
     "unit_id": 1066002,
+    "game_unit_id": 1066002,
+    "unit_illust_id": 1066002,
+    "is_awake_unit": 0,
     "skill_id": 10660021,
     "skill_type": "EX1",
     "name": "アンプリディクタブル",
@@ -42105,6 +43648,9 @@
   },
   {
     "unit_id": 1066002,
+    "game_unit_id": 1066002,
+    "unit_illust_id": 1066002,
+    "is_awake_unit": 0,
     "skill_id": 10660022,
     "skill_type": "EX2",
     "name": "ウロボロス",
@@ -42227,6 +43773,9 @@
   },
   {
     "unit_id": 1067001,
+    "game_unit_id": 1067001,
+    "unit_illust_id": 1067001,
+    "is_awake_unit": 0,
     "skill_id": 10670011,
     "skill_type": "EX1",
     "name": "ノーブレスレイザー",
@@ -42352,6 +43901,9 @@
   },
   {
     "unit_id": 1067001,
+    "game_unit_id": 1067001,
+    "unit_illust_id": 1067001,
+    "is_awake_unit": 0,
     "skill_id": 10670012,
     "skill_type": "EX2",
     "name": "ボルトメガストリーム",
@@ -42489,6 +44041,9 @@
   },
   {
     "unit_id": 1068001,
+    "game_unit_id": 1068001,
+    "unit_illust_id": 1068001,
+    "is_awake_unit": 0,
     "skill_id": 10680011,
     "skill_type": "EX1",
     "name": "カーディナルブライティア",
@@ -42612,6 +44167,9 @@
   },
   {
     "unit_id": 1068001,
+    "game_unit_id": 1068001,
+    "unit_illust_id": 1068001,
+    "is_awake_unit": 0,
     "skill_id": 10680012,
     "skill_type": "EX2",
     "name": "スプライトスプレイン",
@@ -42711,6 +44269,9 @@
   },
   {
     "unit_id": 1069001,
+    "game_unit_id": 1069001,
+    "unit_illust_id": 1069001,
+    "is_awake_unit": 0,
     "skill_id": 10690011,
     "skill_type": "EX1",
     "name": "ホーリーアキュムレート",
@@ -42827,6 +44388,9 @@
   },
   {
     "unit_id": 1069001,
+    "game_unit_id": 1069001,
+    "unit_illust_id": 1069001,
+    "is_awake_unit": 0,
     "skill_id": 10690012,
     "skill_type": "EX2",
     "name": "フェアリーズパーティー",
@@ -42965,6 +44529,9 @@
   },
   {
     "unit_id": 1069002,
+    "game_unit_id": 1069002,
+    "unit_illust_id": 1069002,
+    "is_awake_unit": 0,
     "skill_id": 10690021,
     "skill_type": "EX1",
     "name": "スマイル・アキュムレート",
@@ -43075,6 +44642,9 @@
   },
   {
     "unit_id": 1069002,
+    "game_unit_id": 1069002,
+    "unit_illust_id": 1069002,
+    "is_awake_unit": 0,
     "skill_id": 10690022,
     "skill_type": "EX2",
     "name": "サプライズ・ベネディクション",
@@ -43222,6 +44792,9 @@
   },
   {
     "unit_id": 1070001,
+    "game_unit_id": 1070001,
+    "unit_illust_id": 1070001,
+    "is_awake_unit": 0,
     "skill_id": 10700011,
     "skill_type": "EX1",
     "name": "雷轟電撃",
@@ -43338,6 +44911,9 @@
   },
   {
     "unit_id": 1070001,
+    "game_unit_id": 1070001,
+    "unit_illust_id": 1070001,
+    "is_awake_unit": 0,
     "skill_id": 10700012,
     "skill_type": "EX2",
     "name": "雷薙一閃",
@@ -43440,6 +45016,9 @@
   },
   {
     "unit_id": 1070002,
+    "game_unit_id": 1070002,
+    "unit_illust_id": 1070002,
+    "is_awake_unit": 0,
     "skill_id": 10700021,
     "skill_type": "EX1",
     "name": "突撃恋光石火",
@@ -43573,6 +45152,9 @@
   },
   {
     "unit_id": 1070002,
+    "game_unit_id": 1070002,
+    "unit_illust_id": 1070002,
+    "is_awake_unit": 0,
     "skill_id": 10700022,
     "skill_type": "EX2",
     "name": "鴛鴦・恋結び",
@@ -43721,6 +45303,9 @@
   },
   {
     "unit_id": 1070003,
+    "game_unit_id": 1070003,
+    "unit_illust_id": 1070003,
+    "is_awake_unit": 0,
     "skill_id": 10700031,
     "skill_type": "EX1",
     "name": "飛翔斬撃",
@@ -43829,6 +45414,9 @@
   },
   {
     "unit_id": 1070003,
+    "game_unit_id": 1070003,
+    "unit_illust_id": 1070003,
+    "is_awake_unit": 0,
     "skill_id": 10700032,
     "skill_type": "EX2",
     "name": "狼王の大咆哮",
@@ -43941,6 +45529,9 @@
   },
   {
     "unit_id": 1071001,
+    "game_unit_id": 1071001,
+    "unit_illust_id": 1071001,
+    "is_awake_unit": 0,
     "skill_id": 10710011,
     "skill_type": "EX1",
     "name": "ヘビィアウトレイジ",
@@ -44132,6 +45723,9 @@
   },
   {
     "unit_id": 1071001,
+    "game_unit_id": 1071001,
+    "unit_illust_id": 1071001,
+    "is_awake_unit": 0,
     "skill_id": 10710012,
     "skill_type": "EX2",
     "name": "リベリオンハウリング",
@@ -44254,6 +45848,9 @@
   },
   {
     "unit_id": 1072001,
+    "game_unit_id": 1072001,
+    "unit_illust_id": 1072001,
+    "is_awake_unit": 0,
     "skill_id": 10720011,
     "skill_type": "EX1",
     "name": "デュアルブレイズ",
@@ -44376,6 +45973,9 @@
   },
   {
     "unit_id": 1072001,
+    "game_unit_id": 1072001,
+    "unit_illust_id": 1072001,
+    "is_awake_unit": 0,
     "skill_id": 10720012,
     "skill_type": "EX2",
     "name": "イグナイトインパクト",
@@ -44499,6 +46099,9 @@
   },
   {
     "unit_id": 1073001,
+    "game_unit_id": 1073001,
+    "unit_illust_id": 1073001,
+    "is_awake_unit": 0,
     "skill_id": 10730011,
     "skill_type": "EX1",
     "name": "ウィズダムゲート",
@@ -44592,6 +46195,9 @@
   },
   {
     "unit_id": 1073001,
+    "game_unit_id": 1073001,
+    "unit_illust_id": 1073001,
+    "is_awake_unit": 0,
     "skill_id": 10730012,
     "skill_type": "EX2",
     "name": "パラレルレイヤー",
@@ -44695,6 +46301,9 @@
   },
   {
     "unit_id": 1073002,
+    "game_unit_id": 1073002,
+    "unit_illust_id": 1073002,
+    "is_awake_unit": 0,
     "skill_id": 10730021,
     "skill_type": "EX1",
     "name": "エコーズムーブメント",
@@ -44787,6 +46396,9 @@
   },
   {
     "unit_id": 1073002,
+    "game_unit_id": 1073002,
+    "unit_illust_id": 1073002,
+    "is_awake_unit": 0,
     "skill_id": 10730022,
     "skill_type": "EX2",
     "name": "ソナーテレポーテーション",
@@ -44885,6 +46497,9 @@
   },
   {
     "unit_id": 1074001,
+    "game_unit_id": 1074001,
+    "unit_illust_id": 1074001,
+    "is_awake_unit": 0,
     "skill_id": 10740011,
     "skill_type": "EX1",
     "name": "水精ちゃんスマッシュ",
@@ -45004,6 +46619,9 @@
   },
   {
     "unit_id": 1074001,
+    "game_unit_id": 1074001,
+    "unit_illust_id": 1074001,
+    "is_awake_unit": 0,
     "skill_id": 10740012,
     "skill_type": "EX2",
     "name": "水精ちゃんハリケーン",
@@ -45070,6 +46688,9 @@
   },
   {
     "unit_id": 1075001,
+    "game_unit_id": 1075001,
+    "unit_illust_id": 1075001,
+    "is_awake_unit": 0,
     "skill_id": 10750011,
     "skill_type": "EX1",
     "name": "シャッテンアングリフ",
@@ -45159,6 +46780,9 @@
   },
   {
     "unit_id": 1075001,
+    "game_unit_id": 1075001,
+    "unit_illust_id": 1075001,
+    "is_awake_unit": 0,
     "skill_id": 10750012,
     "skill_type": "EX2",
     "name": "ファントムクヴァルテット",
@@ -45234,6 +46858,9 @@
   },
   {
     "unit_id": 1076001,
+    "game_unit_id": 1076001,
+    "unit_illust_id": 1076001,
+    "is_awake_unit": 0,
     "skill_id": 10760011,
     "skill_type": "EX1",
     "name": "ヴォーテクスワルツ",
@@ -45298,6 +46925,9 @@
   },
   {
     "unit_id": 1076001,
+    "game_unit_id": 1076001,
+    "unit_illust_id": 1076001,
+    "is_awake_unit": 0,
     "skill_id": 10760012,
     "skill_type": "EX2",
     "name": "ウンディーネマズルカ",
@@ -45361,6 +46991,9 @@
   },
   {
     "unit_id": 1077001,
+    "game_unit_id": 1077001,
+    "unit_illust_id": 1077001,
+    "is_awake_unit": 0,
     "skill_id": 10770011,
     "skill_type": "EX1",
     "name": "マッハスタンピード",
@@ -45488,6 +47121,9 @@
   },
   {
     "unit_id": 1077001,
+    "game_unit_id": 1077001,
+    "unit_illust_id": 1077001,
+    "is_awake_unit": 0,
     "skill_id": 10770012,
     "skill_type": "EX2",
     "name": "ライトニングブレイク",
@@ -45598,12 +47234,15 @@
   },
   {
     "unit_id": 1077002,
+    "game_unit_id": 1077002,
+    "unit_illust_id": 1077002,
+    "is_awake_unit": 0,
     "skill_id": 10770021,
     "skill_type": "EX1",
     "name": "エクスプレスギフテッド",
     "icon_id": 101,
     "cost_ex_gauge": 100,
-    "skill_detail": "敵単体に70％×8回のダメージ/自身のATKを150％アップ（40CT）/自身の行動終了後のノーツ戻り位置を前から2番目の味方と同じ位置にする（対象がいない場合、行動CT値を参照した位置に戻る）",
+    "skill_detail": "敵単体に70％×8回のダメージ/自身のATK150％アップ（40CT）/行動終了後のノーツ戻り位置を前から2番目の味方と同じ位置にする（対象がいない場合、行動CT値を参照した位置に戻る）",
     "effects": [
       {
         "display_value": "70%×8回",
@@ -45655,7 +47294,7 @@
           "ct": 40
         },
         "notes": [],
-        "raw": "自身のATKを150%アップ(40CT)",
+        "raw": "自身のATK150%アップ(40CT)",
         "children": [],
         "tags": [],
         "inherited_target": false
@@ -45682,15 +47321,18 @@
             "label": "発動条件"
           }
         ],
-        "raw": "自身の行動終了後のノーツ戻り位置を前から2番目の味方と同じ位置にする(対象がいない場合、行動CT値を参照した位置に戻る)",
+        "raw": "行動終了後のノーツ戻り位置を前から2番目の味方と同じ位置にする(対象がいない場合、行動CT値を参照した位置に戻る)",
         "children": [],
         "tags": [],
-        "inherited_target": false
+        "inherited_target": true
       }
     ]
   },
   {
     "unit_id": 1077002,
+    "game_unit_id": 1077002,
+    "unit_illust_id": 1077002,
+    "is_awake_unit": 0,
     "skill_id": 10770022,
     "skill_type": "EX2",
     "name": "メイドインクリスマス",
@@ -45832,6 +47474,9 @@
   },
   {
     "unit_id": 1077003,
+    "game_unit_id": 1077003,
+    "unit_illust_id": 1077003,
+    "is_awake_unit": 0,
     "skill_id": 10770031,
     "skill_type": "EX1",
     "name": "ライトニングピアース",
@@ -45957,6 +47602,9 @@
   },
   {
     "unit_id": 1077003,
+    "game_unit_id": 1077003,
+    "unit_illust_id": 1077003,
+    "is_awake_unit": 0,
     "skill_id": 10770032,
     "skill_type": "EX2",
     "name": "ウェディングアクセラレーション",
@@ -46061,6 +47709,9 @@
   },
   {
     "unit_id": 1078001,
+    "game_unit_id": 1078001,
+    "unit_illust_id": 1078001,
+    "is_awake_unit": 0,
     "skill_id": 10780011,
     "skill_type": "EX1",
     "name": "ルクス・リプロダクション",
@@ -46203,6 +47854,9 @@
   },
   {
     "unit_id": 1078001,
+    "game_unit_id": 1078001,
+    "unit_illust_id": 1078001,
+    "is_awake_unit": 0,
     "skill_id": 10780012,
     "skill_type": "EX2",
     "name": "マグナス・サナティオー",
@@ -46281,6 +47935,9 @@
   },
   {
     "unit_id": 1079001,
+    "game_unit_id": 1079001,
+    "unit_illust_id": 1079001,
+    "is_awake_unit": 0,
     "skill_id": 10790011,
     "skill_type": "EX1",
     "name": "スクリームフロムヘル",
@@ -46376,6 +48033,9 @@
   },
   {
     "unit_id": 1079001,
+    "game_unit_id": 1079001,
+    "unit_illust_id": 1079001,
+    "is_awake_unit": 0,
     "skill_id": 10790012,
     "skill_type": "EX2",
     "name": "トライアルオブデス",
@@ -46501,6 +48161,9 @@
   },
   {
     "unit_id": 1079002,
+    "game_unit_id": 1079002,
+    "unit_illust_id": 1079002,
+    "is_awake_unit": 0,
     "skill_id": 10790021,
     "skill_type": "EX1",
     "name": "デプスインヘル",
@@ -46602,6 +48265,9 @@
   },
   {
     "unit_id": 1079002,
+    "game_unit_id": 1079002,
+    "unit_illust_id": 1079002,
+    "is_awake_unit": 0,
     "skill_id": 10790022,
     "skill_type": "EX2",
     "name": "サドンデスシャーク",
@@ -46791,6 +48457,9 @@
   },
   {
     "unit_id": 1079002,
+    "game_unit_id": 1079002,
+    "unit_illust_id": 1079002,
+    "is_awake_unit": 0,
     "skill_id": "10790022_plus",
     "skill_type": "EX2+",
     "name": "アビスシャークパレード",
@@ -47013,6 +48682,9 @@
   },
   {
     "unit_id": 1080001,
+    "game_unit_id": 1080001,
+    "unit_illust_id": 1080001,
+    "is_awake_unit": 0,
     "skill_id": 10800011,
     "skill_type": "EX1",
     "name": "フレイムリインフォース",
@@ -47103,6 +48775,9 @@
   },
   {
     "unit_id": 1080001,
+    "game_unit_id": 1080001,
+    "unit_illust_id": 1080001,
+    "is_awake_unit": 0,
     "skill_id": 10800012,
     "skill_type": "EX2",
     "name": "エンバーエンサイン",
@@ -47200,6 +48875,9 @@
   },
   {
     "unit_id": 1081001,
+    "game_unit_id": 1081001,
+    "unit_illust_id": 1081001,
+    "is_awake_unit": 0,
     "skill_id": 10810011,
     "skill_type": "EX1",
     "name": "ブリヤンス・アンジェリック",
@@ -47299,6 +48977,9 @@
   },
   {
     "unit_id": 1081001,
+    "game_unit_id": 1081001,
+    "unit_illust_id": 1081001,
+    "is_awake_unit": 0,
     "skill_id": 10810012,
     "skill_type": "EX2",
     "name": "スプランドゥール・セレスト",
@@ -47388,6 +49069,9 @@
   },
   {
     "unit_id": 1082001,
+    "game_unit_id": 1082001,
+    "unit_illust_id": 1082001,
+    "is_awake_unit": 0,
     "skill_id": 10820011,
     "skill_type": "EX1",
     "name": "ブレッシングステーク",
@@ -47508,6 +49192,9 @@
   },
   {
     "unit_id": 1082001,
+    "game_unit_id": 1082001,
+    "unit_illust_id": 1082001,
+    "is_awake_unit": 0,
     "skill_id": 10820012,
     "skill_type": "EX2",
     "name": "セイクリッドバンカー",
@@ -47616,6 +49303,9 @@
   },
   {
     "unit_id": 1083001,
+    "game_unit_id": 1083001,
+    "unit_illust_id": 1083001,
+    "is_awake_unit": 0,
     "skill_id": 10830011,
     "skill_type": "EX1",
     "name": "クラウドスウォーム",
@@ -47736,6 +49426,9 @@
   },
   {
     "unit_id": 1083001,
+    "game_unit_id": 1083001,
+    "unit_illust_id": 1083001,
+    "is_awake_unit": 0,
     "skill_id": 10830012,
     "skill_type": "EX2",
     "name": "ブラッディハリケーン",
@@ -47834,6 +49527,9 @@
   },
   {
     "unit_id": 1084001,
+    "game_unit_id": 1084001,
+    "unit_illust_id": 1084001,
+    "is_awake_unit": 0,
     "skill_id": 10840011,
     "skill_type": "EX1",
     "name": "天叢雲剣",
@@ -47926,6 +49622,9 @@
   },
   {
     "unit_id": 1084001,
+    "game_unit_id": 1084001,
+    "unit_illust_id": 1084001,
+    "is_awake_unit": 0,
     "skill_id": 10840012,
     "skill_type": "EX2",
     "name": "都牟刈・八閃",
@@ -48092,6 +49791,9 @@
   },
   {
     "unit_id": 1084001,
+    "game_unit_id": 1084001,
+    "unit_illust_id": 1084001,
+    "is_awake_unit": 0,
     "skill_id": "10840012_plus",
     "skill_type": "EX2+",
     "name": "天破侠乱の大嵐",
@@ -48295,6 +49997,9 @@
   },
   {
     "unit_id": 1085001,
+    "game_unit_id": 1085001,
+    "unit_illust_id": 1085001,
+    "is_awake_unit": 0,
     "skill_id": 10850011,
     "skill_type": "EX1",
     "name": "ハートエミッション",
@@ -48437,6 +50142,9 @@
   },
   {
     "unit_id": 1085001,
+    "game_unit_id": 1085001,
+    "unit_illust_id": 1085001,
+    "is_awake_unit": 0,
     "skill_id": 10850012,
     "skill_type": "EX2",
     "name": "ホライゾンバニッシュ",
@@ -48578,6 +50286,9 @@
   },
   {
     "unit_id": 1085002,
+    "game_unit_id": 1085002,
+    "unit_illust_id": 1085002,
+    "is_awake_unit": 0,
     "skill_id": 10850021,
     "skill_type": "EX1",
     "name": "テリトリアルスクレイプ",
@@ -48692,6 +50403,9 @@
   },
   {
     "unit_id": 1085002,
+    "game_unit_id": 1085002,
+    "unit_illust_id": 1085002,
+    "is_awake_unit": 0,
     "skill_id": 10850022,
     "skill_type": "EX2",
     "name": "リミナルディグブレイク",
@@ -48797,6 +50511,9 @@
   },
   {
     "unit_id": 1086001,
+    "game_unit_id": 1086001,
+    "unit_illust_id": 1086001,
+    "is_awake_unit": 0,
     "skill_id": 10860011,
     "skill_type": "EX1",
     "name": "リバー・ステュクス",
@@ -48921,6 +50638,9 @@
   },
   {
     "unit_id": 1086001,
+    "game_unit_id": 1086001,
+    "unit_illust_id": 1086001,
+    "is_awake_unit": 0,
     "skill_id": 10860012,
     "skill_type": "EX2",
     "name": "リバー・プレゲトーン",
@@ -49059,6 +50779,9 @@
   },
   {
     "unit_id": 1086002,
+    "game_unit_id": 1086002,
+    "unit_illust_id": 1086002,
+    "is_awake_unit": 0,
     "skill_id": 10860021,
     "skill_type": "EX1",
     "name": "アンブラスネア",
@@ -49180,6 +50903,9 @@
   },
   {
     "unit_id": 1086002,
+    "game_unit_id": 1086002,
+    "unit_illust_id": 1086002,
+    "is_awake_unit": 0,
     "skill_id": 10860022,
     "skill_type": "EX2",
     "name": "クレンジングアビス",
@@ -49310,6 +51036,9 @@
   },
   {
     "unit_id": 1087001,
+    "game_unit_id": 1087001,
+    "unit_illust_id": 1087001,
+    "is_awake_unit": 0,
     "skill_id": 10870011,
     "skill_type": "EX1",
     "name": "ラプチャー・オブ・ルーイン",
@@ -49424,6 +51153,9 @@
   },
   {
     "unit_id": 1087001,
+    "game_unit_id": 1087001,
+    "unit_illust_id": 1087001,
+    "is_awake_unit": 0,
     "skill_id": 10870012,
     "skill_type": "EX2",
     "name": "マーシレス・エクスタシー",
@@ -49597,6 +51329,9 @@
   },
   {
     "unit_id": 1088001,
+    "game_unit_id": 1088001,
+    "unit_illust_id": 1088001,
+    "is_awake_unit": 0,
     "skill_id": 10880011,
     "skill_type": "EX1",
     "name": "ズタズタスラッシュ",
@@ -49756,6 +51491,9 @@
   },
   {
     "unit_id": 1088001,
+    "game_unit_id": 1088001,
+    "unit_illust_id": 1088001,
+    "is_awake_unit": 0,
     "skill_id": 10880012,
     "skill_type": "EX2",
     "name": "ザクザクジエンド",
@@ -49824,6 +51562,9 @@
   },
   {
     "unit_id": 1089001,
+    "game_unit_id": 1089001,
+    "unit_illust_id": 1089001,
+    "is_awake_unit": 0,
     "skill_id": 10890011,
     "skill_type": "EX1",
     "name": "ブラックドッグファング",
@@ -49889,6 +51630,9 @@
   },
   {
     "unit_id": 1089001,
+    "game_unit_id": 1089001,
+    "unit_illust_id": 1089001,
+    "is_awake_unit": 0,
     "skill_id": 10890012,
     "skill_type": "EX2",
     "name": "シェイドハウンドブリッツ",
@@ -49984,6 +51728,9 @@
   },
   {
     "unit_id": 1090001,
+    "game_unit_id": 1090001,
+    "unit_illust_id": 1090001,
+    "is_awake_unit": 0,
     "skill_id": 10900011,
     "skill_type": "EX1",
     "name": "クラウンデスパレード",
@@ -50064,6 +51811,9 @@
   },
   {
     "unit_id": 1090001,
+    "game_unit_id": 1090001,
+    "unit_illust_id": 1090001,
+    "is_awake_unit": 0,
     "skill_id": 10900012,
     "skill_type": "EX2",
     "name": "レギオンズフィーバー",
@@ -50160,6 +51910,9 @@
   },
   {
     "unit_id": 1090002,
+    "game_unit_id": 1090002,
+    "unit_illust_id": 1090002,
+    "is_awake_unit": 0,
     "skill_id": 10900021,
     "skill_type": "EX1",
     "name": "バーンコメットスプラッシュ",
@@ -50252,6 +52005,9 @@
   },
   {
     "unit_id": 1090002,
+    "game_unit_id": 1090002,
+    "unit_illust_id": 1090002,
+    "is_awake_unit": 0,
     "skill_id": 10900022,
     "skill_type": "EX2",
     "name": "レギオニックウィーバー",
@@ -50370,6 +52126,9 @@
   },
   {
     "unit_id": 1091001,
+    "game_unit_id": 1091001,
+    "unit_illust_id": 1091001,
+    "is_awake_unit": 0,
     "skill_id": 10910011,
     "skill_type": "EX1",
     "name": "インパルスストリーム",
@@ -50471,6 +52230,9 @@
   },
   {
     "unit_id": 1091001,
+    "game_unit_id": 1091001,
+    "unit_illust_id": 1091001,
+    "is_awake_unit": 0,
     "skill_id": 10910012,
     "skill_type": "EX2",
     "name": "ライトニングテンペスト",
@@ -50590,6 +52352,9 @@
   },
   {
     "unit_id": 1091001,
+    "game_unit_id": 1091001,
+    "unit_illust_id": 1091001,
+    "is_awake_unit": 0,
     "skill_id": "10910012_plus",
     "skill_type": "EX2+",
     "name": "ディメンション・エクスウェーブ",
@@ -50709,6 +52474,9 @@
   },
   {
     "unit_id": 1091002,
+    "game_unit_id": 1091002,
+    "unit_illust_id": 1091002,
+    "is_awake_unit": 0,
     "skill_id": 10910021,
     "skill_type": "EX1",
     "name": "スプラッシュストーム",
@@ -50811,6 +52579,9 @@
   },
   {
     "unit_id": 1091002,
+    "game_unit_id": 1091002,
+    "unit_illust_id": 1091002,
+    "is_awake_unit": 0,
     "skill_id": 10910022,
     "skill_type": "EX2",
     "name": "ボルテクスバースト",
@@ -50984,6 +52755,9 @@
   },
   {
     "unit_id": 1091002,
+    "game_unit_id": 1091002,
+    "unit_illust_id": 1091002,
+    "is_awake_unit": 0,
     "skill_id": "10910022_plus",
     "skill_type": "EX2+",
     "name": "グリッタースプライト",
@@ -51185,6 +52959,9 @@
   },
   {
     "unit_id": 1092001,
+    "game_unit_id": 1092001,
+    "unit_illust_id": 1092001,
+    "is_awake_unit": 0,
     "skill_id": 10920011,
     "skill_type": "EX1",
     "name": "焔ノ剣紅蓮神楽",
@@ -51309,6 +53086,9 @@
   },
   {
     "unit_id": 1092001,
+    "game_unit_id": 1092001,
+    "unit_illust_id": 1092001,
+    "is_awake_unit": 0,
     "skill_id": 10920012,
     "skill_type": "EX2",
     "name": "凪ノ剣泡沫神楽",
@@ -51447,6 +53227,9 @@
   },
   {
     "unit_id": 1093001,
+    "game_unit_id": 1093001,
+    "unit_illust_id": 1093001,
+    "is_awake_unit": 0,
     "skill_id": 10930011,
     "skill_type": "EX1",
     "name": "イノセントノヴァ",
@@ -51567,6 +53350,9 @@
   },
   {
     "unit_id": 1093001,
+    "game_unit_id": 1093001,
+    "unit_illust_id": 1093001,
+    "is_awake_unit": 0,
     "skill_id": 10930012,
     "skill_type": "EX2",
     "name": "シャイニングペネトレーター",
@@ -51696,6 +53482,9 @@
   },
   {
     "unit_id": 1093002,
+    "game_unit_id": 1093002,
+    "unit_illust_id": 1093002,
+    "is_awake_unit": 0,
     "skill_id": 10930021,
     "skill_type": "EX1",
     "name": "ヘブンリー・デトネーション",
@@ -51804,6 +53593,9 @@
   },
   {
     "unit_id": 1093002,
+    "game_unit_id": 1093002,
+    "unit_illust_id": 1093002,
+    "is_awake_unit": 0,
     "skill_id": 10930022,
     "skill_type": "EX2",
     "name": "ルミナス・アセンション",
@@ -51956,6 +53748,9 @@
   },
   {
     "unit_id": 1093003,
+    "game_unit_id": 1093003,
+    "unit_illust_id": 1093003,
+    "is_awake_unit": 0,
     "skill_id": 10930031,
     "skill_type": "EX1",
     "name": "破魔閃破",
@@ -52083,6 +53878,9 @@
   },
   {
     "unit_id": 1093003,
+    "game_unit_id": 1093003,
+    "unit_illust_id": 1093003,
+    "is_awake_unit": 0,
     "skill_id": 10930032,
     "skill_type": "EX2",
     "name": "豊霊剣舞",
@@ -52278,6 +54076,9 @@
   },
   {
     "unit_id": 1094001,
+    "game_unit_id": 1094001,
+    "unit_illust_id": 1094001,
+    "is_awake_unit": 0,
     "skill_id": 10940011,
     "skill_type": "EX1",
     "name": "鶴翼一閃",
@@ -52394,6 +54195,9 @@
   },
   {
     "unit_id": 1094001,
+    "game_unit_id": 1094001,
+    "unit_illust_id": 1094001,
+    "is_awake_unit": 0,
     "skill_id": 10940012,
     "skill_type": "EX2",
     "name": "千年鶴翔",
@@ -52520,6 +54324,9 @@
   },
   {
     "unit_id": 1094002,
+    "game_unit_id": 1094002,
+    "unit_illust_id": 1094002,
+    "is_awake_unit": 0,
     "skill_id": 10940021,
     "skill_type": "EX1",
     "name": "閃拳・輝禍祓掌",
@@ -52631,6 +54438,9 @@
   },
   {
     "unit_id": 1094002,
+    "game_unit_id": 1094002,
+    "unit_illust_id": 1094002,
+    "is_awake_unit": 0,
     "skill_id": 10940022,
     "skill_type": "EX2",
     "name": "閃拳・玉響ノ穿チ",
@@ -52800,6 +54610,9 @@
   },
   {
     "unit_id": 1094002,
+    "game_unit_id": 1094002,
+    "unit_illust_id": 1094002,
+    "is_awake_unit": 0,
     "skill_id": "10940022_plus",
     "skill_type": "EX2+",
     "name": "援舞・鶴翼天翔",
@@ -52969,6 +54782,9 @@
   },
   {
     "unit_id": 1095001,
+    "game_unit_id": 1095001,
+    "unit_illust_id": 1095001,
+    "is_awake_unit": 0,
     "skill_id": 10950011,
     "skill_type": "EX1",
     "name": "ホーリーギフテッド",
@@ -53090,6 +54906,9 @@
   },
   {
     "unit_id": 1095001,
+    "game_unit_id": 1095001,
+    "unit_illust_id": 1095001,
+    "is_awake_unit": 0,
     "skill_id": 10950012,
     "skill_type": "EX2",
     "name": "リアライズデザイア",
@@ -53168,6 +54987,9 @@
   },
   {
     "unit_id": 1095002,
+    "game_unit_id": 1095002,
+    "unit_illust_id": 1095002,
+    "is_awake_unit": 0,
     "skill_id": 10950021,
     "skill_type": "EX1",
     "name": "ミスティック・ネクター",
@@ -53316,6 +55138,9 @@
   },
   {
     "unit_id": 1095002,
+    "game_unit_id": 1095002,
+    "unit_illust_id": 1095002,
+    "is_awake_unit": 0,
     "skill_id": 10950022,
     "skill_type": "EX2",
     "name": "アンブロシア・ユーフォリア",
@@ -53429,6 +55254,9 @@
   },
   {
     "unit_id": 1095003,
+    "game_unit_id": 1095003,
+    "unit_illust_id": 1095003,
+    "is_awake_unit": 0,
     "skill_id": 10950031,
     "skill_type": "EX1",
     "name": "ヴィクトリアフェザー",
@@ -53564,6 +55392,9 @@
   },
   {
     "unit_id": 1095003,
+    "game_unit_id": 1095003,
+    "unit_illust_id": 1095003,
+    "is_awake_unit": 0,
     "skill_id": 10950032,
     "skill_type": "EX2",
     "name": "デザイアトランスミッション",
@@ -53699,6 +55530,9 @@
   },
   {
     "unit_id": 1095003,
+    "game_unit_id": 1095003,
+    "unit_illust_id": 1095003,
+    "is_awake_unit": 0,
     "skill_id": "10950032_plus",
     "skill_type": "EX2+",
     "name": "ヴィクトリアオーバーヘヴン",
@@ -53834,6 +55668,9 @@
   },
   {
     "unit_id": 1096001,
+    "game_unit_id": 1096001,
+    "unit_illust_id": 1096001,
+    "is_awake_unit": 0,
     "skill_id": 10960011,
     "skill_type": "EX1",
     "name": "ダークネス・オブリビオン",
@@ -53949,6 +55786,9 @@
   },
   {
     "unit_id": 1096001,
+    "game_unit_id": 1096001,
+    "unit_illust_id": 1096001,
+    "is_awake_unit": 0,
     "skill_id": 10960012,
     "skill_type": "EX2",
     "name": "ドゥーム・エクスキューション",
@@ -54084,6 +55924,9 @@
   },
   {
     "unit_id": 1097001,
+    "game_unit_id": 1097001,
+    "unit_illust_id": 1097001,
+    "is_awake_unit": 0,
     "skill_id": 10970011,
     "skill_type": "EX1",
     "name": "ナイトフォール・セレナーデ",
@@ -54182,6 +56025,9 @@
   },
   {
     "unit_id": 1097001,
+    "game_unit_id": 1097001,
+    "unit_illust_id": 1097001,
+    "is_awake_unit": 0,
     "skill_id": 10970012,
     "skill_type": "EX2",
     "name": "デイブレイク・ワルツ",
@@ -54337,6 +56183,9 @@
   },
   {
     "unit_id": 1098001,
+    "game_unit_id": 1098001,
+    "unit_illust_id": 1098001,
+    "is_awake_unit": 0,
     "skill_id": 10980011,
     "skill_type": "EX1",
     "name": "オーバースペキュレーション",
@@ -54450,6 +56299,9 @@
   },
   {
     "unit_id": 1098001,
+    "game_unit_id": 1098001,
+    "unit_illust_id": 1098001,
+    "is_awake_unit": 0,
     "skill_id": 10980012,
     "skill_type": "EX2",
     "name": "キャピタルドレイン",
@@ -54586,6 +56438,9 @@
   },
   {
     "unit_id": 1099001,
+    "game_unit_id": 1099001,
+    "unit_illust_id": 1099001,
+    "is_awake_unit": 0,
     "skill_id": 10990011,
     "skill_type": "EX1",
     "name": "レイジングスティンガー",
@@ -54678,6 +56533,9 @@
   },
   {
     "unit_id": 1099001,
+    "game_unit_id": 1099001,
+    "unit_illust_id": 1099001,
+    "is_awake_unit": 0,
     "skill_id": 10990012,
     "skill_type": "EX2",
     "name": "ターミネートマーチ",
@@ -54788,6 +56646,9 @@
   },
   {
     "unit_id": 1100001,
+    "game_unit_id": 1100001,
+    "unit_illust_id": 1100001,
+    "is_awake_unit": 0,
     "skill_id": 11000011,
     "skill_type": "EX1",
     "name": "スペクターバースト",
@@ -54922,6 +56783,9 @@
   },
   {
     "unit_id": 1100001,
+    "game_unit_id": 1100001,
+    "unit_illust_id": 1100001,
+    "is_awake_unit": 0,
     "skill_id": 11000012,
     "skill_type": "EX2",
     "name": "バーニングファンタズマ",
@@ -55054,6 +56918,9 @@
   },
   {
     "unit_id": 1101001,
+    "game_unit_id": 1101001,
+    "unit_illust_id": 1101001,
+    "is_awake_unit": 0,
     "skill_id": 11010011,
     "skill_type": "EX1",
     "name": "ライトニングアップビート",
@@ -55154,6 +57021,9 @@
   },
   {
     "unit_id": 1101001,
+    "game_unit_id": 1101001,
+    "unit_illust_id": 1101001,
+    "is_awake_unit": 0,
     "skill_id": 11010012,
     "skill_type": "EX2",
     "name": "ラクライ・ブラストビート",
@@ -55351,6 +57221,9 @@
   },
   {
     "unit_id": 1102001,
+    "game_unit_id": 1102001,
+    "unit_illust_id": 1102001,
+    "is_awake_unit": 0,
     "skill_id": 11020011,
     "skill_type": "EX1",
     "name": "ライトニング・モーメント",
@@ -55450,6 +57323,9 @@
   },
   {
     "unit_id": 1102001,
+    "game_unit_id": 1102001,
+    "unit_illust_id": 1102001,
+    "is_awake_unit": 0,
     "skill_id": 11020012,
     "skill_type": "EX2",
     "name": "プラズマ・シュレッダー",
@@ -55516,6 +57392,9 @@
   },
   {
     "unit_id": 1103001,
+    "game_unit_id": 1103001,
+    "unit_illust_id": 1103001,
+    "is_awake_unit": 0,
     "skill_id": 11030011,
     "skill_type": "EX1",
     "name": "ナラティブカーム",
@@ -55614,6 +57493,9 @@
   },
   {
     "unit_id": 1103001,
+    "game_unit_id": 1103001,
+    "unit_illust_id": 1103001,
+    "is_awake_unit": 0,
     "skill_id": 11030012,
     "skill_type": "EX2",
     "name": "アコレードオベーション",
@@ -55753,6 +57635,9 @@
   },
   {
     "unit_id": 1104001,
+    "game_unit_id": 1104001,
+    "unit_illust_id": 1104001,
+    "is_awake_unit": 0,
     "skill_id": 11040011,
     "skill_type": "EX1",
     "name": "エコーディパッショーネ",
@@ -55851,6 +57736,9 @@
   },
   {
     "unit_id": 1104001,
+    "game_unit_id": 1104001,
+    "unit_illust_id": 1104001,
+    "is_awake_unit": 0,
     "skill_id": 11040012,
     "skill_type": "EX2",
     "name": "グランデディベルタ",
@@ -55929,6 +57817,9 @@
   },
   {
     "unit_id": 1105001,
+    "game_unit_id": 1105001,
+    "unit_illust_id": 1105001,
+    "is_awake_unit": 0,
     "skill_id": 11050011,
     "skill_type": "EX1",
     "name": "ポイズンインジェクション",
@@ -56053,6 +57944,9 @@
   },
   {
     "unit_id": 1105001,
+    "game_unit_id": 1105001,
+    "unit_illust_id": 1105001,
+    "is_awake_unit": 0,
     "skill_id": 11050012,
     "skill_type": "EX2",
     "name": "アスクレピオスの杖",
@@ -56180,6 +58074,9 @@
   },
   {
     "unit_id": 1106001,
+    "game_unit_id": 1106001,
+    "unit_illust_id": 1106001,
+    "is_awake_unit": 0,
     "skill_id": 11060011,
     "skill_type": "EX1",
     "name": "アルティメットフレア",
@@ -56263,6 +58160,9 @@
   },
   {
     "unit_id": 1106001,
+    "game_unit_id": 1106001,
+    "unit_illust_id": 1106001,
+    "is_awake_unit": 0,
     "skill_id": 11060012,
     "skill_type": "EX2",
     "name": "レイジングノヴァ",
@@ -56391,6 +58291,9 @@
   },
   {
     "unit_id": 1106001,
+    "game_unit_id": 1106001,
+    "unit_illust_id": 1106001,
+    "is_awake_unit": 0,
     "skill_id": "11060012_plus",
     "skill_type": "EX2+",
     "name": "ヴォルケインメルトスウォーム",
@@ -56553,6 +58456,9 @@
   },
   {
     "unit_id": 1107001,
+    "game_unit_id": 1107001,
+    "unit_illust_id": 1107001,
+    "is_awake_unit": 0,
     "skill_id": 11070011,
     "skill_type": "EX1",
     "name": "アイシクルインパクト",
@@ -56667,6 +58573,9 @@
   },
   {
     "unit_id": 1107001,
+    "game_unit_id": 1107001,
+    "unit_illust_id": 1107001,
+    "is_awake_unit": 0,
     "skill_id": 11070012,
     "skill_type": "EX2",
     "name": "セラフィックウィスパー",
@@ -56834,6 +58743,9 @@
   },
   {
     "unit_id": 1107001,
+    "game_unit_id": 1107001,
+    "unit_illust_id": 1107001,
+    "is_awake_unit": 0,
     "skill_id": "11070012_plus",
     "skill_type": "EX2+",
     "name": "アブソリュートティアーズ",
@@ -57029,6 +58941,9 @@
   },
   {
     "unit_id": 1109001,
+    "game_unit_id": 1109001,
+    "unit_illust_id": 1109001,
+    "is_awake_unit": 0,
     "skill_id": 11090011,
     "skill_type": "EX1",
     "name": "ホーリーパニッシュメント",
@@ -57178,6 +59093,9 @@
   },
   {
     "unit_id": 1109001,
+    "game_unit_id": 1109001,
+    "unit_illust_id": 1109001,
+    "is_awake_unit": 0,
     "skill_id": 11090012,
     "skill_type": "EX2",
     "name": "ヴィヴィッドローズタイフーン",
@@ -57346,6 +59264,9 @@
   },
   {
     "unit_id": 1109001,
+    "game_unit_id": 1109001,
+    "unit_illust_id": 1109001,
+    "is_awake_unit": 0,
     "skill_id": "11090012_plus",
     "skill_type": "EX2+",
     "name": "ブリリアントローズダンス",
@@ -57550,6 +59471,9 @@
   },
   {
     "unit_id": 1110001,
+    "game_unit_id": 1110001,
+    "unit_illust_id": 1110001,
+    "is_awake_unit": 0,
     "skill_id": 11100011,
     "skill_type": "EX1",
     "name": "レイジ・オブ・オーシャン",
@@ -57641,6 +59565,9 @@
   },
   {
     "unit_id": 1110001,
+    "game_unit_id": 1110001,
+    "unit_illust_id": 1110001,
+    "is_awake_unit": 0,
     "skill_id": 11100012,
     "skill_type": "EX2",
     "name": "ソルフレア・スプラッシュ",
@@ -57746,6 +59673,9 @@
   },
   {
     "unit_id": 1110001,
+    "game_unit_id": 1110001,
+    "unit_illust_id": 1110001,
+    "is_awake_unit": 0,
     "skill_id": "11100012_plus",
     "skill_type": "EX2+",
     "name": "ポセイドンインパクト",
@@ -57874,6 +59804,9 @@
   },
   {
     "unit_id": 1111001,
+    "game_unit_id": 1111001,
+    "unit_illust_id": 1111001,
+    "is_awake_unit": 0,
     "skill_id": 11110011,
     "skill_type": "EX1",
     "name": "クリムゾンカーニバル",
@@ -57968,6 +59901,9 @@
   },
   {
     "unit_id": 1111001,
+    "game_unit_id": 1111001,
+    "unit_illust_id": 1111001,
+    "is_awake_unit": 0,
     "skill_id": 11110012,
     "skill_type": "EX2",
     "name": "スカーレットトラジェディ",
@@ -58102,6 +60038,9 @@
   },
   {
     "unit_id": 1111003,
+    "game_unit_id": 1111003,
+    "unit_illust_id": 1111003,
+    "is_awake_unit": 0,
     "skill_id": 11110031,
     "skill_type": "EX1",
     "name": "サンシェードブリッツ",
@@ -58215,6 +60154,9 @@
   },
   {
     "unit_id": 1111003,
+    "game_unit_id": 1111003,
+    "unit_illust_id": 1111003,
+    "is_awake_unit": 0,
     "skill_id": 11110032,
     "skill_type": "EX2",
     "name": "スパークイルミネイト",
@@ -58353,6 +60295,9 @@
   },
   {
     "unit_id": 1112001,
+    "game_unit_id": 1112001,
+    "unit_illust_id": 1112001,
+    "is_awake_unit": 0,
     "skill_id": 11120011,
     "skill_type": "EX1",
     "name": "スパイラルブレイク",
@@ -58457,6 +60402,9 @@
   },
   {
     "unit_id": 1112001,
+    "game_unit_id": 1112001,
+    "unit_illust_id": 1112001,
+    "is_awake_unit": 0,
     "skill_id": 11120012,
     "skill_type": "EX2",
     "name": "カラミティバスター",
@@ -58592,6 +60540,9 @@
   },
   {
     "unit_id": 1113001,
+    "game_unit_id": 1113001,
+    "unit_illust_id": 1113001,
+    "is_awake_unit": 0,
     "skill_id": 11130011,
     "skill_type": "EX1",
     "name": "ブラントアングリフ",
@@ -58744,6 +60695,9 @@
   },
   {
     "unit_id": 1113001,
+    "game_unit_id": 1113001,
+    "unit_illust_id": 1113001,
+    "is_awake_unit": 0,
     "skill_id": 11130012,
     "skill_type": "EX2",
     "name": "シャルラハロート・フリューゲル",
@@ -58862,6 +60816,9 @@
   },
   {
     "unit_id": 1113001,
+    "game_unit_id": 1113001,
+    "unit_illust_id": 1113001,
+    "is_awake_unit": 0,
     "skill_id": "11130012_plus",
     "skill_type": "EX2+",
     "name": "ファーヴニル・ゴルトテュラン",
@@ -59040,6 +60997,9 @@
   },
   {
     "unit_id": 1116001,
+    "game_unit_id": 1116001,
+    "unit_illust_id": 1116001,
+    "is_awake_unit": 0,
     "skill_id": 11160011,
     "skill_type": "EX1",
     "name": "どっかんミサーイルッ",
@@ -59138,6 +61098,9 @@
   },
   {
     "unit_id": 1116001,
+    "game_unit_id": 1116001,
+    "unit_illust_id": 1116001,
+    "is_awake_unit": 0,
     "skill_id": 11160012,
     "skill_type": "EX2",
     "name": "すーぱーでんじゃらすロケーット",
@@ -59273,6 +61236,9 @@
   },
   {
     "unit_id": 1117001,
+    "game_unit_id": 1117001,
+    "unit_illust_id": 1117001,
+    "is_awake_unit": 0,
     "skill_id": 11170011,
     "skill_type": "EX1",
     "name": "ヴェンジフル・エクリプス",
@@ -59364,6 +61330,9 @@
   },
   {
     "unit_id": 1117001,
+    "game_unit_id": 1117001,
+    "unit_illust_id": 1117001,
+    "is_awake_unit": 0,
     "skill_id": 11170012,
     "skill_type": "EX2",
     "name": "リセントメント・リクァイタル",
@@ -59519,6 +61488,9 @@
   },
   {
     "unit_id": 1118001,
+    "game_unit_id": 1118001,
+    "unit_illust_id": 1118001,
+    "is_awake_unit": 0,
     "skill_id": 11180011,
     "skill_type": "EX1",
     "name": "ナイトホークマスカレード",
@@ -59637,6 +61609,9 @@
   },
   {
     "unit_id": 1118001,
+    "game_unit_id": 1118001,
+    "unit_illust_id": 1118001,
+    "is_awake_unit": 0,
     "skill_id": 11180012,
     "skill_type": "EX2",
     "name": "レイヴンクロースパイラル",
@@ -59741,6 +61716,9 @@
   },
   {
     "unit_id": 1118002,
+    "game_unit_id": 1118002,
+    "unit_illust_id": 1118002,
+    "is_awake_unit": 0,
     "skill_id": 11180021,
     "skill_type": "EX1",
     "name": "サンダーボルトプランジ",
@@ -59873,6 +61851,9 @@
   },
   {
     "unit_id": 1118002,
+    "game_unit_id": 1118002,
+    "unit_illust_id": 1118002,
+    "is_awake_unit": 0,
     "skill_id": 11180022,
     "skill_type": "EX2",
     "name": "ミラージュコメット",
@@ -59998,6 +61979,9 @@
   },
   {
     "unit_id": 1119001,
+    "game_unit_id": 1119001,
+    "unit_illust_id": 1119001,
+    "is_awake_unit": 0,
     "skill_id": 11190011,
     "skill_type": "EX1",
     "name": "スニーキングアルター",
@@ -60148,6 +62132,9 @@
   },
   {
     "unit_id": 1119001,
+    "game_unit_id": 1119001,
+    "unit_illust_id": 1119001,
+    "is_awake_unit": 0,
     "skill_id": 11190012,
     "skill_type": "EX2",
     "name": "リアライズインパクト",
@@ -60258,6 +62245,9 @@
   },
   {
     "unit_id": 1120001,
+    "game_unit_id": 1120001,
+    "unit_illust_id": 1120001,
+    "is_awake_unit": 0,
     "skill_id": 11200011,
     "skill_type": "EX1",
     "name": "インフィニット・バレット",
@@ -60377,6 +62367,9 @@
   },
   {
     "unit_id": 1120001,
+    "game_unit_id": 1120001,
+    "unit_illust_id": 1120001,
+    "is_awake_unit": 0,
     "skill_id": 11200012,
     "skill_type": "EX2",
     "name": "カンパニー・オブ・アウリガ",
@@ -60528,6 +62521,9 @@
   },
   {
     "unit_id": 1121001,
+    "game_unit_id": 1121001,
+    "unit_illust_id": 1121001,
+    "is_awake_unit": 0,
     "skill_id": 11210011,
     "skill_type": "EX1",
     "name": "ブラックホール・ディバウアー",
@@ -60671,6 +62667,9 @@
   },
   {
     "unit_id": 1121001,
+    "game_unit_id": 1121001,
+    "unit_illust_id": 1121001,
+    "is_awake_unit": 0,
     "skill_id": 11210012,
     "skill_type": "EX2",
     "name": "デッドエンド・コラプサー",
@@ -60791,6 +62790,9 @@
   },
   {
     "unit_id": 1121001,
+    "game_unit_id": 1121001,
+    "unit_illust_id": 1121001,
+    "is_awake_unit": 0,
     "skill_id": "11210012_plus",
     "skill_type": "EX2+",
     "name": "イレイザー・フェニックス",
@@ -60922,6 +62924,9 @@
   },
   {
     "unit_id": 1122001,
+    "game_unit_id": 1122001,
+    "unit_illust_id": 1122001,
+    "is_awake_unit": 0,
     "skill_id": 11220011,
     "skill_type": "EX1",
     "name": "身外身",
@@ -61003,6 +63008,9 @@
   },
   {
     "unit_id": 1122001,
+    "game_unit_id": 1122001,
+    "unit_illust_id": 1122001,
+    "is_awake_unit": 0,
     "skill_id": 11220012,
     "skill_type": "EX2",
     "name": "飛猿斬",
@@ -61105,6 +63113,9 @@
   },
   {
     "unit_id": 1123001,
+    "game_unit_id": 1123001,
+    "unit_illust_id": 1123001,
+    "is_awake_unit": 0,
     "skill_id": 11230011,
     "skill_type": "EX1",
     "name": "炎武魔斬戟",
@@ -61205,6 +63216,9 @@
   },
   {
     "unit_id": 1123001,
+    "game_unit_id": 1123001,
+    "unit_illust_id": 1123001,
+    "is_awake_unit": 0,
     "skill_id": 11230012,
     "skill_type": "EX2",
     "name": "千変万華焔爆斬",
@@ -61326,6 +63340,9 @@
   },
   {
     "unit_id": 1124001,
+    "game_unit_id": 1124001,
+    "unit_illust_id": 1124001,
+    "is_awake_unit": 0,
     "skill_id": 11240011,
     "skill_type": "EX1",
     "name": "シャクラ・クローダ",
@@ -61483,6 +63500,9 @@
   },
   {
     "unit_id": 1124001,
+    "game_unit_id": 1124001,
+    "unit_illust_id": 1124001,
+    "is_awake_unit": 0,
     "skill_id": 11240012,
     "skill_type": "EX2",
     "name": "ヴァーユヴァータ・ニルティヤ",
@@ -61744,6 +63764,9 @@
   },
   {
     "unit_id": 1124001,
+    "game_unit_id": 1124001,
+    "unit_illust_id": 1124001,
+    "is_awake_unit": 0,
     "skill_id": "11240012_plus",
     "skill_type": "EX2+",
     "name": "サンサーラ・シャクティ",
@@ -62005,12 +64028,15 @@
   },
   {
     "unit_id": 1125001,
+    "game_unit_id": 1125001,
+    "unit_illust_id": 1125001,
+    "is_awake_unit": 0,
     "skill_id": 11250011,
     "skill_type": "EX1",
     "name": "スターダストストーム",
-    "icon_id": 100,
+    "icon_id": 101,
     "cost_ex_gauge": 100,
-    "skill_detail": "敵単体に230％×2回のダメージ/被ダメージを人間または闇属性の味方の数×8％増加（20CT） ※2つの条件を満たした場合でも効果は重複しない/自身のクリティカルを20％加算（30CT）/インフィニティ状態の時、人間または闇属性の味方のノーツを5～5前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない",
+    "skill_detail": "敵単体に230％×2回のダメージ/被ダメージを人間または闇属性の味方の数×8％増加（20CT） ※2つの条件を満たした場合でも効果は重複しない/自身のクリティカルを20％加算（30CT）/インフィニティ状態の時、人間または闇属性のノーツを5～5前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない",
     "effects": [
       {
         "display_value": "230%×2回",
@@ -62123,7 +64149,7 @@
           "max": 5
         },
         "effect_class": "note",
-        "target": "人間または闇属性の味方",
+        "target": "人間または闇属性",
         "target_branches": [
           {
             "side": "ally",
@@ -62150,7 +64176,7 @@
             "label": "特性"
           }
         ],
-        "raw": "インフィニティ状態の時、人間または闇属性の味方のノーツを5～5前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない",
+        "raw": "インフィニティ状態の時、人間または闇属性のノーツを5～5前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない",
         "children": [],
         "tags": [],
         "inherited_target": false
@@ -62159,10 +64185,13 @@
   },
   {
     "unit_id": 1125001,
+    "game_unit_id": 1125001,
+    "unit_illust_id": 1125001,
+    "is_awake_unit": 0,
     "skill_id": 11250012,
     "skill_type": "EX2",
     "name": "ギャラクティックインパクト",
-    "icon_id": 100,
+    "icon_id": 101,
     "cost_ex_gauge": 200,
     "skill_detail": "敵単体に200％×10回のダメージ/自身のクリティカル時のダメージ倍率を50％加算（1CT）/人間または闇属性の味方のノーツを7～7前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない",
     "effects": [
@@ -62261,10 +64290,13 @@
   },
   {
     "unit_id": 1125001,
+    "game_unit_id": 1125001,
+    "unit_illust_id": 1125001,
+    "is_awake_unit": 0,
     "skill_id": "11250012_plus",
     "skill_type": "EX2+",
     "name": "インフィニティユニバース",
-    "icon_id": 100,
+    "icon_id": 101,
     "cost_ex_gauge": "全て",
     "skill_detail": "味方のEXゲージを全て消費し（最低EXゲージ100必要）、敵単体に[200％+消費したEXゲージ量×0.2％]×10回のダメージ/EXゲージを400吸収し、その内の15％味方のEXゲージを回復/自身のクリティカル時のダメージ倍率を50％加算（1CT）/人間または闇属性の味方のノーツを10～10前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない/自身の行動CTを50％遅延（1CT）",
     "effects": [
@@ -62439,6 +64471,9 @@
   },
   {
     "unit_id": 1126001,
+    "game_unit_id": 1126001,
+    "unit_illust_id": 1126001,
+    "is_awake_unit": 0,
     "skill_id": 11260011,
     "skill_type": "EX1",
     "name": "アルカナファンタズム",
@@ -62565,6 +64600,9 @@
   },
   {
     "unit_id": 1126001,
+    "game_unit_id": 1126001,
+    "unit_illust_id": 1126001,
+    "is_awake_unit": 0,
     "skill_id": 11260012,
     "skill_type": "EX2",
     "name": "ロイヤルエクスキュート",
@@ -62708,6 +64746,9 @@
   },
   {
     "unit_id": 1127001,
+    "game_unit_id": 1127001,
+    "unit_illust_id": 1127001,
+    "is_awake_unit": 0,
     "skill_id": 11270011,
     "skill_type": "EX1",
     "name": "バインド・アボミネーション",
@@ -62876,6 +64917,9 @@
   },
   {
     "unit_id": 1127001,
+    "game_unit_id": 1127001,
+    "unit_illust_id": 1127001,
+    "is_awake_unit": 0,
     "skill_id": 11270012,
     "skill_type": "EX2",
     "name": "ヴォイドファイア・レクイエム",
@@ -63009,6 +65053,9 @@
   },
   {
     "unit_id": 1128001,
+    "game_unit_id": 1128001,
+    "unit_illust_id": 1128001,
+    "is_awake_unit": 0,
     "skill_id": 11280011,
     "skill_type": "EX1",
     "name": "バイオインジェクション",
@@ -63129,6 +65176,9 @@
   },
   {
     "unit_id": 1128001,
+    "game_unit_id": 1128001,
+    "unit_illust_id": 1128001,
+    "is_awake_unit": 0,
     "skill_id": 11280012,
     "skill_type": "EX2",
     "name": "ヴェノムヒーリング",
@@ -63285,6 +65335,9 @@
   },
   {
     "unit_id": 1129001,
+    "game_unit_id": 1129001,
+    "unit_illust_id": 1129001,
+    "is_awake_unit": 0,
     "skill_id": 11290011,
     "skill_type": "EX1",
     "name": "ミスティック・クロス",
@@ -63422,6 +65475,9 @@
   },
   {
     "unit_id": 1129001,
+    "game_unit_id": 1129001,
+    "unit_illust_id": 1129001,
+    "is_awake_unit": 0,
     "skill_id": 11290012,
     "skill_type": "EX2",
     "name": "フレンジード・スピアリング",
@@ -63572,6 +65628,9 @@
   },
   {
     "unit_id": 1130001,
+    "game_unit_id": 1130001,
+    "unit_illust_id": 1130001,
+    "is_awake_unit": 0,
     "skill_id": 11300011,
     "skill_type": "EX1",
     "name": "呪符退魔",
@@ -63703,6 +65762,9 @@
   },
   {
     "unit_id": 1130001,
+    "game_unit_id": 1130001,
+    "unit_illust_id": 1130001,
+    "is_awake_unit": 0,
     "skill_id": 11300012,
     "skill_type": "EX2",
     "name": "破邪法陣",
@@ -63851,6 +65913,9 @@
   },
   {
     "unit_id": 1131001,
+    "game_unit_id": 1131001,
+    "unit_illust_id": 1131001,
+    "is_awake_unit": 0,
     "skill_id": 11310011,
     "skill_type": "EX1",
     "name": "招力神仙丹",
@@ -64010,6 +66075,9 @@
   },
   {
     "unit_id": 1131001,
+    "game_unit_id": 1131001,
+    "unit_illust_id": 1131001,
+    "is_awake_unit": 0,
     "skill_id": 11310012,
     "skill_type": "EX2",
     "name": "散花",
@@ -64200,6 +66268,9 @@
   },
   {
     "unit_id": 1132001,
+    "game_unit_id": 1132001,
+    "unit_illust_id": 1132001,
+    "is_awake_unit": 0,
     "skill_id": 11320011,
     "skill_type": "EX1",
     "name": "破砕の乱撃",
@@ -64315,6 +66386,9 @@
   },
   {
     "unit_id": 1132001,
+    "game_unit_id": 1132001,
+    "unit_illust_id": 1132001,
+    "is_awake_unit": 0,
     "skill_id": 11320012,
     "skill_type": "EX2",
     "name": "断雲の剛撃",
@@ -64423,6 +66497,9 @@
   },
   {
     "unit_id": 1133001,
+    "game_unit_id": 1133001,
+    "unit_illust_id": 1133001,
+    "is_awake_unit": 0,
     "skill_id": 11330011,
     "skill_type": "EX1",
     "name": "フォビドゥンインデックス",
@@ -64570,6 +66647,9 @@
   },
   {
     "unit_id": 1133001,
+    "game_unit_id": 1133001,
+    "unit_illust_id": 1133001,
+    "is_awake_unit": 0,
     "skill_id": 11330012,
     "skill_type": "EX2",
     "name": "ネイムレスグリモワール",
@@ -64666,6 +66746,9 @@
   },
   {
     "unit_id": 1133001,
+    "game_unit_id": 1133001,
+    "unit_illust_id": 1133001,
+    "is_awake_unit": 0,
     "skill_id": "11330012_plus",
     "skill_type": "EX2+",
     "name": "セブンシンズカタストロフ",
@@ -64798,6 +66881,9 @@
   },
   {
     "unit_id": 1133002,
+    "game_unit_id": 1133002,
+    "unit_illust_id": 1133002,
+    "is_awake_unit": 0,
     "skill_id": 11330021,
     "skill_type": "EX1",
     "name": "迅閃剣",
@@ -64983,6 +67069,9 @@
   },
   {
     "unit_id": 1133002,
+    "game_unit_id": 1133002,
+    "unit_illust_id": 1133002,
+    "is_awake_unit": 0,
     "skill_id": 11330022,
     "skill_type": "EX2",
     "name": "怨焔舞",
@@ -65155,6 +67244,9 @@
   },
   {
     "unit_id": 1133002,
+    "game_unit_id": 1133002,
+    "unit_illust_id": 1133002,
+    "is_awake_unit": 0,
     "skill_id": "11330022_plus",
     "skill_type": "EX2+",
     "name": "爆華の章・暁篝",
@@ -65354,6 +67446,9 @@
   },
   {
     "unit_id": 1134001,
+    "game_unit_id": 1134001,
+    "unit_illust_id": 1134001,
+    "is_awake_unit": 0,
     "skill_id": 11340011,
     "skill_type": "EX1",
     "name": "オース・オブ・オベロン",
@@ -65487,6 +67582,9 @@
   },
   {
     "unit_id": 1134001,
+    "game_unit_id": 1134001,
+    "unit_illust_id": 1134001,
+    "is_awake_unit": 0,
     "skill_id": 11340012,
     "skill_type": "EX2",
     "name": "マグニフィセント・ティターニア",
@@ -65684,6 +67782,9 @@
   },
   {
     "unit_id": 1135001,
+    "game_unit_id": 1135001,
+    "unit_illust_id": 1135001,
+    "is_awake_unit": 0,
     "skill_id": 11350011,
     "skill_type": "EX1",
     "name": "クロッシングディザイアー",
@@ -65797,6 +67898,9 @@
   },
   {
     "unit_id": 1135001,
+    "game_unit_id": 1135001,
+    "unit_illust_id": 1135001,
+    "is_awake_unit": 0,
     "skill_id": 11350012,
     "skill_type": "EX2",
     "name": "スプリームコスモス",
@@ -65961,6 +68065,9 @@
   },
   {
     "unit_id": 1135001,
+    "game_unit_id": 1135001,
+    "unit_illust_id": 1135001,
+    "is_awake_unit": 0,
     "skill_id": "11350012_plus",
     "skill_type": "EX2+",
     "name": "ラストフォーチュンビクトリー",
@@ -66152,6 +68259,9 @@
   },
   {
     "unit_id": 1136001,
+    "game_unit_id": 1136001,
+    "unit_illust_id": 1136001,
+    "is_awake_unit": 0,
     "skill_id": 11360011,
     "skill_type": "EX1",
     "name": "メルティハートレイン",
@@ -66285,6 +68395,9 @@
   },
   {
     "unit_id": 1136001,
+    "game_unit_id": 1136001,
+    "unit_illust_id": 1136001,
+    "is_awake_unit": 0,
     "skill_id": 11360012,
     "skill_type": "EX2",
     "name": "トゥルーラブジャッジメント",
@@ -66384,6 +68497,9 @@
   },
   {
     "unit_id": 1137001,
+    "game_unit_id": 1137001,
+    "unit_illust_id": 1137001,
+    "is_awake_unit": 0,
     "skill_id": 11370011,
     "skill_type": "EX1",
     "name": "メロディークッション",
@@ -66515,6 +68631,9 @@
   },
   {
     "unit_id": 1137001,
+    "game_unit_id": 1137001,
+    "unit_illust_id": 1137001,
+    "is_awake_unit": 0,
     "skill_id": 11370012,
     "skill_type": "EX2",
     "name": "ファイブラインフィールド",
@@ -66703,6 +68822,9 @@
   },
   {
     "unit_id": 1138001,
+    "game_unit_id": 1138001,
+    "unit_illust_id": 1138001,
+    "is_awake_unit": 0,
     "skill_id": 11380011,
     "skill_type": "EX1",
     "name": "ディヴォーテッド・スプラッシュ",
@@ -66816,6 +68938,9 @@
   },
   {
     "unit_id": 1138001,
+    "game_unit_id": 1138001,
+    "unit_illust_id": 1138001,
+    "is_awake_unit": 0,
     "skill_id": 11380012,
     "skill_type": "EX2",
     "name": "リトルハート・セレナーデ",
@@ -66977,6 +69102,9 @@
   },
   {
     "unit_id": 1138001,
+    "game_unit_id": 1138001,
+    "unit_illust_id": 1138001,
+    "is_awake_unit": 0,
     "skill_id": "11380012_plus",
     "skill_type": "EX2+",
     "name": "ラブハート・メルトダウン",
@@ -67144,6 +69272,9 @@
   },
   {
     "unit_id": 1139001,
+    "game_unit_id": 1139001,
+    "unit_illust_id": 1139001,
+    "is_awake_unit": 0,
     "skill_id": 11390011,
     "skill_type": "EX1",
     "name": "リトルシューティングスター",
@@ -67270,6 +69401,9 @@
   },
   {
     "unit_id": 1139001,
+    "game_unit_id": 1139001,
+    "unit_illust_id": 1139001,
+    "is_awake_unit": 0,
     "skill_id": 11390012,
     "skill_type": "EX2",
     "name": "ディバインスターレイン",
@@ -67423,6 +69557,9 @@
   },
   {
     "unit_id": 1139001,
+    "game_unit_id": 1139001,
+    "unit_illust_id": 1139001,
+    "is_awake_unit": 0,
     "skill_id": "11390012_plus",
     "skill_type": "EX2+",
     "name": "ヴィーナス・ロンゴミニアド",
@@ -67576,6 +69713,9 @@
   },
   {
     "unit_id": 1140001,
+    "game_unit_id": 1140001,
+    "unit_illust_id": 1140001,
+    "is_awake_unit": 0,
     "skill_id": 11400011,
     "skill_type": "EX1",
     "name": "バーンショック",
@@ -67719,6 +69859,9 @@
   },
   {
     "unit_id": 1140001,
+    "game_unit_id": 1140001,
+    "unit_illust_id": 1140001,
+    "is_awake_unit": 0,
     "skill_id": 11400012,
     "skill_type": "EX2",
     "name": "クリザンテーメ・フランメ",
@@ -67891,6 +70034,9 @@
   },
   {
     "unit_id": 1140001,
+    "game_unit_id": 1140001,
+    "unit_illust_id": 1140001,
+    "is_awake_unit": 0,
     "skill_id": "11400012_plus",
     "skill_type": "EX2+",
     "name": "イマチュア・メテオ・シャワー",
@@ -68105,6 +70251,9 @@
   },
   {
     "unit_id": 1141001,
+    "game_unit_id": 1141001,
+    "unit_illust_id": 1141001,
+    "is_awake_unit": 0,
     "skill_id": 11410011,
     "skill_type": "EX1",
     "name": "ルビー・ライト",
@@ -68235,6 +70384,9 @@
   },
   {
     "unit_id": 1141001,
+    "game_unit_id": 1141001,
+    "unit_illust_id": 1141001,
+    "is_awake_unit": 0,
     "skill_id": 11410012,
     "skill_type": "EX2",
     "name": "レインボー・ヒール",
@@ -68455,6 +70607,9 @@
   },
   {
     "unit_id": 1141001,
+    "game_unit_id": 1141001,
+    "unit_illust_id": 1141001,
+    "is_awake_unit": 0,
     "skill_id": "11410012_plus",
     "skill_type": "EX2+",
     "name": "ミラクル・リアライゼーション",
@@ -68675,6 +70830,9 @@
   },
   {
     "unit_id": 1142001,
+    "game_unit_id": 1142001,
+    "unit_illust_id": 1142001,
+    "is_awake_unit": 0,
     "skill_id": 11420011,
     "skill_type": "EX1",
     "name": "セレスタル・スフィア",
@@ -68829,6 +70987,9 @@
   },
   {
     "unit_id": 1142001,
+    "game_unit_id": 1142001,
+    "unit_illust_id": 1142001,
+    "is_awake_unit": 0,
     "skill_id": 11420012,
     "skill_type": "EX2",
     "name": "アンリーシュド・ラディアンス",
@@ -68993,6 +71154,9 @@
   },
   {
     "unit_id": 1142001,
+    "game_unit_id": 1142001,
+    "unit_illust_id": 1142001,
+    "is_awake_unit": 0,
     "skill_id": "11420012_plus",
     "skill_type": "EX2+",
     "name": "ア・シングル・レイ・ホープ",
@@ -69157,6 +71321,9 @@
   },
   {
     "unit_id": 1143001,
+    "game_unit_id": 1143001,
+    "unit_illust_id": 1143001,
+    "is_awake_unit": 0,
     "skill_id": 11430011,
     "skill_type": "EX1",
     "name": "ヘブンリー・レクイエム",
@@ -69333,6 +71500,9 @@
   },
   {
     "unit_id": 1143001,
+    "game_unit_id": 1143001,
+    "unit_illust_id": 1143001,
+    "is_awake_unit": 0,
     "skill_id": 11430012,
     "skill_type": "EX2",
     "name": "ジャッジメント・オブ・ミカエル",
@@ -69493,6 +71663,9 @@
   },
   {
     "unit_id": 1143001,
+    "game_unit_id": 1143001,
+    "unit_illust_id": 1143001,
+    "is_awake_unit": 0,
     "skill_id": "11430012_plus",
     "skill_type": "EX2+",
     "name": "スプリーム・トライアンフ",
@@ -69677,6 +71850,9 @@
   },
   {
     "unit_id": 1155001,
+    "game_unit_id": 1155001,
+    "unit_illust_id": 1155001,
+    "is_awake_unit": 0,
     "skill_id": 11550011,
     "skill_type": "EX1",
     "name": "メルトアタック",
@@ -69827,6 +72003,9 @@
   },
   {
     "unit_id": 1155001,
+    "game_unit_id": 1155001,
+    "unit_illust_id": 1155001,
+    "is_awake_unit": 0,
     "skill_id": 11550012,
     "skill_type": "EX2",
     "name": "ヒートブラスト",
@@ -70065,6 +72244,9 @@
   },
   {
     "unit_id": 1155001,
+    "game_unit_id": 1155001,
+    "unit_illust_id": 1155001,
+    "is_awake_unit": 0,
     "skill_id": "11550012_plus",
     "skill_type": "EX2+",
     "name": "ブレイブスラッシュ",
@@ -70345,6 +72527,9 @@
   },
   {
     "unit_id": 1156001,
+    "game_unit_id": 1156001,
+    "unit_illust_id": 1156001,
+    "is_awake_unit": 0,
     "skill_id": 11560011,
     "skill_type": "EX1",
     "name": "セイントウォーター",
@@ -70517,6 +72702,9 @@
   },
   {
     "unit_id": 1156001,
+    "game_unit_id": 1156001,
+    "unit_illust_id": 1156001,
+    "is_awake_unit": 0,
     "skill_id": 11560012,
     "skill_type": "EX2",
     "name": "スピーリアフリーズ",
@@ -70687,6 +72875,9 @@
   },
   {
     "unit_id": 1156001,
+    "game_unit_id": 1156001,
+    "unit_illust_id": 1156001,
+    "is_awake_unit": 0,
     "skill_id": "11560012_plus",
     "skill_type": "EX2+",
     "name": "ディスペアフリーズ",
@@ -70857,6 +73048,9 @@
   },
   {
     "unit_id": 1157001,
+    "game_unit_id": 1157001,
+    "unit_illust_id": 1157001,
+    "is_awake_unit": 0,
     "skill_id": 11570011,
     "skill_type": "EX1",
     "name": "ホーリーショット",
@@ -70989,6 +73183,9 @@
   },
   {
     "unit_id": 1157001,
+    "game_unit_id": 1157001,
+    "unit_illust_id": 1157001,
+    "is_awake_unit": 0,
     "skill_id": 11570012,
     "skill_type": "EX2",
     "name": "聖なる波動",
@@ -71100,6 +73297,9 @@
   },
   {
     "unit_id": 1157001,
+    "game_unit_id": 1157001,
+    "unit_illust_id": 1157001,
+    "is_awake_unit": 0,
     "skill_id": "11570012_plus",
     "skill_type": "EX2+",
     "name": "シャイニングミラージュ",
@@ -71262,6 +73462,9 @@
   },
   {
     "unit_id": 1158001,
+    "game_unit_id": 1158001,
+    "unit_illust_id": 1158001,
+    "is_awake_unit": 0,
     "skill_id": 11580011,
     "skill_type": "EX1",
     "name": "グラビティスマッシュ",
@@ -71393,6 +73596,9 @@
   },
   {
     "unit_id": 1158001,
+    "game_unit_id": 1158001,
+    "unit_illust_id": 1158001,
+    "is_awake_unit": 0,
     "skill_id": 11580012,
     "skill_type": "EX2",
     "name": "不可視の縛鎖",
@@ -71518,6 +73724,9 @@
   },
   {
     "unit_id": 1158001,
+    "game_unit_id": 1158001,
+    "unit_illust_id": 1158001,
+    "is_awake_unit": 0,
     "skill_id": "11580012_plus",
     "skill_type": "EX2+",
     "name": "ダークネスブロート",

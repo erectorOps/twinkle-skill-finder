@@ -17,6 +17,24 @@ const renderFormula = (formula) =>
         )
         .replace(/\+/g, '<span class="formula-op">+</span>');
 
+const getEquipmentUnitId = (item) =>
+    item?.game_unit_id ?? item?.unit_id;
+
+const findAccessoryForSkill = (accessories, skill) =>
+    (accessories || []).find(x => x.unit_id === skill.unit_id)
+    || (accessories || []).find(x =>
+        getEquipmentUnitId(x) === getEquipmentUnitId(skill)
+    );
+
+const matchingAccessoryAbilities = (accessory, skill) => {
+    if (!accessory) return [];
+
+    return (accessory.acc_abilities || []).filter(ability =>
+        ability.skill_type === 'COMMON'
+        || String(ability.skill_id) === String(skill.skill_id)
+    );
+};
+
 /* getMatchedEffectKeys (detailFilter.js) と同じ DFS 順 (親 → 子 → 孫 ...) で idx を割り振る */
 const renderEffectBox = (effect, counter, isSub = false) => {
     const idx = counter.value++;
@@ -50,14 +68,9 @@ const renderEffectBox = (effect, counter, isSub = false) => {
 export function renderCard(skill, chara, accessories) {
     const bgImage = `img/unit/chara_${skill.unit_id}_2_1.webp`;
 
-    const skillAccessory = (accessories || []).find(x => x.unit_id === skill.unit_id);
+    const skillAccessory = findAccessoryForSkill(accessories, skill);
 
-    const accessoryAbilities = skillAccessory
-        ? skillAccessory.acc_abilities.filter(ability =>
-            ability.skill_type === 'COMMON'
-            || String(ability.skill_id) === String(skill.skill_id)
-          )
-        : [];
+    const accessoryAbilities = matchingAccessoryAbilities(skillAccessory, skill);
 
     const accessoryCommonEffects = accessoryAbilities
         .filter(ability => ability.skill_type === 'COMMON')

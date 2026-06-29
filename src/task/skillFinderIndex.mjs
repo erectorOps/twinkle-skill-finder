@@ -27,6 +27,15 @@ const flattenEffects = (effects = []) => {
 const unique = (values) =>
   [...new Set(values.filter(value => value !== undefined && value !== null && value !== ""))];
 
+const getEquipmentUnitId = (item) =>
+  item?.game_unit_id ?? item?.unit_id;
+
+const findAccessoryForSkill = (accessories, skill) =>
+  (accessories || []).find(accessory => accessory.unit_id === skill.unit_id)
+  || (accessories || []).find(accessory =>
+    getEquipmentUnitId(accessory) === getEquipmentUnitId(skill)
+  );
+
 export const normalizeBranches = (branches) =>
   !branches
     ? []
@@ -175,13 +184,25 @@ const buildEffectCategories = (skill) => {
   return [...categories].sort();
 };
 
-const buildAccessorySearchText = (accessory) => {
+const matchingAccessoryAbilities = (accessory, skill) =>
+  {
+    if (!accessory) return [];
+
+    return (accessory.acc_abilities || []).filter(ability =>
+      ability.skill_type === "COMMON"
+      || String(ability.skill_id) === String(skill.skill_id)
+    );
+  };
+
+const buildAccessorySearchText = (accessory, skill) => {
   if (!accessory) {
     return "";
   }
 
+  const abilities = matchingAccessoryAbilities(accessory, skill);
+
   const inlineCommonEffects =
-    (accessory.acc_abilities || [])
+    abilities
       .filter(ability => ability.skill_type === "COMMON")
       .flatMap(ability => ability.effects || [])
       .filter(effect =>
@@ -192,6 +213,16 @@ const buildAccessorySearchText = (accessory) => {
 
   return [
     accessory.accessory_name,
+    ...abilities.flatMap(ability => [
+      ability.text,
+      ...(ability.effects || []).flatMap(effect => [
+        effect.type,
+        effect.display_value,
+        effect.formula,
+        effect.raw,
+        ...(effect.tags || [])
+      ])
+    ]),
     ...inlineCommonEffects
   ].filter(Boolean).join(" ");
 };
@@ -211,7 +242,7 @@ const buildSkillSearchText = ({ skill, character, effects, accessory }) =>
       effect.raw,
       ...(effect.tags || [])
     ]),
-    buildAccessorySearchText(accessory)
+    buildAccessorySearchText(accessory, skill)
   ].filter(Boolean).join(" ").toLowerCase();
 
 const buildObtainIndex = (obtain) => {
@@ -275,13 +306,6 @@ export const buildSkillFinderIndex = ({ skills, characters, accessories = [] }) 
       character
     ])
   );
-  const accessoryMap = new Map(
-    accessories.map(accessory => [
-      accessory.unit_id,
-      accessory
-    ])
-  );
-
   return skills
     .map(skill => {
       const character =
@@ -294,7 +318,12 @@ export const buildSkillFinderIndex = ({ skills, characters, accessories = [] }) 
       const effects =
         flattenEffects(skill.effects);
       const accessory =
-        accessoryMap.get(skill.unit_id);
+        findAccessoryForSkill(accessories, skill);
+      const accessoryEffects =
+        matchingAccessoryAbilities(accessory, skill)
+          .flatMap(ability => ability.effects || []);
+      const effectsWithAccessory =
+        effects.concat(flattenEffects(accessoryEffects));
 
       return {
         skill_id: String(skill.skill_id),
@@ -315,15 +344,18 @@ export const buildSkillFinderIndex = ({ skills, characters, accessories = [] }) 
         release_years: buildReleaseYear(character.release_date),
         release_order: character.release_order || null,
         obtains: buildObtainIndex(character.obtain),
-        effect_categories: buildEffectCategories(skill),
-        effect_types: unique(effects.map(effect => effect.type)),
-        effect_tags: unique(effects.flatMap(effect => effect.tags || [])),
-        effect_classes: unique(effects.map(effect => effect.effect_class)),
-        effects: buildEffectsMeta(skill),
+        effect_categories: unique([
+          ...buildEffectCategories(skill),
+          ...accessoryEffects.flatMap(effect => [...effectCategoriesOf(effect)])
+        ]),
+        effect_types: unique(effectsWithAccessory.map(effect => effect.type)),
+        effect_tags: unique(effectsWithAccessory.flatMap(effect => effect.tags || [])),
+        effect_classes: unique(effectsWithAccessory.map(effect => effect.effect_class)),
+        effects: buildEffectsMeta({ effects: effectsWithAccessory }),
         search_text: buildSkillSearchText({
           skill,
           character,
-          effects,
+          effects: effectsWithAccessory,
           accessory
         })
       };

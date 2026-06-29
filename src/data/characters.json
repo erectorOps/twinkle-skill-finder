@@ -1,6 +1,9 @@
 [
   {
     "unit_id": 1001001,
+    "game_unit_id": 1001001,
+    "unit_illust_id": 1001001,
+    "is_awake_unit": 0,
     "character_name": "フィオナ",
     "character_name_kana": "フィオナ",
     "unit_name": "流星の姫君",
@@ -40,6 +43,9 @@
   },
   {
     "unit_id": 1001002,
+    "game_unit_id": 1001002,
+    "unit_illust_id": 1001002,
+    "is_awake_unit": 0,
     "character_name": "フィオナ",
     "character_name_kana": "フィオナ",
     "unit_name": "渚の星徒会長",
@@ -79,6 +85,9 @@
   },
   {
     "unit_id": 1001003,
+    "game_unit_id": 1001003,
+    "unit_illust_id": 1001003,
+    "is_awake_unit": 0,
     "character_name": "フィオナ",
     "character_name_kana": "フィオナ",
     "unit_name": "太陽の祝福",
@@ -124,6 +133,9 @@
   },
   {
     "unit_id": 1001004,
+    "game_unit_id": 1001004,
+    "unit_illust_id": 1001004,
+    "is_awake_unit": 0,
     "character_name": "フィオナ",
     "character_name_kana": "フィオナ",
     "unit_name": "初日の出を迎えて",
@@ -169,6 +181,9 @@
   },
   {
     "unit_id": 1001005,
+    "game_unit_id": 1001005,
+    "unit_illust_id": 1001005,
+    "is_awake_unit": 0,
     "character_name": "フィオナ《魔王》",
     "character_name_kana": "フィオナ",
     "unit_name": "星を見るもの",
@@ -214,6 +229,9 @@
   },
   {
     "unit_id": 1002001,
+    "game_unit_id": 1002001,
+    "unit_illust_id": 1002001,
+    "is_awake_unit": 0,
     "character_name": "サーシャ",
     "character_name_kana": "サーシャ",
     "unit_name": "アイスクイーン",
@@ -253,6 +271,9 @@
   },
   {
     "unit_id": 1002002,
+    "game_unit_id": 1002002,
+    "unit_illust_id": 1002002,
+    "is_awake_unit": 0,
     "character_name": "サーシャ",
     "character_name_kana": "サーシャ",
     "unit_name": "夏のお姉ちゃん♪",
@@ -292,6 +313,9 @@
   },
   {
     "unit_id": 1002004,
+    "game_unit_id": 1002004,
+    "unit_illust_id": 1002004,
+    "is_awake_unit": 0,
     "character_name": "サーシャ《絶氷》",
     "character_name_kana": "サーシャ",
     "unit_name": "アイシクルノヴァ",
@@ -337,6 +361,9 @@
   },
   {
     "unit_id": 1002005,
+    "game_unit_id": 1002005,
+    "unit_illust_id": 1002005,
+    "is_awake_unit": 0,
     "character_name": "サーシャ",
     "character_name_kana": "サーシャ",
     "unit_name": "雨のち新春晴れ",
@@ -382,6 +409,9 @@
   },
   {
     "unit_id": 1003001,
+    "game_unit_id": 1003001,
+    "unit_illust_id": 1003001,
+    "is_awake_unit": 0,
     "character_name": "ヴィーナス",
     "character_name_kana": "ウィーナス",
     "unit_name": "ハローフィクサー",
@@ -421,6 +451,9 @@
   },
   {
     "unit_id": 1003003,
+    "game_unit_id": 1003003,
+    "unit_illust_id": 1003003,
+    "is_awake_unit": 0,
     "character_name": "ヴィーナス",
     "character_name_kana": "ウィーナス",
     "unit_name": "招福の明星",
@@ -460,6 +493,9 @@
   },
   {
     "unit_id": 1003004,
+    "game_unit_id": 1003004,
+    "unit_illust_id": 1003004,
+    "is_awake_unit": 0,
     "character_name": "ヴィーナス",
     "character_name_kana": "ウィーナス",
     "unit_name": "夏空の一番星",
@@ -505,6 +541,9 @@
   },
   {
     "unit_id": 1003005,
+    "game_unit_id": 1003005,
+    "unit_illust_id": 1003005,
+    "is_awake_unit": 0,
     "character_name": "ヴィーナス《神光》",
     "character_name_kana": "ウィーナス",
     "unit_name": "ノヴァゴッデス",
@@ -550,6 +589,9 @@
   },
   {
     "unit_id": 1004003,
+    "game_unit_id": 1004003,
+    "unit_illust_id": 1004003,
+    "is_awake_unit": 0,
     "character_name": "アポロ",
     "character_name_kana": "アホロ",
     "unit_name": "流星ライダー",
@@ -595,6 +637,9 @@
   },
   {
     "unit_id": 1004004,
+    "game_unit_id": 1004004,
+    "unit_illust_id": 1004004,
+    "is_awake_unit": 0,
     "character_name": "アポロ",
     "character_name_kana": "アホロ",
     "unit_name": "ナギサフォーム",
@@ -640,6 +685,9 @@
   },
   {
     "unit_id": 1004005,
+    "game_unit_id": 1004005,
+    "unit_illust_id": 1004005,
+    "is_awake_unit": 0,
     "character_name": "アポロ",
     "character_name_kana": "アホロ",
     "unit_name": "フレイムフォーム",
@@ -679,6 +727,9 @@
   },
   {
     "unit_id": 1004006,
+    "game_unit_id": 1004006,
+    "unit_illust_id": 1004006,
+    "is_awake_unit": 0,
     "character_name": "アポロ",
     "character_name_kana": "アホロ",
     "unit_name": "プリティドール",
@@ -724,6 +775,9 @@
   },
   {
     "unit_id": 1005001,
+    "game_unit_id": 1005001,
+    "unit_illust_id": 1005001,
+    "is_awake_unit": 0,
     "character_name": "ソフィア",
     "character_name_kana": "ソフィア",
     "unit_name": "氷刃の妖精",
@@ -763,6 +817,9 @@
   },
   {
     "unit_id": 1005002,
+    "game_unit_id": 1005002,
+    "unit_illust_id": 1005002,
+    "is_awake_unit": 0,
     "character_name": "ソフィア",
     "character_name_kana": "ソフィア",
     "unit_name": "新春アクセル",
@@ -802,6 +859,9 @@
   },
   {
     "unit_id": 1005003,
+    "game_unit_id": 1005003,
+    "unit_illust_id": 1005003,
+    "is_awake_unit": 0,
     "character_name": "ソフィア",
     "character_name_kana": "ソフィア",
     "unit_name": "さざ波に揺られて",
@@ -841,6 +901,9 @@
   },
   {
     "unit_id": 1005004,
+    "game_unit_id": 1005004,
+    "unit_illust_id": 1005004,
+    "is_awake_unit": 0,
     "character_name": "ソフィア",
     "character_name_kana": "ソフィア",
     "unit_name": "温かシーツおばけ",
@@ -879,7 +942,63 @@
     "specific_gauge_data": []
   },
   {
+    "unit_id": 1006900,
+    "game_unit_id": 1006001,
+    "unit_illust_id": 1006900,
+    "is_awake_unit": 1,
+    "character_name": "クロト《厄災》",
+    "character_name_kana": "クロト",
+    "unit_name": "最後の魔王",
+    "rarity": 1,
+    "attr_type": {
+      "id": "5",
+      "label": "闇",
+      "icon": "attribute_05.png"
+    },
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "camps": [
+      {
+        "id": 1,
+        "label": "人間",
+        "icon": "race_1.png"
+      },
+      {
+        "id": 3,
+        "label": "魔族",
+        "icon": "race_3.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 2,
+        "label": "新星学園",
+        "icon": "affiliation_01.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "3",
+        "label": "打撃",
+        "icon": "icon_equipment_01_03.png"
+      }
+    ],
+    "specific_gauge_data": {
+      "specific_name": "厄災状態",
+      "specific_detail": "◆通常状態\n通常状態中、自身をユニゾンに含んだ状態でユニゾンアタックをすると厄災ゲージが「1」溜まる。\n厄災ゲージが「3」溜まると「厄災状態」に移行する。\n\n◆厄災状態\n厄災状態中、自身のATK160％アップ【解除不可】\n厄災状態中、「EXスキル2」が「EXスキル2+」に変化する。\nEXスキル2+を使用すると厄災状態が解除され、「通常状態」に戻る。",
+      "icon_id": 90002,
+      "is_unlock": 1,
+      "is_strengthen": 0
+    }
+  },
+  {
     "unit_id": 1006001,
+    "game_unit_id": 1006001,
+    "unit_illust_id": 1006001,
+    "is_awake_unit": 0,
     "character_name": "クロト",
     "character_name_kana": "クロト",
     "unit_name": "未完の魔王",
@@ -919,6 +1038,9 @@
   },
   {
     "unit_id": 1007001,
+    "game_unit_id": 1007001,
+    "unit_illust_id": 1007001,
+    "is_awake_unit": 0,
     "character_name": "ルリエル",
     "character_name_kana": "ルリエル",
     "unit_name": "加護の角笛",
@@ -958,6 +1080,9 @@
   },
   {
     "unit_id": 1007002,
+    "game_unit_id": 1007002,
+    "unit_illust_id": 1007002,
+    "is_awake_unit": 0,
     "character_name": "ルリエル",
     "character_name_kana": "ルリエル",
     "unit_name": "自称隠れ天使",
@@ -997,6 +1122,9 @@
   },
   {
     "unit_id": 1007003,
+    "game_unit_id": 1007003,
+    "unit_illust_id": 1007003,
+    "is_awake_unit": 0,
     "character_name": "ルリエル",
     "character_name_kana": "ルリエル",
     "unit_name": "初めての海",
@@ -1036,6 +1164,9 @@
   },
   {
     "unit_id": 1007004,
+    "game_unit_id": 1007004,
+    "unit_illust_id": 1007004,
+    "is_awake_unit": 0,
     "character_name": "ルリエル",
     "character_name_kana": "ルリエル",
     "unit_name": "でんでん神楽",
@@ -1081,6 +1212,9 @@
   },
   {
     "unit_id": 1007005,
+    "game_unit_id": 1007005,
+    "unit_illust_id": 1007005,
+    "is_awake_unit": 0,
     "character_name": "ルリエル",
     "character_name_kana": "ルリエル",
     "unit_name": "星と花の騎士",
@@ -1120,6 +1254,9 @@
   },
   {
     "unit_id": 1008001,
+    "game_unit_id": 1008001,
+    "unit_illust_id": 1008001,
+    "is_awake_unit": 0,
     "character_name": "アナ",
     "character_name_kana": "アナ",
     "unit_name": "ソルヴアーチャー",
@@ -1159,6 +1296,9 @@
   },
   {
     "unit_id": 1008002,
+    "game_unit_id": 1008002,
+    "unit_illust_id": 1008002,
+    "is_awake_unit": 0,
     "character_name": "アナ",
     "character_name_kana": "アナ",
     "unit_name": "狙い撃ちサマー",
@@ -1198,6 +1338,9 @@
   },
   {
     "unit_id": 1008003,
+    "game_unit_id": 1008003,
+    "unit_illust_id": 1008003,
+    "is_awake_unit": 0,
     "character_name": "アナ《煌炎》",
     "character_name_kana": "アナ",
     "unit_name": "煌炎の超天使",
@@ -1243,6 +1386,9 @@
   },
   {
     "unit_id": 1008004,
+    "game_unit_id": 1008004,
+    "unit_illust_id": 1008004,
+    "is_awake_unit": 0,
     "character_name": "アナ",
     "character_name_kana": "アナ",
     "unit_name": "賀正ウェルカム",
@@ -1288,6 +1434,9 @@
   },
   {
     "unit_id": 1009001,
+    "game_unit_id": 1009001,
+    "unit_illust_id": 1009001,
+    "is_awake_unit": 0,
     "character_name": "セーラ",
     "character_name_kana": "セーラ",
     "unit_name": "おちゃめな副会長",
@@ -1327,6 +1476,9 @@
   },
   {
     "unit_id": 1009002,
+    "game_unit_id": 1009002,
+    "unit_illust_id": 1009002,
+    "is_awake_unit": 0,
     "character_name": "セーラ",
     "character_name_kana": "セーラ",
     "unit_name": "チャームバニー",
@@ -1366,6 +1518,9 @@
   },
   {
     "unit_id": 1009003,
+    "game_unit_id": 1009003,
+    "unit_illust_id": 1009003,
+    "is_awake_unit": 0,
     "character_name": "セーラ",
     "character_name_kana": "セーラ",
     "unit_name": "マリンガンナー",
@@ -1405,6 +1560,9 @@
   },
   {
     "unit_id": 1010001,
+    "game_unit_id": 1010001,
+    "unit_illust_id": 1010001,
+    "is_awake_unit": 0,
     "character_name": "マグダレナ",
     "character_name_kana": "マクタレナ",
     "unit_name": "“境界”を護る者",
@@ -1444,6 +1602,9 @@
   },
   {
     "unit_id": 1011001,
+    "game_unit_id": 1011001,
+    "unit_illust_id": 1011001,
+    "is_awake_unit": 0,
     "character_name": "マトイ",
     "character_name_kana": "マトイ",
     "unit_name": "コモンシールダー",
@@ -1483,6 +1644,9 @@
   },
   {
     "unit_id": 1011002,
+    "game_unit_id": 1011002,
+    "unit_illust_id": 1011002,
+    "is_awake_unit": 0,
     "character_name": "マトイ",
     "character_name_kana": "マトイ",
     "unit_name": "夏もキミの隣で",
@@ -1522,6 +1686,9 @@
   },
   {
     "unit_id": 1011003,
+    "game_unit_id": 1011003,
+    "unit_illust_id": 1011003,
+    "is_awake_unit": 0,
     "character_name": "マトイ《纏雷》",
     "character_name_kana": "マトイ",
     "unit_name": "絶対普遍の守り手",
@@ -1561,6 +1728,9 @@
   },
   {
     "unit_id": 1011004,
+    "game_unit_id": 1011004,
+    "unit_illust_id": 1011004,
+    "is_awake_unit": 0,
     "character_name": "マトイ",
     "character_name_kana": "マトイ",
     "unit_name": "二刀普遍の巫女",
@@ -1600,6 +1770,9 @@
   },
   {
     "unit_id": 1012001,
+    "game_unit_id": 1012001,
+    "unit_illust_id": 1012001,
+    "is_awake_unit": 0,
     "character_name": "キリカ",
     "character_name_kana": "キリカ",
     "unit_name": "マスターメイド",
@@ -1639,6 +1812,9 @@
   },
   {
     "unit_id": 1012002,
+    "game_unit_id": 1012002,
+    "unit_illust_id": 1012002,
+    "is_awake_unit": 0,
     "character_name": "キリカ",
     "character_name_kana": "キリカ",
     "unit_name": "マリーメイデン",
@@ -1678,6 +1854,9 @@
   },
   {
     "unit_id": 1013001,
+    "game_unit_id": 1013001,
+    "unit_illust_id": 1013001,
+    "is_awake_unit": 0,
     "character_name": "ユウリ",
     "character_name_kana": "ユウリ",
     "unit_name": "弱きを守る斧槍",
@@ -1717,6 +1896,9 @@
   },
   {
     "unit_id": 1013002,
+    "game_unit_id": 1013002,
+    "unit_illust_id": 1013002,
+    "is_awake_unit": 0,
     "character_name": "ユウリ",
     "character_name_kana": "ユウリ",
     "unit_name": "ダイスシューター",
@@ -1756,6 +1938,9 @@
   },
   {
     "unit_id": 1014001,
+    "game_unit_id": 1014001,
+    "unit_illust_id": 1014001,
+    "is_awake_unit": 0,
     "character_name": "トワ先生",
     "character_name_kana": "トワセンセイ",
     "unit_name": "暁の導き手",
@@ -1795,6 +1980,9 @@
   },
   {
     "unit_id": 1014002,
+    "game_unit_id": 1014002,
+    "unit_illust_id": 1014002,
+    "is_awake_unit": 0,
     "character_name": "トワ先生《黎明》",
     "character_name_kana": "トワセンセイ",
     "unit_name": "黄昏の超新星",
@@ -1834,6 +2022,9 @@
   },
   {
     "unit_id": 1014003,
+    "game_unit_id": 1014003,
+    "unit_illust_id": 1014003,
+    "is_awake_unit": 0,
     "character_name": "トワ先生",
     "character_name_kana": "トワセンセイ",
     "unit_name": "水星の花嫁",
@@ -1873,6 +2064,9 @@
   },
   {
     "unit_id": 1014004,
+    "game_unit_id": 1014004,
+    "unit_illust_id": 1014004,
+    "is_awake_unit": 0,
     "character_name": "トワ先生",
     "character_name_kana": "トワセンセイ",
     "unit_name": "恋は黄昏ビギナー",
@@ -1912,6 +2106,9 @@
   },
   {
     "unit_id": 1015001,
+    "game_unit_id": 1015001,
+    "unit_illust_id": 1015001,
+    "is_awake_unit": 0,
     "character_name": "アルモタヘル",
     "character_name_kana": "アルモタヘル",
     "unit_name": "命脈の守護天使",
@@ -1951,6 +2148,9 @@
   },
   {
     "unit_id": 1016001,
+    "game_unit_id": 1016001,
+    "unit_illust_id": 1016001,
+    "is_awake_unit": 0,
     "character_name": "ヒトリ",
     "character_name_kana": "ヒトリ",
     "unit_name": "ゴーストネイバー",
@@ -1990,6 +2190,9 @@
   },
   {
     "unit_id": 1016002,
+    "game_unit_id": 1016002,
+    "unit_illust_id": 1016002,
+    "is_awake_unit": 0,
     "character_name": "ヒトリ",
     "character_name_kana": "ヒトリ",
     "unit_name": "はにかみチシャ猫",
@@ -2029,6 +2232,9 @@
   },
   {
     "unit_id": 1017001,
+    "game_unit_id": 1017001,
+    "unit_illust_id": 1017001,
+    "is_awake_unit": 0,
     "character_name": "蛍火",
     "character_name_kana": "ケイカ",
     "unit_name": "烈火の料理人",
@@ -2068,6 +2274,9 @@
   },
   {
     "unit_id": 1018001,
+    "game_unit_id": 1018001,
+    "unit_illust_id": 1018001,
+    "is_awake_unit": 0,
     "character_name": "エリス",
     "character_name_kana": "エリス",
     "unit_name": "轟雷の華騎士",
@@ -2107,6 +2316,9 @@
   },
   {
     "unit_id": 1019001,
+    "game_unit_id": 1019001,
+    "unit_illust_id": 1019001,
+    "is_awake_unit": 0,
     "character_name": "せつな",
     "character_name_kana": "セツナ",
     "unit_name": "紫電のくノ一",
@@ -2146,6 +2358,9 @@
   },
   {
     "unit_id": 1019002,
+    "game_unit_id": 1019002,
+    "unit_illust_id": 1019002,
+    "is_awake_unit": 0,
     "character_name": "せつな",
     "character_name_kana": "セツナ",
     "unit_name": "愛遁チョコギフト",
@@ -2185,6 +2400,9 @@
   },
   {
     "unit_id": 1019003,
+    "game_unit_id": 1019003,
+    "unit_illust_id": 1019003,
+    "is_awake_unit": 0,
     "character_name": "せつな《開花》",
     "character_name_kana": "セツナ",
     "unit_name": "桜花・紫桜忍軍",
@@ -2224,6 +2442,9 @@
   },
   {
     "unit_id": 1020001,
+    "game_unit_id": 1020001,
+    "unit_illust_id": 1020001,
+    "is_awake_unit": 0,
     "character_name": "ルルカ",
     "character_name_kana": "ルルカ",
     "unit_name": "蒼穹の仮想歌姫",
@@ -2263,6 +2484,9 @@
   },
   {
     "unit_id": 1020002,
+    "game_unit_id": 1020002,
+    "unit_illust_id": 1020002,
+    "is_awake_unit": 0,
     "character_name": "ルルカ",
     "character_name_kana": "ルルカ",
     "unit_name": "ＶＲ水着配信",
@@ -2302,6 +2526,9 @@
   },
   {
     "unit_id": 1020004,
+    "game_unit_id": 1020004,
+    "unit_illust_id": 1020004,
+    "is_awake_unit": 0,
     "character_name": "ルルカ",
     "character_name_kana": "ルルカ",
     "unit_name": "聖夜のキャロル",
@@ -2347,6 +2574,9 @@
   },
   {
     "unit_id": 1020005,
+    "game_unit_id": 1020005,
+    "unit_illust_id": 1020005,
+    "is_awake_unit": 0,
     "character_name": "ルルカ",
     "character_name_kana": "ルルカ",
     "unit_name": "手作り妹チョコ",
@@ -2392,6 +2622,9 @@
   },
   {
     "unit_id": 1021001,
+    "game_unit_id": 1021001,
+    "unit_illust_id": 1021001,
+    "is_awake_unit": 0,
     "character_name": "環",
     "character_name_kana": "タマキ",
     "unit_name": "お気楽バイト天使",
@@ -2436,6 +2669,9 @@
   },
   {
     "unit_id": 1022001,
+    "game_unit_id": 1022001,
+    "unit_illust_id": 1022001,
+    "is_awake_unit": 0,
     "character_name": "モネ",
     "character_name_kana": "モネ",
     "unit_name": "歩く図書館",
@@ -2475,6 +2711,9 @@
   },
   {
     "unit_id": 1022002,
+    "game_unit_id": 1022002,
+    "unit_illust_id": 1022002,
+    "is_awake_unit": 0,
     "character_name": "モネ",
     "character_name_kana": "モネ",
     "unit_name": "水着サンタ！？",
@@ -2514,6 +2753,9 @@
   },
   {
     "unit_id": 1022003,
+    "game_unit_id": 1022003,
+    "unit_illust_id": 1022003,
+    "is_awake_unit": 0,
     "character_name": "モネ《傲慢》",
     "character_name_kana": "モネ",
     "unit_name": "物語を紡ぐ魔将",
@@ -2559,6 +2801,9 @@
   },
   {
     "unit_id": 1023001,
+    "game_unit_id": 1023001,
+    "unit_illust_id": 1023001,
+    "is_awake_unit": 0,
     "character_name": "シャロン",
     "character_name_kana": "シャロン",
     "unit_name": "淑やかシスター？",
@@ -2598,6 +2843,9 @@
   },
   {
     "unit_id": 1023002,
+    "game_unit_id": 1023002,
+    "unit_illust_id": 1023002,
+    "is_awake_unit": 0,
     "character_name": "シャロン",
     "character_name_kana": "シャロン",
     "unit_name": "純白のシスター",
@@ -2637,6 +2885,9 @@
   },
   {
     "unit_id": 1023003,
+    "game_unit_id": 1023003,
+    "unit_illust_id": 1023003,
+    "is_awake_unit": 0,
     "character_name": "シャロン",
     "character_name_kana": "シャロン",
     "unit_name": "スイートホワイト",
@@ -2676,6 +2927,9 @@
   },
   {
     "unit_id": 1024001,
+    "game_unit_id": 1024001,
+    "unit_illust_id": 1024001,
+    "is_awake_unit": 0,
     "character_name": "ヨミ",
     "character_name_kana": "ヨミ",
     "unit_name": "爆裂破邪の巫女",
@@ -2715,6 +2969,9 @@
   },
   {
     "unit_id": 1024002,
+    "game_unit_id": 1024002,
+    "unit_illust_id": 1024002,
+    "is_awake_unit": 0,
     "character_name": "ヨミ",
     "character_name_kana": "ヨミ",
     "unit_name": "聖鈴のトナカイ",
@@ -2754,6 +3011,9 @@
   },
   {
     "unit_id": 1024003,
+    "game_unit_id": 1024003,
+    "unit_illust_id": 1024003,
+    "is_awake_unit": 0,
     "character_name": "ヨミ",
     "character_name_kana": "ヨミ",
     "unit_name": "巫女狐の嫁入り",
@@ -2799,6 +3059,9 @@
   },
   {
     "unit_id": 1025001,
+    "game_unit_id": 1025001,
+    "unit_illust_id": 1025001,
+    "is_awake_unit": 0,
     "character_name": "舞亜",
     "character_name_kana": "マイア",
     "unit_name": "銀盤に舞う女王",
@@ -2838,6 +3101,9 @@
   },
   {
     "unit_id": 1025002,
+    "game_unit_id": 1025002,
+    "unit_illust_id": 1025002,
+    "is_awake_unit": 0,
     "character_name": "舞亜",
     "character_name_kana": "マイア",
     "unit_name": "銀盤の神楽舞姫",
@@ -2877,6 +3143,9 @@
   },
   {
     "unit_id": 1025003,
+    "game_unit_id": 1025003,
+    "unit_illust_id": 1025003,
+    "is_awake_unit": 0,
     "character_name": "舞亜",
     "character_name_kana": "マイア",
     "unit_name": "聖夜パティシエ",
@@ -2916,6 +3185,9 @@
   },
   {
     "unit_id": 1026001,
+    "game_unit_id": 1026001,
+    "unit_illust_id": 1026001,
+    "is_awake_unit": 0,
     "character_name": "リーリア",
     "character_name_kana": "リーリア",
     "unit_name": "虹色の魔弾使い",
@@ -2960,6 +3232,9 @@
   },
   {
     "unit_id": 1026002,
+    "game_unit_id": 1026002,
+    "unit_illust_id": 1026002,
+    "is_awake_unit": 0,
     "character_name": "リーリア",
     "character_name_kana": "リーリア",
     "unit_name": "夏色マジカル☆",
@@ -3004,6 +3279,9 @@
   },
   {
     "unit_id": 1026003,
+    "game_unit_id": 1026003,
+    "unit_illust_id": 1026003,
+    "is_awake_unit": 0,
     "character_name": "リーリア《彩愛》",
     "character_name_kana": "リーリア",
     "unit_name": "青春レインボー",
@@ -3048,6 +3326,9 @@
   },
   {
     "unit_id": 1026004,
+    "game_unit_id": 1026004,
+    "unit_illust_id": 1026004,
+    "is_awake_unit": 0,
     "character_name": "リーリア",
     "character_name_kana": "リーリア",
     "unit_name": "初春プリズム",
@@ -3098,6 +3379,9 @@
   },
   {
     "unit_id": 1027001,
+    "game_unit_id": 1027001,
+    "unit_illust_id": 1027001,
+    "is_awake_unit": 0,
     "character_name": "コハルコ",
     "character_name_kana": "コハルコ",
     "unit_name": "正義のハッカー",
@@ -3137,6 +3421,9 @@
   },
   {
     "unit_id": 1027002,
+    "game_unit_id": 1027002,
+    "unit_illust_id": 1027002,
+    "is_awake_unit": 0,
     "character_name": "コハルコ《光誕》",
     "character_name_kana": "コハルコ",
     "unit_name": "ウィッチレプリカ",
@@ -3176,6 +3463,9 @@
   },
   {
     "unit_id": 1028001,
+    "game_unit_id": 1028001,
+    "unit_illust_id": 1028001,
+    "is_awake_unit": 0,
     "character_name": "トマル",
     "character_name_kana": "トマル",
     "unit_name": "雷弓の追跡者",
@@ -3215,6 +3505,9 @@
   },
   {
     "unit_id": 1029001,
+    "game_unit_id": 1029001,
+    "unit_illust_id": 1029001,
+    "is_awake_unit": 0,
     "character_name": "シャルレーヌ",
     "character_name_kana": "シャルレーヌ",
     "unit_name": "嗜虐の貴族令嬢",
@@ -3254,6 +3547,9 @@
   },
   {
     "unit_id": 1029002,
+    "game_unit_id": 1029002,
+    "unit_illust_id": 1029002,
+    "is_awake_unit": 0,
     "character_name": "シャルレーヌ",
     "character_name_kana": "シャルレーヌ",
     "unit_name": "甘愛フレグランス",
@@ -3293,6 +3589,9 @@
   },
   {
     "unit_id": 1030001,
+    "game_unit_id": 1030001,
+    "unit_illust_id": 1030001,
+    "is_awake_unit": 0,
     "character_name": "ナミエル",
     "character_name_kana": "ナミエル",
     "unit_name": "クール＆クリーン",
@@ -3332,6 +3631,9 @@
   },
   {
     "unit_id": 1030002,
+    "game_unit_id": 1030002,
+    "unit_illust_id": 1030002,
+    "is_awake_unit": 0,
     "character_name": "ナミエル",
     "character_name_kana": "ナミエル",
     "unit_name": "タイニーブライド",
@@ -3371,6 +3673,9 @@
   },
   {
     "unit_id": 1030003,
+    "game_unit_id": 1030003,
+    "unit_illust_id": 1030003,
+    "is_awake_unit": 0,
     "character_name": "ナミエル",
     "character_name_kana": "ナミエル",
     "unit_name": "ハニーフロスティ",
@@ -3410,6 +3715,9 @@
   },
   {
     "unit_id": 1031001,
+    "game_unit_id": 1031001,
+    "unit_illust_id": 1031001,
+    "is_awake_unit": 0,
     "character_name": "アニマ",
     "character_name_kana": "アニマ",
     "unit_name": "救世の錬金術師",
@@ -3449,6 +3757,9 @@
   },
   {
     "unit_id": 1031002,
+    "game_unit_id": 1031002,
+    "unit_illust_id": 1031002,
+    "is_awake_unit": 0,
     "character_name": "アニマ《極天》",
     "character_name_kana": "アニマ",
     "unit_name": "極天アルケミスト",
@@ -3488,6 +3799,9 @@
   },
   {
     "unit_id": 1032001,
+    "game_unit_id": 1032001,
+    "unit_illust_id": 1032001,
+    "is_awake_unit": 0,
     "character_name": "ウィステリア",
     "character_name_kana": "ウィステリア",
     "unit_name": "暗闇に呪われし者",
@@ -3527,6 +3841,9 @@
   },
   {
     "unit_id": 1032002,
+    "game_unit_id": 1032002,
+    "unit_illust_id": 1032002,
+    "is_awake_unit": 0,
     "character_name": "ウィステリア",
     "character_name_kana": "ウィステリア",
     "unit_name": "司書の夏休み",
@@ -3566,6 +3883,9 @@
   },
   {
     "unit_id": 1032003,
+    "game_unit_id": 1032003,
+    "unit_illust_id": 1032003,
+    "is_awake_unit": 0,
     "character_name": "ウィステリア《怠惰》",
     "character_name_kana": "ウィステリア",
     "unit_name": "闇を支配せし魔将",
@@ -3611,6 +3931,9 @@
   },
   {
     "unit_id": 1033001,
+    "game_unit_id": 1033001,
+    "unit_illust_id": 1033001,
+    "is_awake_unit": 0,
     "character_name": "アニュラス",
     "character_name_kana": "アニュラス",
     "unit_name": "仮面の暗黒騎士",
@@ -3650,6 +3973,9 @@
   },
   {
     "unit_id": 1033002,
+    "game_unit_id": 1033002,
+    "unit_illust_id": 1033002,
+    "is_awake_unit": 0,
     "character_name": "アニュラス《星霊》",
     "character_name_kana": "アニュラス",
     "unit_name": "金紗の覚醒騎士",
@@ -3689,6 +4015,9 @@
   },
   {
     "unit_id": 1033003,
+    "game_unit_id": 1033003,
+    "unit_illust_id": 1033003,
+    "is_awake_unit": 0,
     "character_name": "アニュラス",
     "character_name_kana": "アニュラス",
     "unit_name": "祝宴の始まり",
@@ -3728,6 +4057,9 @@
   },
   {
     "unit_id": 1034001,
+    "game_unit_id": 1034001,
+    "unit_illust_id": 1034001,
+    "is_awake_unit": 0,
     "character_name": "カティア",
     "character_name_kana": "カティア",
     "unit_name": "お仕えしますワン",
@@ -3767,6 +4099,9 @@
   },
   {
     "unit_id": 1034002,
+    "game_unit_id": 1034002,
+    "unit_illust_id": 1034002,
+    "is_awake_unit": 0,
     "character_name": "カティア",
     "character_name_kana": "カティア",
     "unit_name": "突っ走るワン！",
@@ -3806,6 +4141,9 @@
   },
   {
     "unit_id": 1035001,
+    "game_unit_id": 1035001,
+    "unit_illust_id": 1035001,
+    "is_awake_unit": 0,
     "character_name": "セナリィ",
     "character_name_kana": "セナリィ",
     "unit_name": "炎銃のバンデッド",
@@ -3845,6 +4183,9 @@
   },
   {
     "unit_id": 1035002,
+    "game_unit_id": 1035002,
+    "unit_illust_id": 1035002,
+    "is_awake_unit": 0,
     "character_name": "セナリィ《女帝》",
     "character_name_kana": "セナリィ",
     "unit_name": "悪即ブーステッド",
@@ -3884,6 +4225,9 @@
   },
   {
     "unit_id": 1035003,
+    "game_unit_id": 1035003,
+    "unit_illust_id": 1035003,
+    "is_awake_unit": 0,
     "character_name": "セナリィ",
     "character_name_kana": "セナリィ",
     "unit_name": "悪姫兎視たんたん",
@@ -3923,6 +4267,9 @@
   },
   {
     "unit_id": 1036001,
+    "game_unit_id": 1036001,
+    "unit_illust_id": 1036001,
+    "is_awake_unit": 0,
     "character_name": "ヒルディオーネ",
     "character_name_kana": "ヒルティオーネ",
     "unit_name": "白昼の極星",
@@ -3962,6 +4309,9 @@
   },
   {
     "unit_id": 1036002,
+    "game_unit_id": 1036002,
+    "unit_illust_id": 1036002,
+    "is_awake_unit": 0,
     "character_name": "ヒルディオーネ",
     "character_name_kana": "ヒルティオーネ",
     "unit_name": "カジノスパイラル",
@@ -4001,6 +4351,9 @@
   },
   {
     "unit_id": 1036003,
+    "game_unit_id": 1036003,
+    "unit_illust_id": 1036003,
+    "is_awake_unit": 0,
     "character_name": "ヒルディオーネ《螺旋》",
     "character_name_kana": "ヒルティオーネ",
     "unit_name": "千変超化の戦姫",
@@ -4040,6 +4393,9 @@
   },
   {
     "unit_id": 1037001,
+    "game_unit_id": 1037001,
+    "unit_illust_id": 1037001,
+    "is_awake_unit": 0,
     "character_name": "サラン",
     "character_name_kana": "サラン",
     "unit_name": "ふわふわスイート",
@@ -4079,6 +4435,9 @@
   },
   {
     "unit_id": 1037002,
+    "game_unit_id": 1037002,
+    "unit_illust_id": 1037002,
+    "is_awake_unit": 0,
     "character_name": "サラン",
     "character_name_kana": "サラン",
     "unit_name": "カボチャのお姫様",
@@ -4118,6 +4477,9 @@
   },
   {
     "unit_id": 1037003,
+    "game_unit_id": 1037003,
+    "unit_illust_id": 1037003,
+    "is_awake_unit": 0,
     "character_name": "サラン",
     "character_name_kana": "サラン",
     "unit_name": "スイートサマー",
@@ -4157,6 +4519,9 @@
   },
   {
     "unit_id": 1038001,
+    "game_unit_id": 1038001,
+    "unit_illust_id": 1038001,
+    "is_awake_unit": 0,
     "character_name": "イクシリオン",
     "character_name_kana": "イクシリオン",
     "unit_name": "命紡ぐ灼炎",
@@ -4196,6 +4561,9 @@
   },
   {
     "unit_id": 1038002,
+    "game_unit_id": 1038002,
+    "unit_illust_id": 1038002,
+    "is_awake_unit": 0,
     "character_name": "イクシリオン",
     "character_name_kana": "イクシリオン",
     "unit_name": "健全シーレジャー",
@@ -4235,6 +4603,9 @@
   },
   {
     "unit_id": 1038003,
+    "game_unit_id": 1038003,
+    "unit_illust_id": 1038003,
+    "is_awake_unit": 0,
     "character_name": "イクシリオン",
     "character_name_kana": "イクシリオン",
     "unit_name": "想贈エクスタシー",
@@ -4274,6 +4645,9 @@
   },
   {
     "unit_id": 1039001,
+    "game_unit_id": 1039001,
+    "unit_illust_id": 1039001,
+    "is_awake_unit": 0,
     "character_name": "イニシュ",
     "character_name_kana": "イニシュ",
     "unit_name": "昏き夜の魔女",
@@ -4313,6 +4687,9 @@
   },
   {
     "unit_id": 1040001,
+    "game_unit_id": 1040001,
+    "unit_illust_id": 1040001,
+    "is_awake_unit": 0,
     "character_name": "アイリーン",
     "character_name_kana": "アイリーン",
     "unit_name": "イタズラ風の魔女",
@@ -4352,6 +4729,9 @@
   },
   {
     "unit_id": 1041001,
+    "game_unit_id": 1041001,
+    "unit_illust_id": 1041001,
+    "is_awake_unit": 0,
     "character_name": "ネーゼマイン",
     "character_name_kana": "ネーセマイン",
     "unit_name": "トラップボマー",
@@ -4391,6 +4771,9 @@
   },
   {
     "unit_id": 1041002,
+    "game_unit_id": 1041002,
+    "unit_illust_id": 1041002,
+    "is_awake_unit": 0,
     "character_name": "ネーゼマイン",
     "character_name_kana": "ネーセマイン",
     "unit_name": "悪戯な赤ずきん",
@@ -4430,6 +4813,9 @@
   },
   {
     "unit_id": 1041003,
+    "game_unit_id": 1041003,
+    "unit_illust_id": 1041003,
+    "is_awake_unit": 0,
     "character_name": "ネーゼマイン",
     "character_name_kana": "ネーセマイン",
     "unit_name": "逆転ダイスロール",
@@ -4475,6 +4861,9 @@
   },
   {
     "unit_id": 1041004,
+    "game_unit_id": 1041004,
+    "unit_illust_id": 1041004,
+    "is_awake_unit": 0,
     "character_name": "ネーゼマイン",
     "character_name_kana": "ネーセマイン",
     "unit_name": "渚のボムシェル",
@@ -4520,6 +4909,9 @@
   },
   {
     "unit_id": 1042001,
+    "game_unit_id": 1042001,
+    "unit_illust_id": 1042001,
+    "is_awake_unit": 0,
     "character_name": "フェニエル",
     "character_name_kana": "フェニエル",
     "unit_name": "蒼炎の雛天使",
@@ -4559,6 +4951,9 @@
   },
   {
     "unit_id": 1042002,
+    "game_unit_id": 1042002,
+    "unit_illust_id": 1042002,
+    "is_awake_unit": 0,
     "character_name": "フェニエル",
     "character_name_kana": "フェニエル",
     "unit_name": "マッチ売りの天使",
@@ -4598,6 +4993,9 @@
   },
   {
     "unit_id": 1042003,
+    "game_unit_id": 1042003,
+    "unit_illust_id": 1042003,
+    "is_awake_unit": 0,
     "character_name": "フェニエル《鳳凰》",
     "character_name_kana": "フェニエル",
     "unit_name": "阿吽の不死鳥",
@@ -4637,6 +5035,9 @@
   },
   {
     "unit_id": 1043001,
+    "game_unit_id": 1043001,
+    "unit_illust_id": 1043001,
+    "is_awake_unit": 0,
     "character_name": "サチ",
     "character_name_kana": "サチ",
     "unit_name": "幸運の魔法少女",
@@ -4676,6 +5077,9 @@
   },
   {
     "unit_id": 1043002,
+    "game_unit_id": 1043002,
+    "unit_illust_id": 1043002,
+    "is_awake_unit": 0,
     "character_name": "サチ《運命》",
     "character_name_kana": "サチ",
     "unit_name": "最幸の真魔法少女",
@@ -4721,6 +5125,9 @@
   },
   {
     "unit_id": 1043003,
+    "game_unit_id": 1043003,
+    "unit_illust_id": 1043003,
+    "is_awake_unit": 0,
     "character_name": "サチ",
     "character_name_kana": "サチ",
     "unit_name": "ダークトレジャー",
@@ -4766,6 +5173,9 @@
   },
   {
     "unit_id": 1044001,
+    "game_unit_id": 1044001,
+    "unit_illust_id": 1044001,
+    "is_awake_unit": 0,
     "character_name": "プリムラ",
     "character_name_kana": "フリムラ",
     "unit_name": "悪の終末兵器",
@@ -4805,6 +5215,9 @@
   },
   {
     "unit_id": 1044002,
+    "game_unit_id": 1044002,
+    "unit_illust_id": 1044002,
+    "is_awake_unit": 0,
     "character_name": "プリムラ《セカンド》",
     "character_name_kana": "フリムラ",
     "unit_name": "破滅の第二局",
@@ -4844,6 +5257,9 @@
   },
   {
     "unit_id": 1044003,
+    "game_unit_id": 1044003,
+    "unit_illust_id": 1044003,
+    "is_awake_unit": 0,
     "character_name": "プリムラ",
     "character_name_kana": "フリムラ",
     "unit_name": "反転せし白き終末",
@@ -4883,6 +5299,9 @@
   },
   {
     "unit_id": 1045001,
+    "game_unit_id": 1045001,
+    "unit_illust_id": 1045001,
+    "is_awake_unit": 0,
     "character_name": "エスメラルダ",
     "character_name_kana": "エスメラルタ",
     "unit_name": "計算された旋律",
@@ -4922,6 +5341,9 @@
   },
   {
     "unit_id": 1046001,
+    "game_unit_id": 1046001,
+    "unit_illust_id": 1046001,
+    "is_awake_unit": 0,
     "character_name": "閃",
     "character_name_kana": "セン",
     "unit_name": "氷剣藤花",
@@ -4961,6 +5383,9 @@
   },
   {
     "unit_id": 1047001,
+    "game_unit_id": 1047001,
+    "unit_illust_id": 1047001,
+    "is_awake_unit": 0,
     "character_name": "メルエル",
     "character_name_kana": "メルエル",
     "unit_name": "一意専心",
@@ -5000,6 +5425,9 @@
   },
   {
     "unit_id": 1047002,
+    "game_unit_id": 1047002,
+    "unit_illust_id": 1047002,
+    "is_awake_unit": 0,
     "character_name": "メルエル",
     "character_name_kana": "メルエル",
     "unit_name": "一途アイドル",
@@ -5039,6 +5467,9 @@
   },
   {
     "unit_id": 1048001,
+    "game_unit_id": 1048001,
+    "unit_illust_id": 1048001,
+    "is_awake_unit": 0,
     "character_name": "マハムート",
     "character_name_kana": "マハムート",
     "unit_name": "宵闇の極星",
@@ -5078,6 +5509,9 @@
   },
   {
     "unit_id": 1048002,
+    "game_unit_id": 1048002,
+    "unit_illust_id": 1048002,
+    "is_awake_unit": 0,
     "character_name": "マハムート",
     "character_name_kana": "マハムート",
     "unit_name": "真夏の竜妃",
@@ -5117,6 +5551,9 @@
   },
   {
     "unit_id": 1048003,
+    "game_unit_id": 1048003,
+    "unit_illust_id": 1048003,
+    "is_awake_unit": 0,
     "character_name": "マハムート《超竜》",
     "character_name_kana": "まはむーと",
     "unit_name": "畏怖たる寵妃",
@@ -5156,6 +5593,9 @@
   },
   {
     "unit_id": 1049001,
+    "game_unit_id": 1049001,
+    "unit_illust_id": 1049001,
+    "is_awake_unit": 0,
     "character_name": "紅明",
     "character_name_kana": "コウメイ",
     "unit_name": "善哉童子",
@@ -5195,6 +5635,9 @@
   },
   {
     "unit_id": 1049002,
+    "game_unit_id": 1049002,
+    "unit_illust_id": 1049002,
+    "is_awake_unit": 0,
     "character_name": "紅明",
     "character_name_kana": "こうめい",
     "unit_name": "元祖・三太九郎",
@@ -5234,6 +5677,9 @@
   },
   {
     "unit_id": 1049003,
+    "game_unit_id": 1049003,
+    "unit_illust_id": 1049003,
+    "is_awake_unit": 0,
     "character_name": "紅明《羅刹》",
     "character_name_kana": "コウメイ",
     "unit_name": "鉄扇公主",
@@ -5273,6 +5719,9 @@
   },
   {
     "unit_id": 1050001,
+    "game_unit_id": 1050001,
+    "unit_illust_id": 1050001,
+    "is_awake_unit": 0,
     "character_name": "フロレンシア",
     "character_name_kana": "フロレンシア",
     "unit_name": "ヒール＋ペイン",
@@ -5312,6 +5761,9 @@
   },
   {
     "unit_id": 1051001,
+    "game_unit_id": 1051001,
+    "unit_illust_id": 1051001,
+    "is_awake_unit": 0,
     "character_name": "クラウディア",
     "character_name_kana": "クラウティア",
     "unit_name": "星雲の支配者",
@@ -5351,6 +5803,9 @@
   },
   {
     "unit_id": 1051002,
+    "game_unit_id": 1051002,
+    "unit_illust_id": 1051002,
+    "is_awake_unit": 0,
     "character_name": "クラウディア《黄昏》",
     "character_name_kana": "クラウティア",
     "unit_name": "黄昏の姫君",
@@ -5396,6 +5851,9 @@
   },
   {
     "unit_id": 1051003,
+    "game_unit_id": 1051003,
+    "unit_illust_id": 1051003,
+    "is_awake_unit": 0,
     "character_name": "クラウディア",
     "character_name_kana": "クラウティア",
     "unit_name": "生誕祭の聖衣",
@@ -5441,6 +5899,9 @@
   },
   {
     "unit_id": 1052001,
+    "game_unit_id": 1052001,
+    "unit_illust_id": 1052001,
+    "is_awake_unit": 0,
     "character_name": "セドナ",
     "character_name_kana": "セトナ",
     "unit_name": "冷徹なる司令官",
@@ -5480,6 +5941,9 @@
   },
   {
     "unit_id": 1052002,
+    "game_unit_id": 1052002,
+    "unit_illust_id": 1052002,
+    "is_awake_unit": 0,
     "character_name": "セドナ",
     "character_name_kana": "セトナ",
     "unit_name": "炎天下の涼魔女",
@@ -5519,6 +5983,9 @@
   },
   {
     "unit_id": 1053001,
+    "game_unit_id": 1053001,
+    "unit_illust_id": 1053001,
+    "is_awake_unit": 0,
     "character_name": "ウェンディ",
     "character_name_kana": "ウェンティ",
     "unit_name": "水鏡の魔女",
@@ -5558,6 +6025,9 @@
   },
   {
     "unit_id": 1054001,
+    "game_unit_id": 1054001,
+    "unit_illust_id": 1054001,
+    "is_awake_unit": 0,
     "character_name": "ユーリス",
     "character_name_kana": "ユーリス",
     "unit_name": "魔を断つ聖剣",
@@ -5597,6 +6067,9 @@
   },
   {
     "unit_id": 1054002,
+    "game_unit_id": 1054002,
+    "unit_illust_id": 1054002,
+    "is_awake_unit": 0,
     "character_name": "ユーリス",
     "character_name_kana": "ゆーりす",
     "unit_name": "カードプリンス",
@@ -5636,6 +6109,9 @@
   },
   {
     "unit_id": 1055001,
+    "game_unit_id": 1055001,
+    "unit_illust_id": 1055001,
+    "is_awake_unit": 0,
     "character_name": "エルデリーゼ",
     "character_name_kana": "エルテリーセ",
     "unit_name": "漆黒槍の令嬢",
@@ -5675,6 +6151,9 @@
   },
   {
     "unit_id": 1055002,
+    "game_unit_id": 1055002,
+    "unit_illust_id": 1055002,
+    "is_awake_unit": 0,
     "character_name": "エルデリーゼ",
     "character_name_kana": "エルテリーセ",
     "unit_name": "夏の白き閃光",
@@ -5714,6 +6193,9 @@
   },
   {
     "unit_id": 1056001,
+    "game_unit_id": 1056001,
+    "unit_illust_id": 1056001,
+    "is_awake_unit": 0,
     "character_name": "アム",
     "character_name_kana": "アム",
     "unit_name": "元気溌剌☆盾乙女",
@@ -5753,6 +6235,9 @@
   },
   {
     "unit_id": 1056002,
+    "game_unit_id": 1056002,
+    "unit_illust_id": 1056002,
+    "is_awake_unit": 0,
     "character_name": "アム",
     "character_name_kana": "アム",
     "unit_name": "サマーアイギス",
@@ -5792,6 +6277,9 @@
   },
   {
     "unit_id": 1056003,
+    "game_unit_id": 1056003,
+    "unit_illust_id": 1056003,
+    "is_awake_unit": 0,
     "character_name": "アム",
     "character_name_kana": "アム",
     "unit_name": "祝配の車力要塞",
@@ -5831,6 +6319,9 @@
   },
   {
     "unit_id": 1057001,
+    "game_unit_id": 1057001,
+    "unit_illust_id": 1057001,
+    "is_awake_unit": 0,
     "character_name": "トリシャ",
     "character_name_kana": "トリシャ",
     "unit_name": "異郷の占星術師",
@@ -5870,6 +6361,9 @@
   },
   {
     "unit_id": 1057002,
+    "game_unit_id": 1057002,
+    "unit_illust_id": 1057002,
+    "is_awake_unit": 0,
     "character_name": "トリシャ",
     "character_name_kana": "トリシャ",
     "unit_name": "おみくじどうぞ",
@@ -5909,6 +6403,9 @@
   },
   {
     "unit_id": 1057003,
+    "game_unit_id": 1057003,
+    "unit_illust_id": 1057003,
+    "is_awake_unit": 0,
     "character_name": "トリシャ",
     "character_name_kana": "トリシャ",
     "unit_name": "水着フレンズ",
@@ -5948,6 +6445,9 @@
   },
   {
     "unit_id": 1057004,
+    "game_unit_id": 1057004,
+    "unit_illust_id": 1057004,
+    "is_awake_unit": 0,
     "character_name": "トリシャ",
     "character_name_kana": "トリシャ",
     "unit_name": "道士のオトモダチ",
@@ -5987,6 +6487,9 @@
   },
   {
     "unit_id": 1058001,
+    "game_unit_id": 1058001,
+    "unit_illust_id": 1058001,
+    "is_awake_unit": 0,
     "character_name": "ヘレナ",
     "character_name_kana": "ヘレナ",
     "unit_name": "舞うは九浄の桜花",
@@ -6026,6 +6529,9 @@
   },
   {
     "unit_id": 1058002,
+    "game_unit_id": 1058002,
+    "unit_illust_id": 1058002,
+    "is_awake_unit": 0,
     "character_name": "ヘレナ",
     "character_name_kana": "ヘレナ",
     "unit_name": "輝きは白波の如く",
@@ -6071,6 +6577,9 @@
   },
   {
     "unit_id": 1059001,
+    "game_unit_id": 1059001,
+    "unit_illust_id": 1059001,
+    "is_awake_unit": 0,
     "character_name": "リップル",
     "character_name_kana": "リッフル",
     "unit_name": "リゾートメイカー",
@@ -6110,6 +6619,9 @@
   },
   {
     "unit_id": 1059002,
+    "game_unit_id": 1059002,
+    "unit_illust_id": 1059002,
+    "is_awake_unit": 0,
     "character_name": "リップル",
     "character_name_kana": "リッフル",
     "unit_name": "ワタシプレゼント",
@@ -6149,6 +6661,9 @@
   },
   {
     "unit_id": 1060001,
+    "game_unit_id": 1060001,
+    "unit_illust_id": 1060001,
+    "is_awake_unit": 0,
     "character_name": "レミカ",
     "character_name_kana": "レミカ",
     "unit_name": "電撃熱唱の歌姫",
@@ -6188,6 +6703,9 @@
   },
   {
     "unit_id": 1060002,
+    "game_unit_id": 1060002,
+    "unit_illust_id": 1060002,
+    "is_awake_unit": 0,
     "character_name": "レミカ",
     "character_name_kana": "レミカ",
     "unit_name": "キュートスタイル",
@@ -6227,6 +6745,9 @@
   },
   {
     "unit_id": 1061001,
+    "game_unit_id": 1061001,
+    "unit_illust_id": 1061001,
+    "is_awake_unit": 0,
     "character_name": "マリオン",
     "character_name_kana": "マリオン",
     "unit_name": "ドールズマスター",
@@ -6266,6 +6787,9 @@
   },
   {
     "unit_id": 1061002,
+    "game_unit_id": 1061002,
+    "unit_illust_id": 1061002,
+    "is_awake_unit": 0,
     "character_name": "マリオン《葬礼》",
     "character_name_kana": "マリオン",
     "unit_name": "魔女を狩る魔女",
@@ -6305,6 +6829,9 @@
   },
   {
     "unit_id": 1062001,
+    "game_unit_id": 1062001,
+    "unit_illust_id": 1062001,
+    "is_awake_unit": 0,
     "character_name": "ジュエリー",
     "character_name_kana": "シュエリー",
     "unit_name": "星選の名探偵",
@@ -6344,6 +6871,9 @@
   },
   {
     "unit_id": 1062002,
+    "game_unit_id": 1062002,
+    "unit_illust_id": 1062002,
+    "is_awake_unit": 0,
     "character_name": "ジュエリー《究明》",
     "character_name_kana": "シュエリー",
     "unit_name": "究愛の日傘探偵",
@@ -6383,6 +6913,9 @@
   },
   {
     "unit_id": 1062003,
+    "game_unit_id": 1062003,
+    "unit_illust_id": 1062003,
+    "is_awake_unit": 0,
     "character_name": "ジュエリー",
     "character_name_kana": "シュエリー",
     "unit_name": "日傘の花嫁探偵",
@@ -6422,6 +6955,9 @@
   },
   {
     "unit_id": 1063001,
+    "game_unit_id": 1063001,
+    "unit_illust_id": 1063001,
+    "is_awake_unit": 0,
     "character_name": "カヤ",
     "character_name_kana": "カヤ",
     "unit_name": "小さき陽炎の魔女",
@@ -6461,6 +6997,9 @@
   },
   {
     "unit_id": 1064001,
+    "game_unit_id": 1064001,
+    "unit_illust_id": 1064001,
+    "is_awake_unit": 0,
     "character_name": "マリーベル",
     "character_name_kana": "マリーヘル",
     "unit_name": "ブラッディマリー",
@@ -6500,6 +7039,9 @@
   },
   {
     "unit_id": 1065001,
+    "game_unit_id": 1065001,
+    "unit_illust_id": 1065001,
+    "is_awake_unit": 0,
     "character_name": "イレーナ",
     "character_name_kana": "イレーナ",
     "unit_name": "紫薔薇の聖女",
@@ -6539,6 +7081,9 @@
   },
   {
     "unit_id": 1065002,
+    "game_unit_id": 1065002,
+    "unit_illust_id": 1065002,
+    "is_awake_unit": 0,
     "character_name": "イレーナ",
     "character_name_kana": "イレーナ",
     "unit_name": "ナターレの黒聖女",
@@ -6578,6 +7123,9 @@
   },
   {
     "unit_id": 1065003,
+    "game_unit_id": 1065003,
+    "unit_illust_id": 1065003,
+    "is_awake_unit": 0,
     "character_name": "イレーナ",
     "character_name_kana": "イレーナ",
     "unit_name": "魅惑チョコラート",
@@ -6623,6 +7171,9 @@
   },
   {
     "unit_id": 1065004,
+    "game_unit_id": 1065004,
+    "unit_illust_id": 1065004,
+    "is_awake_unit": 0,
     "character_name": "イレーナ",
     "character_name_kana": "イレーナ",
     "unit_name": "永遠のティアーモ",
@@ -6662,6 +7213,9 @@
   },
   {
     "unit_id": 1066001,
+    "game_unit_id": 1066001,
+    "unit_illust_id": 1066001,
+    "is_awake_unit": 0,
     "character_name": "ラティエ",
     "character_name_kana": "ラティエ",
     "unit_name": "さすらいの破天荒",
@@ -6701,6 +7255,9 @@
   },
   {
     "unit_id": 1066002,
+    "game_unit_id": 1066002,
+    "unit_illust_id": 1066002,
+    "is_awake_unit": 0,
     "character_name": "ラティエ",
     "character_name_kana": "ラティエ",
     "unit_name": "流れの水着剣士",
@@ -6740,6 +7297,9 @@
   },
   {
     "unit_id": 1067001,
+    "game_unit_id": 1067001,
+    "unit_illust_id": 1067001,
+    "is_awake_unit": 0,
     "character_name": "聖沙",
     "character_name_kana": "みさ",
     "unit_name": "嵐を翔る射手",
@@ -6779,6 +7339,9 @@
   },
   {
     "unit_id": 1068001,
+    "game_unit_id": 1068001,
+    "unit_illust_id": 1068001,
+    "is_awake_unit": 0,
     "character_name": "リア",
     "character_name_kana": "りあ",
     "unit_name": "騎士皇女",
@@ -6818,6 +7381,9 @@
   },
   {
     "unit_id": 1069001,
+    "game_unit_id": 1069001,
+    "unit_illust_id": 1069001,
+    "is_awake_unit": 0,
     "character_name": "セシア",
     "character_name_kana": "セシア",
     "unit_name": "万成の幼天使",
@@ -6862,6 +7428,9 @@
   },
   {
     "unit_id": 1069002,
+    "game_unit_id": 1069002,
+    "unit_illust_id": 1069002,
+    "is_awake_unit": 0,
     "character_name": "セシア",
     "character_name_kana": "セシア",
     "unit_name": "二代目・三太九郎",
@@ -6906,6 +7475,9 @@
   },
   {
     "unit_id": 1070001,
+    "game_unit_id": 1070001,
+    "unit_illust_id": 1070001,
+    "is_awake_unit": 0,
     "character_name": "ウズメイア",
     "character_name_kana": "ウスメイア",
     "unit_name": "雷薙の晴天使",
@@ -6945,6 +7517,9 @@
   },
   {
     "unit_id": 1070002,
+    "game_unit_id": 1070002,
+    "unit_illust_id": 1070002,
+    "is_awake_unit": 0,
     "character_name": "ウズメイア",
     "character_name_kana": "ウスメイア",
     "unit_name": "一菓♥入魂",
@@ -6984,6 +7559,9 @@
   },
   {
     "unit_id": 1070003,
+    "game_unit_id": 1070003,
+    "unit_illust_id": 1070003,
+    "is_awake_unit": 0,
     "character_name": "ウズメイア",
     "character_name_kana": "ウスメイア",
     "unit_name": "ガオガオ♥狼天使",
@@ -7023,6 +7601,9 @@
   },
   {
     "unit_id": 1071001,
+    "game_unit_id": 1071001,
+    "unit_illust_id": 1071001,
+    "is_awake_unit": 0,
     "character_name": "キサナ",
     "character_name_kana": "キサナ",
     "unit_name": "マッドクーガー",
@@ -7062,6 +7643,9 @@
   },
   {
     "unit_id": 1072001,
+    "game_unit_id": 1072001,
+    "unit_illust_id": 1072001,
+    "is_awake_unit": 0,
     "character_name": "ミア",
     "character_name_kana": "ミア",
     "unit_name": "ちびっこ風紀委員",
@@ -7101,6 +7685,9 @@
   },
   {
     "unit_id": 1073001,
+    "game_unit_id": 1073001,
+    "unit_illust_id": 1073001,
+    "is_awake_unit": 0,
     "character_name": "リノ",
     "character_name_kana": "リノ",
     "unit_name": "空間の魔女",
@@ -7140,6 +7727,9 @@
   },
   {
     "unit_id": 1073002,
+    "game_unit_id": 1073002,
+    "unit_illust_id": 1073002,
+    "is_awake_unit": 0,
     "character_name": "リノ",
     "character_name_kana": "リノ",
     "unit_name": "トロピカルマザー",
@@ -7179,6 +7769,9 @@
   },
   {
     "unit_id": 1074001,
+    "game_unit_id": 1074001,
+    "unit_illust_id": 1074001,
+    "is_awake_unit": 0,
     "character_name": "パルミエ",
     "character_name_kana": "ハルミエ",
     "unit_name": "お転婆バサラ姫",
@@ -7218,6 +7811,9 @@
   },
   {
     "unit_id": 1075001,
+    "game_unit_id": 1075001,
+    "unit_illust_id": 1075001,
+    "is_awake_unit": 0,
     "character_name": "シフォン",
     "character_name_kana": "シフォン",
     "unit_name": "天魔の闇騎士",
@@ -7257,6 +7853,9 @@
   },
   {
     "unit_id": 1076001,
+    "game_unit_id": 1076001,
+    "unit_illust_id": 1076001,
+    "is_awake_unit": 0,
     "character_name": "モナカ",
     "character_name_kana": "もなか",
     "unit_name": "清澄の雛騎士",
@@ -7296,6 +7895,9 @@
   },
   {
     "unit_id": 1077001,
+    "game_unit_id": 1077001,
+    "unit_illust_id": 1077001,
+    "is_awake_unit": 0,
     "character_name": "蘭美",
     "character_name_kana": "ラヒ",
     "unit_name": "光速メイドスター",
@@ -7335,6 +7937,9 @@
   },
   {
     "unit_id": 1077002,
+    "game_unit_id": 1077002,
+    "unit_illust_id": 1077002,
+    "is_awake_unit": 0,
     "character_name": "蘭美",
     "character_name_kana": "ラヒ",
     "unit_name": "バニーサンタ",
@@ -7370,10 +7975,13 @@
         "icon": "icon_equipment_01_03.png"
       }
     ],
-    "specific_gauge_data": null
+    "specific_gauge_data": []
   },
   {
     "unit_id": 1077003,
+    "game_unit_id": 1077003,
+    "unit_illust_id": 1077003,
+    "is_awake_unit": 0,
     "character_name": "蘭美",
     "character_name_kana": "ラヒ",
     "unit_name": "白うさぎの純情",
@@ -7413,6 +8021,9 @@
   },
   {
     "unit_id": 1078001,
+    "game_unit_id": 1078001,
+    "unit_illust_id": 1078001,
+    "is_awake_unit": 0,
     "character_name": "トリュファイナ",
     "character_name_kana": "トリュファイナ",
     "unit_name": "光と再生の魔女",
@@ -7452,6 +8063,9 @@
   },
   {
     "unit_id": 1079001,
+    "game_unit_id": 1079001,
+    "unit_illust_id": 1079001,
+    "is_awake_unit": 0,
     "character_name": "パテル",
     "character_name_kana": "ハテル",
     "unit_name": "試練の守護天使",
@@ -7491,6 +8105,9 @@
   },
   {
     "unit_id": 1079002,
+    "game_unit_id": 1079002,
+    "unit_illust_id": 1079002,
+    "is_awake_unit": 0,
     "character_name": "パテル",
     "character_name_kana": "ハテル",
     "unit_name": "フカヒレライダー",
@@ -7541,6 +8158,9 @@
   },
   {
     "unit_id": 1080001,
+    "game_unit_id": 1080001,
+    "unit_illust_id": 1080001,
+    "is_awake_unit": 0,
     "character_name": "フラン",
     "character_name_kana": "フラン",
     "unit_name": "燃え盛る炎の旗手",
@@ -7580,6 +8200,9 @@
   },
   {
     "unit_id": 1081001,
+    "game_unit_id": 1081001,
+    "unit_illust_id": 1081001,
+    "is_awake_unit": 0,
     "character_name": "グロリア",
     "character_name_kana": "クロリア",
     "unit_name": "静粛なる祈り手",
@@ -7619,6 +8242,9 @@
   },
   {
     "unit_id": 1082001,
+    "game_unit_id": 1082001,
+    "unit_illust_id": 1082001,
+    "is_awake_unit": 0,
     "character_name": "フェリシー",
     "character_name_kana": "フェリシー",
     "unit_name": "星選の祓魔師",
@@ -7658,6 +8284,9 @@
   },
   {
     "unit_id": 1083001,
+    "game_unit_id": 1083001,
+    "unit_illust_id": 1083001,
+    "is_awake_unit": 0,
     "character_name": "ソフレ",
     "character_name_kana": "ソフレ",
     "unit_name": "暴虐の吸血鬼",
@@ -7697,6 +8326,9 @@
   },
   {
     "unit_id": 1084001,
+    "game_unit_id": 1084001,
+    "unit_illust_id": 1084001,
+    "is_awake_unit": 0,
     "character_name": "オオヒメ",
     "character_name_kana": "オオヒメ",
     "unit_name": "天恵の守護天使",
@@ -7742,6 +8374,9 @@
   },
   {
     "unit_id": 1085001,
+    "game_unit_id": 1085001,
+    "unit_illust_id": 1085001,
+    "is_awake_unit": 0,
     "character_name": "マグダレナ(ちぃ)",
     "character_name_kana": "マクタレナ（チィ）",
     "unit_name": "境界の幼アバター",
@@ -7786,6 +8421,9 @@
   },
   {
     "unit_id": 1085002,
+    "game_unit_id": 1085002,
+    "unit_illust_id": 1085002,
+    "is_awake_unit": 0,
     "character_name": "マグダレナ(ちぃ)",
     "character_name_kana": "マクタレナ（チィ）",
     "unit_name": "すこっぷりちぃ",
@@ -7830,6 +8468,9 @@
   },
   {
     "unit_id": 1086001,
+    "game_unit_id": 1086001,
+    "unit_illust_id": 1086001,
+    "is_awake_unit": 0,
     "character_name": "アルモタヘル(ちぃ)",
     "character_name_kana": "アルモタヘル（チィ）",
     "unit_name": "命脈の幼アバター",
@@ -7874,6 +8515,9 @@
   },
   {
     "unit_id": 1086002,
+    "game_unit_id": 1086002,
+    "unit_illust_id": 1086002,
+    "is_awake_unit": 0,
     "character_name": "アルモタヘル(ちぃ)",
     "character_name_kana": "アルモタヘル（チィ）",
     "unit_name": "きゃぷちゃーみー",
@@ -7918,6 +8562,9 @@
   },
   {
     "unit_id": 1087001,
+    "game_unit_id": 1087001,
+    "unit_illust_id": 1087001,
+    "is_awake_unit": 0,
     "character_name": "ヴァレリー",
     "character_name_kana": "ウァレリー",
     "unit_name": "美の冒涜者",
@@ -7957,6 +8604,9 @@
   },
   {
     "unit_id": 1088001,
+    "game_unit_id": 1088001,
+    "unit_illust_id": 1088001,
+    "is_awake_unit": 0,
     "character_name": "リーナ",
     "character_name_kana": "リーナ",
     "unit_name": "ズタズタシスター",
@@ -7996,6 +8646,9 @@
   },
   {
     "unit_id": 1089001,
+    "game_unit_id": 1089001,
+    "unit_illust_id": 1089001,
+    "is_awake_unit": 0,
     "character_name": "シアン",
     "character_name_kana": "シアン",
     "unit_name": "執念深き猟犬",
@@ -8035,6 +8688,9 @@
   },
   {
     "unit_id": 1090001,
+    "game_unit_id": 1090001,
+    "unit_illust_id": 1090001,
+    "is_awake_unit": 0,
     "character_name": "メイプル",
     "character_name_kana": "メイフル",
     "unit_name": "自称・妹魔王",
@@ -8074,6 +8730,9 @@
   },
   {
     "unit_id": 1090002,
+    "game_unit_id": 1090002,
+    "unit_illust_id": 1090002,
+    "is_awake_unit": 0,
     "character_name": "メイプル",
     "character_name_kana": "メイフル",
     "unit_name": "妹魔王増量中",
@@ -8113,6 +8772,9 @@
   },
   {
     "unit_id": 1091001,
+    "game_unit_id": 1091001,
+    "unit_illust_id": 1091001,
+    "is_awake_unit": 0,
     "character_name": "梨緒",
     "character_name_kana": "リオ",
     "unit_name": "霹靂の射手",
@@ -8158,6 +8820,9 @@
   },
   {
     "unit_id": 1091002,
+    "game_unit_id": 1091002,
+    "unit_illust_id": 1091002,
+    "is_awake_unit": 0,
     "character_name": "梨緒",
     "character_name_kana": "リオ",
     "unit_name": "清麗なる水着姿",
@@ -8203,6 +8868,9 @@
   },
   {
     "unit_id": 1092001,
+    "game_unit_id": 1092001,
+    "unit_illust_id": 1092001,
+    "is_awake_unit": 0,
     "character_name": "ヒヨ",
     "character_name_kana": "ヒヨ",
     "unit_name": "江戸っ子巫女",
@@ -8242,6 +8910,9 @@
   },
   {
     "unit_id": 1093001,
+    "game_unit_id": 1093001,
+    "unit_illust_id": 1093001,
+    "is_awake_unit": 0,
     "character_name": "ミルフィー",
     "character_name_kana": "ミルフィー",
     "unit_name": "《境界》の従者",
@@ -8281,6 +8952,9 @@
   },
   {
     "unit_id": 1093002,
+    "game_unit_id": 1093002,
+    "unit_illust_id": 1093002,
+    "is_awake_unit": 0,
     "character_name": "ミルフィー",
     "character_name_kana": "ミルフィー",
     "unit_name": "チアーエンジェル",
@@ -8320,6 +8994,9 @@
   },
   {
     "unit_id": 1093003,
+    "game_unit_id": 1093003,
+    "unit_illust_id": 1093003,
+    "is_awake_unit": 0,
     "character_name": "ミルフィー",
     "character_name_kana": "ミルフィー",
     "unit_name": "霊幻学級委員長",
@@ -8359,6 +9036,9 @@
   },
   {
     "unit_id": 1094001,
+    "game_unit_id": 1094001,
+    "unit_illust_id": 1094001,
+    "is_awake_unit": 0,
     "character_name": "美鶴",
     "character_name_kana": "ミツル",
     "unit_name": "鶴翼の針妙",
@@ -8398,6 +9078,9 @@
   },
   {
     "unit_id": 1094002,
+    "game_unit_id": 1094002,
+    "unit_illust_id": 1094002,
+    "is_awake_unit": 0,
     "character_name": "美鶴",
     "character_name_kana": "ミツル",
     "unit_name": "鶴のチアエール",
@@ -8443,6 +9126,9 @@
   },
   {
     "unit_id": 1095001,
+    "game_unit_id": 1095001,
+    "unit_illust_id": 1095001,
+    "is_awake_unit": 0,
     "character_name": "シズハ",
     "character_name_kana": "シスハ",
     "unit_name": "切願の魔法少女",
@@ -8482,6 +9168,9 @@
   },
   {
     "unit_id": 1095002,
+    "game_unit_id": 1095002,
+    "unit_illust_id": 1095002,
+    "is_awake_unit": 0,
     "character_name": "シズハ",
     "character_name_kana": "シスハ",
     "unit_name": "謹賀の甘酒",
@@ -8521,6 +9210,9 @@
   },
   {
     "unit_id": 1095003,
+    "game_unit_id": 1095003,
+    "unit_illust_id": 1095003,
+    "is_awake_unit": 0,
     "character_name": "シズハ《心願》",
     "character_name_kana": "シスハ",
     "unit_name": "聖杯の真魔法少女",
@@ -8566,6 +9258,9 @@
   },
   {
     "unit_id": 1096001,
+    "game_unit_id": 1096001,
+    "unit_illust_id": 1096001,
+    "is_awake_unit": 0,
     "character_name": "イングリット",
     "character_name_kana": "インクリット",
     "unit_name": "渇望の武闘天使",
@@ -8605,6 +9300,9 @@
   },
   {
     "unit_id": 1097001,
+    "game_unit_id": 1097001,
+    "unit_illust_id": 1097001,
+    "is_awake_unit": 0,
     "character_name": "ジュリエッテ",
     "character_name_kana": "シュリエッテ",
     "unit_name": "智謀の黒き微笑み",
@@ -8644,6 +9342,9 @@
   },
   {
     "unit_id": 1098001,
+    "game_unit_id": 1098001,
+    "unit_illust_id": 1098001,
+    "is_awake_unit": 0,
     "character_name": "ヒマワリ",
     "character_name_kana": "ヒマワリ",
     "unit_name": "無邪気な天才",
@@ -8683,6 +9384,9 @@
   },
   {
     "unit_id": 1099001,
+    "game_unit_id": 1099001,
+    "unit_illust_id": 1099001,
+    "is_awake_unit": 0,
     "character_name": "ミウ",
     "character_name_kana": "ミウ",
     "unit_name": "笑顔の合理主義者",
@@ -8722,6 +9426,9 @@
   },
   {
     "unit_id": 1100001,
+    "game_unit_id": 1100001,
+    "unit_illust_id": 1100001,
+    "is_awake_unit": 0,
     "character_name": "ジャクリーヌ",
     "character_name_kana": "シャクリーヌ",
     "unit_name": "ソウルプリンセス",
@@ -8761,6 +9468,9 @@
   },
   {
     "unit_id": 1101001,
+    "game_unit_id": 1101001,
+    "unit_illust_id": 1101001,
+    "is_awake_unit": 0,
     "character_name": "シルヴィ",
     "character_name_kana": "シルウィ",
     "unit_name": "戦嵐の轟天使",
@@ -8800,6 +9510,9 @@
   },
   {
     "unit_id": 1102001,
+    "game_unit_id": 1102001,
+    "unit_illust_id": 1102001,
+    "is_awake_unit": 0,
     "character_name": "シュティレ",
     "character_name_kana": "シュティレ",
     "unit_name": "精錬の機甲天使",
@@ -8839,6 +9552,9 @@
   },
   {
     "unit_id": 1103001,
+    "game_unit_id": 1103001,
+    "unit_illust_id": 1103001,
+    "is_awake_unit": 0,
     "character_name": "ロクサーナ",
     "character_name_kana": "ロクサーナ",
     "unit_name": "傲岸なる演出家",
@@ -8878,6 +9594,9 @@
   },
   {
     "unit_id": 1104001,
+    "game_unit_id": 1104001,
+    "unit_illust_id": 1104001,
+    "is_awake_unit": 0,
     "character_name": "藍",
     "character_name_kana": "アイ",
     "unit_name": "変幻のアクトレス",
@@ -8917,6 +9636,9 @@
   },
   {
     "unit_id": 1105001,
+    "game_unit_id": 1105001,
+    "unit_illust_id": 1105001,
+    "is_awake_unit": 0,
     "character_name": "ツェツィーリエ",
     "character_name_kana": "ツェツィーリエ",
     "unit_name": "マッドウィッチ",
@@ -8956,6 +9678,9 @@
   },
   {
     "unit_id": 1106001,
+    "game_unit_id": 1106001,
+    "unit_illust_id": 1106001,
+    "is_awake_unit": 0,
     "character_name": "ナナカ",
     "character_name_kana": "ななか",
     "unit_name": "ソードマスター",
@@ -9004,6 +9729,9 @@
   },
   {
     "unit_id": 1107001,
+    "game_unit_id": 1107001,
+    "unit_illust_id": 1107001,
+    "is_awake_unit": 0,
     "character_name": "ロロット",
     "character_name_kana": "ろろっと",
     "unit_name": "碧水のミューズ",
@@ -9047,6 +9775,9 @@
   },
   {
     "unit_id": 1109001,
+    "game_unit_id": 1109001,
+    "unit_illust_id": 1109001,
+    "is_awake_unit": 0,
     "character_name": "アルテ",
     "character_name_kana": "あるて",
     "unit_name": "天才美少女藝術家",
@@ -9090,6 +9821,9 @@
   },
   {
     "unit_id": 1110001,
+    "game_unit_id": 1110001,
+    "unit_illust_id": 1110001,
+    "is_awake_unit": 0,
     "character_name": "プトラ",
     "character_name_kana": "ぷとら",
     "unit_name": "蒼海の国の元気娘",
@@ -9133,6 +9867,9 @@
   },
   {
     "unit_id": 1111001,
+    "game_unit_id": 1111001,
+    "unit_illust_id": 1111001,
+    "is_awake_unit": 0,
     "character_name": "ベアトリス",
     "character_name_kana": "ヘアトリス",
     "unit_name": "お人好し吸血鬼",
@@ -9177,6 +9914,9 @@
   },
   {
     "unit_id": 1111003,
+    "game_unit_id": 1111003,
+    "unit_illust_id": 1111003,
+    "is_awake_unit": 0,
     "character_name": "ベアトリス",
     "character_name_kana": "ヘアトリス",
     "unit_name": "お日様ヴァンプ",
@@ -9221,6 +9961,9 @@
   },
   {
     "unit_id": 1112001,
+    "game_unit_id": 1112001,
+    "unit_illust_id": 1112001,
+    "is_awake_unit": 0,
     "character_name": "チナ",
     "character_name_kana": "チナ",
     "unit_name": "極星の一番槍",
@@ -9260,6 +10003,9 @@
   },
   {
     "unit_id": 1113001,
+    "game_unit_id": 1113001,
+    "unit_illust_id": 1113001,
+    "is_awake_unit": 0,
     "character_name": "ジグ",
     "character_name_kana": "シク",
     "unit_name": "竜焔の魔剣騎士",
@@ -9305,6 +10051,9 @@
   },
   {
     "unit_id": 1116001,
+    "game_unit_id": 1116001,
+    "unit_illust_id": 1116001,
+    "is_awake_unit": 0,
     "character_name": "メテオラ",
     "character_name_kana": "メテオラ",
     "unit_name": "爆砕★破壊天使",
@@ -9344,6 +10093,9 @@
   },
   {
     "unit_id": 1117001,
+    "game_unit_id": 1117001,
+    "unit_illust_id": 1117001,
+    "is_awake_unit": 0,
     "character_name": "エンジュ",
     "character_name_kana": "エンシュ",
     "unit_name": "小さき復讐者",
@@ -9383,6 +10135,9 @@
   },
   {
     "unit_id": 1118001,
+    "game_unit_id": 1118001,
+    "unit_illust_id": 1118001,
+    "is_awake_unit": 0,
     "character_name": "ナターシャ",
     "character_name_kana": "ナターシャ",
     "unit_name": "聖庭園の刺客",
@@ -9422,6 +10177,9 @@
   },
   {
     "unit_id": 1118002,
+    "game_unit_id": 1118002,
+    "unit_illust_id": 1118002,
+    "is_awake_unit": 0,
     "character_name": "ナターシャ",
     "character_name_kana": "ナターシャ",
     "unit_name": "シーエージェント",
@@ -9461,6 +10219,9 @@
   },
   {
     "unit_id": 1119001,
+    "game_unit_id": 1119001,
+    "unit_illust_id": 1119001,
+    "is_awake_unit": 0,
     "character_name": "ミネコ",
     "character_name_kana": "ミネコ",
     "unit_name": "星選の大怪盗",
@@ -9500,6 +10261,9 @@
   },
   {
     "unit_id": 1120001,
+    "game_unit_id": 1120001,
+    "unit_illust_id": 1120001,
+    "is_awake_unit": 0,
     "character_name": "シノ",
     "character_name_kana": "シノ",
     "unit_name": "若きプリンシパル",
@@ -9539,6 +10303,9 @@
   },
   {
     "unit_id": 1121001,
+    "game_unit_id": 1121001,
+    "unit_illust_id": 1121001,
+    "is_awake_unit": 0,
     "character_name": "レイラ",
     "character_name_kana": "レイラ",
     "unit_name": "最後のコラプサー",
@@ -9584,6 +10351,9 @@
   },
   {
     "unit_id": 1122001,
+    "game_unit_id": 1122001,
+    "unit_illust_id": 1122001,
+    "is_awake_unit": 0,
     "character_name": "クーシェン",
     "character_name_kana": "クーシェン",
     "unit_name": "斉天大聖",
@@ -9623,6 +10393,9 @@
   },
   {
     "unit_id": 1123001,
+    "game_unit_id": 1123001,
+    "unit_illust_id": 1123001,
+    "is_awake_unit": 0,
     "character_name": "リーエン",
     "character_name_kana": "リーエン",
     "unit_name": "皇妃に仕える剣",
@@ -9662,6 +10435,9 @@
   },
   {
     "unit_id": 1124001,
+    "game_unit_id": 1124001,
+    "unit_illust_id": 1124001,
+    "is_awake_unit": 0,
     "character_name": "ラクシャ",
     "character_name_kana": "ラクシャ",
     "unit_name": "円環の守護天使",
@@ -9712,8 +10488,11 @@
   },
   {
     "unit_id": 1125001,
+    "game_unit_id": 1125001,
+    "unit_illust_id": 1125001,
+    "is_awake_unit": 0,
     "character_name": "アポロ(大人)",
-    "character_name_kana": "あぽろ",
+    "character_name_kana": "アホロ（オトナ）",
     "unit_name": "グロウンヒーロー",
     "rarity": 3,
     "attr_type": {
@@ -9750,11 +10529,16 @@
     "specific_gauge_data": {
       "specific_name": "インフィニティ状態",
       "specific_detail": "◆通常状態\n通常状態中、自身の通常攻撃でクリティカルが発生するとインフィニティゲージが「1」溜まる。\nインフィニティゲージが「3」溜まると「インフィニティ状態」に移行する。\n\n◆インフィニティ状態\nインフィニティ状態中、自身のATK100％アップ【解除不可】\nインフィニティ状態中、「EXスキル2」が「EXスキル2+」に変化する。\nEXスキル2+を使用するとインフィニティ状態が解除され、「通常状態」に戻る。",
-      "icon_id": 20
+      "icon_id": 20,
+      "is_unlock": 1,
+      "is_strengthen": 0
     }
   },
   {
     "unit_id": 1126001,
+    "game_unit_id": 1126001,
+    "unit_illust_id": 1126001,
+    "is_awake_unit": 0,
     "character_name": "トレジアンナ",
     "character_name_kana": "トレシアンナ",
     "unit_name": "蒐集の魔女",
@@ -9794,6 +10578,9 @@
   },
   {
     "unit_id": 1127001,
+    "game_unit_id": 1127001,
+    "unit_illust_id": 1127001,
+    "is_awake_unit": 0,
     "character_name": "レティシア",
     "character_name_kana": "レティシア",
     "unit_name": "紫炎の呪剣士",
@@ -9833,6 +10620,9 @@
   },
   {
     "unit_id": 1128001,
+    "game_unit_id": 1128001,
+    "unit_illust_id": 1128001,
+    "is_awake_unit": 0,
     "character_name": "リコリンフィア",
     "character_name_kana": "リコリンフィア",
     "unit_name": "リトルポイズナー",
@@ -9872,6 +10662,9 @@
   },
   {
     "unit_id": 1129001,
+    "game_unit_id": 1129001,
+    "unit_illust_id": 1129001,
+    "is_awake_unit": 0,
     "character_name": "エステル",
     "character_name_kana": "エステル",
     "unit_name": "穢れなき祈り",
@@ -9911,6 +10704,9 @@
   },
   {
     "unit_id": 1130001,
+    "game_unit_id": 1130001,
+    "unit_illust_id": 1130001,
+    "is_awake_unit": 0,
     "character_name": "ミヤハル",
     "character_name_kana": "ミヤハル",
     "unit_name": "禁言の陰陽師",
@@ -9950,6 +10746,9 @@
   },
   {
     "unit_id": 1131001,
+    "game_unit_id": 1131001,
+    "unit_illust_id": 1131001,
+    "is_awake_unit": 0,
     "character_name": "シズル",
     "character_name_kana": "シスル",
     "unit_name": "元気溌剌狐古忍者",
@@ -9989,6 +10788,9 @@
   },
   {
     "unit_id": 1132001,
+    "game_unit_id": 1132001,
+    "unit_illust_id": 1132001,
+    "is_awake_unit": 0,
     "character_name": "ケイティ",
     "character_name_kana": "ケイティ",
     "unit_name": "聖域の制圧天使",
@@ -10028,6 +10830,9 @@
   },
   {
     "unit_id": 1133001,
+    "game_unit_id": 1133001,
+    "unit_illust_id": 1133001,
+    "is_awake_unit": 0,
     "character_name": "リィベル",
     "character_name_kana": "リィヘル",
     "unit_name": "深淵書庫の管理者",
@@ -10073,6 +10878,9 @@
   },
   {
     "unit_id": 1133002,
+    "game_unit_id": 1133002,
+    "unit_illust_id": 1133002,
+    "is_awake_unit": 0,
     "character_name": "リィベル",
     "character_name_kana": "リィヘル",
     "unit_name": "書を照らす光",
@@ -10118,6 +10926,9 @@
   },
   {
     "unit_id": 1134001,
+    "game_unit_id": 1134001,
+    "unit_illust_id": 1134001,
+    "is_awake_unit": 0,
     "character_name": "グレイス",
     "character_name_kana": "クレイス",
     "unit_name": "蝶妖精の蒼騎士",
@@ -10157,6 +10968,9 @@
   },
   {
     "unit_id": 1135001,
+    "game_unit_id": 1135001,
+    "unit_illust_id": 1135001,
+    "is_awake_unit": 0,
     "character_name": "ルネア",
     "character_name_kana": "ルネア",
     "unit_name": "創世のアストレア",
@@ -10202,6 +11016,9 @@
   },
   {
     "unit_id": 1136001,
+    "game_unit_id": 1136001,
+    "unit_illust_id": 1136001,
+    "is_awake_unit": 0,
     "character_name": "ウルスラ",
     "character_name_kana": "ウルスラ",
     "unit_name": "愛の伝道者",
@@ -10241,6 +11058,9 @@
   },
   {
     "unit_id": 1137001,
+    "game_unit_id": 1137001,
+    "unit_illust_id": 1137001,
+    "is_awake_unit": 0,
     "character_name": "レミカ(ちぃ)",
     "character_name_kana": "レミカ(チィ)",
     "unit_name": "リトルアーネスト",
@@ -10280,6 +11100,9 @@
   },
   {
     "unit_id": 1138001,
+    "game_unit_id": 1138001,
+    "unit_illust_id": 1138001,
+    "is_awake_unit": 0,
     "character_name": "メルエル(ちぃ)",
     "character_name_kana": "メルエル(チィ)",
     "unit_name": "勇恋邁進",
@@ -10325,6 +11148,9 @@
   },
   {
     "unit_id": 1139001,
+    "game_unit_id": 1139001,
+    "unit_illust_id": 1139001,
+    "is_awake_unit": 0,
     "character_name": "ヴィーナス(ちぃ)",
     "character_name_kana": "ウィーナス（チィ）",
     "unit_name": "ハロードーター",
@@ -10370,6 +11196,9 @@
   },
   {
     "unit_id": 1140001,
+    "game_unit_id": 1140001,
+    "unit_illust_id": 1140001,
+    "is_awake_unit": 0,
     "character_name": "ノルトハウゼン",
     "character_name_kana": "ノルトハウセン",
     "unit_name": "星降らしの魔法使い",
@@ -10415,6 +11244,9 @@
   },
   {
     "unit_id": 1141001,
+    "game_unit_id": 1141001,
+    "unit_illust_id": 1141001,
+    "is_awake_unit": 0,
     "character_name": "ルルゥ",
     "character_name_kana": "ルルゥ",
     "unit_name": "炎宿せし宝石",
@@ -10460,6 +11292,9 @@
   },
   {
     "unit_id": 1142001,
+    "game_unit_id": 1142001,
+    "unit_illust_id": 1142001,
+    "is_awake_unit": 0,
     "character_name": "ステラ",
     "character_name_kana": "ステラ",
     "unit_name": "家族愛の象徴",
@@ -10505,6 +11340,9 @@
   },
   {
     "unit_id": 1143001,
+    "game_unit_id": 1143001,
+    "unit_illust_id": 1143001,
+    "is_awake_unit": 0,
     "character_name": "ラファエロ",
     "character_name_kana": "ラファエロ",
     "unit_name": "カリスマ藝術家",
@@ -10550,6 +11388,9 @@
   },
   {
     "unit_id": 1155001,
+    "game_unit_id": 1155001,
+    "unit_illust_id": 1155001,
+    "is_awake_unit": 0,
     "character_name": "いろは",
     "character_name_kana": "イロハ",
     "unit_name": "Magica2026",
@@ -10595,6 +11436,9 @@
   },
   {
     "unit_id": 1156001,
+    "game_unit_id": 1156001,
+    "unit_illust_id": 1156001,
+    "is_awake_unit": 0,
     "character_name": "花織",
     "character_name_kana": "カオリ",
     "unit_name": "Magica2026",
@@ -10640,6 +11484,9 @@
   },
   {
     "unit_id": 1157001,
+    "game_unit_id": 1157001,
+    "unit_illust_id": 1157001,
+    "is_awake_unit": 0,
     "character_name": "ここあ",
     "character_name_kana": "ココア",
     "unit_name": "Magica2026",
@@ -10685,6 +11532,9 @@
   },
   {
     "unit_id": 1158001,
+    "game_unit_id": 1158001,
+    "unit_illust_id": 1158001,
+    "is_awake_unit": 0,
     "character_name": "陽彩",
     "character_name_kana": "アキサ",
     "unit_name": "Magica2026",
