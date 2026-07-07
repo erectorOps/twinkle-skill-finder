@@ -28042,11 +28042,11 @@
         ]
       },
       {
-        "skill_type": "COMMON",
-        "skill_id": null,
-        "text": "EX2+ 「サンサーラ・シャクティ」のダメージ20％アップ/神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ/さらに神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ",
+        "skill_type": "EX2+",
+        "skill_id": "11240012_plus",
+        "text": "ダメージ20％アップ/神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ/さらに神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ",
         "effects_text": [
-          "EX2+ 「サンサーラ・シャクティ」のダメージ20％アップ",
+          "ダメージ20％アップ",
           "神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ",
           "さらに神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ"
         ],
@@ -28060,7 +28060,7 @@
             "target": "",
             "duration": null,
             "notes": [],
-            "raw": "EX2+ 「サンサーラ・シャクティ」のダメージ20%アップ",
+            "raw": "ダメージ20%アップ",
             "children": [],
             "tags": []
           },
@@ -28178,11 +28178,11 @@
         ]
       },
       {
-        "skill_type": "COMMON",
-        "skill_id": null,
-        "text": "EX2+ 「サンサーラ・シャクティ」のダメージ20％アップ/神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ/さらに神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ",
+        "skill_type": "EX2+",
+        "skill_id": "11240012_plus",
+        "text": "ダメージ20％アップ/神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ/さらに神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ",
         "effects_text": [
-          "EX2+ 「サンサーラ・シャクティ」のダメージ20％アップ",
+          "ダメージ20％アップ",
           "神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ",
           "さらに神族または雷属性の味方のATKの上昇値が神族または雷属性の味方の数×15％アップ"
         ],
@@ -28196,7 +28196,7 @@
             "target": "",
             "duration": null,
             "notes": [],
-            "raw": "EX2+ 「サンサーラ・シャクティ」のダメージ20%アップ",
+            "raw": "ダメージ20%アップ",
             "children": [],
             "tags": []
           },
@@ -33515,6 +33515,608 @@
               }
             ],
             "raw": "ダメージ100%+消費したEXゲージ量×0.1%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
+    "accessory_name": "煌嶺のかんざし",
+    "equip_id": 3300191,
+    "illust_id": "equip_3300191",
+    "rarity": 3,
+    "unit_id": 1115001,
+    "game_unit_id": 1115001,
+    "unit_illust_id": 1115001,
+    "character_id": 115,
+    "character_name": "煌嶺",
+    "unit_name": "大欲の女帝",
+    "exclusive_unit_name": "[大欲の女帝]煌嶺",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": 846,
+      "ex": null,
+      "ex_up": null,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 1,
+        "parameter_value": 846
+      }
+    ],
+    "skill_ids": {
+      "EX1": 11150011,
+      "EX2": 11150012,
+      "EX2+": "11150012_plus"
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 11150011,
+        "text": "ダメージ28％アップ",
+        "effects_text": [
+          "ダメージ28％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+28%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ28%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 11150012,
+        "text": "ダメージ15％アップ/味方全体のATKの上昇値が魔族または炎属性の味方の数×30％アップ",
+        "effects_text": [
+          "ダメージ15％アップ",
+          "味方全体のATKの上昇値が魔族または炎属性の味方の数×30％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+15%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ15%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+30%～150%",
+            "formula": "魔族または炎属性の味方の数×30%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "味方全体",
+            "duration": null,
+            "notes": [],
+            "raw": "味方全体のATKの上昇値が魔族または炎属性の味方の数×30%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2+",
+        "skill_id": "11150012_plus",
+        "text": "ダメージ22％（1バトル中、敵の通常スタン回数が3回以上の時は28％、5回以上の時は30％）アップ/味方全体のATKの上昇値が魔族または炎属性の味方の数×30％アップ",
+        "effects_text": [
+          "ダメージ22％（1バトル中、敵の通常スタン回数が3回以上の時は28％、5回以上の時は30％）アップ",
+          "味方全体のATKの上昇値が魔族または炎属性の味方の数×30％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+22%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "1バトル中、敵の通常スタン回数が3回以上の時は28%",
+                "label": "強化"
+              },
+              {
+                "type": "boost",
+                "text": "5回以上の時は30%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ22%(1バトル中、敵の通常スタン回数が3回以上の時は28%、5回以上の時は30%)アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+30%～150%",
+            "formula": "魔族または炎属性の味方の数×30%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "味方全体",
+            "duration": null,
+            "notes": [],
+            "raw": "味方全体のATKの上昇値が魔族または炎属性の味方の数×30%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「天狐妖炎昇」のダメージ28％アップ/\nEX2 「灼炎大皇」のダメージ15％アップ/味方全体のATKの上昇値が魔族または炎属性の味方の数×30％アップ/\nEX2+ 「熾天灼煌大炎帝」のダメージ22％（1バトル中、敵の通常スタン回数が3回以上の時は28％、5回以上の時は30％）アップ/味方全体のATKの上昇値が魔族または炎属性の味方の数×30％アップ",
+    "ability_full": "EX1「天狐妖炎昇」のダメージ28％アップ/\nEX2 「灼炎大皇」のダメージ15％アップ/味方全体のATKの上昇値が魔族または炎属性の味方の数×30％アップ/\nEX2+ 「熾天灼煌大炎帝」のダメージ22％（1バトル中、敵の通常スタン回数が3回以上の時は28％、5回以上の時は30％）アップ/味方全体のATKの上昇値が魔族または炎属性の味方の数×30％アップ",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 11150011,
+        "text": "ダメージ28％アップ",
+        "effects_text": [
+          "ダメージ28％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+28%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ28%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 11150012,
+        "text": "ダメージ15％アップ/味方全体のATKの上昇値が魔族または炎属性の味方の数×30％アップ",
+        "effects_text": [
+          "ダメージ15％アップ",
+          "味方全体のATKの上昇値が魔族または炎属性の味方の数×30％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+15%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ15%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+30%～150%",
+            "formula": "魔族または炎属性の味方の数×30%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "味方全体",
+            "duration": null,
+            "notes": [],
+            "raw": "味方全体のATKの上昇値が魔族または炎属性の味方の数×30%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2+",
+        "skill_id": "11150012_plus",
+        "text": "ダメージ22％（1バトル中、敵の通常スタン回数が3回以上の時は28％、5回以上の時は30％）アップ/味方全体のATKの上昇値が魔族または炎属性の味方の数×30％アップ",
+        "effects_text": [
+          "ダメージ22％（1バトル中、敵の通常スタン回数が3回以上の時は28％、5回以上の時は30％）アップ",
+          "味方全体のATKの上昇値が魔族または炎属性の味方の数×30％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+22%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "1バトル中、敵の通常スタン回数が3回以上の時は28%",
+                "label": "強化"
+              },
+              {
+                "type": "boost",
+                "text": "5回以上の時は30%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ22%(1バトル中、敵の通常スタン回数が3回以上の時は28%、5回以上の時は30%)アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+30%～150%",
+            "formula": "魔族または炎属性の味方の数×30%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "味方全体",
+            "duration": null,
+            "notes": [],
+            "raw": "味方全体のATKの上昇値が魔族または炎属性の味方の数×30%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
+    "accessory_name": "ルヴィネの首飾り",
+    "equip_id": 3300192,
+    "illust_id": "equip_3300192",
+    "rarity": 3,
+    "unit_id": 1114001,
+    "game_unit_id": 1114001,
+    "unit_illust_id": 1114001,
+    "character_id": 114,
+    "character_name": "ルヴィネ",
+    "unit_name": "新たなる女神の器",
+    "exclusive_unit_name": "[新たなる女神の器]ルヴィネ",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": 846,
+      "ex": null,
+      "ex_up": null,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 1,
+        "parameter_value": 846
+      }
+    ],
+    "skill_ids": {
+      "EX1": 11140011,
+      "EX2": 11140012,
+      "EX2+": "11140012_plus"
+    },
+    "abilities": [
+      {
+        "skill_type": "COMMON",
+        "skill_id": null,
+        "text": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する（最大6カウントまで）",
+        "effects_text": [
+          "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する（最大6カウントまで）"
+        ],
+        "effects": [
+          {
+            "type": "属性カウント+",
+            "display_value": "属性カウント+1 (最大6)",
+            "formula": "",
+            "value": {
+              "amount": 1,
+              "max": 6
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する(最大6カウントまで)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX1",
+        "skill_id": 11140011,
+        "text": "ダメージ30％アップ",
+        "effects_text": [
+          "ダメージ30％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+30%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ30%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 11140012,
+        "text": "ダメージ100％アップ/味方全体のATKの上昇値がチーム内の異なる属性の数×25％（チーム内の異なる属性の数が6以上の時、27.5％）アップ",
+        "effects_text": [
+          "ダメージ100％アップ",
+          "味方全体のATKの上昇値がチーム内の異なる属性の数×25％（チーム内の異なる属性の数が6以上の時、27.5％）アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+100%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ100%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+25%～125%",
+            "formula": "チーム内の異なる属性の数×25%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "味方全体",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "チーム内の異なる属性の数が6以上の時、27.5%",
+                "label": "強化"
+              }
+            ],
+            "raw": "味方全体のATKの上昇値がチーム内の異なる属性の数×25%(チーム内の異なる属性の数が6以上の時、27.5%)アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2+",
+        "skill_id": "11140012_plus",
+        "text": "のダメージ200％（EXゲージが300以上の状態で使用した時、280％）アップ/味方全体のATKの上昇値がチーム内の異なる属性の数×25％（チーム内の異なる属性の数が6以上の時、27.5％）アップ",
+        "effects_text": [
+          "のダメージ200％（EXゲージが300以上の状態で使用した時、280％）アップ",
+          "味方全体のATKの上昇値がチーム内の異なる属性の数×25％（チーム内の異なる属性の数が6以上の時、27.5％）アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+200%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "EXゲージが300以上の状態で使用した時、280%",
+                "label": "強化"
+              }
+            ],
+            "raw": "のダメージ200%(EXゲージが300以上の状態で使用した時、280%)アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+25%～125%",
+            "formula": "チーム内の異なる属性の数×25%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "味方全体",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "チーム内の異なる属性の数が6以上の時、27.5%",
+                "label": "強化"
+              }
+            ],
+            "raw": "味方全体のATKの上昇値がチーム内の異なる属性の数×25%(チーム内の異なる属性の数が6以上の時、27.5%)アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する（最大6カウントまで）/\nEX1「ワールド・カリキュレート」のダメージ30％アップ/\nEX2 「レディアント・プロトコル」のダメージ100％アップ/味方全体のATKの上昇値がチーム内の異なる属性の数×25％（チーム内の異なる属性の数が6以上の時、27.5％）アップ/\nEX2+「アドミン・オーバーライド」 のダメージ200％（EXゲージが300以上の状態で使用した時、280％）アップ/味方全体のATKの上昇値がチーム内の異なる属性の数×25％（チーム内の異なる属性の数が6以上の時、27.5％）アップ",
+    "ability_full": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する（最大6カウントまで）/\nEX1「ワールド・カリキュレート」のダメージ30％アップ/\nEX2 「レディアント・プロトコル」のダメージ100％アップ/味方全体のATKの上昇値がチーム内の異なる属性の数×25％（チーム内の異なる属性の数が6以上の時、27.5％）アップ/\nEX2+「アドミン・オーバーライド」 のダメージ200％（EXゲージが300以上の状態で使用した時、280％）アップ/味方全体のATKの上昇値がチーム内の異なる属性の数×25％（チーム内の異なる属性の数が6以上の時、27.5％）アップ",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "COMMON",
+        "skill_id": null,
+        "text": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する（最大6カウントまで）",
+        "effects_text": [
+          "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する（最大6カウントまで）"
+        ],
+        "effects": [
+          {
+            "type": "属性カウント+",
+            "display_value": "属性カウント+1 (最大6)",
+            "formula": "",
+            "value": {
+              "amount": 1,
+              "max": 6
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する(最大6カウントまで)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX1",
+        "skill_id": 11140011,
+        "text": "ダメージ30％アップ",
+        "effects_text": [
+          "ダメージ30％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+30%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ30%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 11140012,
+        "text": "ダメージ100％アップ/味方全体のATKの上昇値がチーム内の異なる属性の数×25％（チーム内の異なる属性の数が6以上の時、27.5％）アップ",
+        "effects_text": [
+          "ダメージ100％アップ",
+          "味方全体のATKの上昇値がチーム内の異なる属性の数×25％（チーム内の異なる属性の数が6以上の時、27.5％）アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+100%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ100%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+25%～125%",
+            "formula": "チーム内の異なる属性の数×25%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "味方全体",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "チーム内の異なる属性の数が6以上の時、27.5%",
+                "label": "強化"
+              }
+            ],
+            "raw": "味方全体のATKの上昇値がチーム内の異なる属性の数×25%(チーム内の異なる属性の数が6以上の時、27.5%)アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2+",
+        "skill_id": "11140012_plus",
+        "text": "のダメージ200％（EXゲージが300以上の状態で使用した時、280％）アップ/味方全体のATKの上昇値がチーム内の異なる属性の数×25％（チーム内の異なる属性の数が6以上の時、27.5％）アップ",
+        "effects_text": [
+          "のダメージ200％（EXゲージが300以上の状態で使用した時、280％）アップ",
+          "味方全体のATKの上昇値がチーム内の異なる属性の数×25％（チーム内の異なる属性の数が6以上の時、27.5％）アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+200%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "EXゲージが300以上の状態で使用した時、280%",
+                "label": "強化"
+              }
+            ],
+            "raw": "のダメージ200%(EXゲージが300以上の状態で使用した時、280%)アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+25%～125%",
+            "formula": "チーム内の異なる属性の数×25%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "味方全体",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "チーム内の異なる属性の数が6以上の時、27.5%",
+                "label": "強化"
+              }
+            ],
+            "raw": "味方全体のATKの上昇値がチーム内の異なる属性の数×25%(チーム内の異なる属性の数が6以上の時、27.5%)アップ",
             "children": [],
             "tags": []
           }

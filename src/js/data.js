@@ -130,6 +130,7 @@ export const specialsAlly = [
 export const specialsEnemy = [
   { id: "random", label: "ランダム",  short: "ランダム" },
   { id: "lily",   label: "百合の花",  short: "百合の花" },
+  { id: "enkai",  label: "焔界",    short: "焔界" },
   /* ▼ 敵の特殊条件を足すならここ */
 ];
 
@@ -178,6 +179,7 @@ export const effectTypes = [
   { id: "unique_gauge_up",         label: "固有ゲージ増加",                 short: "固有ゲージ増加", klass: "buff" },
   { id: "unique_effect",           label: "固有効果",                       short: "固有効果",       klass: "buff" },
   { id: "family_bond",             label: "家族の絆",                       short: "家族の絆",       klass: "buff" },
+  { id: "revival",                 label: "再臨",                           short: "再臨",           klass: "buff" },
   { id: "protection",              label: "庇護",                           short: "庇護",           klass: "buff" },
   { id: "taunt",                   label: "挑発",                           short: "挑発",           klass: "buff" },
   { id: "flame_of_justice",        label: "正義の焔",                       short: "正義の焔",       klass: "buff" },

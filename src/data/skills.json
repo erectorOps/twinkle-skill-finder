@@ -60996,6 +60996,1235 @@
     ]
   },
   {
+    "unit_id": 1114001,
+    "game_unit_id": 1114001,
+    "unit_illust_id": 1114001,
+    "is_awake_unit": 0,
+    "skill_id": 11140011,
+    "skill_type": "EX1",
+    "name": "ワールド・カリキュレート",
+    "icon_id": 100,
+    "cost_ex_gauge": 100,
+    "skill_detail": "敵全体に60％のダメージ/味方全体の行動CTをチーム内の異なるメイン属性の数×4％短縮（10CT）/ノーツを4～4（自身とメイン属性が異なる対象の場合、7～7）前方に移動/チーム内に異なるメイン属性の味方が3体以上いる時、自身に「属性カウント+1」を付与する（40CT）【バフ解除無効】\n※属性カウント+1：自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する（最大6カウントまで）",
+    "effects": [
+      {
+        "display_value": "60%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 60,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [],
+        "raw": "敵全体に60%のダメージ",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "4%～20%",
+        "formula": "チーム内の異なるメイン属性の数×4%",
+        "type": "行動CT短縮",
+        "value": {
+          "rate": 4
+        },
+        "effect_class": "buff",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "specials": [
+                  "diff_attr"
+                ]
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 10
+        },
+        "notes": [],
+        "raw": "味方全体の行動CTをチーム内の異なるメイン属性の数×4%短縮(10CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "4",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 4,
+          "max": 4
+        },
+        "effect_class": "note",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "自身とメイン属性が異なる対象の場合、7",
+            "label": "強化"
+          }
+        ],
+        "raw": "ノーツを4～4(自身とメイン属性が異なる対象の場合、7～7)前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "「属性カウント+1」の効果:",
+        "formula": "",
+        "type": "固有効果",
+        "value": {
+          "name": "属性カウント+1"
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 40
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "チーム内に異なるメイン属性の味方が3体以上いる時",
+            "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "バフ解除無効",
+            "label": "特性"
+          }
+        ],
+        "raw": "チーム内に異なるメイン属性の味方が3体以上いる時、自身に「属性カウント+1」を付与する(40CT)【バフ解除無効】",
+        "children": [
+          {
+            "type": "属性カウント+1",
+            "formula": "属性の数を参照するスキルの対象になった場合、そのカウントを+1する(最大+6)",
+            "value": {
+              "amount": 1,
+              "max": 6
+            },
+            "target": "自身",
+            "duration": {
+              "ct": 40
+            },
+            "display_value": "",
+            "effect_class": "other"
+          }
+        ],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1114001,
+    "game_unit_id": 1114001,
+    "unit_illust_id": 1114001,
+    "is_awake_unit": 0,
+    "skill_id": 11140012,
+    "skill_type": "EX2",
+    "name": "レディアント・プロトコル",
+    "icon_id": 100,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵全体に200％のダメージ/味方全体のATKをチーム内の異なる属性の数×100％（チーム内の異なる属性の数が6以上の時、110％）アップ（30CT）/ノーツを7～7前方に移動/チーム内に異なるメイン属性の味方が3体以上いる時、味方全体のクリティカル時のダメージ倍率をチーム内の異なる属性の数×10％加算（25CT）/味方に付与されている元素の星紋がLV4以上の時、敵単体のEXゲージをチーム内の異なる属性の数×20吸収し、その内の20％味方のEXゲージを回復",
+    "effects": [
+      {
+        "display_value": "200%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 200,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [],
+        "raw": "敵全体に200%のダメージ",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "100%～500%",
+        "formula": "チーム内の異なる属性の数×100%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 100
+        },
+        "effect_class": "buff",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "specials": [
+                  "diff_attr"
+                ]
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [
+          {
+            "type": "boost",
+            "text": "チーム内の異なる属性の数が6以上の時、110%",
+            "label": "強化"
+          }
+        ],
+        "raw": "味方全体のATKをチーム内の異なる属性の数×100%(チーム内の異なる属性の数が6以上の時、110%)アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "7",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 7,
+          "max": 7
+        },
+        "effect_class": "note",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを7～7前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "10%～50%",
+        "formula": "チーム内の異なる属性の数×10%",
+        "type": "クリティカルダメージアップ",
+        "value": {
+          "rate": 10
+        },
+        "effect_class": "buff",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "specials": [
+                  "diff_attr"
+                ]
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 25
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "チーム内に異なるメイン属性の味方が3体以上いる時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "チーム内に異なるメイン属性の味方が3体以上いる時、味方全体のクリティカル時のダメージ倍率をチーム内の異なる属性の数×10%加算(25CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "4～20",
+        "formula": "チーム内の異なる属性の数×20吸収し、吸収量の20%を味方EX回復",
+        "type": "EXゲージ吸収",
+        "value": {
+          "amount": 20,
+          "rate": 20
+        },
+        "effect_class": "buff",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ex_gauge",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "specials": [
+                  "diff_attr"
+                ]
+              }
+            ]
+          }
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "味方に付与されている元素の星紋がLV4以上の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "味方に付与されている元素の星紋がLV4以上の時、敵単体のEXゲージをチーム内の異なる属性の数×20吸収し、その内の20%味方のEXゲージを回復",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1114001,
+    "game_unit_id": 1114001,
+    "unit_illust_id": 1114001,
+    "is_awake_unit": 0,
+    "skill_id": "11140012_plus",
+    "skill_type": "EX2+",
+    "name": "アドミン・オーバーライド",
+    "icon_id": 100,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵全体に400％（EXゲージが300以上の状態で使用した時、560％）のダメージ/自身に再臨を付与（2回発動まで）/味方全体のATKをチーム内の異なる属性の数×100％（チーム内の異なる属性の数が6以上の時、110％）アップ（30CT）/ノーツを10～10前方に移動/チーム内に異なるメイン属性の味方が3体以上いる時、味方全体のクリティカル時のダメージ倍率をチーム内の異なる属性の数×10％加算（25CT）/チーム内に異なるメイン属性の味方が3体以上いる時、敵全体に弱点属性を付与（1CT）/味方に付与されている元素の星紋がLV4以上の時、敵単体のEXゲージをチーム内の異なる属性の数×20吸収し、その内の20％味方のEXゲージを回復\n※再臨：自身とメイン属性が異なる味方がACTバーに到達した時、自身のノーツをACTバーに移動させる\n※弱点属性：すべての属性から受ける攻撃が弱点属性扱いとなる（攻撃側の属性は変化しない）",
+    "effects": [
+      {
+        "display_value": "400%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 400,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "EXゲージが300以上の状態で使用した時、560%",
+            "label": "強化"
+          }
+        ],
+        "raw": "敵全体に400%(EXゲージが300以上の状態で使用した時、560%)のダメージ",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "",
+        "formula": "自身とメイン属性が異なる味方がACTバーに到達した時、自身のノーツをACTバーに移動させる",
+        "type": "再臨",
+        "value": {},
+        "effect_class": "other",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "expire",
+            "text": "2回発動まで",
+            "label": "回数"
+          }
+        ],
+        "raw": "自身に再臨を付与(2回発動まで)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "100%～500%",
+        "formula": "チーム内の異なる属性の数×100%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 100
+        },
+        "effect_class": "buff",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "specials": [
+                  "diff_attr"
+                ]
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [
+          {
+            "type": "boost",
+            "text": "チーム内の異なる属性の数が6以上の時、110%",
+            "label": "強化"
+          }
+        ],
+        "raw": "味方全体のATKをチーム内の異なる属性の数×100%(チーム内の異なる属性の数が6以上の時、110%)アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "10",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 10,
+          "max": 10
+        },
+        "effect_class": "note",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを10～10前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "10%～50%",
+        "formula": "チーム内の異なる属性の数×10%",
+        "type": "クリティカルダメージアップ",
+        "value": {
+          "rate": 10
+        },
+        "effect_class": "buff",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "specials": [
+                  "diff_attr"
+                ]
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 25
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "チーム内に異なるメイン属性の味方が3体以上いる時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "チーム内に異なるメイン属性の味方が3体以上いる時、味方全体のクリティカル時のダメージ倍率をチーム内の異なる属性の数×10%加算(25CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "",
+        "formula": "全属性攻撃が弱点になる",
+        "type": "弱点属性",
+        "value": {},
+        "effect_class": "debuff",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 1
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "チーム内に異なるメイン属性の味方が3体以上いる時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "チーム内に異なるメイン属性の味方が3体以上いる時、敵全体に弱点属性を付与(1CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "4～20",
+        "formula": "チーム内の異なる属性の数×20吸収し、吸収量の20%を味方EX回復",
+        "type": "EXゲージ吸収",
+        "value": {
+          "amount": 20,
+          "rate": 20
+        },
+        "effect_class": "buff",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ex_gauge",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "specials": [
+                  "diff_attr"
+                ]
+              }
+            ]
+          }
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "味方に付与されている元素の星紋がLV4以上の時",
+            "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "再臨：自身とメイン属性が異なる味方がACTバーに到達した時、自身のノーツをACTバーに移動させる",
+            "label": "特性"
+          }
+        ],
+        "raw": "味方に付与されている元素の星紋がLV4以上の時、敵単体のEXゲージをチーム内の異なる属性の数×20吸収し、その内の20%味方のEXゲージを回復\n※再臨：自身とメイン属性が異なる味方がACTバーに到達した時、自身のノーツをACTバーに移動させる",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1115001,
+    "game_unit_id": 1115001,
+    "unit_illust_id": 1115001,
+    "is_awake_unit": 0,
+    "skill_id": 11150011,
+    "skill_type": "EX1",
+    "name": "天狐妖炎昇",
+    "icon_id": 101,
+    "cost_ex_gauge": 100,
+    "skill_detail": "敵単体に56％×9回のダメージ/15ノックバック/敵全体の被ダメージを魔族または炎属性の味方の数×8％増加（20CT） ※2つの条件を満たした場合でも効果は重複しない/自身のEX消費量を焔界内にいる敵の数×20減少（次ターン以降EXスキル1回発動まで）",
+    "effects": [
+      {
+        "display_value": "56%×9回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 56,
+          "hit": 9
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [],
+        "raw": "敵単体に56%×9回のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "15",
+        "formula": "",
+        "type": "ノックバック",
+        "value": {
+          "min": 15,
+          "max": 15
+        },
+        "effect_class": "note",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "15ノックバック",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "8%～40%",
+        "formula": "魔族または炎属性の味方の数×8%",
+        "type": "被ダメージアップ",
+        "value": {
+          "rate": 8
+        },
+        "effect_class": "debuff",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 3
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 1
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "敵全体の被ダメージを魔族または炎属性の味方の数×8%増加(20CT) ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "20～100",
+        "formula": "焔界内にいる敵の数×20",
+        "type": "EX消費量減少",
+        "value": {
+          "amount": 20
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "enemy",
+            "branches": {
+              "side": "enemy",
+              "scope": "all",
+              "specials": [
+                "enkai"
+              ]
+            }
+          }
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "expire",
+            "text": "次ターン以降EXスキル1回発動まで",
+            "label": "回数"
+          }
+        ],
+        "raw": "自身のEX消費量を焔界内にいる敵の数×20減少(次ターン以降EXスキル1回発動まで)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1115001,
+    "game_unit_id": 1115001,
+    "unit_illust_id": 1115001,
+    "is_awake_unit": 0,
+    "skill_id": 11150012,
+    "skill_type": "EX2",
+    "name": "灼炎大皇",
+    "icon_id": 101,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵全体に30％×8回のダメージ/被ダメージを魔族または炎属性の味方の数×12％増加（20CT） ※2つの条件を満たした場合でも効果は重複しない/味方全体のATKを魔族または炎属性の味方の数×120％アップ（30CT） ※2つの条件を満たした場合でも効果は重複しない/ノーツを7～7前方に移動/焔界内にいる敵の数が3体以上の時、さらに敵全体の被ダメージを20％増加（20CT）",
+    "effects": [
+      {
+        "display_value": "30%×8回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 30,
+          "hit": 8
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [],
+        "raw": "敵全体に30%×8回のダメージ",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "12%～60%",
+        "formula": "魔族または炎属性の味方の数×12%",
+        "type": "被ダメージアップ",
+        "value": {
+          "rate": 12
+        },
+        "effect_class": "debuff",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 3
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 1
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "被ダメージを魔族または炎属性の味方の数×12%増加(20CT) ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "120%～600%",
+        "formula": "魔族または炎属性の味方の数×120%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 120
+        },
+        "effect_class": "buff",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 3
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 1
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "味方全体のATKを魔族または炎属性の味方の数×120%アップ(30CT) ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "7",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 7,
+          "max": 7
+        },
+        "effect_class": "note",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを7～7前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "20%",
+        "formula": "",
+        "type": "被ダメージアップ",
+        "value": {
+          "rate": 20
+        },
+        "effect_class": "debuff",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "焔界内にいる敵の数が3体以上の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "焔界内にいる敵の数が3体以上の時、さらに敵全体の被ダメージを20%増加(20CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1115001,
+    "game_unit_id": 1115001,
+    "unit_illust_id": 1115001,
+    "is_awake_unit": 0,
+    "skill_id": "11150012_plus",
+    "skill_type": "EX2+",
+    "name": "熾天灼煌大炎帝",
+    "icon_id": 101,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵全体に44％（1バトル中、敵の通常スタン回数が3回以上の時は56％、5回以上の時は60％）×10回のダメージ/被ダメージを魔族または炎属性の味方の数×12％増加（20CT） ※2つの条件を満たした場合でも効果は重複しない/敵全体の焔界内にいる対象に弱点属性を付与（1CT）/味方全体のATKを魔族または炎属性の味方の数×120％アップ（30CT） ※2つの条件を満たした場合でも効果は重複しない/ノーツを10～10前方に移動/焔界内にいる敵の数が3体以上の時、さらに敵全体の被ダメージを20％増加（20CT）/焔界内にいる敵の数が5体以上の時、自身のクリティカルを100％加算（1CT）\n※通常スタン：スタンゲージを0にした際に発生するスタン\n※弱点属性：すべての属性から受ける攻撃が弱点属性扱いとなる（攻撃側の属性は変化しない）",
+    "effects": [
+      {
+        "display_value": "44%×10回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 44,
+          "hit": 10
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "1バトル中、敵の通常スタン回数が3回以上の時は56%",
+            "label": "強化"
+          },
+          {
+            "type": "boost",
+            "text": "5回以上の時は60%",
+            "label": "強化"
+          }
+        ],
+        "raw": "敵全体に44%(1バトル中、敵の通常スタン回数が3回以上の時は56%、5回以上の時は60%)×10回のダメージ",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "12%～60%",
+        "formula": "魔族または炎属性の味方の数×12%",
+        "type": "被ダメージアップ",
+        "value": {
+          "rate": 12
+        },
+        "effect_class": "debuff",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 3
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 1
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "被ダメージを魔族または炎属性の味方の数×12%増加(20CT) ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "",
+        "formula": "全属性攻撃が弱点になる",
+        "type": "弱点属性",
+        "value": {},
+        "effect_class": "debuff",
+        "target": "敵全体の焔界内にいる対象",
+        "target_branches": {
+          "side": "enemy",
+          "scope": "all",
+          "specials": [
+            "enkai"
+          ]
+        },
+        "scale_refs": [],
+        "duration": {
+          "ct": 1
+        },
+        "notes": [],
+        "raw": "敵全体の焔界内にいる対象に弱点属性を付与(1CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "120%～600%",
+        "formula": "魔族または炎属性の味方の数×120%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 120
+        },
+        "effect_class": "buff",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 3
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 1
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "味方全体のATKを魔族または炎属性の味方の数×120%アップ(30CT) ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "10",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 10,
+          "max": 10
+        },
+        "effect_class": "note",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを10～10前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "20%",
+        "formula": "",
+        "type": "被ダメージアップ",
+        "value": {
+          "rate": 20
+        },
+        "effect_class": "debuff",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "焔界内にいる敵の数が3体以上の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "焔界内にいる敵の数が3体以上の時、さらに敵全体の被ダメージを20%増加(20CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "100%",
+        "formula": "",
+        "type": "クリティカル率アップ",
+        "value": {
+          "rate": 100
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 1
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "焔界内にいる敵の数が5体以上の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "焔界内にいる敵の数が5体以上の時、自身のクリティカルを100%加算(1CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
     "unit_id": 1116001,
     "game_unit_id": 1116001,
     "unit_illust_id": 1116001,
