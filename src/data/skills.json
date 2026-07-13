@@ -30102,6 +30102,455 @@
     ]
   },
   {
+    "unit_id": 1041005,
+    "game_unit_id": 1041005,
+    "unit_illust_id": 1041005,
+    "is_awake_unit": 0,
+    "skill_id": 10410051,
+    "skill_type": "EX1",
+    "name": "アビスラプチャーガム",
+    "icon_id": 705,
+    "cost_ex_gauge": 100,
+    "skill_detail": "前から2番目にいる味方のノーツを4前方に移動/一番後方の味方の行動CT30％短縮（5CT）/ノーツを前から2番目の味方と同じ位置に移動/爆裂LV5以上の時、一番後方の味方のクリティカル時のダメージ倍率を45％加算（20CT）/このEXスキル使用後、設置されているシェアハートボンバーをタイムライン後方に2移動",
+    "effects": [
+      {
+        "display_value": "4",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 4,
+          "max": 4
+        },
+        "effect_class": "note",
+        "target": "前から2番目にいる味方",
+        "target_branches": {
+          "side": "ally",
+          "scope": "single",
+          "pos": "front_2"
+        },
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "前から2番目にいる味方のノーツを4前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "30%",
+        "formula": "",
+        "type": "行動CT短縮",
+        "value": {
+          "rate": 30
+        },
+        "effect_class": "buff",
+        "target": "一番後方の味方",
+        "target_branches": {
+          "side": "ally",
+          "scope": "single",
+          "pos": "backmost"
+        },
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 5
+        },
+        "notes": [],
+        "raw": "一番後方の味方の行動CT30%短縮(5CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "前から2番目の味方と同じ位置",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {},
+        "effect_class": "note",
+        "target": "一番後方の味方",
+        "target_branches": {
+          "side": "ally",
+          "scope": "single",
+          "pos": "backmost"
+        },
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを前から2番目の味方と同じ位置に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "45%",
+        "formula": "",
+        "type": "クリティカルダメージアップ",
+        "value": {
+          "rate": 45
+        },
+        "effect_class": "buff",
+        "target": "一番後方の味方",
+        "target_branches": {
+          "side": "ally",
+          "scope": "single",
+          "pos": "backmost"
+        },
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "爆裂LV5以上の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "爆裂LV5以上の時、一番後方の味方のクリティカル時のダメージ倍率を45%加算(20CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "シェアハートボンバー後方2",
+        "formula": "",
+        "type": "オブジェクト移動",
+        "value": {
+          "object": "シェアハートボンバー",
+          "direction": "後方",
+          "amount": 2
+        },
+        "effect_class": "note",
+        "target": "一番後方の味方",
+        "target_branches": {
+          "side": "ally",
+          "scope": "single",
+          "pos": "backmost"
+        },
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "このEXスキル使用後、設置されているシェアハートボンバーをタイムライン後方に2移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      }
+    ]
+  },
+  {
+    "unit_id": 1041005,
+    "game_unit_id": 1041005,
+    "unit_illust_id": 1041005,
+    "is_awake_unit": 0,
+    "skill_id": 10410052,
+    "skill_type": "EX2",
+    "name": "カオスジャミングボム",
+    "icon_id": 404,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵全体の被ダメージを30％+爆裂LV×5％増加（最大80％）（20CT）/人間または神族の味方のATKを100％+自身の基礎ATK200ごと×18％アップ（30CT）（最大300％）/味方全体の行動CT10％（人間または神族の場合、25％）短縮（25CT）/このEXスキル使用後、設置されているシェアハートボンバーをタイムライン後方に4移動",
+    "effects": [
+      {
+        "display_value": "30%～80%",
+        "formula": "30%+爆裂LV×5% (最大80%)",
+        "type": "被ダメージアップ",
+        "value": {
+          "rate": 5
+        },
+        "effect_class": "debuff",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "burst_lv",
+            "branches": []
+          }
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "20CT",
+            "label": "強化"
+          }
+        ],
+        "raw": "敵全体の被ダメージを30%+爆裂LV×5%増加(最大80%)(20CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "100%～300%",
+        "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 18
+        },
+        "effect_class": "buff",
+        "target": "人間または神族の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 2
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "self_atk",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "人間または神族の味方のATKを100%+自身の基礎ATK200ごと×18%アップ(30CT)(最大300%)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "10%",
+        "formula": "",
+        "type": "行動CT短縮",
+        "value": {
+          "rate": 10
+        },
+        "effect_class": "buff",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 25
+        },
+        "notes": [
+          {
+            "type": "boost",
+            "text": "人間または神族の場合、25%",
+            "label": "強化"
+          }
+        ],
+        "raw": "味方全体の行動CT10%(人間または神族の場合、25%)短縮(25CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "シェアハートボンバー後方4",
+        "formula": "",
+        "type": "オブジェクト移動",
+        "value": {
+          "object": "シェアハートボンバー",
+          "direction": "後方",
+          "amount": 4
+        },
+        "effect_class": "note",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "このEXスキル使用後、設置されているシェアハートボンバーをタイムライン後方に4移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      }
+    ]
+  },
+  {
+    "unit_id": 1041005,
+    "game_unit_id": 1041005,
+    "unit_illust_id": 1041005,
+    "is_awake_unit": 0,
+    "skill_id": "10410052_plus",
+    "skill_type": "EX2+",
+    "name": "ミスチーフ・カタストロフ",
+    "icon_id": 404,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵全体の被ダメージを80％増加（20CT）/人間または神族の味方のATKを100％+自身の基礎ATK200ごと×18％アップ（30CT）（最大300％）/味方全体の行動CT10％（人間または神族の場合、25％）短縮（25CT）/爆裂LV5以上の時、味方全体のATKをさらに100％アップ（30CT）/このEXスキル使用後、設置されているシェアハートボンバーをタイムライン後方に4移動",
+    "effects": [
+      {
+        "display_value": "80%",
+        "formula": "",
+        "type": "被ダメージアップ",
+        "value": {
+          "rate": 80
+        },
+        "effect_class": "debuff",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [],
+        "raw": "敵全体の被ダメージを80%増加(20CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "100%～300%",
+        "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 18
+        },
+        "effect_class": "buff",
+        "target": "人間または神族の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 2
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "self_atk",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "人間または神族の味方のATKを100%+自身の基礎ATK200ごと×18%アップ(30CT)(最大300%)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "10%",
+        "formula": "",
+        "type": "行動CT短縮",
+        "value": {
+          "rate": 10
+        },
+        "effect_class": "buff",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 25
+        },
+        "notes": [
+          {
+            "type": "boost",
+            "text": "人間または神族の場合、25%",
+            "label": "強化"
+          }
+        ],
+        "raw": "味方全体の行動CT10%(人間または神族の場合、25%)短縮(25CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "100%",
+        "formula": "",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 100
+        },
+        "effect_class": "buff",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "爆裂LV5以上の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "爆裂LV5以上の時、味方全体のATKをさらに100%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "シェアハートボンバー後方4",
+        "formula": "",
+        "type": "オブジェクト移動",
+        "value": {
+          "object": "シェアハートボンバー",
+          "direction": "後方",
+          "amount": 4
+        },
+        "effect_class": "note",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "このEXスキル使用後、設置されているシェアハートボンバーをタイムライン後方に4移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      }
+    ]
+  },
+  {
     "unit_id": 1042001,
     "game_unit_id": 1042001,
     "unit_illust_id": 1042001,
@@ -33267,6 +33716,603 @@
         "children": [],
         "tags": [],
         "inherited_target": true
+      }
+    ]
+  },
+  {
+    "unit_id": 1047003,
+    "game_unit_id": 1047003,
+    "unit_illust_id": 1047003,
+    "is_awake_unit": 0,
+    "skill_id": 10470031,
+    "skill_type": "EX1",
+    "name": "エゴイスティック・コンチェルト",
+    "icon_id": 101,
+    "cost_ex_gauge": 100,
+    "skill_detail": "敵単体に94％×6回のダメージ/スタンゲージ3減少（自身を含む味方3体以上ユニゾン時、スタンゲージ減少量1増加）/自身のATKを神族または魔族の味方の数×30％（天啓LV5以上の時、50％）アップ（30CT） ※2つの条件を満たした場合でも効果は重複しない/神族または魔族の味方のノーツを3～3前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない/このEXスキルで敵をスタンさせた場合、自身の行動終了後のノーツ戻り位置をタイムライン上1の位置にする/このEXスキルで敵をスタンさせた場合、敵単体のEXゲージを100吸収し、その内の50％味方のEXゲージを回復",
+    "effects": [
+      {
+        "display_value": "94%×6回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 94,
+          "hit": 6
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [],
+        "raw": "敵単体に94%×6回のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "3",
+        "formula": "スタンゲージが0になるとスタン状態になる",
+        "type": "スタンゲージ減少",
+        "value": {
+          "amount": 3
+        },
+        "effect_class": "debuff",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "自身を含む味方3体以上ユニゾン時、減少量1増加",
+            "label": "強化"
+          }
+        ],
+        "raw": "スタンゲージ3減少(自身を含む味方3体以上ユニゾン時、スタンゲージ減少量1増加)",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "30%～150%",
+        "formula": "神族または魔族の味方の数×30%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 30
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 2
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 3
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [
+          {
+            "type": "boost",
+            "text": "天啓LV5以上の時、50%",
+            "label": "強化"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "自身のATKを神族または魔族の味方の数×30%(天啓LV5以上の時、50%)アップ(30CT) ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "3",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 3,
+          "max": 3
+        },
+        "effect_class": "note",
+        "target": "神族または魔族の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 2
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 3
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でもノーツ移動効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "神族または魔族の味方のノーツを3～3前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "1CT後の位置に戻る",
+        "formula": "",
+        "type": "ノーツ戻り位置変更",
+        "value": {},
+        "effect_class": "note",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "このEXスキルで敵をスタンさせた場合",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "このEXスキルで敵をスタンさせた場合、自身の行動終了後のノーツ戻り位置をタイムライン上1の位置にする",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "敵EX最大100吸収",
+        "formula": "吸収量の50%を味方EX回復 (最大50回復)",
+        "type": "EXゲージ吸収",
+        "value": {
+          "amount": 100,
+          "rate": 50
+        },
+        "effect_class": "buff",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ex_gauge",
+            "branches": []
+          }
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "このEXスキルで敵をスタンさせた場合",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "このEXスキルで敵をスタンさせた場合、敵単体のEXゲージを100吸収し、その内の50%味方のEXゲージを回復",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1047003,
+    "game_unit_id": 1047003,
+    "unit_illust_id": 1047003,
+    "is_awake_unit": 0,
+    "skill_id": 10470032,
+    "skill_type": "EX2",
+    "name": "エゴイスティック・ラプソディー",
+    "icon_id": 100,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵全体に340％のダメージ（対象の敵とノーツが前後6以内にいる敵に対して440％のダメージ）/自身のATKを神族または魔族の味方の数×80％アップ（20CT） ※2つの条件を満たした場合でも効果は重複しない/神族または魔族の味方のノーツを7～7前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない/自身を含む味方2体以上ユニゾン時、ユニゾン参加者のクリティカルを20％加算（20CT）",
+    "effects": [
+      {
+        "display_value": "340%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 340,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "対象の敵とノーツが前後6以内にいる敵に対して440%のダメージ",
+            "label": "強化"
+          }
+        ],
+        "raw": "敵全体に340%のダメージ(対象の敵とノーツが前後6以内にいる敵に対して440%のダメージ)",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "80%～400%",
+        "formula": "神族または魔族の味方の数×80%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 80
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 2
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 3
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "自身のATKを神族または魔族の味方の数×80%アップ(20CT) ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "7",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 7,
+          "max": 7
+        },
+        "effect_class": "note",
+        "target": "神族または魔族の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 2
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 3
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でもノーツ移動効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "神族または魔族の味方のノーツを7～7前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "20%",
+        "formula": "",
+        "type": "クリティカル率アップ",
+        "value": {
+          "rate": 20
+        },
+        "effect_class": "buff",
+        "target": "ユニゾン参加者",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "specials": [
+              "unison"
+            ]
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "自身を含む味方2体以上ユニゾン時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "自身を含む味方2体以上ユニゾン時、ユニゾン参加者のクリティカルを20%加算(20CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1047003,
+    "game_unit_id": 1047003,
+    "unit_illust_id": 1047003,
+    "is_awake_unit": 0,
+    "skill_id": "10470032_plus",
+    "skill_type": "EX2+",
+    "name": "ディヴォーテッド・レクイエム",
+    "icon_id": 100,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵全体に440％のダメージ（対象の敵とノーツが前後6以内にいる敵に対して570％のダメージ）/自身のATKを神族または魔族の味方の数×80％アップ（20CT） ※2つの条件を満たした場合でも効果は重複しない/神族または魔族の味方のノーツを7～7前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない/自身を含む味方2体以上ユニゾン時、ユニゾン参加者のクリティカルを20％加算（20CT）/このEXスキルのEX消費量をスタンしている敵の数×10減少\n※このEXスキルは他星騎士から付与されたEX消費量減少の効果を受けない",
+    "effects": [
+      {
+        "display_value": "440%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 440,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "対象の敵とノーツが前後6以内にいる敵に対して570%のダメージ",
+            "label": "強化"
+          }
+        ],
+        "raw": "敵全体に440%のダメージ(対象の敵とノーツが前後6以内にいる敵に対して570%のダメージ)",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "80%～400%",
+        "formula": "神族または魔族の味方の数×80%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 80
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 2
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 3
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "自身のATKを神族または魔族の味方の数×80%アップ(20CT) ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "7",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 7,
+          "max": 7
+        },
+        "effect_class": "note",
+        "target": "神族または魔族の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 2
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 3
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でもノーツ移動効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "神族または魔族の味方のノーツを7～7前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "20%",
+        "formula": "",
+        "type": "クリティカル率アップ",
+        "value": {
+          "rate": 20
+        },
+        "effect_class": "buff",
+        "target": "ユニゾン参加者",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "specials": [
+              "unison"
+            ]
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "自身を含む味方2体以上ユニゾン時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "自身を含む味方2体以上ユニゾン時、ユニゾン参加者のクリティカルを20%加算(20CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "10～50",
+        "formula": "スタンしている敵の数×10",
+        "type": "EX消費量減少",
+        "value": {
+          "amount": 10
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "enemy",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "specials": [
+                  "stun"
+                ]
+              }
+            ]
+          }
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "このEXスキルは他星騎士から付与されたEX消費量減少の効果を受けない",
+            "label": "特性"
+          }
+        ],
+        "raw": "このEXスキルのEX消費量をスタンしている敵の数×10減少\n※このEXスキルは他星騎士から付与されたEX消費量減少の効果を受けない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
       }
     ]
   },

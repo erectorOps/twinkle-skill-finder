@@ -48,7 +48,7 @@ const specialsFor = (side) => {
 };
 
 /* 参照する数(scale_refs.src) — 「なし/味方/敵/その他」の大分類。その他はサブ選択で詳細指定 */
-const OTHER_REF_IDS = ['rush', 'ex_gauge', 'self_atk', 'self_hp', 'stun_gauge', 'overheal', 'ex_use_count', 'unison'];
+const OTHER_REF_IDS = ['rush', 'ex_gauge', 'self_atk', 'self_hp', 'burst_lv', 'stun_gauge', 'overheal', 'ex_use_count', 'unison'];
 const REF_GROUPS = [
     { id: 'none', label: 'なし' },
     { id: 'ally', label: '味方' },

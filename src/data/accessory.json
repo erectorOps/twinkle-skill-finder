@@ -50073,6 +50073,502 @@
   },
   {
     "source": "EquipDetail",
+    "accessory_name": "ネーゼマインのボム",
+    "equip_id": 3300269,
+    "illust_id": "equip_3300269",
+    "rarity": 3,
+    "unit_id": 1041005,
+    "game_unit_id": 1041005,
+    "unit_illust_id": 1041005,
+    "character_id": 41,
+    "character_name": "ネーゼマイン《悪戯》",
+    "unit_name": "アビストリガー",
+    "exclusive_unit_name": "[アビストリガー]ネーゼマイン《悪戯》",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "4",
+      "label": "サポート",
+      "icon": "type_4.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": null,
+      "ex": null,
+      "ex_up": 58,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 2,
+        "parameter_value": 58
+      }
+    ],
+    "skill_ids": {
+      "EX1": 10410051,
+      "EX2": 10410052,
+      "EX2+": "10410052_plus"
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10410051,
+        "text": "行動CT短縮の効果時間が5CT増加",
+        "effects_text": [
+          "行動CT短縮の効果時間が5CT増加"
+        ],
+        "effects": [
+          {
+            "type": "行動CT短縮の効果時間を強化",
+            "display_value": "+5CT",
+            "formula": "",
+            "value": {
+              "ct": 5
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "行動CT短縮の効果時間が5CT増加",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10410052,
+        "text": "ATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ",
+        "effects_text": [
+          "ATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%～150%",
+            "formula": "50%+自身の基礎ATK200ごと×9% (合計最大150%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が50%+自身の基礎ATK200ごと×9%アップ/ATKアップの最大値をさらに150%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2+",
+        "skill_id": "10410052_plus",
+        "text": "ATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ/爆裂LV5以上の時、味方全体のATKをさらに50％アップ",
+        "effects_text": [
+          "ATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ",
+          "爆裂LV5以上の時、味方全体のATKをさらに50％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%～150%",
+            "formula": "50%+自身の基礎ATK200ごと×9% (合計最大150%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が50%+自身の基礎ATK200ごと×9%アップ/ATKアップの最大値をさらに150%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "味方全体",
+            "duration": null,
+            "notes": [
+              {
+                "type": "condition",
+                "text": "爆裂LV5以上の時",
+                "label": "発動条件"
+              }
+            ],
+            "raw": "爆裂LV5以上の時、味方全体のATKをさらに50%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「アビスラプチャーガム」の行動CT短縮の効果時間が5CT増加/\nEX2「カオスジャミングボム」のATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ/\nEX2+「ミスチーフ・カタストロフ」のATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ/爆裂LV5以上の時、味方全体のATKをさらに50％アップ",
+    "ability_full": "EX1「アビスラプチャーガム」の行動CT短縮の効果時間が5CT増加/\nEX2「カオスジャミングボム」のATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ/\nEX2+「ミスチーフ・カタストロフ」のATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ/爆裂LV5以上の時、味方全体のATKをさらに50％アップ",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10410051,
+        "text": "行動CT短縮の効果時間が5CT増加",
+        "effects_text": [
+          "行動CT短縮の効果時間が5CT増加"
+        ],
+        "effects": [
+          {
+            "type": "行動CT短縮の効果時間を強化",
+            "display_value": "+5CT",
+            "formula": "",
+            "value": {
+              "ct": 5
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "行動CT短縮の効果時間が5CT増加",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10410052,
+        "text": "ATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ",
+        "effects_text": [
+          "ATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%～150%",
+            "formula": "50%+自身の基礎ATK200ごと×9% (合計最大150%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が50%+自身の基礎ATK200ごと×9%アップ/ATKアップの最大値をさらに150%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2+",
+        "skill_id": "10410052_plus",
+        "text": "ATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ/爆裂LV5以上の時、味方全体のATKをさらに50％アップ",
+        "effects_text": [
+          "ATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ",
+          "爆裂LV5以上の時、味方全体のATKをさらに50％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%～150%",
+            "formula": "50%+自身の基礎ATK200ごと×9% (合計最大150%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が50%+自身の基礎ATK200ごと×9%アップ/ATKアップの最大値をさらに150%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "味方全体",
+            "duration": null,
+            "notes": [
+              {
+                "type": "condition",
+                "text": "爆裂LV5以上の時",
+                "label": "発動条件"
+              }
+            ],
+            "raw": "爆裂LV5以上の時、味方全体のATKをさらに50%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
+    "accessory_name": "メルエルの胸飾り",
+    "equip_id": 3300270,
+    "illust_id": "equip_3300270",
+    "rarity": 3,
+    "unit_id": 1047003,
+    "game_unit_id": 1047003,
+    "unit_illust_id": 1047003,
+    "character_id": 47,
+    "character_name": "メルエル《極光》",
+    "unit_name": "サーヴァントノヴァ",
+    "exclusive_unit_name": "[サーヴァントノヴァ]メルエル《極光》",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": 846,
+      "ex": null,
+      "ex_up": null,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 1,
+        "parameter_value": 846
+      }
+    ],
+    "skill_ids": {
+      "EX1": 10470031,
+      "EX2": 10470032,
+      "EX2+": "10470032_plus"
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10470031,
+        "text": "ダメージ47％アップ/攻撃回数1回増加",
+        "effects_text": [
+          "ダメージ47％アップ",
+          "攻撃回数1回増加"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+47%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ47%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "攻撃回数の強化",
+            "display_value": "+1回",
+            "formula": "",
+            "value": {
+              "count": 1
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "攻撃回数1回増加",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10470032,
+        "text": "ダメージ170％アップ/（対象の敵とノーツが前後6以内にいる敵に対して220％アップ）",
+        "effects_text": [
+          "ダメージ170％アップ",
+          "（対象の敵とノーツが前後6以内にいる敵に対して220％アップ）"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+170%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ170%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "アクセサリ効果",
+            "display_value": "",
+            "formula": "(対象の敵とノーツが前後6以内にいる敵に対して220%アップ)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "(対象の敵とノーツが前後6以内にいる敵に対して220%アップ)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2+",
+        "skill_id": "10470032_plus",
+        "text": "ダメージ220％アップ（対象の敵とノーツが前後6以内にいる敵に対して285％アップ）",
+        "effects_text": [
+          "ダメージ220％アップ（対象の敵とノーツが前後6以内にいる敵に対して285％アップ）"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+220%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "対象の敵とノーツが前後6以内にいる敵に対して285%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ220%アップ(対象の敵とノーツが前後6以内にいる敵に対して285%アップ)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「エゴイスティック・コンチェルト」のダメージ47％アップ/攻撃回数1回増加/\nEX2「エゴイスティック・ラプソディー」のダメージ170％アップ/（対象の敵とノーツが前後6以内にいる敵に対して220％アップ）/\nEX2+「ディヴォーテッド・レクイエム」のダメージ220％アップ（対象の敵とノーツが前後6以内にいる敵に対して285％アップ）",
+    "ability_full": "EX1「エゴイスティック・コンチェルト」のダメージ47％アップ/攻撃回数1回増加/\nEX2「エゴイスティック・ラプソディー」のダメージ170％アップ/（対象の敵とノーツが前後6以内にいる敵に対して220％アップ）/\nEX2+「ディヴォーテッド・レクイエム」のダメージ220％アップ（対象の敵とノーツが前後6以内にいる敵に対して285％アップ）",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10470031,
+        "text": "ダメージ47％アップ/攻撃回数1回増加",
+        "effects_text": [
+          "ダメージ47％アップ",
+          "攻撃回数1回増加"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+47%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ47%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "攻撃回数の強化",
+            "display_value": "+1回",
+            "formula": "",
+            "value": {
+              "count": 1
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "攻撃回数1回増加",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10470032,
+        "text": "ダメージ170％アップ/（対象の敵とノーツが前後6以内にいる敵に対して220％アップ）",
+        "effects_text": [
+          "ダメージ170％アップ",
+          "（対象の敵とノーツが前後6以内にいる敵に対して220％アップ）"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+170%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ170%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "アクセサリ効果",
+            "display_value": "",
+            "formula": "(対象の敵とノーツが前後6以内にいる敵に対して220%アップ)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "(対象の敵とノーツが前後6以内にいる敵に対して220%アップ)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2+",
+        "skill_id": "10470032_plus",
+        "text": "ダメージ220％アップ（対象の敵とノーツが前後6以内にいる敵に対して285％アップ）",
+        "effects_text": [
+          "ダメージ220％アップ（対象の敵とノーツが前後6以内にいる敵に対して285％アップ）"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+220%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "対象の敵とノーツが前後6以内にいる敵に対して285%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ220%アップ(対象の敵とノーツが前後6以内にいる敵に対して285%アップ)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
     "accessory_name": "リィベルの首飾り",
     "equip_id": 3300286,
     "illust_id": "equip_3300286",

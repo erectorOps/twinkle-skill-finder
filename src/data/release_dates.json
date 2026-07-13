@@ -1,17 +1,9 @@
 {
   "source_url": "https://twinklestarknights.wikiru.jp/?%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB%2F%E5%85%A8%E3%82%AD%E3%83%A3%E3%83%A9%E7%B7%8F%E5%90%88",
-  "fetched_at": "2026-06-29T12:26:05.088924+00:00",
-  "count": 265,
-  "matched_count": 264,
-  "unmatched_wiki_items": [
-    {
-      "wiki_no": "124001",
-      "wiki_unit_id_hint": 1124001,
-      "unit_name": "円環の守護天使",
-      "character_name": "ラクシャ",
-      "match_method": "none"
-    }
-  ],
+  "fetched_at": "2026-07-13T22:20:59.314222+00:00",
+  "count": 270,
+  "matched_count": 270,
+  "unmatched_wiki_items": [],
   "missing_in_wiki": [],
   "items": [
     {
@@ -2648,7 +2640,7 @@
       "character_name_kana": "シズハ",
       "release_date": "2025-12-29",
       "release_date_raw": "2025/12/29",
-      "obtain": "イベント報酬",
+      "obtain": "イベント報酬\nメモリーメダル",
       "wiki_row_order": 176,
       "release_order": 228,
       "unit_id": 1095002,
@@ -3131,8 +3123,68 @@
       "obtain": "ガチャ(限定)",
       "wiki_row_order": 208,
       "release_order": 265,
-      "unit_id": null,
-      "match_method": "none"
+      "unit_id": 1124001,
+      "match_method": "wiki_no_and_name"
+    },
+    {
+      "wiki_no": "114001",
+      "wiki_unit_id_hint": 1114001,
+      "rarity": 3,
+      "unit_name": "新たなる女神の器",
+      "character_name": "ルヴィネ",
+      "character_name_kana": "ルヴィネ",
+      "release_date": "2026-07-07",
+      "release_date_raw": "2026/07/07",
+      "obtain": "ガチャ(限定)",
+      "wiki_row_order": 209,
+      "release_order": 267,
+      "unit_id": 1114001,
+      "match_method": "wiki_no_and_name"
+    },
+    {
+      "wiki_no": "115001",
+      "wiki_unit_id_hint": 1115001,
+      "rarity": 3,
+      "unit_name": "大欲の女帝",
+      "character_name": "煌嶺",
+      "character_name_kana": "コウレイ",
+      "release_date": "2026-07-07",
+      "release_date_raw": "2026/07/07",
+      "obtain": "ガチャ(限定)",
+      "wiki_row_order": 210,
+      "release_order": 268,
+      "unit_id": 1115001,
+      "match_method": "wiki_no_and_name"
+    },
+    {
+      "wiki_no": "041005",
+      "wiki_unit_id_hint": 1041005,
+      "rarity": 3,
+      "unit_name": "アビストリガー",
+      "character_name": "ネーゼマイン《悪戯》",
+      "character_name_kana": "ネーゼマイン",
+      "release_date": "2026-07-13",
+      "release_date_raw": "2026/07/13",
+      "obtain": "ガチャ(限定)",
+      "wiki_row_order": 211,
+      "release_order": 269,
+      "unit_id": 1041005,
+      "match_method": "wiki_no_and_name"
+    },
+    {
+      "wiki_no": "047003",
+      "wiki_unit_id_hint": 1047003,
+      "rarity": 3,
+      "unit_name": "サーヴァントノヴァ",
+      "character_name": "メルエル《極光》",
+      "character_name_kana": "メルエル",
+      "release_date": "2026-07-13",
+      "release_date_raw": "2026/07/13",
+      "obtain": "ガチャ(限定)",
+      "wiki_row_order": 212,
+      "release_order": 270,
+      "unit_id": 1047003,
+      "match_method": "wiki_no_and_name"
     },
     {
       "wiki_no": "005001",
@@ -3144,7 +3196,7 @@
       "release_date": "2023-07-07",
       "release_date_raw": "2023/07/07",
       "obtain": "ガチャ(恒常)",
-      "wiki_row_order": 209,
+      "wiki_row_order": 213,
       "release_order": 14,
       "unit_id": 1005001,
       "match_method": "wiki_no_and_name"
@@ -3159,7 +3211,7 @@
       "release_date": "2023-07-07",
       "release_date_raw": "2023/07/07",
       "obtain": "ガチャ(恒常)",
-      "wiki_row_order": 210,
+      "wiki_row_order": 214,
       "release_order": 15,
       "unit_id": 1007001,
       "match_method": "wiki_no_and_name"
@@ -3174,7 +3226,7 @@
       "release_date": "2023-07-07",
       "release_date_raw": "2023/07/07",
       "obtain": "ガチャ(恒常)",
-      "wiki_row_order": 211,
+      "wiki_row_order": 215,
       "release_order": 16,
       "unit_id": 1013001,
       "match_method": "wiki_no_and_name"
@@ -3189,7 +3241,7 @@
       "release_date": "2023-07-07",
       "release_date_raw": "2023/07/07",
       "obtain": "ガチャ(恒常)",
-      "wiki_row_order": 212,
+      "wiki_row_order": 216,
       "release_order": 17,
       "unit_id": 1014001,
       "match_method": "wiki_no_and_name"
@@ -3204,7 +3256,7 @@
       "release_date": "2023-07-07",
       "release_date_raw": "2023/07/07",
       "obtain": "ガチャ(恒常)",
-      "wiki_row_order": 213,
+      "wiki_row_order": 217,
       "release_order": 18,
       "unit_id": 1016001,
       "match_method": "wiki_no_and_name"
@@ -3219,7 +3271,7 @@
       "release_date": "2023-07-07",
       "release_date_raw": "2023/07/07",
       "obtain": "ガチャ(恒常)",
-      "wiki_row_order": 214,
+      "wiki_row_order": 218,
       "release_order": 19,
       "unit_id": 1018001,
       "match_method": "wiki_no_and_name"
@@ -3234,7 +3286,7 @@
       "release_date": "2023-07-07",
       "release_date_raw": "2023/07/07",
       "obtain": "ガチャ(恒常)",
-      "wiki_row_order": 215,
+      "wiki_row_order": 219,
       "release_order": 20,
       "unit_id": 1023001,
       "match_method": "wiki_no_and_name"
@@ -3249,7 +3301,7 @@
       "release_date": "2023-07-07",
       "release_date_raw": "2023/07/07",
       "obtain": "ガチャ(恒常)",
-      "wiki_row_order": 216,
+      "wiki_row_order": 220,
       "release_order": 21,
       "unit_id": 1029001,
       "match_method": "wiki_no_and_name"
@@ -3264,7 +3316,7 @@
       "release_date": "2023-07-07",
       "release_date_raw": "2023/07/07",
       "obtain": "ガチャ(恒常)",
-      "wiki_row_order": 217,
+      "wiki_row_order": 221,
       "release_order": 22,
       "unit_id": 1033001,
       "match_method": "wiki_no_and_name"
@@ -3279,7 +3331,7 @@
       "release_date": "2023-07-07",
       "release_date_raw": "2023/07/07",
       "obtain": "ガチャ(恒常)",
-      "wiki_row_order": 218,
+      "wiki_row_order": 222,
       "release_order": 23,
       "unit_id": 1034001,
       "match_method": "wiki_no_and_name"
@@ -3294,7 +3346,7 @@
       "release_date": "2023-07-07",
       "release_date_raw": "2023/07/07",
       "obtain": "ガチャ(恒常)",
-      "wiki_row_order": 219,
+      "wiki_row_order": 223,
       "release_order": 24,
       "unit_id": 1037001,
       "match_method": "wiki_no_and_name"
@@ -3309,7 +3361,7 @@
       "release_date": "2023-07-07",
       "release_date_raw": "2023/07/07",
       "obtain": "ガチャ(恒常)",
-      "wiki_row_order": 220,
+      "wiki_row_order": 224,
       "release_order": 25,
       "unit_id": 1049001,
       "match_method": "wiki_no_and_name"
@@ -3324,7 +3376,7 @@
       "release_date": "2023-07-11",
       "release_date_raw": "2023/07/11",
       "obtain": "イベント報酬\nメモリーメダル",
-      "wiki_row_order": 221,
+      "wiki_row_order": 225,
       "release_order": 39,
       "unit_id": 1042001,
       "match_method": "wiki_no_and_name"
@@ -3339,7 +3391,7 @@
       "release_date": "2023-07-21",
       "release_date_raw": "2023/07/21",
       "obtain": "ガチャ(恒常)",
-      "wiki_row_order": 222,
+      "wiki_row_order": 226,
       "release_order": 42,
       "unit_id": 1027001,
       "match_method": "wiki_no_and_name"
@@ -3354,7 +3406,7 @@
       "release_date": "2023-07-31",
       "release_date_raw": "2023/07/31",
       "obtain": "イベント報酬\nメモリーメダル",
-      "wiki_row_order": 223,
+      "wiki_row_order": 227,
       "release_order": 44,
       "unit_id": 1011002,
       "match_method": "wiki_no_and_name"
@@ -3369,7 +3421,7 @@
       "release_date": "2023-08-30",
       "release_date_raw": "2023/08/30",
       "obtain": "イベント報酬\nメモリーメダル",
-      "wiki_row_order": 224,
+      "wiki_row_order": 228,
       "release_order": 51,
       "unit_id": 1053001,
       "match_method": "wiki_no_and_name"
@@ -3384,7 +3436,7 @@
       "release_date": "2023-09-30",
       "release_date_raw": "2023/09/30",
       "obtain": "イベント報酬\nメモリーメダル",
-      "wiki_row_order": 225,
+      "wiki_row_order": 229,
       "release_order": 57,
       "unit_id": 1028001,
       "match_method": "wiki_no_and_name"
@@ -3399,7 +3451,7 @@
       "release_date": "2023-11-06",
       "release_date_raw": "2023/11/06",
       "obtain": "ガチャ(恒常)",
-      "wiki_row_order": 226,
+      "wiki_row_order": 230,
       "release_order": 66,
       "unit_id": 1061001,
       "match_method": "wiki_no_and_name"
@@ -3414,7 +3466,7 @@
       "release_date": "2023-11-14",
       "release_date_raw": "2023/11/14",
       "obtain": "コラボ報酬",
-      "wiki_row_order": 227,
+      "wiki_row_order": 231,
       "release_order": 68,
       "unit_id": 1007002,
       "match_method": "wiki_no_and_name"
@@ -3429,7 +3481,7 @@
       "release_date": "2023-11-30",
       "release_date_raw": "2023/11/30",
       "obtain": "イベント報酬\nメモリーメダル",
-      "wiki_row_order": 228,
+      "wiki_row_order": 232,
       "release_order": 71,
       "unit_id": 1049002,
       "match_method": "wiki_no_and_name"
@@ -3444,7 +3496,7 @@
       "release_date": "2023-12-29",
       "release_date_raw": "2023/12/29",
       "obtain": "イベント報酬\nメモリーメダル",
-      "wiki_row_order": 229,
+      "wiki_row_order": 233,
       "release_order": 78,
       "unit_id": 1005002,
       "match_method": "wiki_no_and_name"
@@ -3459,7 +3511,7 @@
       "release_date": "2024-01-31",
       "release_date_raw": "2024/01/31",
       "obtain": "イベント報酬\nメモリーメダル",
-      "wiki_row_order": 230,
+      "wiki_row_order": 234,
       "release_order": 85,
       "unit_id": 1076001,
       "match_method": "wiki_no_and_name"
@@ -3474,7 +3526,7 @@
       "release_date": "2024-02-28",
       "release_date_raw": "2024/02/28",
       "obtain": "イベント報酬\nメモリーメダル",
-      "wiki_row_order": 231,
+      "wiki_row_order": 235,
       "release_order": 91,
       "unit_id": 1054002,
       "match_method": "wiki_no_and_name"
@@ -3489,7 +3541,7 @@
       "release_date": "2024-03-31",
       "release_date_raw": "2024/03/31",
       "obtain": "イベント報酬\nメモリーメダル",
-      "wiki_row_order": 232,
+      "wiki_row_order": 236,
       "release_order": 98,
       "unit_id": 1081001,
       "match_method": "wiki_no_and_name"
@@ -3504,7 +3556,7 @@
       "release_date": "2024-04-30",
       "release_date_raw": "2024/04/30",
       "obtain": "イベント報酬\nメモリーメダル",
-      "wiki_row_order": 233,
+      "wiki_row_order": 237,
       "release_order": 103,
       "unit_id": 1089001,
       "match_method": "wiki_no_and_name"
@@ -3519,7 +3571,7 @@
       "release_date": "2024-05-31",
       "release_date_raw": "2024/05/31",
       "obtain": "イベント報酬\nメモリーメダル",
-      "wiki_row_order": 234,
+      "wiki_row_order": 238,
       "release_order": 110,
       "unit_id": 1012002,
       "match_method": "wiki_no_and_name"
@@ -3534,7 +3586,7 @@
       "release_date": "2024-07-31",
       "release_date_raw": "2024/07/31",
       "obtain": "イベント報酬\nメモリーメダル",
-      "wiki_row_order": 235,
+      "wiki_row_order": 239,
       "release_order": 123,
       "unit_id": 1052002,
       "match_method": "wiki_no_and_name"
@@ -3549,7 +3601,7 @@
       "release_date": "2024-08-30",
       "release_date_raw": "2024/08/30",
       "obtain": "イベント報酬\nメモリーメダル",
-      "wiki_row_order": 236,
+      "wiki_row_order": 240,
       "release_order": 129,
       "unit_id": 1095001,
       "match_method": "wiki_no_and_name"
@@ -3564,7 +3616,7 @@
       "release_date": "2024-09-30",
       "release_date_raw": "2024/09/30",
       "obtain": "イベント報酬\nメモリーメダル",
-      "wiki_row_order": 237,
+      "wiki_row_order": 241,
       "release_order": 135,
       "unit_id": 1099001,
       "match_method": "wiki_no_and_name"
@@ -3579,7 +3631,7 @@
       "release_date": "2024-10-31",
       "release_date_raw": "2024/10/31",
       "obtain": "イベント報酬\nメモリーメダル",
-      "wiki_row_order": 238,
+      "wiki_row_order": 242,
       "release_order": 141,
       "unit_id": 1102001,
       "match_method": "wiki_no_and_name"
@@ -3594,7 +3646,7 @@
       "release_date": "2024-11-29",
       "release_date_raw": "2024/11/29",
       "obtain": "イベント報酬\nメモリーメダル",
-      "wiki_row_order": 239,
+      "wiki_row_order": 243,
       "release_order": 147,
       "unit_id": 1069002,
       "match_method": "wiki_no_and_name"
@@ -3609,7 +3661,7 @@
       "release_date": "2025-01-13",
       "release_date_raw": "2025/01/13",
       "obtain": "コラボ報酬",
-      "wiki_row_order": 240,
+      "wiki_row_order": 244,
       "release_order": 157,
       "unit_id": 1090002,
       "match_method": "wiki_no_and_name"
@@ -3624,7 +3676,7 @@
       "release_date": "2025-02-28",
       "release_date_raw": "2025/02/28",
       "obtain": "イベント報酬\nメモリーメダル",
-      "wiki_row_order": 241,
+      "wiki_row_order": 245,
       "release_order": 166,
       "unit_id": 1009003,
       "match_method": "wiki_no_and_name"
@@ -3639,7 +3691,7 @@
       "release_date": "2025-03-31",
       "release_date_raw": "2025/03/31",
       "obtain": "イベント報酬\nメモリーメダル",
-      "wiki_row_order": 242,
+      "wiki_row_order": 246,
       "release_order": 172,
       "unit_id": 1035003,
       "match_method": "wiki_no_and_name"
@@ -3654,7 +3706,7 @@
       "release_date": "2025-04-30",
       "release_date_raw": "2025/04/30",
       "obtain": "イベント報酬\nメモリーメダル",
-      "wiki_row_order": 243,
+      "wiki_row_order": 247,
       "release_order": 178,
       "unit_id": 1061002,
       "match_method": "unit_name_and_base_character_name"
@@ -3669,7 +3721,7 @@
       "release_date": "2025-05-30",
       "release_date_raw": "2025/05/30",
       "obtain": "イベント報酬\nメモリーメダル",
-      "wiki_row_order": 244,
+      "wiki_row_order": 248,
       "release_order": 184,
       "unit_id": 1014003,
       "match_method": "wiki_no_and_name"
@@ -3684,7 +3736,7 @@
       "release_date": "2025-07-31",
       "release_date_raw": "2025/07/31",
       "obtain": "イベント報酬\nメモリーメダル",
-      "wiki_row_order": 245,
+      "wiki_row_order": 249,
       "release_order": 197,
       "unit_id": 1073002,
       "match_method": "wiki_no_and_name"
@@ -3699,7 +3751,7 @@
       "release_date": "2025-08-31",
       "release_date_raw": "2025/08/31",
       "obtain": "イベント報酬\nメモリーメダル",
-      "wiki_row_order": 246,
+      "wiki_row_order": 250,
       "release_order": 203,
       "unit_id": 1011004,
       "match_method": "wiki_no_and_name"
@@ -3713,8 +3765,8 @@
       "character_name_kana": "カティア",
       "release_date": "2025-10-31",
       "release_date_raw": "2025/10/31",
-      "obtain": "イベント報酬",
-      "wiki_row_order": 247,
+      "obtain": "イベント報酬\nメモリーメダル",
+      "wiki_row_order": 251,
       "release_order": 215,
       "unit_id": 1034002,
       "match_method": "wiki_no_and_name"
@@ -3728,8 +3780,8 @@
       "character_name_kana": "アニュラス",
       "release_date": "2025-11-30",
       "release_date_raw": "2025/11/30",
-      "obtain": "イベント報酬",
-      "wiki_row_order": 248,
+      "obtain": "イベント報酬\nメモリーメダル",
+      "wiki_row_order": 252,
       "release_order": 222,
       "unit_id": 1033003,
       "match_method": "wiki_no_and_name"
@@ -3743,8 +3795,8 @@
       "character_name_kana": "ウルスラ",
       "release_date": "2026-01-30",
       "release_date_raw": "2026/01/30",
-      "obtain": "イベント報酬",
-      "wiki_row_order": 249,
+      "obtain": "イベント報酬\nメモリーメダル",
+      "wiki_row_order": 253,
       "release_order": 236,
       "unit_id": 1136001,
       "match_method": "wiki_no_and_name"
@@ -3758,8 +3810,8 @@
       "character_name_kana": "マグダレナ",
       "release_date": "2026-02-27",
       "release_date_raw": "2026/02/27",
-      "obtain": "イベント報酬",
-      "wiki_row_order": 250,
+      "obtain": "イベント報酬\nメモリーメダル",
+      "wiki_row_order": 254,
       "release_order": 242,
       "unit_id": 1085002,
       "match_method": "wiki_no_and_name"
@@ -3774,7 +3826,7 @@
       "release_date": "2026-04-13",
       "release_date_raw": "2026/04/13",
       "obtain": "コラボ報酬",
-      "wiki_row_order": 251,
+      "wiki_row_order": 255,
       "release_order": 251,
       "unit_id": 1007005,
       "match_method": "wiki_no_and_name"
@@ -3789,7 +3841,7 @@
       "release_date": "2026-05-01",
       "release_date_raw": "2026/05/01",
       "obtain": "イベント報酬",
-      "wiki_row_order": 252,
+      "wiki_row_order": 256,
       "release_order": 255,
       "unit_id": 1137001,
       "match_method": "wiki_no_and_name"
@@ -3804,7 +3856,7 @@
       "release_date": "2026-05-31",
       "release_date_raw": "2026/05/31",
       "obtain": "イベント報酬",
-      "wiki_row_order": 253,
+      "wiki_row_order": 257,
       "release_order": 261,
       "unit_id": 1044003,
       "match_method": "wiki_no_and_name"
@@ -3819,7 +3871,7 @@
       "release_date": "2023-07-07",
       "release_date_raw": "2023/07/07",
       "obtain": "初期加入",
-      "wiki_row_order": 254,
+      "wiki_row_order": 258,
       "release_order": 26,
       "unit_id": 1006001,
       "match_method": "wiki_no_and_name"
@@ -3834,7 +3886,7 @@
       "release_date": "2023-07-07",
       "release_date_raw": "2023/07/07",
       "obtain": "ガチャ(恒常)",
-      "wiki_row_order": 255,
+      "wiki_row_order": 259,
       "release_order": 27,
       "unit_id": 1009001,
       "match_method": "wiki_no_and_name"
@@ -3849,7 +3901,7 @@
       "release_date": "2023-07-07",
       "release_date_raw": "2023/07/07",
       "obtain": "ガチャ(恒常)",
-      "wiki_row_order": 256,
+      "wiki_row_order": 260,
       "release_order": 28,
       "unit_id": 1011001,
       "match_method": "wiki_no_and_name"
@@ -3864,7 +3916,7 @@
       "release_date": "2023-07-07",
       "release_date_raw": "2023/07/07",
       "obtain": "ガチャ(恒常)",
-      "wiki_row_order": 257,
+      "wiki_row_order": 261,
       "release_order": 29,
       "unit_id": 1017001,
       "match_method": "wiki_no_and_name"
@@ -3879,7 +3931,7 @@
       "release_date": "2023-07-07",
       "release_date_raw": "2023/07/07",
       "obtain": "ガチャ(恒常)",
-      "wiki_row_order": 258,
+      "wiki_row_order": 262,
       "release_order": 30,
       "unit_id": 1019001,
       "match_method": "wiki_no_and_name"
@@ -3894,7 +3946,7 @@
       "release_date": "2023-07-07",
       "release_date_raw": "2023/07/07",
       "obtain": "ガチャ(恒常)",
-      "wiki_row_order": 259,
+      "wiki_row_order": 263,
       "release_order": 31,
       "unit_id": 1020001,
       "match_method": "wiki_no_and_name"
@@ -3909,7 +3961,7 @@
       "release_date": "2023-07-07",
       "release_date_raw": "2023/07/07",
       "obtain": "ガチャ(恒常)",
-      "wiki_row_order": 260,
+      "wiki_row_order": 264,
       "release_order": 32,
       "unit_id": 1021001,
       "match_method": "wiki_no_and_name"
@@ -3924,7 +3976,7 @@
       "release_date": "2023-07-07",
       "release_date_raw": "2023/07/07",
       "obtain": "ガチャ(恒常)",
-      "wiki_row_order": 261,
+      "wiki_row_order": 265,
       "release_order": 33,
       "unit_id": 1025001,
       "match_method": "wiki_no_and_name"
@@ -3939,7 +3991,7 @@
       "release_date": "2023-07-07",
       "release_date_raw": "2023/07/07",
       "obtain": "ガチャ(恒常)",
-      "wiki_row_order": 262,
+      "wiki_row_order": 266,
       "release_order": 34,
       "unit_id": 1035001,
       "match_method": "wiki_no_and_name"
@@ -3954,7 +4006,7 @@
       "release_date": "2023-07-07",
       "release_date_raw": "2023/07/07",
       "obtain": "ガチャ(恒常)",
-      "wiki_row_order": 263,
+      "wiki_row_order": 267,
       "release_order": 35,
       "unit_id": 1050001,
       "match_method": "wiki_no_and_name"
@@ -3969,7 +4021,7 @@
       "release_date": "2023-07-07",
       "release_date_raw": "2023/07/07",
       "obtain": "ガチャ(恒常)",
-      "wiki_row_order": 264,
+      "wiki_row_order": 268,
       "release_order": 36,
       "unit_id": 1062001,
       "match_method": "wiki_no_and_name"
@@ -3984,10 +4036,25 @@
       "release_date": "2023-07-07",
       "release_date_raw": "2023/07/07",
       "obtain": "ガチャ(恒常)",
-      "wiki_row_order": 265,
+      "wiki_row_order": 269,
       "release_order": 37,
       "unit_id": 1064001,
       "match_method": "wiki_no_and_name"
+    },
+    {
+      "wiki_no": "006001",
+      "wiki_unit_id_hint": 1006001,
+      "rarity": 1,
+      "unit_name": "最後の魔王",
+      "character_name": "クロト《厄災》",
+      "character_name_kana": "クロト",
+      "release_date": "2026-06-29",
+      "release_date_raw": "2026/06/29",
+      "obtain": "覚醒強化",
+      "wiki_row_order": 270,
+      "release_order": 266,
+      "unit_id": 1006900,
+      "match_method": "name"
     }
   ]
 }

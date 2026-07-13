@@ -4908,6 +4908,59 @@
     }
   },
   {
+    "unit_id": 1041005,
+    "game_unit_id": 1041005,
+    "unit_illust_id": 1041005,
+    "is_awake_unit": 0,
+    "character_name": "ネーゼマイン《悪戯》",
+    "character_name_kana": "ネーセマイン",
+    "unit_name": "アビストリガー",
+    "rarity": 3,
+    "attr_type": {
+      "id": "5",
+      "label": "闇",
+      "icon": "attribute_05.png"
+    },
+    "role": {
+      "id": "4",
+      "label": "サポート",
+      "icon": "type_4.png"
+    },
+    "camps": [
+      {
+        "id": 2,
+        "label": "神族",
+        "icon": "race_4.png"
+      },
+      {
+        "id": 1,
+        "label": "人間",
+        "icon": "race_1.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 2,
+        "label": "新星学園",
+        "icon": "affiliation_01.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "3",
+        "label": "打撃",
+        "icon": "icon_equipment_01_03.png"
+      }
+    ],
+    "specific_gauge_data": {
+      "specific_name": "アビス状態",
+      "specific_detail": "◆通常状態\n通常状態中、EXスキル1、または、EXスキル2を使用するとアビスゲージが「1」溜まる。\nアビスゲージが「3」溜まると「アビス状態」に移行する。\n\n◆アビス状態\nアビス状態に移行直後、敵が存在するレーンのタイムライン上0の位置にシェアハートボンバーを設置（30CT）\n\nアビス状態中、「EXスキル2」が「EXスキル2+」に変化する。\nEXスキル2+を使用するとアビス状態が解除され、「通常状態」に戻る。\n\n※シェアハートボンバー：\n1CT経過ごとにタイムライン後方に1ずつ移動する。\n効果CTが経過するか、タイムライン最後方まで移動すると消滅する。\nシェアハートボンバーとノーツが接触すると、以下の効果を発動する。\n・対象のスタンゲージを2減少\n・対象のEXゲージを30減少させ、減少させたEXゲージの内、20％味方のEXゲージを回復\n・自身の爆裂LVを1増加（最大10）\n※シェアハートボンバーの効果発動条件はノーツ移動・ノックバック・強制移動による通過を含む（ワープは対象外）",
+      "icon_id": 56,
+      "is_unlock": 1,
+      "is_strengthen": 0
+    }
+  },
+  {
     "unit_id": 1042001,
     "game_unit_id": 1042001,
     "unit_illust_id": 1042001,
@@ -5464,6 +5517,59 @@
       }
     ],
     "specific_gauge_data": []
+  },
+  {
+    "unit_id": 1047003,
+    "game_unit_id": 1047003,
+    "unit_illust_id": 1047003,
+    "is_awake_unit": 0,
+    "character_name": "メルエル《極光》",
+    "character_name_kana": "メルエル",
+    "unit_name": "サーヴァントノヴァ",
+    "rarity": 3,
+    "attr_type": {
+      "id": "4",
+      "label": "光",
+      "icon": "attribute_04.png"
+    },
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "camps": [
+      {
+        "id": 2,
+        "label": "神族",
+        "icon": "race_4.png"
+      },
+      {
+        "id": 3,
+        "label": "魔族",
+        "icon": "race_3.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 2,
+        "label": "新星学園",
+        "icon": "affiliation_01.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "2",
+        "label": "斬撃",
+        "icon": "icon_equipment_01_02.png"
+      }
+    ],
+    "specific_gauge_data": {
+      "specific_name": "サーヴァント状態",
+      "specific_detail": "◆通常状態\n通常状態中、自身の行動終了後、サーヴァントゲージが「1」溜まる。\nサーヴァントゲージが「5」溜まると「サーヴァント状態」に移行する。\n\n◆サーヴァント状態\nサーヴァント状態に移行直後、天啓LVが1上昇（最大10）/\nスタン中の敵すべてを一番後方の敵の位置に向かってタイムライン後方に最大5までワープさせる【強制移動無効対象外】\n※一番後方の敵のタイムライン上位置より後方にはワープしない\n\nサーヴァント状態中、自身のATKを300％アップ【解除不可】\nサーヴァント状態中、「EXスキル2」が「EXスキル2+」に変化する。\nEXスキル2+を使用するとサーヴァント状態が解除され、「通常状態」に戻る。\n\n※天啓：\n敵のスタンゲージが0になった時、天啓LVが1上昇（最大10）\n自身の相手スタン時のダメージ倍率を天啓LV×5％加算する（合計最大50％）",
+      "icon_id": 57,
+      "is_unlock": 1,
+      "is_strengthen": 0
+    }
   },
   {
     "unit_id": 1048001,

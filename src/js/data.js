@@ -88,6 +88,7 @@ export const taxonomy = {
     { id: "ex_gauge",     label: "EXゲージ" },
     { id: "self_atk",     label: "自身のATK" },
     { id: "self_hp",      label: "自身のHP" },
+    { id: "burst_lv",     label: "爆裂LV" },
     { id: "stun_gauge",   label: "スタンゲージ消費" },
     { id: "overheal",     label: "オーバーヒール割合" },
     { id: "ex_use_count", label: "スキル使用回数" },
@@ -232,6 +233,7 @@ export const effectTypes = [
   { id: "wing_form",               label: "ウイングフォーム",               short: "ウイングフォーム",       klass: "other" },
   { id: "sword_form",              label: "ソードフォーム",                 short: "ソードフォーム",         klass: "other" },
   { id: "form_change",             label: "フォームチェンジ",               short: "フォームチェンジ", klass: "other" },
+  { id: "object_move",             label: "オブジェクト移動",               short: "設置物移動",      klass: "note" },
 ];
 
 /* カテゴリ検索のトグル群（検索プリセット。filters.js の effectOptions と同一16種） */
