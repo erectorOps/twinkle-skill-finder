@@ -12451,6 +12451,11 @@
             "type": "property",
             "text": "この効果は重複しない",
             "label": "特性"
+          },
+          {
+            "type": "property",
+            "text": "バフ解除無効",
+            "label": "特性"
           }
         ],
         "raw": "自身の通常攻撃・EXスキルによるラッシュ増加数が倍になる(60CT)【バフ解除無効】 ※この効果は重複しない",
@@ -38379,6 +38384,11 @@
             "type": "property",
             "text": "バフ解除無効",
             "label": "特性"
+          },
+          {
+            "type": "property",
+            "text": "バフ解除無効",
+            "label": "特性"
           }
         ],
         "raw": "被ダメージの60%を相手に反射(27CT)【バフ解除無効】",
@@ -40740,6 +40750,11 @@
           "ct": 16
         },
         "notes": [
+          {
+            "type": "property",
+            "text": "バフ解除無効",
+            "label": "特性"
+          },
           {
             "type": "property",
             "text": "バフ解除無効",
@@ -46893,6 +46908,298 @@
     ]
   },
   {
+    "unit_id": 1071002,
+    "game_unit_id": 1071002,
+    "unit_illust_id": 1071002,
+    "is_awake_unit": 0,
+    "skill_id": 10710021,
+    "skill_type": "EX1",
+    "name": "リキッドバスター",
+    "icon_id": 101,
+    "cost_ex_gauge": 100,
+    "skill_detail": "対象とその左右1レーンにいる敵すべてに30％×5回のダメージ/自身のEX上昇を光属性または闇属性の味方の数×8（コラプサーの味方を3体以上編成している時、12）アップ（25CT） ※2つの条件を満たした場合でも効果は重複しない/自身に闇の「サブ属性」を付与する（40CT）【バフ解除無効】/光属性または闇属性の味方のノーツを3～3前方に移動  ※2つの条件を満たした場合でもノーツ移動効果は重複しない",
+    "effects": [
+      {
+        "display_value": "30%×5回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 30,
+          "hit": 5
+        },
+        "effect_class": "main",
+        "target": "対象とその左右1レーンにいる敵すべて",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "multi",
+            "lane": "target_around",
+            "lane_count": 1,
+            "specials": []
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [],
+        "raw": "対象とその左右1レーンにいる敵すべてに30%×5回のダメージ",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "8～40",
+        "formula": "光属性または闇属性の味方の数×8",
+        "type": "EX上昇アップ",
+        "value": {
+          "amount": 8
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 4
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 5
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 25
+        },
+        "notes": [
+          {
+            "type": "boost",
+            "text": "コラプサーの味方を3体以上編成している時、12",
+            "label": "強化"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "自身のEX上昇を光属性または闇属性の味方の数×8(コラプサーの味方を3体以上編成している時、12)アップ(25CT) ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "闇属性を付与",
+        "formula": "",
+        "type": "サブ属性",
+        "value": {},
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 40
+        },
+        "notes": [
+          {
+            "type": "property",
+            "text": "バフ解除無効",
+            "label": "特性"
+          }
+        ],
+        "raw": "自身に闇の「サブ属性」を付与する(40CT)【バフ解除無効】",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "3",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 3,
+          "max": 3
+        },
+        "effect_class": "note",
+        "target": "光属性または闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でもノーツ移動効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "光属性または闇属性の味方のノーツを3～3前方に移動  ※2つの条件を満たした場合でもノーツ移動効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1071002,
+    "game_unit_id": 1071002,
+    "unit_illust_id": 1071002,
+    "is_awake_unit": 0,
+    "skill_id": 10710022,
+    "skill_type": "EX2",
+    "name": "スプラッシュザッパー",
+    "icon_id": 101,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵単体に200％（ラッシュ100以上の時、250％）×8回のダメージ/自身に相手スタン時のダメージ倍率を50％加算（1CT）/クリティカルをコラプサーの味方の数×10％加算（1CT）/スキル再使用時間5CT",
+    "effects": [
+      {
+        "display_value": "200%×8回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 200,
+          "hit": 8
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "ラッシュ100以上の時、250%",
+            "label": "強化"
+          }
+        ],
+        "raw": "敵単体に200%(ラッシュ100以上の時、250%)×8回のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "50%",
+        "formula": "",
+        "type": "相手スタン時ダメージ倍率アップ",
+        "value": {
+          "rate": 50
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 1
+        },
+        "notes": [],
+        "raw": "自身に相手スタン時のダメージ倍率を50%加算(1CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "10%～50%",
+        "formula": "コラプサーの味方の数×10%",
+        "type": "クリティカル率アップ",
+        "value": {
+          "rate": 10
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "affiliation": 7
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 1
+        },
+        "notes": [],
+        "raw": "クリティカルをコラプサーの味方の数×10%加算(1CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "5CT",
+        "formula": "",
+        "type": "スキル再使用時間",
+        "value": {},
+        "effect_class": "debuff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "スキル再使用時間5CT",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      }
+    ]
+  },
+  {
     "unit_id": 1072001,
     "game_unit_id": 1072001,
     "unit_illust_id": 1072001,
@@ -52603,6 +52910,360 @@
         "children": [],
         "tags": [],
         "inherited_target": true
+      }
+    ]
+  },
+  {
+    "unit_id": 1088002,
+    "game_unit_id": 1088002,
+    "unit_illust_id": 1088002,
+    "is_awake_unit": 0,
+    "skill_id": 10880021,
+    "skill_type": "EX1",
+    "name": "グサグサスイング",
+    "icon_id": 309,
+    "cost_ex_gauge": 100,
+    "skill_detail": "敵単体に94％×6回のダメージ/自身に挑発状態を付与（50CT）【バフ解除無効】/サブ属性が付与されている味方の行動CT20％短縮（10CT）/コラプサーの味方を3体以上編成している時、自身に闇の「サブ属性」を付与する（40CT）【バフ解除無効】（優先発動）\n※サブ属性：属性指定スキルの条件や対象に含まれる（ダメージ計算には影響しない）",
+    "effects": [
+      {
+        "display_value": "94%×6回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 94,
+          "hit": 6
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [],
+        "raw": "敵単体に94%×6回のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "",
+        "formula": "",
+        "type": "挑発",
+        "value": {},
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 50
+        },
+        "notes": [
+          {
+            "type": "property",
+            "text": "バフ解除無効",
+            "label": "特性"
+          }
+        ],
+        "raw": "自身に挑発状態を付与(50CT)【バフ解除無効】",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "20%",
+        "formula": "",
+        "type": "行動CT短縮",
+        "value": {
+          "rate": 20
+        },
+        "effect_class": "buff",
+        "target": "サブ属性が付与されている味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "specials": [
+              "sub_attr"
+            ]
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 10
+        },
+        "notes": [],
+        "raw": "サブ属性が付与されている味方の行動CT20%短縮(10CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "闇属性を付与",
+        "formula": "",
+        "type": "サブ属性",
+        "value": {},
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 40
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "コラプサーの味方を3体以上編成している時",
+            "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "優先発動 ※スキル発動前に効果が発動する",
+            "label": "特性"
+          },
+          {
+            "type": "property",
+            "text": "バフ解除無効",
+            "label": "特性"
+          }
+        ],
+        "raw": "コラプサーの味方を3体以上編成している時、自身に闇の「サブ属性」を付与する(40CT)【バフ解除無効】(優先発動)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1088002,
+    "game_unit_id": 1088002,
+    "unit_illust_id": 1088002,
+    "is_awake_unit": 0,
+    "skill_id": 10880022,
+    "skill_type": "EX2",
+    "name": "グチャグチャスクラッパー",
+    "icon_id": 100,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵全体に450％（サブ属性が付与されている味方が2体以上の時、500％）のダメージ/自身に庇護状態を付与（50CT）【バフ解除無効】/被ダメージを光属性または闇属性の味方の数×4％軽減（50CT）【バフ解除無効】 ※2つの条件を満たした場合でも効果は重複しない/カウンター[スタン]：敵の攻撃者のスタンゲージ5減少（2回発動まで）【バフ解除無効】（カウンター効果は重複しない）/光属性または闇属性の味方のノーツを5～5前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない\n※庇護状態：範囲効果も含む敵からのダメージやスキル効果を自身に引き付ける（ランブル敗北ダメージ、反射ダメージは除く）\n※カウンター：自身が敵からの攻撃を受けた際に記載の効果を発動する",
+    "effects": [
+      {
+        "display_value": "450%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 450,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "サブ属性が付与されている味方が2体以上の時、500%",
+            "label": "強化"
+          }
+        ],
+        "raw": "敵全体に450%(サブ属性が付与されている味方が2体以上の時、500%)のダメージ",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "",
+        "formula": "範囲効果も含む挑発",
+        "type": "庇護",
+        "value": {},
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 50
+        },
+        "notes": [
+          {
+            "type": "property",
+            "text": "バフ解除無効",
+            "label": "特性"
+          }
+        ],
+        "raw": "自身に庇護状態を付与(50CT)【バフ解除無効】",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "4%～20%",
+        "formula": "光属性または闇属性の味方の数×4%",
+        "type": "被ダメージ軽減",
+        "value": {
+          "rate": 4
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 4
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 5
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 50
+        },
+        "notes": [
+          {
+            "type": "property",
+            "text": "バフ解除無効",
+            "label": "特性"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "被ダメージを光属性または闇属性の味方の数×4%軽減(50CT)【バフ解除無効】 ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "",
+        "formula": "",
+        "type": "カウンター[スタン]",
+        "value": {},
+        "effect_class": "other",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "自身が被弾時に発動する",
+            "label": "発動条件"
+          },
+          {
+            "type": "expire",
+            "text": "2回発動まで",
+            "label": "回数"
+          },
+          {
+            "type": "property",
+            "text": "バフ解除無効",
+            "label": "特性"
+          }
+        ],
+        "raw": "カウンター[スタン]：敵の攻撃者のスタンゲージ5減少(2回発動まで)【バフ解除無効】(カウンター効果は重複しない)",
+        "children": [
+          {
+            "type": "スタンゲージ減少",
+            "display_value": "5",
+            "formula": "スタンゲージが0になるとスタン状態になる",
+            "value": {
+              "amount": 5
+            },
+            "target": "敵",
+            "duration": null,
+            "effect_class": "debuff"
+          }
+        ],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "5",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 5,
+          "max": 5
+        },
+        "effect_class": "note",
+        "target": "光属性または闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でもノーツ移動効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "光属性または闇属性の味方のノーツを5～5前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
       }
     ]
   },
@@ -65194,6 +65855,555 @@
         "tags": [
           ""
         ]
+      }
+    ]
+  },
+  {
+    "unit_id": 1121002,
+    "game_unit_id": 1121002,
+    "unit_illust_id": 1121002,
+    "is_awake_unit": 0,
+    "skill_id": 11210021,
+    "skill_type": "EX1",
+    "name": "ムーンウォッチクレーター",
+    "icon_id": 101,
+    "cost_ex_gauge": 100,
+    "skill_detail": "敵全体に15％×5回のダメージ/被ダメージを光属性または闇属性の味方の数×8％増加（20CT） ※2つの条件を満たした場合でも効果は重複しない/自身と自身の左2レーンのメイン属性が光属性の味方に闇属性の「サブ属性」を付与する（40CT）【バフ解除無効】（優先発動）/自身の左2レーンにいる味方のノーツを5～5前方に移動\n※サブ属性：属性指定スキルの条件や対象に含まれる（ダメージ計算には影響しない）",
+    "effects": [
+      {
+        "display_value": "15%×5回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 15,
+          "hit": 5
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [],
+        "raw": "敵全体に15%×5回のダメージ",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "8%～40%",
+        "formula": "光属性または闇属性の味方の数×8%",
+        "type": "被ダメージアップ",
+        "value": {
+          "rate": 8
+        },
+        "effect_class": "debuff",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 4
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 5
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "被ダメージを光属性または闇属性の味方の数×8%増加(20CT) ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "闇属性を付与",
+        "formula": "",
+        "type": "サブ属性",
+        "value": {},
+        "effect_class": "buff",
+        "target": "メイン属性が光属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4,
+            "specials": [
+              "main_attr"
+            ]
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 40
+        },
+        "notes": [
+          {
+            "type": "property",
+            "text": "優先発動 ※スキル発動前に効果が発動する",
+            "label": "特性"
+          },
+          {
+            "type": "property",
+            "text": "バフ解除無効",
+            "label": "特性"
+          }
+        ],
+        "raw": "自身と自身の左2レーンのメイン属性が光属性の味方に闇属性の「サブ属性」を付与する(40CT)【バフ解除無効】(優先発動)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "5",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 5,
+          "max": 5
+        },
+        "effect_class": "note",
+        "target": "自身の左2レーンにいる味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "multi",
+            "lane": "left",
+            "lane_count": 2,
+            "specials": []
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "自身の左2レーンにいる味方のノーツを5～5前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1121002,
+    "game_unit_id": 1121002,
+    "unit_illust_id": 1121002,
+    "is_awake_unit": 0,
+    "skill_id": 11210022,
+    "skill_type": "EX2",
+    "name": "グランコロッサスイーター",
+    "icon_id": 101,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵全体に50％×5回のダメージ/光属性またはコラプサーの味方のATK300％アップ（30CT） ※2つの条件を満たした場合でも効果は重複しない/さらに闇属性の味方のATK300％アップ（30CT）/光属性または闇属性の味方のノーツを7～7前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない/自身にサブ属性が付与されている時、味方全体のクリティカル時のダメージ倍率を50％加算（25CT）",
+    "effects": [
+      {
+        "display_value": "50%×5回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 50,
+          "hit": 5
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [],
+        "raw": "敵全体に50%×5回のダメージ",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "300%",
+        "formula": "",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 300
+        },
+        "effect_class": "buff",
+        "target": "光属性またはコラプサーの味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 7
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "光属性またはコラプサーの味方のATK300%アップ(30CT) ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "300%",
+        "formula": "",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 300
+        },
+        "effect_class": "buff",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "さらに闇属性の味方のATK300%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "7",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 7,
+          "max": 7
+        },
+        "effect_class": "note",
+        "target": "光属性または闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でもノーツ移動効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "光属性または闇属性の味方のノーツを7～7前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "50%",
+        "formula": "",
+        "type": "クリティカルダメージアップ",
+        "value": {
+          "rate": 50
+        },
+        "effect_class": "buff",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 25
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "自身にサブ属性が付与されている時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "自身にサブ属性が付与されている時、味方全体のクリティカル時のダメージ倍率を50%加算(25CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1121002,
+    "game_unit_id": 1121002,
+    "unit_illust_id": 1121002,
+    "is_awake_unit": 0,
+    "skill_id": "11210022_plus",
+    "skill_type": "EX2+",
+    "name": "グラビトンビッグマックス",
+    "icon_id": 101,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵全体に80％×5回（ラッシュ100以上の時、100％×5回）のダメージ/光属性またはコラプサーの味方のATK300％アップ（30CT） ※2つの条件を満たした場合でも効果は重複しない/さらに闇属性の味方のATK300％アップ（30CT）/光属性または闇属性の味方のノーツを10～10前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない/自身にサブ属性が付与されている時、味方全体のクリティカル時のダメージ倍率を50％加算（25CT）/コラプサーの味方を3体以上編成している時、味方全体のクリティカル20％加算（20CT）",
+    "effects": [
+      {
+        "display_value": "80%×5回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 80,
+          "hit": 5
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "ラッシュ100以上の時、100%×5回",
+            "label": "強化"
+          }
+        ],
+        "raw": "敵全体に80%×5回(ラッシュ100以上の時、100%×5回)のダメージ",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "300%",
+        "formula": "",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 300
+        },
+        "effect_class": "buff",
+        "target": "光属性またはコラプサーの味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 7
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "光属性またはコラプサーの味方のATK300%アップ(30CT) ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "300%",
+        "formula": "",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 300
+        },
+        "effect_class": "buff",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "さらに闇属性の味方のATK300%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "10",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 10,
+          "max": 10
+        },
+        "effect_class": "note",
+        "target": "光属性または闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でもノーツ移動効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "光属性または闇属性の味方のノーツを10～10前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "50%",
+        "formula": "",
+        "type": "クリティカルダメージアップ",
+        "value": {
+          "rate": 50
+        },
+        "effect_class": "buff",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 25
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "自身にサブ属性が付与されている時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "自身にサブ属性が付与されている時、味方全体のクリティカル時のダメージ倍率を50%加算(25CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "20%",
+        "formula": "",
+        "type": "クリティカル率アップ",
+        "value": {
+          "rate": 20
+        },
+        "effect_class": "buff",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "コラプサーの味方を3体以上編成している時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "コラプサーの味方を3体以上編成している時、味方全体のクリティカル20%加算(20CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
       }
     ]
   },

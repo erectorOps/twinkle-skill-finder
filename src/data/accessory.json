@@ -50569,6 +50569,698 @@
   },
   {
     "source": "EquipDetail",
+    "accessory_name": "レイラのチャーム",
+    "equip_id": 3300271,
+    "illust_id": "equip_3300271",
+    "rarity": 3,
+    "unit_id": 1121002,
+    "game_unit_id": 1121002,
+    "unit_illust_id": 1121002,
+    "character_id": 121,
+    "character_name": "レイラ",
+    "unit_name": "潮騒のコラプサー",
+    "exclusive_unit_name": "[潮騒のコラプサー]レイラ",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": 846,
+      "ex": null,
+      "ex_up": null,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 1,
+        "parameter_value": 846
+      }
+    ],
+    "skill_ids": {
+      "EX1": 11210021,
+      "EX2": 11210022,
+      "EX2+": "11210022_plus"
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 11210021,
+        "text": "ダメージ7.5％アップ/攻撃回数1回増加",
+        "effects_text": [
+          "ダメージ7.5％アップ",
+          "攻撃回数1回増加"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+7.5%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ7.5%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "攻撃回数の強化",
+            "display_value": "+1回",
+            "formula": "",
+            "value": {
+              "count": 1
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "攻撃回数1回増加",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 11210022,
+        "text": "ダメージ25％アップ/光属性またはコラプサーの味方のATKの上昇値が75％アップ/さらに闇属性の味方のATKの上昇値が75％アップ",
+        "effects_text": [
+          "ダメージ25％アップ",
+          "光属性またはコラプサーの味方のATKの上昇値が75％アップ",
+          "さらに闇属性の味方のATKの上昇値が75％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+25%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ25%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+75%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "光属性またはコラプサーの味方",
+            "duration": null,
+            "notes": [],
+            "raw": "光属性またはコラプサーの味方のATKの上昇値が75%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+75%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "闇属性の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "さらに闇属性の味方のATKの上昇値が75%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2+",
+        "skill_id": "11210022_plus",
+        "text": "ダメージ40％アップ（ラッシュ100以上の時、50%アップ）/光属性またはコラプサーの味方のATKの上昇値が75％アップ/さらに闇属性の味方のATKの上昇値が75％アップ",
+        "effects_text": [
+          "ダメージ40％アップ（ラッシュ100以上の時、50%アップ）",
+          "光属性またはコラプサーの味方のATKの上昇値が75％アップ",
+          "さらに闇属性の味方のATKの上昇値が75％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+40%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "ラッシュ100以上の時、50%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ40%アップ(ラッシュ100以上の時、50%アップ)",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+75%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "光属性またはコラプサーの味方",
+            "duration": null,
+            "notes": [],
+            "raw": "光属性またはコラプサーの味方のATKの上昇値が75%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+75%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "闇属性の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "さらに闇属性の味方のATKの上昇値が75%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「ムーンウォッチクレーター」のダメージ7.5％アップ/攻撃回数1回増加/\nEX2「グランコロッサスイーター」のダメージ25％アップ/光属性またはコラプサーの味方のATKの上昇値が75％アップ/さらに闇属性の味方のATKの上昇値が75％アップ/\nEX2+「グラビトンビッグマックス」のダメージ40％アップ（ラッシュ100以上の時、50%アップ）/光属性またはコラプサーの味方のATKの上昇値が75％アップ/さらに闇属性の味方のATKの上昇値が75％アップ",
+    "ability_full": "EX1「ムーンウォッチクレーター」のダメージ7.5％アップ/攻撃回数1回増加/\nEX2「グランコロッサスイーター」のダメージ25％アップ/光属性またはコラプサーの味方のATKの上昇値が75％アップ/さらに闇属性の味方のATKの上昇値が75％アップ/\nEX2+「グラビトンビッグマックス」のダメージ40％アップ（ラッシュ100以上の時、50%アップ）/光属性またはコラプサーの味方のATKの上昇値が75％アップ/さらに闇属性の味方のATKの上昇値が75％アップ",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 11210021,
+        "text": "ダメージ7.5％アップ/攻撃回数1回増加",
+        "effects_text": [
+          "ダメージ7.5％アップ",
+          "攻撃回数1回増加"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+7.5%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ7.5%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "攻撃回数の強化",
+            "display_value": "+1回",
+            "formula": "",
+            "value": {
+              "count": 1
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "攻撃回数1回増加",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 11210022,
+        "text": "ダメージ25％アップ/光属性またはコラプサーの味方のATKの上昇値が75％アップ/さらに闇属性の味方のATKの上昇値が75％アップ",
+        "effects_text": [
+          "ダメージ25％アップ",
+          "光属性またはコラプサーの味方のATKの上昇値が75％アップ",
+          "さらに闇属性の味方のATKの上昇値が75％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+25%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ25%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+75%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "光属性またはコラプサーの味方",
+            "duration": null,
+            "notes": [],
+            "raw": "光属性またはコラプサーの味方のATKの上昇値が75%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+75%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "闇属性の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "さらに闇属性の味方のATKの上昇値が75%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2+",
+        "skill_id": "11210022_plus",
+        "text": "ダメージ40％アップ（ラッシュ100以上の時、50%アップ）/光属性またはコラプサーの味方のATKの上昇値が75％アップ/さらに闇属性の味方のATKの上昇値が75％アップ",
+        "effects_text": [
+          "ダメージ40％アップ（ラッシュ100以上の時、50%アップ）",
+          "光属性またはコラプサーの味方のATKの上昇値が75％アップ",
+          "さらに闇属性の味方のATKの上昇値が75％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+40%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "ラッシュ100以上の時、50%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ40%アップ(ラッシュ100以上の時、50%アップ)",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+75%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "光属性またはコラプサーの味方",
+            "duration": null,
+            "notes": [],
+            "raw": "光属性またはコラプサーの味方のATKの上昇値が75%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+75%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "闇属性の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "さらに闇属性の味方のATKの上昇値が75%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
+    "accessory_name": "リーナのシュシュ",
+    "equip_id": 3300272,
+    "illust_id": "equip_3300272",
+    "rarity": 3,
+    "unit_id": 1088002,
+    "game_unit_id": 1088002,
+    "unit_illust_id": 1088002,
+    "character_id": 88,
+    "character_name": "リーナ",
+    "unit_name": "バキバキシスター",
+    "exclusive_unit_name": "[バキバキシスター]リーナ",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "3",
+      "label": "ディフェンス",
+      "icon": "type_3.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": 846,
+      "ex": null,
+      "ex_up": null,
+      "ct": 2,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 1,
+        "parameter_value": 846
+      },
+      {
+        "parameter_type": 5,
+        "parameter_value": 2
+      }
+    ],
+    "skill_ids": {
+      "EX1": 10880021,
+      "EX2": 10880022
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10880021,
+        "text": "ダメージ47％アップ/攻撃回数1回増加",
+        "effects_text": [
+          "ダメージ47％アップ",
+          "攻撃回数1回増加"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+47%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ47%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "攻撃回数の強化",
+            "display_value": "+1回",
+            "formula": "",
+            "value": {
+              "count": 1
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "攻撃回数1回増加",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10880022,
+        "text": "ダメージ225％アップ（サブ属性が付与されている味方が2体以上の時、250％アップ）",
+        "effects_text": [
+          "ダメージ225％アップ（サブ属性が付与されている味方が2体以上の時、250％アップ）"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+225%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "サブ属性が付与されている味方が2体以上の時、250%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ225%アップ(サブ属性が付与されている味方が2体以上の時、250%アップ)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「グサグサスイング」のダメージ47％アップ/攻撃回数1回増加/\nEX2「グチャグチャスクラッパー」のダメージ225％アップ（サブ属性が付与されている味方が2体以上の時、250％アップ）",
+    "ability_full": "EX1「グサグサスイング」のダメージ47％アップ/攻撃回数1回増加/\nEX2「グチャグチャスクラッパー」のダメージ225％アップ（サブ属性が付与されている味方が2体以上の時、250％アップ）",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10880021,
+        "text": "ダメージ47％アップ/攻撃回数1回増加",
+        "effects_text": [
+          "ダメージ47％アップ",
+          "攻撃回数1回増加"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+47%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ47%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "攻撃回数の強化",
+            "display_value": "+1回",
+            "formula": "",
+            "value": {
+              "count": 1
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "攻撃回数1回増加",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10880022,
+        "text": "ダメージ225％アップ（サブ属性が付与されている味方が2体以上の時、250％アップ）",
+        "effects_text": [
+          "ダメージ225％アップ（サブ属性が付与されている味方が2体以上の時、250％アップ）"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+225%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "サブ属性が付与されている味方が2体以上の時、250%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ225%アップ(サブ属性が付与されている味方が2体以上の時、250%アップ)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
+    "accessory_name": "キサナのチョーカー",
+    "equip_id": 3300273,
+    "illust_id": "equip_3300273",
+    "rarity": 3,
+    "unit_id": 1071002,
+    "game_unit_id": 1071002,
+    "unit_illust_id": 1071002,
+    "character_id": 71,
+    "character_name": "キサナ",
+    "unit_name": "浜辺のハンター",
+    "exclusive_unit_name": "[浜辺のハンター]キサナ",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "2",
+      "label": "スピード",
+      "icon": "type_2.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": 846,
+      "ex": null,
+      "ex_up": null,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 1,
+        "parameter_value": 846
+      }
+    ],
+    "skill_ids": {
+      "EX1": 10710021,
+      "EX2": 10710022
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10710021,
+        "text": "ダメージ15％アップ",
+        "effects_text": [
+          "ダメージ15％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+15%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ15%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10710022,
+        "text": "ダメージ100％（ラッシュ100以上の時、125％）アップ",
+        "effects_text": [
+          "ダメージ100％（ラッシュ100以上の時、125％）アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+100%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "ラッシュ100以上の時、125%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ100%(ラッシュ100以上の時、125%)アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「リキッドバスター」のダメージ15％アップ/\nEX2「スプラッシュザッパー」のダメージ100％（ラッシュ100以上の時、125％）アップ",
+    "ability_full": "EX1「リキッドバスター」のダメージ15％アップ/\nEX2「スプラッシュザッパー」のダメージ100％（ラッシュ100以上の時、125％）アップ",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10710021,
+        "text": "ダメージ15％アップ",
+        "effects_text": [
+          "ダメージ15％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+15%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ15%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10710022,
+        "text": "ダメージ100％（ラッシュ100以上の時、125％）アップ",
+        "effects_text": [
+          "ダメージ100％（ラッシュ100以上の時、125％）アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+100%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "ラッシュ100以上の時、125%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ100%(ラッシュ100以上の時、125%)アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
     "accessory_name": "リィベルの首飾り",
     "equip_id": 3300286,
     "illust_id": "equip_3300286",

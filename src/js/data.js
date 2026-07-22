@@ -163,6 +163,7 @@ export const effectTypes = [
   { id: "counter_moko",            label: "カウンター[猛攻]",               short: "猛攻カウンター", klass: "buff" },
   { id: "counter_haki",            label: "カウンター[覇気]",               short: "覇気カウンター", klass: "buff" },
   { id: "counter_shinko",          label: "カウンター[進攻]",               short: "進攻カウンター", klass: "buff" },
+  { id: "counter_stun",            label: "カウンター[スタン]",             short: "スタンカウンター", klass: "buff" },
   { id: "counter_trigger",         label: "カウンター誘発",                 short: "カウンター誘発", klass: "buff" },
 
   { id: "sub_attribute",           label: "サブ属性",                       short: "サブ属性",       klass: "buff" },

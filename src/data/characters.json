@@ -7748,6 +7748,48 @@
     "specific_gauge_data": []
   },
   {
+    "unit_id": 1071002,
+    "game_unit_id": 1071002,
+    "unit_illust_id": 1071002,
+    "is_awake_unit": 0,
+    "character_name": "キサナ",
+    "character_name_kana": "キサナ",
+    "unit_name": "浜辺のハンター",
+    "rarity": 3,
+    "attr_type": {
+      "id": "4",
+      "label": "光",
+      "icon": "attribute_04.png"
+    },
+    "role": {
+      "id": "2",
+      "label": "スピード",
+      "icon": "type_2.png"
+    },
+    "camps": [
+      {
+        "id": 3,
+        "label": "魔族",
+        "icon": "race_3.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 7,
+        "label": "コラプサー",
+        "icon": "affiliation_05.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "3",
+        "label": "打撃",
+        "icon": "icon_equipment_01_03.png"
+      }
+    ],
+    "specific_gauge_data": []
+  },
+  {
     "unit_id": 1072001,
     "game_unit_id": 1072001,
     "unit_illust_id": 1072001,
@@ -8746,6 +8788,48 @@
         "id": "2",
         "label": "斬撃",
         "icon": "icon_equipment_01_02.png"
+      }
+    ],
+    "specific_gauge_data": []
+  },
+  {
+    "unit_id": 1088002,
+    "game_unit_id": 1088002,
+    "unit_illust_id": 1088002,
+    "is_awake_unit": 0,
+    "character_name": "リーナ",
+    "character_name_kana": "リーナ",
+    "unit_name": "バキバキシスター",
+    "rarity": 3,
+    "attr_type": {
+      "id": "4",
+      "label": "光",
+      "icon": "attribute_04.png"
+    },
+    "role": {
+      "id": "3",
+      "label": "ディフェンス",
+      "icon": "type_3.png"
+    },
+    "camps": [
+      {
+        "id": 1,
+        "label": "人間",
+        "icon": "race_1.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 7,
+        "label": "コラプサー",
+        "icon": "affiliation_05.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "3",
+        "label": "打撃",
+        "icon": "icon_equipment_01_03.png"
       }
     ],
     "specific_gauge_data": []
@@ -10547,6 +10631,54 @@
       "specific_name": "特異点状態",
       "specific_detail": "◆通常状態\n通常状態中、コラプサーの味方がEXスキル1、または、EXスキル1+を使用すると特異点ゲージが「1」、EXスキル2、または、EXスキル2+を使用すると特異点ゲージが「2」溜まる。\n特異点ゲージが「10」溜まると「特異点状態」に移行する。\n\n◆特異点状態\n特異点状態に移行直後、敵全体（すでに崩壊が付与されている敵は除く）に崩壊LV1を付与（20CT）\n特異点状態中、「EXスキル2」が「EXスキル2+」に変化する。\nEXスキル2+を使用すると特異点状態が解除され、「通常状態」に戻る。\n\n※崩壊：\n崩壊状態のいずれかの敵が攻撃を受けた際のラッシュ増加数に応じて付与されているすべての崩壊の崩壊値が増加。蓄積された崩壊値に応じて崩壊LVが上昇し、闇属性からの被ダメージが増加する。\n・崩壊値0～29  ：崩壊LV1（闇属性からの被ダメージ+10％）\n・崩壊値30～59：崩壊LV2（闇属性からの被ダメージ+20％）\n・崩壊値60～    ：崩壊LV3（闇属性からの被ダメージ+30％）",
       "icon_id": 17,
+      "is_unlock": 1,
+      "is_strengthen": 0
+    }
+  },
+  {
+    "unit_id": 1121002,
+    "game_unit_id": 1121002,
+    "unit_illust_id": 1121002,
+    "is_awake_unit": 0,
+    "character_name": "レイラ",
+    "character_name_kana": "レイラ",
+    "unit_name": "潮騒のコラプサー",
+    "rarity": 3,
+    "attr_type": {
+      "id": "4",
+      "label": "光",
+      "icon": "attribute_04.png"
+    },
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "camps": [
+      {
+        "id": 1,
+        "label": "人間",
+        "icon": "race_1.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 7,
+        "label": "コラプサー",
+        "icon": "affiliation_05.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "1",
+        "label": "魔法",
+        "icon": "icon_equipment_01_01.png"
+      }
+    ],
+    "specific_gauge_data": {
+      "specific_name": "潮騒状態",
+      "specific_detail": "◆通常状態\n通常状態中、光属性または闇属性の味方がEXスキルを使用すると潮騒ゲージが「1」溜まる。\n潮騒ゲージが「7」溜まると「潮騒状態」に移行する。\n\n◆潮騒状態\n潮騒状態に移行直後、味方のEXゲージをコラプサーの味方の数×7増加\n\n潮騒状態中、「EXスキル2」が「EXスキル2+」に変化する。\nEXスキル2+を使用すると潮騒状態が解除され、「通常状態」に戻る。",
+      "icon_id": 58,
       "is_unlock": 1,
       "is_strengthen": 0
     }
