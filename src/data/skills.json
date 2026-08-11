@@ -22059,6 +22059,390 @@
     ]
   },
   {
+    "unit_id": 1027004,
+    "game_unit_id": 1027004,
+    "unit_illust_id": 1027004,
+    "is_awake_unit": 0,
+    "skill_id": 10270041,
+    "skill_type": "EX1",
+    "name": "インパルスファクター",
+    "icon_id": 601,
+    "cost_ex_gauge": 100,
+    "skill_detail": "味方のHPを40％+魔族または闇属性の味方の数×8％回復 ※2つの条件を満たした場合でも効果は重複しない/魔族または闇属性の味方のATKを50％+自身のHP2000ごと×5％アップ（20CT）（最大100％） ※2つの条件を満たした場合でも効果は重複しない/味方のHPがオーバーヒール状態（100％超）の時、魔族または闇属性の味方のノーツを5～5前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない/魔族または闇属性の味方を5体以上編成している時、自身の右1レーンにいる味方の通常攻撃・EXスキルによるラッシュ増加数が倍になる（5CT） ※この効果は重複しない",
+    "effects": [
+      {
+        "display_value": "48%～80%",
+        "formula": "40%+魔族または闇属性の味方の数×8%",
+        "type": "HP回復",
+        "value": {
+          "base": 40,
+          "rate": 8
+        },
+        "effect_class": "main",
+        "target": "味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 3
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 5
+              }
+            ]
+          }
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "味方のHPを40%+魔族または闇属性の味方の数×8%回復 ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "50%～100%",
+        "formula": "50%+自身のHP2000ごと×5% (合計最大100% ※HP20000以上)",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 5
+        },
+        "effect_class": "buff",
+        "target": "魔族または闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 3
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "self_hp",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "魔族または闇属性の味方のATKを50%+自身のHP2000ごと×5%アップ(20CT)(最大100%) ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "5",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 5,
+          "max": 5
+        },
+        "effect_class": "note",
+        "target": "魔族または闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 3
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "味方のHPがオーバーヒール状態(100%超)の時",
+            "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でもノーツ移動効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "味方のHPがオーバーヒール状態(100%超)の時、魔族または闇属性の味方のノーツを5～5前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "",
+        "formula": "通常攻撃・EXスキルによるラッシュ増加数",
+        "type": "ラッシュ増加数2倍",
+        "value": {},
+        "effect_class": "buff",
+        "target": "自身の右1レーンにいる味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "single",
+            "lane": "right",
+            "lane_count": 1,
+            "specials": []
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 5
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "魔族または闇属性の味方を5体以上編成している時",
+            "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "この効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "魔族または闇属性の味方を5体以上編成している時、自身の右1レーンにいる味方の通常攻撃・EXスキルによるラッシュ増加数が倍になる(5CT) ※この効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1027004,
+    "game_unit_id": 1027004,
+    "unit_illust_id": 1027004,
+    "is_awake_unit": 0,
+    "skill_id": 10270042,
+    "skill_type": "EX2",
+    "name": "リングノーツプロジェクション",
+    "icon_id": 601,
+    "cost_ex_gauge": 200,
+    "skill_detail": "味方のHPを50％+魔族または闇属性の味方の数×10％回復 ※2つの条件を満たした場合でも効果は重複しない/魔族または闇属性の味方の行動CT15％短縮（10CT）/ノーツを3～3（味方のHPがオーバーヒール状態（100％超）の時、6～6）前方に移動 ※2つの条件を満たした場合でも効果は重複しない/味方のHPがフルオーバーヒール状態（300％）の時、味方全体のATKを100％+自身のHP2000ごと×16％アップ（20CT）（最大300％）/ラッシュ50以上の時、自身のEX消費量20減少（次ターン以降EXスキル1回発動まで）",
+    "effects": [
+      {
+        "display_value": "60%～100%",
+        "formula": "50%+魔族または闇属性の味方の数×10%",
+        "type": "HP回復",
+        "value": {
+          "base": 50,
+          "rate": 10
+        },
+        "effect_class": "main",
+        "target": "味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 3
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 5
+              }
+            ]
+          }
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "味方のHPを50%+魔族または闇属性の味方の数×10%回復 ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "15%",
+        "formula": "",
+        "type": "行動CT短縮",
+        "value": {
+          "rate": 15
+        },
+        "effect_class": "buff",
+        "target": "魔族または闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 3
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 10
+        },
+        "notes": [],
+        "raw": "魔族または闇属性の味方の行動CT15%短縮(10CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "3",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 3,
+          "max": 3
+        },
+        "effect_class": "note",
+        "target": "魔族または闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 3
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "味方のHPがオーバーヒール状態(100%超)の時、6",
+            "label": "強化"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "ノーツを3～3(味方のHPがオーバーヒール状態(100%超)の時、6～6)前方に移動 ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "100%～300%",
+        "formula": "100%+自身のHP2000ごと×16% (合計最大300% ※HP26000以上)",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 16
+        },
+        "effect_class": "buff",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "self_hp",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "味方のHPがフルオーバーヒール状態(300%)の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "味方のHPがフルオーバーヒール状態(300%)の時、味方全体のATKを100%+自身のHP2000ごと×16%アップ(20CT)(最大300%)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "20",
+        "formula": "",
+        "type": "EX消費量減少",
+        "value": {
+          "amount": 20
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "ラッシュ50以上の時",
+            "label": "発動条件"
+          },
+          {
+            "type": "expire",
+            "text": "次ターン以降EXスキル1回発動まで",
+            "label": "回数"
+          }
+        ],
+        "raw": "ラッシュ50以上の時、自身のEX消費量20減少(次ターン以降EXスキル1回発動まで)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
     "unit_id": 1028001,
     "game_unit_id": 1028001,
     "unit_illust_id": 1028001,
@@ -53185,7 +53569,7 @@
         "formula": "",
         "type": "カウンター[スタン]",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "buff",
         "target": "自身",
         "target_branches": [
           {
@@ -57630,6 +58014,340 @@
     ]
   },
   {
+    "unit_id": 1096002,
+    "game_unit_id": 1096002,
+    "unit_illust_id": 1096002,
+    "is_awake_unit": 0,
+    "skill_id": 10960021,
+    "skill_type": "EX1",
+    "name": "ブレイドクロスシザー",
+    "icon_id": 101,
+    "cost_ex_gauge": 100,
+    "skill_detail": "敵単体に230％×2回のダメージ（味方のスタンゲージが1以下の時、スタンゲージ2減少）/被ダメージを闇属性またはコラプサーの味方の数×8％（味方のスタンゲージが7以下の時、10％）増加（20CT） ※2つの条件を満たした場合でも効果は重複しない/自身を含むコラプサーの味方と2体以上ユニゾン時、自身のATK170％アップ（30CT）/このEXスキル使用後、味方のスタンゲージを1（このEXスキルで敵をスタンさせた場合、0）消費（スタンゲージが0になるとスタン状態になる）/このEXスキルのEX消費量を減少している味方のスタンゲージ数×4減少\n※このEXスキルは他星騎士から付与されたEX消費量減少の効果を受けない",
+    "effects": [
+      {
+        "display_value": "230%×2回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 230,
+          "hit": 2
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "味方のスタンゲージが1以下の時、スタンゲージ2減少",
+            "label": "強化"
+          }
+        ],
+        "raw": "敵単体に230%×2回のダメージ(味方のスタンゲージが1以下の時、スタンゲージ2減少)",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "8%～40%",
+        "formula": "闇属性またはコラプサーの味方の数×8%",
+        "type": "被ダメージアップ",
+        "value": {
+          "rate": 8
+        },
+        "effect_class": "debuff",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 5
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "affiliation": 7
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "boost",
+            "text": "味方のスタンゲージが7以下の時、10%",
+            "label": "強化"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "被ダメージを闇属性またはコラプサーの味方の数×8%(味方のスタンゲージが7以下の時、10%)増加(20CT) ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "170%",
+        "formula": "",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 170
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "自身を含むコラプサーの味方と2体以上ユニゾン時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "自身を含むコラプサーの味方と2体以上ユニゾン時、自身のATK170%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "1",
+        "formula": "スタンゲージが0になるとスタン状態になる",
+        "type": "スタンゲージ消費",
+        "value": {},
+        "effect_class": "debuff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "timing",
+            "text": "このEXスキル使用後",
+            "label": "タイミング"
+          },
+          {
+            "type": "boost",
+            "text": "このEXスキルで敵をスタンさせた場合、0",
+            "label": "強化"
+          }
+        ],
+        "raw": "このEXスキル使用後、味方のスタンゲージを1(このEXスキルで敵をスタンさせた場合、0)消費(スタンゲージが0になるとスタン状態になる)",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "4～32",
+        "formula": "減少している味方のスタンゲージ数×4",
+        "type": "EX消費量減少",
+        "value": {
+          "amount": 4
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "stun_gauge",
+            "branches": []
+          }
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "このEXスキルは他星騎士から付与されたEX消費量減少の効果を受けない",
+            "label": "特性"
+          }
+        ],
+        "raw": "このEXスキルのEX消費量を減少している味方のスタンゲージ数×4減少\n※このEXスキルは他星騎士から付与されたEX消費量減少の効果を受けない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1096002,
+    "game_unit_id": 1096002,
+    "unit_illust_id": 1096002,
+    "is_awake_unit": 0,
+    "skill_id": 10960022,
+    "skill_type": "EX2",
+    "name": "ザンブレイクセイバー",
+    "icon_id": 101,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵単体に250％（味方のスタンゲージが5以下の時、285％）×10回のダメージ/自身のATKを減少している味方のスタンゲージ数×100％アップ（1CT）/クリティカルをコラプサーの味方の数×10％加算（1CT）/スキル再使用時間5CT",
+    "effects": [
+      {
+        "display_value": "250%×10回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 250,
+          "hit": 10
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "味方のスタンゲージが5以下の時、285%",
+            "label": "強化"
+          }
+        ],
+        "raw": "敵単体に250%(味方のスタンゲージが5以下の時、285%)×10回のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "100%～800%",
+        "formula": "減少している味方のスタンゲージ数×100%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 100
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "stun_gauge",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 1
+        },
+        "notes": [],
+        "raw": "自身のATKを減少している味方のスタンゲージ数×100%アップ(1CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "10%～50%",
+        "formula": "コラプサーの味方の数×10%",
+        "type": "クリティカル率アップ",
+        "value": {
+          "rate": 10
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "affiliation": 7
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 1
+        },
+        "notes": [],
+        "raw": "クリティカルをコラプサーの味方の数×10%加算(1CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "5CT",
+        "formula": "",
+        "type": "スキル再使用時間",
+        "value": {},
+        "effect_class": "debuff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "スキル再使用時間5CT",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      }
+    ]
+  },
+  {
     "unit_id": 1097001,
     "game_unit_id": 1097001,
     "unit_illust_id": 1097001,
@@ -58920,6 +59638,291 @@
           }
         ],
         "raw": "雷属性の味方を3体以上編成している時、味方に4回の攻撃を無効化するバリアを張る(40CT)【バフ解除無効】",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1101002,
+    "game_unit_id": 1101002,
+    "unit_illust_id": 1101002,
+    "is_awake_unit": 0,
+    "skill_id": 11010021,
+    "skill_type": "EX1",
+    "name": "ディープペネトレイター",
+    "icon_id": 101,
+    "cost_ex_gauge": 100,
+    "skill_detail": "敵単体に70％×8回のダメージ/闇属性の味方の行動CTを20％短縮（5CT）（闇属性の味方を5体以上編成している時、10CT）/ノーツを4～4前方に移動/味方のHPがオーバーヒール状態（100％超）の時、自身のEX上昇を60アップ（25CT）",
+    "effects": [
+      {
+        "display_value": "70%×8回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 70,
+          "hit": 8
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [],
+        "raw": "敵単体に70%×8回のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "20%",
+        "formula": "",
+        "type": "行動CT短縮",
+        "value": {
+          "rate": 20
+        },
+        "effect_class": "buff",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 5
+        },
+        "notes": [
+          {
+            "type": "boost",
+            "text": "闇属性の味方を5体以上編成している時、10CT",
+            "label": "強化"
+          }
+        ],
+        "raw": "闇属性の味方の行動CTを20%短縮(5CT)(闇属性の味方を5体以上編成している時、10CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "4",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 4,
+          "max": 4
+        },
+        "effect_class": "note",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを4～4前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "60",
+        "formula": "",
+        "type": "EX上昇アップ",
+        "value": {
+          "amount": 60
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 25
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "味方のHPがオーバーヒール状態(100%超)の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "味方のHPがオーバーヒール状態(100%超)の時、自身のEX上昇を60アップ(25CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1101002,
+    "game_unit_id": 1101002,
+    "unit_illust_id": 1101002,
+    "is_awake_unit": 0,
+    "skill_id": 11010022,
+    "skill_type": "EX2",
+    "name": "スクリューウェーブジャベリン",
+    "icon_id": 300,
+    "cost_ex_gauge": 200,
+    "skill_detail": "闇属性の味方のATKを100％+自身の基礎ATK200ごと×13％アップ（30CT）（最大300％）/ノーツを5～5前方に移動/ラッシュ30以上の時、闇属性の味方のクリティカル時のダメージ倍率を40％（ラッシュ50以上の時は60％、ラッシュ100以上の時は80％）加算（25CT）/ノーツがタイムライン11以下の相手の場合、敵単体のノーツをタイムライン上12（味方のHPがフルオーバーヒール状態（300％）の時、15）の位置にワープさせる【強制移動無効対象外】",
+    "effects": [
+      {
+        "display_value": "100%～300%",
+        "formula": "100%+自身の基礎ATK200ごと×13% (合計最大300% ※基礎ATK3200以上)",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 13
+        },
+        "effect_class": "buff",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "self_atk",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "闇属性の味方のATKを100%+自身の基礎ATK200ごと×13%アップ(30CT)(最大300%)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "5",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 5,
+          "max": 5
+        },
+        "effect_class": "note",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを5～5前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "40%",
+        "formula": "",
+        "type": "クリティカルダメージアップ",
+        "value": {
+          "rate": 40
+        },
+        "effect_class": "buff",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 25
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "ラッシュ30以上の時",
+            "label": "発動条件"
+          },
+          {
+            "type": "boost",
+            "text": "ラッシュ50以上の時は60%",
+            "label": "強化"
+          },
+          {
+            "type": "boost",
+            "text": "ラッシュ100以上の時は80%",
+            "label": "強化"
+          }
+        ],
+        "raw": "ラッシュ30以上の時、闇属性の味方のクリティカル時のダメージ倍率を40%(ラッシュ50以上の時は60%、ラッシュ100以上の時は80%)加算(25CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "タイムライン上12の位置にワープ",
+        "formula": "",
+        "type": "ノーツ強制移動",
+        "value": {},
+        "effect_class": "note",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "強制移動無効対象外",
+            "label": "特性"
+          },
+          {
+            "type": "condition",
+            "text": "ノーツがタイムライン11以下の相手の場合",
+            "label": "発動条件"
+          },
+          {
+            "type": "boost",
+            "text": "味方のHPがフルオーバーヒール状態(300%)の時、15",
+            "label": "強化"
+          }
+        ],
+        "raw": "ノーツがタイムライン11以下の相手の場合、敵単体のノーツをタイムライン上12(味方のHPがフルオーバーヒール状態(300%)の時、15)の位置にワープさせる【強制移動無効対象外】",
         "children": [],
         "tags": [],
         "inherited_target": false

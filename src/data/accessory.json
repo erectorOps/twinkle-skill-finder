@@ -51261,6 +51261,541 @@
   },
   {
     "source": "EquipDetail",
+    "accessory_name": "コハルコのスマホ",
+    "equip_id": 3300274,
+    "illust_id": "equip_3300274",
+    "rarity": 3,
+    "unit_id": 1027004,
+    "game_unit_id": 1027004,
+    "unit_illust_id": 1027004,
+    "character_id": 27,
+    "character_name": "コハルコ",
+    "unit_name": "ビーチウィザード",
+    "exclusive_unit_name": "[ビーチウィザード]コハルコ",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "5",
+      "label": "ヒール",
+      "icon": "type_5.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": null,
+      "ex": null,
+      "ex_up": 35,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 2,
+        "parameter_value": 35
+      }
+    ],
+    "skill_ids": {
+      "EX1": 10270041,
+      "EX2": 10270042
+    },
+    "abilities": [
+      {
+        "skill_type": "COMMON",
+        "skill_id": null,
+        "text": "初回行動CT-7（自身が1回行動後に解除される）",
+        "effects_text": [
+          "初回行動CT-7（自身が1回行動後に解除される）"
+        ],
+        "effects": [
+          {
+            "type": "初回行動CT短縮",
+            "display_value": "7",
+            "formula": "",
+            "value": {
+              "amount": 7
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "property",
+                "text": "自身が1回行動後に解除される",
+                "label": "特性"
+              }
+            ],
+            "raw": "初回行動CT-7(自身が1回行動後に解除される)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX1",
+        "skill_id": 10270041,
+        "text": "HP回復を20％+魔族または闇属性の味方の数×4％増加",
+        "effects_text": [
+          "HP回復を20％+魔族または闇属性の味方の数×4％増加"
+        ],
+        "effects": [
+          {
+            "type": "HP回復を強化",
+            "display_value": "+20%～40%",
+            "formula": "20%+魔族または闇属性の味方の数×4%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "HP回復を20%+魔族または闇属性の味方の数×4%増加",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10270042,
+        "text": "ATKの上昇値を50％+自身の基礎HP2000ごと×8％アップ/ATKアップの最大値を150％アップ",
+        "effects_text": [
+          "ATKの上昇値を50％+自身の基礎HP2000ごと×8％アップ/ATKアップの最大値を150％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%～150%",
+            "formula": "50%+自身の基礎HP2000ごと×8% (合計最大150%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値を50%+自身の基礎HP2000ごと×8%アップ/ATKアップの最大値を150%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "初回行動CT-7（自身が1回行動後に解除される）/\nEX1「インパルスファクター」のHP回復を20％+魔族または闇属性の味方の数×4％増加/\nEX2「リングノーツプロジェクション」のATKの上昇値を50％+自身の基礎HP2000ごと×8％アップ/ATKアップの最大値を150％アップ",
+    "ability_full": "初回行動CT-7（自身が1回行動後に解除される）/\nEX1「インパルスファクター」のHP回復を20％+魔族または闇属性の味方の数×4％増加/\nEX2「リングノーツプロジェクション」のATKの上昇値を50％+自身の基礎HP2000ごと×8％アップ/ATKアップの最大値を150％アップ",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "COMMON",
+        "skill_id": null,
+        "text": "初回行動CT-7（自身が1回行動後に解除される）",
+        "effects_text": [
+          "初回行動CT-7（自身が1回行動後に解除される）"
+        ],
+        "effects": [
+          {
+            "type": "初回行動CT短縮",
+            "display_value": "7",
+            "formula": "",
+            "value": {
+              "amount": 7
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "property",
+                "text": "自身が1回行動後に解除される",
+                "label": "特性"
+              }
+            ],
+            "raw": "初回行動CT-7(自身が1回行動後に解除される)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX1",
+        "skill_id": 10270041,
+        "text": "HP回復を20％+魔族または闇属性の味方の数×4％増加",
+        "effects_text": [
+          "HP回復を20％+魔族または闇属性の味方の数×4％増加"
+        ],
+        "effects": [
+          {
+            "type": "HP回復を強化",
+            "display_value": "+20%～40%",
+            "formula": "20%+魔族または闇属性の味方の数×4%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "HP回復を20%+魔族または闇属性の味方の数×4%増加",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10270042,
+        "text": "ATKの上昇値を50％+自身の基礎HP2000ごと×8％アップ/ATKアップの最大値を150％アップ",
+        "effects_text": [
+          "ATKの上昇値を50％+自身の基礎HP2000ごと×8％アップ/ATKアップの最大値を150％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%～150%",
+            "formula": "50%+自身の基礎HP2000ごと×8% (合計最大150%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値を50%+自身の基礎HP2000ごと×8%アップ/ATKアップの最大値を150%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
+    "accessory_name": "シルヴィの耳飾り",
+    "equip_id": 3300275,
+    "illust_id": "equip_3300275",
+    "rarity": 3,
+    "unit_id": 1101002,
+    "game_unit_id": 1101002,
+    "unit_illust_id": 1101002,
+    "character_id": 101,
+    "character_name": "シルヴィ",
+    "unit_name": "豪快フィッシャー",
+    "exclusive_unit_name": "[豪快フィッシャー]シルヴィ",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "2",
+      "label": "スピード",
+      "icon": "type_2.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": null,
+      "ex": 116,
+      "ex_up": null,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 4,
+        "parameter_value": 116
+      }
+    ],
+    "skill_ids": {
+      "EX1": 11010021,
+      "EX2": 11010022
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 11010021,
+        "text": "ダメージ35％アップ/攻撃回数1回増加",
+        "effects_text": [
+          "ダメージ35％アップ",
+          "攻撃回数1回増加"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+35%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ35%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "攻撃回数の強化",
+            "display_value": "+1回",
+            "formula": "",
+            "value": {
+              "count": 1
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "攻撃回数1回増加",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 11010022,
+        "text": "ATKの上昇値が50％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに150％アップ",
+        "effects_text": [
+          "ATKの上昇値が50％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに150％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%～150%",
+            "formula": "50%+自身の基礎ATK200ごと×6.5% (合計最大150%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が50%+自身の基礎ATK200ごと×6.5%アップ/ATKアップの最大値をさらに150%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「ディープペネトレイター」のダメージ35％アップ/攻撃回数1回増加/\nEX2「スクリューウェーブジャべリン」のATKの上昇値が50％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに150％アップ",
+    "ability_full": "EX1「ディープペネトレイター」のダメージ35％アップ/攻撃回数1回増加/\nEX2「スクリューウェーブジャべリン」のATKの上昇値が50％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに150％アップ",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 11010021,
+        "text": "ダメージ35％アップ/攻撃回数1回増加",
+        "effects_text": [
+          "ダメージ35％アップ",
+          "攻撃回数1回増加"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+35%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ35%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "攻撃回数の強化",
+            "display_value": "+1回",
+            "formula": "",
+            "value": {
+              "count": 1
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "攻撃回数1回増加",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 11010022,
+        "text": "ATKの上昇値が50％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに150％アップ",
+        "effects_text": [
+          "ATKの上昇値が50％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに150％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%～150%",
+            "formula": "50%+自身の基礎ATK200ごと×6.5% (合計最大150%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が50%+自身の基礎ATK200ごと×6.5%アップ/ATKアップの最大値をさらに150%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
+    "accessory_name": "イングリットのガーターポーチ",
+    "equip_id": 3300276,
+    "illust_id": "equip_3300276",
+    "rarity": 3,
+    "unit_id": 1096002,
+    "game_unit_id": 1096002,
+    "unit_illust_id": 1096002,
+    "character_id": 96,
+    "character_name": "イングリット",
+    "unit_name": "最強狙う水着剣士",
+    "exclusive_unit_name": "[最強狙う水着剣士]イングリット",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": 846,
+      "ex": null,
+      "ex_up": null,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 1,
+        "parameter_value": 846
+      }
+    ],
+    "skill_ids": {
+      "EX1": 10960021,
+      "EX2": 10960022
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10960021,
+        "text": "ATKの上昇値が85％アップ",
+        "effects_text": [
+          "ATKの上昇値が85％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+85%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が85%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10960022,
+        "text": "ダメージ125％（味方のスタンゲージが5以下の時、142.5％）アップ",
+        "effects_text": [
+          "ダメージ125％（味方のスタンゲージが5以下の時、142.5％）アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+125%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "味方のスタンゲージが5以下の時、142.5%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ125%(味方のスタンゲージが5以下の時、142.5%)アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「ブレイドクロスシザー」のATKの上昇値が85％アップ/\nEX2「ザンブレイクセイバー」のダメージ125％（味方のスタンゲージが5以下の時、142.5％）アップ",
+    "ability_full": "EX1「ブレイドクロスシザー」のATKの上昇値が85％アップ/\nEX2「ザンブレイクセイバー」のダメージ125％（味方のスタンゲージが5以下の時、142.5％）アップ",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10960021,
+        "text": "ATKの上昇値が85％アップ",
+        "effects_text": [
+          "ATKの上昇値が85％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+85%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が85%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10960022,
+        "text": "ダメージ125％（味方のスタンゲージが5以下の時、142.5％）アップ",
+        "effects_text": [
+          "ダメージ125％（味方のスタンゲージが5以下の時、142.5％）アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+125%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "味方のスタンゲージが5以下の時、142.5%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ125%(味方のスタンゲージが5以下の時、142.5%)アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
     "accessory_name": "リィベルの首飾り",
     "equip_id": 3300286,
     "illust_id": "equip_3300286",

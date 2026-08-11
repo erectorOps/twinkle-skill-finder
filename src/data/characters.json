@@ -3462,6 +3462,48 @@
     "specific_gauge_data": []
   },
   {
+    "unit_id": 1027004,
+    "game_unit_id": 1027004,
+    "unit_illust_id": 1027004,
+    "is_awake_unit": 0,
+    "character_name": "コハルコ",
+    "character_name_kana": "コハルコ",
+    "unit_name": "ビーチウィザード",
+    "rarity": 3,
+    "attr_type": {
+      "id": "5",
+      "label": "闇",
+      "icon": "attribute_05.png"
+    },
+    "role": {
+      "id": "5",
+      "label": "ヒール",
+      "icon": "type_5.png"
+    },
+    "camps": [
+      {
+        "id": 3,
+        "label": "魔族",
+        "icon": "race_3.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 2,
+        "label": "新星学園",
+        "icon": "affiliation_01.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "3",
+        "label": "打撃",
+        "icon": "icon_equipment_01_03.png"
+      }
+    ],
+    "specific_gauge_data": []
+  },
+  {
     "unit_id": 1028001,
     "game_unit_id": 1028001,
     "unit_illust_id": 1028001,
@@ -9489,6 +9531,48 @@
     "specific_gauge_data": []
   },
   {
+    "unit_id": 1096002,
+    "game_unit_id": 1096002,
+    "unit_illust_id": 1096002,
+    "is_awake_unit": 0,
+    "character_name": "イングリット",
+    "character_name_kana": "インクリット",
+    "unit_name": "最強狙う水着剣士",
+    "rarity": 3,
+    "attr_type": {
+      "id": "5",
+      "label": "闇",
+      "icon": "attribute_05.png"
+    },
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "camps": [
+      {
+        "id": 2,
+        "label": "神族",
+        "icon": "race_4.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 7,
+        "label": "コラプサー",
+        "icon": "affiliation_05.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "2",
+        "label": "斬撃",
+        "icon": "icon_equipment_01_02.png"
+      }
+    ],
+    "specific_gauge_data": []
+  },
+  {
     "unit_id": 1097001,
     "game_unit_id": 1097001,
     "unit_illust_id": 1097001,
@@ -9674,6 +9758,48 @@
       "id": "4",
       "label": "サポート",
       "icon": "type_4.png"
+    },
+    "camps": [
+      {
+        "id": 2,
+        "label": "神族",
+        "icon": "race_4.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 2,
+        "label": "新星学園",
+        "icon": "affiliation_01.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "3",
+        "label": "打撃",
+        "icon": "icon_equipment_01_03.png"
+      }
+    ],
+    "specific_gauge_data": []
+  },
+  {
+    "unit_id": 1101002,
+    "game_unit_id": 1101002,
+    "unit_illust_id": 1101002,
+    "is_awake_unit": 0,
+    "character_name": "シルヴィ",
+    "character_name_kana": "シルウィ",
+    "unit_name": "豪快フィッシャー",
+    "rarity": 3,
+    "attr_type": {
+      "id": "5",
+      "label": "闇",
+      "icon": "attribute_05.png"
+    },
+    "role": {
+      "id": "2",
+      "label": "スピード",
+      "icon": "type_2.png"
     },
     "camps": [
       {
