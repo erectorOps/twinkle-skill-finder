@@ -173,6 +173,7 @@ export const effectTypes = [
   { id: "damage_boost",            label: "ダメージを強化",                 short: "ダメージ強化",   klass: "buff" },
   { id: "damage_reflect",          label: "ダメージ反射",                   short: "ダメージ反射",   klass: "buff" },
   { id: "charge",                  label: "チャージ",                       short: "チャージ",       klass: "buff" },
+  { id: "super_charge",            label: "スーパーチャージ",                short: "スーパーチャージ", klass: "buff" },
   { id: "charge_return_reduction", label: "チャージ時戻り量短縮",           short: "チャージ時戻り量短縮",     klass: "buff" },
   { id: "knockback_immunity",      label: "ノックバック無効",               short: "ノックバック無効", klass: "buff" },
   { id: "barrier",                 label: "バリア",                         short: "バリア",         klass: "buff" },

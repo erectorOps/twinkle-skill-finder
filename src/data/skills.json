@@ -45485,6 +45485,547 @@
     ]
   },
   {
+    "unit_id": 1067002,
+    "game_unit_id": 1067002,
+    "unit_illust_id": 1067002,
+    "is_awake_unit": 0,
+    "skill_id": 10670021,
+    "skill_type": "EX1",
+    "name": "マリーナルウェーブ",
+    "icon_id": 101,
+    "cost_ex_gauge": 100,
+    "skill_detail": "敵単体に94％×6回のダメージ（自身がチャージ状態の時、攻撃回数2回増加）/一番後方の味方にチャージ状態を付与/ノーツを前から2番目の味方と同じ位置に移動/チーム内に異なるメイン属性の味方が3体以上いる時、自身のEX上昇を50アップ（20CT）",
+    "effects": [
+      {
+        "display_value": "94%×6回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 94,
+          "hit": 6
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "自身がチャージ状態の時、攻撃回数2回増加",
+            "label": "強化"
+          }
+        ],
+        "raw": "敵単体に94%×6回のダメージ(自身がチャージ状態の時、攻撃回数2回増加)",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "",
+        "formula": "",
+        "type": "チャージ",
+        "value": {},
+        "effect_class": "buff",
+        "target": "一番後方の味方",
+        "target_branches": {
+          "side": "ally",
+          "scope": "single",
+          "pos": "backmost"
+        },
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "一番後方の味方にチャージ状態を付与",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "前から2番目の味方と同じ位置",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {},
+        "effect_class": "note",
+        "target": "一番後方の味方",
+        "target_branches": {
+          "side": "ally",
+          "scope": "single",
+          "pos": "backmost"
+        },
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを前から2番目の味方と同じ位置に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "50",
+        "formula": "",
+        "type": "EX上昇アップ",
+        "value": {
+          "amount": 50
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "チーム内に異なるメイン属性の味方が3体以上いる時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "チーム内に異なるメイン属性の味方が3体以上いる時、自身のEX上昇を50アップ(20CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1067002,
+    "game_unit_id": 1067002,
+    "unit_illust_id": 1067002,
+    "is_awake_unit": 0,
+    "skill_id": 10670022,
+    "skill_type": "EX2",
+    "name": "パシフィックサイクロン",
+    "icon_id": 100,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵全体に200％のダメージ/一番後方の味方にチャージ状態を付与/人間または流星学園の味方のATKをチーム内の異なる属性の数×100％（自身がチャージ状態の時、110％）アップ（30CT）/ノーツを7～7前方に移動/自身を含む味方と2体以上ユニゾン時、ユニゾン参加者に含まれる異なるメイン属性の種類数に応じて以下の効果を適用する\n・1種類以上：自身にスーパーチャージ状態を付与（2回行動まで）（優先発動）\n・2種類以上：敵全体の被ダメージをチーム内の異なる属性の数×10％増加（20CT）\n・3種類以上：敵全体へのダメージを300％に強化\n※スーパーチャージ：\nチャージ状態が規定行動回数に達するまで維持され、チャージ効果によるATKアップ量が200％になり、敵からの攻撃を受けた際のノックバックを無効化する（スーパーチャージ状態中はチャージ状態を条件とした各効果の対象となる）",
+    "effects": [
+      {
+        "display_value": "200%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 200,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [],
+        "raw": "敵全体に200%のダメージ",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "",
+        "formula": "",
+        "type": "チャージ",
+        "value": {},
+        "effect_class": "buff",
+        "target": "一番後方の味方",
+        "target_branches": {
+          "side": "ally",
+          "scope": "single",
+          "pos": "backmost"
+        },
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "一番後方の味方にチャージ状態を付与",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "100%～500%",
+        "formula": "チーム内の異なる属性の数×100%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 100
+        },
+        "effect_class": "buff",
+        "target": "人間または流星学園の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 1
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "specials": [
+                  "diff_attr"
+                ]
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [
+          {
+            "type": "boost",
+            "text": "自身がチャージ状態の時、110%",
+            "label": "強化"
+          }
+        ],
+        "raw": "人間または流星学園の味方のATKをチーム内の異なる属性の数×100%(自身がチャージ状態の時、110%)アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "7",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 7,
+          "max": 7
+        },
+        "effect_class": "note",
+        "target": "人間または流星学園の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 1
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを7～7前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "type": "スーパーチャージ",
+        "formula": "規定行動回数までチャージ維持・ATK+200%・ノックバック無効",
+        "target": "自身",
+        "effect_class": "buff",
+        "duration": null,
+        "tags": [],
+        "notes": [
+          {
+            "type": "condition",
+            "label": "発動条件",
+            "text": "自身を含む、2体以上とユニゾン時"
+          },
+          {
+            "type": "expire",
+            "text": "2回行動まで",
+            "label": "回数"
+          },
+          {
+            "type": "property",
+            "label": "特性",
+            "text": "優先発動 ※スキル発動前に効果が発動する"
+          }
+        ]
+      },
+      {
+        "type": "被ダメージアップ",
+        "display_value": "10%～50%",
+        "formula": "チーム内の異なる属性の数×10%",
+        "target": "敵全体",
+        "duration": {
+          "ct": 20
+        },
+        "effect_class": "debuff",
+        "value": {},
+        "notes": [
+          {
+            "type": "condition",
+            "label": "発動条件",
+            "text": "自身を含むユニゾン時、異なるメイン属性が2種類以上"
+          }
+        ]
+      },
+      {
+        "type": "ダメージを強化",
+        "display_value": "300%",
+        "formula": "",
+        "target": "敵全体",
+        "duration": null,
+        "effect_class": "buff",
+        "value": {},
+        "notes": [
+          {
+            "type": "condition",
+            "label": "発動条件",
+            "text": "自身を含むユニゾン時、異なるメイン属性が3種類以上"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "unit_id": 1067002,
+    "game_unit_id": 1067002,
+    "unit_illust_id": 1067002,
+    "is_awake_unit": 0,
+    "skill_id": "10670022_plus",
+    "skill_type": "EX2+",
+    "name": "パッションサマーストリーム",
+    "icon_id": 100,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵全体に400％のダメージ/一番後方の味方にチャージ状態を付与/人間または流星学園の味方のATKをチーム内の異なる属性の数×100％（自身がチャージ状態の時、110％）アップ（30CT）/ノーツを10～10前方に移動/自身を含む味方と2体以上ユニゾン時、ユニゾン参加者に含まれる異なるメイン属性の種類数に応じて以下の効果を適用する\n・1種類以上：自身にスーパーチャージ状態を付与（2回行動まで）（優先発動）\n・2種類以上：敵全体の被ダメージを80％増加（20CT）\n・3種類以上：敵全体へのダメージを560％に強化\n・4種類以上：人間または流星学園の味方のクリティカルを20％加算（30CT）\n※スーパーチャージ：\nチャージ状態が規定行動回数に達するまで維持され、チャージ効果によるATKアップ量が200％になり、敵からの攻撃を受けた際のノックバックを無効化する（スーパーチャージ状態中はチャージ状態を条件とした各効果の対象となる）",
+    "effects": [
+      {
+        "display_value": "400%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 400,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [],
+        "raw": "敵全体に400%のダメージ",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "",
+        "formula": "",
+        "type": "チャージ",
+        "value": {},
+        "effect_class": "buff",
+        "target": "一番後方の味方",
+        "target_branches": {
+          "side": "ally",
+          "scope": "single",
+          "pos": "backmost"
+        },
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "一番後方の味方にチャージ状態を付与",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "100%～500%",
+        "formula": "チーム内の異なる属性の数×100%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 100
+        },
+        "effect_class": "buff",
+        "target": "人間または流星学園の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 1
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "specials": [
+                  "diff_attr"
+                ]
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [
+          {
+            "type": "boost",
+            "text": "自身がチャージ状態の時、110%",
+            "label": "強化"
+          }
+        ],
+        "raw": "人間または流星学園の味方のATKをチーム内の異なる属性の数×100%(自身がチャージ状態の時、110%)アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "10",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 10,
+          "max": 10
+        },
+        "effect_class": "note",
+        "target": "人間または流星学園の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 1
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを10～10前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "type": "スーパーチャージ",
+        "formula": "規定行動回数までチャージ維持・ATK+200%・ノックバック無効",
+        "target": "自身",
+        "effect_class": "buff",
+        "duration": null,
+        "tags": [],
+        "notes": [
+          {
+            "type": "condition",
+            "label": "発動条件",
+            "text": "自身を含む、2体以上とユニゾン時"
+          },
+          {
+            "type": "expire",
+            "text": "2回行動まで",
+            "label": "回数"
+          },
+          {
+            "type": "property",
+            "label": "特性",
+            "text": "優先発動 ※スキル発動前に効果が発動する"
+          }
+        ]
+      },
+      {
+        "type": "被ダメージアップ",
+        "display_value": "80%",
+        "formula": "",
+        "target": "敵全体",
+        "duration": {
+          "ct": 20
+        },
+        "effect_class": "debuff",
+        "value": {},
+        "notes": [
+          {
+            "type": "condition",
+            "label": "発動条件",
+            "text": "自身を含むユニゾン時、異なるメイン属性が2種類以上"
+          }
+        ]
+      },
+      {
+        "type": "ダメージを強化",
+        "display_value": "560%",
+        "formula": "",
+        "target": "敵全体",
+        "duration": null,
+        "effect_class": "buff",
+        "value": {},
+        "notes": [
+          {
+            "type": "condition",
+            "label": "発動条件",
+            "text": "自身を含むユニゾン時、異なるメイン属性が3種類以上"
+          }
+        ]
+      },
+      {
+        "type": "クリティカル率アップ",
+        "display_value": "20%",
+        "formula": "",
+        "target": "人間または流星学園の味方",
+        "duration": {
+          "ct": 30
+        },
+        "effect_class": "buff",
+        "value": {},
+        "notes": [
+          {
+            "type": "condition",
+            "label": "発動条件",
+            "text": "自身を含むユニゾン時、異なるメイン属性が4種類以上"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "unit_id": 1068001,
     "game_unit_id": 1068001,
     "unit_illust_id": 1068001,
@@ -76324,6 +76865,325 @@
             "side": "ally",
             "scope": "all",
             "equip_type": 3
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "スキル再使用時間5CT",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      }
+    ]
+  },
+  {
+    "unit_id": 1154001,
+    "game_unit_id": 1154001,
+    "unit_illust_id": 1154001,
+    "is_awake_unit": 0,
+    "skill_id": 11540011,
+    "skill_type": "EX1",
+    "name": "海桜刃",
+    "icon_id": 100,
+    "cost_ex_gauge": 100,
+    "skill_detail": "敵単体に288％のダメージ/スタンゲージ3減少/自身のATKをチーム内の異なる属性の数×30％（自身がチャージ状態の時、35％）アップ（30CT）/自身のチャージ時の戻り量を99％短縮（チャージコマンド1回まで）/人間または流星学園の味方のノーツを3～3前方に移動",
+    "effects": [
+      {
+        "display_value": "288%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 288,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [],
+        "raw": "敵単体に288%のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "3",
+        "formula": "スタンゲージが0になるとスタン状態になる",
+        "type": "スタンゲージ減少",
+        "value": {
+          "amount": 3
+        },
+        "effect_class": "debuff",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "スタンゲージ3減少",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "30%～150%",
+        "formula": "チーム内の異なる属性の数×30%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 30
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "specials": [
+                  "diff_attr"
+                ]
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [
+          {
+            "type": "boost",
+            "text": "自身がチャージ状態の時、35%",
+            "label": "強化"
+          }
+        ],
+        "raw": "自身のATKをチーム内の異なる属性の数×30%(自身がチャージ状態の時、35%)アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "99%",
+        "formula": "",
+        "type": "チャージ時戻り量短縮",
+        "value": {},
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "expire",
+            "text": "チャージコマンド1回まで",
+            "label": "回数"
+          }
+        ],
+        "raw": "自身のチャージ時の戻り量を99%短縮(チャージコマンド1回まで)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "3",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 3,
+          "max": 3
+        },
+        "effect_class": "note",
+        "target": "人間または流星学園の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 1
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "人間または流星学園の味方のノーツを3～3前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1154001,
+    "game_unit_id": 1154001,
+    "unit_illust_id": 1154001,
+    "is_awake_unit": 0,
+    "skill_id": 11540012,
+    "skill_type": "EX2",
+    "name": "秘剣・九浄の白波",
+    "icon_id": 100,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵全体に320％（自身がチャージ状態の時、400％）のダメージ/自身のクリティカル時のダメージ倍率をチーム内の異なる属性の数×10％アップ（1CT）/チーム内に異なるメイン属性の味方が3体以上いる時、自身のクリティカルを異なる属性の数×5％加算（1CT）/スキル再使用時間5CT",
+    "effects": [
+      {
+        "display_value": "320%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 320,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "自身がチャージ状態の時、400%",
+            "label": "強化"
+          }
+        ],
+        "raw": "敵全体に320%(自身がチャージ状態の時、400%)のダメージ",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "10%～50%",
+        "formula": "チーム内の異なる属性の数×10%",
+        "type": "クリティカルダメージアップ",
+        "value": {
+          "rate": 10
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "specials": [
+                  "diff_attr"
+                ]
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 1
+        },
+        "notes": [],
+        "raw": "自身のクリティカル時のダメージ倍率をチーム内の異なる属性の数×10%アップ(1CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "5%～25%",
+        "formula": "異なる属性の数×5%",
+        "type": "クリティカル率アップ",
+        "value": {
+          "rate": 5
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "specials": [
+                  "diff_attr"
+                ]
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 1
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "チーム内に異なるメイン属性の味方が3体以上いる時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "チーム内に異なるメイン属性の味方が3体以上いる時、自身のクリティカルを異なる属性の数×5%加算(1CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "5CT",
+        "formula": "",
+        "type": "スキル再使用時間",
+        "value": {},
+        "effect_class": "debuff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
           }
         ],
         "scale_refs": [],

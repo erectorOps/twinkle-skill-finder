@@ -7486,6 +7486,54 @@
     "specific_gauge_data": null
   },
   {
+    "unit_id": 1067002,
+    "game_unit_id": 1067002,
+    "unit_illust_id": 1067002,
+    "is_awake_unit": 0,
+    "character_name": "聖沙",
+    "character_name_kana": "ミサ",
+    "unit_name": "サマーエクラエル",
+    "rarity": 3,
+    "attr_type": {
+      "id": "3",
+      "label": "雷",
+      "icon": "attribute_03.png"
+    },
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "camps": [
+      {
+        "id": 1,
+        "label": "人間",
+        "icon": "race_1.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 1,
+        "label": "流星学園",
+        "icon": "affiliation_02.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "1",
+        "label": "魔法",
+        "icon": "icon_equipment_01_01.png"
+      }
+    ],
+    "specific_gauge_data": {
+      "specific_name": "エクラエル状態",
+      "specific_detail": "◆通常状態\n通常状態中、自身が通常攻撃を行った行動終了後、エクラエルゲージが「1」、自身以外のチャージ状態の味方が通常攻撃を行った行動終了後、エクラエルゲージが「1」溜まる。\nエクラエルゲージが「6」溜まると「エクラエル状態」に移行する。\n\n◆エクラエル状態\nエクラエル状態移行直後、敵全体に制圧LV1を付与（20CT）\n\nエクラエル状態中、「EXスキル2」が「EXスキル2+」に変化する。\nEXスキル2+を使用するとエクラエル状態が解除され、「通常状態」に戻る。\n\n※制圧：重複して付与する度に制圧LVが1上昇し（最大LV3）、制圧LVに応じて以下の効果を適用する。\n・LV1：人間からの被ダメージ+10％\n・LV2：人間からの被ダメージ+20％\n・LV3：人間からの被ダメージ+30％",
+      "icon_id": 59,
+      "is_unlock": 1,
+      "is_strengthen": 0
+    }
+  },
+  {
     "unit_id": 1068001,
     "game_unit_id": 1068001,
     "unit_illust_id": 1068001,
@@ -11845,6 +11893,48 @@
       "is_unlock": 1,
       "is_strengthen": 0
     }
+  },
+  {
+    "unit_id": 1154001,
+    "game_unit_id": 1154001,
+    "unit_illust_id": 1154001,
+    "is_awake_unit": 0,
+    "character_name": "ヘレナ(クルくる)",
+    "character_name_kana": "ヘレナ(クルクル)",
+    "unit_name": "夏に咲く二千本桜",
+    "rarity": 2,
+    "attr_type": {
+      "id": "5",
+      "label": "闇",
+      "icon": "attribute_05.png"
+    },
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "camps": [
+      {
+        "id": 1,
+        "label": "人間",
+        "icon": "race_1.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 1,
+        "label": "流星学園",
+        "icon": "affiliation_02.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "2",
+        "label": "斬撃",
+        "icon": "icon_equipment_01_02.png"
+      }
+    ],
+    "specific_gauge_data": []
   },
   {
     "unit_id": 1155001,

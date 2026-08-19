@@ -39245,7 +39245,7 @@
               "ct": 5
             },
             "effect_class": "accessory",
-            "target": "自身の味方",
+            "target": "自身",
             "duration": null,
             "notes": [],
             "raw": "自身の行動CT短縮の効果時間が5CT増加",
@@ -39318,7 +39318,7 @@
               "ct": 5
             },
             "effect_class": "accessory",
-            "target": "自身の味方",
+            "target": "自身",
             "duration": null,
             "notes": [],
             "raw": "自身の行動CT短縮の効果時間が5CT増加",
@@ -50388,8 +50388,7 @@
         "skill_id": 10470032,
         "text": "ダメージ170％アップ/（対象の敵とノーツが前後6以内にいる敵に対して220％アップ）",
         "effects_text": [
-          "ダメージ170％アップ",
-          "（対象の敵とノーツが前後6以内にいる敵に対して220％アップ）"
+          "ダメージ170％アップ（対象の敵とノーツが前後6以内にいる敵に対して220％アップ）"
         ],
         "effects": [
           {
@@ -50400,21 +50399,14 @@
             "effect_class": "accessory",
             "target": "",
             "duration": null,
-            "notes": [],
-            "raw": "ダメージ170%アップ",
-            "children": [],
-            "tags": []
-          },
-          {
-            "type": "アクセサリ効果",
-            "display_value": "",
-            "formula": "(対象の敵とノーツが前後6以内にいる敵に対して220%アップ)",
-            "value": {},
-            "effect_class": "accessory",
-            "target": "",
-            "duration": null,
-            "notes": [],
-            "raw": "(対象の敵とノーツが前後6以内にいる敵に対して220%アップ)",
+            "notes": [
+              {
+                "type": "boost",
+                "text": "対象の敵とノーツが前後6以内にいる敵に対して220%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ170%アップ(対象の敵とノーツが前後6以内にいる敵に対して220%アップ)",
             "children": [],
             "tags": []
           }
@@ -50504,8 +50496,7 @@
         "skill_id": 10470032,
         "text": "ダメージ170％アップ/（対象の敵とノーツが前後6以内にいる敵に対して220％アップ）",
         "effects_text": [
-          "ダメージ170％アップ",
-          "（対象の敵とノーツが前後6以内にいる敵に対して220％アップ）"
+          "ダメージ170％アップ（対象の敵とノーツが前後6以内にいる敵に対して220％アップ）"
         ],
         "effects": [
           {
@@ -50516,21 +50507,14 @@
             "effect_class": "accessory",
             "target": "",
             "duration": null,
-            "notes": [],
-            "raw": "ダメージ170%アップ",
-            "children": [],
-            "tags": []
-          },
-          {
-            "type": "アクセサリ効果",
-            "display_value": "",
-            "formula": "(対象の敵とノーツが前後6以内にいる敵に対して220%アップ)",
-            "value": {},
-            "effect_class": "accessory",
-            "target": "",
-            "duration": null,
-            "notes": [],
-            "raw": "(対象の敵とノーツが前後6以内にいる敵に対して220%アップ)",
+            "notes": [
+              {
+                "type": "boost",
+                "text": "対象の敵とノーツが前後6以内にいる敵に対して220%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ170%アップ(対象の敵とノーツが前後6以内にいる敵に対して220%アップ)",
             "children": [],
             "tags": []
           }
@@ -51787,6 +51771,519 @@
               }
             ],
             "raw": "ダメージ125%(味方のスタンゲージが5以下の時、142.5%)アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
+    "accessory_name": "ヘレナ(クルくる)の花飾り",
+    "equip_id": 3300277,
+    "illust_id": "equip_3300277",
+    "rarity": 3,
+    "unit_id": 1154001,
+    "game_unit_id": 1154001,
+    "unit_illust_id": 1154001,
+    "character_id": 154,
+    "character_name": "ヘレナ(クルくる)",
+    "unit_name": "夏に咲く二千本桜",
+    "exclusive_unit_name": "[夏に咲く二千本桜]ヘレナ(クルくる)",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": 846,
+      "ex": null,
+      "ex_up": null,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 1,
+        "parameter_value": 846
+      }
+    ],
+    "skill_ids": {
+      "EX1": 11540011,
+      "EX2": 11540012
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 11540011,
+        "text": "自身のATKの上昇値がチーム内の異なる属性の数×15％（自身がチャージ状態の時、17.5％）",
+        "effects_text": [
+          "自身のATKの上昇値がチーム内の異なる属性の数×15％（自身がチャージ状態の時、17.5％）"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+15%～75%",
+            "formula": "チーム内の異なる属性の数×15%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "自身",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "自身がチャージ状態の時、17.5%",
+                "label": "強化"
+              }
+            ],
+            "raw": "自身のATKの上昇値がチーム内の異なる属性の数×15%(自身がチャージ状態の時、17.5%)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 11540012,
+        "text": "ダメージ160％（自身がチャージ状態の時、200％）アップ",
+        "effects_text": [
+          "ダメージ160％（自身がチャージ状態の時、200％）アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+160%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "自身がチャージ状態の時、200%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ160%(自身がチャージ状態の時、200%)アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「海桜刃」の自身のATKの上昇値がチーム内の異なる属性の数×15％（自身がチャージ状態の時、17.5％）/\nEX2「秘剣・九浄の白波」のダメージ160％（自身がチャージ状態の時、200％）アップ",
+    "ability_full": "EX1「海桜刃」の自身のATKの上昇値がチーム内の異なる属性の数×15％（自身がチャージ状態の時、17.5％）/\nEX2「秘剣・九浄の白波」のダメージ160％（自身がチャージ状態の時、200％）アップ",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 11540011,
+        "text": "自身のATKの上昇値がチーム内の異なる属性の数×15％（自身がチャージ状態の時、17.5％）",
+        "effects_text": [
+          "自身のATKの上昇値がチーム内の異なる属性の数×15％（自身がチャージ状態の時、17.5％）"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+15%～75%",
+            "formula": "チーム内の異なる属性の数×15%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "自身",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "自身がチャージ状態の時、17.5%",
+                "label": "強化"
+              }
+            ],
+            "raw": "自身のATKの上昇値がチーム内の異なる属性の数×15%(自身がチャージ状態の時、17.5%)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 11540012,
+        "text": "ダメージ160％（自身がチャージ状態の時、200％）アップ",
+        "effects_text": [
+          "ダメージ160％（自身がチャージ状態の時、200％）アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+160%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "自身がチャージ状態の時、200%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ160%(自身がチャージ状態の時、200%)アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
+    "accessory_name": "聖沙のハイビスカス",
+    "equip_id": 3300278,
+    "illust_id": "equip_3300278",
+    "rarity": 3,
+    "unit_id": 1067002,
+    "game_unit_id": 1067002,
+    "unit_illust_id": 1067002,
+    "character_id": 67,
+    "character_name": "聖沙",
+    "unit_name": "サマーエクラエル",
+    "exclusive_unit_name": "[サマーエクラエル]聖沙",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": 846,
+      "ex": null,
+      "ex_up": null,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 1,
+        "parameter_value": 846
+      }
+    ],
+    "skill_ids": {
+      "EX1": 10670021,
+      "EX2": 10670022,
+      "EX2+": "10670022_plus"
+    },
+    "abilities": [
+      {
+        "skill_type": "COMMON",
+        "skill_id": null,
+        "text": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する（最大6カウントまで）",
+        "effects_text": [
+          "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する（最大6カウントまで）"
+        ],
+        "effects": [
+          {
+            "type": "属性カウント+",
+            "display_value": "属性カウント+1 (最大6)",
+            "formula": "",
+            "value": {
+              "amount": 1,
+              "max": 6
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する(最大6カウントまで)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX1",
+        "skill_id": 10670021,
+        "text": "ダメージ47％アップ",
+        "effects_text": [
+          "ダメージ47％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+47%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ47%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10670022,
+        "text": "ダメージ100％（ユニゾン参加者に含まれる異なるメイン属性が3種類以上の時、150％）アップ/人間または流星学園の味方のATKの上昇値がチーム内の異なる属性の数×25％（自身がチャージ状態の時、27.5％）アップ",
+        "effects_text": [
+          "ダメージ100％（ユニゾン参加者に含まれる異なるメイン属性が3種類以上の時、150％）アップ",
+          "人間または流星学園の味方のATKの上昇値がチーム内の異なる属性の数×25％（自身がチャージ状態の時、27.5％）アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+100%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "ユニゾン参加者に含まれる異なるメイン属性が3種類以上の時、150%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ100%(ユニゾン参加者に含まれる異なるメイン属性が3種類以上の時、150%)アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+25%～125%",
+            "formula": "チーム内の異なる属性の数×25%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "人間または流星学園の味方",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "自身がチャージ状態の時、27.5%",
+                "label": "強化"
+              }
+            ],
+            "raw": "人間または流星学園の味方のATKの上昇値がチーム内の異なる属性の数×25%(自身がチャージ状態の時、27.5%)アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2+",
+        "skill_id": "10670022_plus",
+        "text": "ダメージ200％（ユニゾン参加者に含まれる異なるメイン属性が3種類以上の時、280％）アップ/人間または流星学園の味方のATKの上昇値がチーム内の異なる属性の数×25％アップ（自身がチャージ状態の時、27.5％）",
+        "effects_text": [
+          "ダメージ200％（ユニゾン参加者に含まれる異なるメイン属性が3種類以上の時、280％）アップ",
+          "人間または流星学園の味方のATKの上昇値がチーム内の異なる属性の数×25％アップ（自身がチャージ状態の時、27.5％）"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+200%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "ユニゾン参加者に含まれる異なるメイン属性が3種類以上の時、280%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ200%(ユニゾン参加者に含まれる異なるメイン属性が3種類以上の時、280%)アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+25%～125%",
+            "formula": "チーム内の異なる属性の数×25%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "人間または流星学園の味方",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "自身がチャージ状態の時、27.5%",
+                "label": "強化"
+              }
+            ],
+            "raw": "人間または流星学園の味方のATKの上昇値がチーム内の異なる属性の数×25%アップ(自身がチャージ状態の時、27.5%)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する（最大6カウントまで）\nEX1「マリーナルウェーブ」のダメージ47％アップ/\nEX2「パシフィックサイクロン」のダメージ100％（ユニゾン参加者に含まれる異なるメイン属性が3種類以上の時、150％）アップ/人間または流星学園の味方のATKの上昇値がチーム内の異なる属性の数×25％（自身がチャージ状態の時、27.5％）アップ/\nEX2+「パッションサマーストリーム」のダメージ200％（ユニゾン参加者に含まれる異なるメイン属性が3種類以上の時、280％）アップ/人間または流星学園の味方のATKの上昇値がチーム内の異なる属性の数×25％アップ（自身がチャージ状態の時、27.5％）",
+    "ability_full": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する（最大6カウントまで）\nEX1「マリーナルウェーブ」のダメージ47％アップ/\nEX2「パシフィックサイクロン」のダメージ100％（ユニゾン参加者に含まれる異なるメイン属性が3種類以上の時、150％）アップ/人間または流星学園の味方のATKの上昇値がチーム内の異なる属性の数×25％（自身がチャージ状態の時、27.5％）アップ/\nEX2+「パッションサマーストリーム」のダメージ200％（ユニゾン参加者に含まれる異なるメイン属性が3種類以上の時、280％）アップ/人間または流星学園の味方のATKの上昇値がチーム内の異なる属性の数×25％アップ（自身がチャージ状態の時、27.5％）",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "COMMON",
+        "skill_id": null,
+        "text": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する（最大6カウントまで）",
+        "effects_text": [
+          "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する（最大6カウントまで）"
+        ],
+        "effects": [
+          {
+            "type": "属性カウント+",
+            "display_value": "属性カウント+1 (最大6)",
+            "formula": "",
+            "value": {
+              "amount": 1,
+              "max": 6
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する(最大6カウントまで)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX1",
+        "skill_id": 10670021,
+        "text": "ダメージ47％アップ",
+        "effects_text": [
+          "ダメージ47％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+47%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ47%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10670022,
+        "text": "ダメージ100％（ユニゾン参加者に含まれる異なるメイン属性が3種類以上の時、150％）アップ/人間または流星学園の味方のATKの上昇値がチーム内の異なる属性の数×25％（自身がチャージ状態の時、27.5％）アップ",
+        "effects_text": [
+          "ダメージ100％（ユニゾン参加者に含まれる異なるメイン属性が3種類以上の時、150％）アップ",
+          "人間または流星学園の味方のATKの上昇値がチーム内の異なる属性の数×25％（自身がチャージ状態の時、27.5％）アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+100%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "ユニゾン参加者に含まれる異なるメイン属性が3種類以上の時、150%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ100%(ユニゾン参加者に含まれる異なるメイン属性が3種類以上の時、150%)アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+25%～125%",
+            "formula": "チーム内の異なる属性の数×25%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "人間または流星学園の味方",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "自身がチャージ状態の時、27.5%",
+                "label": "強化"
+              }
+            ],
+            "raw": "人間または流星学園の味方のATKの上昇値がチーム内の異なる属性の数×25%(自身がチャージ状態の時、27.5%)アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2+",
+        "skill_id": "10670022_plus",
+        "text": "ダメージ200％（ユニゾン参加者に含まれる異なるメイン属性が3種類以上の時、280％）アップ/人間または流星学園の味方のATKの上昇値がチーム内の異なる属性の数×25％アップ（自身がチャージ状態の時、27.5％）",
+        "effects_text": [
+          "ダメージ200％（ユニゾン参加者に含まれる異なるメイン属性が3種類以上の時、280％）アップ",
+          "人間または流星学園の味方のATKの上昇値がチーム内の異なる属性の数×25％アップ（自身がチャージ状態の時、27.5％）"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+200%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "ユニゾン参加者に含まれる異なるメイン属性が3種類以上の時、280%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ200%(ユニゾン参加者に含まれる異なるメイン属性が3種類以上の時、280%)アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+25%～125%",
+            "formula": "チーム内の異なる属性の数×25%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "人間または流星学園の味方",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "自身がチャージ状態の時、27.5%",
+                "label": "強化"
+              }
+            ],
+            "raw": "人間または流星学園の味方のATKの上昇値がチーム内の異なる属性の数×25%アップ(自身がチャージ状態の時、27.5%)",
             "children": [],
             "tags": []
           }
