@@ -7576,6 +7576,54 @@
     "specific_gauge_data": null
   },
   {
+    "unit_id": 1068002,
+    "game_unit_id": 1068002,
+    "unit_illust_id": 1068002,
+    "is_awake_unit": 0,
+    "character_name": "リア",
+    "character_name_kana": "リア",
+    "unit_name": "トロピカルミエル",
+    "rarity": 3,
+    "attr_type": {
+      "id": "4",
+      "label": "光",
+      "icon": "attribute_04.png"
+    },
+    "role": {
+      "id": "4",
+      "label": "サポート",
+      "icon": "type_4.png"
+    },
+    "camps": [
+      {
+        "id": 1,
+        "label": "人間",
+        "icon": "race_1.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 1,
+        "label": "流星学園",
+        "icon": "affiliation_02.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "3",
+        "label": "打撃",
+        "icon": "icon_equipment_01_03.png"
+      }
+    ],
+    "specific_gauge_data": {
+      "specific_name": "トロピカル状態",
+      "specific_detail": "◆通常状態\n通常状態中、自身が通常攻撃を行った行動終了後、トロピカルゲージが「1」、自身以外のチャージ状態の味方が通常攻撃を行うと、トロピカルゲージが「1」溜まる。\nトロピカルゲージが「7」溜まると「トロピカル状態」に移行する。\n\n◆トロピカル状態\nトロピカル状態移行直後、敵全体のEXゲージをトロピカル状態への移行回数×10（最大30まで）吸収し、その内の20％味方のEXゲージを回復\n\nトロピカル状態中、「EXスキル2」が「EXスキル2+」に変化する。\nEXスキル2+を使用するとトロピカル状態が解除され、「通常状態」に戻る。",
+      "icon_id": 60,
+      "is_unlock": 1,
+      "is_strengthen": 0
+    }
+  },
+  {
     "unit_id": 1069001,
     "game_unit_id": 1069001,
     "unit_illust_id": 1069001,

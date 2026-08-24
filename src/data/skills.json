@@ -46254,6 +46254,526 @@
     ]
   },
   {
+    "unit_id": 1068002,
+    "game_unit_id": 1068002,
+    "unit_illust_id": 1068002,
+    "is_awake_unit": 0,
+    "skill_id": 10680021,
+    "skill_type": "EX1",
+    "name": "グレアードスフィア",
+    "icon_id": 201,
+    "cost_ex_gauge": 100,
+    "skill_detail": "対象とその左右1レーンにいる敵すべてのノーツを5～5後方に強制移動（レーン隣接している敵は対象レーンから離れるほど移動量は-1ずつ減少）/自身の右2レーンにいる味方のATKを50％+自身の基礎ATK200ごと×13％アップ（30CT）（最大200％）/チャージ状態を付与/人間または流星学園の味方の行動CTを15％（自身がチャージ状態の時、20％）短縮（10CT）",
+    "effects": [
+      {
+        "display_value": "5",
+        "formula": "",
+        "type": "ノーツ強制移動",
+        "value": {
+          "min": 5,
+          "max": 5
+        },
+        "effect_class": "note",
+        "target": "対象とその左右1レーンにいる敵すべて",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "multi",
+            "lane": "target_around",
+            "lane_count": 1,
+            "specials": []
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "weaken",
+            "text": "対象から離れるほど-1ずつ減少",
+            "label": "減衰"
+          }
+        ],
+        "raw": "対象とその左右1レーンにいる敵すべてのノーツを5～5後方に強制移動(レーン隣接している敵は対象レーンから離れるほど移動量は-1ずつ減少)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "50%～200%",
+        "formula": "50%+自身の基礎ATK200ごと×13% (合計最大200% ※基礎ATK2400以上)",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 13
+        },
+        "effect_class": "buff",
+        "target": "自身の右2レーンにいる味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "multi",
+            "lane": "right",
+            "lane_count": 2,
+            "specials": []
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "self_atk",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "自身の右2レーンにいる味方のATKを50%+自身の基礎ATK200ごと×13%アップ(30CT)(最大200%)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "",
+        "formula": "",
+        "type": "チャージ",
+        "value": {},
+        "effect_class": "buff",
+        "target": "自身の右2レーンにいる味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "multi",
+            "lane": "right",
+            "lane_count": 2,
+            "specials": []
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "チャージ状態を付与",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "15%",
+        "formula": "",
+        "type": "行動CT短縮",
+        "value": {
+          "rate": 15
+        },
+        "effect_class": "buff",
+        "target": "人間または流星学園の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 1
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 10
+        },
+        "notes": [
+          {
+            "type": "boost",
+            "text": "自身がチャージ状態の時、20%",
+            "label": "強化"
+          }
+        ],
+        "raw": "人間または流星学園の味方の行動CTを15%(自身がチャージ状態の時、20%)短縮(10CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1068002,
+    "game_unit_id": 1068002,
+    "unit_illust_id": 1068002,
+    "is_awake_unit": 0,
+    "skill_id": 10680022,
+    "skill_type": "EX2",
+    "name": "シーサイドディヴィニティ",
+    "icon_id": 357,
+    "cost_ex_gauge": 200,
+    "skill_detail": "人間または流星学園の味方のATKを100％+自身の基礎ATK200ごと×18％アップ（30CT）（最大300％）/クリティカル時のダメージ倍率を異なる属性の数×10％加算（25CT）/ノーツを7～7前方に移動/自身がチャージ状態の時、さらに人間または流星学園の味方のクリティカル時のダメージ倍率を20％加算（25CT）/このEXスキルのEX消費量をトロピカル状態への移行回数×6減少する（最大18まで）\n※このEXスキルは他星騎士から付与されたEX消費量減少の効果を受けない",
+    "effects": [
+      {
+        "display_value": "100%～300%",
+        "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 18
+        },
+        "effect_class": "buff",
+        "target": "人間または流星学園の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 1
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "self_atk",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "人間または流星学園の味方のATKを100%+自身の基礎ATK200ごと×18%アップ(30CT)(最大300%)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "10%～50%",
+        "formula": "異なる属性の数×10%",
+        "type": "クリティカルダメージアップ",
+        "value": {
+          "rate": 10
+        },
+        "effect_class": "buff",
+        "target": "人間または流星学園の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 1
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "specials": [
+                  "diff_attr"
+                ]
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 25
+        },
+        "notes": [],
+        "raw": "クリティカル時のダメージ倍率を異なる属性の数×10%加算(25CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "7",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 7,
+          "max": 7
+        },
+        "effect_class": "note",
+        "target": "人間または流星学園の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 1
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを7～7前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "20%",
+        "formula": "",
+        "type": "クリティカルダメージアップ",
+        "value": {
+          "rate": 20
+        },
+        "effect_class": "buff",
+        "target": "人間または流星学園の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 1
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 25
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "自身がチャージ状態の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "自身がチャージ状態の時、さらに人間または流星学園の味方のクリティカル時のダメージ倍率を20%加算(25CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "6～18",
+        "formula": "トロピカル状態への移行回数×6",
+        "type": "EX消費量減少",
+        "value": {
+          "amount": 6
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "state_count",
+            "branches": []
+          }
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "このEXスキルは他星騎士から付与されたEX消費量減少の効果を受けない",
+            "label": "特性"
+          }
+        ],
+        "raw": "このEXスキルのEX消費量をトロピカル状態への移行回数×6減少する(最大18まで)\n※このEXスキルは他星騎士から付与されたEX消費量減少の効果を受けない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1068002,
+    "game_unit_id": 1068002,
+    "unit_illust_id": 1068002,
+    "is_awake_unit": 0,
+    "skill_id": "10680022_plus",
+    "skill_type": "EX2+",
+    "name": "サンライトストレイン",
+    "icon_id": 357,
+    "cost_ex_gauge": 200,
+    "skill_detail": "人間または流星学園の味方のATKを100％+自身の基礎ATK200ごと×25％アップ（30CT）（最大400％）/クリティカル時のダメージ倍率を80％加算（25CT）/ノーツを10～10前方に移動/人間または流星学園の味方のクリティカルを20％加算（30CT）/このEXスキルのEX消費量をトロピカル状態への移行回数×8減少する（最大24まで）\n※このEXスキルは他星騎士から付与されたEX消費量減少の効果を受けない",
+    "effects": [
+      {
+        "display_value": "100%～400%",
+        "formula": "100%+自身の基礎ATK200ごと×25% (合計最大400% ※基礎ATK2400以上)",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 25
+        },
+        "effect_class": "buff",
+        "target": "人間または流星学園の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 1
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "self_atk",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "人間または流星学園の味方のATKを100%+自身の基礎ATK200ごと×25%アップ(30CT)(最大400%)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "80%",
+        "formula": "",
+        "type": "クリティカルダメージアップ",
+        "value": {
+          "rate": 80
+        },
+        "effect_class": "buff",
+        "target": "人間または流星学園の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 1
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 25
+        },
+        "notes": [],
+        "raw": "クリティカル時のダメージ倍率を80%加算(25CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "10",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 10,
+          "max": 10
+        },
+        "effect_class": "note",
+        "target": "人間または流星学園の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 1
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを10～10前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "20%",
+        "formula": "",
+        "type": "クリティカル率アップ",
+        "value": {
+          "rate": 20
+        },
+        "effect_class": "buff",
+        "target": "人間または流星学園の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 1
+          }
+        ],
+        "scale_refs": [
+          null
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "人間または流星学園の味方のクリティカルを20%加算(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "8～24",
+        "formula": "トロピカル状態への移行回数×8",
+        "type": "EX消費量減少",
+        "value": {
+          "amount": 8
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "state_count",
+            "branches": []
+          }
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "このEXスキルは他星騎士から付与されたEX消費量減少の効果を受けない",
+            "label": "特性"
+          }
+        ],
+        "raw": "このEXスキルのEX消費量をトロピカル状態への移行回数×8減少する(最大24まで)\n※このEXスキルは他星騎士から付与されたEX消費量減少の効果を受けない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
     "unit_id": 1069001,
     "game_unit_id": 1069001,
     "unit_illust_id": 1069001,

@@ -52293,6 +52293,248 @@
   },
   {
     "source": "EquipDetail",
+    "accessory_name": "リアのプルメリア",
+    "equip_id": 3300279,
+    "illust_id": "equip_3300279",
+    "rarity": 3,
+    "unit_id": 1068002,
+    "game_unit_id": 1068002,
+    "unit_illust_id": 1068002,
+    "character_id": 68,
+    "character_name": "リア",
+    "unit_name": "トロピカルミエル",
+    "exclusive_unit_name": "[トロピカルミエル]リア",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "4",
+      "label": "サポート",
+      "icon": "type_4.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": null,
+      "ex": null,
+      "ex_up": 58,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 2,
+        "parameter_value": 58
+      }
+    ],
+    "skill_ids": {
+      "EX1": 10680021,
+      "EX2": 10680022,
+      "EX2+": "10680022_plus"
+    },
+    "abilities": [
+      {
+        "skill_type": "COMMON",
+        "skill_id": null,
+        "text": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する（最大6カウントまで）",
+        "effects_text": [
+          "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する（最大6カウントまで）"
+        ],
+        "effects": [
+          {
+            "type": "属性カウント+",
+            "display_value": "属性カウント+1 (最大6)",
+            "formula": "",
+            "value": {
+              "amount": 1,
+              "max": 6
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する(最大6カウントまで)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX1",
+        "skill_id": 10680021,
+        "text": "ATKの上昇値が25％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに100％アップ",
+        "effects_text": [
+          "ATKの上昇値が25％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに100％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+25%～100%",
+            "formula": "25%+自身の基礎ATK200ごと×6.5% (合計最大100%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が25%+自身の基礎ATK200ごと×6.5%アップ/ATKアップの最大値をさらに100%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10680022,
+        "text": "ATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ",
+        "effects_text": [
+          "ATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%～150%",
+            "formula": "50%+自身の基礎ATK200ごと×9% (合計最大150%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が50%+自身の基礎ATK200ごと×9%アップ/ATKアップの最大値をさらに150%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2+",
+        "skill_id": "10680022_plus",
+        "text": "ATKの上昇値が50％+自身の基礎ATK200ごと×12.5％アップ/ATKアップの最大値をさらに200％アップ",
+        "effects_text": [
+          "ATKの上昇値が50％+自身の基礎ATK200ごと×12.5％アップ/ATKアップの最大値をさらに200％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%～200%",
+            "formula": "50%+自身の基礎ATK200ごと×12.5% (合計最大200%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が50%+自身の基礎ATK200ごと×12.5%アップ/ATKアップの最大値をさらに200%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する（最大6カウントまで）\nEX1「グレアードスフィア」のATKの上昇値が25％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに100％アップ/\nEX2「シーサイドディヴィニティ」のATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ/\nEX2+「サンライトストレイン」のATKの上昇値が50％+自身の基礎ATK200ごと×12.5％アップ/ATKアップの最大値をさらに200％アップ",
+    "ability_full": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する（最大6カウントまで）\nEX1「グレアードスフィア」のATKの上昇値が25％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに100％アップ/\nEX2「シーサイドディヴィニティ」のATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ/\nEX2+「サンライトストレイン」のATKの上昇値が50％+自身の基礎ATK200ごと×12.5％アップ/ATKアップの最大値をさらに200％アップ",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "COMMON",
+        "skill_id": null,
+        "text": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する（最大6カウントまで）",
+        "effects_text": [
+          "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する（最大6カウントまで）"
+        ],
+        "effects": [
+          {
+            "type": "属性カウント+",
+            "display_value": "属性カウント+1 (最大6)",
+            "formula": "",
+            "value": {
+              "amount": 1,
+              "max": 6
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "属性カウント+1 ※自身が異なる属性の数を参照するスキルの対象になった際、その属性のカウントを+1する(最大6カウントまで)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX1",
+        "skill_id": 10680021,
+        "text": "ATKの上昇値が25％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに100％アップ",
+        "effects_text": [
+          "ATKの上昇値が25％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに100％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+25%～100%",
+            "formula": "25%+自身の基礎ATK200ごと×6.5% (合計最大100%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が25%+自身の基礎ATK200ごと×6.5%アップ/ATKアップの最大値をさらに100%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10680022,
+        "text": "ATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ",
+        "effects_text": [
+          "ATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%～150%",
+            "formula": "50%+自身の基礎ATK200ごと×9% (合計最大150%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が50%+自身の基礎ATK200ごと×9%アップ/ATKアップの最大値をさらに150%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2+",
+        "skill_id": "10680022_plus",
+        "text": "ATKの上昇値が50％+自身の基礎ATK200ごと×12.5％アップ/ATKアップの最大値をさらに200％アップ",
+        "effects_text": [
+          "ATKの上昇値が50％+自身の基礎ATK200ごと×12.5％アップ/ATKアップの最大値をさらに200％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%～200%",
+            "formula": "50%+自身の基礎ATK200ごと×12.5% (合計最大200%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が50%+自身の基礎ATK200ごと×12.5%アップ/ATKアップの最大値をさらに200%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
     "accessory_name": "リィベルの首飾り",
     "equip_id": 3300286,
     "illust_id": "equip_3300286",

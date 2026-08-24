@@ -93,6 +93,7 @@ export const taxonomy = {
     { id: "overheal",     label: "オーバーヒール割合" },
     { id: "ex_use_count", label: "スキル使用回数" },
     { id: "unison",       label: "ユニゾン参加人数" },
+    { id: "state_count",  label: "状態移行回数" },
   ],
 };
 
