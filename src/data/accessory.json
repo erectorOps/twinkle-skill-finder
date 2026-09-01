@@ -52535,6 +52535,439 @@
   },
   {
     "source": "EquipDetail",
+    "accessory_name": "エルデリーゼのストラップ",
+    "equip_id": 3300280,
+    "illust_id": "equip_3300280",
+    "rarity": 3,
+    "unit_id": 1055003,
+    "game_unit_id": 1055003,
+    "unit_illust_id": 1055003,
+    "character_id": 55,
+    "character_name": "エルデリーゼ",
+    "unit_name": "攻め攻めメイド！",
+    "exclusive_unit_name": "[攻め攻めメイド！]エルデリーゼ",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": 846,
+      "ex": null,
+      "ex_up": null,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 1,
+        "parameter_value": 846
+      }
+    ],
+    "skill_ids": {
+      "EX1": 10550031,
+      "EX2": 10550032,
+      "EX2+": "10550032_plus"
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10550031,
+        "text": "ダメージ50％アップ",
+        "effects_text": [
+          "ダメージ50％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+50%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ50%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10550032,
+        "text": "ダメージ125％アップ/人間または流星学園附属の味方のATKの上昇値が人間または流星学園附属の味方の数×30％アップ",
+        "effects_text": [
+          "ダメージ125％アップ",
+          "人間または流星学園附属の味方のATKの上昇値が人間または流星学園附属の味方の数×30％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+125%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ125%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+30%～150%",
+            "formula": "人間または流星学園附属の味方の数×30%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "人間または流星学園附属の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "人間または流星学園附属の味方のATKの上昇値が人間または流星学園附属の味方の数×30%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2+",
+        "skill_id": "10550032_plus",
+        "text": "ダメージ200％アップ/人間または流星学園附属の味方のATKの上昇値が人間または流星学園附属の味方の数×30％アップ",
+        "effects_text": [
+          "ダメージ200％アップ",
+          "人間または流星学園附属の味方のATKの上昇値が人間または流星学園附属の味方の数×30％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+200%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ200%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+30%～150%",
+            "formula": "人間または流星学園附属の味方の数×30%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "人間または流星学園附属の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "人間または流星学園附属の味方のATKの上昇値が人間または流星学園附属の味方の数×30%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「ロイヤル・ペネトレーション」のダメージ50％アップ/\nEX2「グランド・インペイラー」のダメージ125％アップ/人間または流星学園附属の味方のATKの上昇値が人間または流星学園附属の味方の数×30％アップ/\nEX2+「スピア・フォー・マイ・ロード」のダメージ200％アップ/人間または流星学園附属の味方のATKの上昇値が人間または流星学園附属の味方の数×30％アップ",
+    "ability_full": "EX1「ロイヤル・ペネトレーション」のダメージ50％アップ/\nEX2「グランド・インペイラー」のダメージ125％アップ/人間または流星学園附属の味方のATKの上昇値が人間または流星学園附属の味方の数×30％アップ/\nEX2+「スピア・フォー・マイ・ロード」のダメージ200％アップ/人間または流星学園附属の味方のATKの上昇値が人間または流星学園附属の味方の数×30％アップ",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10550031,
+        "text": "ダメージ50％アップ",
+        "effects_text": [
+          "ダメージ50％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+50%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ50%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10550032,
+        "text": "ダメージ125％アップ/人間または流星学園附属の味方のATKの上昇値が人間または流星学園附属の味方の数×30％アップ",
+        "effects_text": [
+          "ダメージ125％アップ",
+          "人間または流星学園附属の味方のATKの上昇値が人間または流星学園附属の味方の数×30％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+125%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ125%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+30%～150%",
+            "formula": "人間または流星学園附属の味方の数×30%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "人間または流星学園附属の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "人間または流星学園附属の味方のATKの上昇値が人間または流星学園附属の味方の数×30%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2+",
+        "skill_id": "10550032_plus",
+        "text": "ダメージ200％アップ/人間または流星学園附属の味方のATKの上昇値が人間または流星学園附属の味方の数×30％アップ",
+        "effects_text": [
+          "ダメージ200％アップ",
+          "人間または流星学園附属の味方のATKの上昇値が人間または流星学園附属の味方の数×30％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+200%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ200%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+30%～150%",
+            "formula": "人間または流星学園附属の味方の数×30%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "人間または流星学園附属の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "人間または流星学園附属の味方のATKの上昇値が人間または流星学園附属の味方の数×30%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
+    "accessory_name": "ヒマワリの髪飾り",
+    "equip_id": 3300282,
+    "illust_id": "equip_3300282",
+    "rarity": 3,
+    "unit_id": 1098002,
+    "game_unit_id": 1098002,
+    "unit_illust_id": 1098002,
+    "character_id": 98,
+    "character_name": "ヒマワリ",
+    "unit_name": "白のエージェント",
+    "exclusive_unit_name": "[白のエージェント]ヒマワリ",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "2",
+      "label": "スピード",
+      "icon": "type_2.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": 846,
+      "ex": null,
+      "ex_up": null,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 1,
+        "parameter_value": 846
+      }
+    ],
+    "skill_ids": {
+      "EX1": 10980021,
+      "EX2": 10980022
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10980021,
+        "text": "ダメージ15％アップ/攻撃回数1回増加",
+        "effects_text": [
+          "ダメージ15％アップ",
+          "攻撃回数1回増加"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+15%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ15%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "攻撃回数の強化",
+            "display_value": "+1回",
+            "formula": "",
+            "value": {
+              "count": 1
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "攻撃回数1回増加",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10980022,
+        "text": "ダメージ160％（自身のEXスキル2の使用が2回目以下の時、200％）アップ",
+        "effects_text": [
+          "ダメージ160％（自身のEXスキル2の使用が2回目以下の時、200％）アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+160%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "自身のEXスキル2の使用が2回目以下の時、200%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ160%(自身のEXスキル2の使用が2回目以下の時、200%)アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「プロフィットバースト」のダメージ15％アップ/攻撃回数1回増加/\nEX2「サンライズオーバーシュート」のダメージ160％（自身のEXスキル2の使用が2回目以下の時、200％）アップ",
+    "ability_full": "EX1「プロフィットバースト」のダメージ15％アップ/攻撃回数1回増加/\nEX2「サンライズオーバーシュート」のダメージ160％（自身のEXスキル2の使用が2回目以下の時、200％）アップ",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10980021,
+        "text": "ダメージ15％アップ/攻撃回数1回増加",
+        "effects_text": [
+          "ダメージ15％アップ",
+          "攻撃回数1回増加"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+15%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ15%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "攻撃回数の強化",
+            "display_value": "+1回",
+            "formula": "",
+            "value": {
+              "count": 1
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "攻撃回数1回増加",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10980022,
+        "text": "ダメージ160％（自身のEXスキル2の使用が2回目以下の時、200％）アップ",
+        "effects_text": [
+          "ダメージ160％（自身のEXスキル2の使用が2回目以下の時、200％）アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+160%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "自身のEXスキル2の使用が2回目以下の時、200%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ160%(自身のEXスキル2の使用が2回目以下の時、200%)アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
     "accessory_name": "リィベルの首飾り",
     "equip_id": 3300286,
     "illust_id": "equip_3300286",

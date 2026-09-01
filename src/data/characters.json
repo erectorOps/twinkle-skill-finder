@@ -6340,6 +6340,54 @@
     "specific_gauge_data": []
   },
   {
+    "unit_id": 1055003,
+    "game_unit_id": 1055003,
+    "unit_illust_id": 1055003,
+    "is_awake_unit": 0,
+    "character_name": "エルデリーゼ",
+    "character_name_kana": "エルテリーセ",
+    "unit_name": "攻め攻めメイド！",
+    "rarity": 3,
+    "attr_type": {
+      "id": "5",
+      "label": "闇",
+      "icon": "attribute_05.png"
+    },
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "camps": [
+      {
+        "id": 1,
+        "label": "人間",
+        "icon": "race_1.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 5,
+        "label": "流星学園附属",
+        "icon": "affiliation_02.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "3",
+        "label": "打撃",
+        "icon": "icon_equipment_01_03.png"
+      }
+    ],
+    "specific_gauge_data": {
+      "specific_name": "献身状態",
+      "specific_detail": "◆通常状態\n通常状態中、EXスキル1、または、EXスキル2を使用すると献身ゲージが「1」溜まる。\n献身ゲージが「3」溜まると「献身状態」に移行する。\n\n◆献身状態\n献身状態に移行直後、人間または流星学園附属の味方のクリティカルを50％加算（各対象の行動終了1回まで） ※2つの条件を満たした場合でも効果は重複しない\n献身状態中、「EXスキル2」が「EXスキル2+」に変化する。\nEXスキル2+を使用すると献身状態が解除され、「通常状態」に戻る。",
+      "icon_id": 61,
+      "is_unlock": 1,
+      "is_strengthen": 0
+    }
+  },
+  {
     "unit_id": 1056001,
     "game_unit_id": 1056001,
     "unit_illust_id": 1056001,
@@ -9748,6 +9796,48 @@
         "id": "2",
         "label": "斬撃",
         "icon": "icon_equipment_01_02.png"
+      }
+    ],
+    "specific_gauge_data": []
+  },
+  {
+    "unit_id": 1098002,
+    "game_unit_id": 1098002,
+    "unit_illust_id": 1098002,
+    "is_awake_unit": 0,
+    "character_name": "ヒマワリ",
+    "character_name_kana": "ヒマワリ",
+    "unit_name": "白のエージェント",
+    "rarity": 2,
+    "attr_type": {
+      "id": "1",
+      "label": "炎",
+      "icon": "attribute_01.png"
+    },
+    "role": {
+      "id": "2",
+      "label": "スピード",
+      "icon": "type_2.png"
+    },
+    "camps": [
+      {
+        "id": 1,
+        "label": "人間",
+        "icon": "race_1.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 5,
+        "label": "流星学園附属",
+        "icon": "affiliation_02.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "3",
+        "label": "打撃",
+        "icon": "icon_equipment_01_03.png"
       }
     ],
     "specific_gauge_data": []

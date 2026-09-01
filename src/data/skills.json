@@ -37629,6 +37629,500 @@
     ]
   },
   {
+    "unit_id": 1055003,
+    "game_unit_id": 1055003,
+    "unit_illust_id": 1055003,
+    "is_awake_unit": 0,
+    "skill_id": 10550031,
+    "skill_type": "EX1",
+    "name": "ロイヤル・ペネトレーション",
+    "icon_id": 101,
+    "cost_ex_gauge": 100,
+    "skill_detail": "敵単体に100％×5回のダメージ/人間または流星学園附属の味方のATKを人間または流星学園附属の味方の数×40％アップ（30CT）/ノーツを5～5前方に移動 ※2つの条件を満たした場合でも効果は重複しない/自身を含む人間の味方と2体以上ユニゾン時、自身の行動CT50％短縮（1CT）",
+    "effects": [
+      {
+        "display_value": "100%×5回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 100,
+          "hit": 5
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "敵単体に100%×5回のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "40%～200%",
+        "formula": "人間または流星学園附属の味方の数×40%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 40
+        },
+        "effect_class": "buff",
+        "target": "人間または流星学園附属の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 5
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 1
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "affiliation": 5
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "人間または流星学園附属の味方のATKを人間または流星学園附属の味方の数×40%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "5",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 5,
+          "max": 5
+        },
+        "effect_class": "note",
+        "target": "人間または流星学園附属の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "ノーツを5～5前方に移動 ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "50%",
+        "formula": "",
+        "type": "行動CT短縮",
+        "value": {
+          "rate": 50
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 1
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "自身を含む人間の味方と2体以上ユニゾン時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "自身を含む人間の味方と2体以上ユニゾン時、自身の行動CT50%短縮(1CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1055003,
+    "game_unit_id": 1055003,
+    "unit_illust_id": 1055003,
+    "is_awake_unit": 0,
+    "skill_id": 10550032,
+    "skill_type": "EX2",
+    "name": "グランド・インペイラー",
+    "icon_id": 100,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵全体に250％のダメージ/人間または流星学園附属の味方のATKを人間または流星学園附属の味方の数×120％アップ（30CT）/ノーツを7～7前方に移動 ※2つの条件を満たした場合でも効果は重複しない/人間の味方を3体以上編成している時、人間または流星学園附属の味方のクリティカル時のダメージ倍率を40％（1バトル中、自身のEXスキル2の使用が3回目以下の時、80％）加算（15CT） ※2つの条件を満たした場合でも効果は重複しない",
+    "effects": [
+      {
+        "display_value": "250%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 250,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "敵全体に250%のダメージ",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "120%～600%",
+        "formula": "人間または流星学園附属の味方の数×120%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 120
+        },
+        "effect_class": "buff",
+        "target": "人間または流星学園附属の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 5
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 1
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "affiliation": 5
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "人間または流星学園附属の味方のATKを人間または流星学園附属の味方の数×120%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "7",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 7,
+          "max": 7
+        },
+        "effect_class": "note",
+        "target": "人間または流星学園附属の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "ノーツを7～7前方に移動 ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "40%",
+        "formula": "",
+        "type": "クリティカルダメージアップ",
+        "value": {
+          "rate": 40
+        },
+        "effect_class": "buff",
+        "target": "人間または流星学園附属の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 15
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "人間の味方を3体以上編成している時",
+            "label": "発動条件"
+          },
+          {
+            "type": "boost",
+            "text": "1バトル中、自身のEXスキル2の使用が3回目以下の時、80%",
+            "label": "強化"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "人間の味方を3体以上編成している時、人間または流星学園附属の味方のクリティカル時のダメージ倍率を40%(1バトル中、自身のEXスキル2の使用が3回目以下の時、80%)加算(15CT) ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1055003,
+    "game_unit_id": 1055003,
+    "unit_illust_id": 1055003,
+    "is_awake_unit": 0,
+    "skill_id": "10550032_plus",
+    "skill_type": "EX2+",
+    "name": "スピア・フォー・マイ・ロード",
+    "icon_id": 100,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵全体に400％のダメージ/人間または流星学園附属の味方のATKを人間または流星学園附属の味方の数×120％アップ（30CT）/ノーツを7～7前方に移動 ※2つの条件を満たした場合でも効果は重複しない/人間の味方を3体以上編成している時、人間または流星学園附属の味方のクリティカル時のダメージ倍率を50％（1バトル中、自身のEXスキル2+の使用が3回目以下の時、100％）加算（15CT） ※2つの条件を満たした場合でも効果は重複しない",
+    "effects": [
+      {
+        "display_value": "400%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 400,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "敵全体に400%のダメージ",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "120%～600%",
+        "formula": "人間または流星学園附属の味方の数×120%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 120
+        },
+        "effect_class": "buff",
+        "target": "人間または流星学園附属の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 5
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 1
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "affiliation": 5
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "人間または流星学園附属の味方のATKを人間または流星学園附属の味方の数×120%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "7",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 7,
+          "max": 7
+        },
+        "effect_class": "note",
+        "target": "人間または流星学園附属の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "ノーツを7～7前方に移動 ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "50%",
+        "formula": "",
+        "type": "クリティカルダメージアップ",
+        "value": {
+          "rate": 50
+        },
+        "effect_class": "buff",
+        "target": "人間または流星学園附属の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 15
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "人間の味方を3体以上編成している時",
+            "label": "発動条件"
+          },
+          {
+            "type": "boost",
+            "text": "1バトル中、自身のEXスキル2+の使用が3回目以下の時、100%",
+            "label": "強化"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "人間の味方を3体以上編成している時、人間または流星学園附属の味方のクリティカル時のダメージ倍率を50%(1バトル中、自身のEXスキル2+の使用が3回目以下の時、100%)加算(15CT) ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
     "unit_id": 1056001,
     "game_unit_id": 1056001,
     "unit_illust_id": 1056001,
@@ -58379,6 +58873,244 @@
           }
         ],
         "raw": "自身を含む人間の味方を5体以上編成している時、味方全体の行動CTを10%短縮(5CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1098002,
+    "game_unit_id": 1098002,
+    "unit_illust_id": 1098002,
+    "is_awake_unit": 0,
+    "skill_id": 10980021,
+    "skill_type": "EX1",
+    "name": "プロフィットバースト",
+    "icon_id": 101,
+    "cost_ex_gauge": 100,
+    "skill_detail": "対象とその左右1レーンにいる敵すべてに30％×5回のダメージ/自身のATKを流星学園附属の味方の数×30％アップ（30CT）/行動CT30％（自身のEXスキル1の使用が2回目以下の時、70％）短縮（1CT）/流星学園附属の味方を3体以上編成している時、対象とその左右1レーンにいる敵すべての重さ10％ダウン（3CT）",
+    "effects": [
+      {
+        "display_value": "30%×5回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 30,
+          "hit": 5
+        },
+        "effect_class": "main",
+        "target": "対象とその左右1レーンにいる敵すべて",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "multi",
+            "lane": "target_around",
+            "lane_count": 1,
+            "specials": []
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "対象とその左右1レーンにいる敵すべてに30%×5回のダメージ",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "30%～150%",
+        "formula": "流星学園附属の味方の数×30%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 30
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "affiliation": 5
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "自身のATKを流星学園附属の味方の数×30%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "30%",
+        "formula": "",
+        "type": "行動CT短縮",
+        "value": {
+          "rate": 30
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 1
+        },
+        "notes": [
+          {
+            "type": "boost",
+            "text": "自身のEXスキル1の使用が2回目以下の時、70%",
+            "label": "強化"
+          }
+        ],
+        "raw": "行動CT30%(自身のEXスキル1の使用が2回目以下の時、70%)短縮(1CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "10%",
+        "formula": "",
+        "type": "重さダウン",
+        "value": {
+          "rate": 10
+        },
+        "effect_class": "debuff",
+        "target": "対象とその左右1レーンにいる敵すべて",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "multi",
+            "lane": "target_around",
+            "lane_count": 1,
+            "specials": []
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 3
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "流星学園附属の味方を3体以上編成している時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "流星学園附属の味方を3体以上編成している時、対象とその左右1レーンにいる敵すべての重さ10%ダウン(3CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1098002,
+    "game_unit_id": 1098002,
+    "unit_illust_id": 1098002,
+    "is_awake_unit": 0,
+    "skill_id": 10980022,
+    "skill_type": "EX2",
+    "name": "サンライズオーバーシュート",
+    "icon_id": 100,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵全体に320％（自身のEXスキル2の使用が2回目以下の時、400％）のダメージ/自身に相手スタン時のダメージ倍率を50％加算（1CT）/流星学園附属の味方のノーツを3～3前方に移動",
+    "effects": [
+      {
+        "display_value": "320%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 320,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "自身のEXスキル2の使用が2回目以下の時、400%",
+            "label": "強化"
+          }
+        ],
+        "raw": "敵全体に320%(自身のEXスキル2の使用が2回目以下の時、400%)のダメージ",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "50%",
+        "formula": "",
+        "type": "相手スタン時ダメージ倍率アップ",
+        "value": {
+          "rate": 50
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 1
+        },
+        "notes": [],
+        "raw": "自身に相手スタン時のダメージ倍率を50%加算(1CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "3",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 3,
+          "max": 3
+        },
+        "effect_class": "note",
+        "target": "流星学園附属の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "流星学園附属の味方のノーツを3～3前方に移動",
         "children": [],
         "tags": [],
         "inherited_target": false
