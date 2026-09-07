@@ -9885,6 +9885,48 @@
     "specific_gauge_data": []
   },
   {
+    "unit_id": 1099002,
+    "game_unit_id": 1099002,
+    "unit_illust_id": 1099002,
+    "is_awake_unit": 0,
+    "character_name": "ミウ",
+    "character_name_kana": "ミウ",
+    "unit_name": "鋭刃のアサシン",
+    "rarity": 3,
+    "attr_type": {
+      "id": "5",
+      "label": "闇",
+      "icon": "attribute_05.png"
+    },
+    "role": {
+      "id": "4",
+      "label": "サポート",
+      "icon": "type_4.png"
+    },
+    "camps": [
+      {
+        "id": 1,
+        "label": "人間",
+        "icon": "race_1.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 5,
+        "label": "流星学園附属",
+        "icon": "affiliation_02.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "2",
+        "label": "斬撃",
+        "icon": "icon_equipment_01_02.png"
+      }
+    ],
+    "specific_gauge_data": []
+  },
+  {
     "unit_id": 1100001,
     "game_unit_id": 1100001,
     "unit_illust_id": 1100001,

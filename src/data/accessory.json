@@ -52781,6 +52781,149 @@
   },
   {
     "source": "EquipDetail",
+    "accessory_name": "ミウのぬいぐるみ",
+    "equip_id": 3300281,
+    "illust_id": "equip_3300281",
+    "rarity": 3,
+    "unit_id": 1099002,
+    "game_unit_id": 1099002,
+    "unit_illust_id": 1099002,
+    "character_id": 99,
+    "character_name": "ミウ",
+    "unit_name": "鋭刃のアサシン",
+    "exclusive_unit_name": "[鋭刃のアサシン]ミウ",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "4",
+      "label": "サポート",
+      "icon": "type_4.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": null,
+      "ex": null,
+      "ex_up": 58,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 2,
+        "parameter_value": 58
+      }
+    ],
+    "skill_ids": {
+      "EX1": 10990021,
+      "EX2": 10990022
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10990021,
+        "text": "ATKの上昇値が100％アップ",
+        "effects_text": [
+          "ATKの上昇値が100％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+100%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が100%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10990022,
+        "text": "ATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ",
+        "effects_text": [
+          "ATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%～150%",
+            "formula": "50%+自身の基礎ATK200ごと×9% (合計最大150%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が50%+自身の基礎ATK200ごと×9%アップ/ATKアップの最大値をさらに150%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「笑裏蔵刀」のATKの上昇値が100％アップ/\nEX2「趁火打劫」のATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ",
+    "ability_full": "EX1「笑裏蔵刀」のATKの上昇値が100％アップ/\nEX2「趁火打劫」のATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10990021,
+        "text": "ATKの上昇値が100％アップ",
+        "effects_text": [
+          "ATKの上昇値が100％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+100%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が100%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10990022,
+        "text": "ATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ",
+        "effects_text": [
+          "ATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%～150%",
+            "formula": "50%+自身の基礎ATK200ごと×9% (合計最大150%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が50%+自身の基礎ATK200ごと×9%アップ/ATKアップの最大値をさらに150%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
     "accessory_name": "ヒマワリの髪飾り",
     "equip_id": 3300282,
     "illust_id": "equip_3300282",

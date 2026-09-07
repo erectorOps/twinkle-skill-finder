@@ -59322,6 +59322,262 @@
     ]
   },
   {
+    "unit_id": 1099002,
+    "game_unit_id": 1099002,
+    "unit_illust_id": 1099002,
+    "is_awake_unit": 0,
+    "skill_id": 10990021,
+    "skill_type": "EX1",
+    "name": "笑裏蔵刀",
+    "icon_id": 300,
+    "cost_ex_gauge": 100,
+    "skill_detail": "一番右に配置されている味方のATK200％アップ（30CT）/人間または流星学園附属の味方のノーツを7～7前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない/自身を含む人間の味方と2体以上ユニゾン時、味方に3回の攻撃を無効化するバリアを張る（15CT）",
+    "effects": [
+      {
+        "display_value": "200%",
+        "formula": "",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 200
+        },
+        "effect_class": "buff",
+        "target": "一番右に配置されている味方",
+        "target_branches": {
+          "side": "ally",
+          "scope": "single",
+          "pos": "rightmost"
+        },
+        "scale_refs": [],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "一番右に配置されている味方のATK200%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "7",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 7,
+          "max": 7
+        },
+        "effect_class": "note",
+        "target": "人間または流星学園附属の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でもノーツ移動効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "人間または流星学園附属の味方のノーツを7～7前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "3回",
+        "formula": "",
+        "type": "バリア",
+        "value": {
+          "count": 3
+        },
+        "effect_class": "buff",
+        "target": "味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 15
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "自身を含む人間の味方と2体以上ユニゾン時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "自身を含む人間の味方と2体以上ユニゾン時、味方に3回の攻撃を無効化するバリアを張る(15CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1099002,
+    "game_unit_id": 1099002,
+    "unit_illust_id": 1099002,
+    "is_awake_unit": 0,
+    "skill_id": 10990022,
+    "skill_type": "EX2",
+    "name": "趁火打劫",
+    "icon_id": 300,
+    "cost_ex_gauge": 200,
+    "skill_detail": "人間または流星学園附属の味方のATKを100％+自身の基礎ATK200ごと×18％アップ（30CT）（最大300％）/行動CT15％短縮（10CT）/ノーツを7～7前方に移動 ※2つの条件を満たした場合でも効果は重複しない/自身のEX消費量10（1バトル中、自身のEXスキル2の使用が3回目以下の時、40）減少（次ターン以降EXスキル1回発動まで）",
+    "effects": [
+      {
+        "display_value": "100%～300%",
+        "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 18
+        },
+        "effect_class": "buff",
+        "target": "人間または流星学園附属の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 5
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "self_atk",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "人間または流星学園附属の味方のATKを100%+自身の基礎ATK200ごと×18%アップ(30CT)(最大300%)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "15%",
+        "formula": "",
+        "type": "行動CT短縮",
+        "value": {
+          "rate": 15
+        },
+        "effect_class": "buff",
+        "target": "人間または流星学園附属の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 10
+        },
+        "notes": [],
+        "raw": "行動CT15%短縮(10CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "7",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 7,
+          "max": 7
+        },
+        "effect_class": "note",
+        "target": "人間または流星学園附属の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "affiliation": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "ノーツを7～7前方に移動 ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "10",
+        "formula": "",
+        "type": "EX消費量減少",
+        "value": {
+          "amount": 10
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "1バトル中、自身のEXスキル2の使用が3回目以下の時、40",
+            "label": "強化"
+          },
+          {
+            "type": "expire",
+            "text": "次ターン以降EXスキル1回発動まで",
+            "label": "回数"
+          }
+        ],
+        "raw": "自身のEX消費量10(1バトル中、自身のEXスキル2の使用が3回目以下の時、40)減少(次ターン以降EXスキル1回発動まで)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
     "unit_id": 1100001,
     "game_unit_id": 1100001,
     "unit_illust_id": 1100001,
