@@ -19226,6 +19226,273 @@
     ]
   },
   {
+    "unit_id": 1024004,
+    "game_unit_id": 1024004,
+    "unit_illust_id": 1024004,
+    "is_awake_unit": 0,
+    "skill_id": 10240041,
+    "skill_type": "EX1",
+    "name": "神威奉納",
+    "icon_id": 101,
+    "cost_ex_gauge": 100,
+    "skill_detail": "対象とその左右1レーンにいる敵すべてに30％×5回のダメージ/自身のクリティカル時のダメージ倍率を魔族の味方の数×8％（自身に付与されているデバフ・状態異常効果の数が5以上の時、9％）加算（20CT）/自身のEX消費量を魔族の味方の数×4減少（次ターン以降EXスキル1回発動まで）/このEXスキル使用後、自身の被ダメージ10％増加（30CT）",
+    "effects": [
+      {
+        "display_value": "30%×5回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 30,
+          "hit": 5
+        },
+        "effect_class": "main",
+        "target": "対象とその左右1レーンにいる敵すべて",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "multi",
+            "lane": "target_around",
+            "lane_count": 1,
+            "specials": []
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "対象とその左右1レーンにいる敵すべてに30%×5回のダメージ",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "8%～40%",
+        "formula": "魔族の味方の数×8%",
+        "type": "クリティカルダメージアップ",
+        "value": {
+          "rate": 8
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 3
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "boost",
+            "text": "自身に付与されているデバフ・状態異常効果の数が5以上の時、9%",
+            "label": "強化"
+          }
+        ],
+        "raw": "自身のクリティカル時のダメージ倍率を魔族の味方の数×8%(自身に付与されているデバフ・状態異常効果の数が5以上の時、9%)加算(20CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "4～20",
+        "formula": "魔族の味方の数×4",
+        "type": "EX消費量減少",
+        "value": {
+          "amount": 4
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 3
+              }
+            ]
+          }
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "expire",
+            "text": "次ターン以降EXスキル1回発動まで",
+            "label": "回数"
+          }
+        ],
+        "raw": "自身のEX消費量を魔族の味方の数×4減少(次ターン以降EXスキル1回発動まで)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "10%",
+        "formula": "",
+        "type": "被ダメージアップ",
+        "value": {},
+        "effect_class": "debuff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [
+          {
+            "type": "timing",
+            "text": "このEXスキル使用後",
+            "label": "タイミング"
+          }
+        ],
+        "raw": "このEXスキル使用後、自身の被ダメージ10%増加(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1024004,
+    "game_unit_id": 1024004,
+    "unit_illust_id": 1024004,
+    "is_awake_unit": 0,
+    "skill_id": 10240042,
+    "skill_type": "EX2",
+    "name": "破邪天舞",
+    "icon_id": 100,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵全体に500％（ラッシュ100以上の時、570％）のダメージ/自身に「爆裂の恩寵」の効果/魔族の味方のノーツを6～6前方に移動\n※爆裂の恩寵：自身に付与されているデバフ・状態異常効果をすべて解除し、自身のATKを解除されたデバフ・状態異常効果の数×50％アップ（20CT）（最大500％）",
+    "effects": [
+      {
+        "display_value": "500%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 500,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "ラッシュ100以上の時、570%",
+            "label": "強化"
+          }
+        ],
+        "raw": "敵全体に500%(ラッシュ100以上の時、570%)のダメージ",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "「爆裂の恩寵」の効果:",
+        "formula": "",
+        "type": "固有効果",
+        "value": {
+          "name": "爆裂の恩寵"
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "自身に「爆裂の恩寵」の効果",
+        "children": [
+          {
+            "type": "状態回復",
+            "formula": "付与されているデバフ・状態異常効果をすべて解除",
+            "target": "自身",
+            "duration": null,
+            "value": {},
+            "display_value": "",
+            "effect_class": "buff"
+          },
+          {
+            "type": "ATKアップ",
+            "display_value": "0～500",
+            "formula": "解除された効果の数×50%アップ (最大500%)",
+            "duration": {
+              "ct": 20
+            },
+            "target": "自身",
+            "value": {},
+            "effect_class": "buff"
+          }
+        ],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "6",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 6,
+          "max": 6
+        },
+        "effect_class": "note",
+        "target": "魔族の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 3
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "魔族の味方のノーツを6～6前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
     "unit_id": 1025001,
     "game_unit_id": 1025001,
     "unit_illust_id": 1025001,
@@ -76449,6 +76716,515 @@
         "children": [],
         "tags": [],
         "inherited_target": true
+      }
+    ]
+  },
+  {
+    "unit_id": 1144001,
+    "game_unit_id": 1144001,
+    "unit_illust_id": 1144001,
+    "is_awake_unit": 0,
+    "skill_id": 11440011,
+    "skill_type": "EX1",
+    "name": "門前払い",
+    "icon_id": 300,
+    "cost_ex_gauge": 100,
+    "skill_detail": "一番右に配置されている味方のATKを50％+自身の基礎ATK200ごと×13％アップ（30CT）（最大200％）/魔族の味方の行動CT15％短縮（10CT）/ノーツを4～4前方に移動/一番右に配置されている味方の被ダメージ10％増加（30CT）",
+    "effects": [
+      {
+        "display_value": "50%～200%",
+        "formula": "50%+自身の基礎ATK200ごと×13% (合計最大200% ※基礎ATK2400以上)",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 13
+        },
+        "effect_class": "buff",
+        "target": "一番右に配置されている味方",
+        "target_branches": {
+          "side": "ally",
+          "scope": "single",
+          "pos": "rightmost"
+        },
+        "scale_refs": [
+          {
+            "src": "self_atk",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "一番右に配置されている味方のATKを50%+自身の基礎ATK200ごと×13%アップ(30CT)(最大200%)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "15%",
+        "formula": "",
+        "type": "行動CT短縮",
+        "value": {
+          "rate": 15
+        },
+        "effect_class": "buff",
+        "target": "魔族の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 3
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 10
+        },
+        "notes": [],
+        "raw": "魔族の味方の行動CT15%短縮(10CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "4",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 4,
+          "max": 4
+        },
+        "effect_class": "note",
+        "target": "魔族の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 3
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを4～4前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "10%",
+        "formula": "",
+        "type": "被ダメージアップ",
+        "value": {
+          "rate": 10
+        },
+        "effect_class": "debuff",
+        "target": "一番右に配置されている味方",
+        "target_branches": {
+          "side": "ally",
+          "scope": "single",
+          "pos": "rightmost"
+        },
+        "scale_refs": [],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "一番右に配置されている味方の被ダメージ10%増加(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1144001,
+    "game_unit_id": 1144001,
+    "unit_illust_id": 1144001,
+    "is_awake_unit": 0,
+    "skill_id": 11440012,
+    "skill_type": "EX2",
+    "name": "御用・制圧陣",
+    "icon_id": 202,
+    "cost_ex_gauge": 200,
+    "skill_detail": "対象とその左右1レーンにいる敵すべてに50％のダメージ/ノーツをタイムライン上15の位置にワープさせる【強制移動無効対象外】 ※指定の位置より後方の敵も15の位置にワープさせる/魔族の味方のATKを100％+自身の基礎ATK200ごと×18％アップ（30CT）（最大300％）/魔族の味方を3体以上編成している時、自身のEX消費量を30減少（次ターン以降EXスキル1回発動まで）",
+    "effects": [
+      {
+        "display_value": "50%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 50,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "対象とその左右1レーンにいる敵すべて",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "multi",
+            "lane": "target_around",
+            "lane_count": 1,
+            "specials": []
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "対象とその左右1レーンにいる敵すべてに50%のダメージ",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "タイムライン上15の位置にワープ",
+        "formula": "",
+        "type": "ノーツ強制移動",
+        "value": {},
+        "effect_class": "note",
+        "target": "対象とその左右1レーンにいる敵すべて",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "multi",
+            "lane": "target_around",
+            "lane_count": 1,
+            "specials": []
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "15より後方の敵も15の位置にワープする(デメリット)",
+            "label": "特性"
+          },
+          {
+            "type": "property",
+            "text": "強制移動無効対象外",
+            "label": "特性"
+          }
+        ],
+        "raw": "ノーツをタイムライン上15の位置にワープさせる【強制移動無効対象外】 ※指定の位置より後方の敵も15の位置にワープさせる",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "100%～300%",
+        "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 18
+        },
+        "effect_class": "buff",
+        "target": "魔族の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 3
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "self_atk",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "魔族の味方のATKを100%+自身の基礎ATK200ごと×18%アップ(30CT)(最大300%)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "30",
+        "formula": "",
+        "type": "EX消費量減少",
+        "value": {
+          "amount": 30
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "魔族の味方を3体以上編成している時",
+            "label": "発動条件"
+          },
+          {
+            "type": "expire",
+            "text": "次ターン以降EXスキル1回発動まで",
+            "label": "回数"
+          }
+        ],
+        "raw": "魔族の味方を3体以上編成している時、自身のEX消費量を30減少(次ターン以降EXスキル1回発動まで)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1145001,
+    "game_unit_id": 1145001,
+    "unit_illust_id": 1145001,
+    "is_awake_unit": 0,
+    "skill_id": 11450011,
+    "skill_type": "EX1",
+    "name": "国崩し",
+    "icon_id": 300,
+    "cost_ex_gauge": 100,
+    "skill_detail": "自身の右2レーンにいる味方のATKを50％+自身の基礎ATK200ごと×13％アップ（30CT）（最大200％）/ノーツを5～5（守護天使の場合、7～7）前方に移動/神族の味方を5体以上編成している時、自身の右1レーンにいる味方の通常攻撃・EXスキルによるラッシュ増加数が倍になる（5CT） ※この効果は重複しない",
+    "effects": [
+      {
+        "display_value": "50%～200%",
+        "formula": "50%+自身の基礎ATK200ごと×13% (合計最大200% ※基礎ATK2400以上)",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 13
+        },
+        "effect_class": "buff",
+        "target": "自身の右2レーンにいる味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "multi",
+            "lane": "right",
+            "lane_count": 2,
+            "specials": []
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "self_atk",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "自身の右2レーンにいる味方のATKを50%+自身の基礎ATK200ごと×13%アップ(30CT)(最大200%)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "5",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 5,
+          "max": 5
+        },
+        "effect_class": "note",
+        "target": "自身の右2レーンにいる味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "multi",
+            "lane": "right",
+            "lane_count": 2,
+            "specials": []
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "守護天使の場合、7",
+            "label": "強化"
+          }
+        ],
+        "raw": "ノーツを5～5(守護天使の場合、7～7)前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "",
+        "formula": "通常攻撃・EXスキルによるラッシュ増加数",
+        "type": "ラッシュ増加数2倍",
+        "value": {},
+        "effect_class": "buff",
+        "target": "自身の右1レーンにいる味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "single",
+            "lane": "right",
+            "lane_count": 1,
+            "specials": []
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 5
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "神族の味方を5体以上編成している時",
+            "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "この効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "神族の味方を5体以上編成している時、自身の右1レーンにいる味方の通常攻撃・EXスキルによるラッシュ増加数が倍になる(5CT) ※この効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1145001,
+    "game_unit_id": 1145001,
+    "unit_illust_id": 1145001,
+    "is_awake_unit": 0,
+    "skill_id": 11450012,
+    "skill_type": "EX2",
+    "name": "荒魂",
+    "icon_id": 357,
+    "cost_ex_gauge": 200,
+    "skill_detail": "神族の味方のATKを100％+自身の基礎ATK200ごと×18％アップ（30CT）（最大300％）/クリティカル時のダメージ倍率をラッシュ数×1％加算（25CT）（最大80％）/ノーツを7～7前方に移動/ラッシュ50以上の時、自身にEX還元を付与（1回発動まで）\n※EX還元：付与されてから味方のラッシュ数が30増加した際、味方のEXゲージ40増加",
+    "effects": [
+      {
+        "display_value": "100%～300%",
+        "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 18
+        },
+        "effect_class": "buff",
+        "target": "神族の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 2
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "self_atk",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "神族の味方のATKを100%+自身の基礎ATK200ごと×18%アップ(30CT)(最大300%)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "1%～80%",
+        "formula": "ラッシュ数×1% (最大80%)",
+        "type": "クリティカルダメージアップ",
+        "value": {
+          "rate": 1
+        },
+        "effect_class": "buff",
+        "target": "神族の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 2
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "rush",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 25
+        },
+        "notes": [],
+        "raw": "クリティカル時のダメージ倍率をラッシュ数×1%加算(25CT)(最大80%)",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "7",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 7,
+          "max": 7
+        },
+        "effect_class": "note",
+        "target": "神族の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 2
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを7～7前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "",
+        "formula": "付与後に味方ラッシュ数が30増加したらEXゲージ40増加",
+        "type": "EX還元",
+        "value": {},
+        "effect_class": "other",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "ラッシュ50以上の時",
+            "label": "発動条件"
+          },
+          {
+            "type": "expire",
+            "text": "1回発動まで",
+            "label": "回数"
+          }
+        ],
+        "raw": "ラッシュ50以上の時、自身にEX還元を付与(1回発動まで)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
       }
     ]
   },

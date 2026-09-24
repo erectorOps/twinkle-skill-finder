@@ -53111,6 +53111,479 @@
   },
   {
     "source": "EquipDetail",
+    "accessory_name": "ヨミの水引飾り",
+    "equip_id": 3300283,
+    "illust_id": "equip_3300283",
+    "rarity": 3,
+    "unit_id": 1024004,
+    "game_unit_id": 1024004,
+    "unit_illust_id": 1024004,
+    "character_id": 24,
+    "character_name": "ヨミ《爆裂》",
+    "unit_name": "破邪新星の超巫狐",
+    "exclusive_unit_name": "[破邪新星の超巫狐]ヨミ《爆裂》",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": 846,
+      "ex": null,
+      "ex_up": null,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 1,
+        "parameter_value": 846
+      }
+    ],
+    "skill_ids": {
+      "EX1": 10240041,
+      "EX2": 10240042
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10240041,
+        "text": "ダメージ15％アップ/攻撃回数1回増加",
+        "effects_text": [
+          "ダメージ15％アップ",
+          "攻撃回数1回増加"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+15%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ15%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "攻撃回数の強化",
+            "display_value": "+1回",
+            "formula": "",
+            "value": {
+              "count": 1
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "攻撃回数1回増加",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10240042,
+        "text": "ダメージ250％（ラッシュ100以上の時、285％）アップ",
+        "effects_text": [
+          "ダメージ250％（ラッシュ100以上の時、285％）アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+250%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "ラッシュ100以上の時、285%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ250%(ラッシュ100以上の時、285%)アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「神威奉納」のダメージ15％アップ/攻撃回数1回増加/\nEX2「破邪天舞」のダメージ250％（ラッシュ100以上の時、285％）アップ",
+    "ability_full": "EX1「神威奉納」のダメージ15％アップ/攻撃回数1回増加/\nEX2「破邪天舞」のダメージ250％（ラッシュ100以上の時、285％）アップ",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10240041,
+        "text": "ダメージ15％アップ/攻撃回数1回増加",
+        "effects_text": [
+          "ダメージ15％アップ",
+          "攻撃回数1回増加"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+15%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ15%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "攻撃回数の強化",
+            "display_value": "+1回",
+            "formula": "",
+            "value": {
+              "count": 1
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "攻撃回数1回増加",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10240042,
+        "text": "ダメージ250％（ラッシュ100以上の時、285％）アップ",
+        "effects_text": [
+          "ダメージ250％（ラッシュ100以上の時、285％）アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+250%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "ラッシュ100以上の時、285%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ250%(ラッシュ100以上の時、285%)アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
+    "accessory_name": "狛里の髪飾り",
+    "equip_id": 3300284,
+    "illust_id": "equip_3300284",
+    "rarity": 3,
+    "unit_id": 1144001,
+    "game_unit_id": 1144001,
+    "unit_illust_id": 1144001,
+    "character_id": 144,
+    "character_name": "狛里",
+    "unit_name": "辺境の英雄門番",
+    "exclusive_unit_name": "[辺境の英雄門番]狛里",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "4",
+      "label": "サポート",
+      "icon": "type_4.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": null,
+      "ex": null,
+      "ex_up": 58,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 2,
+        "parameter_value": 58
+      }
+    ],
+    "skill_ids": {
+      "EX1": 11440011,
+      "EX2": 11440012
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 11440011,
+        "text": "ATKの上昇値が25％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに100％アップ",
+        "effects_text": [
+          "ATKの上昇値が25％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに100％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+25%～100%",
+            "formula": "25%+自身の基礎ATK200ごと×6.5% (合計最大100%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が25%+自身の基礎ATK200ごと×6.5%アップ/ATKアップの最大値をさらに100%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 11440012,
+        "text": "ATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ",
+        "effects_text": [
+          "ATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%～150%",
+            "formula": "50%+自身の基礎ATK200ごと×9% (合計最大150%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が50%+自身の基礎ATK200ごと×9%アップ/ATKアップの最大値をさらに150%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「門前払い」のATKの上昇値が25％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに100％アップ/\nEX2「御用・制圧陣」のATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ",
+    "ability_full": "EX1「門前払い」のATKの上昇値が25％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに100％アップ/\nEX2「御用・制圧陣」のATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 11440011,
+        "text": "ATKの上昇値が25％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに100％アップ",
+        "effects_text": [
+          "ATKの上昇値が25％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに100％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+25%～100%",
+            "formula": "25%+自身の基礎ATK200ごと×6.5% (合計最大100%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が25%+自身の基礎ATK200ごと×6.5%アップ/ATKアップの最大値をさらに100%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 11440012,
+        "text": "ATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ",
+        "effects_text": [
+          "ATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%～150%",
+            "formula": "50%+自身の基礎ATK200ごと×9% (合計最大150%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が50%+自身の基礎ATK200ごと×9%アップ/ATKアップの最大値をさらに150%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
+    "accessory_name": "オオヒメ(ちぃ)のリボン",
+    "equip_id": 3300285,
+    "illust_id": "equip_3300285",
+    "rarity": 3,
+    "unit_id": 1145001,
+    "game_unit_id": 1145001,
+    "unit_illust_id": 1145001,
+    "character_id": 145,
+    "character_name": "オオヒメ(ちぃ)",
+    "unit_name": "天恵の幼アバター",
+    "exclusive_unit_name": "[天恵の幼アバター]オオヒメ(ちぃ)",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "4",
+      "label": "サポート",
+      "icon": "type_4.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": null,
+      "ex": null,
+      "ex_up": 58,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 2,
+        "parameter_value": 58
+      }
+    ],
+    "skill_ids": {
+      "EX1": 11450011,
+      "EX2": 11450012
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 11450011,
+        "text": "ATKの上昇値が25％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに100％アップ",
+        "effects_text": [
+          "ATKの上昇値が25％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに100％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+25%～100%",
+            "formula": "25%+自身の基礎ATK200ごと×6.5% (合計最大100%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が25%+自身の基礎ATK200ごと×6.5%アップ/ATKアップの最大値をさらに100%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 11450012,
+        "text": "ATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ",
+        "effects_text": [
+          "ATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%～150%",
+            "formula": "50%+自身の基礎ATK200ごと×9% (合計最大150%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が50%+自身の基礎ATK200ごと×9%アップ/ATKアップの最大値をさらに150%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「国崩し」のATKの上昇値が25％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに100％アップ/\nEX2「荒魂」のATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ",
+    "ability_full": "EX1「国崩し」のATKの上昇値が25％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに100％アップ/\nEX2「荒魂」のATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 11450011,
+        "text": "ATKの上昇値が25％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに100％アップ",
+        "effects_text": [
+          "ATKの上昇値が25％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに100％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+25%～100%",
+            "formula": "25%+自身の基礎ATK200ごと×6.5% (合計最大100%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が25%+自身の基礎ATK200ごと×6.5%アップ/ATKアップの最大値をさらに100%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 11450012,
+        "text": "ATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ",
+        "effects_text": [
+          "ATKの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%～150%",
+            "formula": "50%+自身の基礎ATK200ごと×9% (合計最大150%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が50%+自身の基礎ATK200ごと×9%アップ/ATKアップの最大値をさらに150%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
     "accessory_name": "リィベルの首飾り",
     "equip_id": 3300286,
     "illust_id": "equip_3300286",

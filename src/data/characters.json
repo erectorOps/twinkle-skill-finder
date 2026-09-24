@@ -3058,6 +3058,48 @@
     }
   },
   {
+    "unit_id": 1024004,
+    "game_unit_id": 1024004,
+    "unit_illust_id": 1024004,
+    "is_awake_unit": 0,
+    "character_name": "ヨミ《爆裂》",
+    "character_name_kana": "ヨミ",
+    "unit_name": "破邪新星の超巫狐",
+    "rarity": 3,
+    "attr_type": {
+      "id": "3",
+      "label": "雷",
+      "icon": "attribute_03.png"
+    },
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "camps": [
+      {
+        "id": 3,
+        "label": "魔族",
+        "icon": "race_3.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 2,
+        "label": "新星学園",
+        "icon": "affiliation_01.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "1",
+        "label": "魔法",
+        "icon": "icon_equipment_01_01.png"
+      }
+    ],
+    "specific_gauge_data": []
+  },
+  {
     "unit_id": 1025001,
     "game_unit_id": 1025001,
     "unit_illust_id": 1025001,
@@ -12073,6 +12115,95 @@
       "is_unlock": 1,
       "is_strengthen": 0
     }
+  },
+  {
+    "unit_id": 1144001,
+    "game_unit_id": 1144001,
+    "unit_illust_id": 1144001,
+    "is_awake_unit": 0,
+    "character_name": "狛里",
+    "character_name_kana": "コマリ",
+    "unit_name": "辺境の英雄門番",
+    "rarity": 3,
+    "attr_type": {
+      "id": "3",
+      "label": "雷",
+      "icon": "attribute_03.png"
+    },
+    "role": {
+      "id": "4",
+      "label": "サポート",
+      "icon": "type_4.png"
+    },
+    "camps": [
+      {
+        "id": 3,
+        "label": "魔族",
+        "icon": "race_3.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 5,
+        "label": "流星学園附属",
+        "icon": "affiliation_02.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "3",
+        "label": "打撃",
+        "icon": "icon_equipment_01_03.png"
+      }
+    ],
+    "specific_gauge_data": []
+  },
+  {
+    "unit_id": 1145001,
+    "game_unit_id": 1145001,
+    "unit_illust_id": 1145001,
+    "is_awake_unit": 0,
+    "character_name": "オオヒメ(ちぃ)",
+    "character_name_kana": "オオヒメ(チィ)",
+    "unit_name": "天恵の幼アバター",
+    "rarity": 3,
+    "attr_type": {
+      "id": "2",
+      "label": "水",
+      "icon": "attribute_02.png"
+    },
+    "role": {
+      "id": "4",
+      "label": "サポート",
+      "icon": "type_4.png"
+    },
+    "camps": [
+      {
+        "id": 2,
+        "label": "神族",
+        "icon": "race_4.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 5,
+        "label": "流星学園附属",
+        "icon": "affiliation_02.png"
+      },
+      {
+        "id": 3,
+        "label": "守護天使",
+        "icon": "affiliation_03.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "2",
+        "label": "斬撃",
+        "icon": "icon_equipment_01_02.png"
+      }
+    ],
+    "specific_gauge_data": []
   },
   {
     "unit_id": 1154001,
