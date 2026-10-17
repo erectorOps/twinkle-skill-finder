@@ -53907,5 +53907,1117 @@
         ]
       }
     ]
+  },
+  {
+    "source": "EquipDetail",
+    "accessory_name": "蘭美のうさぎ柄のリボン",
+    "equip_id": 3300287,
+    "illust_id": "equip_3300287",
+    "rarity": 3,
+    "unit_id": 1077004,
+    "game_unit_id": 1077004,
+    "unit_illust_id": 1077004,
+    "character_id": 77,
+    "character_name": "蘭美",
+    "unit_name": "瞬影トリックバニー",
+    "exclusive_unit_name": "[瞬影トリックバニー]蘭美",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": 846,
+      "ex": null,
+      "ex_up": null,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 1,
+        "parameter_value": 846
+      }
+    ],
+    "skill_ids": {
+      "EX1": 10770041,
+      "EX2": 10770042,
+      "EX2+": "10770042_plus"
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10770041,
+        "text": "ダメージ47％アップ/攻撃回数1回増加",
+        "effects_text": [
+          "ダメージ47％アップ",
+          "攻撃回数1回増加"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+47%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ47%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "攻撃回数の強化",
+            "display_value": "+1回",
+            "formula": "",
+            "value": {
+              "count": 1
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "攻撃回数1回増加",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10770042,
+        "text": "ダメージ125％アップ",
+        "effects_text": [
+          "ダメージ125％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+125%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ125%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "COMMON",
+        "skill_id": null,
+        "text": "魔族または光属性の味方のATKアップの上昇値がラッシュ数×0.75％アップ/ATKアップの最大値をさらに75％アップ/さらに魔族または光属性の味方のATKアップの上昇値が75％アップ",
+        "effects_text": [
+          "魔族または光属性の味方のATKアップの上昇値がラッシュ数×0.75％アップ",
+          "ATKアップの最大値をさらに75％アップ",
+          "さらに魔族または光属性の味方のATKアップの上昇値が75％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+0.75%",
+            "formula": "ラッシュ数×0.75%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "魔族または光属性の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "魔族または光属性の味方のATKアップの上昇値がラッシュ数×0.75%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATK最大値強化",
+            "display_value": "75%",
+            "formula": "さらに75%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKアップの最大値をさらに75%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+75%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "魔族または光属性の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "さらに魔族または光属性の味方のATKアップの上昇値が75%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2+",
+        "skill_id": "10770042_plus",
+        "text": "ダメージ200％アップ（ラッシュ100以上の時、250％アップ）/魔族または光属性の味方のATKアップの上昇値がラッシュ数×0.75％アップ/ATKアップの最大値をさらに75％アップ/さらに魔族または光属性の味方のATKアップの上昇値が75％アップ",
+        "effects_text": [
+          "ダメージ200％アップ（ラッシュ100以上の時、250％アップ）",
+          "魔族または光属性の味方のATKアップの上昇値がラッシュ数×0.75％アップ",
+          "ATKアップの最大値をさらに75％アップ",
+          "さらに魔族または光属性の味方のATKアップの上昇値が75％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+200%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "ラッシュ100以上の時、250%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ200%アップ(ラッシュ100以上の時、250%アップ)",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+0.75%",
+            "formula": "ラッシュ数×0.75%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "魔族または光属性の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "魔族または光属性の味方のATKアップの上昇値がラッシュ数×0.75%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATK最大値強化",
+            "display_value": "75%",
+            "formula": "さらに75%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKアップの最大値をさらに75%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+75%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "魔族または光属性の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "さらに魔族または光属性の味方のATKアップの上昇値が75%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「ブリリアント・ブレイカー」のダメージ47％アップ/攻撃回数1回増加/\nEX2「リコイル・ショーストッパー」のダメージ125％アップ/\n魔族または光属性の味方のATKアップの上昇値がラッシュ数×0.75％アップ/ATKアップの最大値をさらに75％アップ/さらに魔族または光属性の味方のATKアップの上昇値が75％アップ/\nEX2+「ロイヤルエース・クラッシャー」のダメージ200％アップ（ラッシュ100以上の時、250％アップ）/魔族または光属性の味方のATKアップの上昇値がラッシュ数×0.75％アップ/ATKアップの最大値をさらに75％アップ/さらに魔族または光属性の味方のATKアップの上昇値が75％アップ",
+    "ability_full": "EX1「ブリリアント・ブレイカー」のダメージ47％アップ/攻撃回数1回増加/\nEX2「リコイル・ショーストッパー」のダメージ125％アップ/\n魔族または光属性の味方のATKアップの上昇値がラッシュ数×0.75％アップ/ATKアップの最大値をさらに75％アップ/さらに魔族または光属性の味方のATKアップの上昇値が75％アップ/\nEX2+「ロイヤルエース・クラッシャー」のダメージ200％アップ（ラッシュ100以上の時、250％アップ）/魔族または光属性の味方のATKアップの上昇値がラッシュ数×0.75％アップ/ATKアップの最大値をさらに75％アップ/さらに魔族または光属性の味方のATKアップの上昇値が75％アップ",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10770041,
+        "text": "ダメージ47％アップ/攻撃回数1回増加",
+        "effects_text": [
+          "ダメージ47％アップ",
+          "攻撃回数1回増加"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+47%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ47%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "攻撃回数の強化",
+            "display_value": "+1回",
+            "formula": "",
+            "value": {
+              "count": 1
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "攻撃回数1回増加",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10770042,
+        "text": "ダメージ125％アップ",
+        "effects_text": [
+          "ダメージ125％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+125%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ125%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "COMMON",
+        "skill_id": null,
+        "text": "魔族または光属性の味方のATKアップの上昇値がラッシュ数×0.75％アップ/ATKアップの最大値をさらに75％アップ/さらに魔族または光属性の味方のATKアップの上昇値が75％アップ",
+        "effects_text": [
+          "魔族または光属性の味方のATKアップの上昇値がラッシュ数×0.75％アップ",
+          "ATKアップの最大値をさらに75％アップ",
+          "さらに魔族または光属性の味方のATKアップの上昇値が75％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+0.75%",
+            "formula": "ラッシュ数×0.75%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "魔族または光属性の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "魔族または光属性の味方のATKアップの上昇値がラッシュ数×0.75%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATK最大値強化",
+            "display_value": "75%",
+            "formula": "さらに75%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKアップの最大値をさらに75%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+75%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "魔族または光属性の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "さらに魔族または光属性の味方のATKアップの上昇値が75%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2+",
+        "skill_id": "10770042_plus",
+        "text": "ダメージ200％アップ（ラッシュ100以上の時、250％アップ）/魔族または光属性の味方のATKアップの上昇値がラッシュ数×0.75％アップ/ATKアップの最大値をさらに75％アップ/さらに魔族または光属性の味方のATKアップの上昇値が75％アップ",
+        "effects_text": [
+          "ダメージ200％アップ（ラッシュ100以上の時、250％アップ）",
+          "魔族または光属性の味方のATKアップの上昇値がラッシュ数×0.75％アップ",
+          "ATKアップの最大値をさらに75％アップ",
+          "さらに魔族または光属性の味方のATKアップの上昇値が75％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+200%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "ラッシュ100以上の時、250%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ200%アップ(ラッシュ100以上の時、250%アップ)",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+0.75%",
+            "formula": "ラッシュ数×0.75%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "魔族または光属性の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "魔族または光属性の味方のATKアップの上昇値がラッシュ数×0.75%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATK最大値強化",
+            "display_value": "75%",
+            "formula": "さらに75%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKアップの最大値をさらに75%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+75%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "魔族または光属性の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "さらに魔族または光属性の味方のATKアップの上昇値が75%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
+    "accessory_name": "シュティレの梅柄リボン",
+    "equip_id": 3300288,
+    "illust_id": "equip_3300288",
+    "rarity": 3,
+    "unit_id": 1102002,
+    "game_unit_id": 1102002,
+    "unit_illust_id": 1102002,
+    "character_id": 102,
+    "character_name": "シュティレ",
+    "unit_name": "からくり踊る傘兎",
+    "exclusive_unit_name": "[からくり踊る傘兎]シュティレ",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "4",
+      "label": "サポート",
+      "icon": "type_4.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": null,
+      "ex": null,
+      "ex_up": 58,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 2,
+        "parameter_value": 58
+      }
+    ],
+    "skill_ids": {
+      "EX1": 11020021,
+      "EX2": 11020022
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 11020021,
+        "text": "ATKアップの上昇値が25％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに100％アップ",
+        "effects_text": [
+          "ATKアップの上昇値が25％+自身の基礎ATK200ごと×6.5％アップ",
+          "ATKアップの最大値をさらに100％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+25%",
+            "formula": "25%+自身の基礎ATK200ごと×6.5%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKアップの上昇値が25%+自身の基礎ATK200ごと×6.5%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATK最大値強化",
+            "display_value": "100%",
+            "formula": "さらに100%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKアップの最大値をさらに100%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 11020022,
+        "text": "ATKアップの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ",
+        "effects_text": [
+          "ATKアップの上昇値が50％+自身の基礎ATK200ごと×9％アップ",
+          "ATKアップの最大値をさらに150％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%",
+            "formula": "50%+自身の基礎ATK200ごと×9%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKアップの上昇値が50%+自身の基礎ATK200ごと×9%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATK最大値強化",
+            "display_value": "150%",
+            "formula": "さらに150%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKアップの最大値をさらに150%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「シャイニング・キャノピー」のATKアップの上昇値が25％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに100％アップ/\nEX2「フォートレス・フォーメーション」のATKアップの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ",
+    "ability_full": "EX1「シャイニング・キャノピー」のATKアップの上昇値が25％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに100％アップ/\nEX2「フォートレス・フォーメーション」のATKアップの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 11020021,
+        "text": "ATKアップの上昇値が25％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに100％アップ",
+        "effects_text": [
+          "ATKアップの上昇値が25％+自身の基礎ATK200ごと×6.5％アップ",
+          "ATKアップの最大値をさらに100％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+25%",
+            "formula": "25%+自身の基礎ATK200ごと×6.5%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKアップの上昇値が25%+自身の基礎ATK200ごと×6.5%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATK最大値強化",
+            "display_value": "100%",
+            "formula": "さらに100%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKアップの最大値をさらに100%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 11020022,
+        "text": "ATKアップの上昇値が50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ",
+        "effects_text": [
+          "ATKアップの上昇値が50％+自身の基礎ATK200ごと×9％アップ",
+          "ATKアップの最大値をさらに150％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%",
+            "formula": "50%+自身の基礎ATK200ごと×9%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKアップの上昇値が50%+自身の基礎ATK200ごと×9%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATK最大値強化",
+            "display_value": "150%",
+            "formula": "さらに150%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKアップの最大値をさらに150%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
+    "accessory_name": "トリュファイナの青薔薇飾り",
+    "equip_id": 3300289,
+    "illust_id": "equip_3300289",
+    "rarity": 3,
+    "unit_id": 1078002,
+    "game_unit_id": 1078002,
+    "unit_illust_id": 1078002,
+    "character_id": 78,
+    "character_name": "トリュファイナ",
+    "unit_name": "月下魔弾の魔女兎",
+    "exclusive_unit_name": "[月下魔弾の魔女兎]トリュファイナ",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": 846,
+      "ex": null,
+      "ex_up": null,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 1,
+        "parameter_value": 846
+      }
+    ],
+    "skill_ids": {
+      "EX1": 10780021,
+      "EX2": 10780022
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10780021,
+        "text": "ATKの上昇値が50％アップ/さらに1バトル中、自身のEXスキル1を使用する度にATKの上昇値が10％ずつ増加する/ATKアップの最大値をさらに100％アップ",
+        "effects_text": [
+          "ATKの上昇値が50％アップ/さらに1バトル中、自身のEXスキル1を使用する度にATKの上昇値が10％ずつ増加する/ATKアップの最大値をさらに100％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%～100%",
+            "formula": "50%+10%×n (合計最大+100%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "EX1使用毎にATKアップ+10%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ATKの上昇値が50%アップ/さらに1バトル中、自身のEXスキル1を使用する度にATKの上昇値が10%ずつ増加する/ATKアップの最大値をさらに100%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10780022,
+        "text": "ダメージ800％アップ（1バトル中、自身のEXスキル1の使用が4回目以降の時、1000％）",
+        "effects_text": [
+          "ダメージ800％アップ（1バトル中、自身のEXスキル1の使用が4回目以降の時、1000％）"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+800%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "1バトル中、自身のEXスキル1の使用が4回目以降の時、1000%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ800%アップ(1バトル中、自身のEXスキル1の使用が4回目以降の時、1000%)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「カンデラ・ヤクタ」のATKの上昇値が50％アップ/さらに1バトル中、自身のEXスキル1を使用する度にATKの上昇値が10％ずつ増加する/ATKアップの最大値をさらに100％アップ\nEX2「クラーラ・ヴェナティオー」のダメージ800％アップ（1バトル中、自身のEXスキル1の使用が4回目以降の時、1000％）",
+    "ability_full": "EX1「カンデラ・ヤクタ」のATKの上昇値が50％アップ/さらに1バトル中、自身のEXスキル1を使用する度にATKの上昇値が10％ずつ増加する/ATKアップの最大値をさらに100％アップ\nEX2「クラーラ・ヴェナティオー」のダメージ800％アップ（1バトル中、自身のEXスキル1の使用が4回目以降の時、1000％）",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10780021,
+        "text": "ATKの上昇値が50％アップ/さらに1バトル中、自身のEXスキル1を使用する度にATKの上昇値が10％ずつ増加する/ATKアップの最大値をさらに100％アップ",
+        "effects_text": [
+          "ATKの上昇値が50％アップ/さらに1バトル中、自身のEXスキル1を使用する度にATKの上昇値が10％ずつ増加する/ATKアップの最大値をさらに100％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%～100%",
+            "formula": "50%+10%×n (合計最大+100%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "EX1使用毎にATKアップ+10%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ATKの上昇値が50%アップ/さらに1バトル中、自身のEXスキル1を使用する度にATKの上昇値が10%ずつ増加する/ATKアップの最大値をさらに100%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10780022,
+        "text": "ダメージ800％アップ（1バトル中、自身のEXスキル1の使用が4回目以降の時、1000％）",
+        "effects_text": [
+          "ダメージ800％アップ（1バトル中、自身のEXスキル1の使用が4回目以降の時、1000％）"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+800%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "1バトル中、自身のEXスキル1の使用が4回目以降の時、1000%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ800%アップ(1バトル中、自身のEXスキル1の使用が4回目以降の時、1000%)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
+    "accessory_name": "ナターシャの赤薔薇飾り",
+    "equip_id": 3300290,
+    "illust_id": "equip_3300290",
+    "rarity": 3,
+    "unit_id": 1118003,
+    "game_unit_id": 1118003,
+    "unit_illust_id": 1118003,
+    "character_id": 118,
+    "character_name": "ナターシャ",
+    "unit_name": "吸血エンジェル？",
+    "exclusive_unit_name": "[吸血エンジェル？]ナターシャ",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "4",
+      "label": "サポート",
+      "icon": "type_4.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": null,
+      "ex": null,
+      "ex_up": 58,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 2,
+        "parameter_value": 58
+      }
+    ],
+    "skill_ids": {
+      "EX1": 11180031,
+      "EX2": 11180032
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 11180031,
+        "text": "ダメージ30％アップ",
+        "effects_text": [
+          "ダメージ30％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+30%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ30%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 11180032,
+        "text": "ATKアップを50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ",
+        "effects_text": [
+          "ATKアップを50％+自身の基礎ATK200ごと×9％アップ",
+          "ATKアップの最大値をさらに150％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%",
+            "formula": "50%+自身の基礎ATK200ごと×9%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKアップを50%+自身の基礎ATK200ごと×9%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATK最大値強化",
+            "display_value": "150%",
+            "formula": "さらに150%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKアップの最大値をさらに150%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「ルクス・カルメシナ」のダメージ30％アップ/  \nEX2「フィニス・ノクティス」のATKアップを50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ",
+    "ability_full": "EX1「ルクス・カルメシナ」のダメージ30％アップ/  \nEX2「フィニス・ノクティス」のATKアップを50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 11180031,
+        "text": "ダメージ30％アップ",
+        "effects_text": [
+          "ダメージ30％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+30%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ30%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 11180032,
+        "text": "ATKアップを50％+自身の基礎ATK200ごと×9％アップ/ATKアップの最大値をさらに150％アップ",
+        "effects_text": [
+          "ATKアップを50％+自身の基礎ATK200ごと×9％アップ",
+          "ATKアップの最大値をさらに150％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%",
+            "formula": "50%+自身の基礎ATK200ごと×9%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKアップを50%+自身の基礎ATK200ごと×9%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATK最大値強化",
+            "display_value": "150%",
+            "formula": "さらに150%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKアップの最大値をさらに150%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
+    "accessory_name": "ベアトリスのストライプリボン",
+    "equip_id": 3300291,
+    "illust_id": "equip_3300291",
+    "rarity": 3,
+    "unit_id": 1111004,
+    "game_unit_id": 1111004,
+    "unit_illust_id": 1111004,
+    "character_id": 111,
+    "character_name": "ベアトリス",
+    "unit_name": "ヴァンプキャット",
+    "exclusive_unit_name": "[ヴァンプキャット]ベアトリス",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "2",
+      "label": "スピード",
+      "icon": "type_2.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": 846,
+      "ex": null,
+      "ex_up": null,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 1,
+        "parameter_value": 846
+      }
+    ],
+    "skill_ids": {
+      "EX1": 11110041,
+      "EX2": 11110042
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 11110041,
+        "text": "ダメージ50％アップ",
+        "effects_text": [
+          "ダメージ50％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+50%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ50%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 11110042,
+        "text": "ダメージ125％（EXゲージが300以上の状態で使用した時、142.5％）アップ",
+        "effects_text": [
+          "ダメージ125％（EXゲージが300以上の状態で使用した時、142.5％）アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+125%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "EXゲージが300以上の状態で使用した時、142.5%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ125%(EXゲージが300以上の状態で使用した時、142.5%)アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「ヘルフレイム・スクラッチ」のダメージ50％アップ/  \nEX2「ナイトメア・レンド」のダメージ125％（EXゲージが300以上の状態で使用した時、142.5％）アップ",
+    "ability_full": "EX1「ヘルフレイム・スクラッチ」のダメージ50％アップ/  \nEX2「ナイトメア・レンド」のダメージ125％（EXゲージが300以上の状態で使用した時、142.5％）アップ",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 11110041,
+        "text": "ダメージ50％アップ",
+        "effects_text": [
+          "ダメージ50％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+50%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ50%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 11110042,
+        "text": "ダメージ125％（EXゲージが300以上の状態で使用した時、142.5％）アップ",
+        "effects_text": [
+          "ダメージ125％（EXゲージが300以上の状態で使用した時、142.5％）アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+125%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "EXゲージが300以上の状態で使用した時、142.5%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ125%(EXゲージが300以上の状態で使用した時、142.5%)アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
   }
 ]

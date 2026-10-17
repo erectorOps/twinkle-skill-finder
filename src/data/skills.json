@@ -8778,19 +8778,48 @@
         },
         "effect_class": "buff",
         "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 2
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 2
+              }
+            ]
+          }
+        ],
         "duration": {
           "ct": 25
         },
         "notes": [
           {
             "type": "condition",
-            "text": "ラッシュ30以上の時",
+            "text": "ラッシュ数が30以上の時",
             "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
           }
         ],
-        "tags": [
-          ""
-        ]
+        "raw": "ラッシュ数が30以上の時、味方全体のクリティカル時のダメージ倍率を神族または水属性の味方の数×6%加算(25CT) ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
       },
       {
         "display_value": "6%～30%",
@@ -8801,19 +8830,48 @@
         },
         "effect_class": "buff",
         "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 2
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 2
+              }
+            ]
+          }
+        ],
         "duration": {
           "ct": 25
         },
         "notes": [
           {
             "type": "condition",
-            "text": "ラッシュ50以上の時",
+            "text": "ラッシュ数が50以上の時",
             "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
           }
         ],
-        "tags": [
-          ""
-        ]
+        "raw": "ラッシュ数が50以上の時、さらに味方全体のクリティカル時のダメージ倍率を神族または水属性の味方の数×6%加算(25CT) ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
       }
     ]
   },
@@ -8952,19 +9010,48 @@
         },
         "effect_class": "buff",
         "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 2
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 2
+              }
+            ]
+          }
+        ],
         "duration": {
           "ct": 25
         },
         "notes": [
           {
             "type": "condition",
-            "text": "ラッシュ30以上の時",
+            "text": "ラッシュ数が30以上の時",
             "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
           }
         ],
-        "tags": [
-          ""
-        ]
+        "raw": "ラッシュ数が30以上の時、味方全体のクリティカル時のダメージ倍率を神族または水属性の味方の数×6%加算(25CT) ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
       },
       {
         "display_value": "6%～30%",
@@ -8975,38 +9062,77 @@
         },
         "effect_class": "buff",
         "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 2
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 2
+              }
+            ]
+          }
+        ],
         "duration": {
           "ct": 25
         },
         "notes": [
           {
             "type": "condition",
-            "text": "ラッシュ50以上の時",
+            "text": "ラッシュ数が50以上の時",
             "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
           }
         ],
-        "tags": [
-          ""
-        ]
+        "raw": "ラッシュ数が50以上の時、さらに味方全体のクリティカル時のダメージ倍率を神族または水属性の味方の数×6%加算(25CT) ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
       },
       {
         "display_value": "250%",
         "formula": "",
         "type": "ダメージを強化",
-        "value": {},
+        "value": {
+          "rate": 250
+        },
         "effect_class": "buff",
         "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
         "duration": null,
         "notes": [
           {
             "type": "condition",
-            "text": "ラッシュ100以上の時",
+            "text": "ラッシュ数が100以上の時",
             "label": "発動条件"
           }
         ],
-        "tags": [
-          ""
-        ]
+        "raw": "ラッシュ数が100以上の時、敵単体へのダメージを250%に強化",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
       }
     ]
   },
@@ -49954,6 +50080,592 @@
     ]
   },
   {
+    "unit_id": 1077004,
+    "game_unit_id": 1077004,
+    "unit_illust_id": 1077004,
+    "is_awake_unit": 0,
+    "skill_id": 10770041,
+    "skill_type": "EX1",
+    "name": "ブリリアント・ブレイカー",
+    "icon_id": 101,
+    "cost_ex_gauge": 100,
+    "skill_detail": "敵単体に94％×6回のダメージ/自身と自身の右1レーンの味方のATKを200％アップ（30CT）/一番後方の味方のノーツを10前方に移動",
+    "effects": [
+      {
+        "display_value": "94%×6回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 94,
+          "hit": 6
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "敵単体に94%×6回のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "200%",
+        "formula": "",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 200
+        },
+        "effect_class": "buff",
+        "target": "自身と自身の右1レーンの味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "lane": "right_withme",
+            "lane_count": 1,
+            "specials": [
+              "with_self"
+            ]
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "自身と自身の右1レーンの味方のATKを200%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "10",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 10,
+          "max": 10
+        },
+        "effect_class": "note",
+        "target": "一番後方の味方",
+        "target_branches": {
+          "side": "ally",
+          "scope": "single",
+          "pos": "backmost"
+        },
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "一番後方の味方のノーツを10前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1077004,
+    "game_unit_id": 1077004,
+    "unit_illust_id": 1077004,
+    "is_awake_unit": 0,
+    "skill_id": 10770042,
+    "skill_type": "EX2",
+    "name": "リコイル・ショーストッパー",
+    "icon_id": 101,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵単体に250％×5回のダメージ/魔族または光属性の味方のATKをラッシュ数×3％（最大300％）アップ（30CT）/さらに魔族または光属性の味方のATKを300％アップ（30CT）/ノーツを7～7前方に移動 ※2つの条件を満たした場合でも効果は重複しない/ラッシュ数によって以下の効果を適用する\n・30以上：味方全体のクリティカル時のダメージ倍率を魔族または光属性の味方の数×12％加算（25CT）\n・50以上：魔族または光属性の味方のクリティカル20％加算（20CT） ※2つの条件を満たした場合でも効果は重複しない",
+    "effects": [
+      {
+        "display_value": "250%×5回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 250,
+          "hit": 5
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "敵単体に250%×5回のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "3%～300%",
+        "formula": "ラッシュ数×3% (最大300%)",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 3
+        },
+        "effect_class": "buff",
+        "target": "魔族または光属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 3
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "rush",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "魔族または光属性の味方のATKをラッシュ数×3%(最大300%)アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "300%",
+        "formula": "",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 300
+        },
+        "effect_class": "buff",
+        "target": "魔族または光属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 3
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "さらに魔族または光属性の味方のATKを300%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "7",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 7,
+          "max": 7
+        },
+        "effect_class": "note",
+        "target": "魔族または光属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 3
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "ノーツを7～7前方に移動 ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "12%～60%",
+        "formula": "魔族または光属性の味方の数×12%",
+        "type": "クリティカルダメージアップ",
+        "value": {
+          "rate": 12
+        },
+        "effect_class": "buff",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 3
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 4
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 25
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "ラッシュ数が30以上の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "ラッシュ数が30以上の時、味方全体のクリティカル時のダメージ倍率を魔族または光属性の味方の数×12%加算(25CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "20%",
+        "formula": "",
+        "type": "クリティカル率アップ",
+        "value": {
+          "rate": 20
+        },
+        "effect_class": "buff",
+        "target": "魔族または光属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 3
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "ラッシュ数が50以上の時",
+            "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "ラッシュ数が50以上の時、魔族または光属性の味方のクリティカル20%加算(20CT) ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1077004,
+    "game_unit_id": 1077004,
+    "unit_illust_id": 1077004,
+    "is_awake_unit": 0,
+    "skill_id": "10770042_plus",
+    "skill_type": "EX2+",
+    "name": "ロイヤルエース・クラッシャー",
+    "icon_id": 101,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵単体に400％×5回のダメージ/魔族または光属性の味方のATKをラッシュ数×3％（最大300％）アップ（30CT）/さらに魔族または光属性の味方のATKを300％アップ（30CT）/ノーツを7～7前方に移動 ※2つの条件を満たした場合でも効果は重複しない/ラッシュ数によって以下の効果を適用する\n・30以上：味方全体のクリティカル時のダメージ倍率を魔族または光属性の味方の数×12％加算（25CT）\n・50以上：魔族または光属性の味方のクリティカル20％加算（20CT） ※2つの条件を満たした場合でも効果は重複しない\n・100以上：敵単体へのダメージを500％に強化",
+    "effects": [
+      {
+        "display_value": "400%×5回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 400,
+          "hit": 5
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "敵単体に400%×5回のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "3%～300%",
+        "formula": "ラッシュ数×3% (最大300%)",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 3
+        },
+        "effect_class": "buff",
+        "target": "魔族または光属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 3
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "rush",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "魔族または光属性の味方のATKをラッシュ数×3%(最大300%)アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "300%",
+        "formula": "",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 300
+        },
+        "effect_class": "buff",
+        "target": "魔族または光属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 3
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "さらに魔族または光属性の味方のATKを300%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "7",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 7,
+          "max": 7
+        },
+        "effect_class": "note",
+        "target": "魔族または光属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 3
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "ノーツを7～7前方に移動 ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "12%～60%",
+        "formula": "魔族または光属性の味方の数×12%",
+        "type": "クリティカルダメージアップ",
+        "value": {
+          "rate": 12
+        },
+        "effect_class": "buff",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 3
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 4
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 25
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "ラッシュ数が30以上の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "ラッシュ数が30以上の時、味方全体のクリティカル時のダメージ倍率を魔族または光属性の味方の数×12%加算(25CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "20%",
+        "formula": "",
+        "type": "クリティカル率アップ",
+        "value": {
+          "rate": 20
+        },
+        "effect_class": "buff",
+        "target": "魔族または光属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 3
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "ラッシュ数が50以上の時",
+            "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "ラッシュ数が50以上の時、魔族または光属性の味方のクリティカル20%加算(20CT) ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "500%",
+        "formula": "",
+        "type": "ダメージを強化",
+        "value": {
+          "rate": 500
+        },
+        "effect_class": "buff",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "ラッシュ数が100以上の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "ラッシュ数が100以上の時、敵単体へのダメージを500%に強化",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
     "unit_id": 1078001,
     "game_unit_id": 1078001,
     "unit_illust_id": 1078001,
@@ -50173,6 +50885,246 @@
         },
         "notes": [],
         "raw": "自身のATKを魔族の味方の数×50%アップ(1CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1078002,
+    "game_unit_id": 1078002,
+    "unit_illust_id": 1078002,
+    "is_awake_unit": 0,
+    "skill_id": 10780021,
+    "skill_type": "EX1",
+    "name": "カンデラ・ヤクタ",
+    "icon_id": 101,
+    "cost_ex_gauge": 100,
+    "skill_detail": "敵単体に100％×5回のダメージ/自身のATK100％アップ。さらに1バトル中、自身のEXスキル1の使用が2回目以降の時、自身のEXスキル1を使用する度にATKを20％ずつ増加する（20CT）（合計最大200％）/行動CT50％短縮（1CT）/1バトル中、自身のEXスキル1の使用が3回目以降の時、敵単体のATK20％ダウン（20CT）",
+    "effects": [
+      {
+        "display_value": "100%×5回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 100,
+          "hit": 5
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "敵単体に100%×5回のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "100%～200%",
+        "formula": "100%+20%×n (合計最大200%)",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 100,
+          "max_rate": 200
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ex_use_count",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "boost",
+            "text": "自身のEX1使用毎に効果量+20% (2回目以降)",
+            "label": "強化"
+          }
+        ],
+        "raw": "自身のATK100%アップ。さらに1バトル中、自身のEXスキル1の使用が2回目以降の時、自身のEXスキル1を使用する度にATKを20%ずつ増加する(20CT)(合計最大200%)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "50%",
+        "formula": "",
+        "type": "行動CT短縮",
+        "value": {
+          "rate": 50
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 1
+        },
+        "notes": [],
+        "raw": "行動CT50%短縮(1CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "20%",
+        "formula": "",
+        "type": "ATKダウン",
+        "value": {
+          "rate": 20
+        },
+        "effect_class": "debuff",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "1バトル中、自身のEXスキル1の使用が3回目以降の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "1バトル中、自身のEXスキル1の使用が3回目以降の時、敵単体のATK20%ダウン(20CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1078002,
+    "game_unit_id": 1078002,
+    "unit_illust_id": 1078002,
+    "is_awake_unit": 0,
+    "skill_id": 10780022,
+    "skill_type": "EX2",
+    "name": "クラーラ・ヴェナティオー",
+    "icon_id": 100,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵単体に1600％（1バトル中、自身のEXスキル1の使用が4回目以降の時、2000％）のダメージ/自身のクリティカル時のダメージ倍率をラッシュ数×1％加算（1CT）（最大50％）/光属性の味方のノーツを3～3（ATKダウンを付与されている敵が1体以上の場合、6～6）前方に移動",
+    "effects": [
+      {
+        "display_value": "1600%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 1600,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "1バトル中、自身のEXスキル1の使用が4回目以降の時、2000%",
+            "label": "強化"
+          }
+        ],
+        "raw": "敵単体に1600%(1バトル中、自身のEXスキル1の使用が4回目以降の時、2000%)のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "1%～50%",
+        "formula": "ラッシュ数×1% (最大50%)",
+        "type": "クリティカルダメージアップ",
+        "value": {
+          "rate": 1
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "rush",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 1
+        },
+        "notes": [],
+        "raw": "自身のクリティカル時のダメージ倍率をラッシュ数×1%加算(1CT)(最大50%)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "3",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 3,
+          "max": 3
+        },
+        "effect_class": "note",
+        "target": "光属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "ATKダウンを付与されている敵が1体以上の場合、6",
+            "label": "強化"
+          }
+        ],
+        "raw": "光属性の味方のノーツを3～3(ATKダウンを付与されている敵が1体以上の場合、6～6)前方に移動",
         "children": [],
         "tags": [],
         "inherited_target": false
@@ -60850,6 +61802,273 @@
     ]
   },
   {
+    "unit_id": 1102002,
+    "game_unit_id": 1102002,
+    "unit_illust_id": 1102002,
+    "is_awake_unit": 0,
+    "skill_id": 11020021,
+    "skill_type": "EX1",
+    "name": "シャイニング・キャノピー",
+    "icon_id": 300,
+    "cost_ex_gauge": 100,
+    "skill_detail": "一番右に配置されている味方のATKを50％+自身の基礎ATK200ごと×13％アップ（30CT）（最大200％）/神族または光属性の味方のノーツを4～4（ラッシュ30以上の時、7～7）前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない/アタックタイプの味方の行動CT20％短縮（3CT）",
+    "effects": [
+      {
+        "display_value": "50%～200%",
+        "formula": "50%+自身の基礎ATK200ごと×13% (合計最大200% ※基礎ATK2400以上)",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 13
+        },
+        "effect_class": "buff",
+        "target": "一番右に配置されている味方",
+        "target_branches": {
+          "side": "ally",
+          "scope": "single",
+          "pos": "rightmost"
+        },
+        "scale_refs": [
+          {
+            "src": "self_atk",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "一番右に配置されている味方のATKを50%+自身の基礎ATK200ごと×13%アップ(30CT)(最大200%)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "4",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 4,
+          "max": 4
+        },
+        "effect_class": "note",
+        "target": "神族または光属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 2
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "ラッシュ30以上の時、7",
+            "label": "強化"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でもノーツ移動効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "神族または光属性の味方のノーツを4～4(ラッシュ30以上の時、7～7)前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "20%",
+        "formula": "",
+        "type": "行動CT短縮",
+        "value": {
+          "rate": 20
+        },
+        "effect_class": "buff",
+        "target": "アタックタイプの味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "role": 1
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 3
+        },
+        "notes": [],
+        "raw": "アタックタイプの味方の行動CT20%短縮(3CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1102002,
+    "game_unit_id": 1102002,
+    "unit_illust_id": 1102002,
+    "is_awake_unit": 0,
+    "skill_id": 11020022,
+    "skill_type": "EX2",
+    "name": "フォートレス・フォーメーション",
+    "icon_id": 404,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵単体の被ダメージ40％増加。さらに1バトル中、自身のEXスキル2の使用が2回目以降の時、自身のEXスキル2を使用する度に被ダメージを15％ずつ増加する（20CT）（合計最大100％）/光属性または神族のATKを100％+自身の基礎ATK200ごと×18％アップ（30CT）（最大300％）/ノーツを7～7前方に移動 ※2つの条件を満たした場合でも効果は重複しない/神族または光属性の味方を5体以上編成している時、自身のEX消費量15減少（次ターン以降EXスキル1回発動まで）",
+    "effects": [
+      {
+        "display_value": "40%～100%",
+        "formula": "40%+15%×n (合計最大100%)",
+        "type": "被ダメージアップ",
+        "value": {
+          "rate": 40,
+          "max_rate": 100
+        },
+        "effect_class": "debuff",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ex_use_count",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "boost",
+            "text": "自身のEX2使用毎に効果量+15% (2回目以降)",
+            "label": "強化"
+          }
+        ],
+        "raw": "敵単体の被ダメージ40%増加。さらに1バトル中、自身のEXスキル2の使用が2回目以降の時、自身のEXスキル2を使用する度に被ダメージを15%ずつ増加する(20CT)(合計最大100%)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "100%～300%",
+        "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 18
+        },
+        "effect_class": "buff",
+        "target": "光属性または神族",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 2
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "self_atk",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "光属性または神族のATKを100%+自身の基礎ATK200ごと×18%アップ(30CT)(最大300%)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "7",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 7,
+          "max": 7
+        },
+        "effect_class": "note",
+        "target": "光属性または神族",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 2
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "ノーツを7～7前方に移動 ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "15",
+        "formula": "",
+        "type": "EX消費量減少",
+        "value": {
+          "amount": 15
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "神族または光属性の味方を5体以上編成している時",
+            "label": "発動条件"
+          },
+          {
+            "type": "expire",
+            "text": "次ターン以降EXスキル1回発動まで",
+            "label": "回数"
+          }
+        ],
+        "raw": "神族または光属性の味方を5体以上編成している時、自身のEX消費量15減少(次ターン以降EXスキル1回発動まで)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
     "unit_id": 1103001,
     "game_unit_id": 1103001,
     "unit_illust_id": 1103001,
@@ -63663,6 +64882,236 @@
         "children": [],
         "tags": [],
         "inherited_target": true
+      },
+      {
+        "display_value": "5CT",
+        "formula": "",
+        "type": "スキル再使用時間",
+        "value": {},
+        "effect_class": "debuff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "スキル再使用時間5CT",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      }
+    ]
+  },
+  {
+    "unit_id": 1111004,
+    "game_unit_id": 1111004,
+    "unit_illust_id": 1111004,
+    "is_awake_unit": 0,
+    "skill_id": 11110041,
+    "skill_type": "EX1",
+    "name": "ヘルフレイム・スクラッチ",
+    "icon_id": 101,
+    "cost_ex_gauge": 100,
+    "skill_detail": "敵単体に100％×5回のダメージ/被ダメージ40％（ラッシュ30以上の時、50％）増加（20CT）/自身のEX上昇を40（炎属性または極星学園の味方を3体以上編成している時、60）アップ（25CT）",
+    "effects": [
+      {
+        "display_value": "100%×5回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 100,
+          "hit": 5
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "敵単体に100%×5回のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "40%",
+        "formula": "",
+        "type": "被ダメージアップ",
+        "value": {
+          "rate": 40
+        },
+        "effect_class": "debuff",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "boost",
+            "text": "ラッシュ30以上の時、50%",
+            "label": "強化"
+          }
+        ],
+        "raw": "被ダメージ40%(ラッシュ30以上の時、50%)増加(20CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "40",
+        "formula": "",
+        "type": "EX上昇アップ",
+        "value": {
+          "amount": 40
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 25
+        },
+        "notes": [
+          {
+            "type": "boost",
+            "text": "炎属性または極星学園の味方を3体以上編成している時、60",
+            "label": "強化"
+          }
+        ],
+        "raw": "自身のEX上昇を40(炎属性または極星学園の味方を3体以上編成している時、60)アップ(25CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1111004,
+    "game_unit_id": 1111004,
+    "unit_illust_id": 1111004,
+    "is_awake_unit": 0,
+    "skill_id": 11110042,
+    "skill_type": "EX2",
+    "name": "ナイトメア・レンド",
+    "icon_id": 101,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵単体に250％（EXゲージが300以上の状態で使用した時、285％）×10回のダメージ/自身に相手スタン時のダメージ倍率を50％+ラッシュ数×0.3％加算（1CT）（合計最大80％）/1バトル中、EXスキル1の使用が4回目以降の時、自身のATKを400％アップ（1CT）/スキル再使用時間5CT",
+    "effects": [
+      {
+        "display_value": "250%×10回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 250,
+          "hit": 10
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "EXゲージが300以上の状態で使用した時、285%",
+            "label": "強化"
+          }
+        ],
+        "raw": "敵単体に250%(EXゲージが300以上の状態で使用した時、285%)×10回のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "50%～80%",
+        "formula": "50%+ラッシュ数×0.3% (合計最大80%)",
+        "type": "相手スタン時ダメージ倍率アップ",
+        "value": {
+          "rate": 0.3
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "rush",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 1
+        },
+        "notes": [],
+        "raw": "自身に相手スタン時のダメージ倍率を50%+ラッシュ数×0.3%加算(1CT)(合計最大80%)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "400%",
+        "formula": "",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 400
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 1
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "1バトル中、EXスキル1の使用が4回目以降の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "1バトル中、EXスキル1の使用が4回目以降の時、自身のATKを400%アップ(1CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
       },
       {
         "display_value": "5CT",
@@ -66530,6 +67979,267 @@
         "children": [],
         "tags": [],
         "inherited_target": true
+      }
+    ]
+  },
+  {
+    "unit_id": 1118003,
+    "game_unit_id": 1118003,
+    "unit_illust_id": 1118003,
+    "is_awake_unit": 0,
+    "skill_id": 11180031,
+    "skill_type": "EX1",
+    "name": "ルクス・カルメシナ",
+    "icon_id": 302,
+    "cost_ex_gauge": 100,
+    "skill_detail": "敵全体に60％のダメージ/炎属性またはヒールタイプの味方のノーツを4～4前方に移動/EXゲージが200以上の状態で使用した時、炎属性またはヒールタイプの味方の行動CT15％短縮（10CT） ※2つの条件を満たした場合でも効果は重複しない",
+    "effects": [
+      {
+        "display_value": "60%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 60,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "敵全体に60%のダメージ",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "4",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 4,
+          "max": 4
+        },
+        "effect_class": "note",
+        "target": "炎属性またはヒールタイプの味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "role": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "炎属性またはヒールタイプの味方のノーツを4～4前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "15%",
+        "formula": "",
+        "type": "行動CT短縮",
+        "value": {
+          "rate": 15
+        },
+        "effect_class": "buff",
+        "target": "炎属性またはヒールタイプの味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "role": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 10
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "EXゲージが200以上の状態で使用した時",
+            "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "EXゲージが200以上の状態で使用した時、炎属性またはヒールタイプの味方の行動CT15%短縮(10CT) ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1118003,
+    "game_unit_id": 1118003,
+    "unit_illust_id": 1118003,
+    "is_awake_unit": 0,
+    "skill_id": 11180032,
+    "skill_type": "EX2",
+    "name": "フィニス・ノクティス",
+    "icon_id": 357,
+    "cost_ex_gauge": 200,
+    "skill_detail": "炎属性の味方のATKを100％+自身の基礎ATK200ごと×18％アップ（30CT）（最大300％）/クリティカル時のダメージ倍率を30％加算。さらに1バトル中、自身のEXスキル2の使用が2回目以降の時、自身のEXスキル2を使用する度にクリティカル時のダメージ倍率を10％ずつ加算する（25CT）（合計最大80％）/炎属性またはヒールタイプのノーツを7～7前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない/1バトル中、自身のEXスキル2の使用が4回目以降の時、敵単体のEXゲージを20吸収し、その内の100％味方のEXゲージを回復",
+    "effects": [
+      {
+        "display_value": "100%～300%",
+        "formula": "100%+自身の基礎ATK200ごと×18% (合計最大300% ※基礎ATK2400以上)",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 18
+        },
+        "effect_class": "buff",
+        "target": "炎属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 1
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "self_atk",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "炎属性の味方のATKを100%+自身の基礎ATK200ごと×18%アップ(30CT)(最大300%)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "30%～80%",
+        "formula": "30%+10%×n (合計最大80%)",
+        "type": "クリティカルダメージアップ",
+        "value": {
+          "rate": 30,
+          "max_rate": 80
+        },
+        "effect_class": "buff",
+        "target": "炎属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 1
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ex_use_count",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 25
+        },
+        "notes": [
+          {
+            "type": "boost",
+            "text": "自身のEX2使用毎に効果量+10% (2回目以降)",
+            "label": "強化"
+          }
+        ],
+        "raw": "クリティカル時のダメージ倍率を30%加算。さらに1バトル中、自身のEXスキル2の使用が2回目以降の時、自身のEXスキル2を使用する度にクリティカル時のダメージ倍率を10%ずつ加算する(25CT)(合計最大80%)",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "7",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 7,
+          "max": 7
+        },
+        "effect_class": "note",
+        "target": "炎属性またはヒールタイプ",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 1
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "role": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でもノーツ移動効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "炎属性またはヒールタイプのノーツを7～7前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "敵EX最大20吸収",
+        "formula": "",
+        "type": "EXゲージ吸収",
+        "value": {
+          "amount": 20,
+          "rate": 100
+        },
+        "effect_class": "buff",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "1バトル中、自身のEXスキル2の使用が4回目以降の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "1バトル中、自身のEXスキル2の使用が4回目以降の時、敵単体のEXゲージを20吸収し、その内の100%味方のEXゲージを回復",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
       }
     ]
   },
