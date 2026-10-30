@@ -115,6 +115,7 @@ export const positions = [
 export const specialsAlly = [
   { id: "diff_role",     label: "異なるタイプ",              short: "異タイプ" },
   { id: "diff_attr",     label: "異なる属性",                short: "異なる属性" },
+  { id: "diff_equip_type", label: "異なる攻撃タイプ",          short: "異攻撃タイプ" },
   { id: "main_attr",     label: "メイン属性が一致",           short: "メイン属性" },
   { id: "sub_attr",      label: "サブ属性が付与されている",     short: "サブ属性" },
   { id: "same_self_sub", label: "自身のサブ属性と同じ属性",     short: "自サブと同属性" },

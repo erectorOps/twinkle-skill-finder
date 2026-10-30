@@ -4602,6 +4602,54 @@
     "specific_gauge_data": []
   },
   {
+    "unit_id": 1037004,
+    "game_unit_id": 1037004,
+    "unit_illust_id": 1037004,
+    "is_awake_unit": 0,
+    "character_name": "サラン《暴食》",
+    "character_name_kana": "サラン",
+    "unit_name": "甘い幸せの魔将",
+    "rarity": 3,
+    "attr_type": {
+      "id": "5",
+      "label": "闇",
+      "icon": "attribute_05.png"
+    },
+    "role": {
+      "id": "5",
+      "label": "ヒール",
+      "icon": "type_5.png"
+    },
+    "camps": [
+      {
+        "id": 1,
+        "label": "人間",
+        "icon": "race_1.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 2,
+        "label": "新星学園",
+        "icon": "affiliation_01.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "3",
+        "label": "打撃",
+        "icon": "icon_equipment_01_03.png"
+      }
+    ],
+    "specific_gauge_data": {
+      "specific_name": "暴食状態",
+      "specific_detail": "◆通常状態\n通常状態中、5CT経過ごとに暴食ゲージが「1」溜まる。\n暴食ゲージが「3」溜まると「暴食状態」に移行する。\n\n◆暴食状態\n暴食状態に移行直後、自身に「暴食の饗宴」を付与（10CT）※この効果は重複せず、上書きされる\n暴食状態中、「EXスキル2」が「EXスキル2+」に変化する。\nEXスキル2+を使用すると暴食状態が解除され、「通常状態」に戻る。\n暴食状態から通常状態に戻ると、味方のHPを100％回復\n\n※暴食の饗宴\n味方のHPが回復する度に、味方全体のATKを20％アップ（10CT）",
+      "icon_id": 10023,
+      "is_unlock": 1,
+      "is_strengthen": 0
+    }
+  },
+  {
     "unit_id": 1038001,
     "game_unit_id": 1038001,
     "unit_illust_id": 1038001,
@@ -4726,6 +4774,54 @@
       }
     ],
     "specific_gauge_data": []
+  },
+  {
+    "unit_id": 1038004,
+    "game_unit_id": 1038004,
+    "unit_illust_id": 1038004,
+    "is_awake_unit": 0,
+    "character_name": "イクシリオン《色欲》",
+    "character_name_kana": "イクシリオン",
+    "unit_name": "営みを愛する魔将",
+    "rarity": 3,
+    "attr_type": {
+      "id": "5",
+      "label": "闇",
+      "icon": "attribute_05.png"
+    },
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "camps": [
+      {
+        "id": 2,
+        "label": "神族",
+        "icon": "race_4.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 2,
+        "label": "新星学園",
+        "icon": "affiliation_01.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "2",
+        "label": "斬撃",
+        "icon": "icon_equipment_01_02.png"
+      }
+    ],
+    "specific_gauge_data": {
+      "specific_name": "色欲状態",
+      "specific_detail": "◆通常状態\n通常状態中、闇属性の味方がEXスキル1、または、EXスキル1+を使用すると色欲ゲージが「1」、\nEXスキル2、または、EXスキル2+を使用すると色欲ゲージが「2」溜まる。\n色欲ゲージが「8」溜まると「色欲状態」に移行する。\n\n◆色欲状態\n色欲状態に移行直後、妄想LVが1上昇（最大7）\n色欲状態中、「EXスキル2」が「EXスキル2+」に変化する。\nEXスキル2+を使用すると色欲状態が解除され、「通常状態」に戻る。\n\n※妄想\n自身以外の固有ゲージを所持している味方が固有状態に移行した時、妄想LVが1上昇する（最大7）",
+      "icon_id": 63,
+      "is_unlock": 1,
+      "is_strengthen": 0
+    }
   },
   {
     "unit_id": 1039001,
@@ -11436,6 +11532,53 @@
       "is_unlock": 1,
       "is_strengthen": 0
     }
+  },
+  {
+    "unit_id": 1124003,
+    "game_unit_id": 1124003,
+    "unit_illust_id": 1124003,
+    "is_awake_unit": 0,
+    "character_name": "ラクシャ",
+    "character_name_kana": "ラクシャ",
+    "unit_name": "お祭り天使の舞台",
+    "rarity": 3,
+    "attr_type": {
+      "id": "1",
+      "label": "炎",
+      "icon": "attribute_01.png"
+    },
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "camps": [
+      {
+        "id": 2,
+        "label": "神族",
+        "icon": "race_4.png"
+      }
+    ],
+    "affiliations": [
+      {
+        "id": 3,
+        "label": "守護天使",
+        "icon": "affiliation_03.png"
+      },
+      {
+        "id": 2,
+        "label": "新星学園",
+        "icon": "affiliation_01.png"
+      }
+    ],
+    "sp_equip_types": [
+      {
+        "id": "3",
+        "label": "打撃",
+        "icon": "icon_equipment_01_03.png"
+      }
+    ],
+    "specific_gauge_data": []
   },
   {
     "unit_id": 1125001,

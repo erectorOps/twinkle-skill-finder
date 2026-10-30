@@ -27650,6 +27650,429 @@
     ]
   },
   {
+    "unit_id": 1037004,
+    "game_unit_id": 1037004,
+    "unit_illust_id": 1037004,
+    "is_awake_unit": 0,
+    "skill_id": 10370041,
+    "skill_type": "EX1",
+    "name": "キルシュシュガーレイン",
+    "icon_id": 602,
+    "cost_ex_gauge": 100,
+    "skill_detail": "味方のHPを40％+闇属性の味方の数×8％回復/味方のHPを1CT経過ごとに闇属性の味方の数×2％回復（10CT） ※効果は重複せず、上書きされる/闇属性の味方を5体以上編成している時、メイン属性が闇属性の味方の「固有ゲージ」を1増加する/スキル再使用時間6CT\n※固有ゲージ：\n「〇〇状態」という特殊な強化状態に移行できるキャラが持つ、状態移行までの段階を表すゲージ",
+    "effects": [
+      {
+        "display_value": "48%～80%",
+        "formula": "40%+闇属性の味方の数×8%",
+        "type": "HP回復",
+        "value": {
+          "base": 40,
+          "rate": 8
+        },
+        "effect_class": "main",
+        "target": "味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 5
+              }
+            ]
+          }
+        ],
+        "duration": null,
+        "notes": [],
+        "raw": "味方のHPを40%+闇属性の味方の数×8%回復",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "",
+        "formula": "1CT毎に、闇属性の味方の数×2%回復",
+        "type": "HP継続回復",
+        "value": {},
+        "effect_class": "buff",
+        "target": "味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 5
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 10
+        },
+        "notes": [
+          {
+            "type": "property",
+            "text": "効果は重ね掛けできず、上書きされる",
+            "label": "特性"
+          }
+        ],
+        "raw": "味方のHPを1CT経過ごとに闇属性の味方の数×2%回復(10CT) ※効果は重複せず、上書きされる",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "あらゆる固有ゲージを+1する",
+        "formula": "",
+        "type": "固有ゲージ増加",
+        "value": {
+          "amount": 1,
+          "max": 0,
+          "specific_gauge_name": "固有ゲージ"
+        },
+        "effect_class": "buff",
+        "target": "メイン属性が闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5,
+            "specials": [
+              "main_attr"
+            ]
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "闇属性の味方を5体以上編成している時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "闇属性の味方を5体以上編成している時、メイン属性が闇属性の味方の「固有ゲージ」を1増加する",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "6CT",
+        "formula": "",
+        "type": "スキル再使用時間",
+        "value": {},
+        "effect_class": "debuff",
+        "target": "メイン属性が闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5,
+            "specials": [
+              "main_attr"
+            ]
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "スキル再使用時間6CT",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      }
+    ]
+  },
+  {
+    "unit_id": 1037004,
+    "game_unit_id": 1037004,
+    "unit_illust_id": 1037004,
+    "is_awake_unit": 0,
+    "skill_id": 10370042,
+    "skill_type": "EX2",
+    "name": "グラトニースイートディザスター",
+    "icon_id": 300,
+    "cost_ex_gauge": 200,
+    "skill_detail": "闇属性の味方のATKを50％+自身のHP2000ごと×16％アップ（20CT）（最大200％）/ノーツを3～3前方に移動/味方のHPがオーバーヒール状態（100％超）の時、闇属性の味方のクリティカル時のダメージ倍率を30％+オーバーヒール割合（フルオーバーヒール時200％）×0.15％加算（20CT）/このEXスキル使用後、味方のHPがオーバーヒール状態（100％超）の時、オーバーヒール分のHPを全て消費する",
+    "effects": [
+      {
+        "display_value": "50%～200%",
+        "formula": "50%+自身のHP2000ごと×16% (合計最大200% ※HP20000以上)",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 16
+        },
+        "effect_class": "buff",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "self_hp",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [],
+        "raw": "闇属性の味方のATKを50%+自身のHP2000ごと×16%アップ(20CT)(最大200%)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "3",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 3,
+          "max": 3
+        },
+        "effect_class": "note",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを3～3前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "45%～60%",
+        "formula": "30%+オーバーヒール割合(フルオーバーヒール時200%)×0.15%",
+        "type": "クリティカルダメージアップ",
+        "value": {},
+        "effect_class": "buff",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "overheal",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "味方のHPがオーバーヒール状態(100%超)の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "味方のHPがオーバーヒール状態(100%超)の時、闇属性の味方のクリティカル時のダメージ倍率を30%+オーバーヒール割合(フルオーバーヒール時200%)×0.15%加算(20CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "オーバーヒール分のHPを消費する",
+        "formula": "",
+        "type": "オーバーヒール解除",
+        "value": {},
+        "effect_class": "debuff",
+        "target": "味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "timing",
+            "text": "このEXスキル使用後",
+            "label": "タイミング"
+          },
+          {
+            "type": "condition",
+            "text": "味方のHPがオーバーヒール状態(100%超)の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "このEXスキル使用後、味方のHPがオーバーヒール状態(100%超)の時、オーバーヒール分のHPを全て消費する",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1037004,
+    "game_unit_id": 1037004,
+    "unit_illust_id": 1037004,
+    "is_awake_unit": 0,
+    "skill_id": "10370042_plus",
+    "skill_type": "EX2+",
+    "name": "バアルゼブルハーヴェスト",
+    "icon_id": 300,
+    "cost_ex_gauge": 200,
+    "skill_detail": "闇属性の味方のATKを150％+自身のHP2000ごと×16％アップ（20CT）（最大300％）/ノーツを6～6前方に移動/味方のHPがオーバーヒール状態（100％超）の時、闇属性の味方のクリティカル時のダメージ倍率を30％+オーバーヒール割合（フルオーバーヒール時200％）×0.15％加算（20CT）/このEXスキル使用後、味方のHPがオーバーヒール状態（100％超）の時、オーバーヒール分のHPを全て消費する",
+    "effects": [
+      {
+        "display_value": "150%～300%",
+        "formula": "150%+自身のHP2000ごと×16% (合計最大300% ※HP20000以上)",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 16
+        },
+        "effect_class": "buff",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "self_hp",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [],
+        "raw": "闇属性の味方のATKを150%+自身のHP2000ごと×16%アップ(20CT)(最大300%)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "6",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 6,
+          "max": 6
+        },
+        "effect_class": "note",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを6～6前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "45%～60%",
+        "formula": "30%+オーバーヒール割合(フルオーバーヒール時200%)×0.15%",
+        "type": "クリティカルダメージアップ",
+        "value": {},
+        "effect_class": "buff",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "overheal",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "味方のHPがオーバーヒール状態(100%超)の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "味方のHPがオーバーヒール状態(100%超)の時、闇属性の味方のクリティカル時のダメージ倍率を30%+オーバーヒール割合(フルオーバーヒール時200%)×0.15%加算(20CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "オーバーヒール分のHPを消費する",
+        "formula": "",
+        "type": "オーバーヒール解除",
+        "value": {},
+        "effect_class": "debuff",
+        "target": "味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "timing",
+            "text": "このEXスキル使用後",
+            "label": "タイミング"
+          },
+          {
+            "type": "condition",
+            "text": "味方のHPがオーバーヒール状態(100%超)の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "このEXスキル使用後、味方のHPがオーバーヒール状態(100%超)の時、オーバーヒール分のHPを全て消費する",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
     "unit_id": 1038001,
     "game_unit_id": 1038001,
     "unit_illust_id": 1038001,
@@ -28256,6 +28679,643 @@
           }
         ],
         "raw": "神族または水属性の味方のノーツを5～5前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1038004,
+    "game_unit_id": 1038004,
+    "unit_illust_id": 1038004,
+    "is_awake_unit": 0,
+    "skill_id": 10380041,
+    "skill_type": "EX1",
+    "name": "メガリビドーディヴァイダー",
+    "icon_id": 101,
+    "cost_ex_gauge": 100,
+    "skill_detail": "敵単体に94％×6回のダメージ/闇属性の味方のATKを闇属性の味方の数×40％アップ（30CT）/ノーツを3～3（自身と異なる攻撃タイプの場合、5～5）前方に移動/妄想LV1以上の時、敵単体に魅了状態を付与（3CT）\n※魅了状態：付与された敵のノーツが停止する。さらに、魅了状態の敵と隣接する敵が同ノーツ位置に移動した際、その敵も魅了状態となり停止する。",
+    "effects": [
+      {
+        "display_value": "94%×6回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 94,
+          "hit": 6
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "敵単体に94%×6回のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "40%～200%",
+        "formula": "闇属性の味方の数×40%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 40
+        },
+        "effect_class": "buff",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 5
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "闇属性の味方のATKを闇属性の味方の数×40%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "3",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 3,
+          "max": 3
+        },
+        "effect_class": "note",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "自身と異なる攻撃タイプの場合、5",
+            "label": "強化"
+          }
+        ],
+        "raw": "ノーツを3～3(自身と異なる攻撃タイプの場合、5～5)前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "",
+        "formula": "ノーツ停止。隣接敵が同ノーツ移動時、魅了伝染",
+        "type": "魅了",
+        "value": {},
+        "effect_class": "debuff",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 3
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "妄想LV1以上の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "妄想LV1以上の時、敵単体に魅了状態を付与(3CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1038004,
+    "game_unit_id": 1038004,
+    "unit_illust_id": 1038004,
+    "is_awake_unit": 0,
+    "skill_id": 10380042,
+    "skill_type": "EX2",
+    "name": "ギガエクスタシーイラプション",
+    "icon_id": 100,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵全体に250％のダメージ/闇属性の味方のATKを闇属性の味方の数×60％アップ（30CT）/ノーツを7～7前方に移動/チーム内の異なる攻撃タイプが3種類の時、味方全体のクリティカル時のダメージ倍率を闇属性の味方の数×12％加算（25CT）/妄想LVに応じて以下の効果を適用する\n・LV1以上：闇属性の味方のATKを異なる攻撃タイプの種類の数×100％アップ（30CT）\n・LV4以上：闇属性の味方のクリティカル20％加算（20CT）\n・LV7：敵全体へのダメージを300％に強化",
+    "effects": [
+      {
+        "display_value": "250%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 250,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "敵全体に250%のダメージ",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "60%～300%",
+        "formula": "闇属性の味方の数×60%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 60
+        },
+        "effect_class": "buff",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 5
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "闇属性の味方のATKを闇属性の味方の数×60%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "7",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 7,
+          "max": 7
+        },
+        "effect_class": "note",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを7～7前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "12%～60%",
+        "formula": "闇属性の味方の数×12%",
+        "type": "クリティカルダメージアップ",
+        "value": {
+          "rate": 12
+        },
+        "effect_class": "buff",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 5
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 25
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "チーム内の異なる攻撃タイプが3種類の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "チーム内の異なる攻撃タイプが3種類の時、味方全体のクリティカル時のダメージ倍率を闇属性の味方の数×12%加算(25CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "100%～300%",
+        "formula": "異なる攻撃タイプの種類の数×100%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 100
+        },
+        "effect_class": "buff",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "specials": [
+                  "diff_equip_type"
+                ]
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "妄想LV1以上の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "妄想LV1以上の時、闇属性の味方のATKを異なる攻撃タイプの種類の数×100%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "20%",
+        "formula": "",
+        "type": "クリティカル率アップ",
+        "value": {
+          "rate": 20
+        },
+        "effect_class": "buff",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "妄想LV4以上の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "妄想LV4以上の時、闇属性の味方のクリティカル20%加算(20CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "300%",
+        "formula": "",
+        "type": "ダメージを強化",
+        "value": {
+          "rate": 300
+        },
+        "effect_class": "buff",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "妄想LV7の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "妄想LV7の時、敵全体へのダメージを300%に強化",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1038004,
+    "game_unit_id": 1038004,
+    "unit_illust_id": 1038004,
+    "is_awake_unit": 0,
+    "skill_id": "10380042_plus",
+    "skill_type": "EX2+",
+    "name": "アスモデウスヒートハート",
+    "icon_id": 100,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵全体に400％のダメージ/闇属性の味方のATKを闇属性の味方の数×60％アップ（30CT）/ノーツを10～10前方に移動/チーム内の異なる攻撃タイプが3種類の時、味方全体のクリティカル時のダメージ倍率を闇属性の味方の数×12％加算（25CT）/妄想LVに応じて以下の効果を適用する\n・LV1以上：闇属性の味方のATKを異なる攻撃タイプの種類の数×100％アップ（30CT）\n・LV4以上：闇属性の味方のクリティカル20％加算（20CT）\n・LV7：敵全体へのダメージを500％に強化",
+    "effects": [
+      {
+        "display_value": "400%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 400,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "敵全体に400%のダメージ",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "60%～300%",
+        "formula": "闇属性の味方の数×60%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 60
+        },
+        "effect_class": "buff",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 5
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "闇属性の味方のATKを闇属性の味方の数×60%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "10",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 10,
+          "max": 10
+        },
+        "effect_class": "note",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを10～10前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "12%～60%",
+        "formula": "闇属性の味方の数×12%",
+        "type": "クリティカルダメージアップ",
+        "value": {
+          "rate": 12
+        },
+        "effect_class": "buff",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 5
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 25
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "チーム内の異なる攻撃タイプが3種類の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "チーム内の異なる攻撃タイプが3種類の時、味方全体のクリティカル時のダメージ倍率を闇属性の味方の数×12%加算(25CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "100%～300%",
+        "formula": "異なる攻撃タイプの種類の数×100%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 100
+        },
+        "effect_class": "buff",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "specials": [
+                  "diff_equip_type"
+                ]
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "妄想LV1以上の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "妄想LV1以上の時、闇属性の味方のATKを異なる攻撃タイプの種類の数×100%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "20%",
+        "formula": "",
+        "type": "クリティカル率アップ",
+        "value": {
+          "rate": 20
+        },
+        "effect_class": "buff",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "妄想LV4以上の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "妄想LV4以上の時、闇属性の味方のクリティカル20%加算(20CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "500%",
+        "formula": "",
+        "type": "ダメージを強化",
+        "value": {
+          "rate": 500
+        },
+        "effect_class": "buff",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "妄想LV7の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "妄想LV7の時、敵全体へのダメージを500%に強化",
         "children": [],
         "tags": [],
         "inherited_target": false
@@ -70762,6 +71822,324 @@
         "tags": [
           ""
         ]
+      }
+    ]
+  },
+  {
+    "unit_id": 1124003,
+    "game_unit_id": 1124003,
+    "unit_illust_id": 1124003,
+    "is_awake_unit": 0,
+    "skill_id": 11240031,
+    "skill_type": "EX1",
+    "name": "アンプリファイア・ブラスト",
+    "icon_id": 101,
+    "cost_ex_gauge": 100,
+    "skill_detail": "敵単体に94％×6回のダメージ/敵全体の被ダメージを神族または炎属性の味方の数×8％（ラッシュ30以上の時、10％）増加（20CT） ※2つの条件を満たした場合でも効果は重複しない/神族または炎属性の味方を3体以上編成している時、自身の行動CT70％短縮（1CT）",
+    "effects": [
+      {
+        "display_value": "94%×6回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 94,
+          "hit": 6
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "敵単体に94%×6回のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "8%～40%",
+        "formula": "神族または炎属性の味方の数×8%",
+        "type": "被ダメージアップ",
+        "value": {
+          "rate": 8
+        },
+        "effect_class": "debuff",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 2
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 1
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "boost",
+            "text": "ラッシュ30以上の時、10%",
+            "label": "強化"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "敵全体の被ダメージを神族または炎属性の味方の数×8%(ラッシュ30以上の時、10%)増加(20CT) ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "70%",
+        "formula": "",
+        "type": "行動CT短縮",
+        "value": {
+          "rate": 70
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 1
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "神族または炎属性の味方を3体以上編成している時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "神族または炎属性の味方を3体以上編成している時、自身の行動CT70%短縮(1CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1124003,
+    "game_unit_id": 1124003,
+    "unit_illust_id": 1124003,
+    "is_awake_unit": 0,
+    "skill_id": 11240032,
+    "skill_type": "EX2",
+    "name": "クラッシュ・アンド・デストロイ",
+    "icon_id": 100,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵全体に500％（ラッシュ100以上の時、570％）のダメージ/自身のATKを神族または炎属性の味方の数×80％アップ（1CT）/クリティカルを神族または炎属性の味方の数×8％加算（1CT） ※2つの条件を満たした場合でも効果は重複しない/このEXスキルのEX消費量を自身のEXスキル1の使用回数×5減少（EX消費量は150未満にはならない）/スキル再使用時間5CT  \n※このEXスキルは他星騎士から付与されたEX消費量減少の効果を受けない",
+    "effects": [
+      {
+        "display_value": "500%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 500,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "ラッシュ100以上の時、570%",
+            "label": "強化"
+          }
+        ],
+        "raw": "敵全体に500%(ラッシュ100以上の時、570%)のダメージ",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "80%～400%",
+        "formula": "神族または炎属性の味方の数×80%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 80
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 2
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 1
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 1
+        },
+        "notes": [],
+        "raw": "自身のATKを神族または炎属性の味方の数×80%アップ(1CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "8%～40%",
+        "formula": "神族または炎属性の味方の数×8%",
+        "type": "クリティカル率アップ",
+        "value": {
+          "rate": 8
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 2
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 1
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 1
+        },
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "クリティカルを神族または炎属性の味方の数×8%加算(1CT) ※2つの条件を満たした場合でも効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "5～25",
+        "formula": "自身のEXスキル1の使用回数×5",
+        "type": "EX消費量減少",
+        "value": {
+          "amount": 5
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ex_use_count",
+            "branches": []
+          }
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "EX消費量は150未満にはならない",
+            "label": "特性"
+          }
+        ],
+        "raw": "このEXスキルのEX消費量を自身のEXスキル1の使用回数×5減少(EX消費量は150未満にはならない)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "5CT",
+        "formula": "",
+        "type": "スキル再使用時間",
+        "value": {},
+        "effect_class": "debuff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "このEXスキルは他星騎士から付与されたEX消費量減少の効果を受けない",
+            "label": "特性"
+          }
+        ],
+        "raw": "スキル再使用時間5CT  \n※このEXスキルは他星騎士から付与されたEX消費量減少の効果を受けない",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
       }
     ]
   },
