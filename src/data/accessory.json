@@ -55549,6 +55549,220 @@
   },
   {
     "source": "EquipDetail",
+    "accessory_name": "カティアの薔薇飾り",
+    "equip_id": 3300294,
+    "illust_id": "equip_3300294",
+    "rarity": 3,
+    "unit_id": 1034003,
+    "game_unit_id": 1034003,
+    "unit_illust_id": 1034003,
+    "character_id": 34,
+    "character_name": "カティア《強欲》",
+    "unit_name": "野望を抱く魔将",
+    "exclusive_unit_name": "[野望を抱く魔将]カティア《強欲》",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "2",
+      "label": "スピード",
+      "icon": "type_2.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": 846,
+      "ex": null,
+      "ex_up": null,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 1,
+        "parameter_value": 846
+      }
+    ],
+    "skill_ids": {
+      "EX1": 10340031,
+      "EX2": 10340032,
+      "EX2+": "10340032_plus"
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10340031,
+        "text": "ダメージ35％アップ",
+        "effects_text": [
+          "ダメージ35％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+35%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ35%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10340032,
+        "text": "ダメージ500％アップ（渇望LV7の時、900％アップ）",
+        "effects_text": [
+          "ダメージ500％アップ（渇望LV7の時、900％アップ）"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+500%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "渇望LV7の時、900%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ500%アップ(渇望LV7の時、900%アップ)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2+",
+        "skill_id": "10340032_plus",
+        "text": "ダメージ600％アップ（渇望LV7の時、1100％アップ）",
+        "effects_text": [
+          "ダメージ600％アップ（渇望LV7の時、1100％アップ）"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+600%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "渇望LV7の時、1100%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ600%アップ(渇望LV7の時、1100%アップ)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「トライヘッドバイト」のダメージ35％アップ/\nEX2「バウバンキッシュマーチ」のダメージ500％アップ（渇望LV7の時、900％アップ）/\nEX2+「インベイションオブマモン」のダメージ600％アップ（渇望LV7の時、1100％アップ）",
+    "ability_full": "EX1「トライヘッドバイト」のダメージ35％アップ/\nEX2「バウバンキッシュマーチ」のダメージ500％アップ（渇望LV7の時、900％アップ）/\nEX2+「インベイションオブマモン」のダメージ600％アップ（渇望LV7の時、1100％アップ）",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10340031,
+        "text": "ダメージ35％アップ",
+        "effects_text": [
+          "ダメージ35％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+35%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ35%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10340032,
+        "text": "ダメージ500％アップ（渇望LV7の時、900％アップ）",
+        "effects_text": [
+          "ダメージ500％アップ（渇望LV7の時、900％アップ）"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+500%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "渇望LV7の時、900%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ500%アップ(渇望LV7の時、900%アップ)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2+",
+        "skill_id": "10340032_plus",
+        "text": "ダメージ600％アップ（渇望LV7の時、1100％アップ）",
+        "effects_text": [
+          "ダメージ600％アップ（渇望LV7の時、1100％アップ）"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+600%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "渇望LV7の時、1100%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ600%アップ(渇望LV7の時、1100%アップ)",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
     "accessory_name": "サランのフリルタイ",
     "equip_id": 3300295,
     "illust_id": "equip_3300295",
@@ -55758,6 +55972,368 @@
             "duration": null,
             "notes": [],
             "raw": "ATKの上昇値が75%+自身の基礎HP2000ごと×8%アップ/ATKアップの最大値を150%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
+    "accessory_name": "アポロのメイドポーチ",
+    "equip_id": 3300296,
+    "illust_id": "equip_3300296",
+    "rarity": 3,
+    "unit_id": 1004007,
+    "game_unit_id": 1004007,
+    "unit_illust_id": 1004007,
+    "character_id": 4,
+    "character_name": "アポロ",
+    "unit_name": "爆誕見習いメイド",
+    "exclusive_unit_name": "[爆誕見習いメイド]アポロ",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "2",
+      "label": "スピード",
+      "icon": "type_2.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": 846,
+      "ex": null,
+      "ex_up": null,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 1,
+        "parameter_value": 846
+      }
+    ],
+    "skill_ids": {
+      "EX1": 10040071,
+      "EX2": 10040072
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10040071,
+        "text": "ダメージ35％アップ",
+        "effects_text": [
+          "ダメージ35％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+35%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ35%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10040072,
+        "text": "ATKの上昇値が50％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに150％アップ/ラッシュ80以上の時、ダメージ200％アップ",
+        "effects_text": [
+          "ATKの上昇値が50％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに150％アップ",
+          "ラッシュ80以上の時、ダメージ200％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%～150%",
+            "formula": "50%+自身の基礎ATK200ごと×6.5% (合計最大150%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が50%+自身の基礎ATK200ごと×6.5%アップ/ATKアップの最大値をさらに150%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ダメージを強化",
+            "display_value": "+200%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "condition",
+                "text": "ラッシュ80以上の時",
+                "label": "発動条件"
+              }
+            ],
+            "raw": "ラッシュ80以上の時、ダメージ200%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「メテオ・スイーパー」のダメージ35％アップ\nEX2「スターリー・エレガンス」のATKの上昇値が50％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに150％アップ/ラッシュ80以上の時、ダメージ200％アップ",
+    "ability_full": "EX1「メテオ・スイーパー」のダメージ35％アップ\nEX2「スターリー・エレガンス」のATKの上昇値が50％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに150％アップ/ラッシュ80以上の時、ダメージ200％アップ",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10040071,
+        "text": "ダメージ35％アップ",
+        "effects_text": [
+          "ダメージ35％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+35%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ35%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10040072,
+        "text": "ATKの上昇値が50％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに150％アップ/ラッシュ80以上の時、ダメージ200％アップ",
+        "effects_text": [
+          "ATKの上昇値が50％+自身の基礎ATK200ごと×6.5％アップ/ATKアップの最大値をさらに150％アップ",
+          "ラッシュ80以上の時、ダメージ200％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+50%～150%",
+            "formula": "50%+自身の基礎ATK200ごと×6.5% (合計最大150%)",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ATKの上昇値が50%+自身の基礎ATK200ごと×6.5%アップ/ATKアップの最大値をさらに150%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ダメージを強化",
+            "display_value": "+200%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "condition",
+                "text": "ラッシュ80以上の時",
+                "label": "発動条件"
+              }
+            ],
+            "raw": "ラッシュ80以上の時、ダメージ200%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "EquipDetail",
+    "accessory_name": "クーシェンの紅華結び ",
+    "equip_id": 3300297,
+    "illust_id": "equip_3300297",
+    "rarity": 3,
+    "unit_id": 1122002,
+    "game_unit_id": 1122002,
+    "unit_illust_id": 1122002,
+    "character_id": 122,
+    "character_name": "クーシェン",
+    "unit_name": "空神メイド化計画",
+    "exclusive_unit_name": "[空神メイド化計画]クーシェン",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "3",
+      "label": "ディフェンス",
+      "icon": "type_3.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": null,
+      "ex": null,
+      "ex_up": 35,
+      "ct": 2,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 2,
+        "parameter_value": 35
+      },
+      {
+        "parameter_type": 5,
+        "parameter_value": 2
+      }
+    ],
+    "skill_ids": {
+      "EX1": 11220021,
+      "EX2": 11220022
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 11220021,
+        "text": "通常ノーツ移動の移動量が+1の効果時間が5CT増加",
+        "effects_text": [
+          "通常ノーツ移動の移動量が+1の効果時間が5CT増加"
+        ],
+        "effects": [
+          {
+            "type": "ノーツ移動量2倍の効果時間を強化",
+            "display_value": "+5CT",
+            "formula": "",
+            "value": {
+              "ct": 5
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "通常ノーツ移動の移動量が+1の効果時間が5CT増加",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 11220022,
+        "text": "ダメージ125％アップ/バリアが削られる度に魔族または光属性の味方のATKの上昇値が75％アップ",
+        "effects_text": [
+          "ダメージ125％アップ",
+          "バリアが削られる度に魔族または光属性の味方のATKの上昇値が75％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+125%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ125%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "アクセサリ効果",
+            "display_value": "",
+            "formula": "バリアが削られる度に魔族または光属性の味方のATKの上昇値が75%アップ",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "バリアが削られる度に魔族または光属性の味方のATKの上昇値が75%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「金猿旋風棍」の通常ノーツ移動の移動量が+1の効果時間が5CT増加\nEX2「昇雲十八掌」のダメージ125％アップ/バリアが削られる度に魔族または光属性の味方のATKの上昇値が75％アップ",
+    "ability_full": "EX1「金猿旋風棍」の通常ノーツ移動の移動量が+1の効果時間が5CT増加\nEX2「昇雲十八掌」のダメージ125％アップ/バリアが削られる度に魔族または光属性の味方のATKの上昇値が75％アップ",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 11220021,
+        "text": "通常ノーツ移動の移動量が+1の効果時間が5CT増加",
+        "effects_text": [
+          "通常ノーツ移動の移動量が+1の効果時間が5CT増加"
+        ],
+        "effects": [
+          {
+            "type": "ノーツ移動量2倍の効果時間を強化",
+            "display_value": "+5CT",
+            "formula": "",
+            "value": {
+              "ct": 5
+            },
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "通常ノーツ移動の移動量が+1の効果時間が5CT増加",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 11220022,
+        "text": "ダメージ125％アップ/バリアが削られる度に魔族または光属性の味方のATKの上昇値が75％アップ",
+        "effects_text": [
+          "ダメージ125％アップ",
+          "バリアが削られる度に魔族または光属性の味方のATKの上昇値が75％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+125%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ125%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "アクセサリ効果",
+            "display_value": "",
+            "formula": "バリアが削られる度に魔族または光属性の味方のATKの上昇値が75%アップ",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "バリアが削られる度に魔族または光属性の味方のATKの上昇値が75%アップ",
             "children": [],
             "tags": []
           }

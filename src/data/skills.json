@@ -6336,6 +6336,305 @@
     ]
   },
   {
+    "unit_id": 1004007,
+    "game_unit_id": 1004007,
+    "unit_illust_id": 1004007,
+    "is_awake_unit": 0,
+    "skill_id": 10040071,
+    "skill_type": "EX1",
+    "name": "メテオ・スイーパー",
+    "icon_id": 101,
+    "cost_ex_gauge": 100,
+    "skill_detail": "敵単体に70％×8回のダメージ/光属性の味方の行動CTを20％短縮（5CT）（光属性の味方を5体以上編成している時、10CT）/ノーツを4～4前方に移動/異なるタイプの味方を4体以上編成している時、自身のEX上昇を60アップ（25CT）",
+    "effects": [
+      {
+        "display_value": "70%×8回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 70,
+          "hit": 8
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "敵単体に70%×8回のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "20%",
+        "formula": "",
+        "type": "行動CT短縮",
+        "value": {
+          "rate": 20
+        },
+        "effect_class": "buff",
+        "target": "光属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 5
+        },
+        "notes": [
+          {
+            "type": "boost",
+            "text": "光属性の味方を5体以上編成している時、10CT",
+            "label": "強化"
+          }
+        ],
+        "raw": "光属性の味方の行動CTを20%短縮(5CT)(光属性の味方を5体以上編成している時、10CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "4",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 4,
+          "max": 4
+        },
+        "effect_class": "note",
+        "target": "光属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを4～4前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "60",
+        "formula": "",
+        "type": "EX上昇アップ",
+        "value": {
+          "amount": 60
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 25
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "異なるタイプの味方を4体以上編成している時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "異なるタイプの味方を4体以上編成している時、自身のEX上昇を60アップ(25CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1004007,
+    "game_unit_id": 1004007,
+    "unit_illust_id": 1004007,
+    "is_awake_unit": 0,
+    "skill_id": 10040072,
+    "skill_type": "EX2",
+    "name": "スターリー・エレガンス",
+    "icon_id": 357,
+    "cost_ex_gauge": 200,
+    "skill_detail": "光属性の味方のATKを100％+自身の基礎ATK200ごと×13％アップ（30CT）（最大300％）/ノーツを6～6前方に移動（ディフェンスタイプの場合、8～8）/異なるタイプの味方を4体以上編成している時、光属性の味方のクリティカル時のダメージ倍率を60％加算（25CT）/ラッシュ数によって以下の効果を適用する\n・80以上：敵全体に400％のダメージ\n・120以上：自身に相手スタン時のダメージ倍率を50％加算（1CT）",
+    "effects": [
+      {
+        "display_value": "100%～300%",
+        "formula": "100%+自身の基礎ATK200ごと×13% (合計最大300% ※基礎ATK3200以上)",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 13
+        },
+        "effect_class": "buff",
+        "target": "光属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "self_atk",
+            "branches": []
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "光属性の味方のATKを100%+自身の基礎ATK200ごと×13%アップ(30CT)(最大300%)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "6",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 6,
+          "max": 6
+        },
+        "effect_class": "note",
+        "target": "光属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "ディフェンスタイプの場合、8～8",
+            "label": "強化"
+          }
+        ],
+        "raw": "ノーツを6～6前方に移動(ディフェンスタイプの場合、8～8)",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "60%",
+        "formula": "",
+        "type": "クリティカルダメージアップ",
+        "value": {
+          "rate": 60
+        },
+        "effect_class": "buff",
+        "target": "光属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 25
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "異なるタイプの味方を4体以上編成している時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "異なるタイプの味方を4体以上編成している時、光属性の味方のクリティカル時のダメージ倍率を60%加算(25CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "400%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 400,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵全体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "ラッシュ数が80以上の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "ラッシュ数が80以上の時、敵全体に400%のダメージ",
+        "children": [],
+        "tags": [
+          "全体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "50%",
+        "formula": "",
+        "type": "相手スタン時ダメージ倍率アップ",
+        "value": {
+          "rate": 50
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 1
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "ラッシュ数が120以上の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "ラッシュ数が120以上の時、自身に相手スタン時のダメージ倍率を50%加算(1CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
     "unit_id": 1005001,
     "game_unit_id": 1005001,
     "unit_illust_id": 1005001,
@@ -25472,6 +25771,493 @@
         "duration": null,
         "notes": [],
         "raw": "自身の右3レーンにいる味方のノーツを7～7前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1034003,
+    "game_unit_id": 1034003,
+    "unit_illust_id": 1034003,
+    "is_awake_unit": 0,
+    "skill_id": 10340031,
+    "skill_type": "EX1",
+    "name": "トライヘッドバイト",
+    "icon_id": 101,
+    "cost_ex_gauge": 100,
+    "skill_detail": "敵単体に70％×8回のダメージ/自身のEX上昇を60アップ（25CT）/固有ゲージを所持している味方のノーツを4～4前方に移動/1バトル中、自身のEXスキル1の使用が4回目以降の時、敵単体のEXゲージを100吸収し、その内の20％味方のEXゲージを回復",
+    "effects": [
+      {
+        "display_value": "70%×8回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 70,
+          "hit": 8
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "敵単体に70%×8回のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "60",
+        "formula": "",
+        "type": "EX上昇アップ",
+        "value": {
+          "amount": 60
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 25
+        },
+        "notes": [],
+        "raw": "自身のEX上昇を60アップ(25CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "4",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 4,
+          "max": 4
+        },
+        "effect_class": "note",
+        "target": "固有ゲージを所持している味方",
+        "target_branches": {
+          "side": "ally",
+          "scope": "all",
+          "specials": [
+            "specific_gauge_holder"
+          ]
+        },
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "固有ゲージを所持している味方のノーツを4～4前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "敵EX最大100吸収",
+        "formula": "吸収量の20%を味方EX回復 (最大20回復)",
+        "type": "EXゲージ吸収",
+        "value": {
+          "amount": 100,
+          "rate": 20
+        },
+        "effect_class": "buff",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ex_gauge",
+            "branches": []
+          }
+        ],
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "1バトル中、自身のEXスキル1の使用が4回目以降の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "1バトル中、自身のEXスキル1の使用が4回目以降の時、敵単体のEXゲージを100吸収し、その内の20%味方のEXゲージを回復",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1034003,
+    "game_unit_id": 1034003,
+    "unit_illust_id": 1034003,
+    "is_awake_unit": 0,
+    "skill_id": 10340032,
+    "skill_type": "EX2",
+    "name": "バウバンキッシュマーチ",
+    "icon_id": 100,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵単体に1000％のダメージ/闇属性の味方の行動CT15％短縮（10CT）/ノーツを6～6前方に移動/渇望LVに応じて以下の効果を適用する\n・LV1以上：敵単体のEXゲージを400減少させ、闇属性の味方のATKを減少させたEXゲージ量×1％アップ（20CT）\n・LV4以上：自身に相手スタン時のダメージ倍率を50％加算（1CT）\n・LV7：敵単体へのダメージを1800％に強化",
+    "effects": [
+      {
+        "display_value": "1000%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 1000,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "敵単体に1000%のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "15%",
+        "formula": "",
+        "type": "行動CT短縮",
+        "value": {
+          "rate": 15
+        },
+        "effect_class": "buff",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 10
+        },
+        "notes": [],
+        "raw": "闇属性の味方の行動CT15%短縮(10CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "6",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 6,
+          "max": 6
+        },
+        "effect_class": "note",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを6～6前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "1%～400%",
+        "formula": "減少させたEXゲージ量×1%",
+        "type": "ATKアップ",
+        "value": {},
+        "effect_class": "buff",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "渇望LV1以上の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "渇望LV1以上の時、敵単体のEXゲージを400減少させ、闇属性の味方のATKを減少させたEXゲージ量×1%アップ(20CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "50%",
+        "formula": "",
+        "type": "相手スタン時ダメージ倍率アップ",
+        "value": {
+          "rate": 50
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 1
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "渇望LV4以上の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "渇望LV4以上の時、自身に相手スタン時のダメージ倍率を50%加算(1CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "1800%",
+        "formula": "",
+        "type": "ダメージを強化",
+        "value": {
+          "rate": 1800
+        },
+        "effect_class": "buff",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "渇望LV7の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "渇望LV7の時、敵単体へのダメージを1800%に強化",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1034003,
+    "game_unit_id": 1034003,
+    "unit_illust_id": 1034003,
+    "is_awake_unit": 0,
+    "skill_id": "10340032_plus",
+    "skill_type": "EX2+",
+    "name": "インベイションオブマモン",
+    "icon_id": 100,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵単体に1200％のダメージ/闇属性の味方の行動CT15％短縮（10CT）/ノーツを6～6前方に移動/渇望LVに応じて以下の効果を適用する\n・LV1以上：敵単体のEXゲージを400減少させ、闇属性の味方のATKを減少させたEXゲージ量×1％アップ（20CT）\n・LV4以上：自身に相手スタン時のダメージ倍率を50％加算（1CT）\n・LV7：敵単体へのダメージを2200％に強化",
+    "effects": [
+      {
+        "display_value": "1200%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 1200,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "敵単体に1200%のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "15%",
+        "formula": "",
+        "type": "行動CT短縮",
+        "value": {
+          "rate": 15
+        },
+        "effect_class": "buff",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 10
+        },
+        "notes": [],
+        "raw": "闇属性の味方の行動CT15%短縮(10CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "6",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 6,
+          "max": 6
+        },
+        "effect_class": "note",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "ノーツを6～6前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "1%～400%",
+        "formula": "減少させたEXゲージ量×1%",
+        "type": "ATKアップ",
+        "value": {},
+        "effect_class": "buff",
+        "target": "闇属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 5
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 20
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "渇望LV1以上の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "渇望LV1以上の時、敵単体のEXゲージを400減少させ、闇属性の味方のATKを減少させたEXゲージ量×1%アップ(20CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "50%",
+        "formula": "",
+        "type": "相手スタン時ダメージ倍率アップ",
+        "value": {
+          "rate": 50
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 1
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "渇望LV4以上の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "渇望LV4以上の時、自身に相手スタン時のダメージ倍率を50%加算(1CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "2200%",
+        "formula": "",
+        "type": "ダメージを強化",
+        "value": {
+          "rate": 2200
+        },
+        "effect_class": "buff",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "渇望LV7の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "渇望LV7の時、敵単体へのダメージを2200%に強化",
         "children": [],
         "tags": [],
         "inherited_target": false
@@ -70928,6 +71714,342 @@
         },
         "notes": [],
         "raw": "自身の行動CT20%遅延(20CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1122002,
+    "game_unit_id": 1122002,
+    "unit_illust_id": 1122002,
+    "is_awake_unit": 0,
+    "skill_id": 11220021,
+    "skill_type": "EX1",
+    "name": "金猿旋風棍",
+    "icon_id": 355,
+    "cost_ex_gauge": 100,
+    "skill_detail": "自身に庇護状態を付与（30CT）【バフ解除無効】/全状態異常耐性を1段階アップ（30CT）【バフ解除無効】/ランブルトリガー[節制]:自身のEX消費量を15+自身の基礎ATK200ごと×2減少（EXスキル1回発動まで）（最大50）を付与（1回発動まで）【バフ解除無効】（ランブルトリガーは重複しない）/魔族または光属性の味方を5体以上編成している時、自身の1CT経過ごとの通常ノーツ移動の移動量が+1増加（15CT）\n※庇護状態：範囲効果も含む敵からのダメージやスキル効果を自身に引き付ける（ランブル敗北ダメージ、反射ダメージは除く）\n※ランブルトリガー：味方がランブルに勝利した時、記載の効果を発動する",
+    "effects": [
+      {
+        "display_value": "",
+        "formula": "範囲効果も含む挑発",
+        "type": "庇護",
+        "value": {},
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [
+          {
+            "type": "property",
+            "text": "バフ解除無効",
+            "label": "特性"
+          }
+        ],
+        "raw": "自身に庇護状態を付与(30CT)【バフ解除無効】",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "1段階",
+        "formula": "",
+        "type": "全状態異常耐性アップ",
+        "value": {},
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [
+          {
+            "type": "property",
+            "text": "バフ解除無効",
+            "label": "特性"
+          },
+          {
+            "type": "property",
+            "text": "バフ解除無効",
+            "label": "特性"
+          }
+        ],
+        "raw": "全状態異常耐性を1段階アップ(30CT)【バフ解除無効】",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "[節制]の効果:",
+        "formula": "味方がランブルに勝利した時、記載の効果を発動する",
+        "type": "ランブルトリガー",
+        "value": {
+          "name": "節制"
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "ランブルトリガー[節制]:自身のEX消費量を15+自身の基礎ATK200ごと×2減少(EXスキル1回発動まで)(最大50)を付与(1回発動まで)【バフ解除無効】(ランブルトリガーは重複しない)",
+        "children": [
+          {
+            "target": "自身",
+            "type": "EX消費量減少",
+            "display_value": "17～50",
+            "formula": "15%+自身の基礎ATK200ごと×2 (合計最大50 ※基礎ATK3600以上)",
+            "notes": [
+              {
+                "type": "expire",
+                "text": "1回発動まで",
+                "label": "回数"
+              },
+              {
+                "type": "property",
+                "text": "バフ解除無効",
+                "label": "特性"
+              }
+            ],
+            "duration": null,
+            "value": {},
+            "effect_class": "buff"
+          }
+        ],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "",
+        "formula": "1CT経過ごとの通常ノーツ移動の移動量が+1増加",
+        "type": "ノーツ移動量2倍",
+        "value": {},
+        "effect_class": "other",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 15
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "魔族または光属性の味方を5体以上編成している時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "魔族または光属性の味方を5体以上編成している時、自身の1CT経過ごとの通常ノーツ移動の移動量が+1増加(15CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1122002,
+    "game_unit_id": 1122002,
+    "unit_illust_id": 1122002,
+    "is_awake_unit": 0,
+    "skill_id": 11220022,
+    "skill_type": "EX2",
+    "name": "昇雲十八掌",
+    "icon_id": 101,
+    "cost_ex_gauge": 200,
+    "skill_detail": "敵単体に250％×5回のダメージ/前から1番目にいる敵1体のノーツ10前方に移動/自身にカウンター[進攻]：自身の左右1レーンにいる味方のノーツを5～5前方に移動を付与（2回発動まで）【バフ解除無効】（カウンター効果は重複しない）/味方に2回の攻撃を無効化するバリアを張る（40CT）【バフ解除無効】 このEXスキル2で発動したバリアが削られる度に、魔族または光属性の味方のATKを300％アップ（30CT） ※2つの条件を満たした場合でも効果は重複しない\n※カウンター：自身が敵からの攻撃を受けた際に記載の効果を発動する",
+    "effects": [
+      {
+        "display_value": "250%×5回",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 250,
+          "hit": 5
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "敵単体に250%×5回のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "10",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 10,
+          "max": 10
+        },
+        "effect_class": "note",
+        "target": "前から1番目にいる敵1体",
+        "target_branches": {
+          "side": "enemy",
+          "scope": "single",
+          "pos": "front_1"
+        },
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "前から1番目にいる敵1体のノーツ10前方に移動",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "",
+        "formula": "",
+        "type": "カウンター[進攻]",
+        "value": {},
+        "effect_class": "buff",
+        "target": "前から1番目にいる敵1体",
+        "target_branches": {
+          "side": "enemy",
+          "scope": "single",
+          "pos": "front_1"
+        },
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "自身が被弾時に発動する",
+            "label": "発動条件"
+          },
+          {
+            "type": "expire",
+            "text": "2回発動まで",
+            "label": "回数"
+          },
+          {
+            "type": "property",
+            "text": "バフ解除無効",
+            "label": "特性"
+          }
+        ],
+        "raw": "自身にカウンター[進攻]：自身の左右1レーンにいる味方のノーツを5～5前方に移動を付与(2回発動まで)【バフ解除無効】(カウンター効果は重複しない)",
+        "children": [
+          {
+            "type": "ノーツ移動",
+            "display_value": "5",
+            "value": {
+              "min": 5,
+              "max": 5
+            },
+            "target": "自身の左右1レーンにいる味方",
+            "duration": null,
+            "formula": "",
+            "effect_class": "note"
+          }
+        ],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "2回",
+        "formula": "",
+        "type": "バリア",
+        "value": {
+          "count": 2
+        },
+        "effect_class": "buff",
+        "target": "味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 40
+        },
+        "notes": [
+          {
+            "type": "property",
+            "text": "バフ解除無効",
+            "label": "特性"
+          }
+        ],
+        "raw": "味方に2回の攻撃を無効化するバリアを張る(40CT)【バフ解除無効】",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "300%",
+        "formula": "",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 300
+        },
+        "effect_class": "buff",
+        "target": "魔族または光属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 3
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "このEXスキル2で発動したバリアが削られる度に",
+            "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でも効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "このEXスキル2で発動したバリアが削られる度に、魔族または光属性の味方のATKを300%アップ(30CT) ※2つの条件を満たした場合でも効果は重複しない",
         "children": [],
         "tags": [],
         "inherited_target": false

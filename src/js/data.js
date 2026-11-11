@@ -238,6 +238,7 @@ export const effectTypes = [
   { id: "sword_form",              label: "ソードフォーム",                 short: "ソードフォーム",         klass: "other" },
   { id: "form_change",             label: "フォームチェンジ",               short: "フォームチェンジ", klass: "other" },
   { id: "object_move",             label: "オブジェクト移動",               short: "設置物移動",      klass: "note" },
+  { id: "rumble_trigger",          label: "ランブルトリガー",               short: "ランブルトリガー", klass: "buff" },
 ];
 
 /* カテゴリ検索のトグル群（検索プリセット。filters.js の effectOptions と同一16種） */
