@@ -48811,6 +48811,400 @@
     ]
   },
   {
+    "unit_id": 1069003,
+    "game_unit_id": 1069003,
+    "unit_illust_id": 1069003,
+    "is_awake_unit": 0,
+    "skill_id": 10690031,
+    "skill_type": "EX1",
+    "name": "ドリーミー・デイブレイク",
+    "icon_id": 100,
+    "cost_ex_gauge": 100,
+    "skill_detail": "敵単体に600％のダメージ/自身に「万成の恩寵」の効果/自身と自身の右1レーンの味方のATK200％アップ（30CT）/行動CT10％短縮（10CT）/神族かつ光属性の味方を3体以上編成している時、神族または光属性の味方のノーツを5～5前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない\n※万成の恩寵：1バトル中、EXスキル2のEX消費量を自身のEXスキル1の使用回数×20減少（EX消費量は150未満にはならない）",
+    "effects": [
+      {
+        "display_value": "600%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 600,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "敵単体に600%のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "「万成の恩寵」の効果:",
+        "formula": "",
+        "type": "固有効果",
+        "value": {
+          "name": "万成の恩寵"
+        },
+        "effect_class": "buff",
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [],
+        "raw": "自身に「万成の恩寵」の効果",
+        "children": [
+          {
+            "type": "EX消費量減少",
+            "display_value": "20～150",
+            "formula": "自身のEXスキル1の使用回数×20",
+            "notes": [
+              {
+                "type": "property",
+                "text": "1バトル中、EXスキル2のEX消費量を減少",
+                "label": "特性"
+              },
+              {
+                "type": "property",
+                "text": "EX消費量は150未満にはならない",
+                "label": "特性"
+              }
+            ],
+            "target": "自身",
+            "duration": null,
+            "value": {},
+            "effect_class": "buff"
+          }
+        ],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "200%",
+        "formula": "",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 200
+        },
+        "effect_class": "buff",
+        "target": "自身と自身の右1レーンの味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "lane": "right_withme",
+            "lane_count": 1,
+            "specials": [
+              "with_self"
+            ]
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "自身と自身の右1レーンの味方のATK200%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "10%",
+        "formula": "",
+        "type": "行動CT短縮",
+        "value": {
+          "rate": 10
+        },
+        "effect_class": "buff",
+        "target": "自身と自身の右1レーンの味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "lane": "right_withme",
+            "lane_count": 1,
+            "specials": [
+              "with_self"
+            ]
+          }
+        ],
+        "scale_refs": [],
+        "duration": {
+          "ct": 10
+        },
+        "notes": [],
+        "raw": "行動CT10%短縮(10CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": true
+      },
+      {
+        "display_value": "5",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 5,
+          "max": 5
+        },
+        "effect_class": "note",
+        "target": "神族または光属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 2
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "神族かつ光属性の味方を3体以上編成している時",
+            "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でもノーツ移動効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "神族かつ光属性の味方を3体以上編成している時、神族または光属性の味方のノーツを5～5前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
+    "unit_id": 1069003,
+    "game_unit_id": 1069003,
+    "unit_illust_id": 1069003,
+    "is_awake_unit": 0,
+    "skill_id": 10690032,
+    "skill_type": "EX2",
+    "name": "クロッカス・ブロッサム",
+    "icon_id": 100,
+    "cost_ex_gauge": 300,
+    "skill_detail": "敵単体に1250％（1バトル中、自身のEXスキル1の使用が6回目以降の時、2000％）のダメージ/神族の味方のATKを神族の味方の数×75％アップ（30CT）/さらに光属性の味方のATKを光属性の味方の数×75％アップ（30CT）/神族または光属性の味方のノーツを10～10前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない/神族かつ光属性の味方を3体以上編成している時、味方全体のクリティカル時のダメージ倍率を神族または光属性の味方の数×12％加算（25CT）\n※このEXスキルは他星騎士から付与されたEX消費量減少の効果を受けない",
+    "effects": [
+      {
+        "display_value": "1250%",
+        "formula": "",
+        "type": "ダメージ",
+        "value": {
+          "rate": 1250,
+          "hit": 1
+        },
+        "effect_class": "main",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "boost",
+            "text": "1バトル中、自身のEXスキル1の使用が6回目以降の時、2000%",
+            "label": "強化"
+          }
+        ],
+        "raw": "敵単体に1250%(1バトル中、自身のEXスキル1の使用が6回目以降の時、2000%)のダメージ",
+        "children": [],
+        "tags": [
+          "単体攻撃"
+        ],
+        "inherited_target": false
+      },
+      {
+        "display_value": "75%～375%",
+        "formula": "神族の味方の数×75%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 75
+        },
+        "effect_class": "buff",
+        "target": "神族の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 2
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 2
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "神族の味方のATKを神族の味方の数×75%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "75%～375%",
+        "formula": "光属性の味方の数×75%",
+        "type": "ATKアップ",
+        "value": {
+          "rate": 75
+        },
+        "effect_class": "buff",
+        "target": "光属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 4
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 30
+        },
+        "notes": [],
+        "raw": "さらに光属性の味方のATKを光属性の味方の数×75%アップ(30CT)",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "10",
+        "formula": "",
+        "type": "ノーツ移動",
+        "value": {
+          "min": 10,
+          "max": 10
+        },
+        "effect_class": "note",
+        "target": "神族または光属性の味方",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all",
+            "camp": 2
+          },
+          {
+            "side": "ally",
+            "scope": "all",
+            "attr": 4
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "property",
+            "text": "2つの条件を満たした場合でもノーツ移動効果は重複しない",
+            "label": "特性"
+          }
+        ],
+        "raw": "神族または光属性の味方のノーツを10～10前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
+        "display_value": "12%～60%",
+        "formula": "神族または光属性の味方の数×12%",
+        "type": "クリティカルダメージアップ",
+        "value": {
+          "rate": 12
+        },
+        "effect_class": "buff",
+        "target": "味方全体",
+        "target_branches": [
+          {
+            "side": "ally",
+            "scope": "all"
+          }
+        ],
+        "scale_refs": [
+          {
+            "src": "ally",
+            "branches": [
+              {
+                "side": "ally",
+                "scope": "all",
+                "camp": 2
+              },
+              {
+                "side": "ally",
+                "scope": "all",
+                "attr": 4
+              }
+            ]
+          }
+        ],
+        "duration": {
+          "ct": 25
+        },
+        "notes": [
+          {
+            "type": "condition",
+            "text": "神族かつ光属性の味方を3体以上編成している時",
+            "label": "発動条件"
+          },
+          {
+            "type": "property",
+            "text": "このEXスキルは他星騎士から付与されたEX消費量減少の効果を受けない",
+            "label": "特性"
+          }
+        ],
+        "raw": "神族かつ光属性の味方を3体以上編成している時、味方全体のクリティカル時のダメージ倍率を神族または光属性の味方の数×12%加算(25CT)\n※このEXスキルは他星騎士から付与されたEX消費量減少の効果を受けない",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      }
+    ]
+  },
+  {
     "unit_id": 1070001,
     "game_unit_id": 1070001,
     "unit_illust_id": 1070001,

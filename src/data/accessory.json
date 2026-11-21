@@ -56340,5 +56340,216 @@
         ]
       }
     ]
+  },
+  {
+    "source": "EquipDetail",
+    "accessory_name": "セシアの髪飾り",
+    "equip_id": 3300298,
+    "illust_id": "equip_3300298",
+    "rarity": 3,
+    "unit_id": 1069003,
+    "game_unit_id": 1069003,
+    "unit_illust_id": 1069003,
+    "character_id": 69,
+    "character_name": "セシア《前夜》",
+    "unit_name": "夜明けにみるユメ",
+    "exclusive_unit_name": "[夜明けにみるユメ]セシア《前夜》",
+    "unit_match_method": "exclusive_unit_id",
+    "role": {
+      "id": "1",
+      "label": "アタック",
+      "icon": "type_1.png"
+    },
+    "stats": {
+      "hp": null,
+      "atk": 846,
+      "ex": null,
+      "ex_up": null,
+      "ct": null,
+      "critical": null
+    },
+    "local_parameter_list": [
+      {
+        "parameter_type": 1,
+        "parameter_value": 846
+      }
+    ],
+    "skill_ids": {
+      "EX1": 10690031,
+      "EX2": 10690032
+    },
+    "abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10690031,
+        "text": "ダメージ300％アップ",
+        "effects_text": [
+          "ダメージ300％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+300%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ300%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10690032,
+        "text": "ダメージ625％アップ（1バトル中、自身のEXスキル1の使用が6回目以降の時、1000％アップ）/神族の味方のATKの上昇値が神族の味方の数×18.75％アップ/さらに光属性の味方のATKの上昇値が光属性の味方の数×18.75％アップ",
+        "effects_text": [
+          "ダメージ625％アップ（1バトル中、自身のEXスキル1の使用が6回目以降の時、1000％アップ）",
+          "神族の味方のATKの上昇値が神族の味方の数×18.75％アップ",
+          "さらに光属性の味方のATKの上昇値が光属性の味方の数×18.75％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+625%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "1バトル中、自身のEXスキル1の使用が6回目以降の時、1000%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ625%アップ(1バトル中、自身のEXスキル1の使用が6回目以降の時、1000%アップ)",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+18.75%～93.75%",
+            "formula": "神族の味方の数×18.75%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "神族の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "神族の味方のATKの上昇値が神族の味方の数×18.75%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+18.75%～93.75%",
+            "formula": "光属性の味方の数×18.75%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "光属性の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "さらに光属性の味方のATKの上昇値が光属性の味方の数×18.75%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ],
+    "ability_raw": "EX1「ドリーミー・デイブレイク」のダメージ300％アップ/\nEX2「クロッカス・ブロッサム」のダメージ625％アップ（1バトル中、自身のEXスキル1の使用が6回目以降の時、1000％アップ）/神族の味方のATKの上昇値が神族の味方の数×18.75％アップ/さらに光属性の味方のATKの上昇値が光属性の味方の数×18.75％アップ",
+    "ability_full": "EX1「ドリーミー・デイブレイク」のダメージ300％アップ/\nEX2「クロッカス・ブロッサム」のダメージ625％アップ（1バトル中、自身のEXスキル1の使用が6回目以降の時、1000％アップ）/神族の味方のATKの上昇値が神族の味方の数×18.75％アップ/さらに光属性の味方のATKの上昇値が光属性の味方の数×18.75％アップ",
+    "phase_status": {
+      "phase": 7,
+      "limit_break_count": 4,
+      "resonance_count": 1,
+      "lv": 60,
+      "max_lv": 60
+    },
+    "acc_abilities": [
+      {
+        "skill_type": "EX1",
+        "skill_id": 10690031,
+        "text": "ダメージ300％アップ",
+        "effects_text": [
+          "ダメージ300％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+300%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [],
+            "raw": "ダメージ300%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "skill_type": "EX2",
+        "skill_id": 10690032,
+        "text": "ダメージ625％アップ（1バトル中、自身のEXスキル1の使用が6回目以降の時、1000％アップ）/神族の味方のATKの上昇値が神族の味方の数×18.75％アップ/さらに光属性の味方のATKの上昇値が光属性の味方の数×18.75％アップ",
+        "effects_text": [
+          "ダメージ625％アップ（1バトル中、自身のEXスキル1の使用が6回目以降の時、1000％アップ）",
+          "神族の味方のATKの上昇値が神族の味方の数×18.75％アップ",
+          "さらに光属性の味方のATKの上昇値が光属性の味方の数×18.75％アップ"
+        ],
+        "effects": [
+          {
+            "type": "ダメージを強化",
+            "display_value": "+625%",
+            "formula": "",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "",
+            "duration": null,
+            "notes": [
+              {
+                "type": "boost",
+                "text": "1バトル中、自身のEXスキル1の使用が6回目以降の時、1000%",
+                "label": "強化"
+              }
+            ],
+            "raw": "ダメージ625%アップ(1バトル中、自身のEXスキル1の使用が6回目以降の時、1000%アップ)",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+18.75%～93.75%",
+            "formula": "神族の味方の数×18.75%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "神族の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "神族の味方のATKの上昇値が神族の味方の数×18.75%アップ",
+            "children": [],
+            "tags": []
+          },
+          {
+            "type": "ATKアップを強化",
+            "display_value": "+18.75%～93.75%",
+            "formula": "光属性の味方の数×18.75%",
+            "value": {},
+            "effect_class": "accessory",
+            "target": "光属性の味方",
+            "duration": null,
+            "notes": [],
+            "raw": "さらに光属性の味方のATKの上昇値が光属性の味方の数×18.75%アップ",
+            "children": [],
+            "tags": []
+          }
+        ]
+      }
+    ]
   }
 ]
