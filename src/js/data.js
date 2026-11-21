@@ -156,6 +156,7 @@ export const effectTypes = [
   { id: "force_note_move",         label: "ノーツ強制移動",                 short: "ノーツ強制移動", klass: "note" },
   { id: "note_return_position",    label: "ノーツ戻り位置変更",             short: "戻り位置変更",   klass: "note" },
   { id: "note_move_boost",         label: "ノーツ移動量強化",               short: "移動量強化",     klass: "note" },
+  { id: "note_speed_double",       label: "ノーツ移動量2倍",                short: "移動量2倍",      klass: "note" },
 
   { id: "ex_gauge_drain",          label: "EXゲージ吸収",                   short: "EX吸収",         klass: "buff" },
   { id: "ex_gain_up",              label: "EX上昇アップ",                   short: "EX上昇アップ",   klass: "buff" },

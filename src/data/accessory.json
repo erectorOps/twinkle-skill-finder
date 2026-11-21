@@ -56252,14 +56252,20 @@
             "tags": []
           },
           {
-            "type": "アクセサリ効果",
-            "display_value": "",
-            "formula": "バリアが削られる度に魔族または光属性の味方のATKの上昇値が75%アップ",
+            "type": "ATKアップを強化",
+            "display_value": "+75%",
+            "formula": "",
             "value": {},
             "effect_class": "accessory",
-            "target": "",
+            "target": "魔族または光属性の味方",
             "duration": null,
-            "notes": [],
+            "notes": [
+              {
+                "type": "condition",
+                "text": "バリアが削られる度に",
+                "label": "発動条件"
+              }
+            ],
             "raw": "バリアが削られる度に魔族または光属性の味方のATKの上昇値が75%アップ",
             "children": [],
             "tags": []
@@ -56325,14 +56331,20 @@
             "tags": []
           },
           {
-            "type": "アクセサリ効果",
-            "display_value": "",
-            "formula": "バリアが削られる度に魔族または光属性の味方のATKの上昇値が75%アップ",
+            "type": "ATKアップを強化",
+            "display_value": "+75%",
+            "formula": "",
             "value": {},
             "effect_class": "accessory",
-            "target": "",
+            "target": "魔族または光属性の味方",
             "duration": null,
-            "notes": [],
+            "notes": [
+              {
+                "type": "condition",
+                "text": "バリアが削られる度に",
+                "label": "発動条件"
+              }
+            ],
             "raw": "バリアが削られる度に魔族または光属性の味方のATKの上昇値が75%アップ",
             "children": [],
             "tags": []

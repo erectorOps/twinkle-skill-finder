@@ -12505,11 +12505,6 @@
             "type": "property",
             "text": "この効果は重複しない",
             "label": "特性"
-          },
-          {
-            "type": "property",
-            "text": "バフ解除無効",
-            "label": "特性"
           }
         ],
         "raw": "自身の通常攻撃・EXスキルによるラッシュ増加数が倍になる(60CT)【バフ解除無効】 ※この効果は重複しない",
@@ -25992,6 +25987,35 @@
         "inherited_target": true
       },
       {
+        "display_value": "400",
+        "formula": "",
+        "type": "EXゲージ減少",
+        "value": {
+          "amount": 400
+        },
+        "effect_class": "debuff",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "渇望LV1以上の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "渇望LV1以上の時、敵単体のEXゲージを400減少",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
+      },
+      {
         "display_value": "1%～400%",
         "formula": "減少させたEXゲージ量×1%",
         "type": "ATKアップ",
@@ -26171,6 +26195,35 @@
         "children": [],
         "tags": [],
         "inherited_target": true
+      },
+      {
+        "display_value": "400",
+        "formula": "",
+        "type": "EXゲージ減少",
+        "value": {
+          "amount": 400
+        },
+        "effect_class": "debuff",
+        "target": "敵単体",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
+        "duration": null,
+        "notes": [
+          {
+            "type": "condition",
+            "text": "渇望LV1以上の時",
+            "label": "発動条件"
+          }
+        ],
+        "raw": "渇望LV1以上の時、敵単体のEXゲージを400減少",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
       },
       {
         "display_value": "1%～400%",
@@ -27727,7 +27780,7 @@
             },
             "value": {},
             "display_value": "",
-            "effect_class": "other"
+            "effect_class": "note"
           }
         ],
         "tags": [],
@@ -34254,14 +34307,24 @@
         "display_value": "400",
         "formula": "",
         "type": "EXゲージ減少",
-        "value": {},
+        "value": {
+          "amount": 400
+        },
         "effect_class": "debuff",
         "target": "敵",
+        "target_branches": [
+          {
+            "side": "enemy",
+            "scope": "single"
+          }
+        ],
+        "scale_refs": [],
         "duration": null,
         "notes": [],
-        "tags": [
-          ""
-        ]
+        "raw": "敵のEXゲージを400減少",
+        "children": [],
+        "tags": [],
+        "inherited_target": false
       },
       {
         "display_value": "0.5%～200%",
@@ -40455,11 +40518,6 @@
             "type": "property",
             "text": "バフ解除無効",
             "label": "特性"
-          },
-          {
-            "type": "property",
-            "text": "バフ解除無効",
-            "label": "特性"
           }
         ],
         "raw": "被ダメージの60%を相手に反射(27CT)【バフ解除無効】",
@@ -42773,11 +42831,6 @@
           "ct": 16
         },
         "notes": [
-          {
-            "type": "property",
-            "text": "バフ解除無効",
-            "label": "特性"
-          },
           {
             "type": "property",
             "text": "バフ解除無効",
@@ -72177,11 +72230,6 @@
             "type": "property",
             "text": "バフ解除無効",
             "label": "特性"
-          },
-          {
-            "type": "property",
-            "text": "バフ解除無効",
-            "label": "特性"
           }
         ],
         "raw": "全状態異常耐性を1段階アップ(30CT)【バフ解除無効】",
@@ -72206,24 +72254,35 @@
         ],
         "scale_refs": [],
         "duration": null,
-        "notes": [],
+        "notes": [
+          {
+            "type": "expire",
+            "text": "1回発動まで",
+            "label": "回数"
+          },
+          {
+            "type": "property",
+            "text": "ランブルトリガーは重複しない",
+            "label": "特性"
+          },
+          {
+            "type": "property",
+            "text": "バフ解除無効",
+            "label": "特性"
+          }
+        ],
         "raw": "ランブルトリガー[節制]:自身のEX消費量を15+自身の基礎ATK200ごと×2減少(EXスキル1回発動まで)(最大50)を付与(1回発動まで)【バフ解除無効】(ランブルトリガーは重複しない)",
         "children": [
           {
             "target": "自身",
             "type": "EX消費量減少",
             "display_value": "17～50",
-            "formula": "15%+自身の基礎ATK200ごと×2 (合計最大50 ※基礎ATK3600以上)",
+            "formula": "15+自身の基礎ATK200ごと×2 (合計最大50 ※基礎ATK3600以上)",
             "notes": [
               {
                 "type": "expire",
-                "text": "1回発動まで",
+                "text": "EXスキル1回発動まで",
                 "label": "回数"
-              },
-              {
-                "type": "property",
-                "text": "バフ解除無効",
-                "label": "特性"
               }
             ],
             "duration": null,
@@ -72239,7 +72298,7 @@
         "formula": "1CT経過ごとの通常ノーツ移動の移動量が+1増加",
         "type": "ノーツ移動量2倍",
         "value": {},
-        "effect_class": "other",
+        "effect_class": "note",
         "target": "自身",
         "target_branches": [
           {
@@ -72332,12 +72391,13 @@
         "type": "カウンター[進攻]",
         "value": {},
         "effect_class": "buff",
-        "target": "前から1番目にいる敵1体",
-        "target_branches": {
-          "side": "enemy",
-          "scope": "single",
-          "pos": "front_1"
-        },
+        "target": "自身",
+        "target_branches": [
+          {
+            "side": "self",
+            "scope": "self"
+          }
+        ],
         "scale_refs": [],
         "duration": null,
         "notes": [
@@ -72373,7 +72433,7 @@
           }
         ],
         "tags": [],
-        "inherited_target": true
+        "inherited_target": false
       },
       {
         "display_value": "2回",
